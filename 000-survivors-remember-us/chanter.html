@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>9/11 Survivors — Remember Us — Paroles | tréfle.minotaure</title>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Cinzel:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --gold:#b8962e;--parchment:#f5ecd7;--dark:#2a1f10;
+  --fr-bg:#e8f0fc;--fr-lbl:#c8dcf8;--fr-txt:#1a3a6b;--fr-bdr:#aac4f0;
+  --es-bg:#f5ead5;--es-lbl:#e8d4a8;--es-txt:#7a5010;--es-bdr:#d4b87a;
+  --en-bg:#fce8ec;--en-lbl:#f8d0dc;--en-txt:#8b1a3a;--en-bdr:#f0aabc;
+}
+body{background:#2a1f10;font-family:"Cormorant Garamond",serif;color:#2a1f10;min-height:100vh;padding:20px}
+.page{max-width:1200px;margin:0 auto;background:var(--parchment);border:2px solid #c4a97a;border-radius:8px;overflow:hidden}
+header{background:linear-gradient(135deg,#1a1008 0%,#2a1810 100%);padding:28px 32px 20px;border-bottom:2px solid var(--gold)}
+.htitle{font-family:"IM Fell English",serif;font-size:2rem;color:#e8d5a0;letter-spacing:.03em}
+.hsubtitle{font-family:"Cinzel",serif;font-size:.85rem;color:#b8962e;margin-top:4px;letter-spacing:.12em}
+.hmeta{display:flex;gap:12px;margin-top:12px;flex-wrap:wrap;align-items:center}
+.mpill{background:#2a1808;border:1px solid #6a4a20;color:#d4b87a;font-size:.7rem;padding:3px 10px;border-radius:16px;font-family:"Cinzel",serif;letter-spacing:.08em}
+.warn-pill{background:#2a0808;border:1px solid #8b2020;color:#f0a0a0;font-size:.7rem;padding:3px 10px;border-radius:16px;font-family:"Cinzel",serif;letter-spacing:.08em}
+.controls{background:#f0e8d0;padding:10px 32px;border-bottom:1px solid #d4b87a;display:flex;gap:20px;flex-wrap:wrap;align-items:center}
+.ctrl-label{font-family:"Cinzel",serif;font-size:.65rem;color:#7a5010;letter-spacing:.1em;text-transform:uppercase}
+.cbtn{padding:5px 14px;border:1px solid #c4a97a;background:transparent;border-radius:4px;cursor:pointer;font-family:"Cinzel",serif;font-size:.7rem;color:#7a5010;transition:all .2s}
+.cbtn:hover,.cbtn.on{background:var(--gold);color:#fff;border-color:var(--gold)}
+.sec{padding:18px 32px}
+.sec-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:8px}
+.sec-label{font-family:"Cinzel",serif;font-size:.78rem;letter-spacing:.18em;color:var(--gold);text-transform:uppercase}
+.vb{font-family:"Cinzel",serif;font-size:.63rem;padding:2px 8px;border-radius:10px}
+.vb.trefle{background:#f0e0fc;color:#731a94;border:1px solid #c8a0e8}
+.vb.minotaure{background:#e0e8f8;color:#1a3b8c;border:1px solid #a0b8e8}
+.vb.duo{background:#f8f0e0;color:#7a5010;border:1px solid #d4b87a}
+.vb.ghost{background:#e8e8f0;color:#3a3a5a;border:1px solid #b0b0c8;font-style:italic}
+.vb.instr{background:#e8f0e0;color:#3a5020;border:1px solid #a0c080}
+.play-btn{padding:4px 12px;background:transparent;border:1px solid var(--gold);color:var(--gold);border-radius:4px;cursor:pointer;font-size:.73rem;font-family:"Cinzel",serif;transition:all .2s}
+.play-btn:hover{background:var(--gold);color:#fff}
+.col-labels{display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;margin-bottom:4px;margin-left:44px}
+.lt{padding:3px 12px;border-radius:4px;font-family:"Cinzel",serif;font-size:.68rem;letter-spacing:.1em;border:1px solid;text-align:center}
+.lt.FR{background:var(--fr-lbl);color:var(--fr-txt);border-color:var(--fr-bdr)}
+.lt.ES{background:var(--es-lbl);color:var(--es-txt);border-color:var(--es-bdr)}
+.lt.EN{background:var(--en-lbl);color:var(--en-txt);border-color:var(--en-bdr)}
+.lyric-row{display:grid;grid-template-columns:40px 1fr 1fr 1fr;gap:4px;margin-bottom:3px;align-items:start}
+.vbadge{display:flex;align-items:center;padding-top:5px;justify-content:center}
+.lc.fr{background:var(--fr-bg);border-radius:4px;padding:5px 10px}
+.lc.es{background:var(--es-bg);border-radius:4px;padding:5px 10px}
+.lc.en{background:var(--en-bg);border-radius:4px;padding:5px 10px}
+.line{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1.07rem;line-height:1.5;display:block}
+.instr{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:.88rem;opacity:.5;display:block}
+.instr-note{display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;margin-bottom:6px;margin-left:44px}
+.sec-divider{text-align:center;font-family:"Cinzel",serif;font-size:.68rem;color:#c4a97a;margin-top:14px;letter-spacing:.2em}
+footer{background:#1a1008;color:#888;text-align:center;padding:16px;font-family:"Cinzel",serif;font-size:.7rem;letter-spacing:.1em;border-top:2px solid var(--gold)}
+footer a{color:#b8962e;text-decoration:none}
+body.show-fr .col.es,body.show-fr .col.en{display:none}
+body.show-fr .lyric-row{grid-template-columns:40px 1fr}
+body.show-fr .col-labels{grid-template-columns:1fr}
+body.show-fr .instr-note{grid-template-columns:1fr}
+body.show-fr .col-labels .lt.ES,body.show-fr .col-labels .lt.EN{display:none}
+body.show-es .col.fr,body.show-es .col.en{display:none}
+body.show-es .lyric-row{grid-template-columns:40px 1fr}
+body.show-es .col-labels{grid-template-columns:1fr}
+body.show-es .instr-note{grid-template-columns:1fr}
+body.show-es .col-labels .lt.FR,body.show-es .col-labels .lt.EN{display:none}
+body.show-en .col.fr,body.show-en .col.es{display:none}
+body.show-en .lyric-row{grid-template-columns:40px 1fr}
+body.show-en .col-labels{grid-template-columns:1fr}
+body.show-en .instr-note{grid-template-columns:1fr}
+body.show-en .col-labels .lt.FR,body.show-en .col-labels .lt.ES{display:none}
+@media print{.controls,.play-btn{display:none}}
+</style>
+</head>
+<body>
+<div class="page">
+<header>
+  <div class="htitle">9/11 Survivors — Remember Us</div>
+  <div class="hsubtitle">Souvenez-vous de nous &nbsp;·&nbsp; Recuérdanos</div>
+  <div class="hmeta">
+    <span class="mpill">🎻 Gothic Folk Rock Cinématique</span>
+    <span class="mpill">🪈 Cornemuse &amp; Violon gothique</span>
+    <span class="mpill">🍀🐂 Trèfle &amp; Minotaure</span>
+    <span class="mpill">⏱ ~5:06</span>
+    <span class="warn-pill">⚠️ Thème sensible — SSPT · culpabilité du survivant · 11 septembre</span>
+  </div>
+</header>
+<div class="controls">
+  <div style="display:flex;align-items:center;gap:8px">
+    <span class="ctrl-label">Langue</span>
+    <button class="cbtn on" onclick="setLang('all',this)">🌍 Trilingue</button>
+    <button class="cbtn" onclick="setLang('fr',this)">🇫🇷 Français</button>
+    <button class="cbtn" onclick="setLang('es',this)">🇪🇸 Español</button>
+    <button class="cbtn" onclick="setLang('en',this)">🇬🇧 English</button>
+  </div>
+  <div style="display:flex;align-items:center;gap:8px">
+    <span class="ctrl-label">Vitesse TTS</span>
+    <button class="cbtn" onclick="setSpeed(0.7,this)">× 0.7</button>
+    <button class="cbtn on" onclick="setSpeed(1.0,this)">× 1.0</button>
+    <button class="cbtn" onclick="setSpeed(1.2,this)">× 1.2</button>
+  </div>
+</div>
+  <section class="sec" id="sec_intro">
+    <div class="sec-head">
+      <span class="sec-label">✦ Intro ✦</span>
+      <span class="vb ghost">👻 Voix Fantôme</span>
+      <button class="play-btn" onclick="playSec('intro')">▶ écouter</button>
+    </div>
+    <div class="col-labels">
+      <span class="lt FR">🇫🇷 Français</span>
+      <span class="lt ES">🇪🇸 Español</span>
+      <span class="lt EN">🇬🇧 English</span>
+    </div>
+    <div class="instr-note">
+      <div class="lc fr"><em class="instr">[Solo de cornemuse envoûtant] [Pulsation lente de grosse caisse écossaise] [Arpèges de violon sombre qui montent]</em></div>
+      <div class="lc es"><em class="instr">[Solo de gaita envolvente] [Pulso lento de bombo escocés] [Arpegios de violín oscuro en ascenso]</em></div>
+      <div class="lc en"><em class="instr">[Haunting bagpipe solo] [Slow heavy Scottish bass drum pulse] [Dark violin arpeggios building up]</em></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb ghost">👻 Voix Fantôme</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">(murmure spectral lointain) Souvenez-vous de nous...</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">(susurro espectral distante) Recuérdanos...</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">(distant spectral whisper) Remember us...</span></div></div>
+    </div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="sec_verse1">
+    <div class="sec-head">
+      <span class="sec-label">✦ Couplet 1 — Trèfle ✦</span>
+      <span class="vb trefle">🍀 Trèfle</span>
+      <button class="play-btn" onclick="playSec('verse1')">▶ écouter</button>
+    </div>
+    <div class="col-labels">
+      <span class="lt FR">🇫🇷 Français</span>
+      <span class="lt ES">🇪🇸 Español</span>
+      <span class="lt EN">🇬🇧 English</span>
+    </div>
+    <div class="instr-note">
+      <div class="lc fr"><em class="instr">[Parlé-chanté, sombre et solennel]</em></div>
+      <div class="lc es"><em class="instr">[Hablado-cantado, oscuro y solemne]</em></div>
+      <div class="lc en"><em class="instr">[Spoken word, dark and solemn]</em></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">La poussière de septembre s'est posée, la tour a disparu</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">El polvo de septiembre se asentó, la torre ha desaparecido</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">September dust has settled, the tower is gone</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Ils ont arraché Josephine Harris aux mâchoires de la pierre</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Arrancaron a Josephine Harris de las fauces de la piedra</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">They pulled Josephine Harris from the jaws of the stone</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Un miracle né des cendres et du gris</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Un milagro nacido de las cenizas y el gris</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">A miracle born from the ash and the grey</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Mais le prix de la survie se paie chaque jour</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Pero el precio de sobrevivir se paga cada día</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">But the price of survival is paid every day</span></div></div>
+    </div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="sec_prechorus1">
+    <div class="sec-head">
+      <span class="sec-label">✦ Pré-Refrain 1 — Minotaure ✦</span>
+      <span class="vb minotaure">🐂 Minotaure</span>
+      <button class="play-btn" onclick="playSec('prechorus1')">▶ écouter</button>
+    </div>
+    <div class="col-labels">
+      <span class="lt FR">🇫🇷 Français</span>
+      <span class="lt ES">🇪🇸 Español</span>
+      <span class="lt EN">🇬🇧 English</span>
+    </div>
+    <div class="instr-note">
+      <div class="lc fr"><em class="instr">[Voix grave et rauque]</em></div>
+      <div class="lc es"><em class="instr">[Voz profunda y áspera]</em></div>
+      <div class="lc en"><em class="instr">[Deep gritty voice]</em></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb minotaure">🐂 Minotaure</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">La nuit tombe comme un linceul, le silence est assourdissant</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">La noche cae como un sudario, el silencio es ensordecedor</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">Night falls like a shroud, the silence is loud</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb minotaure">🐂 Minotaure</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Deux héros s'éveillent pendant que la ville est fière</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Dos héroes despiertan mientras la ciudad está orgullosa</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">Two heroes awake while the city is proud</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb minotaure">🐂 Minotaure</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Pas de sommeil dans le noir, seulement des ombres qui planent</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Sin sueño en la oscuridad, solo sombras que acechan</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">No sleep in the dark, only shadows that loom</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb minotaure">🐂 Minotaure</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Pendant que les fantômes de leurs frères entrent dans la pièce</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Mientras los fantasmas de sus hermanos entran en la habitación</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">As the ghosts of their brothers walk into the room</span></div></div>
+    </div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="sec_ghost1">
+    <div class="sec-head">
+      <span class="sec-label">✦ Voix Fantôme ✦</span>
+      <span class="vb ghost">👻 Voix Fantôme</span>
+      <button class="play-btn" onclick="playSec('ghost1')">▶ écouter</button>
+    </div>
+    <div class="col-labels">
+      <span class="lt FR">🇫🇷 Français</span>
+      <span class="lt ES">🇪🇸 Español</span>
+      <span class="lt EN">🇬🇧 English</span>
+    </div>
+    <div class="instr-note">
+      <div class="lc fr"><em class="instr">[Murmure lointain et spectral]</em></div>
+      <div class="lc es"><em class="instr">[Susurro distante y espectral]</em></div>
+      <div class="lc en"><em class="instr">[Distant spectral whisper]</em></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb ghost">👻 Voix Fantôme</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Souvenez-vous de nous...</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Recuérdanos...</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">Remember us...</span></div></div>
+    </div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="sec_chorus1">
+    <div class="sec-head">
+      <span class="sec-label">✦ Refrain 1 ✦</span>
+      <span class="vb duo">🍀🐂 Duo</span>
+      <button class="play-btn" onclick="playSec('chorus1')">▶ écouter</button>
+    </div>
+    <div class="col-labels">
+      <span class="lt FR">🇫🇷 Français</span>
+      <span class="lt ES">🇪🇸 Español</span>
+      <span class="lt EN">🇬🇧 English</span>
+    </div>
+    <div class="instr-note">
+      <div class="lc fr"><em class="instr">[Impact rock gothique lourd et maîtrisé] [Riff de guitare électrique entraînant]</em></div>
+      <div class="lc es"><em class="instr">[Impacto rock gótico pesado y controlado] [Riff de guitarra eléctrica arrollador]</em></div>
+      <div class="lc en"><em class="instr">[Heavy controlled gothic rock impact] [Driving electric guitar riff]</em></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Les yeux fixés sur l'acier posé sur la table ce soir</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Con los ojos fijos en el acero sobre la mesa esta noche</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">Staring at the steel on the table tonight</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">La culpabilité du survivant est un combat perdu d'avance</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">La culpa del superviviente es una batalla perdida</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">The survivor's guilt is a losing fight</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Mais le métal froid et noir ne les fera pas tomber</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Pero el frío metal negro no los hará caer</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">But the cold black metal won't pull them down</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Capituler maintenant c'est laisser les lâches triompher</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Rendirse ahora es dejar que los cobardes triunfen</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">To surrender now is to let the cowards crown</span></div></div>
+    </div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="sec_verse2">
+    <div class="sec-head">
+      <span class="sec-label">✦ Couplet 2 — Trèfle ✦</span>
+      <span class="vb trefle">🍀 Trèfle</span>
+      <button class="play-btn" onclick="playSec('verse2')">▶ écouter</button>
+    </div>
+    <div class="col-labels">
+      <span class="lt FR">🇫🇷 Français</span>
+      <span class="lt ES">🇪🇸 Español</span>
+      <span class="lt EN">🇬🇧 English</span>
+    </div>
+    <div class="instr-note">
+      <div class="lc fr"><em class="instr">[Voix mélancolique, arpèges de violon rapides]</em></div>
+      <div class="lc es"><em class="instr">[Voz melancólica, arpegios de violín rápidos]</em></div>
+      <div class="lc en"><em class="instr">[Melancholic voice, fast violin arpeggios]</em></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Une autre nuit blanche, les souvenirs saignent</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Otra noche en blanco, los recuerdos sangran</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">Another white night, the memories bleed</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Ils regardent l'arme, répondant à l'appel ?</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Miran el arma, ¿respondiendo a la llamada?</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">They look at the gun, answering the need?</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Rejoindre les disparus sous le plancher ?</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">¿Unirse a los caídos bajo el suelo?</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">To join the fallen under the floor?</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Non. C'est le piège au bout de la guerre.</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">No. Esa es la trampa al final de la guerra.</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">No. That is the trap at the end of the war.</span></div></div>
+    </div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="sec_prechorus2">
+    <div class="sec-head">
+      <span class="sec-label">✦ Pré-Refrain 2 — Minotaure ✦</span>
+      <span class="vb minotaure">🐂 Minotaure</span>
+      <button class="play-btn" onclick="playSec('prechorus2')">▶ écouter</button>
+    </div>
+    <div class="col-labels">
+      <span class="lt FR">🇫🇷 Français</span>
+      <span class="lt ES">🇪🇸 Español</span>
+      <span class="lt EN">🇬🇧 English</span>
+    </div>
+    <div class="instr-note">
+      <div class="lc fr"><em class="instr">[Ton grave et dramatique]</em></div>
+      <div class="lc es"><em class="instr">[Tono profundo y dramático]</em></div>
+      <div class="lc en"><em class="instr">[Deep dramatic tone]</em></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb minotaure">🐂 Minotaure</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Appuyer sur la gâchette c'est les laisser gagner</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Apretar el gatillo es dejarles ganar</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">To pull that trigger is to let them win</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb minotaure">🐂 Minotaure</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Trahir le sacrifice qui brûle en dedans</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Traicionar el sacrificio que arde por dentro</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">To betray the sacrifice burning within</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb minotaure">🐂 Minotaure</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Les meurtriers rient si tu t'effaces</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Los asesinos ríen si te desvaneces</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">The murderers laugh if you fade away</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb minotaure">🐂 Minotaure</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Alors tu tiens bon jusqu'à l'aube</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Así que aguantas hasta el amanecer</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">So you hold your ground till the break of day</span></div></div>
+    </div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="sec_ghost2">
+    <div class="sec-head">
+      <span class="sec-label">✦ Voix Fantôme ✦</span>
+      <span class="vb ghost">👻 Voix Fantôme</span>
+      <button class="play-btn" onclick="playSec('ghost2')">▶ écouter</button>
+    </div>
+    <div class="col-labels">
+      <span class="lt FR">🇫🇷 Français</span>
+      <span class="lt ES">🇪🇸 Español</span>
+      <span class="lt EN">🇬🇧 English</span>
+    </div>
+    <div class="instr-note">
+      <div class="lc fr"><em class="instr">[Murmure lointain et spectral]</em></div>
+      <div class="lc es"><em class="instr">[Susurro distante y espectral]</em></div>
+      <div class="lc en"><em class="instr">[Distant spectral whisper]</em></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb ghost">👻 Voix Fantôme</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Souvenez-vous de nous...</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Recuérdanos...</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">Remember us...</span></div></div>
+    </div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="sec_chorus2">
+    <div class="sec-head">
+      <span class="sec-label">✦ Refrain 2 ✦</span>
+      <span class="vb duo">🍀🐂 Duo</span>
+      <button class="play-btn" onclick="playSec('chorus2')">▶ écouter</button>
+    </div>
+    <div class="col-labels">
+      <span class="lt FR">🇫🇷 Français</span>
+      <span class="lt ES">🇪🇸 Español</span>
+      <span class="lt EN">🇬🇧 English</span>
+    </div>
+    <div class="instr-note">
+      <div class="lc fr"><em class="instr">[Rock gothique lourd, grosse caisse martelée]</em></div>
+      <div class="lc es"><em class="instr">[Rock gótico pesado, bombo martilleante]</em></div>
+      <div class="lc en"><em class="instr">[Heavy gothic rock, pounding bass drum]</em></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Les yeux fixés sur l'acier posé sur la table ce soir</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Con los ojos fijos en el acero sobre la mesa esta noche</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">Staring at the steel on the table tonight</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">La culpabilité du survivant est un combat perdu d'avance</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">La culpa del superviviente es una batalla perdida</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">The survivor's guilt is a losing fight</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Mais le métal froid et noir ne les fera pas tomber</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Pero el frío metal negro no los hará caer</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">But the cold black metal won't pull them down</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Capituler maintenant c'est laisser les lâches triompher</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Rendirse ahora es dejar que los cobardes triunfen</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">To surrender now is to let the cowards crown</span></div></div>
+    </div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="sec_bridge">
+    <div class="sec-head">
+      <span class="sec-label">✦ Bridge — Duel ✦</span>
+      <span class="vb ghost">👻 Voix Fantôme</span>
+      <button class="play-btn" onclick="playSec('bridge')">▶ écouter</button>
+    </div>
+    <div class="col-labels">
+      <span class="lt FR">🇫🇷 Français</span>
+      <span class="lt ES">🇪🇸 Español</span>
+      <span class="lt EN">🇬🇧 English</span>
+    </div>
+    <div class="instr-note">
+      <div class="lc fr"><em class="instr">[Riff de guitare coupé] [Duel intense violon et cornemuse] [Gammes pentatoniques mineures rapides qui s'entrechoquent] [Breakdown de grosse caisse écossaise lourde]</em></div>
+      <div class="lc es"><em class="instr">[Riff de guitarra cortado] [Duelo intenso de violín y gaita] [Escalas pentatónicas menores rápidas en choque] [Breakdown de bombo escocés pesado]</em></div>
+      <div class="lc en"><em class="instr">[Guitar riff cut] [Violin and Bagpipe intense battle duel] [Fast minor pentatonic scales clashing] [Heavy Scottish bass drum breakdown]</em></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb ghost">👻 Voix Fantôme</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">(murmure spectral) Souvenez-vous de nous... Souvenez-vous de nous...</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">(susurro espectral) Recuérdanos... Recuérdanos...</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">(spectral whisper) Remember us... Remember us...</span></div></div>
+    </div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="sec_outro">
+    <div class="sec-head">
+      <span class="sec-label">✦ Outro ✦</span>
+      <span class="vb duo">🍀🐂 Duo</span>
+      <button class="play-btn" onclick="playSec('outro')">▶ écouter</button>
+    </div>
+    <div class="col-labels">
+      <span class="lt FR">🇫🇷 Français</span>
+      <span class="lt ES">🇪🇸 Español</span>
+      <span class="lt EN">🇬🇧 English</span>
+    </div>
+    <div class="instr-note">
+      <div class="lc fr"><em class="instr">[La musique ralentit, atmosphère gothique] [Trèfle &amp; Minotaure — chuchotant ensemble] puis [Guitares qui s'estompent] [Solo de cornemuse final mélancolique] [Un seul coup de grosse caisse] [Fondu jusqu'à la fin]</em></div>
+      <div class="lc es"><em class="instr">[La música se ralentiza, atmósfera gótica] [Trèfle y Minotaure — susurrando juntos] luego [Guitarras que se desvanecen] [Solo final melancólico de gaita] [Un solo golpe de bombo] [Fundido hasta el final]</em></div>
+      <div class="lc en"><em class="instr">[Music slows down, gothic atmosphere] [Trèfle & Minotaure - Whispering together] then [Guitars fade out] [Melancholic closing bagpipe solo] [Single bass drum hit] [Fade to end]</em></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">(chuchoté) Vivez pour les disparus. Ne leur donnez pas la victoire.</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">(susurrado) Vivid por los caídos. No les deis la victoria.</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">(whispered) Live for the fallen. Do not give them the victory.</span></div></div>
+    </div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+<footer>
+  <a href="https://www.trefleminotaure.com">www.trefleminotaure.com</a>
+  &nbsp;·&nbsp; © 2026 Trèfle &amp; Minotaure &nbsp;·&nbsp; 9/11 Survivors — Remember Us
+</footer>
+</div>
+<script>
+const SECS = {
+  "intro": {
+    "fr": `(murmure spectral lointain) Souvenez-vous de nous...`,
+    "es": `(susurro espectral distante) Recuérdanos...`,
+    "en": `(distant spectral whisper) Remember us...`
+  },
+  "verse1": {
+    "fr": `La poussière de septembre s'est posée, la tour a disparu Ils ont arraché Josephine Harris aux mâchoires de la pierre Un miracle né des cendres et du gris Mais le prix de la survie se paie chaque jour`,
+    "es": `El polvo de septiembre se asentó, la torre ha desaparecido Arrancaron a Josephine Harris de las fauces de la piedra Un milagro nacido de las cenizas y el gris Pero el precio de sobrevivir se paga cada día`,
+    "en": `September dust has settled, the tower is gone They pulled Josephine Harris from the jaws of the stone A miracle born from the ash and the grey But the price of survival is paid every day`
+  },
+  "prechorus1": {
+    "fr": `La nuit tombe comme un linceul, le silence est assourdissant Deux héros s'éveillent pendant que la ville est fière Pas de sommeil dans le noir, seulement des ombres qui planent Pendant que les fantômes de leurs frères entrent dans la pièce`,
+    "es": `La noche cae como un sudario, el silencio es ensordecedor Dos héroes despiertan mientras la ciudad está orgullosa Sin sueño en la oscuridad, solo sombras que acechan Mientras los fantasmas de sus hermanos entran en la habitación`,
+    "en": `Night falls like a shroud, the silence is loud Two heroes awake while the city is proud No sleep in the dark, only shadows that loom As the ghosts of their brothers walk into the room`
+  },
+  "ghost1": {
+    "fr": `Souvenez-vous de nous...`,
+    "es": `Recuérdanos...`,
+    "en": `Remember us...`
+  },
+  "chorus1": {
+    "fr": `Les yeux fixés sur l'acier posé sur la table ce soir La culpabilité du survivant est un combat perdu d'avance Mais le métal froid et noir ne les fera pas tomber Capituler maintenant c'est laisser les lâches triompher`,
+    "es": `Con los ojos fijos en el acero sobre la mesa esta noche La culpa del superviviente es una batalla perdida Pero el frío metal negro no los hará caer Rendirse ahora es dejar que los cobardes triunfen`,
+    "en": `Staring at the steel on the table tonight The survivor's guilt is a losing fight But the cold black metal won't pull them down To surrender now is to let the cowards crown`
+  },
+  "verse2": {
+    "fr": `Une autre nuit blanche, les souvenirs saignent Ils regardent l'arme, répondant à l'appel ? Rejoindre les disparus sous le plancher ? Non. C'est le piège au bout de la guerre.`,
+    "es": `Otra noche en blanco, los recuerdos sangran Miran el arma, ¿respondiendo a la llamada? ¿Unirse a los caídos bajo el suelo? No. Esa es la trampa al final de la guerra.`,
+    "en": `Another white night, the memories bleed They look at the gun, answering the need? To join the fallen under the floor? No. That is the trap at the end of the war.`
+  },
+  "prechorus2": {
+    "fr": `Appuyer sur la gâchette c'est les laisser gagner Trahir le sacrifice qui brûle en dedans Les meurtriers rient si tu t'effaces Alors tu tiens bon jusqu'à l'aube`,
+    "es": `Apretar el gatillo es dejarles ganar Traicionar el sacrificio que arde por dentro Los asesinos ríen si te desvaneces Así que aguantas hasta el amanecer`,
+    "en": `To pull that trigger is to let them win To betray the sacrifice burning within The murderers laugh if you fade away So you hold your ground till the break of day`
+  },
+  "ghost2": {
+    "fr": `Souvenez-vous de nous...`,
+    "es": `Recuérdanos...`,
+    "en": `Remember us...`
+  },
+  "chorus2": {
+    "fr": `Les yeux fixés sur l'acier posé sur la table ce soir La culpabilité du survivant est un combat perdu d'avance Mais le métal froid et noir ne les fera pas tomber Capituler maintenant c'est laisser les lâches triompher`,
+    "es": `Con los ojos fijos en el acero sobre la mesa esta noche La culpa del superviviente es una batalla perdida Pero el frío metal negro no los hará caer Rendirse ahora es dejar que los cobardes triunfen`,
+    "en": `Staring at the steel on the table tonight The survivor's guilt is a losing fight But the cold black metal won't pull them down To surrender now is to let the cowards crown`
+  },
+  "bridge": {
+    "fr": `(murmure spectral) Souvenez-vous de nous... Souvenez-vous de nous...`,
+    "es": `(susurro espectral) Recuérdanos... Recuérdanos...`,
+    "en": `(spectral whisper) Remember us... Remember us...`
+  },
+  "outro": {
+    "fr": `(chuchoté) Vivez pour les disparus. Ne leur donnez pas la victoire.`,
+    "es": `(susurrado) Vivid por los caídos. No les deis la victoria.`,
+    "en": `(whispered) Live for the fallen. Do not give them the victory.`
+  }
+};
+const LANG_MAP = { fr: "fr-FR", es: "es-ES", en: "en-GB" };
+let spd = 1.0;
+let curLang = "fr";
+function setLang(l, btn) {
+  document.body.className = l === "all" ? "" : "show-" + l;
+  curLang = (l === "all") ? "fr" : l;
+  document.querySelectorAll(".controls .cbtn").forEach(b => {
+    if (!b.textContent.includes("×")) b.classList.remove("on");
+  });
+  btn.classList.add("on");
+}
+function setSpeed(s, btn) {
+  spd = s;
+  document.querySelectorAll(".controls .cbtn").forEach(b => {
+    if (b.textContent.includes("×")) b.classList.remove("on");
+  });
+  btn.classList.add("on");
+}
+function playSec(id) {
+  const sec = SECS[id];
+  if (!sec) return;
+  const txt = sec[curLang] || sec.fr;
+  if (!txt) return;
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(txt);
+  u.lang = LANG_MAP[curLang] || "fr-FR";
+  u.rate = spd;
+  speechSynthesis.speak(u);
+}
+</script>
+</body>
+</html>
