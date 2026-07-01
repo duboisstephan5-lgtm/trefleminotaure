@@ -1,0 +1,108 @@
+{
+  "site": {
+    "name": "Trèfle.Minotaure",
+    "url": "https://trefleminotaure.github.io",
+    "description": "Paroles, guide pédagogique & ressources musicales — FR · ES · EN"
+  },
+  "chansons": [
+    {
+      "id": "000",
+      "titre": {
+        "fr": "9/11 Survivors — Remember Us",
+        "en": "9/11 Survivors — Remember Us",
+        "es": "9/11 Survivors — Remember Us"
+      },
+      "soustitre": {
+        "fr": "Souvenez-vous de nous",
+        "es": "Recuérdanos",
+        "en": "Remember Us"
+      },
+      "style": "Gothic Folk Rock Cinématique · Cornemuse & Violon gothique",
+      "bpm": null,
+      "duree": "~5:06",
+      "album": "Single",
+      "config": "duo",
+      "themes": ["11 septembre", "SSPT", "culpabilité du survivant"],
+      "sensible": true,
+      "fichiers": {
+        "chanter": "000-survivors-remember-us/chanter.html",
+        "pedagogique": "000-survivors-remember-us/pedagogique.html"
+      }
+    },
+    {
+      "id": "001",
+      "titre": {
+        "fr": "Les Fantômes de la Tolérance",
+        "en": "Ghosts of Tolerance",
+        "es": "Fantasmas de Tolerancia"
+      },
+      "soustitre": {
+        "fr": "Tolérance — Diversité — Droits",
+        "es": "Tolerancia — Diversidad — Derechos",
+        "en": "Tolerance — Diversity — Rights"
+      },
+      "style": "Dark Gothic Minimalist Rock",
+      "bpm": 95,
+      "duree": "~6:15",
+      "album": "Album 05 — Démons",
+      "config": "duo",
+      "themes": ["racisme", "religion", "genre", "droits sociaux"],
+      "sensible": false,
+      "fichiers": {
+        "chanter": "001-ghosts-of-tolerance/chanter.html",
+        "pedagogique": "001-ghosts-of-tolerance/pedagogique.html",
+        "tablatures": "001-ghosts-of-tolerance/tablatures.html"
+      }
+    },
+    {
+      "id": "002",
+      "titre": {
+        "fr": "Le dernier voyage",
+        "en": "The Last Journey",
+        "es": "El último viaje"
+      },
+      "soustitre": {
+        "fr": "Le monologue du chien abandonné",
+        "es": "El monólogo del perro abandonado",
+        "en": "The monologue of the abandoned dog"
+      },
+      "style": "Dark Gothic Folk Balladry",
+      "bpm": 75,
+      "duree": "~4:41",
+      "album": "Album 05 — Démons",
+      "config": "minotaure_solo",
+      "themes": ["abandon animal", "fidélité", "fin de vie", "euthanasie"],
+      "sensible": true,
+      "fichiers": {
+        "chanter": "002-le-dernier-voyage/chanter.html",
+        "pedagogique": "002-le-dernier-voyage/pedagogique.html",
+        "tablatures": "002-le-dernier-voyage/tablatures.html"
+      }
+    },
+    {
+      "id": "003",
+      "titre": {
+        "fr": "Berceuse noire",
+        "en": "Dark Lullaby",
+        "es": "Canción de cuna oscura"
+      },
+      "soustitre": {
+        "fr": "Dors, loin du vacarme",
+        "es": "Duerme, lejos del ruido",
+        "en": "Sleep, far from the noise"
+      },
+      "style": "Dark Gothic Lullaby · Coldwave",
+      "bpm": 68,
+      "duree": "~3:25",
+      "album": "Album 05 — Démons",
+      "config": "duo",
+      "themes": ["insomnie", "protection", "nuit", "fragilité"],
+      "sensible": false,
+      "fichiers": {
+        "chanter": "003-berceuse-noire/chanter.html",
+        "pedagogique": "003-berceuse-noire/pedagogique.html",
+        "tablatures": "003-berceuse-noire/tablatures.html"
+      }
+    }
+  ]
+}
