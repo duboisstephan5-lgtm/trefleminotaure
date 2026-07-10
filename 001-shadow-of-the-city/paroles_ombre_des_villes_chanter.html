@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Ombre des Villes / Shadow of the City / Sombra de la Ciudad — Paroles</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Cinzel:wght@500;700&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #b8962e;
+    --parchment: #f5ecd7;
+    --outer: #2a1f10;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--outer);
+    background: radial-gradient(ellipse at center, #3a2a16 0%, #2a1f10 70%, #1a1208 100%);
+    font-family: "Cormorant Garamond", serif;
+    color: #2a1f10;
+    min-height: 100vh;
+    padding: 24px 12px 60px;
+  }
+  .page {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: var(--parchment);
+    border: 2px solid #c4a97a;
+    border-radius: 10px;
+    box-shadow: 0 0 40px rgba(0,0,0,0.6);
+    padding: 32px clamp(14px, 4vw, 48px);
+  }
+  header {
+    text-align: center;
+    border-bottom: 1px solid #c4a97a;
+    padding-bottom: 18px;
+    margin-bottom: 22px;
+  }
+  header h1 {
+    font-family: "IM Fell English", serif;
+    font-style: italic;
+    font-size: clamp(1.6rem, 4vw, 2.6rem);
+    margin: 0 0 6px;
+    color: #2a1f10;
+  }
+  header .subtitle {
+    font-family: "Cinzel", serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    color: var(--gold);
+    text-transform: uppercase;
+  }
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 14px;
+  }
+  .meta span {
+    font-family: "Cinzel", serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.04em;
+    background: #efe2bf;
+    border: 1px solid #c4a97a;
+    border-radius: 20px;
+    padding: 4px 12px;
+    color: #5a4520;
+  }
+  .controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0 26px;
+    padding: 14px;
+    background: #efe2bf;
+    border-radius: 8px;
+    border: 1px solid #d8c79a;
+  }
+  .control-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+  .control-group label {
+    font-family: "Cinzel", serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.06em;
+    color: #7a5e20;
+    text-transform: uppercase;
+  }
+  .btn-row { display: flex; gap: 6px; flex-wrap: wrap; justify-content: center; }
+  .btn-row button {
+    font-family: "Cinzel", serif;
+    font-size: 0.72rem;
+    border: 1px solid var(--gold);
+    background: #fffaf0;
+    color: #5a4520;
+    border-radius: 6px;
+    padding: 7px 13px;
+    cursor: pointer;
+    transition: all .2s;
+  }
+  .btn-row button:hover { background: var(--gold); color: #fff; }
+  .btn-row button.active { background: var(--gold); color: #fff; }
+
+  .song-sec {
+    margin-bottom: 22px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #d8c79a;
+  }
+  .sec-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #e9dab3;
+    padding: 8px 14px;
+    border-bottom: 1px solid #d8c79a;
+  }
+  .sec-name {
+    font-family: "Cinzel", serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    color: #5a4520;
+    text-transform: uppercase;
+  }
+  .playbtn {
+    background: var(--gold);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  .playbtn:hover { background: #9a7a20; }
+
+  .cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1px;
+    background: #d8c79a;
+  }
+  .col {
+    padding: 14px 14px 18px;
+    background: #fffaf0;
+  }
+  .col-fr { background: #e8f0fc; }
+  .col-es { background: #f5ead5; }
+  .col-en { background: #fce8ec; }
+  .lt {
+    font-family: "Cinzel", serif;
+    font-size: 0.62rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .col-fr .lt { color: #1a3a6b; }
+  .col-es .lt { color: #7a5010; }
+  .col-en .lt { color: #8b1a3a; }
+
+  .lyrics { font-style: italic; font-size: 1.15rem; line-height: 1.5; }
+  .lyric-line { margin: 0 0 8px; }
+  .badge {
+    display: inline-block;
+    font-family: "Cinzel", serif;
+    font-style: normal;
+    font-size: 0.55rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 2px 7px;
+    border-radius: 10px;
+    margin-right: 7px;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+  }
+  .badge-trefle { background: #c8dcf8; color: #1a3a6b; }
+  .badge-minotaure { background: #2a1f10; color: #f5ecd7; }
+  .badge-duo { background: var(--gold); color: #fff; }
+
+  .instru-sec .lyrics { opacity: 0.5; font-style: italic; }
+  .instru-sec .col { filter: grayscale(0.3); }
+
+  /* Mode mono-langue */
+  body.show-fr .col-es, body.show-fr .col-en { display: none; }
+  body.show-es .col-fr, body.show-es .col-en { display: none; }
+  body.show-en .col-fr, body.show-en .col-es { display: none; }
+  body.show-fr .cols, body.show-es .cols, body.show-en .cols { grid-template-columns: 1fr; }
+
+  footer {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 16px;
+    border-top: 1px solid #c4a97a;
+    font-family: "Cinzel", serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    color: #7a5e20;
+  }
+  footer a { color: var(--gold); text-decoration: none; }
+
+  @media (max-width: 800px) {
+    .cols { grid-template-columns: 1fr; }
+    body:not(.show-fr):not(.show-es):not(.show-en) .col { border-bottom: 1px solid #d8c79a; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <h1>Ombre des Villes <span style="opacity:.5">/</span> Shadow of the City <span style="opacity:.5">/</span> Sombra de la Ciudad</h1>
+    <div class="subtitle">Album : Des mots qui font mal</div>
+    <div class="meta">
+      <span>80 BPM</span>
+      <span>Tonalité mineure</span>
+      <span>Coldwave cinématique</span>
+      <span>Trèfle — voix féminine</span>
+      <span>Minotaure — voix masculine grave</span>
+    </div>
+  </header>
+
+  <div class="controls">
+    <div class="control-group">
+      <label>Langue</label>
+      <div class="btn-row">
+        <button class="lang-btn active" data-lang="all" onclick="setLang('all')">Trilingue</button>
+        <button class="lang-btn" data-lang="fr" onclick="setLang('fr')">🇫🇷 Français</button>
+        <button class="lang-btn" data-lang="es" onclick="setLang('es')">🇪🇸 Español</button>
+        <button class="lang-btn" data-lang="en" onclick="setLang('en')">🇬🇧 English</button>
+      </div>
+    </div>
+    <div class="control-group">
+      <label>Vitesse TTS</label>
+      <div class="btn-row">
+        <button class="speed-btn" data-speed="0.7" onclick="setSpeed(0.7)">× 0.7</button>
+        <button class="speed-btn active" data-speed="0.9" onclick="setSpeed(0.9)">× 0.9</button>
+        <button class="speed-btn" data-speed="1.0" onclick="setSpeed(1.0)">× 1.0</button>
+      </div>
+    </div>
+  </div>
+
+  <section class="song-sec" id="sec-intro">
+        <div class="sec-head">
+          <span class="sec-name">Intro / Intro / Intro</span>
+          <button class="playbtn" onclick="playSec('intro')" aria-label="Écouter cette section">&#9658;</button>
+        </div>
+        <div class="cols">
+          <div class="col col-fr">
+          <div class="lt">Intro</div>
+          <div class="lyrics">
+          <p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Les villes avalent les rêves comme des mégots sous la pluie...</p>
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Et les enfants grandissent plus vite que la nuit...</p>
+          </div>
+        </div>
+          <div class="col col-es">
+          <div class="lt">Intro</div>
+          <div class="lyrics">
+          <p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Las ciudades devoran los sueños como colillas bajo la lluvia...</p>
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Y los niños crecen más rápido que la noche...</p>
+          </div>
+        </div>
+          <div class="col col-en">
+          <div class="lt">Intro</div>
+          <div class="lyrics">
+          <p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Cities swallow dreams like cigarette butts in the rain...</p>
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>And children grow up faster than the night...</p>
+          </div>
+        </div>
+        </div>
+      </section>
+
+      <section class="song-sec" id="sec-verse1">
+        <div class="sec-head">
+          <span class="sec-name">Couplet 1 / Estrofa 1 / Verse 1</span>
+          <button class="playbtn" onclick="playSec('verse1')" aria-label="Écouter cette section">&#9658;</button>
+        </div>
+        <div class="cols">
+          <div class="col col-fr">
+          <div class="lt">Couplet 1</div>
+          <div class="lyrics">
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Elle traîne ses baskets blanches sur les trottoirs fatigués</p>
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Les vitrines lui promettent un monde qu'elle ne pourra jamais payer</p>
+          <p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Dans son sac quelques cigarettes un vieux pull et des secrets</p>
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Elle dit qu'elle dort parfois chez des amis imaginaires</p>
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Quand les adultes deviennent des murs et les appartements des hivers</p>
+          </div>
+        </div>
+          <div class="col col-es">
+          <div class="lt">Estrofa 1</div>
+          <div class="lyrics">
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Arrastra sus zapatillas blancas por las aceras cansadas</p>
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Los escaparates le prometen un mundo que nunca podrá pagar</p>
+          <p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>En su bolsa unos cigarrillos un viejo jersey y secretos</p>
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Dice que duerme a veces en casa de amigos imaginarios</p>
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Cuando los adultos se vuelven muros y los apartamentos inviernos</p>
+          </div>
+        </div>
+          <div class="col col-en">
+          <div class="lt">Verse 1</div>
+          <div class="lyrics">
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>She drags her white sneakers across tired sidewalks</p>
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>The shop windows promise her a world she will never afford</p>
+          <p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>In her bag some cigarettes an old sweater and secrets</p>
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>She says she sleeps sometimes at imaginary friends</p>
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>When adults become walls and apartments become winters</p>
+          </div>
+        </div>
+        </div>
+      </section>
+
+      <section class="song-sec" id="sec-pre1">
+        <div class="sec-head">
+          <span class="sec-name">Pré-Refrain / Pre-Coro / Pre-Chorus</span>
+          <button class="playbtn" onclick="playSec('pre1')" aria-label="Écouter cette section">&#9658;</button>
+        </div>
+        <div class="cols">
+          <div class="col col-fr">
+          <div class="lt">Pré-Refrain</div>
+          <div class="lyrics">
+          <p class="lyric-line"><span class="badge badge-duo">Trèfle &amp; Minotaure</span>Les néons brillent pour ceux qui ont encore un endroit où rentrer...</p>
+          </div>
+        </div>
+          <div class="col col-es">
+          <div class="lt">Pre-Coro</div>
+          <div class="lyrics">
+          <p class="lyric-line"><span class="badge badge-duo">Trèfle &amp; Minotaure</span>Los neones brillan para los que todavía tienen un lugar al que volver...</p>
+          </div>
+        </div>
+          <div class="col col-en">
+          <div class="lt">Pre-Chorus</div>
+          <div class="lyrics">
+          <p class="lyric-line"><span class="badge badge-duo">Trèfle &amp; Minotaure</span>The neon lights shine for those who still have somewhere to go home...</p>
+          </div>
+        </div>
+        </div>
+      </section>
+
+      <section class="song-sec" id="sec-chorus1">
+        <div class="sec-head">
+          <span class="sec-name">Refrain / Coro / Chorus</span>
+          <button class="playbtn" onclick="playSec('chorus1')" aria-label="Écouter cette section">&#9658;</button>
+        </div>
+        <div class="cols">
+          <div class="col col-fr">
+          <div class="lt">Refrain</div>
+          <div class="lyrics">
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Petite ombre des villes qui danse sous les gyrophares</p>
+          <p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Le cœur rempli de bruit et les yeux pleins de brouillard</p>
+          <p class="lyric-line"><span class="badge badge-duo">Trèfle &amp; Minotaure</span>Elle voulait juste un peu d'amour un peu de lumière</p>
+          <p class="lyric-line"><span class="badge badge-duo">Trèfle &amp; Minotaure</span>Mais les rues lui ont appris que les contes finissent rarement bien sur terre</p>
+          </div>
+        </div>
+          <div class="col col-es">
+          <div class="lt">Coro</div>
+          <div class="lyrics">
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Pequeña sombra de la ciudad que baila bajo los destellos</p>
+          <p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>El corazón lleno de ruido y los ojos llenos de niebla</p>
+          <p class="lyric-line"><span class="badge badge-duo">Trèfle &amp; Minotaure</span>Solo quería un poco de amor un poco de luz</p>
+          <p class="lyric-line"><span class="badge badge-duo">Trèfle &amp; Minotaure</span>Pero las calles le enseñaron que los cuentos raramente terminan bien en la tierra</p>
+          </div>
+        </div>
+          <div class="col col-en">
+          <div class="lt">Chorus</div>
+          <div class="lyrics">
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Little shadow of the city dancing under the flashing lights</p>
+          <p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Heart full of noise and eyes full of fog</p>
+          <p class="lyric-line"><span class="badge badge-duo">Trèfle &amp; Minotaure</span>She just wanted a little love a little light</p>
+          <p class="lyric-line"><span class="badge badge-duo">Trèfle &amp; Minotaure</span>But the streets taught her that fairy tales rarely end well on earth</p>
+          </div>
+        </div>
+        </div>
+      </section>
+
+      <section class="song-sec instru-sec" id="sec-instru">
+        <div class="sec-head">
+          <span class="sec-name">Instrumental / Instrumental / Instrumental</span>
+          
+        </div>
+        <div class="cols">
+          <div class="col col-fr">
+          <div class="lt">Instrumental</div>
+          <div class="lyrics">
+          <p class="lyric-line">[Duel slide guitar et violon — groove coldwave sombre]</p>
+          </div>
+        </div>
+          <div class="col col-es">
+          <div class="lt">Instrumental</div>
+          <div class="lyrics">
+          <p class="lyric-line">[Duelo de slide guitar y violín — groove coldwave oscuro]</p>
+          </div>
+        </div>
+          <div class="col col-en">
+          <div class="lt">Instrumental</div>
+          <div class="lyrics">
+          <p class="lyric-line">[Slide guitar and violin duet — dark coldwave groove]</p>
+          </div>
+        </div>
+        </div>
+      </section>
+
+      <section class="song-sec" id="sec-verse2">
+        <div class="sec-head">
+          <span class="sec-name">Couplet 2 / Estrofa 2 / Verse 2</span>
+          <button class="playbtn" onclick="playSec('verse2')" aria-label="Écouter cette section">&#9658;</button>
+        </div>
+        <div class="cols">
+          <div class="col col-fr">
+          <div class="lt">Couplet 2</div>
+          <div class="lyrics">
+          <p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Le métro roule encore comme un vieux serpent malade</p>
+          <p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Les gens baissent les yeux pour éviter le naufrage</p>
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Elle regarde les couples rire à travers les vitres des cafés</p>
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Comme si le bonheur était un club privé</p>
+          <p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Y'a des hommes trop vieux qui lui parlent comme à une proie</p>
+          <p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Et des loups bien habillés qui sentent le parfum et le froid</p>
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Alors elle sourit parfois pour ne pas montrer les dents</p>
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Parce qu'ici la tendresse coûte plus cher que l'argent</p>
+          </div>
+        </div>
+          <div class="col col-es">
+          <div class="lt">Estrofa 2</div>
+          <div class="lyrics">
+          <p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>El metro sigue rodando como una vieja serpiente enferma</p>
+          <p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>La gente baja la vista para evitar el naufragio</p>
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Ella mira a las parejas reír a través de los cristales de los cafés</p>
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Como si la felicidad fuera un club privado</p>
+          <p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Hay hombres demasiado viejos que le hablan como a una presa</p>
+          <p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Y lobos bien vestidos que huelen a perfume y a frío</p>
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Entonces sonríe a veces para no enseñar los dientes</p>
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Porque aquí la ternura cuesta más que el dinero</p>
+          </div>
+        </div>
+          <div class="col col-en">
+          <div class="lt">Verse 2</div>
+          <div class="lyrics">
+          <p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>The subway still runs like an old sick snake</p>
+          <p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>People look away to avoid the wreckage</p>
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>She watches couples laughing through café windows</p>
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>As if happiness were a private club</p>
+          <p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>There are men too old who talk to her like she is prey</p>
+          <p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>And well-dressed wolves who smell of perfume and cold</p>
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>So she smiles sometimes to hide her teeth</p>
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Because here tenderness costs more than money</p>
+          </div>
+        </div>
+        </div>
+      </section>
+
+      <section class="song-sec" id="sec-chorus2">
+        <div class="sec-head">
+          <span class="sec-name">Refrain / Coro / Chorus</span>
+          <button class="playbtn" onclick="playSec('chorus2')" aria-label="Écouter cette section">&#9658;</button>
+        </div>
+        <div class="cols">
+          <div class="col col-fr">
+          <div class="lt">Refrain</div>
+          <div class="lyrics">
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Petite ombre des villes qui danse sous les gyrophares</p>
+          <p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Le cœur rempli de bruit et les yeux pleins de brouillard</p>
+          <p class="lyric-line"><span class="badge badge-duo">Trèfle &amp; Minotaure</span>Elle voulait juste un peu d'amour un peu de lumière</p>
+          <p class="lyric-line"><span class="badge badge-duo">Trèfle &amp; Minotaure</span>Mais les rues lui ont appris que les contes finissent rarement bien sur terre</p>
+          </div>
+        </div>
+          <div class="col col-es">
+          <div class="lt">Coro</div>
+          <div class="lyrics">
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Pequeña sombra de la ciudad que baila bajo los destellos</p>
+          <p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>El corazón lleno de ruido y los ojos llenos de niebla</p>
+          <p class="lyric-line"><span class="badge badge-duo">Trèfle &amp; Minotaure</span>Solo quería un poco de amor un poco de luz</p>
+          <p class="lyric-line"><span class="badge badge-duo">Trèfle &amp; Minotaure</span>Pero las calles le enseñaron que los cuentos raramente terminan bien en la tierra</p>
+          </div>
+        </div>
+          <div class="col col-en">
+          <div class="lt">Chorus</div>
+          <div class="lyrics">
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Little shadow of the city dancing under the flashing lights</p>
+          <p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Heart full of noise and eyes full of fog</p>
+          <p class="lyric-line"><span class="badge badge-duo">Trèfle &amp; Minotaure</span>She just wanted a little love a little light</p>
+          <p class="lyric-line"><span class="badge badge-duo">Trèfle &amp; Minotaure</span>But the streets taught her that fairy tales rarely end well on earth</p>
+          </div>
+        </div>
+        </div>
+      </section>
+
+      <section class="song-sec" id="sec-verse3">
+        <div class="sec-head">
+          <span class="sec-name">Couplet 3 / Estrofa 3 / Verse 3</span>
+          <button class="playbtn" onclick="playSec('verse3')" aria-label="Écouter cette section">&#9658;</button>
+        </div>
+        <div class="cols">
+          <div class="col col-fr">
+          <div class="lt">Couplet 3</div>
+          <div class="lyrics">
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Elle connaît les ruelles comme d'autres connaissent des prières</p>
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Les distributeurs de nuit et les regards qui transpercent</p>
+          <p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Les copains d'hier ont déjà disparu dans la fumée</p>
+          <p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Certains derrière des barreaux et d'autres dans les journaux oubliés</p>
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Parfois elle monte sur les toits pour regarder la ville respirer</p>
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Comme si quelque part quelqu'un pouvait encore la retrouver</p>
+          <p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Mais les sirènes couvrent tout même les rêves les plus sincères</p>
+          <p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Et les étoiles semblent mortes au-dessus des tours de verre</p>
+          </div>
+        </div>
+          <div class="col col-es">
+          <div class="lt">Estrofa 3</div>
+          <div class="lyrics">
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Conoce los callejones como otros conocen sus oraciones</p>
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Los cajeros nocturnos y las miradas que atraviesan</p>
+          <p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Los amigos de ayer ya desaparecieron en el humo</p>
+          <p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Algunos detrás de rejas y otros en periódicos olvidados</p>
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>A veces sube a los tejados para ver respirar la ciudad</p>
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Como si en algún lugar alguien pudiera todavía encontrarla</p>
+          <p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Pero las sirenas cubren todo incluso los sueños más sinceros</p>
+          <p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Y las estrellas parecen muertas sobre las torres de cristal</p>
+          </div>
+        </div>
+          <div class="col col-en">
+          <div class="lt">Verse 3</div>
+          <div class="lyrics">
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>She knows the back alleys like others know their prayers</p>
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>The night ATMs and the stares that pierce right through</p>
+          <p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Yesterday's friends have already vanished into the smoke</p>
+          <p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Some behind bars and others in forgotten newspapers</p>
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Sometimes she climbs to rooftops to watch the city breathe</p>
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>As if somewhere someone could still find her</p>
+          <p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>But the sirens cover everything even the most sincere dreams</p>
+          <p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>And the stars seem dead above the glass towers</p>
+          </div>
+        </div>
+        </div>
+      </section>
+
+      <section class="song-sec" id="sec-bridge">
+        <div class="sec-head">
+          <span class="sec-name">Bridge / Bridge / Bridge</span>
+          <button class="playbtn" onclick="playSec('bridge')" aria-label="Écouter cette section">&#9658;</button>
+        </div>
+        <div class="cols">
+          <div class="col col-fr">
+          <div class="lt">Bridge</div>
+          <div class="lyrics">
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Dis-moi... quand est-ce qu'on devient invisible...</p>
+          <p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Quand plus personne ne prononce ton prénom...</p>
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Dis-moi... les adultes étaient déjà perdus avant nous ?</p>
+          <p class="lyric-line">(Silence)</p>
+          </div>
+        </div>
+          <div class="col col-es">
+          <div class="lt">Bridge</div>
+          <div class="lyrics">
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Dime... cuándo nos volvemos invisibles...</p>
+          <p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Cuando nadie pronuncia ya tu nombre...</p>
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Dime... los adultos ya estaban perdidos antes que nosotros?</p>
+          <p class="lyric-line">(Silencio)</p>
+          </div>
+        </div>
+          <div class="col col-en">
+          <div class="lt">Bridge</div>
+          <div class="lyrics">
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Tell me... when do we become invisible...</p>
+          <p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>When no one says your name anymore...</p>
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Tell me... were the adults already lost before us?</p>
+          <p class="lyric-line">(Silence)</p>
+          </div>
+        </div>
+        </div>
+      </section>
+
+      <section class="song-sec" id="sec-chorusfinal">
+        <div class="sec-head">
+          <span class="sec-name">Refrain Final / Coro Final / Final Chorus</span>
+          <button class="playbtn" onclick="playSec('chorusfinal')" aria-label="Écouter cette section">&#9658;</button>
+        </div>
+        <div class="cols">
+          <div class="col col-fr">
+          <div class="lt">Refrain Final</div>
+          <div class="lyrics">
+          <p class="lyric-line"><span class="badge badge-duo">Trèfle &amp; Minotaure</span>Petite ombre des villes qui danse sous les gyrophares</p>
+          <p class="lyric-line"><span class="badge badge-duo">Trèfle &amp; Minotaure</span>Le cœur rempli de bruit et les yeux pleins de brouillard</p>
+          <p class="lyric-line"><span class="badge badge-duo">Trèfle &amp; Minotaure</span>Elle voulait juste un peu d'amour un peu de lumière</p>
+          <p class="lyric-line"><span class="badge badge-duo">Trèfle &amp; Minotaure</span>Mais les rues lui ont appris à survivre avant de vivre sur terre</p>
+          </div>
+        </div>
+          <div class="col col-es">
+          <div class="lt">Coro Final</div>
+          <div class="lyrics">
+          <p class="lyric-line"><span class="badge badge-duo">Trèfle &amp; Minotaure</span>Pequeña sombra de la ciudad que baila bajo los destellos</p>
+          <p class="lyric-line"><span class="badge badge-duo">Trèfle &amp; Minotaure</span>El corazón lleno de ruido y los ojos llenos de niebla</p>
+          <p class="lyric-line"><span class="badge badge-duo">Trèfle &amp; Minotaure</span>Solo quería un poco de amor un poco de luz</p>
+          <p class="lyric-line"><span class="badge badge-duo">Trèfle &amp; Minotaure</span>Pero las calles le enseñaron a sobrevivir antes de vivir en esta tierra</p>
+          </div>
+        </div>
+          <div class="col col-en">
+          <div class="lt">Final Chorus</div>
+          <div class="lyrics">
+          <p class="lyric-line"><span class="badge badge-duo">Trèfle &amp; Minotaure</span>Little shadow of the city dancing under the flashing lights</p>
+          <p class="lyric-line"><span class="badge badge-duo">Trèfle &amp; Minotaure</span>Heart full of noise and eyes full of fog</p>
+          <p class="lyric-line"><span class="badge badge-duo">Trèfle &amp; Minotaure</span>She just wanted a little love a little light</p>
+          <p class="lyric-line"><span class="badge badge-duo">Trèfle &amp; Minotaure</span>But the streets taught her to survive before living on this earth</p>
+          </div>
+        </div>
+        </div>
+      </section>
+
+      <section class="song-sec" id="sec-outro">
+        <div class="sec-head">
+          <span class="sec-name">Outro / Outro / Outro</span>
+          <button class="playbtn" onclick="playSec('outro')" aria-label="Écouter cette section">&#9658;</button>
+        </div>
+        <div class="cols">
+          <div class="col col-fr">
+          <div class="lt">Outro</div>
+          <div class="lyrics">
+          <p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Les villes dorment jamais vraiment...</p>
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Et certains enfants non plus...</p>
+          </div>
+        </div>
+          <div class="col col-es">
+          <div class="lt">Outro</div>
+          <div class="lyrics">
+          <p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Las ciudades nunca duermen de verdad...</p>
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Y algunos niños tampoco...</p>
+          </div>
+        </div>
+          <div class="col col-en">
+          <div class="lt">Outro</div>
+          <div class="lyrics">
+          <p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Cities never really sleep...</p>
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>And some children never do either...</p>
+          </div>
+        </div>
+        </div>
+      </section>
+
+  <footer>
+    <a href="https://www.trefleminotaure.com" target="_blank" rel="noopener">www.trefleminotaure.com</a> &middot; &copy; 2026 Trèfle &amp; Minotaure
+  </footer>
+
+</div>
+
+<script>
+const SECS = {
+  "intro": { fr: "Les villes avalent les rêves comme des mégots sous la pluie... Et les enfants grandissent plus vite que la nuit...", es: "Las ciudades devoran los sueños como colillas bajo la lluvia... Y los niños crecen más rápido que la noche...", en: "Cities swallow dreams like cigarette butts in the rain... And children grow up faster than the night..." },
+  "verse1": { fr: "Elle traîne ses baskets blanches sur les trottoirs fatigués Les vitrines lui promettent un monde qu'elle ne pourra jamais payer Dans son sac quelques cigarettes un vieux pull et des secrets Elle dit qu'elle dort parfois chez des amis imaginaires Quand les adultes deviennent des murs et les appartements des hivers", es: "Arrastra sus zapatillas blancas por las aceras cansadas Los escaparates le prometen un mundo que nunca podrá pagar En su bolsa unos cigarrillos un viejo jersey y secretos Dice que duerme a veces en casa de amigos imaginarios Cuando los adultos se vuelven muros y los apartamentos inviernos", en: "She drags her white sneakers across tired sidewalks The shop windows promise her a world she will never afford In her bag some cigarettes an old sweater and secrets She says she sleeps sometimes at imaginary friends When adults become walls and apartments become winters" },
+  "pre1": { fr: "Les néons brillent pour ceux qui ont encore un endroit où rentrer...", es: "Los neones brillan para los que todavía tienen un lugar al que volver...", en: "The neon lights shine for those who still have somewhere to go home..." },
+  "chorus1": { fr: "Petite ombre des villes qui danse sous les gyrophares Le cœur rempli de bruit et les yeux pleins de brouillard Elle voulait juste un peu d'amour un peu de lumière Mais les rues lui ont appris que les contes finissent rarement bien sur terre", es: "Pequeña sombra de la ciudad que baila bajo los destellos El corazón lleno de ruido y los ojos llenos de niebla Solo quería un poco de amor un poco de luz Pero las calles le enseñaron que los cuentos raramente terminan bien en la tierra", en: "Little shadow of the city dancing under the flashing lights Heart full of noise and eyes full of fog She just wanted a little love a little light But the streets taught her that fairy tales rarely end well on earth" },
+  "verse2": { fr: "Le métro roule encore comme un vieux serpent malade Les gens baissent les yeux pour éviter le naufrage Elle regarde les couples rire à travers les vitres des cafés Comme si le bonheur était un club privé Y'a des hommes trop vieux qui lui parlent comme à une proie Et des loups bien habillés qui sentent le parfum et le froid Alors elle sourit parfois pour ne pas montrer les dents Parce qu'ici la tendresse coûte plus cher que l'argent", es: "El metro sigue rodando como una vieja serpiente enferma La gente baja la vista para evitar el naufragio Ella mira a las parejas reír a través de los cristales de los cafés Como si la felicidad fuera un club privado Hay hombres demasiado viejos que le hablan como a una presa Y lobos bien vestidos que huelen a perfume y a frío Entonces sonríe a veces para no enseñar los dientes Porque aquí la ternura cuesta más que el dinero", en: "The subway still runs like an old sick snake People look away to avoid the wreckage She watches couples laughing through café windows As if happiness were a private club There are men too old who talk to her like she is prey And well-dressed wolves who smell of perfume and cold So she smiles sometimes to hide her teeth Because here tenderness costs more than money" },
+  "chorus2": { fr: "Petite ombre des villes qui danse sous les gyrophares Le cœur rempli de bruit et les yeux pleins de brouillard Elle voulait juste un peu d'amour un peu de lumière Mais les rues lui ont appris que les contes finissent rarement bien sur terre", es: "Pequeña sombra de la ciudad que baila bajo los destellos El corazón lleno de ruido y los ojos llenos de niebla Solo quería un poco de amor un poco de luz Pero las calles le enseñaron que los cuentos raramente terminan bien en la tierra", en: "Little shadow of the city dancing under the flashing lights Heart full of noise and eyes full of fog She just wanted a little love a little light But the streets taught her that fairy tales rarely end well on earth" },
+  "verse3": { fr: "Elle connaît les ruelles comme d'autres connaissent des prières Les distributeurs de nuit et les regards qui transpercent Les copains d'hier ont déjà disparu dans la fumée Certains derrière des barreaux et d'autres dans les journaux oubliés Parfois elle monte sur les toits pour regarder la ville respirer Comme si quelque part quelqu'un pouvait encore la retrouver Mais les sirènes couvrent tout même les rêves les plus sincères Et les étoiles semblent mortes au-dessus des tours de verre", es: "Conoce los callejones como otros conocen sus oraciones Los cajeros nocturnos y las miradas que atraviesan Los amigos de ayer ya desaparecieron en el humo Algunos detrás de rejas y otros en periódicos olvidados A veces sube a los tejados para ver respirar la ciudad Como si en algún lugar alguien pudiera todavía encontrarla Pero las sirenas cubren todo incluso los sueños más sinceros Y las estrellas parecen muertas sobre las torres de cristal", en: "She knows the back alleys like others know their prayers The night ATMs and the stares that pierce right through Yesterday's friends have already vanished into the smoke Some behind bars and others in forgotten newspapers Sometimes she climbs to rooftops to watch the city breathe As if somewhere someone could still find her But the sirens cover everything even the most sincere dreams And the stars seem dead above the glass towers" },
+  "bridge": { fr: "Dis-moi... quand est-ce qu'on devient invisible... Quand plus personne ne prononce ton prénom... Dis-moi... les adultes étaient déjà perdus avant nous ?", es: "Dime... cuándo nos volvemos invisibles... Cuando nadie pronuncia ya tu nombre... Dime... los adultos ya estaban perdidos antes que nosotros?", en: "Tell me... when do we become invisible... When no one says your name anymore... Tell me... were the adults already lost before us?" },
+  "chorusfinal": { fr: "Petite ombre des villes qui danse sous les gyrophares Le cœur rempli de bruit et les yeux pleins de brouillard Elle voulait juste un peu d'amour un peu de lumière Mais les rues lui ont appris à survivre avant de vivre sur terre", es: "Pequeña sombra de la ciudad que baila bajo los destellos El corazón lleno de ruido y los ojos llenos de niebla Solo quería un poco de amor un poco de luz Pero las calles le enseñaron a sobrevivir antes de vivir en esta tierra", en: "Little shadow of the city dancing under the flashing lights Heart full of noise and eyes full of fog She just wanted a little love a little light But the streets taught her to survive before living on this earth" },
+  "outro": { fr: "Les villes dorment jamais vraiment... Et certains enfants non plus...", es: "Las ciudades nunca duermen de verdad... Y algunos niños tampoco...", en: "Cities never really sleep... And some children never do either..." }
+};
+
+const LANG_MAP = { fr: "fr-FR", es: "es-ES", en: "en-GB" };
+let curLang = "fr";
+let curSpeed = 0.9;
+
+function setLang(lang) {
+  document.body.classList.remove("show-fr", "show-es", "show-en");
+  document.querySelectorAll(".lang-btn").forEach(b => b.classList.remove("active"));
+  document.querySelector(`.lang-btn[data-lang="${lang}"]`).classList.add("active");
+  if (lang === "all") {
+    curLang = "fr";
+  } else {
+    document.body.classList.add("show-" + lang);
+    curLang = lang;
+  }
+}
+
+function setSpeed(val) {
+  curSpeed = val;
+  document.querySelectorAll(".speed-btn").forEach(b => b.classList.remove("active"));
+  document.querySelector(`.speed-btn[data-speed="${val}"]`).classList.add("active");
+}
+
+function playSec(id) {
+  if (!("speechSynthesis" in window)) {
+    alert("La synthèse vocale n'est pas supportée par ce navigateur.");
+    return;
+  }
+  const entry = SECS[id];
+  if (!entry) return;
+  const txt = entry[curLang];
+  if (!txt) return;
+  window.speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(txt);
+  u.lang = LANG_MAP[curLang];
+  u.rate = curSpeed;
+  window.speechSynthesis.speak(u);
+}
+</script>
+</body>
+</html>
