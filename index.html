@@ -26,7 +26,6 @@
     min-height: 100vh;
   }
 
-  /* ── HERO ── */
   .hero {
     background: linear-gradient(160deg, #0e0a04 0%, #1a0e06 50%, #0a0812 100%);
     border-bottom: 1px solid #3a2a10;
@@ -56,10 +55,7 @@
     line-height: 1.1;
     text-shadow: 0 2px 20px rgba(0,0,0,0.8);
   }
-  .hero-dot {
-    color: var(--gold);
-    font-style: normal;
-  }
+  .hero-dot { color: var(--gold); font-style: normal; }
   .hero-sub {
     font-family: "Cinzel", serif;
     font-size: clamp(0.65rem, 2vw, 0.85rem);
@@ -79,7 +75,6 @@
     line-height: 1.6;
   }
 
-  /* ── FILTRES ── */
   .filters {
     background: var(--dark2);
     border-bottom: 1px solid #2a1e0a;
@@ -113,15 +108,8 @@
     letter-spacing: 0.08em;
     transition: all 0.18s;
   }
-  .fbtn:hover, .fbtn.on {
-    background: var(--gold);
-    color: #fff;
-    border-color: var(--gold);
-  }
-  .search-wrap {
-    flex: 1;
-    max-width: 260px;
-  }
+  .fbtn:hover, .fbtn.on { background: var(--gold); color: #fff; border-color: var(--gold); }
+  .search-wrap { flex: 1; max-width: 260px; }
   .search-wrap input {
     width: 100%;
     background: #1a1208;
@@ -136,12 +124,7 @@
   .search-wrap input::placeholder { color: #5a4a30; }
   .search-wrap input:focus { border-color: var(--gold); }
 
-  /* ── CATALOGUE ── */
-  .catalogue {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 32px 20px 60px;
-  }
+  .catalogue { max-width: 1100px; margin: 0 auto; padding: 32px 20px 60px; }
   .cat-header {
     font-family: "Cinzel", serif;
     font-size: 0.68rem;
@@ -154,7 +137,6 @@
   }
   #count { color: var(--gold); }
 
-  /* ── CARTE ── */
   .card {
     background: linear-gradient(135deg, #1a1208 0%, #150e06 100%);
     border: 1px solid #2a1e0a;
@@ -163,144 +145,43 @@
     overflow: hidden;
     transition: border-color 0.2s, box-shadow 0.2s;
   }
-  .card:hover {
-    border-color: #4a3418;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.5), 0 0 0 1px rgba(184,150,46,0.1);
-  }
-  .card-inner {
-    display: grid;
-    grid-template-columns: 64px 1fr auto;
-    gap: 0;
-    align-items: stretch;
-  }
+  .card:hover { border-color: #4a3418; box-shadow: 0 4px 24px rgba(0,0,0,0.5), 0 0 0 1px rgba(184,150,46,0.1); }
+  .card-inner { display: grid; grid-template-columns: 64px 1fr auto; gap: 0; align-items: stretch; }
   .card-num {
     background: var(--dark3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: "Cinzel", serif;
-    font-size: 1rem;
-    color: var(--gold);
-    border-right: 1px solid #2a1e0a;
-    padding: 20px 0;
-    letter-spacing: 0.05em;
+    display: flex; align-items: center; justify-content: center;
+    font-family: "Cinzel", serif; font-size: 1rem; color: var(--gold);
+    border-right: 1px solid #2a1e0a; padding: 20px 0; letter-spacing: 0.05em;
   }
-  .card-body {
-    padding: 16px 20px;
-  }
-  .card-titles {
-    margin-bottom: 8px;
-  }
-  .card-main-title {
-    font-family: "IM Fell English", serif;
-    font-size: 1.2rem;
-    color: #e8d5a0;
-    line-height: 1.2;
-  }
-  .card-sub-titles {
-    font-family: "Cinzel", serif;
-    font-size: 0.65rem;
-    color: var(--muted);
-    letter-spacing: 0.1em;
-    margin-top: 3px;
-  }
-  .card-meta {
-    display: flex;
-    gap: 6px;
-    flex-wrap: wrap;
-    margin-bottom: 10px;
-  }
-  .pill {
-    font-family: "Cinzel", serif;
-    font-size: 0.6rem;
-    padding: 2px 8px;
-    border-radius: 12px;
-    letter-spacing: 0.06em;
-    border: 1px solid;
-  }
+  .card-body { padding: 16px 20px; }
+  .card-titles { margin-bottom: 8px; }
+  .card-main-title { font-family: "IM Fell English", serif; font-size: 1.2rem; color: #e8d5a0; line-height: 1.2; }
+  .card-sub-titles { font-family: "Cinzel", serif; font-size: 0.65rem; color: var(--muted); letter-spacing: 0.1em; margin-top: 3px; }
+  .card-meta { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
+  .pill { font-family: "Cinzel", serif; font-size: 0.6rem; padding: 2px 8px; border-radius: 12px; letter-spacing: 0.06em; border: 1px solid; }
   .pill-style { background: #1a1a2a; color: #8888cc; border-color: #2a2a4a; }
   .pill-bpm { background: #1a2a1a; color: #88cc88; border-color: #2a4a2a; }
   .pill-config { background: #2a1a2a; color: #cc88cc; border-color: #4a2a4a; }
   .pill-album { background: #2a1a0a; color: var(--gold-light); border-color: #4a2a10; }
   .pill-warn { background: #2a0808; color: #f0a0a0; border-color: #4a1010; }
-  .card-links {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-  }
+  .card-links { display: flex; gap: 8px; flex-wrap: wrap; }
   .lbtn {
-    font-family: "Cinzel", serif;
-    font-size: 0.62rem;
-    padding: 5px 12px;
-    border-radius: 4px;
-    text-decoration: none;
-    letter-spacing: 0.08em;
-    border: 1px solid;
-    transition: all 0.18s;
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
+    font-family: "Cinzel", serif; font-size: 0.62rem; padding: 5px 12px; border-radius: 4px;
+    text-decoration: none; letter-spacing: 0.08em; border: 1px solid; transition: all 0.18s;
+    display: inline-flex; align-items: center; gap: 5px;
   }
-  .lbtn-chanter {
-    background: #1a1a2a;
-    color: #9090dd;
-    border-color: #3a3a6a;
-  }
+  .lbtn-chanter { background: #1a1a2a; color: #9090dd; border-color: #3a3a6a; }
   .lbtn-chanter:hover { background: #3a3a8a; color: #fff; border-color: #6060cc; }
-  .lbtn-ped {
-    background: #1a2a1a;
-    color: #70aa70;
-    border-color: #2a4a2a;
-  }
+  .lbtn-ped { background: #1a2a1a; color: #70aa70; border-color: #2a4a2a; }
   .lbtn-ped:hover { background: #2a5a2a; color: #fff; border-color: #4a8a4a; }
-  .lbtn-tab {
-    background: #2a1a0a;
-    color: var(--gold-light);
-    border-color: #4a2a10;
-  }
+  .lbtn-tab { background: #2a1a0a; color: var(--gold-light); border-color: #4a2a10; }
   .lbtn-tab:hover { background: #5a3010; color: #fff; border-color: var(--gold); }
-  .lbtn-soon {
-    background: #1a1410;
-    color: #5a4a30;
-    border-color: #2a1e10;
-    cursor: default;
-    opacity: 0.6;
-  }
-  .card-lang {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 16px 16px;
-    gap: 4px;
-    border-left: 1px solid #2a1e0a;
-    background: #120e06;
-  }
-  .lang-dot {
-    width: 8px; height: 8px;
-    border-radius: 50%;
-    background: var(--gold);
-    opacity: 0.6;
-  }
-  .lang-label {
-    font-family: "Cinzel", serif;
-    font-size: 0.55rem;
-    color: var(--muted);
-    letter-spacing: 0.1em;
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-  }
+  .card-lang { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 16px 16px; gap: 4px; border-left: 1px solid #2a1e0a; background: #120e06; }
+  .lang-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--gold); opacity: 0.6; }
+  .lang-label { font-family: "Cinzel", serif; font-size: 0.55rem; color: var(--muted); letter-spacing: 0.1em; writing-mode: vertical-rl; transform: rotate(180deg); }
 
-  /* ── EMPTY STATE ── */
-  .empty {
-    text-align: center;
-    padding: 60px 20px;
-    color: var(--muted);
-    font-style: italic;
-    font-size: 1.1rem;
-  }
+  .empty { text-align: center; padding: 60px 20px; color: var(--muted); font-style: italic; font-size: 1.1rem; }
 
-  /* ── FOOTER ── */
   footer {
     background: var(--dark2);
     border-top: 1px solid #2a1e0a;
@@ -335,7 +216,6 @@
   <button class="fbtn on" onclick="setFilter('all',this)">Tout</button>
   <button class="fbtn" onclick="setFilter('duo',this)">Duo</button>
   <button class="fbtn" onclick="setFilter('solo',this)">Solo</button>
-  <button class="fbtn" onclick="setFilter('tab',this)">Avec tablatures</button>
   <div class="search-wrap">
     <input type="text" id="search" placeholder="Rechercher une chanson..." oninput="filterSearch(this.value)">
   </div>
@@ -355,6 +235,18 @@
 </footer>
 
 <script>
+/*
+  CONVENTION FIXE DE FICHIERS (obligatoire dans chaque dossier de chanson) :
+    index.html
+    chanter.html
+    pedagogique.html
+    tablatures_fr.html
+    tablatures_en.html
+    tablatures_es.html
+  Le catalogue.json ne stocke plus les noms de fichiers, seulement "dossier".
+  Les liens sont reconstruits ici automatiquement.
+*/
+
 let catalogue = [];
 let activeFilter = 'all';
 let searchQuery = '';
@@ -379,8 +271,7 @@ function filterSearch(q) {
 
 function matches(song) {
   if (activeFilter === 'duo' && song.config !== 'duo') return false;
-  if (activeFilter === 'solo' && !song.config.includes('solo')) return false;
-  if (activeFilter === 'tab' && !song.fichiers.tablatures) return false;
+  if (activeFilter === 'solo' && !(song.config || '').includes('solo')) return false;
   if (searchQuery) {
     const txt = [
       song.titre.fr, song.titre.en, song.titre.es,
@@ -393,35 +284,27 @@ function matches(song) {
 }
 
 function buildCard(s) {
-  const base = window.location.pathname.replace(/\/[^\/]*$/, '/');
+  const d = encodeURI(s.dossier) + '/';
 
-  const linkChanter = s.fichiers.chanter
-    ? `<a class="lbtn lbtn-chanter" href="${s.fichiers.chanter}">📖 Chanter</a>`
-    : `<span class="lbtn lbtn-soon">📖 Bientôt</span>`;
+  const linkChanter = `<a class="lbtn lbtn-chanter" href="${d}chanter.html">📖 Chanter</a>`;
+  const linkPed = `<a class="lbtn lbtn-ped" href="${d}pedagogique.html">🎓 Pédagogique</a>`;
+  const linkTab = `<a class="lbtn lbtn-tab" href="${d}tablatures_fr.html">🎸 Tablatures</a>`;
+  const linkIndex = `<a class="lbtn lbtn-chanter" href="${d}index.html">🏠 Page</a>`;
 
-  const linkPed = s.fichiers.pedagogique
-    ? `<a class="lbtn lbtn-ped" href="${s.fichiers.pedagogique}">🎓 Pédagogique</a>`
-    : `<span class="lbtn lbtn-soon">🎓 Bientôt</span>`;
-
-  const linkTab = s.fichiers.tablatures
-    ? `<a class="lbtn lbtn-tab" href="${s.fichiers.tablatures}">🎸 Tablatures</a>`
-    : `<span class="lbtn lbtn-soon">🎸 Bientôt</span>`;
-
-  const warnPill = s.sensible
-    ? `<span class="pill pill-warn">⚠️ Thème sensible</span>` : '';
-
-  const bpmPill = s.bpm
-    ? `<span class="pill pill-bpm">⏱ ${s.bpm} BPM</span>` : '';
-
-  const duree = s.duree
-    ? `<span class="pill pill-bpm">${s.duree}</span>` : '';
+  const warnPill = s.sensible ? `<span class="pill pill-warn">⚠️ Thème sensible</span>` : '';
+  const bpmPill = s.bpm ? `<span class="pill pill-bpm">⏱ ${s.bpm} BPM</span>` : '';
+  const duree = (s.duree && s.duree !== 'A COMPLETER') ? `<span class="pill pill-bpm">${s.duree}</span>` : '';
+  const stylePill = (s.style && s.style !== 'A COMPLETER') ? `<span class="pill pill-style">${s.style}</span>` : '';
+  const albumPill = (s.album && s.album !== 'A COMPLETER') ? `<span class="pill pill-album">${s.album}</span>` : '';
+  const configLabel = (s.config && s.config !== 'A COMPLETER') ? (CONFIG_LABELS[s.config] || s.config) : '';
+  const configPill = configLabel ? `<span class="pill pill-config">${configLabel}</span>` : '';
 
   const sousTitres = [s.soustitre.en, s.soustitre.es]
     .filter(t => t && t !== s.titre.fr && t !== s.titre.en)
     .join(' · ');
 
   return `
-    <div class="card" data-config="${s.config}" data-tab="${s.fichiers.tablatures ? '1' : '0'}">
+    <div class="card">
       <div class="card-inner">
         <div class="card-num">${s.id}</div>
         <div class="card-body">
@@ -430,14 +313,15 @@ function buildCard(s) {
             ${sousTitres ? `<div class="card-sub-titles">${sousTitres}</div>` : ''}
           </div>
           <div class="card-meta">
-            <span class="pill pill-style">${s.style}</span>
+            ${stylePill}
             ${bpmPill}
             ${duree}
-            <span class="pill pill-config">${CONFIG_LABELS[s.config] || s.config}</span>
-            <span class="pill pill-album">${s.album}</span>
+            ${configPill}
+            ${albumPill}
             ${warnPill}
           </div>
           <div class="card-links">
+            ${linkIndex}
             ${linkChanter}
             ${linkPed}
             ${linkTab}
