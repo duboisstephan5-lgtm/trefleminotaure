@@ -1,108 +1,179 @@
 {
   "site": {
     "name": "Trèfle.Minotaure",
-    "url": "https://trefleminotaure.github.io",
-    "description": "Paroles, guide pédagogique & ressources musicales — FR · ES · EN"
+    "url": "https://duboisstephan5-lgtm.github.io/trefleminotaure",
+    "description": "Paroles, guide pédagogique & ressources musicales — FR · ES · EN",
+    "convention_fichiers": "Chaque dossier de chanson DOIT contenir exactement : index.html, chanter.html, pedagogique.html, tablatures_fr.html, tablatures_en.html, tablatures_es.html. Si une tablature n'est pas disponible, utiliser une copie de tablatures-indisponible_XX.html renommee selon la langue."
   },
   "chansons": [
     {
       "id": "000",
-      "titre": {
-        "fr": "9/11 Survivors — Remember Us",
-        "en": "9/11 Survivors — Remember Us",
-        "es": "9/11 Survivors — Remember Us"
-      },
-      "soustitre": {
-        "fr": "Souvenez-vous de nous",
-        "es": "Recuérdanos",
-        "en": "Remember Us"
-      },
+      "titre": { "fr": "9/11 Survivors — Remember Us", "en": "9/11 Survivors — Remember Us", "es": "9/11 Survivors — Remember Us" },
+      "soustitre": { "fr": "Souvenez-vous de nous", "es": "Recuérdanos", "en": "Remember Us" },
+      "dossier": "000 9-11 survivor - remember us",
       "style": "Gothic Folk Rock Cinématique · Cornemuse & Violon gothique",
       "bpm": null,
       "duree": "~5:06",
       "album": "Single",
       "config": "duo",
       "themes": ["11 septembre", "SSPT", "culpabilité du survivant"],
-      "sensible": true,
-      "fichiers": {
-        "chanter": "000-survivors-remember-us/chanter.html",
-        "pedagogique": "000-survivors-remember-us/pedagogique.html"
-      }
+      "sensible": true
     },
     {
       "id": "001",
-      "titre": {
-        "fr": "Les Fantômes de la Tolérance",
-        "en": "Ghosts of Tolerance",
-        "es": "Fantasmas de Tolerancia"
-      },
-      "soustitre": {
-        "fr": "Tolérance — Diversité — Droits",
-        "es": "Tolerancia — Diversidad — Derechos",
-        "en": "Tolerance — Diversity — Rights"
-      },
-      "style": "Dark Gothic Minimalist Rock",
-      "bpm": 95,
-      "duree": "~6:15",
-      "album": "Album 05 — Démons",
-      "config": "duo",
-      "themes": ["racisme", "religion", "genre", "droits sociaux"],
-      "sensible": false,
-      "fichiers": {
-        "chanter": "001-ghosts-of-tolerance/chanter.html",
-        "pedagogique": "001-ghosts-of-tolerance/pedagogique.html",
-        "tablatures": "001-ghosts-of-tolerance/tablatures.html"
-      }
+      "titre": { "fr": "Ombres des villes", "en": "A COMPLETER", "es": "A COMPLETER" },
+      "soustitre": { "fr": "", "en": "", "es": "" },
+      "dossier": "001 ombres des villes",
+      "style": "A COMPLETER",
+      "bpm": null,
+      "duree": "A COMPLETER",
+      "album": "A COMPLETER",
+      "config": "A COMPLETER",
+      "themes": [],
+      "sensible": false
     },
     {
       "id": "002",
-      "titre": {
-        "fr": "Le dernier voyage",
-        "en": "The Last Journey",
-        "es": "El último viaje"
-      },
-      "soustitre": {
-        "fr": "Le monologue du chien abandonné",
-        "es": "El monólogo del perro abandonado",
-        "en": "The monologue of the abandoned dog"
-      },
+      "titre": { "fr": "Amour interdit à Téhéran", "en": "A COMPLETER", "es": "A COMPLETER" },
+      "soustitre": { "fr": "", "en": "", "es": "" },
+      "dossier": "002 Amour interdit a téhéran",
+      "style": "A COMPLETER",
+      "bpm": null,
+      "duree": "A COMPLETER",
+      "album": "A COMPLETER",
+      "config": "A COMPLETER",
+      "themes": [],
+      "sensible": true
+    },
+    {
+      "id": "003",
+      "titre": { "fr": "Tu vois papa", "en": "A COMPLETER", "es": "A COMPLETER" },
+      "soustitre": { "fr": "", "en": "", "es": "" },
+      "dossier": "003 tu vois papa",
+      "style": "A COMPLETER",
+      "bpm": null,
+      "duree": "A COMPLETER",
+      "album": "A COMPLETER",
+      "config": "A COMPLETER",
+      "themes": [],
+      "sensible": true
+    },
+    {
+      "id": "004",
+      "titre": { "fr": "Addiction contre addiction", "en": "A COMPLETER", "es": "A COMPLETER" },
+      "soustitre": { "fr": "", "en": "", "es": "" },
+      "dossier": "004 addiction contre addiction",
+      "style": "A COMPLETER",
+      "bpm": null,
+      "duree": "A COMPLETER",
+      "album": "A COMPLETER",
+      "config": "A COMPLETER",
+      "themes": ["addiction"],
+      "sensible": true
+    },
+    {
+      "id": "005",
+      "titre": { "fr": "L'amour... pas la guerre", "en": "A COMPLETER", "es": "A COMPLETER" },
+      "soustitre": { "fr": "", "en": "", "es": "" },
+      "dossier": "005 l'amour...pas la guerre",
+      "style": "A COMPLETER",
+      "bpm": null,
+      "duree": "A COMPLETER",
+      "album": "A COMPLETER",
+      "config": "A COMPLETER",
+      "themes": ["guerre", "paix"],
+      "sensible": true
+    },
+    {
+      "id": "006",
+      "titre": { "fr": "Le dernier voyage", "en": "The Last Journey", "es": "El último viaje" },
+      "soustitre": { "fr": "Le monologue du chien abandonné", "es": "El monólogo del perro abandonado", "en": "The monologue of the abandoned dog" },
+      "dossier": "006 le dernier voyage",
       "style": "Dark Gothic Folk Balladry",
       "bpm": 75,
       "duree": "~4:41",
       "album": "Album 05 — Démons",
       "config": "minotaure_solo",
       "themes": ["abandon animal", "fidélité", "fin de vie", "euthanasie"],
-      "sensible": true,
-      "fichiers": {
-        "chanter": "002-le-dernier-voyage/chanter.html",
-        "pedagogique": "002-le-dernier-voyage/pedagogique.html",
-        "tablatures": "002-le-dernier-voyage/tablatures.html"
-      }
+      "sensible": true
     },
     {
-      "id": "003",
-      "titre": {
-        "fr": "Berceuse noire",
-        "en": "Dark Lullaby",
-        "es": "Canción de cuna oscura"
-      },
-      "soustitre": {
-        "fr": "Dors, loin du vacarme",
-        "es": "Duerme, lejos del ruido",
-        "en": "Sleep, far from the noise"
-      },
+      "id": "007",
+      "titre": { "fr": "Berceuse noire", "en": "Dark Lullaby", "es": "Canción de cuna oscura" },
+      "soustitre": { "fr": "Dors, loin du vacarme", "es": "Duerme, lejos del ruido", "en": "Sleep, far from the noise" },
+      "dossier": "007 berceuse noire",
       "style": "Dark Gothic Lullaby · Coldwave",
       "bpm": 68,
       "duree": "~3:25",
       "album": "Album 05 — Démons",
       "config": "duo",
       "themes": ["insomnie", "protection", "nuit", "fragilité"],
-      "sensible": false,
-      "fichiers": {
-        "chanter": "003-berceuse-noire/chanter.html",
-        "pedagogique": "003-berceuse-noire/pedagogique.html",
-        "tablatures": "003-berceuse-noire/tablatures.html"
-      }
+      "sensible": false
+    },
+    {
+      "id": "008",
+      "titre": { "fr": "Gangsta paradis scolaire", "en": "A COMPLETER", "es": "A COMPLETER" },
+      "soustitre": { "fr": "", "en": "", "es": "" },
+      "dossier": "008 gansta paradis scolaire",
+      "style": "A COMPLETER",
+      "bpm": null,
+      "duree": "A COMPLETER",
+      "album": "A COMPLETER",
+      "config": "A COMPLETER",
+      "themes": ["violence scolaire"],
+      "sensible": true
+    },
+    {
+      "id": "009",
+      "titre": { "fr": "Les Fantômes de la Tolérance", "en": "Ghosts of Tolerance", "es": "Fantasmas de Tolerancia" },
+      "soustitre": { "fr": "Tolérance — Diversité — Droits", "es": "Tolerancia — Diversidad — Derechos", "en": "Tolerance — Diversity — Rights" },
+      "dossier": "009 les fantomes de la tolérances",
+      "style": "Dark Gothic Minimalist Rock",
+      "bpm": 95,
+      "duree": "~6:15",
+      "album": "Album 05 — Démons",
+      "config": "duo",
+      "themes": ["racisme", "religion", "genre", "droits sociaux"],
+      "sensible": false
+    },
+    {
+      "id": "010",
+      "titre": { "fr": "Le serment du labyrinthe — Partie 1", "en": "A COMPLETER", "es": "A COMPLETER" },
+      "soustitre": { "fr": "", "en": "", "es": "" },
+      "dossier": "010 part 1 le serment du labyrinthe",
+      "style": "A COMPLETER",
+      "bpm": null,
+      "duree": "A COMPLETER",
+      "album": "A COMPLETER",
+      "config": "A COMPLETER",
+      "themes": [],
+      "sensible": false
+    },
+    {
+      "id": "011",
+      "titre": { "fr": "La main tendue — Partie 2", "en": "A COMPLETER", "es": "A COMPLETER" },
+      "soustitre": { "fr": "", "en": "", "es": "" },
+      "dossier": "011 part 2 la main tendue",
+      "style": "A COMPLETER",
+      "bpm": null,
+      "duree": "A COMPLETER",
+      "album": "A COMPLETER",
+      "config": "A COMPLETER",
+      "themes": [],
+      "sensible": false
+    },
+    {
+      "id": "012",
+      "titre": { "fr": "25 ans après — Partie 3", "en": "A COMPLETER", "es": "A COMPLETER" },
+      "soustitre": { "fr": "", "en": "", "es": "" },
+      "dossier": "012 part 3 25 ans apres",
+      "style": "A COMPLETER",
+      "bpm": null,
+      "duree": "A COMPLETER",
+      "album": "A COMPLETER",
+      "config": "A COMPLETER",
+      "themes": [],
+      "sensible": false
     }
   ]
 }
