@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Addiction, contre-addiction — Paroles | tréfle.minotaure</title>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Cinzel:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --gold:#b8962e;--parchment:#f5ecd7;--dark:#2a1f10;
+  --fr-bg:#e8f0fc;--fr-lbl:#c8dcf8;--fr-txt:#1a3a6b;--fr-bdr:#aac4f0;
+  --es-bg:#f5ead5;--es-lbl:#e8d4a8;--es-txt:#7a5010;--es-bdr:#d4b87a;
+  --en-bg:#fce8ec;--en-lbl:#f8d0dc;--en-txt:#8b1a3a;--en-bdr:#f0aabc;
+}
+body{background:#2a1f10;font-family:"Cormorant Garamond",serif;color:#2a1f10;min-height:100vh;padding:20px}
+.page{max-width:1200px;margin:0 auto;background:var(--parchment);border:2px solid #c4a97a;border-radius:8px;overflow:hidden}
+header{background:linear-gradient(135deg,#1a1008 0%,#2a1810 100%);padding:28px 32px 20px;border-bottom:2px solid var(--gold)}
+.htitle{font-family:"IM Fell English",serif;font-size:2rem;color:#e8d5a0;letter-spacing:.03em}
+.hsubtitle{font-family:"Cinzel",serif;font-size:.85rem;color:#b8962e;margin-top:4px;letter-spacing:.12em}
+.hmeta{display:flex;gap:12px;margin-top:12px;flex-wrap:wrap;align-items:center}
+.mpill{background:#2a1808;border:1px solid #6a4a20;color:#d4b87a;font-size:.7rem;padding:3px 10px;border-radius:16px;font-family:"Cinzel",serif;letter-spacing:.08em}
+.warn-pill{background:#2a0808;border:1px solid #8b2020;color:#f0a0a0;font-size:.7rem;padding:3px 10px;border-radius:16px;font-family:"Cinzel",serif;letter-spacing:.08em}
+.controls{background:#f0e8d0;padding:10px 32px;border-bottom:1px solid #d4b87a;display:flex;gap:20px;flex-wrap:wrap;align-items:center}
+.ctrl-label{font-family:"Cinzel",serif;font-size:.65rem;color:#7a5010;letter-spacing:.1em;text-transform:uppercase}
+.cbtn{padding:5px 14px;border:1px solid #c4a97a;background:transparent;border-radius:4px;cursor:pointer;font-family:"Cinzel",serif;font-size:.7rem;color:#7a5010;transition:all .2s}
+.cbtn:hover,.cbtn.on{background:var(--gold);color:#fff;border-color:var(--gold)}
+.sec{padding:18px 32px}
+.sec-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:8px}
+.sec-label{font-family:"Cinzel",serif;font-size:.78rem;letter-spacing:.18em;color:var(--gold);text-transform:uppercase}
+.vb{font-family:"Cinzel",serif;font-size:.63rem;padding:2px 8px;border-radius:10px}
+.vb.trefle{background:#f0e0fc;color:#731a94;border:1px solid #c8a0e8}
+.vb.minotaure{background:#e0e8f8;color:#1a3b8c;border:1px solid #a0b8e8}
+.vb.duo{background:#f8f0e0;color:#7a5010;border:1px solid #d4b87a}
+.vb.instr{background:#e8f0e0;color:#3a5020;border:1px solid #a0c080}
+.play-btn{padding:4px 12px;background:transparent;border:1px solid var(--gold);color:var(--gold);border-radius:4px;cursor:pointer;font-size:.73rem;font-family:"Cinzel",serif;transition:all .2s}
+.play-btn:hover{background:var(--gold);color:#fff}
+.col-labels{display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;margin-bottom:4px;margin-left:44px}
+.lt{padding:3px 12px;border-radius:4px;font-family:"Cinzel",serif;font-size:.68rem;letter-spacing:.1em;border:1px solid;text-align:center}
+.lt.FR{background:var(--fr-lbl);color:var(--fr-txt);border-color:var(--fr-bdr)}
+.lt.ES{background:var(--es-lbl);color:var(--es-txt);border-color:var(--es-bdr)}
+.lt.EN{background:var(--en-lbl);color:var(--en-txt);border-color:var(--en-bdr)}
+.lyric-row{display:grid;grid-template-columns:40px 1fr 1fr 1fr;gap:4px;margin-bottom:3px;align-items:start}
+.vbadge{display:flex;align-items:center;padding-top:5px;justify-content:center}
+.lc.fr{background:var(--fr-bg);border-radius:4px;padding:5px 10px}
+.lc.es{background:var(--es-bg);border-radius:4px;padding:5px 10px}
+.lc.en{background:var(--en-bg);border-radius:4px;padding:5px 10px}
+.line{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1.07rem;line-height:1.5;display:block}
+.instr{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:.88rem;opacity:.5;display:block}
+.instr-note{display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;margin-bottom:6px;margin-left:44px}
+.sec-divider{text-align:center;font-family:"Cinzel",serif;font-size:.68rem;color:#c4a97a;margin-top:14px;letter-spacing:.2em}
+footer{background:#1a1008;color:#888;text-align:center;padding:16px;font-family:"Cinzel",serif;font-size:.7rem;letter-spacing:.1em;border-top:2px solid var(--gold)}
+footer a{color:#b8962e;text-decoration:none}
+body.show-fr .col.es,body.show-fr .col.en{display:none}
+body.show-fr .lyric-row{grid-template-columns:40px 1fr}
+body.show-fr .col-labels{grid-template-columns:1fr}
+body.show-fr .instr-note{grid-template-columns:1fr}
+body.show-fr .col-labels .lt.ES,body.show-fr .col-labels .lt.EN{display:none}
+body.show-es .col.fr,body.show-es .col.en{display:none}
+body.show-es .lyric-row{grid-template-columns:40px 1fr}
+body.show-es .col-labels{grid-template-columns:1fr}
+body.show-es .instr-note{grid-template-columns:1fr}
+body.show-es .col-labels .lt.FR,body.show-es .col-labels .lt.EN{display:none}
+body.show-en .col.fr,body.show-en .col.es{display:none}
+body.show-en .lyric-row{grid-template-columns:40px 1fr}
+body.show-en .col-labels{grid-template-columns:1fr}
+body.show-en .instr-note{grid-template-columns:1fr}
+body.show-en .col-labels .lt.FR,body.show-en .col-labels .lt.ES{display:none}
+@media print{.controls,.play-btn{display:none}}
+</style>
+</head>
+<body>
+<div class="page">
+<header>
+  <div class="htitle">Addiction, contre-addiction</div>
+  <div class="hsubtitle">Addiction against addiction &nbsp;·&nbsp; Adicción contra-adicción</div>
+  <div class="hmeta">
+    <span class="mpill">🎵 80 BPM</span>
+    <span class="mpill">🎛 Dark Gothic Coldwave x Alternative Pop</span>
+    <span class="mpill">🎻 Violon gothique &amp; Basse hypnotique</span>
+    <span class="mpill">🍀🐂 Trèfle &amp; Minotaure — voix alternées</span>
+    <span class="warn-pill">⚠️ Thème sensible — relation toxique · addiction émotionnelle</span>
+  </div>
+</header>
+<div class="controls">
+  <div style="display:flex;align-items:center;gap:8px">
+    <span class="ctrl-label">Langue</span>
+    <button class="cbtn on" onclick="setLang('all',this)">🌍 Trilingue</button>
+    <button class="cbtn" onclick="setLang('fr',this)">🇫🇷 Français</button>
+    <button class="cbtn" onclick="setLang('es',this)">🇪🇸 Español</button>
+    <button class="cbtn" onclick="setLang('en',this)">🇬🇧 English</button>
+  </div>
+  <div style="display:flex;align-items:center;gap:8px">
+    <span class="ctrl-label">Vitesse TTS</span>
+    <button class="cbtn" onclick="setSpeed(0.7,this)">× 0.7</button>
+    <button class="cbtn on" onclick="setSpeed(1.0,this)">× 1.0</button>
+    <button class="cbtn" onclick="setSpeed(1.2,this)">× 1.2</button>
+  </div>
+</div>
+  <section class="sec" id="sec_intro">
+    <div class="sec-head">
+      <span class="sec-label">✦ Intro ✦</span>
+      <span class="vb trefle">🍀 Trèfle</span>
+      <button class="play-btn" onclick="playSec('intro')">▶ écouter</button>
+    </div>
+    <div class="col-labels">
+      <span class="lt FR">🇫🇷 Français</span>
+      <span class="lt ES">🇪🇸 Español</span>
+      <span class="lt EN">🇬🇧 English</span>
+    </div>
+    <div class="instr-note">
+      <div class="lc fr"><em class="instr">[Pulsation basse sub] [Arpège clair] [Violon gothique grave] [Slide guitare]</em></div>
+      <div class="lc es"><em class="instr">[Pulso de bajo sub] [Arpegio limpio] [Violín gótico grave] [Guitarra slide]</em></div>
+      <div class="lc en"><em class="instr">[Sub bass pulse] [Clean arpeggio] [Low gothic violin] [Slide guitar]</em></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Le silence a des griffes ce soir</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">El silencio tiene garras esta noche</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">Silence has claws tonight</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">On se regarde... sans se voir... (addiction...)</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Nos miramos... sin vernos... (adicción...)</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">We look at each other... without seeing... (addiction...)</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb minotaure">🐂 Minotaure</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">T'as le regard qui saigne du bleu (addiction...)</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Tienes esa mirada que sangra de azul (adicción...)</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">Your eyes bleed blue (addiction...)</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb minotaure">🐂 Minotaure</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">On est deux ombres qui jouent au feu</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Somos dos sombras jugando con fuego</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">We are two shadows playing with fire</span></div></div>
+    </div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="sec_verse1">
+    <div class="sec-head">
+      <span class="sec-label">✦ Couplet 1 ✦</span>
+      <span class="vb duo">🍀🐂 Duo</span>
+      <button class="play-btn" onclick="playSec('verse1')">▶ écouter</button>
+    </div>
+    <div class="col-labels">
+      <span class="lt FR">🇫🇷 Français</span>
+      <span class="lt ES">🇪🇸 Español</span>
+      <span class="lt EN">🇬🇧 English</span>
+    </div>
+    <div class="instr-note">
+      <div class="lc fr"><em class="instr">[Basse hammer-on pull-off] [Violon qui monte] — voix alternées Trèfle/Minotaure</em></div>
+      <div class="lc es"><em class="instr">[Bajo hammer-on pull-off] [Violín ascendente] — voces alternadas Trèfle/Minotaure</em></div>
+      <div class="lc en"><em class="instr">[Bass hammer-on pull-off] [Violin rise] — alternating Trèfle/Minotaure vocals</em></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb minotaure">🐂 Minotaure</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Tes doigts... des fils de fer barbelés</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Tus dedos... alambres de espino</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">Your fingers... barbed wire</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb minotaure">🐂 Minotaure</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Sur ma peau qui ne sait plus rêver</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Sobre mi piel que ya olvidó soñar</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">On my skin that forgot how to dream</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">On se repousse... on se dévore</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Nos rechazamos... nos devoramos</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">We push each other away... we devour each other</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">C'est l'addiction qui veut notre mort</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Es la adicción que quiere nuestra muerte</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">It is addiction that wants our death</span></div></div>
+    </div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="sec_chorus1">
+    <div class="sec-head">
+      <span class="sec-label">✦ Refrain 1 — Duo ✦</span>
+      <span class="vb duo">🍀🐂 Duo</span>
+      <button class="play-btn" onclick="playSec('chorus1')">▶ écouter</button>
+    </div>
+    <div class="col-labels">
+      <span class="lt FR">🇫🇷 Français</span>
+      <span class="lt ES">🇪🇸 Español</span>
+      <span class="lt EN">🇬🇧 English</span>
+    </div>
+    <div class="instr-note">
+      <div class="lc fr"><em class="instr">[Groove de basse large] [Harmonies de violon] — les deux voix se superposent, Trèfle en tête</em></div>
+      <div class="lc es"><em class="instr">[Groove de bajo amplio] [Armonías de violín] — ambas voces se superponen, Trèfle al frente</em></div>
+      <div class="lc en"><em class="instr">[Wide bass groove] [Violin harmonies] — both voices overlap, Trèfle lead</em></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Mon addiction... ma contre-addiction</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Mi adicción... mi contra-adicción</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">My addiction... my counter-addiction</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">On est l'aimant... et la collision</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Somos el imán... y la colisión</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">We are the magnet... and the collision</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">C'est sale... c'est beau... c'est animal</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Es sucio... es bello... es animal</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">It is dirty... it is beautiful... it is animal</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">On se fait du bien... on se fait du mal</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Nos hacemos bien... nos hacemos mal</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">We do each other good... we do each other harm</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Je veux fuir... je veux ta morsure</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Quiero huir... quiero tu mordisco</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">I want to flee... I want your bite</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Ta tendresse... comme une brûlure (addiction...)</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Tu ternura... como una quemadura (adicción...)</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">Your tenderness... like a burn (addiction...)</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Addiction... contre-addiction</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Adicción... contra-adicción</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">Addiction... counter-addiction</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">On est la chute... et l'ascension</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Somos la caída... y la ascensión</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">We are the fall... and the ascension</span></div></div>
+    </div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="sec_instrumental">
+    <div class="sec-head">
+      <span class="sec-label">✦ Instrumental ✦</span>
+      <span class="vb instr">🎻 Instrumental</span>
+    </div>
+    <div class="col-labels">
+      <span class="lt FR">🇫🇷 Français</span>
+      <span class="lt ES">🇪🇸 Español</span>
+      <span class="lt EN">🇬🇧 English</span>
+    </div>
+    <div class="instr-note">
+      <div class="lc fr"><em class="instr">[Duo slide guitare + violon] [Riff pentatonique] [Glissés de basse]</em></div>
+      <div class="lc es"><em class="instr">[Dueto guitarra slide + violín] [Riff pentatónico] [Deslizamientos de bajo]</em></div>
+      <div class="lc en"><em class="instr">[Slide guitar + violin duet] [Pentatonic riff] [Bass slides]</em></div>
+    </div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="sec_verse2">
+    <div class="sec-head">
+      <span class="sec-label">✦ Couplet 2 ✦</span>
+      <span class="vb duo">🍀🐂 Duo</span>
+      <button class="play-btn" onclick="playSec('verse2')">▶ écouter</button>
+    </div>
+    <div class="col-labels">
+      <span class="lt FR">🇫🇷 Français</span>
+      <span class="lt ES">🇪🇸 Español</span>
+      <span class="lt EN">🇬🇧 English</span>
+    </div>
+    <div class="instr-note">
+      <div class="lc fr"><em class="instr">[Violoncelle grave] — voix alternées</em></div>
+      <div class="lc es"><em class="instr">[Violonchelo grave] — voces alternadas</em></div>
+      <div class="lc en"><em class="instr">[Low cello] — alternating vocals</em></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Le ciel est bas... il nous écrase</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">El cielo es bajo... nos aplasta</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">The sky is low... it crushes us</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">On cherche la paix dans chaque extase (addiction...)</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Buscamos la paz en cada éxtasis (adicción...)</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">We seek peace in every ecstasy (addiction...)</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb minotaure">🐂 Minotaure</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Mais le plaisir a un goût de cendre</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Pero el placer sabe a ceniza</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">But pleasure tastes like ash</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb minotaure">🐂 Minotaure</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">On n'a plus rien à se revendre</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Ya no tenemos nada que vendernos</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">We have nothing left to sell each other</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Ta bouche est un piège... un précipice</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Tu boca es una trampa... un precipicio</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">Your mouth is a trap... a precipice</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Moi je suis l'esclave de tes vices (addiction...)</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Yo soy el esclavo de tus vicios (adicción...)</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">I am the slave of your vices (addiction...)</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb minotaure">🐂 Minotaure</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">On fuit l'amour pour mieux y céder</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Huimos del amor para ceder mejor</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">We flee love only to surrender to it</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb minotaure">🐂 Minotaure</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Comme deux aimants déjà condamnés</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Como dos imanes ya condenados</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">Like two magnets already condemned</span></div></div>
+    </div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="sec_chorus2">
+    <div class="sec-head">
+      <span class="sec-label">✦ Refrain 2 — Duo ✦</span>
+      <span class="vb duo">🍀🐂 Duo</span>
+      <button class="play-btn" onclick="playSec('chorus2')">▶ écouter</button>
+    </div>
+    <div class="col-labels">
+      <span class="lt FR">🇫🇷 Français</span>
+      <span class="lt ES">🇪🇸 Español</span>
+      <span class="lt EN">🇬🇧 English</span>
+    </div>
+    <div class="instr-note">
+      <div class="lc fr"><em class="instr">[Sub bass plus forte] [Violon plus large]</em></div>
+      <div class="lc es"><em class="instr">[Bajo sub más fuerte] [Violín más amplio]</em></div>
+      <div class="lc en"><em class="instr">[Sub bass stronger] [Violin wider]</em></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Mon addiction... ma contre-addiction</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Mi adicción... mi contra-adicción</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">My addiction... my counter-addiction</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">On est l'aimant... et la collision</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Somos el imán... y la colisión</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">We are the magnet... and the collision</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">C'est sale... c'est beau... c'est animal</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Es sucio... es bello... es animal</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">It is dirty... it is beautiful... it is animal</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">On se fait du bien... on se fait du mal</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Nos hacemos bien... nos hacemos mal</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">We do each other good... we do each other harm</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Je veux fuir... je veux ta morsure</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Quiero huir... quiero tu mordisco</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">I want to flee... I want your bite</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Ta tendresse... comme une brûlure (addiction...)</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Tu ternura... como una quemadura (adicción...)</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">Your tenderness... like a burn (addiction...)</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Addiction... contre-addiction</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Adicción... contra-adicción</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">Addiction... counter-addiction</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">On est la chute... et l'ascension</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Somos la caída... y la ascensión</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">We are the fall... and the ascension</span></div></div>
+    </div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="sec_verse3">
+    <div class="sec-head">
+      <span class="sec-label">✦ Couplet 3 ✦</span>
+      <span class="vb duo">🍀🐂 Duo</span>
+      <button class="play-btn" onclick="playSec('verse3')">▶ écouter</button>
+    </div>
+    <div class="col-labels">
+      <span class="lt FR">🇫🇷 Français</span>
+      <span class="lt ES">🇪🇸 Español</span>
+      <span class="lt EN">🇬🇧 English</span>
+    </div>
+    <div class="instr-note">
+      <div class="lc fr"><em class="instr">[Duel violon et slide guitare] puis [Slide guitare bends] — voix alternées</em></div>
+      <div class="lc es"><em class="instr">[Duelo violín y guitarra slide] luego [Slide guitar bends] — voces alternadas</em></div>
+      <div class="lc en"><em class="instr">[Violin and slide guitar duel] then [Slide guitar bends] — alternating vocals</em></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">On gratte le vernis de nos peurs</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Rascamos el barniz de nuestros miedos</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">We scratch the varnish of our fears</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Pour trouver le rythme de nos cœurs (addiction...)</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Para encontrar el ritmo de nuestros corazones (adicción...)</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">To find the rhythm of our hearts (addiction...)</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb minotaure">🐂 Minotaure</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">C'est primal... c'est sale... c'est viscéral</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Es primal... es sucio... es visceral</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">It is primal... it is dirty... it is visceral</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb minotaure">🐂 Minotaure</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Un naufrage en version intégrale</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Un naufragio en versión integral</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">A shipwreck in full version</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">L'instinct nous guide... la raison fuit</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">El instinto nos guía... la razón huye</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">Instinct guides us... reason flees</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">On est les enfants de la nuit</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Somos los hijos de la noche</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">We are the children of the night</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb minotaure">🐂 Minotaure</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Écorchés vifs sous la lumière</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Despellejados vivos bajo la luz</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">Flayed alive under the light</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb minotaure">🐂 Minotaure</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">On s'aime à s'en mordre la poussière</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Nos amamos hasta morder el polvo</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">We love each other to bite the dust</span></div></div>
+    </div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="sec_bridge">
+    <div class="sec-head">
+      <span class="sec-label">✦ Pont — Chuchoté ✦</span>
+      <span class="vb duo">🍀🐂 Duo</span>
+      <button class="play-btn" onclick="playSec('bridge')">▶ écouter</button>
+    </div>
+    <div class="col-labels">
+      <span class="lt FR">🇫🇷 Français</span>
+      <span class="lt ES">🇪🇸 Español</span>
+      <span class="lt EN">🇬🇧 English</span>
+    </div>
+    <div class="instr-note">
+      <div class="lc fr"><em class="instr">[Presque a cappella] [Pulsation basse grave] — chuchoté, très proche du micro</em></div>
+      <div class="lc es"><em class="instr">[Casi a cappella] [Pulso de bajo grave] — susurrado, muy cerca del micrófono</em></div>
+      <div class="lc en"><em class="instr">[Almost a cappella] [Low bass pulse] — whispered, very close to the mic</em></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Ne pars pas... (addiction...)</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">No te vayas... (adicción...)</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">Do not leave... (addiction...)</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb minotaure">🐂 Minotaure</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Fuis-moi...</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Húyeme...</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">Run from me...</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Embrasse-moi... (addiction...)</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Abrázame... (adicción...)</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">Hold me... (addiction...)</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb minotaure">🐂 Minotaure</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Tue-moi...</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Mátame...</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">Kill me...</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">C'est bon quand ça saigne... (addiction...)</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Es bueno cuando sangra... (adicción...)</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">It feels good when it bleeds... (addiction...)</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">C'est nous...</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Somos nosotros...</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">That is us...</span></div></div>
+    </div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="sec_finalchorus">
+    <div class="sec-head">
+      <span class="sec-label">✦ Refrain Final ✦</span>
+      <span class="vb duo">🍀🐂 Duo</span>
+      <button class="play-btn" onclick="playSec('finalchorus')">▶ écouter</button>
+    </div>
+    <div class="col-labels">
+      <span class="lt FR">🇫🇷 Français</span>
+      <span class="lt ES">🇪🇸 Español</span>
+      <span class="lt EN">🇬🇧 English</span>
+    </div>
+    <div class="instr-note">
+      <div class="lc fr"><em class="instr">[Atmosphère gothique totale] [Violons qui s'envolent] [Sub bass au maximum]</em></div>
+      <div class="lc es"><em class="instr">[Atmósfera gótica total] [Violines que se elevan] [Bajo sub al máximo]</em></div>
+      <div class="lc en"><em class="instr">[Full gothic atmosphere] [Violins soaring] [Sub bass strongest]</em></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Mon addiction... ma contre-addiction</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Mi adicción... mi contra-adicción</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">My addiction... my counter-addiction</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">On est l'aimant... et la collision</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Somos el imán... y la colisión</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">We are the magnet... and the collision</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">C'est sale... c'est beau... c'est animal</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Es sucio... es bello... es animal</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">It is dirty... it is beautiful... it is animal</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">On se fait du bien... on se fait du mal</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Nos hacemos bien... nos hacemos mal</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">We do each other good... we do each other harm</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Je veux fuir... je veux ta morsure</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Quiero huir... quiero tu mordisco</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">I want to flee... I want your bite</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Ta tendresse... comme une brûlure (addiction...)</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Tu ternura... como una quemadura (adicción...)</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">Your tenderness... like a burn (addiction...)</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Addiction... contre-addiction</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Adicción... contra-adicción</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">Addiction... counter-addiction</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">On est la chute... et l'ascension</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Somos la caída... y la ascensión</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">We are the fall... and the ascension</span></div></div>
+    </div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="sec_outro">
+    <div class="sec-head">
+      <span class="sec-label">✦ Outro ✦</span>
+      <span class="vb duo">🍀🐂 Duo</span>
+      <button class="play-btn" onclick="playSec('outro')">▶ écouter</button>
+    </div>
+    <div class="col-labels">
+      <span class="lt FR">🇫🇷 Français</span>
+      <span class="lt ES">🇪🇸 Español</span>
+      <span class="lt EN">🇬🇧 English</span>
+    </div>
+    <div class="instr-note">
+      <div class="lc fr"><em class="instr">[Slide guitare] [Violon grave] [Basse qui s'efface]</em></div>
+      <div class="lc es"><em class="instr">[Guitarra slide] [Violín grave] [Bajo que se desvanece]</em></div>
+      <div class="lc en"><em class="instr">[Slide guitar] [Low violin] [Bass fading]</em></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">On dérive...</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">A la deriva...</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">We drift...</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb minotaure">🐂 Minotaure</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Sous les eaux troubles de l'instinct...</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Bajo las aguas turbias del instinto...</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">Under the dark waters of instinct...</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Et les âmes sont perdues dans le péché...</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Y las almas perdidas en el pecado...</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">And souls are lost in sin...</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">(Les hameçons perdus dans le pêcher...)</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">(Los anzuelos perdidos en el pecado...)</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">(Lost hooks in the sin...)</span></div></div>
+    </div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+<footer>
+  <a href="https://www.trefleminotaure.com">www.trefleminotaure.com</a>
+  &nbsp;·&nbsp; © 2026 Trèfle &amp; Minotaure &nbsp;·&nbsp; Addiction, contre-addiction
+</footer>
+</div>
+<script>
+const SECS = {
+  "intro": {
+    "fr": `Le silence a des griffes ce soir On se regarde... sans se voir... (addiction...) T'as le regard qui saigne du bleu (addiction...) On est deux ombres qui jouent au feu`,
+    "es": `El silencio tiene garras esta noche Nos miramos... sin vernos... (adicción...) Tienes esa mirada que sangra de azul (adicción...) Somos dos sombras jugando con fuego`,
+    "en": `Silence has claws tonight We look at each other... without seeing... (addiction...) Your eyes bleed blue (addiction...) We are two shadows playing with fire`
+  },
+  "verse1": {
+    "fr": `Tes doigts... des fils de fer barbelés Sur ma peau qui ne sait plus rêver On se repousse... on se dévore C'est l'addiction qui veut notre mort`,
+    "es": `Tus dedos... alambres de espino Sobre mi piel que ya olvidó soñar Nos rechazamos... nos devoramos Es la adicción que quiere nuestra muerte`,
+    "en": `Your fingers... barbed wire On my skin that forgot how to dream We push each other away... we devour each other It is addiction that wants our death`
+  },
+  "chorus1": {
+    "fr": `Mon addiction... ma contre-addiction On est l'aimant... et la collision C'est sale... c'est beau... c'est animal On se fait du bien... on se fait du mal Je veux fuir... je veux ta morsure Ta tendresse... comme une brûlure (addiction...) Addiction... contre-addiction On est la chute... et l'ascension`,
+    "es": `Mi adicción... mi contra-adicción Somos el imán... y la colisión Es sucio... es bello... es animal Nos hacemos bien... nos hacemos mal Quiero huir... quiero tu mordisco Tu ternura... como una quemadura (adicción...) Adicción... contra-adicción Somos la caída... y la ascensión`,
+    "en": `My addiction... my counter-addiction We are the magnet... and the collision It is dirty... it is beautiful... it is animal We do each other good... we do each other harm I want to flee... I want your bite Your tenderness... like a burn (addiction...) Addiction... counter-addiction We are the fall... and the ascension`
+  },
+  "verse2": {
+    "fr": `Le ciel est bas... il nous écrase On cherche la paix dans chaque extase (addiction...) Mais le plaisir a un goût de cendre On n'a plus rien à se revendre Ta bouche est un piège... un précipice Moi je suis l'esclave de tes vices (addiction...) On fuit l'amour pour mieux y céder Comme deux aimants déjà condamnés`,
+    "es": `El cielo es bajo... nos aplasta Buscamos la paz en cada éxtasis (adicción...) Pero el placer sabe a ceniza Ya no tenemos nada que vendernos Tu boca es una trampa... un precipicio Yo soy el esclavo de tus vicios (adicción...) Huimos del amor para ceder mejor Como dos imanes ya condenados`,
+    "en": `The sky is low... it crushes us We seek peace in every ecstasy (addiction...) But pleasure tastes like ash We have nothing left to sell each other Your mouth is a trap... a precipice I am the slave of your vices (addiction...) We flee love only to surrender to it Like two magnets already condemned`
+  },
+  "chorus2": {
+    "fr": `Mon addiction... ma contre-addiction On est l'aimant... et la collision C'est sale... c'est beau... c'est animal On se fait du bien... on se fait du mal Je veux fuir... je veux ta morsure Ta tendresse... comme une brûlure (addiction...) Addiction... contre-addiction On est la chute... et l'ascension`,
+    "es": `Mi adicción... mi contra-adicción Somos el imán... y la colisión Es sucio... es bello... es animal Nos hacemos bien... nos hacemos mal Quiero huir... quiero tu mordisco Tu ternura... como una quemadura (adicción...) Adicción... contra-adicción Somos la caída... y la ascensión`,
+    "en": `My addiction... my counter-addiction We are the magnet... and the collision It is dirty... it is beautiful... it is animal We do each other good... we do each other harm I want to flee... I want your bite Your tenderness... like a burn (addiction...) Addiction... counter-addiction We are the fall... and the ascension`
+  },
+  "verse3": {
+    "fr": `On gratte le vernis de nos peurs Pour trouver le rythme de nos cœurs (addiction...) C'est primal... c'est sale... c'est viscéral Un naufrage en version intégrale L'instinct nous guide... la raison fuit On est les enfants de la nuit Écorchés vifs sous la lumière On s'aime à s'en mordre la poussière`,
+    "es": `Rascamos el barniz de nuestros miedos Para encontrar el ritmo de nuestros corazones (adicción...) Es primal... es sucio... es visceral Un naufragio en versión integral El instinto nos guía... la razón huye Somos los hijos de la noche Despellejados vivos bajo la luz Nos amamos hasta morder el polvo`,
+    "en": `We scratch the varnish of our fears To find the rhythm of our hearts (addiction...) It is primal... it is dirty... it is visceral A shipwreck in full version Instinct guides us... reason flees We are the children of the night Flayed alive under the light We love each other to bite the dust`
+  },
+  "bridge": {
+    "fr": `Ne pars pas... (addiction...) Fuis-moi... Embrasse-moi... (addiction...) Tue-moi... C'est bon quand ça saigne... (addiction...) C'est nous...`,
+    "es": `No te vayas... (adicción...) Húyeme... Abrázame... (adicción...) Mátame... Es bueno cuando sangra... (adicción...) Somos nosotros...`,
+    "en": `Do not leave... (addiction...) Run from me... Hold me... (addiction...) Kill me... It feels good when it bleeds... (addiction...) That is us...`
+  },
+  "finalchorus": {
+    "fr": `Mon addiction... ma contre-addiction On est l'aimant... et la collision C'est sale... c'est beau... c'est animal On se fait du bien... on se fait du mal Je veux fuir... je veux ta morsure Ta tendresse... comme une brûlure (addiction...) Addiction... contre-addiction On est la chute... et l'ascension`,
+    "es": `Mi adicción... mi contra-adicción Somos el imán... y la colisión Es sucio... es bello... es animal Nos hacemos bien... nos hacemos mal Quiero huir... quiero tu mordisco Tu ternura... como una quemadura (adicción...) Adicción... contra-adicción Somos la caída... y la ascensión`,
+    "en": `My addiction... my counter-addiction We are the magnet... and the collision It is dirty... it is beautiful... it is animal We do each other good... we do each other harm I want to flee... I want your bite Your tenderness... like a burn (addiction...) Addiction... counter-addiction We are the fall... and the ascension`
+  },
+  "outro": {
+    "fr": `On dérive... Sous les eaux troubles de l'instinct... Et les âmes sont perdues dans le péché... (Les hameçons perdus dans le pêcher...)`,
+    "es": `A la deriva... Bajo las aguas turbias del instinto... Y las almas perdidas en el pecado... (Los anzuelos perdidos en el pecado...)`,
+    "en": `We drift... Under the dark waters of instinct... And souls are lost in sin... (Lost hooks in the sin...)`
+  }
+};
+const LANG_MAP = { fr: "fr-FR", es: "es-ES", en: "en-GB" };
+let spd = 1.0;
+let curLang = "fr";
+function setLang(l, btn) {
+  document.body.className = l === "all" ? "" : "show-" + l;
+  curLang = (l === "all") ? "fr" : l;
+  document.querySelectorAll(".controls .cbtn").forEach(b => {
+    if (!b.textContent.includes("×")) b.classList.remove("on");
+  });
+  btn.classList.add("on");
+}
+function setSpeed(s, btn) {
+  spd = s;
+  document.querySelectorAll(".controls .cbtn").forEach(b => {
+    if (b.textContent.includes("×")) b.classList.remove("on");
+  });
+  btn.classList.add("on");
+}
+function playSec(id) {
+  const sec = SECS[id];
+  if (!sec) return;
+  const txt = sec[curLang] || sec.fr;
+  if (!txt) return;
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(txt);
+  u.lang = LANG_MAP[curLang] || "fr-FR";
+  u.rate = spd;
+  speechSynthesis.speak(u);
+}
+</script>
+</body>
+</html>

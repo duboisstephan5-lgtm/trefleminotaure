@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Amour Interdit à Téhéran — Paroles | tréfle.minotaure</title>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Cinzel:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --gold:#b8962e;--parchment:#f5ecd7;--dark:#2a1f10;
+  --fr-bg:#e8f0fc;--fr-lbl:#c8dcf8;--fr-txt:#1a3a6b;--fr-bdr:#aac4f0;
+  --es-bg:#f5ead5;--es-lbl:#e8d4a8;--es-txt:#7a5010;--es-bdr:#d4b87a;
+  --en-bg:#fce8ec;--en-lbl:#f8d0dc;--en-txt:#8b1a3a;--en-bdr:#f0aabc;
+}
+body{background:#2a1f10;font-family:"Cormorant Garamond",serif;color:#2a1f10;min-height:100vh;padding:20px}
+.page{max-width:1200px;margin:0 auto;background:var(--parchment);border:2px solid #c4a97a;border-radius:8px;overflow:hidden}
+header{background:linear-gradient(135deg,#1a1008 0%,#2a1810 100%);padding:28px 32px 20px;border-bottom:2px solid var(--gold)}
+.htitle{font-family:"IM Fell English",serif;font-size:2rem;color:#e8d5a0;letter-spacing:.03em}
+.hsubtitle{font-family:"Cinzel",serif;font-size:.85rem;color:#b8962e;margin-top:4px;letter-spacing:.12em}
+.hmeta{display:flex;gap:12px;margin-top:12px;flex-wrap:wrap;align-items:center}
+.mpill{background:#2a1808;border:1px solid #6a4a20;color:#d4b87a;font-size:.7rem;padding:3px 10px;border-radius:16px;font-family:"Cinzel",serif;letter-spacing:.08em}
+.warn-pill{background:#2a0808;border:1px solid #8b2020;color:#f0a0a0;font-size:.7rem;padding:3px 10px;border-radius:16px;font-family:"Cinzel",serif;letter-spacing:.08em}
+.controls{background:#f0e8d0;padding:10px 32px;border-bottom:1px solid #d4b87a;display:flex;gap:20px;flex-wrap:wrap;align-items:center}
+.ctrl-label{font-family:"Cinzel",serif;font-size:.65rem;color:#7a5010;letter-spacing:.1em;text-transform:uppercase}
+.cbtn{padding:5px 14px;border:1px solid #c4a97a;background:transparent;border-radius:4px;cursor:pointer;font-family:"Cinzel",serif;font-size:.7rem;color:#7a5010;transition:all .2s}
+.cbtn:hover,.cbtn.on{background:var(--gold);color:#fff;border-color:var(--gold)}
+.sec{padding:18px 32px}
+.sec-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:8px}
+.sec-label{font-family:"Cinzel",serif;font-size:.78rem;letter-spacing:.18em;color:var(--gold);text-transform:uppercase}
+.vb{font-family:"Cinzel",serif;font-size:.63rem;padding:2px 8px;border-radius:10px}
+.vb.trefle{background:#f0e0fc;color:#731a94;border:1px solid #c8a0e8}
+.vb.minotaure{background:#e0e8f8;color:#1a3b8c;border:1px solid #a0b8e8}
+.vb.duo{background:#f8f0e0;color:#7a5010;border:1px solid #d4b87a}
+.vb.instr{background:#e8f0e0;color:#3a5020;border:1px solid #a0c080}
+.play-btn{padding:4px 12px;background:transparent;border:1px solid var(--gold);color:var(--gold);border-radius:4px;cursor:pointer;font-size:.73rem;font-family:"Cinzel",serif;transition:all .2s}
+.play-btn:hover{background:var(--gold);color:#fff}
+.col-labels{display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;margin-bottom:4px;margin-left:44px}
+.lt{padding:3px 12px;border-radius:4px;font-family:"Cinzel",serif;font-size:.68rem;letter-spacing:.1em;border:1px solid;text-align:center}
+.lt.FR{background:var(--fr-lbl);color:var(--fr-txt);border-color:var(--fr-bdr)}
+.lt.ES{background:var(--es-lbl);color:var(--es-txt);border-color:var(--es-bdr)}
+.lt.EN{background:var(--en-lbl);color:var(--en-txt);border-color:var(--en-bdr)}
+.lyric-row{display:grid;grid-template-columns:40px 1fr 1fr 1fr;gap:4px;margin-bottom:3px;align-items:start}
+.vbadge{display:flex;align-items:center;padding-top:5px;justify-content:center}
+.lc.fr{background:var(--fr-bg);border-radius:4px;padding:5px 10px}
+.lc.es{background:var(--es-bg);border-radius:4px;padding:5px 10px}
+.lc.en{background:var(--en-bg);border-radius:4px;padding:5px 10px}
+.line{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1.07rem;line-height:1.5;display:block}
+.instr{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:.88rem;opacity:.5;display:block}
+.instr-note{display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;margin-bottom:6px;margin-left:44px}
+.instr-note.foreign-note{margin-top:-2px;margin-bottom:10px}
+.instr-note.foreign-note .instr{opacity:.65;font-size:.82rem}
+.sec-divider{text-align:center;font-family:"Cinzel",serif;font-size:.68rem;color:#c4a97a;margin-top:14px;letter-spacing:.2em}
+footer{background:#1a1008;color:#888;text-align:center;padding:16px;font-family:"Cinzel",serif;font-size:.7rem;letter-spacing:.1em;border-top:2px solid var(--gold)}
+footer a{color:#b8962e;text-decoration:none}
+/* Sélecteur langue */
+body.show-fr .col.es,body.show-fr .col.en{display:none}
+body.show-fr .lyric-row{grid-template-columns:40px 1fr}
+body.show-fr .col-labels{grid-template-columns:1fr}
+body.show-fr .instr-note{grid-template-columns:1fr}
+body.show-fr .col-labels .lt.ES,body.show-fr .col-labels .lt.EN{display:none}
+body.show-es .col.fr,body.show-es .col.en{display:none}
+body.show-es .lyric-row{grid-template-columns:40px 1fr}
+body.show-es .col-labels{grid-template-columns:1fr}
+body.show-es .instr-note{grid-template-columns:1fr}
+body.show-es .col-labels .lt.FR,body.show-es .col-labels .lt.EN{display:none}
+body.show-en .col.fr,body.show-en .col.es{display:none}
+body.show-en .lyric-row{grid-template-columns:40px 1fr}
+body.show-en .col-labels{grid-template-columns:1fr}
+body.show-en .instr-note{grid-template-columns:1fr}
+body.show-en .col-labels .lt.FR,body.show-en .col-labels .lt.ES{display:none}
+@media print{.controls,.play-btn{display:none}}
+</style>
+</head>
+<body>
+<div class="page">
+<header>
+  <div class="htitle">Amour Interdit à Téhéran</div>
+  <div class="hsubtitle">Forbidden Love in Tehran &nbsp;·&nbsp; Amor Prohibido en Teherán</div>
+  <div class="hmeta">
+    <span class="mpill">🎵 100 BPM</span>
+    <span class="mpill">🎛 Oriental Electro-Pop x Raï x Cinematic Dance</span>
+    <span class="mpill">🎻 Violon gothique &amp; Flûte Gasba</span>
+    <span class="mpill">🍀🐂 Trèfle &amp; Minotaure</span>
+    <span class="warn-pill">⚠️ Thème sensible — amour interdit · surveillance · répression</span>
+  </div>
+</header>
+<div class="controls">
+  <div style="display:flex;align-items:center;gap:8px">
+    <span class="ctrl-label">Langue</span>
+    <button class="cbtn on" onclick="setLang('all',this)">🌍 Trilingue</button>
+    <button class="cbtn" onclick="setLang('fr',this)">🇫🇷 Français</button>
+    <button class="cbtn" onclick="setLang('es',this)">🇪🇸 Español</button>
+    <button class="cbtn" onclick="setLang('en',this)">🇬🇧 English</button>
+  </div>
+  <div style="display:flex;align-items:center;gap:8px">
+    <span class="ctrl-label">Vitesse TTS</span>
+    <button class="cbtn" onclick="setSpeed(0.7,this)">× 0.7</button>
+    <button class="cbtn on" onclick="setSpeed(1.0,this)">× 1.0</button>
+    <button class="cbtn" onclick="setSpeed(1.2,this)">× 1.2</button>
+  </div>
+</div>
+  <section class="sec" id="sec_intro">
+    <div class="sec-head">
+      <span class="sec-label">✦ Intro — Raï traditionnel ✦</span>
+      <span class="vb duo">🍀🐂 Duo</span>
+      <button class="play-btn" onclick="playSec('intro')">▶ écouter</button>
+    </div>
+    <div class="col-labels">
+      <span class="lt FR">🇫🇷 Français</span>
+      <span class="lt ES">🇪🇸 Español</span>
+      <span class="lt EN">🇬🇧 English</span>
+    </div>
+    <div class="instr-note">
+      <div class="lc fr"><em class="instr">[Intro - Raï traditionnel] [Solo flûte Gasba] [Oud lent et émotionnel] [Darbuka et Bendir montant lentement] [Ambiance nocturne sombre de Téhéran] [Violon gothique entre progressivement]</em></div>
+      <div class="lc es"><em class="instr">[Intro - Raï tradicional] [Solo de flauta Gasba] [Oud lento y emocional] [Darbuka y Bendir subiendo lentamente] [Ambiente nocturno oscuro de Teherán] [Violín gótico entra progresivamente]</em></div>
+      <div class="lc en"><em class="instr">[Intro - Traditional Raï] [Gasba flute solo] [Slow emotional Oud] [Darbuka and Bendir slowly rising] [Dark Tehran night atmosphere] [Soft gothic violin enters progressively]</em></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">(murmure doux) Isabelle souffle dans la nuit de Téhéran...</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">(susurro suave) Isabelle respira en la noche de Teherán...</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">(soft whisper) Isabelle breathes in the night of Tehran...</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb minotaure">🐂 Minotaure</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">(murmure lointain) Téhéran...</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">(susurro distante) Teherán...</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">(distant whisper) Tehran...</span></div></div>
+    </div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="sec_verse1">
+    <div class="sec-head">
+      <span class="sec-label">✦ Couplet 1 ✦</span>
+      <span class="vb trefle">🍀 Trèfle</span>
+      <button class="play-btn" onclick="playSec('verse1')">▶ écouter</button>
+    </div>
+    <div class="col-labels">
+      <span class="lt FR">🇫🇷 Français</span>
+      <span class="lt ES">🇪🇸 Español</span>
+      <span class="lt EN">🇬🇧 English</span>
+    </div>
+    <div class="instr-note">
+      <div class="lc fr"><em class="instr">[Voix Trèfle — pop orientale émotionnelle — chaude et intime — articulation claire]</em></div>
+      <div class="lc es"><em class="instr">[Voz Trèfle — pop oriental emocional — cálida e íntima — articulación clara]</em></div>
+      <div class="lc en"><em class="instr">[Trèfle vocals — emotional oriental pop — breathy intimate — clear articulation]</em></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Isabelle souffle dans la nuit de Téhéran</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Isabelle respira en la noche de Teherán</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">Isabelle breathes in the night of Tehran</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Fatima lui écrit derrière un rideau tremblant</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Fátima le escribe detrás de una cortina que tiembla</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">Fatima writes to her behind a trembling curtain</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Les murs écoutent et les rues étouffent leurs pas</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Los muros escuchan y las calles ahogan sus pasos</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">The walls are listening and the streets muffle their steps</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Deux femmes qui s'aiment où l'amour n'a pas le droit</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Dos mujeres que se aman donde el amor no tiene derecho</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">Two women in love where love has no right to exist</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Elles se cachent pour respirer un instant</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Se esconden para respirar un instante</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">They hide just to breathe for a moment</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Entre les lois des hommes et les regards brûlants</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Entre las leyes de los hombres y las miradas que queman</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">Between the laws of men and the burning stares</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Elles tremblent pour leurs vies et pour leurs enfants</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Tiemblan por sus vidas y por sus hijos</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">They tremble for their lives and for their children</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Chaque message peut devenir un jugement</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Cada mensaje puede convertirse en un juicio</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">Every message can become a judgment</span></div></div>
+    </div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="sec_prechorus_ar">
+    <div class="sec-head">
+      <span class="sec-label">✦ Pré-Refrain Arabe — Duo ✦</span>
+      <span class="vb duo">🍀🐂 Duo</span>
+      <button class="play-btn" onclick="playSec('prechorus_ar')">▶ écouter</button>
+    </div>
+    <div class="col-labels">
+      <span class="lt FR">🇫🇷 Français</span>
+      <span class="lt ES">🇪🇸 Español</span>
+      <span class="lt EN">🇬🇧 English</span>
+    </div>
+    <div class="instr-note">
+      <div class="lc fr"><em class="instr">[Duo — phrases arabes émotionnelles et authentiques, jamais caricaturales]</em></div>
+      <div class="lc es"><em class="instr">[Duo — frases en árabe emocionales y auténticas, nunca caricaturescas]</em></div>
+      <div class="lc en"><em class="instr">[Duo — Arabic phrases, emotional and authentic, never caricatural]</em></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Habibi ya rohi / Nakhaf min hadhihi al qiyud</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Habibi ya rohi / Nakhaf min hadhihi al qiyud</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">Habibi ya rohi / Nakhaf min hadhihi al qiyud</span></div></div>
+    </div>
+    <div class="instr-note foreign-note">
+      <div class="lc fr"><em class="instr">(Mon amour, mon âme / J'ai peur de ces chaînes)</em></div>
+      <div class="lc es"><em class="instr">(Mi amor, mi alma / Temo a estas cadenas)</em></div>
+      <div class="lc en"><em class="instr">(My love, my soul / I fear these chains)</em></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Al houb mamnou / Wal qalb marbout bil alam</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Al houb mamnou / Wal qalb marbout bil alam</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">Al houb mamnou / Wal qalb marbout bil alam</span></div></div>
+    </div>
+    <div class="instr-note foreign-note">
+      <div class="lc fr"><em class="instr">(L'amour est interdit / Et le cœur lié à la douleur)</em></div>
+      <div class="lc es"><em class="instr">(El amor está prohibido / Y el corazón atado al dolor)</em></div>
+      <div class="lc en"><em class="instr">(Love is forbidden / And the heart bound to pain)</em></div>
+    </div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="sec_verse2">
+    <div class="sec-head">
+      <span class="sec-label">✦ Couplet 2 ✦</span>
+      <span class="vb duo">🍀🐂 Duo</span>
+      <button class="play-btn" onclick="playSec('verse2')">▶ écouter</button>
+    </div>
+    <div class="col-labels">
+      <span class="lt FR">🇫🇷 Français</span>
+      <span class="lt ES">🇪🇸 Español</span>
+      <span class="lt EN">🇬🇧 English</span>
+    </div>
+    <div class="instr-note">
+      <div class="lc fr"><em class="instr">[DROP] [Beat électro entre] [Basse sidechainée] [Minotaure + Trèfle]</em></div>
+      <div class="lc es"><em class="instr">[DROP] [Beat electro entra] [Bajo sidechain] [Minotaure + Trèfle]</em></div>
+      <div class="lc en"><em class="instr">[DROP] [Electro dance beat enters] [Sidechained bass] [Minotaure + Trèfle]</em></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Elles passent par un VPN pour voir un sourire</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Pasan por una VPN solo para ver una sonrisa</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">They go through a VPN just to see a smile</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Une lumière sur l'écran qui promet un futur</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Una luz en la pantalla que promete un futuro</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">A light on the screen that promises a future</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Mais derrière chaque pixel se cache un empire</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Pero detrás de cada píxel se esconde un imperio</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">But behind every pixel hides an empire</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Qui veut leur voler le droit même de s'ouvrir</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Que quiere robarles el derecho incluso de abrirse</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">That wants to steal their right even to open up</span></div></div>
+    </div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="sec_chorus1">
+    <div class="sec-head">
+      <span class="sec-label">✦ Refrain — Duo ✦</span>
+      <span class="vb duo">🍀🐂 Duo</span>
+      <button class="play-btn" onclick="playSec('chorus1')">▶ écouter</button>
+    </div>
+    <div class="col-labels">
+      <span class="lt FR">🇫🇷 Français</span>
+      <span class="lt ES">🇪🇸 Español</span>
+      <span class="lt EN">🇬🇧 English</span>
+    </div>
+    <div class="instr-note">
+      <div class="lc fr"><em class="instr">[Énergie club cinématique — synthés sombres atmosphériques]</em></div>
+      <div class="lc es"><em class="instr">[Energía club cinemática — sintetizadores oscuros atmosféricos]</em></div>
+      <div class="lc en"><em class="instr">[Cinematic club energy — dark atmospheric synths]</em></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Amour interdit / Deux cœurs meurtris</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Amor prohibido / Dos corazones heridos</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">Forbidden love / Two broken hearts</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Sous les ombres d'un pays qui dit non aux filles qui se choisissent</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Bajo las sombras de un país que dice no a las mujeres que se eligen</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">Under the shadows of a country that says no to girls who choose each other</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Elles s'accrochent à la vie / Elles refusent la nuit</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Se aferran a la vida / Rechazan la noche</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">They hold on to life / They refuse the night</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Elles traversent la ville pour juste exister un peu ici</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Cruzan la ciudad solo para existir un poco aquí</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">They cross the city just to exist a little here</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Amour interdit / Elles défient l'interdit</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Amor prohibido / Desafían lo prohibido</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">Forbidden love / They defy the forbidden</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Contre les chaînes des hommes qui décident de ce qui vaut une vie</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Contra las cadenas de los hombres que deciden qué vale una vida</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">Against the chains of men who decide what makes a life worth living</span></div></div>
+    </div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="sec_verse3">
+    <div class="sec-head">
+      <span class="sec-label">✦ Couplet 3 ✦</span>
+      <span class="vb minotaure">🐂 Minotaure</span>
+      <button class="play-btn" onclick="playSec('verse3')">▶ écouter</button>
+    </div>
+    <div class="col-labels">
+      <span class="lt FR">🇫🇷 Français</span>
+      <span class="lt ES">🇪🇸 Español</span>
+      <span class="lt EN">🇬🇧 English</span>
+    </div>
+    <div class="instr-note">
+      <div class="lc fr"><em class="instr">[Minotaure — présence sombre et calme — voix parlée-chantée]</em></div>
+      <div class="lc es"><em class="instr">[Minotaure — presencia oscura y calmada — voz hablada-cantada]</em></div>
+      <div class="lc en"><em class="instr">[Minotaure — dark calm presence — spoken-sung voice]</em></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb minotaure">🐂 Minotaure</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">L'une mariée à un homme qui ferme les portes</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Una casada con un hombre que cierra todas las puertas</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">One married to a man who locks every door</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb minotaure">🐂 Minotaure</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">L'autre promise à un monde qui la dévore</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">La otra prometida a un mundo que la devora</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">The other promised to a world that devours her whole</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb minotaure">🐂 Minotaure</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Elles savent qu'un divorce peut voler leurs enfants</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Saben que un divorcio puede robarles a sus hijos</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">They know that divorce can steal their children</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb minotaure">🐂 Minotaure</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Qu'un frère en colère peut devenir un tyran</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Que un hermano furioso puede volverse un tirano</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">That an angry brother can become a tyrant</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb minotaure">🐂 Minotaure</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Elles marchent dans des lieux clandestins sans voile</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Caminan por lugares clandestinos sin velo</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">They walk through hidden places without a veil</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb minotaure">🐂 Minotaure</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Elles sourient mais la peur danse dans leurs voiles</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Sonríen pero el miedo baila en sus ojos</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">They smile but fear dances in their eyes</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb minotaure">🐂 Minotaure</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Les logiciels les suivent comme un signal</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Los programas las siguen como una señal</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">The software follows them like a signal</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb minotaure">🐂 Minotaure</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Chaque seconde peut devenir un tribunal</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Cada segundo puede volverse un tribunal</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">Every second can become a tribunal</span></div></div>
+    </div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="sec_bridge_ar">
+    <div class="sec-head">
+      <span class="sec-label">✦ Pont Arabe — Trèfle ✦</span>
+      <span class="vb trefle">🍀 Trèfle</span>
+      <button class="play-btn" onclick="playSec('bridge_ar')">▶ écouter</button>
+    </div>
+    <div class="col-labels">
+      <span class="lt FR">🇫🇷 Français</span>
+      <span class="lt ES">🇪🇸 Español</span>
+      <span class="lt EN">🇬🇧 English</span>
+    </div>
+    <div class="instr-note">
+      <div class="lc fr"><em class="instr">[Trèfle seule — voix arabe émotionnelle]</em></div>
+      <div class="lc es"><em class="instr">[Trèfle sola — voz árabe emocional]</em></div>
+      <div class="lc en"><em class="instr">[Trèfle solo — emotional Arabic vocal]</em></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Ya layl ismah li / An ahmil sirran fi sadri</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Ya layl ismah li / An ahmil sirran fi sadri</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">Ya layl ismah li / An ahmil sirran fi sadri</span></div></div>
+    </div>
+    <div class="instr-note foreign-note">
+      <div class="lc fr"><em class="instr">(Ô nuit, permets-moi / De porter un secret dans ma poitrine)</em></div>
+      <div class="lc es"><em class="instr">(Oh noche, permíteme / Llevar un secreto en mi pecho)</em></div>
+      <div class="lc en"><em class="instr">(Oh night, allow me / To carry a secret in my chest)</em></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Ayna al aman / Ayna al houb douna sujud</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Ayna al aman / Ayna al houb douna sujud</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">Ayna al aman / Ayna al houb douna sujud</span></div></div>
+    </div>
+    <div class="instr-note foreign-note">
+      <div class="lc fr"><em class="instr">(Où est la sécurité / Où est l'amour sans soumission)</em></div>
+      <div class="lc es"><em class="instr">(Dónde está la seguridad / Dónde está el amor sin sumisión)</em></div>
+      <div class="lc en"><em class="instr">(Where is safety / Where is love without submission)</em></div>
+    </div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="sec_breakdown">
+    <div class="sec-head">
+      <span class="sec-label">✦ Breakdown ✦</span>
+      <span class="vb duo">🍀🐂 Duo</span>
+      <button class="play-btn" onclick="playSec('breakdown')">▶ écouter</button>
+    </div>
+    <div class="col-labels">
+      <span class="lt FR">🇫🇷 Français</span>
+      <span class="lt ES">🇪🇸 Español</span>
+      <span class="lt EN">🇬🇧 English</span>
+    </div>
+    <div class="instr-note">
+      <div class="lc fr"><em class="instr">[Breakdown] [Beat minimal] [Gasba revient doucement]</em></div>
+      <div class="lc es"><em class="instr">[Breakdown] [Beat mínimo] [Gasba vuelve suavemente]</em></div>
+      <div class="lc en"><em class="instr">[Breakdown] [Minimal beat] [Gasba returns softly]</em></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Elles rêvent d'un pays où les femmes n'ont plus à fuir</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Sueñan con un país donde las mujeres ya no tengan que huir</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">They dream of a country where women no longer have to run</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Où aucune loi ne décide de qui elles doivent aimer</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Donde ninguna ley decida a quién pueden amar</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">Where no law decides who they are allowed to love</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Un lieu libre comme Montréal qui pourrait les accueillir</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Un lugar libre como Montreal que pudiera acogerlas</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">A free place like Montreal that could welcome them in</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Un horizon sans chaînes où elles pourraient respirer</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Un horizonte sin cadenas donde pudieran respirar</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">A horizon without chains where they could finally breathe</span></div></div>
+    </div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="sec_violinbreak">
+    <div class="sec-head">
+      <span class="sec-label">✦ Violin Break — Instrumental ✦</span>
+      <span class="vb instr">🎻 Instrumental</span>
+      <button class="play-btn" onclick="playSec('violinbreak')">▶ écouter</button>
+    </div>
+    <div class="col-labels">
+      <span class="lt FR">🇫🇷 Français</span>
+      <span class="lt ES">🇪🇸 Español</span>
+      <span class="lt EN">🇬🇧 English</span>
+    </div>
+    <div class="instr-note">
+      <div class="lc fr"><em class="instr">[Beat coupe] [Solo violon gothique oriental] [Duel violon vs flûte Gasba]</em></div>
+      <div class="lc es"><em class="instr">[Beat se corta] [Solo violín gótico oriental] [Duelo violín vs flauta Gasba]</em></div>
+      <div class="lc en"><em class="instr">[Beat cuts] [Solo oriental gothic violin] [Violin vs Gasba flute duel]</em></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">(lamento lointain) Ahhhhhh...</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">(lamento distante) Ahhhhhh...</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">(distant lament) Ahhhhhh...</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb minotaure">🐂 Minotaure</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">(murmure grave) Habibi...</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">(susurro grave) Habibi...</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">(low whisper) Habibi...</span></div></div>
+    </div>
+    <div class="instr-note foreign-note">
+      <div class="lc fr"><em class="instr">((mon amour))</em></div>
+      <div class="lc es"><em class="instr">((mi amor))</em></div>
+      <div class="lc en"><em class="instr">((my love))</em></div>
+    </div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="sec_finalchorus">
+    <div class="sec-head">
+      <span class="sec-label">✦ Refrain Final ✦</span>
+      <span class="vb duo">🍀🐂 Duo</span>
+      <button class="play-btn" onclick="playSec('finalchorus')">▶ écouter</button>
+    </div>
+    <div class="col-labels">
+      <span class="lt FR">🇫🇷 Français</span>
+      <span class="lt ES">🇪🇸 Español</span>
+      <span class="lt EN">🇬🇧 English</span>
+    </div>
+    <div class="instr-note">
+      <div class="lc fr"><em class="instr">[Énergie maximale — club cinématique — synthés sombres]</em></div>
+      <div class="lc es"><em class="instr">[Energía máxima — club cinemático — sintetizadores oscuros]</em></div>
+      <div class="lc en"><em class="instr">[Maximum energy — cinematic club — dark synths]</em></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Amour interdit / Deux cœurs unis</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Amor prohibido / Dos corazones unidos</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">Forbidden love / Two hearts as one</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Dans un pays qui détruit celles qui rêvent d'être libres</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">En un país que destruye a las que sueñan con ser libres</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">In a country that destroys those who dare to dream of freedom</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Elles écrivent leur vie contre la tyrannie</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Escriben su propia vida contra la tiranía</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">They write their own lives against the tyranny</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Elles défient les gardiens et leur monde interdit</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Desafían a los guardianes y su mundo prohibido</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">They defy the guardians and their forbidden world</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Amour interdit / Mais l'amour survit</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Amor prohibido / Pero el amor sobrevive</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">Forbidden love / But love survives</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb duo">🍀🐂 Duo</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Isabelle et Fatima éclairent la nuit</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Isabelle y Fátima iluminan la noche</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">Isabelle and Fatima light up the night</span></div></div>
+    </div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="sec_outro">
+    <div class="sec-head">
+      <span class="sec-label">✦ Outro ✦</span>
+      <span class="vb trefle">🍀 Trèfle</span>
+      <button class="play-btn" onclick="playSec('outro')">▶ écouter</button>
+    </div>
+    <div class="col-labels">
+      <span class="lt FR">🇫🇷 Français</span>
+      <span class="lt ES">🇪🇸 Español</span>
+      <span class="lt EN">🇬🇧 English</span>
+    </div>
+    <div class="instr-note">
+      <div class="lc fr"><em class="instr">[Le beat disparaît] [Flûte Gasba seule] [Violon gothique qui s'efface]</em></div>
+      <div class="lc es"><em class="instr">[El beat desaparece] [Flauta Gasba sola] [Violín gótico que se apaga]</em></div>
+      <div class="lc en"><em class="instr">[Beat disappears] [Gasba flute alone] [Gothic violin fading]</em></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">(murmure) Amour interdit...</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">(susurro) Amor prohibido...</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">(whisper) Forbidden love...</span></div></div>
+    </div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+<footer>
+  <a href="https://www.trefleminotaure.com">www.trefleminotaure.com</a>
+  &nbsp;·&nbsp; © 2026 Trèfle &amp; Minotaure &nbsp;·&nbsp; Amour Interdit à Téhéran
+</footer>
+</div>
+<script>
+const SECS = {
+  "intro": {
+    "fr": `(murmure doux) Isabelle souffle dans la nuit de Téhéran... (murmure lointain) Téhéran...`,
+    "es": `(susurro suave) Isabelle respira en la noche de Teherán... (susurro distante) Teherán...`,
+    "en": `(soft whisper) Isabelle breathes in the night of Tehran... (distant whisper) Tehran...`
+  },
+  "verse1": {
+    "fr": `Isabelle souffle dans la nuit de Téhéran Fatima lui écrit derrière un rideau tremblant Les murs écoutent et les rues étouffent leurs pas Deux femmes qui s'aiment où l'amour n'a pas le droit Elles se cachent pour respirer un instant Entre les lois des hommes et les regards brûlants Elles tremblent pour leurs vies et pour leurs enfants Chaque message peut devenir un jugement`,
+    "es": `Isabelle respira en la noche de Teherán Fátima le escribe detrás de una cortina que tiembla Los muros escuchan y las calles ahogan sus pasos Dos mujeres que se aman donde el amor no tiene derecho Se esconden para respirar un instante Entre las leyes de los hombres y las miradas que queman Tiemblan por sus vidas y por sus hijos Cada mensaje puede convertirse en un juicio`,
+    "en": `Isabelle breathes in the night of Tehran Fatima writes to her behind a trembling curtain The walls are listening and the streets muffle their steps Two women in love where love has no right to exist They hide just to breathe for a moment Between the laws of men and the burning stares They tremble for their lives and for their children Every message can become a judgment`
+  },
+  "prechorus_ar": {
+    "fr": `Habibi ya rohi / Nakhaf min hadhihi al qiyud Al houb mamnou / Wal qalb marbout bil alam`,
+    "es": `Habibi ya rohi / Nakhaf min hadhihi al qiyud Al houb mamnou / Wal qalb marbout bil alam`,
+    "en": `Habibi ya rohi / Nakhaf min hadhihi al qiyud Al houb mamnou / Wal qalb marbout bil alam`
+  },
+  "verse2": {
+    "fr": `Elles passent par un VPN pour voir un sourire Une lumière sur l'écran qui promet un futur Mais derrière chaque pixel se cache un empire Qui veut leur voler le droit même de s'ouvrir`,
+    "es": `Pasan por una VPN solo para ver una sonrisa Una luz en la pantalla que promete un futuro Pero detrás de cada píxel se esconde un imperio Que quiere robarles el derecho incluso de abrirse`,
+    "en": `They go through a VPN just to see a smile A light on the screen that promises a future But behind every pixel hides an empire That wants to steal their right even to open up`
+  },
+  "chorus1": {
+    "fr": `Amour interdit / Deux cœurs meurtris Sous les ombres d'un pays qui dit non aux filles qui se choisissent Elles s'accrochent à la vie / Elles refusent la nuit Elles traversent la ville pour juste exister un peu ici Amour interdit / Elles défient l'interdit Contre les chaînes des hommes qui décident de ce qui vaut une vie`,
+    "es": `Amor prohibido / Dos corazones heridos Bajo las sombras de un país que dice no a las mujeres que se eligen Se aferran a la vida / Rechazan la noche Cruzan la ciudad solo para existir un poco aquí Amor prohibido / Desafían lo prohibido Contra las cadenas de los hombres que deciden qué vale una vida`,
+    "en": `Forbidden love / Two broken hearts Under the shadows of a country that says no to girls who choose each other They hold on to life / They refuse the night They cross the city just to exist a little here Forbidden love / They defy the forbidden Against the chains of men who decide what makes a life worth living`
+  },
+  "verse3": {
+    "fr": `L'une mariée à un homme qui ferme les portes L'autre promise à un monde qui la dévore Elles savent qu'un divorce peut voler leurs enfants Qu'un frère en colère peut devenir un tyran Elles marchent dans des lieux clandestins sans voile Elles sourient mais la peur danse dans leurs voiles Les logiciels les suivent comme un signal Chaque seconde peut devenir un tribunal`,
+    "es": `Una casada con un hombre que cierra todas las puertas La otra prometida a un mundo que la devora Saben que un divorcio puede robarles a sus hijos Que un hermano furioso puede volverse un tirano Caminan por lugares clandestinos sin velo Sonríen pero el miedo baila en sus ojos Los programas las siguen como una señal Cada segundo puede volverse un tribunal`,
+    "en": `One married to a man who locks every door The other promised to a world that devours her whole They know that divorce can steal their children That an angry brother can become a tyrant They walk through hidden places without a veil They smile but fear dances in their eyes The software follows them like a signal Every second can become a tribunal`
+  },
+  "bridge_ar": {
+    "fr": `Ya layl ismah li / An ahmil sirran fi sadri Ayna al aman / Ayna al houb douna sujud`,
+    "es": `Ya layl ismah li / An ahmil sirran fi sadri Ayna al aman / Ayna al houb douna sujud`,
+    "en": `Ya layl ismah li / An ahmil sirran fi sadri Ayna al aman / Ayna al houb douna sujud`
+  },
+  "breakdown": {
+    "fr": `Elles rêvent d'un pays où les femmes n'ont plus à fuir Où aucune loi ne décide de qui elles doivent aimer Un lieu libre comme Montréal qui pourrait les accueillir Un horizon sans chaînes où elles pourraient respirer`,
+    "es": `Sueñan con un país donde las mujeres ya no tengan que huir Donde ninguna ley decida a quién pueden amar Un lugar libre como Montreal que pudiera acogerlas Un horizonte sin cadenas donde pudieran respirar`,
+    "en": `They dream of a country where women no longer have to run Where no law decides who they are allowed to love A free place like Montreal that could welcome them in A horizon without chains where they could finally breathe`
+  },
+  "violinbreak": {
+    "fr": `(lamento lointain) Ahhhhhh... (murmure grave) Habibi...`,
+    "es": `(lamento distante) Ahhhhhh... (susurro grave) Habibi...`,
+    "en": `(distant lament) Ahhhhhh... (low whisper) Habibi...`
+  },
+  "finalchorus": {
+    "fr": `Amour interdit / Deux cœurs unis Dans un pays qui détruit celles qui rêvent d'être libres Elles écrivent leur vie contre la tyrannie Elles défient les gardiens et leur monde interdit Amour interdit / Mais l'amour survit Isabelle et Fatima éclairent la nuit`,
+    "es": `Amor prohibido / Dos corazones unidos En un país que destruye a las que sueñan con ser libres Escriben su propia vida contra la tiranía Desafían a los guardianes y su mundo prohibido Amor prohibido / Pero el amor sobrevive Isabelle y Fátima iluminan la noche`,
+    "en": `Forbidden love / Two hearts as one In a country that destroys those who dare to dream of freedom They write their own lives against the tyranny They defy the guardians and their forbidden world Forbidden love / But love survives Isabelle and Fatima light up the night`
+  },
+  "outro": {
+    "fr": `(murmure) Amour interdit...`,
+    "es": `(susurro) Amor prohibido...`,
+    "en": `(whisper) Forbidden love...`
+  }
+};
+const LANG_MAP = { fr: "fr-FR", es: "es-ES", en: "en-GB" };
+let spd = 1.0;
+let curLang = "fr"; // langue active pour la lecture TTS (suit le sélecteur)
+function setLang(l, btn) {
+  document.body.className = l === "all" ? "" : "show-" + l;
+  curLang = (l === "all") ? "fr" : l; // en mode trilingue, on lit le FR par défaut
+  document.querySelectorAll(".controls .cbtn").forEach(b => {
+    if (!b.textContent.includes("×")) b.classList.remove("on");
+  });
+  btn.classList.add("on");
+}
+function setSpeed(s, btn) {
+  spd = s;
+  document.querySelectorAll(".controls .cbtn").forEach(b => {
+    if (b.textContent.includes("×")) b.classList.remove("on");
+  });
+  btn.classList.add("on");
+}
+function playSec(id) {
+  const sec = SECS[id];
+  if (!sec) return;
+  const txt = sec[curLang] || sec.fr;
+  if (!txt) return;
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(txt);
+  u.lang = LANG_MAP[curLang] || "fr-FR";
+  u.rate = spd;
+  speechSynthesis.speak(u);
+}
+</script>
+</body>
+</html>

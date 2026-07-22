@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tu vois papa — Paroles | tréfle.minotaure</title>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Cinzel:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --gold:#b8962e;--parchment:#f5ecd7;--dark:#2a1f10;
+  --fr-bg:#e8f0fc;--fr-lbl:#c8dcf8;--fr-txt:#1a3a6b;--fr-bdr:#aac4f0;
+  --es-bg:#f5ead5;--es-lbl:#e8d4a8;--es-txt:#7a5010;--es-bdr:#d4b87a;
+  --en-bg:#fce8ec;--en-lbl:#f8d0dc;--en-txt:#8b1a3a;--en-bdr:#f0aabc;
+}
+body{background:#2a1f10;font-family:"Cormorant Garamond",serif;color:#2a1f10;min-height:100vh;padding:20px}
+.page{max-width:1200px;margin:0 auto;background:var(--parchment);border:2px solid #c4a97a;border-radius:8px;overflow:hidden}
+header{background:linear-gradient(135deg,#1a1008 0%,#2a1810 100%);padding:28px 32px 20px;border-bottom:2px solid var(--gold)}
+.htitle{font-family:"IM Fell English",serif;font-size:2rem;color:#e8d5a0;letter-spacing:.03em}
+.hsubtitle{font-family:"Cinzel",serif;font-size:.85rem;color:#b8962e;margin-top:4px;letter-spacing:.12em}
+.hmeta{display:flex;gap:12px;margin-top:12px;flex-wrap:wrap;align-items:center}
+.mpill{background:#2a1808;border:1px solid #6a4a20;color:#d4b87a;font-size:.7rem;padding:3px 10px;border-radius:16px;font-family:"Cinzel",serif;letter-spacing:.08em}
+.warn-pill{background:#2a0808;border:1px solid #8b2020;color:#f0a0a0;font-size:.7rem;padding:3px 10px;border-radius:16px;font-family:"Cinzel",serif;letter-spacing:.08em}
+.controls{background:#f0e8d0;padding:10px 32px;border-bottom:1px solid #d4b87a;display:flex;gap:20px;flex-wrap:wrap;align-items:center}
+.ctrl-label{font-family:"Cinzel",serif;font-size:.65rem;color:#7a5010;letter-spacing:.1em;text-transform:uppercase}
+.cbtn{padding:5px 14px;border:1px solid #c4a97a;background:transparent;border-radius:4px;cursor:pointer;font-family:"Cinzel",serif;font-size:.7rem;color:#7a5010;transition:all .2s}
+.cbtn:hover,.cbtn.on{background:var(--gold);color:#fff;border-color:var(--gold)}
+.sec{padding:18px 32px}
+.sec-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:8px}
+.sec-label{font-family:"Cinzel",serif;font-size:.78rem;letter-spacing:.18em;color:var(--gold);text-transform:uppercase}
+.vb{font-family:"Cinzel",serif;font-size:.63rem;padding:2px 8px;border-radius:10px}
+.vb.trefle{background:#f0e0fc;color:#731a94;border:1px solid #c8a0e8}
+.vb.minotaure{background:#e0e8f8;color:#1a3b8c;border:1px solid #a0b8e8}
+.vb.duo{background:#f8f0e0;color:#7a5010;border:1px solid #d4b87a}
+.vb.instr{background:#e8f0e0;color:#3a5020;border:1px solid #a0c080}
+.play-btn{padding:4px 12px;background:transparent;border:1px solid var(--gold);color:var(--gold);border-radius:4px;cursor:pointer;font-size:.73rem;font-family:"Cinzel",serif;transition:all .2s}
+.play-btn:hover{background:var(--gold);color:#fff}
+.col-labels{display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;margin-bottom:4px;margin-left:44px}
+.lt{padding:3px 12px;border-radius:4px;font-family:"Cinzel",serif;font-size:.68rem;letter-spacing:.1em;border:1px solid;text-align:center}
+.lt.FR{background:var(--fr-lbl);color:var(--fr-txt);border-color:var(--fr-bdr)}
+.lt.ES{background:var(--es-lbl);color:var(--es-txt);border-color:var(--es-bdr)}
+.lt.EN{background:var(--en-lbl);color:var(--en-txt);border-color:var(--en-bdr)}
+.lyric-row{display:grid;grid-template-columns:40px 1fr 1fr 1fr;gap:4px;margin-bottom:3px;align-items:start}
+.vbadge{display:flex;align-items:center;padding-top:5px;justify-content:center}
+.lc.fr{background:var(--fr-bg);border-radius:4px;padding:5px 10px}
+.lc.es{background:var(--es-bg);border-radius:4px;padding:5px 10px}
+.lc.en{background:var(--en-bg);border-radius:4px;padding:5px 10px}
+.line{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1.07rem;line-height:1.5;display:block}
+.instr{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:.88rem;opacity:.5;display:block}
+.instr-note{display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;margin-bottom:6px;margin-left:44px}
+.sec-divider{text-align:center;font-family:"Cinzel",serif;font-size:.68rem;color:#c4a97a;margin-top:14px;letter-spacing:.2em}
+footer{background:#1a1008;color:#888;text-align:center;padding:16px;font-family:"Cinzel",serif;font-size:.7rem;letter-spacing:.1em;border-top:2px solid var(--gold)}
+footer a{color:#b8962e;text-decoration:none}
+/* Sélecteur langue */
+body.show-fr .col.es,.body.show-fr .col.en,.body.show-fr .instr-note .lc.es,.body.show-fr .instr-note .lc.en{display:none}
+body.show-fr .col.es,body.show-fr .col.en{display:none}
+body.show-fr .lyric-row{grid-template-columns:40px 1fr}
+body.show-fr .col-labels{grid-template-columns:1fr}
+body.show-fr .instr-note{grid-template-columns:1fr}
+body.show-fr .col-labels .lt.ES,body.show-fr .col-labels .lt.EN{display:none}
+body.show-es .col.fr,body.show-es .col.en{display:none}
+body.show-es .lyric-row{grid-template-columns:40px 1fr}
+body.show-es .col-labels{grid-template-columns:1fr}
+body.show-es .instr-note{grid-template-columns:1fr}
+body.show-es .col-labels .lt.FR,body.show-es .col-labels .lt.EN{display:none}
+body.show-en .col.fr,body.show-en .col.es{display:none}
+body.show-en .lyric-row{grid-template-columns:40px 1fr}
+body.show-en .col-labels{grid-template-columns:1fr}
+body.show-en .instr-note{grid-template-columns:1fr}
+body.show-en .col-labels .lt.FR,body.show-en .col-labels .lt.ES{display:none}
+@media print{.controls,.play-btn{display:none}}
+</style>
+</head>
+<body>
+<div class="page">
+<header>
+  <div class="htitle">Tu vois papa</div>
+  <div class="hsubtitle">You see, Dad &nbsp;·&nbsp; ¿Lo ves, papá?</div>
+  <div class="hmeta">
+    <span class="mpill">🎵 80 BPM</span>
+    <span class="mpill">🎸 Indie Pop — Minimaliste</span>
+    <span class="mpill">⏱ ~4:00</span>
+    <span class="mpill">🍀 Trèfle (voix principale)</span>
+    <span class="warn-pill">⚠️ Contenu sensible — inceste · violence conjugale · système judiciaire</span>
+  </div>
+</header>
+<div class="controls">
+  <div style="display:flex;align-items:center;gap:8px">
+    <span class="ctrl-label">Langue</span>
+    <button class="cbtn on" onclick="setLang('all',this)">🌍 Trilingue</button>
+    <button class="cbtn" onclick="setLang('fr',this)">🇫🇷 Français</button>
+    <button class="cbtn" onclick="setLang('es',this)">🇪🇸 Español</button>
+    <button class="cbtn" onclick="setLang('en',this)">🇬🇧 English</button>
+  </div>
+  <div style="display:flex;align-items:center;gap:8px">
+    <span class="ctrl-label">Vitesse TTS</span>
+    <button class="cbtn" onclick="setSpeed(0.7,this)">× 0.7</button>
+    <button class="cbtn on" onclick="setSpeed(1.0,this)">× 1.0</button>
+    <button class="cbtn" onclick="setSpeed(1.2,this)">× 1.2</button>
+  </div>
+</div>
+  <section class="sec" id="sec_verse1">
+    <div class="sec-head">
+      <span class="sec-label">✦ Couplet 1 ✦</span>
+      <span class="vb trefle">🍀 Trèfle</span>
+      <button class="play-btn" onclick="playSec('verse1')" data-tts="Pourquoi, papa, tu me fais ça ? Je ne comprends pas... tes mains sur moi. Je n'étais qu'une enfant, hors de la cour des grands, Tu as volé ma vie... avant que je comprenne. Sauf que cette souillure... n'aurait jamais de fin. Dans le silence, je grandissais, Dans ta prison, je m'effaçais.">▶ écouter</button>
+    </div>
+    <div class="col-labels">
+      <span class="lt FR">🇫🇷 Français</span>
+      <span class="lt ES">🇪🇸 Español</span>
+      <span class="lt EN">🇬🇧 English</span>
+    </div>
+    <div class="instr-note">
+      <div class="lc fr"><em class="instr">[Voix féminine — envoûtante et traînante — diction claire]</em></div>
+      <div class="lc es"><em class="instr">[Voz femenina — susurrante y arrastrada — dicción clara]</em></div>
+      <div class="lc en"><em class="instr">[Female vocals — haunting and dragging — clear diction]</em></div>
+    </div>
+        <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Pourquoi, papa, tu me fais ça ?</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">¿Por qué, papá, me haces esto?</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">Why, Dad, why do you do this to me?</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Je ne comprends pas... tes mains sur moi.</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">No entiendo... tus manos sobre mí.</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">I don't understand... your hands on me.</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Je n'étais qu'une enfant, hors de la cour des grands,</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Solo era una niña, fuera del mundo de los grandes,</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">I was just a child, outside the grown-up world,</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Tu as volé ma vie... avant que je comprenne.</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Me robaste la vida... antes de que entendiera.</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">You stole my life... before I even understood.</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Sauf que cette souillure... n'aurait jamais de fin.</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Excepto que esa mancha... nunca tendría fin.</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">Except that stain... would never have an end.</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Dans le silence, je grandissais,</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">En el silencio, crecía,</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">In the silence, I was growing up,</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Dans ta prison, je m'effaçais.</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">En tu prisión, me borraba.</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">In your prison, I was fading away.</span></div></div>
+    </div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="sec_chorus1">
+    <div class="sec-head">
+      <span class="sec-label">✦ Refrain 1 — Faible intensité ✦</span>
+      <span class="vb trefle">🍀 Trèfle</span>
+      <button class="play-btn" onclick="playSec('chorus1')" data-tts="Tu vois - papa - mon âme est brisée en mille éclats... L'héritage du vice, le cœur ne bat plus vraiment là. Tu vois - papa - mon âme est brisée en mille éclats...">▶ écouter</button>
+    </div>
+    <div class="col-labels">
+      <span class="lt FR">🇫🇷 Français</span>
+      <span class="lt ES">🇪🇸 Español</span>
+      <span class="lt EN">🇬🇧 English</span>
+    </div>
+    <div class="instr-note">
+      <div class="lc fr"><em class="instr">[Guitare rythmique étouffée, basse constante] [Voix murmurée et articulée]</em></div>
+      <div class="lc es"><em class="instr">[Guitarra rítmica apagada, bajo constante] [Voz susurrada y articulada]</em></div>
+      <div class="lc en"><em class="instr">[Muted rhythmic guitar riff, steady bass] [Whispered and articulated vocals]</em></div>
+    </div>
+        <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Tu vois - papa - mon âme est brisée en mille éclats...</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">¿Lo ves - papá - mi alma está rota en mil pedazos?</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">You see - Dad - my soul is broken into a thousand pieces...</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">L'héritage du vice, le cœur ne bat plus vraiment là.</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">La herencia del vicio, el corazón ya no late de verdad.</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">The legacy of vice, the heart no longer truly beats.</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Tu vois - papa - mon âme est brisée en mille éclats...</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">¿Lo ves - papá - mi alma está rota en mil pedazos?</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">You see - Dad - my soul is broken into a thousand pieces...</span></div></div>
+    </div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="sec_verse2">
+    <div class="sec-head">
+      <span class="sec-label">✦ Couplet 2 ✦</span>
+      <span class="vb trefle">🍀 Trèfle</span>
+      <button class="play-btn" onclick="playSec('verse2')" data-tts="À l'école, je me cachais dans la colère, Mais les adultes préféraient... se taire. "Donne-nous des preuves", disait la loi, Pendant que l'ogre... me touchait sous mon toit. Alors, soudain... un garçon s'est montré. Enfin, j'ai cru respirer. J'avais seize ans, un enfant est né, Je pensais... que j'allais être sauvée. (oui sauvée)">▶ écouter</button>
+    </div>
+    <div class="col-labels">
+      <span class="lt FR">🇫🇷 Français</span>
+      <span class="lt ES">🇪🇸 Español</span>
+      <span class="lt EN">🇬🇧 English</span>
+    </div>
+    <div class="instr-note">
+      <div class="lc fr"><em class="instr">[Focus basse pull-off, rythmique, sans batterie]</em></div>
+      <div class="lc es"><em class="instr">[Bajo pull-off rítmico, sin batería]</em></div>
+      <div class="lc en"><em class="instr">[Bass pull-off focus, rhythmic, no drums]</em></div>
+    </div>
+        <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">À l'école, je me cachais dans la colère,</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">En la escuela, me escondía en la rabia,</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">At school, I hid inside my anger,</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Mais les adultes préféraient... se taire.</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Pero los adultos preferían... callarse.</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">But the adults preferred... to say nothing.</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">"Donne-nous des preuves", disait la loi,</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">"Danos pruebas", decía la ley,</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">"Give us proof", said the law,</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Pendant que l'ogre... me touchait sous mon toit.</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Mientras el ogro... me tocaba bajo mi techo.</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">While the monster... touched me under my own roof.</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Alors, soudain... un garçon s'est montré.</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Entonces, de repente... un chico apareció.</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">Then, suddenly... a boy showed up.</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Enfin, j'ai cru respirer.</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Por fin, creí poder respirar.</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">At last, I thought I could breathe.</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">J'avais seize ans, un enfant est né,</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Tenía dieciséis años, nació un bebé,</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">I was sixteen, a child was born,</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Je pensais... que j'allais être sauvée. (oui sauvée)</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Creía... que iba a ser salvada. (sí, salvada)</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">I thought... I was going to be saved. (yes, saved)</span></div></div>
+    </div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="sec_chorus2">
+    <div class="sec-head">
+      <span class="sec-label">✦ Refrain 2 — Énergie croissante ✦</span>
+      <span class="vb trefle">🍀 Trèfle</span>
+      <button class="play-btn" onclick="playSec('chorus2')" data-tts="TU VOIS - PAPA - je ne serais pas là ! Si tu n'avais pas... volé mon enfance comme ça ! TU VOIS - PAPA - je ne serais pas là ! (non, pas là)">▶ écouter</button>
+    </div>
+    <div class="col-labels">
+      <span class="lt FR">🇫🇷 Français</span>
+      <span class="lt ES">🇪🇸 Español</span>
+      <span class="lt EN">🇬🇧 English</span>
+    </div>
+    <div class="instr-note">
+      <div class="lc fr"><em class="instr">[Guitare rythmique tranchante, basse lourde]</em></div>
+      <div class="lc es"><em class="instr">[Guitarra rítmica cortante, bajo pesado]</em></div>
+      <div class="lc en"><em class="instr">[Sharp rhythmic guitar, heavy bass]</em></div>
+    </div>
+        <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">TU VOIS - PAPA - je ne serais pas là !</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">¿LO VES - PAPÁ - YO NO ESTARÍA AQUÍ!</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">YOU SEE - DAD - I wouldn't even be here!</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Si tu n'avais pas... volé mon enfance comme ça !</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Si no hubieras... robado mi infancia así!</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">If you hadn't... stolen my childhood like that!</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">TU VOIS - PAPA - je ne serais pas là ! (non, pas là)</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">¿LO VES - PAPÁ - YO NO ESTARÍA AQUÍ! (no, no aquí)</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">YOU SEE - DAD - I wouldn't even be here! (no, not here)</span></div></div>
+    </div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="sec_verse3">
+    <div class="sec-head">
+      <span class="sec-label">✦ Couplet 3 ✦</span>
+      <span class="vb trefle">🍀 Trèfle</span>
+      <button class="play-btn" onclick="playSec('verse3')" data-tts="Mais le sauveur est devenu mon bourreau. Un plat trop cuit... et les coups sur la peau. Une poussière, un sourire, le frigo sans bière, Il a fini le travail... commencé par mon père. Sous la violence, on m'a pris mon enfant, Pour "le protéger"... disent-ils, en jugeant. Mais qui m'a protégée, moi ? (oui, qui ?)">▶ écouter</button>
+    </div>
+    <div class="col-labels">
+      <span class="lt FR">🇫🇷 Français</span>
+      <span class="lt ES">🇪🇸 Español</span>
+      <span class="lt EN">🇬🇧 English</span>
+    </div>
+    <div class="instr-note">
+      <div class="lc fr"><em class="instr">[Focus basse pull-off, sirènes atmosphériques]</em></div>
+      <div class="lc es"><em class="instr">[Bajo pull-off, sirenas atmosféricas]</em></div>
+      <div class="lc en"><em class="instr">[Bass pull-off focus, atmospheric sirens]</em></div>
+    </div>
+        <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Mais le sauveur est devenu mon bourreau.</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Pero el salvador se convirtió en mi verdugo.</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">But the saviour became my torturer.</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Un plat trop cuit... et les coups sur la peau.</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Una comida mal hecha... y los golpes en la piel.</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">One overcooked meal... and the blows on my skin.</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Une poussière, un sourire, le frigo sans bière,</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Un poco de polvo, una sonrisa, la nevera sin cerveza,</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">A speck of dust, a smile, the fridge with no beer,</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Il a fini le travail... commencé par mon père.</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Terminó el trabajo... que empezó mi padre.</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">He finished the work... my father started.</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Sous la violence, on m'a pris mon enfant,</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Bajo la violencia, me quitaron a mi hijo,</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">Under the violence, they took my child,</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Pour "le protéger"... disent-ils, en jugeant.</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Para "protegerlo"... dicen ellos, juzgando.</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">To "protect him"... they say, judging me.</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Mais qui m'a protégée, moi ? (oui, qui ?)</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">¿Pero quién me protegió a mí? (sí, ¿quién?)</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">But who protected me? (yes, who?)</span></div></div>
+    </div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="sec_chorus3">
+    <div class="sec-head">
+      <span class="sec-label">✦ Refrain 3 — Puissance maximale ✦</span>
+      <span class="vb trefle">🍀 Trèfle</span>
+      <button class="play-btn" onclick="playSec('chorus3')" data-tts="TU VOIS ! MAINTENANT ! JE SUIS BLEUE DE LA TÊTE AUX PIEDS ! L'HÉRITAGE DU VICE ! LE CŒUR EST ESTROPIÉ ! LES JUGES ME POINTENT ! LE SYSTÈME ME CONDAMNE ! Le système me condamne ! (me condamne) Tu vois ! Maintenant ! Je suis bleue de la tête aux pieds ! HOOOO ! Hoooo ! HOOOO ! Hoooo !">▶ écouter</button>
+    </div>
+    <div class="col-labels">
+      <span class="lt FR">🇫🇷 Français</span>
+      <span class="lt ES">🇪🇸 Español</span>
+      <span class="lt EN">🇬🇧 English</span>
+    </div>
+    <div class="instr-note">
+      <div class="lc fr"><em class="instr">[Guitare rock rythmique agressive, riffs staccato lourds] [Voix féminine rock puissante]</em></div>
+      <div class="lc es"><em class="instr">[Guitarra rock rítmica agresiva, riffs staccato pesados] [Voz femenina rock poderosa]</em></div>
+      <div class="lc en"><em class="instr">[Aggressive rhythmic rock guitar, heavy staccato riffs] [Powerful female rock vocals]</em></div>
+    </div>
+        <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">TU VOIS ! MAINTENANT ! JE SUIS BLEUE DE LA TÊTE AUX PIEDS !</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">¡LO VES! ¡AHORA! ¡ESTOY MORADA DE LA CABEZA A LOS PIES!</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">YOU SEE! NOW! I AM BLACK AND BLUE FROM HEAD TO TOE!</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">L'HÉRITAGE DU VICE ! LE CŒUR EST ESTROPIÉ !</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">¡LA HERENCIA DEL VICIO! ¡EL CORAZÓN ESTÁ LISIADO!</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">THE LEGACY OF VICE! THE HEART IS CRIPPLED!</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">LES JUGES ME POINTENT ! LE SYSTÈME ME CONDAMNE !</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">¡LOS JUECES ME SEÑALAN! ¡EL SISTEMA ME CONDENA!</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">THE JUDGES POINT AT ME! THE SYSTEM CONDEMNS ME!</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Le système me condamne ! (me condamne)</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">¡El sistema me condena! (me condena)</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">The system condemns me! (condemns me)</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Tu vois ! Maintenant ! Je suis bleue de la tête aux pieds !</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">¡Lo ves! ¡Ahora! ¡Estoy morada de la cabeza a los pies!</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">You see! Now! I am black and blue from head to toe!</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">HOOOO ! Hoooo ! HOOOO ! Hoooo !</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">¡HOOOO! ¡Hoooo! ¡HOOOO! ¡Hoooo!</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">HOOOO! Hoooo! HOOOO! Hoooo!</span></div></div>
+    </div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="sec_bridge">
+    <div class="sec-head">
+      <span class="sec-label">✦ Bridge ✦</span>
+      <span class="vb trefle">🍀 Trèfle</span>
+      <button class="play-btn" onclick="playSec('bridge')" data-tts="OÙ EST MA CHANCE ? OÙ EST MON LOGEMENT ? C'EST MOI... QUE VOUS PUNISSEZ ! LE SYSTÈME ME CONDAMNE ! (Le système me condamne)">▶ écouter</button>
+    </div>
+    <div class="col-labels">
+      <span class="lt FR">🇫🇷 Français</span>
+      <span class="lt ES">🇪🇸 Español</span>
+      <span class="lt EN">🇬🇧 English</span>
+    </div>
+    <div class="instr-note">
+      <div class="lc fr"><em class="instr">[Grattés de guitare seulement, tension croissante]</em></div>
+      <div class="lc es"><em class="instr">[Solo rasguidos de guitarra, tensión creciente]</em></div>
+      <div class="lc en"><em class="instr">[Guitar scratches only, building tension]</em></div>
+    </div>
+        <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">OÙ EST MA CHANCE ? OÙ EST MON LOGEMENT ?</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">¿DÓNDE ESTÁ MI OPORTUNIDAD? ¿DÓNDE ESTÁ MI HOGAR?</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">WHERE IS MY CHANCE? WHERE IS MY HOME?</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">C'EST MOI... QUE VOUS PUNISSEZ !</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">SOY YO... A QUIEN CASTIGÁIS.</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">IT'S ME... YOU ARE PUNISHING!</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">LE SYSTÈME ME CONDAMNE ! (Le système me condamne)</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">¡EL SISTEMA ME CONDENA! (El sistema me condena)</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">THE SYSTEM CONDEMNS ME! (condemns me)</span></div></div>
+    </div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="sec_break_">
+    <div class="sec-head">
+      <span class="sec-label">✦ Break — Solo guitare ✦</span>
+      <span class="vb instr">🎸 Instrumental</span>
+      <button class="play-btn" onclick="playSec('break_')" >▶ écouter</button>
+    </div>
+    <div class="col-labels">
+      <span class="lt FR">🇫🇷 Français</span>
+      <span class="lt ES">🇪🇸 Español</span>
+      <span class="lt EN">🇬🇧 English</span>
+    </div>
+    <div class="instr-note">
+      <div class="lc fr"><em class="instr">[Solo guitare électrique brut, style Maneskin, sans batterie]</em></div>
+      <div class="lc es"><em class="instr">[Solo guitarra eléctrica cruda, estilo Maneskin, sin batería]</em></div>
+      <div class="lc en"><em class="instr">[Raw electric guitar riff solo, Maneskin style, no drums]</em></div>
+    </div>
+    
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="sec_final_">
+    <div class="sec-head">
+      <span class="sec-label">✦ Final ✦</span>
+      <span class="vb trefle">🍀 Trèfle</span>
+      <button class="play-btn" onclick="playSec('final_')" data-tts="L'ambulance arrive... sous les lumières de transe. Je respire... encore... encore... (encore...) Je sais qu'un homme bon... me tendra la main. (oui, un jour) J'espère encore... à mon destin.">▶ écouter</button>
+    </div>
+    <div class="col-labels">
+      <span class="lt FR">🇫🇷 Français</span>
+      <span class="lt ES">🇪🇸 Español</span>
+      <span class="lt EN">🇬🇧 English</span>
+    </div>
+    <div class="instr-note">
+      <div class="lc fr"><em class="instr">[Dramatique et aérien, tempo lent] [Sirènes d'ambulance atmosphériques au loin]</em></div>
+      <div class="lc es"><em class="instr">[Dramático y aéreo, tempo lento] [Sirenas de ambulancia atmosféricas]</em></div>
+      <div class="lc en"><em class="instr">[Dramatic and airy, slow tempo] [Atmospheric ambulance sirens in distance]</em></div>
+    </div>
+        <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">L'ambulance arrive... sous les lumières de transe.</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">La ambulancia llega... bajo las luces del trance.</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">The ambulance arrives... under the trance lights.</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Je respire... encore... encore... (encore...)</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Respiro... todavía... todavía... (todavía...)</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">I breathe... still... still... (still...)</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">Je sais qu'un homme bon... me tendra la main. (oui, un jour)</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Sé que un buen hombre... me tenderá la mano. (sí, un día)</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">I know a good man... will take my hand. (yes, one day)</span></div></div>
+    </div>
+    <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">J'espère encore... à mon destin.</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Sigo esperando... a mi destino.</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">I still hope... for my destiny.</span></div></div>
+    </div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="sec_outro">
+    <div class="sec-head">
+      <span class="sec-label">✦ Outro ✦</span>
+      <span class="vb trefle">🍀 Trèfle</span>
+      <button class="play-btn" onclick="playSec('outro')" data-tts="J'espère... encore... (encore)">▶ écouter</button>
+    </div>
+    <div class="col-labels">
+      <span class="lt FR">🇫🇷 Français</span>
+      <span class="lt ES">🇪🇸 Español</span>
+      <span class="lt EN">🇬🇧 English</span>
+    </div>
+    <div class="instr-note">
+      <div class="lc fr"><em class="instr">[Basse pull-off lente qui s'efface]</em></div>
+      <div class="lc es"><em class="instr">[Bajo pull-off lento y desvaneciéndose]</em></div>
+      <div class="lc en"><em class="instr">[Slow fading bass pull-off]</em></div>
+    </div>
+        <div class="lyric-row">
+      <div class="vbadge"><span class="vb trefle">🍀 Trèfle</span></div>
+      <div class="col fr"><div class="lc fr"><span class="line">J'espère... encore... (encore)</span></div></div>
+      <div class="col es"><div class="lc es"><span class="line">Sigo esperando... todavía... (todavía)</span></div></div>
+      <div class="col en"><div class="lc en"><span class="line">I still hope... still... (still)</span></div></div>
+    </div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+<footer>
+  <a href="https://www.trefleminotaure.com">www.trefleminotaure.com</a>
+  &nbsp;·&nbsp; © 2026 Trèfle &amp; Minotaure &nbsp;·&nbsp; Tu vois papa
+</footer>
+</div>
+<script>
+const SECS = {
+  "verse1": {
+    "fr": `Pourquoi, papa, tu me fais ça ? Je ne comprends pas... tes mains sur moi. Je n'étais qu'une enfant, hors de la cour des grands, Tu as volé ma vie... avant que je comprenne. Sauf que cette souillure... n'aurait jamais de fin. Dans le silence, je grandissais, Dans ta prison, je m'effaçais.`,
+    "es": `¿Por qué, papá, me haces esto? No entiendo... tus manos sobre mí. Solo era una niña, fuera del mundo de los grandes, Me robaste la vida... antes de que entendiera. Excepto que esa mancha... nunca tendría fin. En el silencio, crecía, En tu prisión, me borraba.`,
+    "en": `Why, Dad, why do you do this to me? I don't understand... your hands on me. I was just a child, outside the grown-up world, You stole my life... before I even understood. Except that stain... would never have an end. In the silence, I was growing up, In your prison, I was fading away.`
+  },
+  "chorus1": {
+    "fr": `Tu vois - papa - mon âme est brisée en mille éclats... L'héritage du vice, le cœur ne bat plus vraiment là. Tu vois - papa - mon âme est brisée en mille éclats...`,
+    "es": `¿Lo ves - papá - mi alma está rota en mil pedazos? La herencia del vicio, el corazón ya no late de verdad. ¿Lo ves - papá - mi alma está rota en mil pedazos?`,
+    "en": `You see - Dad - my soul is broken into a thousand pieces... The legacy of vice, the heart no longer truly beats. You see - Dad - my soul is broken into a thousand pieces...`
+  },
+  "verse2": {
+    "fr": `À l'école, je me cachais dans la colère, Mais les adultes préféraient... se taire. "Donne-nous des preuves", disait la loi, Pendant que l'ogre... me touchait sous mon toit. Alors, soudain... un garçon s'est montré. Enfin, j'ai cru respirer. J'avais seize ans, un enfant est né, Je pensais... que j'allais être sauvée. (oui sauvée)`,
+    "es": `En la escuela, me escondía en la rabia, Pero los adultos preferían... callarse. "Danos pruebas", decía la ley, Mientras el ogro... me tocaba bajo mi techo. Entonces, de repente... un chico apareció. Por fin, creí poder respirar. Tenía dieciséis años, nació un bebé, Creía... que iba a ser salvada. (sí, salvada)`,
+    "en": `At school, I hid inside my anger, But the adults preferred... to say nothing. "Give us proof", said the law, While the monster... touched me under my own roof. Then, suddenly... a boy showed up. At last, I thought I could breathe. I was sixteen, a child was born, I thought... I was going to be saved. (yes, saved)`
+  },
+  "chorus2": {
+    "fr": `TU VOIS - PAPA - je ne serais pas là ! Si tu n'avais pas... volé mon enfance comme ça ! TU VOIS - PAPA - je ne serais pas là ! (non, pas là)`,
+    "es": `¿LO VES - PAPÁ - YO NO ESTARÍA AQUÍ! Si no hubieras... robado mi infancia así! ¿LO VES - PAPÁ - YO NO ESTARÍA AQUÍ! (no, no aquí)`,
+    "en": `YOU SEE - DAD - I wouldn't even be here! If you hadn't... stolen my childhood like that! YOU SEE - DAD - I wouldn't even be here! (no, not here)`
+  },
+  "verse3": {
+    "fr": `Mais le sauveur est devenu mon bourreau. Un plat trop cuit... et les coups sur la peau. Une poussière, un sourire, le frigo sans bière, Il a fini le travail... commencé par mon père. Sous la violence, on m'a pris mon enfant, Pour "le protéger"... disent-ils, en jugeant. Mais qui m'a protégée, moi ? (oui, qui ?)`,
+    "es": `Pero el salvador se convirtió en mi verdugo. Una comida mal hecha... y los golpes en la piel. Un poco de polvo, una sonrisa, la nevera sin cerveza, Terminó el trabajo... que empezó mi padre. Bajo la violencia, me quitaron a mi hijo, Para "protegerlo"... dicen ellos, juzgando. ¿Pero quién me protegió a mí? (sí, ¿quién?)`,
+    "en": `But the saviour became my torturer. One overcooked meal... and the blows on my skin. A speck of dust, a smile, the fridge with no beer, He finished the work... my father started. Under the violence, they took my child, To "protect him"... they say, judging me. But who protected me? (yes, who?)`
+  },
+  "chorus3": {
+    "fr": `TU VOIS ! MAINTENANT ! JE SUIS BLEUE DE LA TÊTE AUX PIEDS ! L'HÉRITAGE DU VICE ! LE CŒUR EST ESTROPIÉ ! LES JUGES ME POINTENT ! LE SYSTÈME ME CONDAMNE ! Le système me condamne ! (me condamne) Tu vois ! Maintenant ! Je suis bleue de la tête aux pieds ! HOOOO ! Hoooo ! HOOOO ! Hoooo !`,
+    "es": `¡LO VES! ¡AHORA! ¡ESTOY MORADA DE LA CABEZA A LOS PIES! ¡LA HERENCIA DEL VICIO! ¡EL CORAZÓN ESTÁ LISIADO! ¡LOS JUECES ME SEÑALAN! ¡EL SISTEMA ME CONDENA! ¡El sistema me condena! (me condena) ¡Lo ves! ¡Ahora! ¡Estoy morada de la cabeza a los pies! ¡HOOOO! ¡Hoooo! ¡HOOOO! ¡Hoooo!`,
+    "en": `YOU SEE! NOW! I AM BLACK AND BLUE FROM HEAD TO TOE! THE LEGACY OF VICE! THE HEART IS CRIPPLED! THE JUDGES POINT AT ME! THE SYSTEM CONDEMNS ME! The system condemns me! (condemns me) You see! Now! I am black and blue from head to toe! HOOOO! Hoooo! HOOOO! Hoooo!`
+  },
+  "bridge": {
+    "fr": `OÙ EST MA CHANCE ? OÙ EST MON LOGEMENT ? C'EST MOI... QUE VOUS PUNISSEZ ! LE SYSTÈME ME CONDAMNE ! (Le système me condamne)`,
+    "es": `¿DÓNDE ESTÁ MI OPORTUNIDAD? ¿DÓNDE ESTÁ MI HOGAR? SOY YO... A QUIEN CASTIGÁIS. ¡EL SISTEMA ME CONDENA! (El sistema me condena)`,
+    "en": `WHERE IS MY CHANCE? WHERE IS MY HOME? IT'S ME... YOU ARE PUNISHING! THE SYSTEM CONDEMNS ME! (condemns me)`
+  },
+  "break_": {
+    "fr": ``,
+    "es": ``,
+    "en": ``
+  },
+  "final_": {
+    "fr": `L'ambulance arrive... sous les lumières de transe. Je respire... encore... encore... (encore...) Je sais qu'un homme bon... me tendra la main. (oui, un jour) J'espère encore... à mon destin.`,
+    "es": `La ambulancia llega... bajo las luces del trance. Respiro... todavía... todavía... (todavía...) Sé que un buen hombre... me tenderá la mano. (sí, un día) Sigo esperando... a mi destino.`,
+    "en": `The ambulance arrives... under the trance lights. I breathe... still... still... (still...) I know a good man... will take my hand. (yes, one day) I still hope... for my destiny.`
+  },
+  "outro": {
+    "fr": `J'espère... encore... (encore)`,
+    "es": `Sigo esperando... todavía... (todavía)`,
+    "en": `I still hope... still... (still)`
+  },
+};
+const LANG_MAP = { fr: "fr-FR", es: "es-ES", en: "en-GB" };
+let spd = 1.0;
+let curLang = "fr"; // langue active pour la lecture TTS (suit le sélecteur)
+function setLang(l, btn) {
+  document.body.className = l === "all" ? "" : "show-" + l;
+  curLang = (l === "all") ? "fr" : l; // en mode trilingue, on lit le FR par défaut
+  document.querySelectorAll(".controls .cbtn").forEach(b => {
+    if (!b.textContent.includes("×")) b.classList.remove("on");
+  });
+  btn.classList.add("on");
+}
+function setSpeed(s, btn) {
+  spd = s;
+  document.querySelectorAll(".controls .cbtn").forEach(b => {
+    if (b.textContent.includes("×")) b.classList.remove("on");
+  });
+  btn.classList.add("on");
+}
+function playSec(id) {
+  const sec = SECS[id];
+  if (!sec) return;
+  const txt = sec[curLang] || sec.fr;
+  if (!txt) return;
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(txt);
+  u.lang = LANG_MAP[curLang] || "fr-FR";
+  u.rate = spd;
+  speechSynthesis.speak(u);
+}
+</script>
+</body>
+</html>

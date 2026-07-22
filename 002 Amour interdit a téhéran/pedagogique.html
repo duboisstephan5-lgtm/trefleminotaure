@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Amour Interdit à Téhéran — Guide Pédagogique | tréfle.minotaure</title>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Cinzel:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Noto+Serif:ital,wght@0,400;1,400&family=Noto+Sans:wght@400&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --gold:#b8962e;--parchment:#f5ecd7;--red:#c03020;
+  --fr-bg:#e8f0fc;--fr-lbl:#c8dcf8;--fr-txt:#1a3a6b;--fr-bdr:#aac4f0;
+  --es-bg:#f5ead5;--es-lbl:#e8d4a8;--es-txt:#7a5010;--es-bdr:#d4b87a;
+  --en-bg:#fce8ec;--en-lbl:#f8d0dc;--en-txt:#8b1a3a;--en-bdr:#f0aabc;
+}
+body{background:#2a1f10;font-family:"Cormorant Garamond",serif;color:#2a1f10;min-height:100vh;padding:20px}
+.page{max-width:1300px;margin:0 auto;background:var(--parchment);border:2px solid #c4a97a;border-radius:8px;overflow:hidden}
+header{background:linear-gradient(135deg,#1a1008 0%,#2a1810 100%);padding:28px 32px 20px;border-bottom:2px solid var(--gold)}
+.htitle{font-family:"IM Fell English",serif;font-size:1.8rem;color:#e8d5a0}
+.hsubtitle{font-family:"Cinzel",serif;font-size:.78rem;color:#b8962e;margin-top:4px;letter-spacing:.12em}
+.hmeta{display:flex;gap:12px;margin-top:10px;flex-wrap:wrap}
+.mpill{background:#2a1808;border:1px solid #6a4a20;color:#d4b87a;font-size:.68rem;padding:3px 10px;border-radius:16px;font-family:"Cinzel",serif}
+.warn-pill{background:#2a0808;border:1px solid #8b2020;color:#f0a0a0;font-size:.68rem;padding:3px 10px;border-radius:16px;font-family:"Cinzel",serif}
+.controls{background:#f0e8d0;padding:10px 32px;border-bottom:1px solid #d4b87a;display:flex;gap:8px;align-items:center}
+.ctrl-label{font-family:"Cinzel",serif;font-size:.65rem;color:#7a5010;letter-spacing:.1em;margin-right:4px}
+.cbtn{padding:4px 12px;border:1px solid #c4a97a;background:transparent;border-radius:4px;cursor:pointer;font-family:"Cinzel",serif;font-size:.68rem;color:#7a5010;transition:all .2s}
+.cbtn:hover,.cbtn.on{background:var(--gold);color:#fff;border-color:var(--gold)}
+.sec{padding:14px 32px}
+.sec-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:6px}
+.sec-label{font-family:"Cinzel",serif;font-size:.75rem;letter-spacing:.18em;color:var(--gold);text-transform:uppercase}
+.vb{font-family:"Cinzel",serif;font-size:.62rem;padding:2px 7px;border-radius:10px}
+.vb.trefle{background:#f0e0fc;color:#731a94;border:1px solid #c8a0e8}
+.vb.minotaure{background:#e0e8f8;color:#1a3b8c;border:1px solid #a0b8e8}
+.vb.duo{background:#f8f0e0;color:#7a5010;border:1px solid #d4b87a}
+.vb.instr{background:#e8f0e0;color:#3a5020;border:1px solid #a0c080}
+.col-hdr,.instr-row-p{display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;margin-bottom:4px}
+.lt{padding:3px 12px;border-radius:4px;font-family:"Cinzel",serif;font-size:.68rem;letter-spacing:.1em;border:1px solid;text-align:center}
+.lt.FR{background:var(--fr-lbl);color:var(--fr-txt);border-color:var(--fr-bdr)}
+.lt.ES{background:var(--es-lbl);color:var(--es-txt);border-color:var(--es-bdr)}
+.lt.EN{background:var(--en-lbl);color:var(--en-txt);border-color:var(--en-bdr)}
+.opt-c-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;margin-bottom:5px}
+.lc{border-radius:4px;padding:6px 10px}
+.lc.fr{background:var(--fr-bg)}
+.lc.es{background:var(--es-bg)}
+.lc.en{background:var(--en-bg)}
+.lyric-text{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:.97rem;line-height:1.4}
+.lyric-syllabic{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:.80rem;color:#4a3010;margin-top:2px;line-height:1.3}
+.a{text-decoration:underline;text-decoration-color:var(--red);text-underline-offset:2px;color:var(--red)}
+.plb{display:inline-block;margin:3px 0;padding:2px 8px;border:1px solid var(--gold);background:transparent;border-radius:3px;cursor:pointer;font-family:"Cinzel",serif;font-size:.43rem;color:var(--gold);transition:all .2s}
+.plb:hover{background:var(--gold);color:#fff}
+.lyric-ipa{font-family:"Noto Serif","Noto Sans",serif;font-size:.64rem;opacity:.56;margin-top:2px}
+.lyric-ipa::before{content:"/ ";color:var(--gold)}
+.lyric-ipa::after{content:" /";color:var(--gold)}
+.instr{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:.85rem;opacity:.5;display:block}
+.instr-row-p.foreign-note{margin-top:-3px;margin-bottom:10px}
+.instr-row-p.foreign-note .instr{opacity:.65;font-size:.8rem}
+.sec-divider{text-align:center;font-family:"Cinzel",serif;font-size:.65rem;color:#c4a97a;margin-top:10px;letter-spacing:.2em}
+.sh-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:16px 32px;padding:14px;background:#f0e8d0;border-radius:6px;border:1px solid #d4b87a}
+.lc.sh h4{font-family:"Cinzel",serif;font-size:.7rem;letter-spacing:.1em;margin-bottom:7px;text-transform:uppercase}
+.lc.fr.sh h4{color:var(--fr-txt)}
+.lc.es.sh h4{color:var(--es-txt)}
+.lc.en.sh h4{color:var(--en-txt)}
+.shi{display:flex;gap:6px;align-items:baseline;flex-wrap:wrap;margin-bottom:4px}
+.sk{font-family:"Cinzel",serif;font-size:.62rem;font-weight:700;padding:1px 6px;border-radius:3px;white-space:nowrap}
+.lc.fr.sh .sk{background:var(--fr-lbl);color:var(--fr-txt)}
+.lc.es.sh .sk{background:var(--es-lbl);color:var(--es-txt)}
+.lc.en.sh .sk{background:var(--en-lbl);color:var(--en-txt)}
+.sd{font-family:Arial,sans-serif;font-size:.75rem;color:#444;line-height:1.4}
+footer{background:#1a1008;color:#888;text-align:center;padding:16px;font-family:"Cinzel",serif;font-size:.68rem;letter-spacing:.1em;border-top:2px solid var(--gold)}
+footer a{color:#b8962e;text-decoration:none}
+</style>
+</head>
+<body>
+<div class="page">
+<header>
+  <div class="htitle">Guide Pédagogique — Amour Interdit à Téhéran</div>
+  <div class="hsubtitle">Forbidden Love in Tehran &nbsp;·&nbsp; Amor Prohibido en Teherán &nbsp;·&nbsp; Phonétique · Syllabique · IPA</div>
+  <div class="hmeta">
+    <span class="mpill">🎵 100 BPM</span>
+    <span class="mpill">📐 Option C : Syllabique + Bouton + IPA</span>
+    <span class="mpill">🌍 FR · ES · EN + phrases arabes</span>
+    <span class="warn-pill">⚠️ Thème sensible — amour interdit · surveillance · répression</span>
+  </div>
+</header>
+<div class="controls">
+  <span class="ctrl-label">Vitesse TTS</span>
+  <button class="cbtn" onclick="setSpeed(0.7,this)">× 0.7</button>
+  <button class="cbtn on" onclick="setSpeed(1.0,this)">× 1.0</button>
+  <button class="cbtn" onclick="setSpeed(1.2,this)">× 1.2</button>
+</div>
+  <section class="sec" id="peda_intro">
+    <div class="sec-head">
+      <span class="sec-label">✦ Intro — Raï traditionnel ✦</span>
+      <span class="vb duo">🍀🐂 Duo</span>
+    </div>
+    <div class="col-hdr">
+      <div class="lt FR">🇫🇷 Français</div>
+      <div class="lt ES">🇪🇸 Español</div>
+      <div class="lt EN">🇬🇧 English</div>
+    </div>
+    <div class="instr-row-p">
+      <div class="lc fr"><em class="instr">[Intro - Raï traditionnel] [Solo flûte Gasba] [Oud lent et émotionnel] [Darbuka et Bendir montant lentement] [Ambiance nocturne sombre de Téhéran] [Violon gothique entre progressivement]</em></div>
+      <div class="lc es"><em class="instr">[Intro - Raï tradicional] [Solo de flauta Gasba] [Oud lento y emocional] [Darbuka y Bendir subiendo lentamente] [Ambiente nocturno oscuro de Teherán] [Violín gótico entra progresivamente]</em></div>
+      <div class="lc en"><em class="instr">[Intro - Traditional Raï] [Gasba flute solo] [Slow emotional Oud] [Darbuka and Bendir slowly rising] [Dark Tehran night atmosphere] [Soft gothic violin enters progressively]</em></div>
+    </div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">(murmure doux) Isabelle souffle dans la nuit de Téhéran...</div>
+        <div class="lyric-syllabic">(mur-<span class="a">MUR</span> dou) i-za-<span class="a">BEL</span> souf-<span class="a">FL</span> dan la nui de té-é-<span class="a">RAN</span>...</div>
+        <button class="plb" onclick="playLine('fr-FR',`(murmure doux) Isabelle souffle dans la nuit de Téhéran...`)">▶</button>
+        <div class="lyric-ipa">i.za.bɛl sufl dɑ̃ la nɥi də te.e.ʁɑ̃</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">(susurro suave) Isabelle respira en la noche de Teherán...</div>
+        <div class="lyric-syllabic">(su-<span class="a">SU</span>-rro <span class="a">SWA</span>-ve) i-sa-<span class="a">BEL</span> res-<span class="a">PI</span>-ra en la <span class="a">NO</span>-che de te-e-<span class="a">RAN</span>...</div>
+        <button class="plb" onclick="playLine('es-ES',`(susurro suave) Isabelle respira en la noche de Teherán...`)">▶</button>
+        <div class="lyric-ipa">isaˈβel resˈpiɾa en la ˈnotʃe ðe teeˈɾan</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">(soft whisper) Isabelle breathes in the night of Tehran...</div>
+        <div class="lyric-syllabic">(soft wis-peur) iz-a-<span class="a">BEL</span> brizz in ze naït ov té-<span class="a">RAN</span>...</div>
+        <button class="plb" onclick="playLine('en-GB',`(soft whisper) Isabelle breathes in the night of Tehran...`)">▶</button>
+        <div class="lyric-ipa">ˌɪzəˈbɛl bɹiːðz ɪn ðə naɪt ɒv tɛˈɹɑːn</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">(murmure lointain) Téhéran...</div>
+        <div class="lyric-syllabic">(mur-<span class="a">MUR</span> lwin-<span class="a">TIN</span>) té-é-<span class="a">RAN</span>...</div>
+        <button class="plb" onclick="playLine('fr-FR',`(murmure lointain) Téhéran...`)">▶</button>
+        <div class="lyric-ipa">te.e.ʁɑ̃</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">(susurro distante) Teherán...</div>
+        <div class="lyric-syllabic">(su-<span class="a">SU</span>-rro dis-<span class="a">TAN</span>-te) te-e-<span class="a">RAN</span>...</div>
+        <button class="plb" onclick="playLine('es-ES',`(susurro distante) Teherán...`)">▶</button>
+        <div class="lyric-ipa">teeˈɾan</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">(distant whisper) Tehran...</div>
+        <div class="lyric-syllabic">(dis-teunt wis-peur) té-<span class="a">RAN</span>...</div>
+        <button class="plb" onclick="playLine('en-GB',`(distant whisper) Tehran...`)">▶</button>
+        <div class="lyric-ipa">tɛˈɹɑːn</div>
+      </div>
+</div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="peda_verse1">
+    <div class="sec-head">
+      <span class="sec-label">✦ Couplet 1 ✦</span>
+      <span class="vb trefle">🍀 Trèfle</span>
+    </div>
+    <div class="col-hdr">
+      <div class="lt FR">🇫🇷 Français</div>
+      <div class="lt ES">🇪🇸 Español</div>
+      <div class="lt EN">🇬🇧 English</div>
+    </div>
+    <div class="instr-row-p">
+      <div class="lc fr"><em class="instr">[Voix Trèfle — pop orientale émotionnelle — chaude et intime — articulation claire]</em></div>
+      <div class="lc es"><em class="instr">[Voz Trèfle — pop oriental emocional — cálida e íntima — articulación clara]</em></div>
+      <div class="lc en"><em class="instr">[Trèfle vocals — emotional oriental pop — breathy intimate — clear articulation]</em></div>
+    </div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Isabelle souffle dans la nuit de Téhéran</div>
+        <div class="lyric-syllabic">i-za-<span class="a">BEL</span> souf-<span class="a">FL</span> dan la nui de té-é-<span class="a">RAN</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`Isabelle souffle dans la nuit de Téhéran`)">▶</button>
+        <div class="lyric-ipa">i.za.bɛl sufl dɑ̃ la nɥi də te.e.ʁɑ̃</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Isabelle respira en la noche de Teherán</div>
+        <div class="lyric-syllabic">i-sa-<span class="a">BEL</span> res-<span class="a">PI</span>-ra en la <span class="a">NO</span>-che de te-e-<span class="a">RAN</span></div>
+        <button class="plb" onclick="playLine('es-ES',`Isabelle respira en la noche de Teherán`)">▶</button>
+        <div class="lyric-ipa">isaˈβel resˈpiɾa en la ˈnotʃe ðe teeˈɾan</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">Isabelle breathes in the night of Tehran</div>
+        <div class="lyric-syllabic">iz-a-<span class="a">BEL</span> brizz in ze naït ov té-<span class="a">RAN</span></div>
+        <button class="plb" onclick="playLine('en-GB',`Isabelle breathes in the night of Tehran`)">▶</button>
+        <div class="lyric-ipa">ˌɪzəˈbɛl bɹiːðz ɪn ðə naɪt ɒv tɛˈɹɑːn</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Fatima lui écrit derrière un rideau tremblant</div>
+        <div class="lyric-syllabic">fa-ti-<span class="a">MA</span> lui é-<span class="a">KRI</span> der-ryèr un ri-<span class="a">DO</span> tran-<span class="a">BLAN</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`Fatima lui écrit derrière un rideau tremblant`)">▶</button>
+        <div class="lyric-ipa">fa.ti.ma lɥi e.kʁi dɛʁ.jɛʁ œ̃ ʁi.do tʁɑ̃.blɑ̃</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Fátima le escribe detrás de una cortina que tiembla</div>
+        <div class="lyric-syllabic"><span class="a">FA</span>-ti-ma le es-<span class="a">KRI</span>-be de-<span class="a">TRAS</span> de <span class="a">U</span>-na kor-<span class="a">TI</span>-na ke <span class="a">TYEM</span>-bla</div>
+        <button class="plb" onclick="playLine('es-ES',`Fátima le escribe detrás de una cortina que tiembla`)">▶</button>
+        <div class="lyric-ipa">ˈfatima le esˈkɾiβe deˈtɾas de ˈuna koɾˈtina ke ˈtjembla</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">Fatima writes to her behind a trembling curtain</div>
+        <div class="lyric-syllabic">fa-<span class="a">TI</span>-ma raïts tou heur bi-<span class="a">HAÏND</span> e <span class="a">TREM</span>-bling <span class="a">KEUR</span>-tin</div>
+        <button class="plb" onclick="playLine('en-GB',`Fatima writes to her behind a trembling curtain`)">▶</button>
+        <div class="lyric-ipa">fəˈtiːmə ɹaɪts tuː hɜː bɪˈhaɪnd ə ˈtɹɛmblɪŋ ˈkɜːtən</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Les murs écoutent et les rues étouffent leurs pas</div>
+        <div class="lyric-syllabic">lé mur z-é-<span class="a">KUT</span> é lé ru z-é-<span class="a">TUF</span> leur pa</div>
+        <button class="plb" onclick="playLine('fr-FR',`Les murs écoutent et les rues étouffent leurs pas`)">▶</button>
+        <div class="lyric-ipa">le myʁ z‿e.kut e le ʁy z‿e.tuf lœʁ pa</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Los muros escuchan y las calles ahogan sus pasos</div>
+        <div class="lyric-syllabic">los <span class="a">MU</span>-ros es-<span class="a">KU</span>-chan i las <span class="a">KA</span>-yes a-<span class="a">O</span>-gan sous <span class="a">PA</span>-sos</div>
+        <button class="plb" onclick="playLine('es-ES',`Los muros escuchan y las calles ahogan sus pasos`)">▶</button>
+        <div class="lyric-ipa">los ˈmuɾos esˈkutʃan i las ˈkaʝes aˈoɣan sus ˈpasos</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">The walls are listening and the streets muffle their steps</div>
+        <div class="lyric-syllabic">ze wolz ar <span class="a">LIS</span>-eu-ning and ze strits <span class="a">MEU</span>-feul zer steps</div>
+        <button class="plb" onclick="playLine('en-GB',`The walls are listening and the streets muffle their steps`)">▶</button>
+        <div class="lyric-ipa">ðə wɔːlz ɑː ˈlɪsənɪŋ ænd ðə stɹiːts ˈmʌfəl ðeə stɛps</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Deux femmes qui s'aiment où l'amour n'a pas le droit</div>
+        <div class="lyric-syllabic">deu <span class="a">FAM</span> ki sèm ou la-<span class="a">MOUR</span> na pa le drwa</div>
+        <button class="plb" onclick="playLine('fr-FR',`Deux femmes qui s'aiment où l'amour n'a pas le droit`)">▶</button>
+        <div class="lyric-ipa">dø fam ki sɛm u la.muʁ na pa lə dʁwa</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Dos mujeres que se aman donde el amor no tiene derecho</div>
+        <div class="lyric-syllabic">dos mu-<span class="a">XE</span>-res ke se <span class="a">A</span>-man <span class="a">DON</span>-de el a-<span class="a">MOR</span> no <span class="a">TYE</span>-ne de-<span class="a">RE</span>-tcho</div>
+        <button class="plb" onclick="playLine('es-ES',`Dos mujeres que se aman donde el amor no tiene derecho`)">▶</button>
+        <div class="lyric-ipa">dos muˈxeɾes ke se ˈaman ˈdonde el aˈmoɾ no ˈtjene deˈɾetʃo</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">Two women in love where love has no right to exist</div>
+        <div class="lyric-syllabic">tou <span class="a">WIM</span>-eun in leuv wer leuv haz nô raït tou ig-<span class="a">ZIST</span></div>
+        <button class="plb" onclick="playLine('en-GB',`Two women in love where love has no right to exist`)">▶</button>
+        <div class="lyric-ipa">tuː ˈwɪmɪn ɪn lʌv weə lʌv hæz nəʊ ɹaɪt tuː ɪɡˈzɪst</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Elles se cachent pour respirer un instant</div>
+        <div class="lyric-syllabic">èl seu <span class="a">KACH</span> pour res-pi-<span class="a">RÉ</span> un nins-<span class="a">TAN</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`Elles se cachent pour respirer un instant`)">▶</button>
+        <div class="lyric-ipa">ɛl sə kaʃ puʁ ʁɛs.pi.ʁe œ̃.n‿ɛ̃s.tɑ̃</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Se esconden para respirar un instante</div>
+        <div class="lyric-syllabic">se es-<span class="a">KON</span>-den <span class="a">PA</span>-ra res-pi-<span class="a">RAR</span> un nins-<span class="a">TAN</span>-te</div>
+        <button class="plb" onclick="playLine('es-ES',`Se esconden para respirar un instante`)">▶</button>
+        <div class="lyric-ipa">se esˈkonden ˈpaɾa ɾespiˈɾaɾ un insˈtante</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">They hide just to breathe for a moment</div>
+        <div class="lyric-syllabic">zéi haïd djeust tou briz for e <span class="a">MÔ</span>-meunt</div>
+        <button class="plb" onclick="playLine('en-GB',`They hide just to breathe for a moment`)">▶</button>
+        <div class="lyric-ipa">ðeɪ haɪd dʒʌst tuː bɹiːð fɔː ə ˈməʊmənt</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Entre les lois des hommes et les regards brûlants</div>
+        <div class="lyric-syllabic">an-treu lé lwa dé-<span class="a">ZOM</span> é lé re-<span class="a">GAR</span> bru-<span class="a">LAN</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`Entre les lois des hommes et les regards brûlants`)">▶</button>
+        <div class="lyric-ipa">ɑ̃.tʁə le lwa de.zɔm e le ʁə.ɡaʁ bʁy.lɑ̃</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Entre las leyes de los hombres y las miradas que queman</div>
+        <div class="lyric-syllabic"><span class="a">EN</span>-tre las <span class="a">LE</span>-yes de los <span class="a">OM</span>-bres i las mi-<span class="a">RA</span>-das ke <span class="a">KE</span>-man</div>
+        <button class="plb" onclick="playLine('es-ES',`Entre las leyes de los hombres y las miradas que queman`)">▶</button>
+        <div class="lyric-ipa">ˈentɾe las ˈleʝes de los ˈombɾes i las miˈɾaðas ke ˈkeman</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">Between the laws of men and the burning stares</div>
+        <div class="lyric-syllabic">bi-<span class="a">TWIN</span> ze lawz ov men and ze <span class="a">BEUR</span>-ning sterz</div>
+        <button class="plb" onclick="playLine('en-GB',`Between the laws of men and the burning stares`)">▶</button>
+        <div class="lyric-ipa">bɪˈtwiːn ðə lɔːz ɒv mɛn ænd ðə ˈbɜːnɪŋ stɛəz</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Elles tremblent pour leurs vies et pour leurs enfants</div>
+        <div class="lyric-syllabic">èl <span class="a">TRAN</span>-bleu pour leur vi é pour leur zan-<span class="a">FAN</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`Elles tremblent pour leurs vies et pour leurs enfants`)">▶</button>
+        <div class="lyric-ipa">ɛl tʁɑ̃bl puʁ lœʁ vi e puʁ lœʁ.z‿ɑ̃.fɑ̃</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Tiemblan por sus vidas y por sus hijos</div>
+        <div class="lyric-syllabic"><span class="a">TYEM</span>-blan por sous <span class="a">VI</span>-das i por sous <span class="a">I</span>-khos</div>
+        <button class="plb" onclick="playLine('es-ES',`Tiemblan por sus vidas y por sus hijos`)">▶</button>
+        <div class="lyric-ipa">ˈtjemblan poɾ sus ˈβiðas i poɾ sus ˈixos</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">They tremble for their lives and for their children</div>
+        <div class="lyric-syllabic">zéi <span class="a">TREM</span>-beul for zer laïvz and for zer <span class="a">TCHIL</span>-dreun</div>
+        <button class="plb" onclick="playLine('en-GB',`They tremble for their lives and for their children`)">▶</button>
+        <div class="lyric-ipa">ðeɪ ˈtɹɛmbəl fɔː ðeə laɪvz ænd fɔː ðeə ˈtʃɪldɹən</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Chaque message peut devenir un jugement</div>
+        <div class="lyric-syllabic">chak mé-<span class="a">SAJ</span> peu deu-veu-<span class="a">NIR</span> un ju-jeu-<span class="a">MAN</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`Chaque message peut devenir un jugement`)">▶</button>
+        <div class="lyric-ipa">ʃak me.saʒ pø dəv.niʁ œ̃ ʒy.ʒə.mɑ̃</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Cada mensaje puede convertirse en un juicio</div>
+        <div class="lyric-syllabic"><span class="a">KA</span>-da men-<span class="a">SA</span>-khe <span class="a">PWE</span>-de kon-ver-<span class="a">TIR</span>-se en un khwi-<span class="a">SYO</span></div>
+        <button class="plb" onclick="playLine('es-ES',`Cada mensaje puede convertirse en un juicio`)">▶</button>
+        <div class="lyric-ipa">ˈkaða menˈsaxe ˈpweðe konβeɾˈtiɾse en un xwiˈsjo</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">Every message can become a judgment</div>
+        <div class="lyric-syllabic"><span class="a">EV</span>-ri <span class="a">MES</span>-idj keun bi-<span class="a">KEUM</span> e <span class="a">DJEUDJ</span>-meunt</div>
+        <button class="plb" onclick="playLine('en-GB',`Every message can become a judgment`)">▶</button>
+        <div class="lyric-ipa">ˈɛvɹi ˈmɛsɪdʒ kæn bɪˈkʌm ə ˈdʒʌdʒmənt</div>
+      </div>
+</div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="peda_prechorus_ar">
+    <div class="sec-head">
+      <span class="sec-label">✦ Pré-Refrain Arabe — Duo ✦</span>
+      <span class="vb duo">🍀🐂 Duo</span>
+    </div>
+    <div class="col-hdr">
+      <div class="lt FR">🇫🇷 Français</div>
+      <div class="lt ES">🇪🇸 Español</div>
+      <div class="lt EN">🇬🇧 English</div>
+    </div>
+    <div class="instr-row-p">
+      <div class="lc fr"><em class="instr">[Duo — phrases arabes émotionnelles et authentiques, jamais caricaturales]</em></div>
+      <div class="lc es"><em class="instr">[Duo — frases en árabe emocionales y auténticas, nunca caricaturescas]</em></div>
+      <div class="lc en"><em class="instr">[Duo — Arabic phrases, emotional and authentic, never caricatural]</em></div>
+    </div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Habibi ya rohi / Nakhaf min hadhihi al qiyud</div>
+        <div class="lyric-syllabic">ha-bi-<span class="a">BI</span> ya <span class="a">RO</span>-hi / na-<span class="a">KHAF</span> min ha-dhi-hi al qi-<span class="a">YOUD</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`Habibi ya rohi / Nakhaf min hadhihi al qiyud`)">▶</button>
+        <div class="lyric-ipa">ha.biː.bi jaː ˈroː.ħi naˈxaːf min ˈhaː.ðihi‿l qijuːd</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Habibi ya rohi / Nakhaf min hadhihi al qiyud</div>
+        <div class="lyric-syllabic">kha-bi-<span class="a">BI</span> ya <span class="a">RO</span>-khi / na-<span class="a">KHAF</span> min kha-<span class="a">DI</span>-khi al ki-<span class="a">YOUD</span></div>
+        <button class="plb" onclick="playLine('es-ES',`Habibi ya rohi / Nakhaf min hadhihi al qiyud`)">▶</button>
+        <div class="lyric-ipa">ha.biː.bi jaː ˈroː.ħi naˈxaːf min ˈhaː.ðihi‿l qijuːd</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">Habibi ya rohi / Nakhaf min hadhihi al qiyud</div>
+        <div class="lyric-syllabic">ha-bi-<span class="a">BI</span> ya <span class="a">RO</span>-hi / na-<span class="a">KHAF</span> min ha-dhi-hi al qi-<span class="a">YOUD</span></div>
+        <button class="plb" onclick="playLine('en-GB',`Habibi ya rohi / Nakhaf min hadhihi al qiyud`)">▶</button>
+        <div class="lyric-ipa">ha.biː.bi jaː ˈroː.ħi naˈxaːf min ˈhaː.ðihi‿l qijuːd</div>
+      </div>
+</div>
+<div class="instr-row-p foreign-note">
+  <div class="lc fr"><em class="instr">(Mon amour, mon âme / J'ai peur de ces chaînes)</em></div>
+  <div class="lc es"><em class="instr">(Mi amor, mi alma / Temo a estas cadenas)</em></div>
+  <div class="lc en"><em class="instr">(My love, my soul / I fear these chains)</em></div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Al houb mamnou / Wal qalb marbout bil alam</div>
+        <div class="lyric-syllabic">al houb mam-<span class="a">NOU</span> / wal qalb mar-<span class="a">BOUT</span> bil a-<span class="a">LAM</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`Al houb mamnou / Wal qalb marbout bil alam`)">▶</button>
+        <div class="lyric-ipa">al ħubb mamˈnuːʕ wal qalb maɾˈbuːt bil ˈʔalam</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Al houb mamnou / Wal qalb marbout bil alam</div>
+        <div class="lyric-syllabic">al khoub mam-<span class="a">NOU</span> / wal kalb mar-<span class="a">BOUT</span> bil a-<span class="a">LAM</span></div>
+        <button class="plb" onclick="playLine('es-ES',`Al houb mamnou / Wal qalb marbout bil alam`)">▶</button>
+        <div class="lyric-ipa">al ħubb mamˈnuːʕ wal qalb maɾˈbuːt bil ˈʔalam</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">Al houb mamnou / Wal qalb marbout bil alam</div>
+        <div class="lyric-syllabic">al houb mam-<span class="a">NOU</span> / wal qalb mar-<span class="a">BOUT</span> bil a-<span class="a">LAM</span></div>
+        <button class="plb" onclick="playLine('en-GB',`Al houb mamnou / Wal qalb marbout bil alam`)">▶</button>
+        <div class="lyric-ipa">al ħubb mamˈnuːʕ wal qalb maɾˈbuːt bil ˈʔalam</div>
+      </div>
+</div>
+<div class="instr-row-p foreign-note">
+  <div class="lc fr"><em class="instr">(L'amour est interdit / Et le cœur lié à la douleur)</em></div>
+  <div class="lc es"><em class="instr">(El amor está prohibido / Y el corazón atado al dolor)</em></div>
+  <div class="lc en"><em class="instr">(Love is forbidden / And the heart bound to pain)</em></div>
+</div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="peda_verse2">
+    <div class="sec-head">
+      <span class="sec-label">✦ Couplet 2 ✦</span>
+      <span class="vb duo">🍀🐂 Duo</span>
+    </div>
+    <div class="col-hdr">
+      <div class="lt FR">🇫🇷 Français</div>
+      <div class="lt ES">🇪🇸 Español</div>
+      <div class="lt EN">🇬🇧 English</div>
+    </div>
+    <div class="instr-row-p">
+      <div class="lc fr"><em class="instr">[DROP] [Beat électro entre] [Basse sidechainée] [Minotaure + Trèfle]</em></div>
+      <div class="lc es"><em class="instr">[DROP] [Beat electro entra] [Bajo sidechain] [Minotaure + Trèfle]</em></div>
+      <div class="lc en"><em class="instr">[DROP] [Electro dance beat enters] [Sidechained bass] [Minotaure + Trèfle]</em></div>
+    </div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Elles passent par un VPN pour voir un sourire</div>
+        <div class="lyric-syllabic">èl <span class="a">PAS</span> par un vé-pé-<span class="a">EN</span> pour vwar un sou-<span class="a">RIR</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`Elles passent par un VPN pour voir un sourire`)">▶</button>
+        <div class="lyric-ipa">ɛl pas paʁ œ̃ ve.pe.ɛn puʁ vwaʁ œ̃ su.ʁiʁ</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Pasan por una VPN solo para ver una sonrisa</div>
+        <div class="lyric-syllabic"><span class="a">PA</span>-san por <span class="a">U</span>-na ve-pe-<span class="a">EN</span>-e <span class="a">SO</span>-lo <span class="a">PA</span>-ra ver <span class="a">U</span>-na son-<span class="a">RI</span>-sa</div>
+        <button class="plb" onclick="playLine('es-ES',`Pasan por una VPN solo para ver una sonrisa`)">▶</button>
+        <div class="lyric-ipa">ˈpasan poɾ ˈuna βepeˈene ˈsolo ˈpaɾa βeɾ ˈuna sonˈɾisa</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">They go through a VPN just to see a smile</div>
+        <div class="lyric-syllabic">zéi gô tru e vi-pi-<span class="a">EN</span> djeust tou si e smaïl</div>
+        <button class="plb" onclick="playLine('en-GB',`They go through a VPN just to see a smile`)">▶</button>
+        <div class="lyric-ipa">ðeɪ ɡəʊ θɹuː ə ˌviːpiːˈɛn dʒʌst tuː siː ə smaɪl</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Une lumière sur l'écran qui promet un futur</div>
+        <div class="lyric-syllabic">u-neu lu-<span class="a">MYÈR</span> sur lé-<span class="a">KRAN</span> ki pro-<span class="a">MÈ</span> un fu-<span class="a">TUR</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`Une lumière sur l'écran qui promet un futur`)">▶</button>
+        <div class="lyric-ipa">yn ly.mjɛʁ syʁ le.kʁɑ̃ ki pʁɔ.mɛ œ̃ fy.tyʁ</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Una luz en la pantalla que promete un futuro</div>
+        <div class="lyric-syllabic"><span class="a">U</span>-na lus en la pan-<span class="a">TA</span>-ya ke pro-<span class="a">ME</span>-te un fu-<span class="a">TU</span>-ro</div>
+        <button class="plb" onclick="playLine('es-ES',`Una luz en la pantalla que promete un futuro`)">▶</button>
+        <div class="lyric-ipa">ˈuna lus en la panˈtaʝa ke pɾoˈmete un fuˈtuɾo</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">A light on the screen that promises a future</div>
+        <div class="lyric-syllabic">e laït on ze skrin zat <span class="a">PRO</span>-mi-siz e <span class="a">FYU</span>-tcheur</div>
+        <button class="plb" onclick="playLine('en-GB',`A light on the screen that promises a future`)">▶</button>
+        <div class="lyric-ipa">ə laɪt ɒn ðə skɹiːn ðæt ˈpɹɒmɪsɪz ə ˈfjuːtʃə</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Mais derrière chaque pixel se cache un empire</div>
+        <div class="lyric-syllabic">mé der-ryèr chak pik-<span class="a">SEL</span> seu kach un nan-<span class="a">PIR</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`Mais derrière chaque pixel se cache un empire`)">▶</button>
+        <div class="lyric-ipa">mɛ dɛʁ.jɛʁ ʃak pik.sɛl sə kaʃ œ̃.n‿ɑ̃.piʁ</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Pero detrás de cada píxel se esconde un imperio</div>
+        <div class="lyric-syllabic"><span class="a">PE</span>-ro de-<span class="a">TRAS</span> de <span class="a">KA</span>-da <span class="a">PIK</span>-sel se es-<span class="a">KON</span>-de un im-<span class="a">PE</span>-ryo</div>
+        <button class="plb" onclick="playLine('es-ES',`Pero detrás de cada píxel se esconde un imperio`)">▶</button>
+        <div class="lyric-ipa">ˈpeɾo deˈtɾas de ˈkaða ˈpiksel se esˈkonde un imˈpeɾjo</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">But behind every pixel hides an empire</div>
+        <div class="lyric-syllabic">beut bi-<span class="a">HAÏND</span> <span class="a">EV</span>-ri <span class="a">PIK</span>-seul haïdz an <span class="a">EM</span>-païeur</div>
+        <button class="plb" onclick="playLine('en-GB',`But behind every pixel hides an empire`)">▶</button>
+        <div class="lyric-ipa">bʌt bɪˈhaɪnd ˈɛvɹi ˈpɪksəl haɪdz ən ˈɛmpaɪə</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Qui veut leur voler le droit même de s'ouvrir</div>
+        <div class="lyric-syllabic">ki veut leur vo-<span class="a">LÉ</span> le drwa mèm de sou-<span class="a">VRIR</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`Qui veut leur voler le droit même de s'ouvrir`)">▶</button>
+        <div class="lyric-ipa">ki vø lœʁ vɔ.le lə dʁwa mɛm də su.vʁiʁ</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Que quiere robarles el derecho incluso de abrirse</div>
+        <div class="lyric-syllabic">ke <span class="a">KYE</span>-re ro-<span class="a">BAR</span>-les el de-<span class="a">RE</span>-tcho in-<span class="a">KLU</span>-so de a-<span class="a">BRIR</span>-se</div>
+        <button class="plb" onclick="playLine('es-ES',`Que quiere robarles el derecho incluso de abrirse`)">▶</button>
+        <div class="lyric-ipa">ke ˈkjeɾe ɾoˈβaɾles el deˈɾetʃo inˈkluso de aˈβɾiɾse</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">That wants to steal their right even to open up</div>
+        <div class="lyric-syllabic">zat wants tou stil zer raït <span class="a">I</span>-veun tou <span class="a">O</span>-peun eup</div>
+        <button class="plb" onclick="playLine('en-GB',`That wants to steal their right even to open up`)">▶</button>
+        <div class="lyric-ipa">ðæt wɒnts tuː stiːl ðeə ɹaɪt ˈiːvən tuː ˈəʊpən ʌp</div>
+      </div>
+</div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="peda_chorus1">
+    <div class="sec-head">
+      <span class="sec-label">✦ Refrain — Duo ✦</span>
+      <span class="vb duo">🍀🐂 Duo</span>
+    </div>
+    <div class="col-hdr">
+      <div class="lt FR">🇫🇷 Français</div>
+      <div class="lt ES">🇪🇸 Español</div>
+      <div class="lt EN">🇬🇧 English</div>
+    </div>
+    <div class="instr-row-p">
+      <div class="lc fr"><em class="instr">[Énergie club cinématique — synthés sombres atmosphériques]</em></div>
+      <div class="lc es"><em class="instr">[Energía club cinemática — sintetizadores oscuros atmosféricos]</em></div>
+      <div class="lc en"><em class="instr">[Cinematic club energy — dark atmospheric synths]</em></div>
+    </div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Amour interdit / Deux cœurs meurtris</div>
+        <div class="lyric-syllabic">a-mour in-ter-<span class="a">DI</span> / deu <span class="a">KEUR</span> meur-<span class="a">TRI</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`Amour interdit / Deux cœurs meurtris`)">▶</button>
+        <div class="lyric-ipa">a.muʁ ɛ̃.tɛʁ.di dø kœʁ mœʁ.tʁi</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Amor prohibido / Dos corazones heridos</div>
+        <div class="lyric-syllabic">a-<span class="a">MOR</span> pro-i-<span class="a">BI</span>-do / dos ko-ra-<span class="a">SO</span>-nes e-<span class="a">RI</span>-dos</div>
+        <button class="plb" onclick="playLine('es-ES',`Amor prohibido / Dos corazones heridos`)">▶</button>
+        <div class="lyric-ipa">aˈmoɾ pɾoiˈβiðo dos koɾaˈsones eˈɾiðos</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">Forbidden love / Two broken hearts</div>
+        <div class="lyric-syllabic">for-<span class="a">BID</span>-eun leuv / tou <span class="a">BRÔ</span>-keun harts</div>
+        <button class="plb" onclick="playLine('en-GB',`Forbidden love / Two broken hearts`)">▶</button>
+        <div class="lyric-ipa">fəˈbɪdən lʌv tuː ˈbɹəʊkən hɑːts</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Sous les ombres d'un pays qui dit non aux filles qui se choisissent</div>
+        <div class="lyric-syllabic">sou lé zon-breu dun pé-<span class="a">I</span> ki di non ô fiy ki seu chwa-zi-<span class="a">SE</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`Sous les ombres d'un pays qui dit non aux filles qui se choisissent`)">▶</button>
+        <div class="lyric-ipa">su le.z‿ɔ̃bʁ dœ̃ pe.i ki di nɔ̃ o fij ki sə ʃwa.zi.se</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Bajo las sombras de un país que dice no a las mujeres que se eligen</div>
+        <div class="lyric-syllabic"><span class="a">BA</span>-kho las <span class="a">SOM</span>-bras de un pa-<span class="a">IS</span> ke <span class="a">DI</span>-se no a las mu-<span class="a">XE</span>-res ke se e-<span class="a">LI</span>-khen</div>
+        <button class="plb" onclick="playLine('es-ES',`Bajo las sombras de un país que dice no a las mujeres que se eligen`)">▶</button>
+        <div class="lyric-ipa">ˈbaxo las ˈsombɾas de un paˈis ke ˈdise no a las muˈxeɾes ke se eˈlixen</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">Under the shadows of a country that says no to girls who choose each other</div>
+        <div class="lyric-syllabic"><span class="a">EUN</span>-deur ze <span class="a">CHAD</span>-ôz ov e <span class="a">KEUN</span>-tri zat séz nô tou guirlz hou tchouz itch <span class="a">EU</span>-zeur</div>
+        <button class="plb" onclick="playLine('en-GB',`Under the shadows of a country that says no to girls who choose each other`)">▶</button>
+        <div class="lyric-ipa">ˈʌndə ðə ˈʃædəʊz ɒv ə ˈkʌntɹi ðæt sez nəʊ tuː ɡɜːlz huː tʃuːz iːtʃ ˈʌðə</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Elles s'accrochent à la vie / Elles refusent la nuit</div>
+        <div class="lyric-syllabic">èl sa-<span class="a">KROCH</span> a la vi / èl reu-<span class="a">FUZ</span> la nui</div>
+        <button class="plb" onclick="playLine('fr-FR',`Elles s'accrochent à la vie / Elles refusent la nuit`)">▶</button>
+        <div class="lyric-ipa">ɛl sa.kʁɔʃ a la vi ɛl ʁə.fyz la nɥi</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Se aferran a la vida / Rechazan la noche</div>
+        <div class="lyric-syllabic">se a-<span class="a">FE</span>-rran a la <span class="a">VI</span>-da / re-<span class="a">TCHA</span>-san la <span class="a">NO</span>-tche</div>
+        <button class="plb" onclick="playLine('es-ES',`Se aferran a la vida / Rechazan la noche`)">▶</button>
+        <div class="lyric-ipa">se aˈfeɾɾan a la ˈβiða ɾeˈtʃasan la ˈnotʃe</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">They hold on to life / They refuse the night</div>
+        <div class="lyric-syllabic">zéi hôld on tou laïf / zéi ri-<span class="a">FYUZ</span> ze naït</div>
+        <button class="plb" onclick="playLine('en-GB',`They hold on to life / They refuse the night`)">▶</button>
+        <div class="lyric-ipa">ðeɪ həʊld ɒn tuː laɪf ðeɪ ɹɪˈfjuːz ðə naɪt</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Elles traversent la ville pour juste exister un peu ici</div>
+        <div class="lyric-syllabic">èl tra-<span class="a">VÈRS</span> la vil pour jusst ég-zis-<span class="a">TÉ</span> un peu i-<span class="a">SI</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`Elles traversent la ville pour juste exister un peu ici`)">▶</button>
+        <div class="lyric-ipa">ɛl tʁa.vɛʁs la vil puʁ ʒyst eɡ.zis.te œ̃ pø i.si</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Cruzan la ciudad solo para existir un poco aquí</div>
+        <div class="lyric-syllabic"><span class="a">KRU</span>-san la syu-<span class="a">DAD</span> <span class="a">SO</span>-lo <span class="a">PA</span>-ra ek-sis-<span class="a">TIR</span> un <span class="a">PO</span>-ko a-<span class="a">KI</span></div>
+        <button class="plb" onclick="playLine('es-ES',`Cruzan la ciudad solo para existir un poco aquí`)">▶</button>
+        <div class="lyric-ipa">ˈkɾusan la sjuˈðað ˈsolo ˈpaɾa eksisˈtiɾ un ˈpoko aˈki</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">They cross the city just to exist a little here</div>
+        <div class="lyric-syllabic">zéi kros ze <span class="a">SI</span>-ti djeust tou ig-<span class="a">ZIST</span> e <span class="a">LIT</span>-eul hir</div>
+        <button class="plb" onclick="playLine('en-GB',`They cross the city just to exist a little here`)">▶</button>
+        <div class="lyric-ipa">ðeɪ kɹɒs ðə ˈsɪti dʒʌst tuː ɪɡˈzɪst ə ˈlɪtəl hɪə</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Amour interdit / Elles défient l'interdit</div>
+        <div class="lyric-syllabic">a-mour in-ter-<span class="a">DI</span> / èl dé-<span class="a">FI</span> lin-ter-<span class="a">DI</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`Amour interdit / Elles défient l'interdit`)">▶</button>
+        <div class="lyric-ipa">a.muʁ ɛ̃.tɛʁ.di ɛl de.fi lɛ̃.tɛʁ.di</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Amor prohibido / Desafían lo prohibido</div>
+        <div class="lyric-syllabic">a-<span class="a">MOR</span> pro-i-<span class="a">BI</span>-do / de-sa-<span class="a">FI</span>-an lo pro-i-<span class="a">BI</span>-do</div>
+        <button class="plb" onclick="playLine('es-ES',`Amor prohibido / Desafían lo prohibido`)">▶</button>
+        <div class="lyric-ipa">aˈmoɾ pɾoiˈβiðo desaˈfian lo pɾoiˈβiðo</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">Forbidden love / They defy the forbidden</div>
+        <div class="lyric-syllabic">for-<span class="a">BID</span>-eun leuv / zéi di-<span class="a">FAÏ</span> ze for-<span class="a">BID</span>-eun</div>
+        <button class="plb" onclick="playLine('en-GB',`Forbidden love / They defy the forbidden`)">▶</button>
+        <div class="lyric-ipa">fəˈbɪdən lʌv ðeɪ dɪˈfaɪ ðə fəˈbɪdən</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Contre les chaînes des hommes qui décident de ce qui vaut une vie</div>
+        <div class="lyric-syllabic">kontr lé chèn dé-<span class="a">ZOM</span> ki dé-si-<span class="a">D</span> deu seu ki vo u-<span class="a">NI</span> vi</div>
+        <button class="plb" onclick="playLine('fr-FR',`Contre les chaînes des hommes qui décident de ce qui vaut une vie`)">▶</button>
+        <div class="lyric-ipa">kɔ̃tʁ le ʃɛn de.zɔm ki de.si.d də.sə ki vo y.ni vi</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Contra las cadenas de los hombres que deciden qué vale una vida</div>
+        <div class="lyric-syllabic"><span class="a">KON</span>-tra las ka-<span class="a">DE</span>-nas de los <span class="a">OM</span>-bres ke de-<span class="a">SI</span>-den ke <span class="a">VA</span>-le <span class="a">U</span>-na <span class="a">VI</span>-da</div>
+        <button class="plb" onclick="playLine('es-ES',`Contra las cadenas de los hombres que deciden qué vale una vida`)">▶</button>
+        <div class="lyric-ipa">ˈkontɾa las kaˈðenas de los ˈombɾes ke deˈsiðen ke ˈβale ˈuna ˈβiða</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">Against the chains of men who decide what makes a life worth living</div>
+        <div class="lyric-syllabic">e-<span class="a">GENST</span> ze tchéinz ov men hou di-<span class="a">SAÏD</span> wot méïks e laïf weurz liv-ing</div>
+        <button class="plb" onclick="playLine('en-GB',`Against the chains of men who decide what makes a life worth living`)">▶</button>
+        <div class="lyric-ipa">əˈɡɛnst ðə tʃeɪnz ɒv mɛn huː dɪˈsaɪd wɒt meɪks ə laɪf ˈwɜːθ ˈlɪvɪŋ</div>
+      </div>
+</div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="peda_verse3">
+    <div class="sec-head">
+      <span class="sec-label">✦ Couplet 3 ✦</span>
+      <span class="vb minotaure">🐂 Minotaure</span>
+    </div>
+    <div class="col-hdr">
+      <div class="lt FR">🇫🇷 Français</div>
+      <div class="lt ES">🇪🇸 Español</div>
+      <div class="lt EN">🇬🇧 English</div>
+    </div>
+    <div class="instr-row-p">
+      <div class="lc fr"><em class="instr">[Minotaure — présence sombre et calme — voix parlée-chantée]</em></div>
+      <div class="lc es"><em class="instr">[Minotaure — presencia oscura y calmada — voz hablada-cantada]</em></div>
+      <div class="lc en"><em class="instr">[Minotaure — dark calm presence — spoken-sung voice]</em></div>
+    </div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">L'une mariée à un homme qui ferme les portes</div>
+        <div class="lyric-syllabic">lune ma-ri-<span class="a">É</span> a un nom ki ferm lé port</div>
+        <button class="plb" onclick="playLine('fr-FR',`L'une mariée à un homme qui ferme les portes`)">▶</button>
+        <div class="lyric-ipa">lyn ma.ʁje a œ̃.n‿ɔm ki fɛʁm le pɔʁt</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Una casada con un hombre que cierra todas las puertas</div>
+        <div class="lyric-syllabic"><span class="a">U</span>-na ka-<span class="a">SA</span>-da kon un <span class="a">OM</span>-bre ke <span class="a">SYE</span>-rra <span class="a">TO</span>-das las <span class="a">PWER</span>-tas</div>
+        <button class="plb" onclick="playLine('es-ES',`Una casada con un hombre que cierra todas las puertas`)">▶</button>
+        <div class="lyric-ipa">ˈuna kaˈsaða kon un ˈombɾe ke ˈsjeɾɾa ˈtoðas las ˈpweɾtas</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">One married to a man who locks every door</div>
+        <div class="lyric-syllabic">won <span class="a">MA</span>-rid tou e man hou loks <span class="a">EV</span>-ri dor</div>
+        <button class="plb" onclick="playLine('en-GB',`One married to a man who locks every door`)">▶</button>
+        <div class="lyric-ipa">wʌn ˈmæɹid tuː ə mæn huː lɒks ˈɛvɹi dɔː</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">L'autre promise à un monde qui la dévore</div>
+        <div class="lyric-syllabic">lotr pro-<span class="a">MIZ</span> a un mond ki la dé-<span class="a">VOR</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`L'autre promise à un monde qui la dévore`)">▶</button>
+        <div class="lyric-ipa">lotʁ pʁɔ.miz a œ̃.mɔ̃d ki la de.vɔʁ</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">La otra prometida a un mundo que la devora</div>
+        <div class="lyric-syllabic">la <span class="a">O</span>-tra pro-me-<span class="a">TI</span>-da a un <span class="a">MUN</span>-do ke la de-<span class="a">VO</span>-ra</div>
+        <button class="plb" onclick="playLine('es-ES',`La otra prometida a un mundo que la devora`)">▶</button>
+        <div class="lyric-ipa">la ˈotɾa pɾometˈiða a un ˈmundo ke la deˈβoɾa</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">The other promised to a world that devours her whole</div>
+        <div class="lyric-syllabic">ze <span class="a">EU</span>-zeur <span class="a">PRO</span>-misd tou e weurld zat di-<span class="a">VEURZ</span> heur hôl</div>
+        <button class="plb" onclick="playLine('en-GB',`The other promised to a world that devours her whole`)">▶</button>
+        <div class="lyric-ipa">ðə ˈʌðə ˈpɹɒmɪst tuː ə wɜːld ðæt dɪˈvaʊəz hɜː həʊl</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Elles savent qu'un divorce peut voler leurs enfants</div>
+        <div class="lyric-syllabic">èl sav kun di-<span class="a">VORS</span> peu vo-<span class="a">LÉ</span> leur zan-<span class="a">FAN</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`Elles savent qu'un divorce peut voler leurs enfants`)">▶</button>
+        <div class="lyric-ipa">ɛl sav kœ̃ di.vɔʁs pø vɔ.le lœʁ.z‿ɑ̃.fɑ̃</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Saben que un divorcio puede robarles a sus hijos</div>
+        <div class="lyric-syllabic"><span class="a">SA</span>-ben ke un di-<span class="a">VOR</span>-syo <span class="a">PWE</span>-de ro-<span class="a">BAR</span>-les a sous <span class="a">I</span>-khos</div>
+        <button class="plb" onclick="playLine('es-ES',`Saben que un divorcio puede robarles a sus hijos`)">▶</button>
+        <div class="lyric-ipa">ˈsaβen ke un diˈβoɾsjo ˈpweðe ɾoˈβaɾles a sus ˈixos</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">They know that divorce can steal their children</div>
+        <div class="lyric-syllabic">zéi nô zat di-<span class="a">VORS</span> kan stil zer <span class="a">TCHIL</span>-dreun</div>
+        <button class="plb" onclick="playLine('en-GB',`They know that divorce can steal their children`)">▶</button>
+        <div class="lyric-ipa">ðeɪ nəʊ ðæt dɪˈvɔːs kæn stiːl ðeə ˈtʃɪldɹən</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Qu'un frère en colère peut devenir un tyran</div>
+        <div class="lyric-syllabic">kun frèr an ko-<span class="a">LÈR</span> peu deu-veu-<span class="a">NIR</span> un ti-<span class="a">RAN</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`Qu'un frère en colère peut devenir un tyran`)">▶</button>
+        <div class="lyric-ipa">kœ̃ fʁɛʁ ɑ̃ kɔ.lɛʁ pø dəv.niʁ œ̃ ti.ʁɑ̃</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Que un hermano furioso puede volverse un tirano</div>
+        <div class="lyric-syllabic">ke un er-<span class="a">MA</span>-no fu-ryo-<span class="a">SO</span> <span class="a">PWE</span>-de vol-<span class="a">VER</span>-se un ti-<span class="a">RA</span>-no</div>
+        <button class="plb" onclick="playLine('es-ES',`Que un hermano furioso puede volverse un tirano`)">▶</button>
+        <div class="lyric-ipa">ke un eɾˈmano fuɾjoˈso ˈpweðe βolˈβeɾse un tiˈɾano</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">That an angry brother can become a tyrant</div>
+        <div class="lyric-syllabic">zat an <span class="a">ANG</span>-gri <span class="a">BRA</span>-zeur kan bi-<span class="a">KEUM</span> e <span class="a">TAÏ</span>-reunt</div>
+        <button class="plb" onclick="playLine('en-GB',`That an angry brother can become a tyrant`)">▶</button>
+        <div class="lyric-ipa">ðæt ən ˈæŋɡɹi ˈbɹʌðə kæn bɪˈkʌm ə ˈtaɪɹənt</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Elles marchent dans des lieux clandestins sans voile</div>
+        <div class="lyric-syllabic">èl march dan dé lyeu klan-dès-<span class="a">TIN</span> san vwal</div>
+        <button class="plb" onclick="playLine('fr-FR',`Elles marchent dans des lieux clandestins sans voile`)">▶</button>
+        <div class="lyric-ipa">ɛl maʁʃ dɑ̃ de ljø klɑ̃.dɛs.tɛ̃ sɑ̃ vwal</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Caminan por lugares clandestinos sin velo</div>
+        <div class="lyric-syllabic">ka-<span class="a">MI</span>-nan por lu-<span class="a">GA</span>-res klan-des-<span class="a">TI</span>-nos sin <span class="a">VE</span>-lo</div>
+        <button class="plb" onclick="playLine('es-ES',`Caminan por lugares clandestinos sin velo`)">▶</button>
+        <div class="lyric-ipa">kaˈminan poɾ luˈɣaɾes klandesˈtinos sin ˈβelo</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">They walk through hidden places without a veil</div>
+        <div class="lyric-syllabic">zéi wok tru <span class="a">HID</span>-eun pléi-siz wiz-<span class="a">AOUT</span> e véïl</div>
+        <button class="plb" onclick="playLine('en-GB',`They walk through hidden places without a veil`)">▶</button>
+        <div class="lyric-ipa">ðeɪ wɔːk θɹuː ˈhɪdən ˈpleɪsɪz wɪðˈaʊt ə veɪl</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Elles sourient mais la peur danse dans leurs voiles</div>
+        <div class="lyric-syllabic">èl sou-<span class="a">RI</span> mé la peur dans dan leur vwal</div>
+        <button class="plb" onclick="playLine('fr-FR',`Elles sourient mais la peur danse dans leurs voiles`)">▶</button>
+        <div class="lyric-ipa">ɛl su.ʁi mɛ la pœʁ dɑ̃s dɑ̃ lœʁ vwal</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Sonríen pero el miedo baila en sus ojos</div>
+        <div class="lyric-syllabic">son-<span class="a">RI</span>-en <span class="a">PE</span>-ro el <span class="a">MYE</span>-do <span class="a">BAÏ</span>-la en sous <span class="a">O</span>-khos</div>
+        <button class="plb" onclick="playLine('es-ES',`Sonríen pero el miedo baila en sus ojos`)">▶</button>
+        <div class="lyric-ipa">sonˈɾien ˈpeɾo el ˈmjeðo ˈβaila en sus ˈoxos</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">They smile but fear dances in their eyes</div>
+        <div class="lyric-syllabic">zéi smaïl beut fir <span class="a">DAN</span>-siz in zer aïz</div>
+        <button class="plb" onclick="playLine('en-GB',`They smile but fear dances in their eyes`)">▶</button>
+        <div class="lyric-ipa">ðeɪ smaɪl bʌt fɪə ˈdænsɪz ɪn ðeə aɪz</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Les logiciels les suivent comme un signal</div>
+        <div class="lyric-syllabic">lé lo-ji-<span class="a">SYEL</span> lé sui-<span class="a">V</span> kom un sin-<span class="a">YAL</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`Les logiciels les suivent comme un signal`)">▶</button>
+        <div class="lyric-ipa">le lɔ.ʒi.sjɛl le sɥiv kɔm œ̃ si.ɲal</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Los programas las siguen como una señal</div>
+        <div class="lyric-syllabic">los pro-<span class="a">GRA</span>-mas las <span class="a">SI</span>-gen <span class="a">KO</span>-mo <span class="a">U</span>-na se-<span class="a">NYAL</span></div>
+        <button class="plb" onclick="playLine('es-ES',`Los programas las siguen como una señal`)">▶</button>
+        <div class="lyric-ipa">los pɾoˈɣɾamas las ˈsiɣen ˈkomo ˈuna seˈɲal</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">The software follows them like a signal</div>
+        <div class="lyric-syllabic">ze <span class="a">SOFT</span>-wèr <span class="a">FO</span>-loz zem laïk e <span class="a">SIG</span>-neul</div>
+        <button class="plb" onclick="playLine('en-GB',`The software follows them like a signal`)">▶</button>
+        <div class="lyric-ipa">ðə ˈsɒftweə ˈfɒləʊz ðɛm laɪk ə ˈsɪɡnəl</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Chaque seconde peut devenir un tribunal</div>
+        <div class="lyric-syllabic">chak seu-<span class="a">GOND</span> peu deu-veu-<span class="a">NIR</span> un tri-bu-<span class="a">NAL</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`Chaque seconde peut devenir un tribunal`)">▶</button>
+        <div class="lyric-ipa">ʃak sə.ɡɔ̃d pø dəv.niʁ œ̃ tʁi.by.nal</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Cada segundo puede volverse un tribunal</div>
+        <div class="lyric-syllabic"><span class="a">KA</span>-da se-<span class="a">GUN</span>-do <span class="a">PWE</span>-de vol-<span class="a">VER</span>-se un tri-bu-<span class="a">NAL</span></div>
+        <button class="plb" onclick="playLine('es-ES',`Cada segundo puede volverse un tribunal`)">▶</button>
+        <div class="lyric-ipa">ˈkaða seˈɣundo ˈpweðe βolˈβeɾse un tɾiβuˈnal</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">Every second can become a tribunal</div>
+        <div class="lyric-syllabic"><span class="a">EV</span>-ri <span class="a">SEK</span>-eund kan bi-<span class="a">KEUM</span> e traï-<span class="a">BYU</span>-neul</div>
+        <button class="plb" onclick="playLine('en-GB',`Every second can become a tribunal`)">▶</button>
+        <div class="lyric-ipa">ˈɛvɹi ˈsɛkənd kæn bɪˈkʌm ə tɹaɪˈbjuːnəl</div>
+      </div>
+</div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="peda_bridge_ar">
+    <div class="sec-head">
+      <span class="sec-label">✦ Pont Arabe — Trèfle ✦</span>
+      <span class="vb trefle">🍀 Trèfle</span>
+    </div>
+    <div class="col-hdr">
+      <div class="lt FR">🇫🇷 Français</div>
+      <div class="lt ES">🇪🇸 Español</div>
+      <div class="lt EN">🇬🇧 English</div>
+    </div>
+    <div class="instr-row-p">
+      <div class="lc fr"><em class="instr">[Trèfle seule — voix arabe émotionnelle]</em></div>
+      <div class="lc es"><em class="instr">[Trèfle sola — voz árabe emocional]</em></div>
+      <div class="lc en"><em class="instr">[Trèfle solo — emotional Arabic vocal]</em></div>
+    </div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Ya layl ismah li / An ahmil sirran fi sadri</div>
+        <div class="lyric-syllabic">ya lail is-mah li / an ah-mil sir-<span class="a">RAN</span> fi sad-<span class="a">RI</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`Ya layl ismah li / An ahmil sirran fi sadri`)">▶</button>
+        <div class="lyric-ipa">jaː lajl ˈisˤmaħ liː an ˈaħmil sirˈran fiː sˤadˈriː</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Ya layl ismah li / An ahmil sirran fi sadri</div>
+        <div class="lyric-syllabic">ya lail is-mah li / an akh-mil sir-<span class="a">RAN</span> fi sad-<span class="a">RI</span></div>
+        <button class="plb" onclick="playLine('es-ES',`Ya layl ismah li / An ahmil sirran fi sadri`)">▶</button>
+        <div class="lyric-ipa">jaː lajl ˈisˤmaħ liː an ˈaħmil sirˈran fiː sˤadˈriː</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">Ya layl ismah li / An ahmil sirran fi sadri</div>
+        <div class="lyric-syllabic">ya lail is-mah li / an ah-mil sir-<span class="a">RAN</span> fi sad-<span class="a">RI</span></div>
+        <button class="plb" onclick="playLine('en-GB',`Ya layl ismah li / An ahmil sirran fi sadri`)">▶</button>
+        <div class="lyric-ipa">jaː lajl ˈisˤmaħ liː an ˈaħmil sirˈran fiː sˤadˈriː</div>
+      </div>
+</div>
+<div class="instr-row-p foreign-note">
+  <div class="lc fr"><em class="instr">(Ô nuit, permets-moi / De porter un secret dans ma poitrine)</em></div>
+  <div class="lc es"><em class="instr">(Oh noche, permíteme / Llevar un secreto en mi pecho)</em></div>
+  <div class="lc en"><em class="instr">(Oh night, allow me / To carry a secret in my chest)</em></div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Ayna al aman / Ayna al houb douna sujud</div>
+        <div class="lyric-syllabic">aï-na al a-<span class="a">MAN</span> / aï-na al houb dou-na su-<span class="a">JOUD</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`Ayna al aman / Ayna al houb douna sujud`)">▶</button>
+        <div class="lyric-ipa">ˈajna l.ʔaˈmaːn ˈajna‿l ħubb ˈduːna suˈdʒuːd</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Ayna al aman / Ayna al houb douna sujud</div>
+        <div class="lyric-syllabic">aï-na al a-<span class="a">MAN</span> / aï-na al khoub dou-na su-<span class="a">YOUD</span></div>
+        <button class="plb" onclick="playLine('es-ES',`Ayna al aman / Ayna al houb douna sujud`)">▶</button>
+        <div class="lyric-ipa">ˈajna l.ʔaˈmaːn ˈajna‿l ħubb ˈduːna suˈdʒuːd</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">Ayna al aman / Ayna al houb douna sujud</div>
+        <div class="lyric-syllabic">aï-na al a-<span class="a">MAN</span> / aï-na al houb dou-na su-<span class="a">JOUD</span></div>
+        <button class="plb" onclick="playLine('en-GB',`Ayna al aman / Ayna al houb douna sujud`)">▶</button>
+        <div class="lyric-ipa">ˈajna l.ʔaˈmaːn ˈajna‿l ħubb ˈduːna suˈdʒuːd</div>
+      </div>
+</div>
+<div class="instr-row-p foreign-note">
+  <div class="lc fr"><em class="instr">(Où est la sécurité / Où est l'amour sans soumission)</em></div>
+  <div class="lc es"><em class="instr">(Dónde está la seguridad / Dónde está el amor sin sumisión)</em></div>
+  <div class="lc en"><em class="instr">(Where is safety / Where is love without submission)</em></div>
+</div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="peda_breakdown">
+    <div class="sec-head">
+      <span class="sec-label">✦ Breakdown ✦</span>
+      <span class="vb duo">🍀🐂 Duo</span>
+    </div>
+    <div class="col-hdr">
+      <div class="lt FR">🇫🇷 Français</div>
+      <div class="lt ES">🇪🇸 Español</div>
+      <div class="lt EN">🇬🇧 English</div>
+    </div>
+    <div class="instr-row-p">
+      <div class="lc fr"><em class="instr">[Breakdown] [Beat minimal] [Gasba revient doucement]</em></div>
+      <div class="lc es"><em class="instr">[Breakdown] [Beat mínimo] [Gasba vuelve suavemente]</em></div>
+      <div class="lc en"><em class="instr">[Breakdown] [Minimal beat] [Gasba returns softly]</em></div>
+    </div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Elles rêvent d'un pays où les femmes n'ont plus à fuir</div>
+        <div class="lyric-syllabic">èl rèv dun pé-i ou lé fam non plu za fu-<span class="a">IR</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`Elles rêvent d'un pays où les femmes n'ont plus à fuir`)">▶</button>
+        <div class="lyric-ipa">ɛl ʁɛv dœ̃ pe.i u le fam nɔ̃ ply.z‿a fɥ.iʁ</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Sueñan con un país donde las mujeres ya no tengan que huir</div>
+        <div class="lyric-syllabic">su-<span class="a">NYAN</span> kon un pa-<span class="a">IS</span> <span class="a">DON</span>-de las mu-<span class="a">XE</span>-res ya no <span class="a">TEN</span>-gan ke u-<span class="a">IR</span></div>
+        <button class="plb" onclick="playLine('es-ES',`Sueñan con un país donde las mujeres ya no tengan que huir`)">▶</button>
+        <div class="lyric-ipa">suˈɲan kon un paˈis ˈdonde las muˈxeɾes ja no ˈtengan ke uˈiɾ</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">They dream of a country where women no longer have to run</div>
+        <div class="lyric-syllabic">zéi drim ov e <span class="a">KEUN</span>-tri wer <span class="a">WIM</span>-eun nô <span class="a">LON</span>-geur hav tou reun</div>
+        <button class="plb" onclick="playLine('en-GB',`They dream of a country where women no longer have to run`)">▶</button>
+        <div class="lyric-ipa">ðeɪ dɹiːm ɒv ə ˈkʌntɹi weə ˈwɪmɪn nəʊ ˈlɒŋɡə hæv tuː ɹʌn</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Où aucune loi ne décide de qui elles doivent aimer</div>
+        <div class="lyric-syllabic">ou o-<span class="a">KUN</span> lwa neu dé-<span class="a">SID</span> deu ki èl dwav é-<span class="a">MÉ</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`Où aucune loi ne décide de qui elles doivent aimer`)">▶</button>
+        <div class="lyric-ipa">u o.kyn lwa nə de.sid də ki ɛl dwav e.me</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Donde ninguna ley decida a quién pueden amar</div>
+        <div class="lyric-syllabic"><span class="a">DON</span>-de nin-<span class="a">GU</span>-na léi de-<span class="a">SI</span>-da a kyen <span class="a">PWE</span>-den a-<span class="a">MAR</span></div>
+        <button class="plb" onclick="playLine('es-ES',`Donde ninguna ley decida a quién pueden amar`)">▶</button>
+        <div class="lyric-ipa">ˈdonde ninˈɣuna lei deˈsiða a kjen ˈpweðen aˈmaɾ</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">Where no law decides who they are allowed to love</div>
+        <div class="lyric-syllabic">wer nô lo di-<span class="a">SAÏDZ</span> hou zéï ar a-<span class="a">LAOUD</span> tou leuv</div>
+        <button class="plb" onclick="playLine('en-GB',`Where no law decides who they are allowed to love`)">▶</button>
+        <div class="lyric-ipa">weə nəʊ lɔː dɪˈsaɪdz huː ðeɪ ɑː əˈlaʊd tuː lʌv</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Un lieu libre comme Montréal qui pourrait les accueillir</div>
+        <div class="lyric-syllabic">un lyeu librr kom mon-ré-<span class="a">AL</span> ki pour-<span class="a">RÈ</span> lé zak-keuy-<span class="a">IR</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`Un lieu libre comme Montréal qui pourrait les accueillir`)">▶</button>
+        <div class="lyric-ipa">œ̃ ljø libʁ kɔm mɔ̃.ʁe.al ki puʁ.ʁɛ le.z‿a.kœ.jiʁ</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Un lugar libre como Montreal que pudiera acogerlas</div>
+        <div class="lyric-syllabic">un lu-<span class="a">GAR</span> <span class="a">LI</span>-bre <span class="a">KO</span>-mo mon-tre-<span class="a">AL</span> ke pu-<span class="a">DYE</span>-ra a-ko-<span class="a">KHER</span>-las</div>
+        <button class="plb" onclick="playLine('es-ES',`Un lugar libre como Montreal que pudiera acogerlas`)">▶</button>
+        <div class="lyric-ipa">un luˈɣaɾ ˈliβɾe ˈkomo montɾeˈal ke puˈðjeɾa akoˈxeɾlas</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">A free place like Montreal that could welcome them in</div>
+        <div class="lyric-syllabic">e fri pléis laïk mon-tri-<span class="a">OL</span> zat koud <span class="a">WEL</span>-keum zem in</div>
+        <button class="plb" onclick="playLine('en-GB',`A free place like Montreal that could welcome them in`)">▶</button>
+        <div class="lyric-ipa">ə fɹiː pleɪs laɪk mɒntɹiˈɒl ðæt kʊd ˈwɛlkəm ðɛm ɪn</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Un horizon sans chaînes où elles pourraient respirer</div>
+        <div class="lyric-syllabic">un no-ri-<span class="a">ZON</span> san chèn ou èl pour-<span class="a">RÈ</span> res-pi-<span class="a">RÉ</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`Un horizon sans chaînes où elles pourraient respirer`)">▶</button>
+        <div class="lyric-ipa">œ̃ no.ʁi.zɔ̃ sɑ̃ ʃɛn u ɛl puʁ.ʁɛ ʁɛs.pi.ʁe</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Un horizonte sin cadenas donde pudieran respirar</div>
+        <div class="lyric-syllabic">un o-ri-<span class="a">SON</span>-te sin ka-<span class="a">DE</span>-nas <span class="a">DON</span>-de pu-<span class="a">DYE</span>-ran res-pi-<span class="a">RAR</span></div>
+        <button class="plb" onclick="playLine('es-ES',`Un horizonte sin cadenas donde pudieran respirar`)">▶</button>
+        <div class="lyric-ipa">un oɾiˈsonte sin kaˈðenas ˈdonde puˈðjeɾan ɾespiˈɾaɾ</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">A horizon without chains where they could finally breathe</div>
+        <div class="lyric-syllabic">e ho-<span class="a">RAÏ</span>-zeun wiz-<span class="a">AOUT</span> tchéinz wer zéï koud <span class="a">FAÏ</span>-na-li briz</div>
+        <button class="plb" onclick="playLine('en-GB',`A horizon without chains where they could finally breathe`)">▶</button>
+        <div class="lyric-ipa">ə həˈɹaɪzən wɪðˈaʊt tʃeɪnz weə ðeɪ kʊd ˈfaɪnəli bɹiːð</div>
+      </div>
+</div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="peda_violinbreak">
+    <div class="sec-head">
+      <span class="sec-label">✦ Violin Break — Instrumental ✦</span>
+      <span class="vb instr">🎻 Instrumental</span>
+    </div>
+    <div class="col-hdr">
+      <div class="lt FR">🇫🇷 Français</div>
+      <div class="lt ES">🇪🇸 Español</div>
+      <div class="lt EN">🇬🇧 English</div>
+    </div>
+    <div class="instr-row-p">
+      <div class="lc fr"><em class="instr">[Beat coupe] [Solo violon gothique oriental] [Duel violon vs flûte Gasba]</em></div>
+      <div class="lc es"><em class="instr">[Beat se corta] [Solo violín gótico oriental] [Duelo violín vs flauta Gasba]</em></div>
+      <div class="lc en"><em class="instr">[Beat cuts] [Solo oriental gothic violin] [Violin vs Gasba flute duel]</em></div>
+    </div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">(lamento lointain) Ahhhhhh...</div>
+        <div class="lyric-syllabic">(la-<span class="a">MEN</span>-to lwin-<span class="a">TIN</span>) a-a-a-a-a-a...</div>
+        <button class="plb" onclick="playLine('fr-FR',`(lamento lointain) Ahhhhhh...`)">▶</button>
+        <div class="lyric-ipa">a.a.a.a.a.a</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">(lamento distante) Ahhhhhh...</div>
+        <div class="lyric-syllabic">(la-<span class="a">MEN</span>-to dis-<span class="a">TAN</span>-te) a-a-a-a-a-a...</div>
+        <button class="plb" onclick="playLine('es-ES',`(lamento distante) Ahhhhhh...`)">▶</button>
+        <div class="lyric-ipa">a.a.a.a.a.a</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">(distant lament) Ahhhhhh...</div>
+        <div class="lyric-syllabic">(dis-teunt la-<span class="a">MENT</span>) a-a-a-a-a-a...</div>
+        <button class="plb" onclick="playLine('en-GB',`(distant lament) Ahhhhhh...`)">▶</button>
+        <div class="lyric-ipa">a.a.a.a.a.a</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">(murmure grave) Habibi...</div>
+        <div class="lyric-syllabic">(mur-<span class="a">MUR</span> grav) ha-bi-<span class="a">BI</span>...</div>
+        <button class="plb" onclick="playLine('fr-FR',`(murmure grave) Habibi...`)">▶</button>
+        <div class="lyric-ipa">ha.biː.bi</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">(susurro grave) Habibi...</div>
+        <div class="lyric-syllabic">(su-<span class="a">SU</span>-rro <span class="a">GRA</span>-ve) kha-bi-<span class="a">BI</span>...</div>
+        <button class="plb" onclick="playLine('es-ES',`(susurro grave) Habibi...`)">▶</button>
+        <div class="lyric-ipa">ha.biː.bi</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">(low whisper) Habibi...</div>
+        <div class="lyric-syllabic">(lô wis-peur) ha-bi-<span class="a">BI</span>...</div>
+        <button class="plb" onclick="playLine('en-GB',`(low whisper) Habibi...`)">▶</button>
+        <div class="lyric-ipa">ha.biː.bi</div>
+      </div>
+</div>
+<div class="instr-row-p foreign-note">
+  <div class="lc fr"><em class="instr">((mon amour))</em></div>
+  <div class="lc es"><em class="instr">((mi amor))</em></div>
+  <div class="lc en"><em class="instr">((my love))</em></div>
+</div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="peda_finalchorus">
+    <div class="sec-head">
+      <span class="sec-label">✦ Refrain Final ✦</span>
+      <span class="vb duo">🍀🐂 Duo</span>
+    </div>
+    <div class="col-hdr">
+      <div class="lt FR">🇫🇷 Français</div>
+      <div class="lt ES">🇪🇸 Español</div>
+      <div class="lt EN">🇬🇧 English</div>
+    </div>
+    <div class="instr-row-p">
+      <div class="lc fr"><em class="instr">[Énergie maximale — club cinématique — synthés sombres]</em></div>
+      <div class="lc es"><em class="instr">[Energía máxima — club cinemático — sintetizadores oscuros]</em></div>
+      <div class="lc en"><em class="instr">[Maximum energy — cinematic club — dark synths]</em></div>
+    </div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Amour interdit / Deux cœurs unis</div>
+        <div class="lyric-syllabic">a-mour in-ter-<span class="a">DI</span> / deu <span class="a">KEUR</span> u-<span class="a">NI</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`Amour interdit / Deux cœurs unis`)">▶</button>
+        <div class="lyric-ipa">a.muʁ ɛ̃.tɛʁ.di dø kœʁ y.ni</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Amor prohibido / Dos corazones unidos</div>
+        <div class="lyric-syllabic">a-<span class="a">MOR</span> pro-i-<span class="a">BI</span>-do / dos ko-ra-<span class="a">SO</span>-nes u-<span class="a">NI</span>-dos</div>
+        <button class="plb" onclick="playLine('es-ES',`Amor prohibido / Dos corazones unidos`)">▶</button>
+        <div class="lyric-ipa">aˈmoɾ pɾoiˈβiðo dos koɾaˈsones uˈniðos</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">Forbidden love / Two hearts as one</div>
+        <div class="lyric-syllabic">for-<span class="a">BID</span>-eun leuv / tou harts az won</div>
+        <button class="plb" onclick="playLine('en-GB',`Forbidden love / Two hearts as one`)">▶</button>
+        <div class="lyric-ipa">fəˈbɪdən lʌv tuː hɑːts æz wʌn</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Dans un pays qui détruit celles qui rêvent d'être libres</div>
+        <div class="lyric-syllabic">dan zun pé-i ki dé-<span class="a">TRUI</span> sel ki rèv détr librr</div>
+        <button class="plb" onclick="playLine('fr-FR',`Dans un pays qui détruit celles qui rêvent d'être libres`)">▶</button>
+        <div class="lyric-ipa">dɑ̃.z‿œ̃ pe.i ki de.tʁɥi sɛl ki ʁɛv detʁ libʁ</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">En un país que destruye a las que sueñan con ser libres</div>
+        <div class="lyric-syllabic">en un pa-<span class="a">IS</span> ke des-<span class="a">TRU</span>-ye a las ke su-<span class="a">NYAN</span> kon ser <span class="a">LI</span>-bres</div>
+        <button class="plb" onclick="playLine('es-ES',`En un país que destruye a las que sueñan con ser libres`)">▶</button>
+        <div class="lyric-ipa">en un paˈis ke destɾˈuʝe a las ke suˈɲan kon seɾ ˈliβɾes</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">In a country that destroys those who dare to dream of freedom</div>
+        <div class="lyric-syllabic">in e <span class="a">KEUN</span>-tri zat dis-<span class="a">TROÏZ</span> zôz hou dèr tou drim ov <span class="a">FRI</span>-deum</div>
+        <button class="plb" onclick="playLine('en-GB',`In a country that destroys those who dare to dream of freedom`)">▶</button>
+        <div class="lyric-ipa">ɪn ə ˈkʌntɹi ðæt dɪˈstɹɔɪz ðəʊz huː dɛə tuː dɹiːm ɒv ˈfɹiːdəm</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Elles écrivent leur vie contre la tyrannie</div>
+        <div class="lyric-syllabic">èl zé-<span class="a">KRIV</span> leur vi kontr la ti-ra-<span class="a">NI</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`Elles écrivent leur vie contre la tyrannie`)">▶</button>
+        <div class="lyric-ipa">ɛl ze.kʁiv lœʁ vi kɔ̃tʁ la ti.ʁa.ni</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Escriben su propia vida contra la tiranía</div>
+        <div class="lyric-syllabic">es-<span class="a">KRI</span>-ben sou <span class="a">PRO</span>-pya <span class="a">VI</span>-da <span class="a">KON</span>-tra la ti-ra-<span class="a">NI</span>-a</div>
+        <button class="plb" onclick="playLine('es-ES',`Escriben su propia vida contra la tiranía`)">▶</button>
+        <div class="lyric-ipa">esˈkɾiβen su ˈpɾopja ˈβiða ˈkontɾa la tiɾaˈnia</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">They write their own lives against the tyranny</div>
+        <div class="lyric-syllabic">zéï raït zer ôn laïvz e-<span class="a">GENST</span> ze <span class="a">TI</span>-ra-ni</div>
+        <button class="plb" onclick="playLine('en-GB',`They write their own lives against the tyranny`)">▶</button>
+        <div class="lyric-ipa">ðeɪ ɹaɪt ðeə əʊn laɪvz əˈɡɛnst ðə ˈtɪɹəni</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Elles défient les gardiens et leur monde interdit</div>
+        <div class="lyric-syllabic">èl dé-<span class="a">FI</span> lé gar-<span class="a">DYIN</span> é leur mond in-ter-<span class="a">DI</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`Elles défient les gardiens et leur monde interdit`)">▶</button>
+        <div class="lyric-ipa">ɛl de.fi le ɡaʁ.djɛ̃ e lœʁ mɔ̃d ɛ̃.tɛʁ.di</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Desafían a los guardianes y su mundo prohibido</div>
+        <div class="lyric-syllabic">de-sa-<span class="a">FI</span>-an a los gwar-<span class="a">DYA</span>-nes i sou <span class="a">MUN</span>-do pro-i-<span class="a">BI</span>-do</div>
+        <button class="plb" onclick="playLine('es-ES',`Desafían a los guardianes y su mundo prohibido`)">▶</button>
+        <div class="lyric-ipa">desaˈfian a los ɣwaɾˈðjanes i su ˈmundo pɾoiˈβiðo</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">They defy the guardians and their forbidden world</div>
+        <div class="lyric-syllabic">zéï di-<span class="a">FAÏ</span> ze <span class="a">GAR</span>-dyeunz and zer for-<span class="a">BID</span>-eun weurld</div>
+        <button class="plb" onclick="playLine('en-GB',`They defy the guardians and their forbidden world`)">▶</button>
+        <div class="lyric-ipa">ðeɪ dɪˈfaɪ ðə ˈɡɑːdiənz ænd ðeə fəˈbɪdən wɜːld</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Amour interdit / Mais l'amour survit</div>
+        <div class="lyric-syllabic">a-mour in-ter-<span class="a">DI</span> / mé la-<span class="a">MOUR</span> sur-<span class="a">VI</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`Amour interdit / Mais l'amour survit`)">▶</button>
+        <div class="lyric-ipa">a.muʁ ɛ̃.tɛʁ.di mɛ la.muʁ syʁ.vi</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Amor prohibido / Pero el amor sobrevive</div>
+        <div class="lyric-syllabic">a-<span class="a">MOR</span> pro-i-<span class="a">BI</span>-do / <span class="a">PE</span>-ro el a-<span class="a">MOR</span> so-bre-<span class="a">VI</span>-ve</div>
+        <button class="plb" onclick="playLine('es-ES',`Amor prohibido / Pero el amor sobrevive`)">▶</button>
+        <div class="lyric-ipa">aˈmoɾ pɾoiˈβiðo ˈpeɾo el aˈmoɾ soβɾeˈβiβe</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">Forbidden love / But love survives</div>
+        <div class="lyric-syllabic">for-<span class="a">BID</span>-eun leuv / beut leuv seur-<span class="a">VAÏVZ</span></div>
+        <button class="plb" onclick="playLine('en-GB',`Forbidden love / But love survives`)">▶</button>
+        <div class="lyric-ipa">fəˈbɪdən lʌv bʌt lʌv səˈvaɪvz</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Isabelle et Fatima éclairent la nuit</div>
+        <div class="lyric-syllabic">i-za-<span class="a">BEL</span> é fa-ti-<span class="a">MA</span> é-<span class="a">KLÈR</span> la nui</div>
+        <button class="plb" onclick="playLine('fr-FR',`Isabelle et Fatima éclairent la nuit`)">▶</button>
+        <div class="lyric-ipa">i.za.bɛl e fa.ti.ma e.klɛʁ la nɥi</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Isabelle y Fátima iluminan la noche</div>
+        <div class="lyric-syllabic">i-sa-<span class="a">BEL</span> i fa-<span class="a">TI</span>-ma i-lu-<span class="a">MI</span>-nan la <span class="a">NO</span>-tche</div>
+        <button class="plb" onclick="playLine('es-ES',`Isabelle y Fátima iluminan la noche`)">▶</button>
+        <div class="lyric-ipa">isaˈβel i faˈtima iluˈminan la ˈnotʃe</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">Isabelle and Fatima light up the night</div>
+        <div class="lyric-syllabic">iz-a-<span class="a">BEL</span> and fa-<span class="a">TI</span>-ma laït eup ze naït</div>
+        <button class="plb" onclick="playLine('en-GB',`Isabelle and Fatima light up the night`)">▶</button>
+        <div class="lyric-ipa">ˌɪzəˈbɛl ænd fəˈtiːmə laɪt ʌp ðə naɪt</div>
+      </div>
+</div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="peda_outro">
+    <div class="sec-head">
+      <span class="sec-label">✦ Outro ✦</span>
+      <span class="vb trefle">🍀 Trèfle</span>
+    </div>
+    <div class="col-hdr">
+      <div class="lt FR">🇫🇷 Français</div>
+      <div class="lt ES">🇪🇸 Español</div>
+      <div class="lt EN">🇬🇧 English</div>
+    </div>
+    <div class="instr-row-p">
+      <div class="lc fr"><em class="instr">[Le beat disparaît] [Flûte Gasba seule] [Violon gothique qui s'efface]</em></div>
+      <div class="lc es"><em class="instr">[El beat desaparece] [Flauta Gasba sola] [Violín gótico que se apaga]</em></div>
+      <div class="lc en"><em class="instr">[Beat disappears] [Gasba flute alone] [Gothic violin fading]</em></div>
+    </div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">(murmure) Amour interdit...</div>
+        <div class="lyric-syllabic">(mur-<span class="a">MUR</span>) a-mour in-ter-<span class="a">DI</span>...</div>
+        <button class="plb" onclick="playLine('fr-FR',`(murmure) Amour interdit...`)">▶</button>
+        <div class="lyric-ipa">myʁ.myʁ a.muʁ ɛ̃.tɛʁ.di</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">(susurro) Amor prohibido...</div>
+        <div class="lyric-syllabic">(su-<span class="a">SU</span>-rro) a-<span class="a">MOR</span> pro-i-<span class="a">BI</span>-do...</div>
+        <button class="plb" onclick="playLine('es-ES',`(susurro) Amor prohibido...`)">▶</button>
+        <div class="lyric-ipa">aˈmoɾ pɾoiˈβiðo</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">(whisper) Forbidden love...</div>
+        <div class="lyric-syllabic">(wis-peur) for-<span class="a">BID</span>-eun leuv...</div>
+        <button class="plb" onclick="playLine('en-GB',`(whisper) Forbidden love...`)">▶</button>
+        <div class="lyric-ipa">fəˈbɪdən lʌv</div>
+      </div>
+</div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+<div style="margin:0 32px 8px"><h3 style="font-family:Cinzel,serif;font-size:.78rem;color:var(--gold);letter-spacing:.2em">✦ GUIDE DES SONS DIFFICILES ✦</h3></div>
+<div class="sh-row">
+  <div class="lc fr sh"><h4>🇫🇷 Sons difficiles</h4><div class="shi"><span class="sk">R guttural</span><span class="sd">vient de la gorge — <strong>rideau, regards</strong> = "ri-DO", "re-GAR" — jamais un R anglais</span></div><div class="shi"><span class="sk">Nasale AN/EN/IN</span><span class="sd">son dans le nez — <strong>enfant, interdit</strong> = "an-FAN", "in-ter-DI" — pas de N final prononcé</span></div><div class="shi"><span class="sk">EU impossible</span><span class="sd">lèvres en O + son E — <strong>cœur, peur</strong> = entre "deux" et "feu"</span></div><div class="shi"><span class="sk">U impossible</span><span class="sd">lèvres en O + son I — <strong>nuit, fuir</strong> — jamais le "you" anglais</span></div><div class="shi"><span class="sk">É fermé vs È ouvert</span><span class="sd"><strong>écran, mère</strong> — É tendu, È relâché — distinction essentielle</span></div><div class="shi"><span class="sk">Liaison</span><span class="sd"><strong>les zombres, leurs zenfants</strong> — le S/R s'enchaîne à la voyelle suivante</span></div></div>
+  <div class="lc es sh"><h4>🇪🇸 Sonidos difíciles</h4><div class="shi"><span class="sk">J/G → KH</span><span class="sd">guttural doux — <strong>mujeres, juicio</strong> → "mu-KHE-res", "khwi-syo"</span></div><div class="shi"><span class="sk">Ñ → NY</span><span class="sd"><strong>señal, sueñan</strong> → "se-NYAL", "su-NYAN" — consonne mouillée</span></div><div class="shi"><span class="sk">RR roulé</span><span class="sd"><strong>tierra, prohibido</strong> → roulement vibrant fort de la langue</span></div><div class="shi"><span class="sk">D spirant</span><span class="sd"><strong>vida, prohibido</strong> → D très doux entre voyelles, presque "th" anglais</span></div><div class="shi"><span class="sk">LL/Y → Y</span><span class="sd"><strong>calles, ya</strong> → "KA-yes", "ya" — jamais "ll" anglais</span></div><div class="shi"><span class="sk">Accent obligatoire</span><span class="sd"><strong>Teherán, corazón</strong> → accent tonique fort sur syllabe marquée</span></div></div>
+  <div class="lc en sh"><h4>🇬🇧 Difficult sounds</h4><div class="shi"><span class="sk">TH → Z / S</span><span class="sd">langue entre les dents — <strong>the, breathe</strong> = "ze", "briz" — jamais "de" ou "ze" dur</span></div><div class="shi"><span class="sk">CH → TCH</span><span class="sd"><strong>children</strong> = "TCHIL-dreun" — jamais "sh"</span></div><div class="shi"><span class="sk">WORLD/GIRL → WEURL</span><span class="sd"><strong>world</strong> = "weurld" — diphtongue complexe avec R final</span></div><div class="shi"><span class="sk">R américain/britannique</span><span class="sd">langue recourbée — <strong>broken, forbidden</strong> — jamais roulé</span></div><div class="shi"><span class="sk">EXIST/SIGNAL</span><span class="sd"><strong>exist</strong> = "ig-ZIST" — le X devient un G doux</span></div><div class="shi"><span class="sk">LOVE → EU</span><span class="sd"><strong>love, judgment</strong> = "leuv", "DJEUDJ-meunt" — voyelle centrale courte</span></div></div>
+</div>
+<footer>
+  <a href="https://www.trefleminotaure.com">www.trefleminotaure.com</a>
+  &nbsp;·&nbsp; © 2026 Trèfle &amp; Minotaure &nbsp;·&nbsp; Amour Interdit à Téhéran — Guide Pédagogique
+</footer>
+</div>
+<script>
+let spd=1.0;
+function setSpeed(s,btn){
+  spd=s;
+  document.querySelectorAll(".cbtn").forEach(b=>b.classList.remove("on"));
+  btn.classList.add("on");
+}
+function playLine(lang,txt){
+  speechSynthesis.cancel();
+  const u=new SpeechSynthesisUtterance(txt);
+  u.lang=lang;u.rate=spd;
+  speechSynthesis.speak(u);
+}
+</script>
+</body>
+</html>

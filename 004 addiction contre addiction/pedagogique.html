@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Addiction, contre-addiction — Guide Pédagogique | tréfle.minotaure</title>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Cinzel:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Noto+Serif:ital,wght@0,400;1,400&family=Noto+Sans:wght@400&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --gold:#b8962e;--parchment:#f5ecd7;--red:#c03020;
+  --fr-bg:#e8f0fc;--fr-lbl:#c8dcf8;--fr-txt:#1a3a6b;--fr-bdr:#aac4f0;
+  --es-bg:#f5ead5;--es-lbl:#e8d4a8;--es-txt:#7a5010;--es-bdr:#d4b87a;
+  --en-bg:#fce8ec;--en-lbl:#f8d0dc;--en-txt:#8b1a3a;--en-bdr:#f0aabc;
+}
+body{background:#2a1f10;font-family:"Cormorant Garamond",serif;color:#2a1f10;min-height:100vh;padding:20px}
+.page{max-width:1300px;margin:0 auto;background:var(--parchment);border:2px solid #c4a97a;border-radius:8px;overflow:hidden}
+header{background:linear-gradient(135deg,#1a1008 0%,#2a1810 100%);padding:28px 32px 20px;border-bottom:2px solid var(--gold)}
+.htitle{font-family:"IM Fell English",serif;font-size:1.8rem;color:#e8d5a0}
+.hsubtitle{font-family:"Cinzel",serif;font-size:.78rem;color:#b8962e;margin-top:4px;letter-spacing:.12em}
+.hmeta{display:flex;gap:12px;margin-top:10px;flex-wrap:wrap}
+.mpill{background:#2a1808;border:1px solid #6a4a20;color:#d4b87a;font-size:.68rem;padding:3px 10px;border-radius:16px;font-family:"Cinzel",serif}
+.warn-pill{background:#2a0808;border:1px solid #8b2020;color:#f0a0a0;font-size:.68rem;padding:3px 10px;border-radius:16px;font-family:"Cinzel",serif}
+.controls{background:#f0e8d0;padding:10px 32px;border-bottom:1px solid #d4b87a;display:flex;gap:8px;align-items:center}
+.ctrl-label{font-family:"Cinzel",serif;font-size:.65rem;color:#7a5010;letter-spacing:.1em;margin-right:4px}
+.cbtn{padding:4px 12px;border:1px solid #c4a97a;background:transparent;border-radius:4px;cursor:pointer;font-family:"Cinzel",serif;font-size:.68rem;color:#7a5010;transition:all .2s}
+.cbtn:hover,.cbtn.on{background:var(--gold);color:#fff;border-color:var(--gold)}
+.sec{padding:14px 32px}
+.sec-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:6px}
+.sec-label{font-family:"Cinzel",serif;font-size:.75rem;letter-spacing:.18em;color:var(--gold);text-transform:uppercase}
+.vb{font-family:"Cinzel",serif;font-size:.62rem;padding:2px 7px;border-radius:10px}
+.vb.trefle{background:#f0e0fc;color:#731a94;border:1px solid #c8a0e8}
+.vb.minotaure{background:#e0e8f8;color:#1a3b8c;border:1px solid #a0b8e8}
+.vb.duo{background:#f8f0e0;color:#7a5010;border:1px solid #d4b87a}
+.vb.instr{background:#e8f0e0;color:#3a5020;border:1px solid #a0c080}
+.col-hdr,.instr-row-p{display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;margin-bottom:4px}
+.lt{padding:3px 12px;border-radius:4px;font-family:"Cinzel",serif;font-size:.68rem;letter-spacing:.1em;border:1px solid;text-align:center}
+.lt.FR{background:var(--fr-lbl);color:var(--fr-txt);border-color:var(--fr-bdr)}
+.lt.ES{background:var(--es-lbl);color:var(--es-txt);border-color:var(--es-bdr)}
+.lt.EN{background:var(--en-lbl);color:var(--en-txt);border-color:var(--en-bdr)}
+.opt-c-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;margin-bottom:5px}
+.lc{border-radius:4px;padding:6px 10px}
+.lc.fr{background:var(--fr-bg)}
+.lc.es{background:var(--es-bg)}
+.lc.en{background:var(--en-bg)}
+.lyric-text{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:.97rem;line-height:1.4}
+.lyric-syllabic{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:.80rem;color:#4a3010;margin-top:2px;line-height:1.3}
+.a{text-decoration:underline;text-decoration-color:var(--red);text-underline-offset:2px;color:var(--red)}
+.plb{display:inline-block;margin:3px 0;padding:2px 8px;border:1px solid var(--gold);background:transparent;border-radius:3px;cursor:pointer;font-family:"Cinzel",serif;font-size:.43rem;color:var(--gold);transition:all .2s}
+.plb:hover{background:var(--gold);color:#fff}
+.lyric-ipa{font-family:"Noto Serif","Noto Sans",serif;font-size:.64rem;opacity:.56;margin-top:2px}
+.lyric-ipa::before{content:"/ ";color:var(--gold)}
+.lyric-ipa::after{content:" /";color:var(--gold)}
+.instr{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:.85rem;opacity:.5;display:block}
+.sec-divider{text-align:center;font-family:"Cinzel",serif;font-size:.65rem;color:#c4a97a;margin-top:10px;letter-spacing:.2em}
+.sh-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:16px 32px;padding:14px;background:#f0e8d0;border-radius:6px;border:1px solid #d4b87a}
+.lc.sh h4{font-family:"Cinzel",serif;font-size:.7rem;letter-spacing:.1em;margin-bottom:7px;text-transform:uppercase}
+.lc.fr.sh h4{color:var(--fr-txt)}
+.lc.es.sh h4{color:var(--es-txt)}
+.lc.en.sh h4{color:var(--en-txt)}
+.shi{display:flex;gap:6px;align-items:baseline;flex-wrap:wrap;margin-bottom:4px}
+.sk{font-family:"Cinzel",serif;font-size:.62rem;font-weight:700;padding:1px 6px;border-radius:3px;white-space:nowrap}
+.lc.fr.sh .sk{background:var(--fr-lbl);color:var(--fr-txt)}
+.lc.es.sh .sk{background:var(--es-lbl);color:var(--es-txt)}
+.lc.en.sh .sk{background:var(--en-lbl);color:var(--en-txt)}
+.sd{font-family:Arial,sans-serif;font-size:.75rem;color:#444;line-height:1.4}
+footer{background:#1a1008;color:#888;text-align:center;padding:16px;font-family:"Cinzel",serif;font-size:.68rem;letter-spacing:.1em;border-top:2px solid var(--gold)}
+footer a{color:#b8962e;text-decoration:none}
+</style>
+</head>
+<body>
+<div class="page">
+<header>
+  <div class="htitle">Guide Pédagogique — Addiction, contre-addiction</div>
+  <div class="hsubtitle">Addiction against addiction &nbsp;·&nbsp; Adicción contra-adicción &nbsp;·&nbsp; Phonétique · Syllabique · IPA</div>
+  <div class="hmeta">
+    <span class="mpill">🎵 80 BPM</span>
+    <span class="mpill">📐 Option C : Syllabique + Bouton + IPA</span>
+    <span class="mpill">🌍 FR · ES · EN</span>
+    <span class="warn-pill">⚠️ Thème sensible — relation toxique · addiction émotionnelle</span>
+  </div>
+</header>
+<div class="controls">
+  <span class="ctrl-label">Vitesse TTS</span>
+  <button class="cbtn" onclick="setSpeed(0.7,this)">× 0.7</button>
+  <button class="cbtn on" onclick="setSpeed(1.0,this)">× 1.0</button>
+  <button class="cbtn" onclick="setSpeed(1.2,this)">× 1.2</button>
+</div>
+  <section class="sec" id="peda_intro">
+    <div class="sec-head">
+      <span class="sec-label">✦ Intro ✦</span>
+      <span class="vb trefle">🍀 Trèfle</span>
+    </div>
+    <div class="col-hdr">
+      <div class="lt FR">🇫🇷 Français</div>
+      <div class="lt ES">🇪🇸 Español</div>
+      <div class="lt EN">🇬🇧 English</div>
+    </div>
+    <div class="instr-row-p">
+      <div class="lc fr"><em class="instr">[Pulsation basse sub] [Arpège clair] [Violon gothique grave] [Slide guitare]</em></div>
+      <div class="lc es"><em class="instr">[Pulso de bajo sub] [Arpegio limpio] [Violín gótico grave] [Guitarra slide]</em></div>
+      <div class="lc en"><em class="instr">[Sub bass pulse] [Clean arpeggio] [Low gothic violin] [Slide guitar]</em></div>
+    </div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Le silence a des griffes ce soir</div>
+        <div class="lyric-syllabic">leu si-<span class="a">LANS</span> a dé grif seu swar</div>
+        <button class="plb" onclick="playLine('fr-FR',`Le silence a des griffes ce soir`)">▶</button>
+        <div class="lyric-ipa">lə si.lɑ̃s a de ɡʁif sə swaʁ</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">El silencio tiene garras esta noche</div>
+        <div class="lyric-syllabic">el si-<span class="a">LEN</span>-syo <span class="a">TYE</span>-ne <span class="a">GA</span>-rras <span class="a">ES</span>-ta <span class="a">NO</span>-che</div>
+        <button class="plb" onclick="playLine('es-ES',`El silencio tiene garras esta noche`)">▶</button>
+        <div class="lyric-ipa">el siˈlensjo ˈtjene ˈɣaɾas ˈesta ˈnotʃe</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">Silence has claws tonight</div>
+        <div class="lyric-syllabic"><span class="a">SAÏ</span>-leunce haz klawz tou-<span class="a">NAÏT</span></div>
+        <button class="plb" onclick="playLine('en-GB',`Silence has claws tonight`)">▶</button>
+        <div class="lyric-ipa">ˈsaɪləns hæz klɔːz təˈnaɪt</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">On se regarde... sans se voir... (addiction...)</div>
+        <div class="lyric-syllabic">on seu reu-<span class="a">GARD</span>... san seu <span class="a">VWAR</span>... (a-dik-<span class="a">SYON</span>...)</div>
+        <button class="plb" onclick="playLine('fr-FR',`On se regarde... sans se voir... (addiction...)`)">▶</button>
+        <div class="lyric-ipa">ɔ̃ sə ʁə.ɡaʁd sɑ̃ sə vwaʁ a.dik.sjɔ̃</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Nos miramos... sin vernos... (adicción...)</div>
+        <div class="lyric-syllabic">nos mi-<span class="a">RA</span>-mos... sin ver-nos... (a-dik-<span class="a">SYON</span>...)</div>
+        <button class="plb" onclick="playLine('es-ES',`Nos miramos... sin vernos... (adicción...)`)">▶</button>
+        <div class="lyric-ipa">nos miˈɾamos sin ˈβeɾnos aðikˈsjon</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">We look at each other... without seeing... (addiction...)</div>
+        <div class="lyric-syllabic">wi louk at itch <span class="a">EU</span>-zeur... wiz-aout <span class="a">SI</span>-ing... (a-<span class="a">DIK</span>-cheun...)</div>
+        <button class="plb" onclick="playLine('en-GB',`We look at each other... without seeing... (addiction...)`)">▶</button>
+        <div class="lyric-ipa">wiː lʊk æt iːtʃ ˈʌðə wɪðˈaʊt ˈsiːɪŋ əˈdɪkʃən</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">T'as le regard qui saigne du bleu (addiction...)</div>
+        <div class="lyric-syllabic">ta le reu-<span class="a">GAR</span> ki sègn du bleu (a-dik-<span class="a">SYON</span>...)</div>
+        <button class="plb" onclick="playLine('fr-FR',`T'as le regard qui saigne du bleu (addiction...)`)">▶</button>
+        <div class="lyric-ipa">ta lə ʁə.ɡaʁ ki sɛɲ dy blø a.dik.sjɔ̃</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Tienes esa mirada que sangra de azul (adicción...)</div>
+        <div class="lyric-syllabic"><span class="a">TYE</span>-nes <span class="a">É</span>-sa mi-<span class="a">RA</span>-da ke <span class="a">SAN</span>-gra de a-<span class="a">SUL</span> (a-dik-<span class="a">SYON</span>...)</div>
+        <button class="plb" onclick="playLine('es-ES',`Tienes esa mirada que sangra de azul (adicción...)`)">▶</button>
+        <div class="lyric-ipa">ˈtjenes ˈesa miˈɾaða ke ˈsaŋɡɾa ðe aˈsul aðikˈsjon</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">Your eyes bleed blue (addiction...)</div>
+        <div class="lyric-syllabic">your aïz blid blou (a-<span class="a">DIK</span>-cheun...)</div>
+        <button class="plb" onclick="playLine('en-GB',`Your eyes bleed blue (addiction...)`)">▶</button>
+        <div class="lyric-ipa">jɔː aɪz bliːd bluː əˈdɪkʃən</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">On est deux ombres qui jouent au feu</div>
+        <div class="lyric-syllabic">on é deu zonbr ki jou ô feu</div>
+        <button class="plb" onclick="playLine('fr-FR',`On est deux ombres qui jouent au feu`)">▶</button>
+        <div class="lyric-ipa">ɔ̃.n‿e dø.z‿ɔ̃bʁ ki ʒu o fø</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Somos dos sombras jugando con fuego</div>
+        <div class="lyric-syllabic"><span class="a">SO</span>-mos dos <span class="a">SOM</span>-bras khu-<span class="a">GAN</span>-do kon <span class="a">FWE</span>-go</div>
+        <button class="plb" onclick="playLine('es-ES',`Somos dos sombras jugando con fuego`)">▶</button>
+        <div class="lyric-ipa">ˈsomos dos ˈsombɾas xuˈɣando kon ˈfweɣo</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">We are two shadows playing with fire</div>
+        <div class="lyric-syllabic">wi ar tou <span class="a">CHA</span>-dôz <span class="a">PLÉI</span>-ing wiz faïeur</div>
+        <button class="plb" onclick="playLine('en-GB',`We are two shadows playing with fire`)">▶</button>
+        <div class="lyric-ipa">wiː ɑː tuː ˈʃædəʊz ˈpleɪɪŋ wɪð ˈfaɪə</div>
+      </div>
+</div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="peda_verse1">
+    <div class="sec-head">
+      <span class="sec-label">✦ Couplet 1 ✦</span>
+      <span class="vb duo">🍀🐂 Duo</span>
+    </div>
+    <div class="col-hdr">
+      <div class="lt FR">🇫🇷 Français</div>
+      <div class="lt ES">🇪🇸 Español</div>
+      <div class="lt EN">🇬🇧 English</div>
+    </div>
+    <div class="instr-row-p">
+      <div class="lc fr"><em class="instr">[Basse hammer-on pull-off] [Violon qui monte] — voix alternées Trèfle/Minotaure</em></div>
+      <div class="lc es"><em class="instr">[Bajo hammer-on pull-off] [Violín ascendente] — voces alternadas Trèfle/Minotaure</em></div>
+      <div class="lc en"><em class="instr">[Bass hammer-on pull-off] [Violin rise] — alternating Trèfle/Minotaure vocals</em></div>
+    </div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Tes doigts... des fils de fer barbelés</div>
+        <div class="lyric-syllabic">té dwa... dé fil deu fèr bar-beu-<span class="a">LÉ</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`Tes doigts... des fils de fer barbelés`)">▶</button>
+        <div class="lyric-ipa">te dwa de fil də fɛʁ baʁ.bə.le</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Tus dedos... alambres de espino</div>
+        <div class="lyric-syllabic">tous <span class="a">DE</span>-dos... a-<span class="a">LAM</span>-bres de es-<span class="a">PI</span>-no</div>
+        <button class="plb" onclick="playLine('es-ES',`Tus dedos... alambres de espino`)">▶</button>
+        <div class="lyric-ipa">tus ˈdeðos aˈlambɾes ðe esˈpino</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">Your fingers... barbed wire</div>
+        <div class="lyric-syllabic">your <span class="a">FIN</span>-gueurz... bar-bd waïeur</div>
+        <button class="plb" onclick="playLine('en-GB',`Your fingers... barbed wire`)">▶</button>
+        <div class="lyric-ipa">jɔː ˈfɪŋɡəz bɑːbd ˈwaɪə</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Sur ma peau qui ne sait plus rêver</div>
+        <div class="lyric-syllabic">sur ma po ki neu sé plu rè-<span class="a">VÉ</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`Sur ma peau qui ne sait plus rêver`)">▶</button>
+        <div class="lyric-ipa">syʁ ma po ki nə se ply ʁɛ.ve</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Sobre mi piel que ya olvidó soñar</div>
+        <div class="lyric-syllabic"><span class="a">SO</span>-bre mi pyel ke ya ol-vi-<span class="a">DO</span> so-<span class="a">NYAR</span></div>
+        <button class="plb" onclick="playLine('es-ES',`Sobre mi piel que ya olvidó soñar`)">▶</button>
+        <div class="lyric-ipa">ˈsoβɾe mi pjel ke ʝa olβiˈðo soˈɲaɾ</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">On my skin that forgot how to dream</div>
+        <div class="lyric-syllabic">on maï skin zat for-<span class="a">GOT</span> haou tou drim</div>
+        <button class="plb" onclick="playLine('en-GB',`On my skin that forgot how to dream`)">▶</button>
+        <div class="lyric-ipa">ɒn maɪ skɪn ðæt fəˈɡɒt haʊ tuː dɹiːm</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">On se repousse... on se dévore</div>
+        <div class="lyric-syllabic">on seu reu-<span class="a">POUS</span>... on seu dé-<span class="a">VOR</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`On se repousse... on se dévore`)">▶</button>
+        <div class="lyric-ipa">ɔ̃ sə ʁə.pus ɔ̃ sə de.vɔʁ</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Nos rechazamos... nos devoramos</div>
+        <div class="lyric-syllabic">nos re-tcha-<span class="a">SA</span>-mos... nos de-vo-<span class="a">RA</span>-mos</div>
+        <button class="plb" onclick="playLine('es-ES',`Nos rechazamos... nos devoramos`)">▶</button>
+        <div class="lyric-ipa">nos ɾetʃaˈsamos nos deβoˈɾamos</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">We push each other away... we devour each other</div>
+        <div class="lyric-syllabic">wi pouch itch <span class="a">EU</span>-zeur e-<span class="a">WÉI</span>... wi di-<span class="a">VAOUR</span> itch <span class="a">EU</span>-zeur</div>
+        <button class="plb" onclick="playLine('en-GB',`We push each other away... we devour each other`)">▶</button>
+        <div class="lyric-ipa">wiː pʊʃ iːtʃ ˈʌðə əˈweɪ wiː dɪˈvaʊə iːtʃ ˈʌðə</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">C'est l'addiction qui veut notre mort</div>
+        <div class="lyric-syllabic">cé la-dik-<span class="a">SYON</span> ki veut notr mor</div>
+        <button class="plb" onclick="playLine('fr-FR',`C'est l'addiction qui veut notre mort`)">▶</button>
+        <div class="lyric-ipa">sɛ la.dik.sjɔ̃ ki vø nɔtʁ mɔʁ</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Es la adicción que quiere nuestra muerte</div>
+        <div class="lyric-syllabic">es la a-dik-<span class="a">SYON</span> ke <span class="a">KYE</span>-re <span class="a">NWES</span>-tra <span class="a">MWER</span>-te</div>
+        <button class="plb" onclick="playLine('es-ES',`Es la adicción que quiere nuestra muerte`)">▶</button>
+        <div class="lyric-ipa">es la aðikˈsjon ke ˈkjeɾe ˈnwestɾa ˈmweɾte</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">It is addiction that wants our death</div>
+        <div class="lyric-syllabic">it iz a-<span class="a">DIK</span>-cheun zat wonts aour deth</div>
+        <button class="plb" onclick="playLine('en-GB',`It is addiction that wants our death`)">▶</button>
+        <div class="lyric-ipa">ɪt ɪz əˈdɪkʃən ðæt wɒnts aʊə dɛθ</div>
+      </div>
+</div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="peda_chorus1">
+    <div class="sec-head">
+      <span class="sec-label">✦ Refrain 1 — Duo ✦</span>
+      <span class="vb duo">🍀🐂 Duo</span>
+    </div>
+    <div class="col-hdr">
+      <div class="lt FR">🇫🇷 Français</div>
+      <div class="lt ES">🇪🇸 Español</div>
+      <div class="lt EN">🇬🇧 English</div>
+    </div>
+    <div class="instr-row-p">
+      <div class="lc fr"><em class="instr">[Groove de basse large] [Harmonies de violon] — les deux voix se superposent, Trèfle en tête</em></div>
+      <div class="lc es"><em class="instr">[Groove de bajo amplio] [Armonías de violín] — ambas voces se superponen, Trèfle al frente</em></div>
+      <div class="lc en"><em class="instr">[Wide bass groove] [Violin harmonies] — both voices overlap, Trèfle lead</em></div>
+    </div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Mon addiction... ma contre-addiction</div>
+        <div class="lyric-syllabic">mon a-dik-<span class="a">SYON</span>... ma kontr a-dik-<span class="a">SYON</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`Mon addiction... ma contre-addiction`)">▶</button>
+        <div class="lyric-ipa">mɔ̃.n‿a.dik.sjɔ̃ ma kɔ̃tʁ a.dik.sjɔ̃</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Mi adicción... mi contra-adicción</div>
+        <div class="lyric-syllabic">mi a-dik-<span class="a">SYON</span>... mi <span class="a">KON</span>-tra a-dik-<span class="a">SYON</span></div>
+        <button class="plb" onclick="playLine('es-ES',`Mi adicción... mi contra-adicción`)">▶</button>
+        <div class="lyric-ipa">mi aðikˈsjon mi ˈkontɾa aðikˈsjon</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">My addiction... my counter-addiction</div>
+        <div class="lyric-syllabic">maï a-<span class="a">DIK</span>-cheun... maï <span class="a">KAOUN</span>-teur a-<span class="a">DIK</span>-cheun</div>
+        <button class="plb" onclick="playLine('en-GB',`My addiction... my counter-addiction`)">▶</button>
+        <div class="lyric-ipa">maɪ əˈdɪkʃən maɪ ˈkaʊntəɹ əˈdɪkʃən</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">On est l'aimant... et la collision</div>
+        <div class="lyric-syllabic">on é lé-<span class="a">MAN</span>... é la ko-li-<span class="a">ZYON</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`On est l'aimant... et la collision`)">▶</button>
+        <div class="lyric-ipa">ɔ̃.n‿e le.mɑ̃ e la kɔ.li.zjɔ̃</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Somos el imán... y la colisión</div>
+        <div class="lyric-syllabic"><span class="a">SO</span>-mos el i-<span class="a">MAN</span>... i la ko-li-<span class="a">SYON</span></div>
+        <button class="plb" onclick="playLine('es-ES',`Somos el imán... y la colisión`)">▶</button>
+        <div class="lyric-ipa">ˈsomos el iˈman i la koliˈsjon</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">We are the magnet... and the collision</div>
+        <div class="lyric-syllabic">wi ar ze <span class="a">MAG</span>-neut... and ze keu-<span class="a">LI</span>-jeun</div>
+        <button class="plb" onclick="playLine('en-GB',`We are the magnet... and the collision`)">▶</button>
+        <div class="lyric-ipa">wiː ɑː ðə ˈmæɡnɪt ænd ðə kəˈlɪʒən</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">C'est sale... c'est beau... c'est animal</div>
+        <div class="lyric-syllabic">cé sal... cé bo... cé a-ni-<span class="a">MAL</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`C'est sale... c'est beau... c'est animal`)">▶</button>
+        <div class="lyric-ipa">sɛ sal sɛ bo sɛ a.ni.mal</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Es sucio... es bello... es animal</div>
+        <div class="lyric-syllabic">es <span class="a">SU</span>-syo... es <span class="a">BE</span>-yo... es a-ni-<span class="a">MAL</span></div>
+        <button class="plb" onclick="playLine('es-ES',`Es sucio... es bello... es animal`)">▶</button>
+        <div class="lyric-ipa">es ˈsusjo es ˈbeʝo es aniˈmal</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">It is dirty... it is beautiful... it is animal</div>
+        <div class="lyric-syllabic">it iz <span class="a">DEUR</span>-ti... it iz <span class="a">BYU</span>-ti-feul... it iz <span class="a">A</span>-ni-meul</div>
+        <button class="plb" onclick="playLine('en-GB',`It is dirty... it is beautiful... it is animal`)">▶</button>
+        <div class="lyric-ipa">ɪt ɪz ˈdɜːti ɪt ɪz ˈbjuːtəfəl ɪt ɪz ˈænɪməl</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">On se fait du bien... on se fait du mal</div>
+        <div class="lyric-syllabic">on seu fé du byin... on seu fé du mal</div>
+        <button class="plb" onclick="playLine('fr-FR',`On se fait du bien... on se fait du mal`)">▶</button>
+        <div class="lyric-ipa">ɔ̃ sə fɛ dy bjɛ̃ ɔ̃ sə fɛ dy mal</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Nos hacemos bien... nos hacemos mal</div>
+        <div class="lyric-syllabic">nos a-<span class="a">SE</span>-mos byen... nos a-<span class="a">SE</span>-mos mal</div>
+        <button class="plb" onclick="playLine('es-ES',`Nos hacemos bien... nos hacemos mal`)">▶</button>
+        <div class="lyric-ipa">nos aˈsemos βjen nos aˈsemos mal</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">We do each other good... we do each other harm</div>
+        <div class="lyric-syllabic">wi dou itch <span class="a">EU</span>-zeur goud... wi dou itch <span class="a">EU</span>-zeur harm</div>
+        <button class="plb" onclick="playLine('en-GB',`We do each other good... we do each other harm`)">▶</button>
+        <div class="lyric-ipa">wiː duː iːtʃ ˈʌðə ɡʊd wiː duː iːtʃ ˈʌðə hɑːm</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Je veux fuir... je veux ta morsure</div>
+        <div class="lyric-syllabic">je veu fu-<span class="a">IR</span>... je veu ta mor-<span class="a">SUR</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`Je veux fuir... je veux ta morsure`)">▶</button>
+        <div class="lyric-ipa">ʒə vø fɥ.iʁ ʒə vø ta mɔʁ.syʁ</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Quiero huir... quiero tu mordisco</div>
+        <div class="lyric-syllabic"><span class="a">KYE</span>-ro u-<span class="a">IR</span>... <span class="a">KYE</span>-ro tu mor-<span class="a">DIS</span>-ko</div>
+        <button class="plb" onclick="playLine('es-ES',`Quiero huir... quiero tu mordisco`)">▶</button>
+        <div class="lyric-ipa">ˈkjeɾo uˈiɾ ˈkjeɾo tu moɾˈðisko</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">I want to flee... I want your bite</div>
+        <div class="lyric-syllabic">aï want tou fli... aï want your baït</div>
+        <button class="plb" onclick="playLine('en-GB',`I want to flee... I want your bite`)">▶</button>
+        <div class="lyric-ipa">aɪ wɒnt tuː fliː aɪ wɒnt jɔː baɪt</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Ta tendresse... comme une brûlure (addiction...)</div>
+        <div class="lyric-syllabic">ta tan-<span class="a">DRES</span>... kom u-neu bru-<span class="a">LUR</span> (a-dik-<span class="a">SYON</span>...)</div>
+        <button class="plb" onclick="playLine('fr-FR',`Ta tendresse... comme une brûlure (addiction...)`)">▶</button>
+        <div class="lyric-ipa">ta tɑ̃.dʁɛs kɔm yn bʁy.lyʁ a.dik.sjɔ̃</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Tu ternura... como una quemadura (adicción...)</div>
+        <div class="lyric-syllabic">tu ter-<span class="a">NU</span>-ra... <span class="a">KO</span>-mo <span class="a">U</span>-na ke-ma-<span class="a">DU</span>-ra (a-dik-<span class="a">SYON</span>...)</div>
+        <button class="plb" onclick="playLine('es-ES',`Tu ternura... como una quemadura (adicción...)`)">▶</button>
+        <div class="lyric-ipa">tu teɾˈnuɾa ˈkomo ˈuna kemaˈðuɾa aðikˈsjon</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">Your tenderness... like a burn (addiction...)</div>
+        <div class="lyric-syllabic">your <span class="a">TEN</span>-deur-nes... laïk e beurn (a-<span class="a">DIK</span>-cheun...)</div>
+        <button class="plb" onclick="playLine('en-GB',`Your tenderness... like a burn (addiction...)`)">▶</button>
+        <div class="lyric-ipa">jɔː ˈtɛndənəs laɪk ə bɜːn əˈdɪkʃən</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Addiction... contre-addiction</div>
+        <div class="lyric-syllabic">a-dik-<span class="a">SYON</span>... kontr a-dik-<span class="a">SYON</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`Addiction... contre-addiction`)">▶</button>
+        <div class="lyric-ipa">a.dik.sjɔ̃ kɔ̃tʁ a.dik.sjɔ̃</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Adicción... contra-adicción</div>
+        <div class="lyric-syllabic">a-dik-<span class="a">SYON</span>... kon-tra-a-dik-<span class="a">SYON</span></div>
+        <button class="plb" onclick="playLine('es-ES',`Adicción... contra-adicción`)">▶</button>
+        <div class="lyric-ipa">aðikˈsjon kontɾaaðikˈsjon</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">Addiction... counter-addiction</div>
+        <div class="lyric-syllabic">a-<span class="a">DIK</span>-cheun... <span class="a">KAOUN</span>-teur a-<span class="a">DIK</span>-cheun</div>
+        <button class="plb" onclick="playLine('en-GB',`Addiction... counter-addiction`)">▶</button>
+        <div class="lyric-ipa">əˈdɪkʃən ˈkaʊntəɹ əˈdɪkʃən</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">On est la chute... et l'ascension</div>
+        <div class="lyric-syllabic">on é la chut... é las-san-<span class="a">SYON</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`On est la chute... et l'ascension`)">▶</button>
+        <div class="lyric-ipa">ɔ̃.n‿e la ʃyt e las.ɑ̃.sjɔ̃</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Somos la caída... y la ascensión</div>
+        <div class="lyric-syllabic"><span class="a">SO</span>-mos la ka-<span class="a">I</span>-da... i la as-en-<span class="a">SYON</span></div>
+        <button class="plb" onclick="playLine('es-ES',`Somos la caída... y la ascensión`)">▶</button>
+        <div class="lyric-ipa">ˈsomos la kaˈiða i la asenˈsjon</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">We are the fall... and the ascension</div>
+        <div class="lyric-syllabic">wi ar ze fol... and ze a-<span class="a">SEN</span>-cheun</div>
+        <button class="plb" onclick="playLine('en-GB',`We are the fall... and the ascension`)">▶</button>
+        <div class="lyric-ipa">wiː ɑː ðə fɔːl ænd ði əˈsɛnʃən</div>
+      </div>
+</div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="peda_instrumental">
+    <div class="sec-head">
+      <span class="sec-label">✦ Instrumental ✦</span>
+      <span class="vb instr">🎻 Instrumental</span>
+    </div>
+    <div class="col-hdr">
+      <div class="lt FR">🇫🇷 Français</div>
+      <div class="lt ES">🇪🇸 Español</div>
+      <div class="lt EN">🇬🇧 English</div>
+    </div>
+    <div class="instr-row-p">
+      <div class="lc fr"><em class="instr">[Duo slide guitare + violon] [Riff pentatonique] [Glissés de basse]</em></div>
+      <div class="lc es"><em class="instr">[Dueto guitarra slide + violín] [Riff pentatónico] [Deslizamientos de bajo]</em></div>
+      <div class="lc en"><em class="instr">[Slide guitar + violin duet] [Pentatonic riff] [Bass slides]</em></div>
+    </div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="peda_verse2">
+    <div class="sec-head">
+      <span class="sec-label">✦ Couplet 2 ✦</span>
+      <span class="vb duo">🍀🐂 Duo</span>
+    </div>
+    <div class="col-hdr">
+      <div class="lt FR">🇫🇷 Français</div>
+      <div class="lt ES">🇪🇸 Español</div>
+      <div class="lt EN">🇬🇧 English</div>
+    </div>
+    <div class="instr-row-p">
+      <div class="lc fr"><em class="instr">[Violoncelle grave] — voix alternées</em></div>
+      <div class="lc es"><em class="instr">[Violonchelo grave] — voces alternadas</em></div>
+      <div class="lc en"><em class="instr">[Low cello] — alternating vocals</em></div>
+    </div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Le ciel est bas... il nous écrase</div>
+        <div class="lyric-syllabic">leu syel é ba... il nou zé-<span class="a">KRAZ</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`Le ciel est bas... il nous écrase`)">▶</button>
+        <div class="lyric-ipa">lə sjɛl e ba il nu.z‿e.kʁaz</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">El cielo es bajo... nos aplasta</div>
+        <div class="lyric-syllabic">el <span class="a">SYE</span>-lo es <span class="a">BA</span>-kho... nos a-<span class="a">PLAS</span>-ta</div>
+        <button class="plb" onclick="playLine('es-ES',`El cielo es bajo... nos aplasta`)">▶</button>
+        <div class="lyric-ipa">el ˈsjelo es ˈbaxo nos aˈplasta</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">The sky is low... it crushes us</div>
+        <div class="lyric-syllabic">ze skaï iz lô... it kreu-<span class="a">CHEZ</span> eus</div>
+        <button class="plb" onclick="playLine('en-GB',`The sky is low... it crushes us`)">▶</button>
+        <div class="lyric-ipa">ðə skaɪ ɪz ləʊ ɪt ˈkɹʌʃɪz ʌs</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">On cherche la paix dans chaque extase (addiction...)</div>
+        <div class="lyric-syllabic">on chèrch la pé dan chak ek-<span class="a">STAZ</span> (a-dik-<span class="a">SYON</span>...)</div>
+        <button class="plb" onclick="playLine('fr-FR',`On cherche la paix dans chaque extase (addiction...)`)">▶</button>
+        <div class="lyric-ipa">ɔ̃ ʃɛʁʃ la pɛ dɑ̃ ʃak ɛk.staz a.dik.sjɔ̃</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Buscamos la paz en cada éxtasis (adicción...)</div>
+        <div class="lyric-syllabic">bus-<span class="a">KA</span>-mos la pas en <span class="a">KA</span>-da <span class="a">EKS</span>-ta-sis (a-dik-<span class="a">SYON</span>...)</div>
+        <button class="plb" onclick="playLine('es-ES',`Buscamos la paz en cada éxtasis (adicción...)`)">▶</button>
+        <div class="lyric-ipa">busˈkamos la pas en ˈkaða ˈekstasis aðikˈsjon</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">We seek peace in every ecstasy (addiction...)</div>
+        <div class="lyric-syllabic">wi sik pis in <span class="a">EV</span>-ri <span class="a">EK</span>-sta-si (a-<span class="a">DIK</span>-cheun...)</div>
+        <button class="plb" onclick="playLine('en-GB',`We seek peace in every ecstasy (addiction...)`)">▶</button>
+        <div class="lyric-ipa">wiː siːk piːs ɪn ˈɛvɹi ˈɛkstəsi əˈdɪkʃən</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Mais le plaisir a un goût de cendre</div>
+        <div class="lyric-syllabic">mé leu plè-<span class="a">ZIR</span> a un gou deu sandr</div>
+        <button class="plb" onclick="playLine('fr-FR',`Mais le plaisir a un goût de cendre`)">▶</button>
+        <div class="lyric-ipa">mɛ lə plɛ.ziʁ a œ̃ ɡu də sɑ̃dʁ</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Pero el placer sabe a ceniza</div>
+        <div class="lyric-syllabic"><span class="a">PE</span>-ro el pla-<span class="a">SER</span> <span class="a">SA</span>-be a se-<span class="a">NI</span>-sa</div>
+        <button class="plb" onclick="playLine('es-ES',`Pero el placer sabe a ceniza`)">▶</button>
+        <div class="lyric-ipa">ˈpeɾo el plaˈseɾ ˈsaβe a seˈnisa</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">But pleasure tastes like ash</div>
+        <div class="lyric-syllabic">beut <span class="a">PLE</span>-jeur téïsts laïk ach</div>
+        <button class="plb" onclick="playLine('en-GB',`But pleasure tastes like ash`)">▶</button>
+        <div class="lyric-ipa">bʌt ˈplɛʒə teɪsts laɪk æʃ</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">On n'a plus rien à se revendre</div>
+        <div class="lyric-syllabic">on na plu ryin a seu reu-<span class="a">VANDR</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`On n'a plus rien à se revendre`)">▶</button>
+        <div class="lyric-ipa">ɔ̃ na ply ʁjɛ̃ a sə ʁə.vɑ̃dʁ</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Ya no tenemos nada que vendernos</div>
+        <div class="lyric-syllabic">ya no te-<span class="a">NE</span>-mos <span class="a">NA</span>-da ke ven-<span class="a">DER</span>-nos</div>
+        <button class="plb" onclick="playLine('es-ES',`Ya no tenemos nada que vendernos`)">▶</button>
+        <div class="lyric-ipa">ʝa no teˈnemos ˈnaða ke βenˈdeɾnos</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">We have nothing left to sell each other</div>
+        <div class="lyric-syllabic">wi hav <span class="a">NA</span>-zing left tou sel itch <span class="a">EU</span>-zeur</div>
+        <button class="plb" onclick="playLine('en-GB',`We have nothing left to sell each other`)">▶</button>
+        <div class="lyric-ipa">wiː hæv ˈnʌθɪŋ lɛft tuː sɛl iːtʃ ˈʌðə</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Ta bouche est un piège... un précipice</div>
+        <div class="lyric-syllabic">ta bouch é tun pyèj... un pré-si-<span class="a">PIS</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`Ta bouche est un piège... un précipice`)">▶</button>
+        <div class="lyric-ipa">ta buʃ e tœ̃ pjɛʒ œ̃ pʁe.si.pis</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Tu boca es una trampa... un precipicio</div>
+        <div class="lyric-syllabic">tu <span class="a">BO</span>-ka es <span class="a">U</span>-na <span class="a">TRAM</span>-pa... un pre-si-<span class="a">PI</span>-syo</div>
+        <button class="plb" onclick="playLine('es-ES',`Tu boca es una trampa... un precipicio`)">▶</button>
+        <div class="lyric-ipa">tu ˈboka es ˈuna ˈtɾampa un pɾesiˈpisjo</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">Your mouth is a trap... a precipice</div>
+        <div class="lyric-syllabic">your maouz iz e trap... e <span class="a">PRE</span>-si-pis</div>
+        <button class="plb" onclick="playLine('en-GB',`Your mouth is a trap... a precipice`)">▶</button>
+        <div class="lyric-ipa">jɔː maʊθ ɪz ə tɹæp ə ˈpɹɛsɪpɪs</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Moi je suis l'esclave de tes vices (addiction...)</div>
+        <div class="lyric-syllabic">mwa je sui lès-<span class="a">KLAV</span> deu té vis (a-dik-<span class="a">SYON</span>...)</div>
+        <button class="plb" onclick="playLine('fr-FR',`Moi je suis l'esclave de tes vices (addiction...)`)">▶</button>
+        <div class="lyric-ipa">mwa ʒə sɥi lɛs.klav də te vis a.dik.sjɔ̃</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Yo soy el esclavo de tus vicios (adicción...)</div>
+        <div class="lyric-syllabic">yo soï el es-<span class="a">KLA</span>-vo de tous <span class="a">VI</span>-syos (a-dik-<span class="a">SYON</span>...)</div>
+        <button class="plb" onclick="playLine('es-ES',`Yo soy el esclavo de tus vicios (adicción...)`)">▶</button>
+        <div class="lyric-ipa">ʝo soi el esˈklaβo ðe tus ˈβisjos aðikˈsjon</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">I am the slave of your vices (addiction...)</div>
+        <div class="lyric-syllabic">aï am ze sléïv ov your <span class="a">VAÏ</span>-siz (a-<span class="a">DIK</span>-cheun...)</div>
+        <button class="plb" onclick="playLine('en-GB',`I am the slave of your vices (addiction...)`)">▶</button>
+        <div class="lyric-ipa">aɪ æm ðə sleɪv ɒv jɔː ˈvaɪsɪz əˈdɪkʃən</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">On fuit l'amour pour mieux y céder</div>
+        <div class="lyric-syllabic">on fui la-<span class="a">MOUR</span> pour myeu i sé-<span class="a">DÉ</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`On fuit l'amour pour mieux y céder`)">▶</button>
+        <div class="lyric-ipa">ɔ̃ fɥi la.muʁ puʁ mjø i se.de</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Huimos del amor para ceder mejor</div>
+        <div class="lyric-syllabic">u-<span class="a">I</span>-mos del a-<span class="a">MOR</span> <span class="a">PA</span>-ra se-<span class="a">DER</span> me-<span class="a">KHOR</span></div>
+        <button class="plb" onclick="playLine('es-ES',`Huimos del amor para ceder mejor`)">▶</button>
+        <div class="lyric-ipa">uˈimos ðel aˈmoɾ ˈpaɾa seˈðeɾ meˈxoɾ</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">We flee love only to surrender to it</div>
+        <div class="lyric-syllabic">wi fli leuv ôn-li tou seu-<span class="a">REN</span>-deur tou it</div>
+        <button class="plb" onclick="playLine('en-GB',`We flee love only to surrender to it`)">▶</button>
+        <div class="lyric-ipa">wiː fliː lʌv ˈəʊnli tuː səˈɹɛndə tuː ɪt</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Comme deux aimants déjà condamnés</div>
+        <div class="lyric-syllabic">kom deu zé-<span class="a">MAN</span> dé-ja kon-da-<span class="a">NÉ</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`Comme deux aimants déjà condamnés`)">▶</button>
+        <div class="lyric-ipa">kɔm dø.z‿e.mɑ̃ de.ʒa kɔ̃.da.ne</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Como dos imanes ya condenados</div>
+        <div class="lyric-syllabic"><span class="a">KO</span>-mo dos i-<span class="a">MA</span>-nes ya kon-de-<span class="a">NA</span>-dos</div>
+        <button class="plb" onclick="playLine('es-ES',`Como dos imanes ya condenados`)">▶</button>
+        <div class="lyric-ipa">ˈkomo ðos iˈmanes ʝa kondeˈnaðos</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">Like two magnets already condemned</div>
+        <div class="lyric-syllabic">laïk tou <span class="a">MAG</span>-neuts ol-<span class="a">RE</span>-di keun-<span class="a">DEMD</span></div>
+        <button class="plb" onclick="playLine('en-GB',`Like two magnets already condemned`)">▶</button>
+        <div class="lyric-ipa">laɪk tuː ˈmæɡnɪts ɒlˈɹɛdi kənˈdɛmd</div>
+      </div>
+</div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="peda_chorus2">
+    <div class="sec-head">
+      <span class="sec-label">✦ Refrain 2 — Duo ✦</span>
+      <span class="vb duo">🍀🐂 Duo</span>
+    </div>
+    <div class="col-hdr">
+      <div class="lt FR">🇫🇷 Français</div>
+      <div class="lt ES">🇪🇸 Español</div>
+      <div class="lt EN">🇬🇧 English</div>
+    </div>
+    <div class="instr-row-p">
+      <div class="lc fr"><em class="instr">[Sub bass plus forte] [Violon plus large]</em></div>
+      <div class="lc es"><em class="instr">[Bajo sub más fuerte] [Violín más amplio]</em></div>
+      <div class="lc en"><em class="instr">[Sub bass stronger] [Violin wider]</em></div>
+    </div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Mon addiction... ma contre-addiction</div>
+        <div class="lyric-syllabic">mon a-dik-<span class="a">SYON</span>... ma kontr a-dik-<span class="a">SYON</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`Mon addiction... ma contre-addiction`)">▶</button>
+        <div class="lyric-ipa">mɔ̃.n‿a.dik.sjɔ̃ ma kɔ̃tʁ a.dik.sjɔ̃</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Mi adicción... mi contra-adicción</div>
+        <div class="lyric-syllabic">mi a-dik-<span class="a">SYON</span>... mi <span class="a">KON</span>-tra a-dik-<span class="a">SYON</span></div>
+        <button class="plb" onclick="playLine('es-ES',`Mi adicción... mi contra-adicción`)">▶</button>
+        <div class="lyric-ipa">mi aðikˈsjon mi ˈkontɾa aðikˈsjon</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">My addiction... my counter-addiction</div>
+        <div class="lyric-syllabic">maï a-<span class="a">DIK</span>-cheun... maï <span class="a">KAOUN</span>-teur a-<span class="a">DIK</span>-cheun</div>
+        <button class="plb" onclick="playLine('en-GB',`My addiction... my counter-addiction`)">▶</button>
+        <div class="lyric-ipa">maɪ əˈdɪkʃən maɪ ˈkaʊntəɹ əˈdɪkʃən</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">On est l'aimant... et la collision</div>
+        <div class="lyric-syllabic">on é lé-<span class="a">MAN</span>... é la ko-li-<span class="a">ZYON</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`On est l'aimant... et la collision`)">▶</button>
+        <div class="lyric-ipa">ɔ̃.n‿e le.mɑ̃ e la kɔ.li.zjɔ̃</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Somos el imán... y la colisión</div>
+        <div class="lyric-syllabic"><span class="a">SO</span>-mos el i-<span class="a">MAN</span>... i la ko-li-<span class="a">SYON</span></div>
+        <button class="plb" onclick="playLine('es-ES',`Somos el imán... y la colisión`)">▶</button>
+        <div class="lyric-ipa">ˈsomos el iˈman i la koliˈsjon</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">We are the magnet... and the collision</div>
+        <div class="lyric-syllabic">wi ar ze <span class="a">MAG</span>-neut... and ze keu-<span class="a">LI</span>-jeun</div>
+        <button class="plb" onclick="playLine('en-GB',`We are the magnet... and the collision`)">▶</button>
+        <div class="lyric-ipa">wiː ɑː ðə ˈmæɡnɪt ænd ðə kəˈlɪʒən</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">C'est sale... c'est beau... c'est animal</div>
+        <div class="lyric-syllabic">cé sal... cé bo... cé a-ni-<span class="a">MAL</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`C'est sale... c'est beau... c'est animal`)">▶</button>
+        <div class="lyric-ipa">sɛ sal sɛ bo sɛ a.ni.mal</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Es sucio... es bello... es animal</div>
+        <div class="lyric-syllabic">es <span class="a">SU</span>-syo... es <span class="a">BE</span>-yo... es a-ni-<span class="a">MAL</span></div>
+        <button class="plb" onclick="playLine('es-ES',`Es sucio... es bello... es animal`)">▶</button>
+        <div class="lyric-ipa">es ˈsusjo es ˈbeʝo es aniˈmal</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">It is dirty... it is beautiful... it is animal</div>
+        <div class="lyric-syllabic">it iz <span class="a">DEUR</span>-ti... it iz <span class="a">BYU</span>-ti-feul... it iz <span class="a">A</span>-ni-meul</div>
+        <button class="plb" onclick="playLine('en-GB',`It is dirty... it is beautiful... it is animal`)">▶</button>
+        <div class="lyric-ipa">ɪt ɪz ˈdɜːti ɪt ɪz ˈbjuːtəfəl ɪt ɪz ˈænɪməl</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">On se fait du bien... on se fait du mal</div>
+        <div class="lyric-syllabic">on seu fé du byin... on seu fé du mal</div>
+        <button class="plb" onclick="playLine('fr-FR',`On se fait du bien... on se fait du mal`)">▶</button>
+        <div class="lyric-ipa">ɔ̃ sə fɛ dy bjɛ̃ ɔ̃ sə fɛ dy mal</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Nos hacemos bien... nos hacemos mal</div>
+        <div class="lyric-syllabic">nos a-<span class="a">SE</span>-mos byen... nos a-<span class="a">SE</span>-mos mal</div>
+        <button class="plb" onclick="playLine('es-ES',`Nos hacemos bien... nos hacemos mal`)">▶</button>
+        <div class="lyric-ipa">nos aˈsemos βjen nos aˈsemos mal</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">We do each other good... we do each other harm</div>
+        <div class="lyric-syllabic">wi dou itch <span class="a">EU</span>-zeur goud... wi dou itch <span class="a">EU</span>-zeur harm</div>
+        <button class="plb" onclick="playLine('en-GB',`We do each other good... we do each other harm`)">▶</button>
+        <div class="lyric-ipa">wiː duː iːtʃ ˈʌðə ɡʊd wiː duː iːtʃ ˈʌðə hɑːm</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Je veux fuir... je veux ta morsure</div>
+        <div class="lyric-syllabic">je veu fu-<span class="a">IR</span>... je veu ta mor-<span class="a">SUR</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`Je veux fuir... je veux ta morsure`)">▶</button>
+        <div class="lyric-ipa">ʒə vø fɥ.iʁ ʒə vø ta mɔʁ.syʁ</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Quiero huir... quiero tu mordisco</div>
+        <div class="lyric-syllabic"><span class="a">KYE</span>-ro u-<span class="a">IR</span>... <span class="a">KYE</span>-ro tu mor-<span class="a">DIS</span>-ko</div>
+        <button class="plb" onclick="playLine('es-ES',`Quiero huir... quiero tu mordisco`)">▶</button>
+        <div class="lyric-ipa">ˈkjeɾo uˈiɾ ˈkjeɾo tu moɾˈðisko</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">I want to flee... I want your bite</div>
+        <div class="lyric-syllabic">aï want tou fli... aï want your baït</div>
+        <button class="plb" onclick="playLine('en-GB',`I want to flee... I want your bite`)">▶</button>
+        <div class="lyric-ipa">aɪ wɒnt tuː fliː aɪ wɒnt jɔː baɪt</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Ta tendresse... comme une brûlure (addiction...)</div>
+        <div class="lyric-syllabic">ta tan-<span class="a">DRES</span>... kom u-neu bru-<span class="a">LUR</span> (a-dik-<span class="a">SYON</span>...)</div>
+        <button class="plb" onclick="playLine('fr-FR',`Ta tendresse... comme une brûlure (addiction...)`)">▶</button>
+        <div class="lyric-ipa">ta tɑ̃.dʁɛs kɔm yn bʁy.lyʁ a.dik.sjɔ̃</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Tu ternura... como una quemadura (adicción...)</div>
+        <div class="lyric-syllabic">tu ter-<span class="a">NU</span>-ra... <span class="a">KO</span>-mo <span class="a">U</span>-na ke-ma-<span class="a">DU</span>-ra (a-dik-<span class="a">SYON</span>...)</div>
+        <button class="plb" onclick="playLine('es-ES',`Tu ternura... como una quemadura (adicción...)`)">▶</button>
+        <div class="lyric-ipa">tu teɾˈnuɾa ˈkomo ˈuna kemaˈðuɾa aðikˈsjon</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">Your tenderness... like a burn (addiction...)</div>
+        <div class="lyric-syllabic">your <span class="a">TEN</span>-deur-nes... laïk e beurn (a-<span class="a">DIK</span>-cheun...)</div>
+        <button class="plb" onclick="playLine('en-GB',`Your tenderness... like a burn (addiction...)`)">▶</button>
+        <div class="lyric-ipa">jɔː ˈtɛndənəs laɪk ə bɜːn əˈdɪkʃən</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Addiction... contre-addiction</div>
+        <div class="lyric-syllabic">a-dik-<span class="a">SYON</span>... kontr a-dik-<span class="a">SYON</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`Addiction... contre-addiction`)">▶</button>
+        <div class="lyric-ipa">a.dik.sjɔ̃ kɔ̃tʁ a.dik.sjɔ̃</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Adicción... contra-adicción</div>
+        <div class="lyric-syllabic">a-dik-<span class="a">SYON</span>... kon-tra-a-dik-<span class="a">SYON</span></div>
+        <button class="plb" onclick="playLine('es-ES',`Adicción... contra-adicción`)">▶</button>
+        <div class="lyric-ipa">aðikˈsjon kontɾaaðikˈsjon</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">Addiction... counter-addiction</div>
+        <div class="lyric-syllabic">a-<span class="a">DIK</span>-cheun... <span class="a">KAOUN</span>-teur a-<span class="a">DIK</span>-cheun</div>
+        <button class="plb" onclick="playLine('en-GB',`Addiction... counter-addiction`)">▶</button>
+        <div class="lyric-ipa">əˈdɪkʃən ˈkaʊntəɹ əˈdɪkʃən</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">On est la chute... et l'ascension</div>
+        <div class="lyric-syllabic">on é la chut... é las-san-<span class="a">SYON</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`On est la chute... et l'ascension`)">▶</button>
+        <div class="lyric-ipa">ɔ̃.n‿e la ʃyt e las.ɑ̃.sjɔ̃</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Somos la caída... y la ascensión</div>
+        <div class="lyric-syllabic"><span class="a">SO</span>-mos la ka-<span class="a">I</span>-da... i la as-en-<span class="a">SYON</span></div>
+        <button class="plb" onclick="playLine('es-ES',`Somos la caída... y la ascensión`)">▶</button>
+        <div class="lyric-ipa">ˈsomos la kaˈiða i la asenˈsjon</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">We are the fall... and the ascension</div>
+        <div class="lyric-syllabic">wi ar ze fol... and ze a-<span class="a">SEN</span>-cheun</div>
+        <button class="plb" onclick="playLine('en-GB',`We are the fall... and the ascension`)">▶</button>
+        <div class="lyric-ipa">wiː ɑː ðə fɔːl ænd ði əˈsɛnʃən</div>
+      </div>
+</div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="peda_verse3">
+    <div class="sec-head">
+      <span class="sec-label">✦ Couplet 3 ✦</span>
+      <span class="vb duo">🍀🐂 Duo</span>
+    </div>
+    <div class="col-hdr">
+      <div class="lt FR">🇫🇷 Français</div>
+      <div class="lt ES">🇪🇸 Español</div>
+      <div class="lt EN">🇬🇧 English</div>
+    </div>
+    <div class="instr-row-p">
+      <div class="lc fr"><em class="instr">[Duel violon et slide guitare] puis [Slide guitare bends] — voix alternées</em></div>
+      <div class="lc es"><em class="instr">[Duelo violín y guitarra slide] luego [Slide guitar bends] — voces alternadas</em></div>
+      <div class="lc en"><em class="instr">[Violin and slide guitar duel] then [Slide guitar bends] — alternating vocals</em></div>
+    </div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">On gratte le vernis de nos peurs</div>
+        <div class="lyric-syllabic">on grat leu ver-<span class="a">NI</span> deu no peur</div>
+        <button class="plb" onclick="playLine('fr-FR',`On gratte le vernis de nos peurs`)">▶</button>
+        <div class="lyric-ipa">ɔ̃ ɡʁat lə vɛʁ.ni də no pœʁ</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Rascamos el barniz de nuestros miedos</div>
+        <div class="lyric-syllabic">ras-<span class="a">KA</span>-mos el bar-<span class="a">NIS</span> de <span class="a">NWES</span>-tros <span class="a">MYE</span>-dos</div>
+        <button class="plb" onclick="playLine('es-ES',`Rascamos el barniz de nuestros miedos`)">▶</button>
+        <div class="lyric-ipa">ɾasˈkamos el baɾˈnis ðe ˈnwestɾos ˈmjeðos</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">We scratch the varnish of our fears</div>
+        <div class="lyric-syllabic">wi skratch ze <span class="a">VAR</span>-nich ov aour firz</div>
+        <button class="plb" onclick="playLine('en-GB',`We scratch the varnish of our fears`)">▶</button>
+        <div class="lyric-ipa">wiː skɹætʃ ðə ˈvɑːnɪʃ ɒv aʊə fɪəz</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Pour trouver le rythme de nos cœurs (addiction...)</div>
+        <div class="lyric-syllabic">pour trou-<span class="a">VÉ</span> leu rit-meu deu no keur (a-dik-<span class="a">SYON</span>...)</div>
+        <button class="plb" onclick="playLine('fr-FR',`Pour trouver le rythme de nos cœurs (addiction...)`)">▶</button>
+        <div class="lyric-ipa">puʁ tʁu.ve lə ʁit.mə də no kœʁ a.dik.sjɔ̃</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Para encontrar el ritmo de nuestros corazones (adicción...)</div>
+        <div class="lyric-syllabic"><span class="a">PA</span>-ra en-kon-<span class="a">TRAR</span> el <span class="a">RIT</span>-mo de <span class="a">NWES</span>-tros ko-ra-<span class="a">SO</span>-nes (a-dik-<span class="a">SYON</span>...)</div>
+        <button class="plb" onclick="playLine('es-ES',`Para encontrar el ritmo de nuestros corazones (adicción...)`)">▶</button>
+        <div class="lyric-ipa">ˈpaɾa enkonˈtɾaɾ el ˈɾitmo ðe ˈnwestɾos koɾaˈsones aðikˈsjon</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">To find the rhythm of our hearts (addiction...)</div>
+        <div class="lyric-syllabic">tou faïnd ze <span class="a">RI</span>-zeum ov aour harts (a-<span class="a">DIK</span>-cheun...)</div>
+        <button class="plb" onclick="playLine('en-GB',`To find the rhythm of our hearts (addiction...)`)">▶</button>
+        <div class="lyric-ipa">tuː faɪnd ðə ˈɹɪðəm ɒv aʊə hɑːts əˈdɪkʃən</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">C'est primal... c'est sale... c'est viscéral</div>
+        <div class="lyric-syllabic">cé pri-<span class="a">MAL</span>... cé sal... cé vi-sé-<span class="a">RAL</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`C'est primal... c'est sale... c'est viscéral`)">▶</button>
+        <div class="lyric-ipa">sɛ pʁi.mal sɛ sal sɛ vi.se.ʁal</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Es primal... es sucio... es visceral</div>
+        <div class="lyric-syllabic">es pri-<span class="a">MAL</span>... es <span class="a">SU</span>-syo... es vi-se-<span class="a">RAL</span></div>
+        <button class="plb" onclick="playLine('es-ES',`Es primal... es sucio... es visceral`)">▶</button>
+        <div class="lyric-ipa">es pɾiˈmal es ˈsusjo es βiseˈɾal</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">It is primal... it is dirty... it is visceral</div>
+        <div class="lyric-syllabic">it iz <span class="a">PRAÏ</span>-meul... it iz <span class="a">DEUR</span>-ti... it iz vi-<span class="a">SE</span>-ra-leul</div>
+        <button class="plb" onclick="playLine('en-GB',`It is primal... it is dirty... it is visceral`)">▶</button>
+        <div class="lyric-ipa">ɪt ɪz ˈpɹaɪməl ɪt ɪz ˈdɜːti ɪt ɪz vɪˈsɛɹəl</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Un naufrage en version intégrale</div>
+        <div class="lyric-syllabic">un no-<span class="a">FRAJ</span> an vèr-syon in-té-<span class="a">GRAL</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`Un naufrage en version intégrale`)">▶</button>
+        <div class="lyric-ipa">œ̃ no.fʁaʒ ɑ̃ vɛʁ.sjɔ̃ ɛ̃.te.ɡʁal</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Un naufragio en versión integral</div>
+        <div class="lyric-syllabic">un naou-<span class="a">FRA</span>-khyo en ver-<span class="a">SYON</span> in-te-<span class="a">GRAL</span></div>
+        <button class="plb" onclick="playLine('es-ES',`Un naufragio en versión integral`)">▶</button>
+        <div class="lyric-ipa">un nauˈfɾaxjo en βeɾˈsjon inteˈɣɾal</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">A shipwreck in full version</div>
+        <div class="lyric-syllabic">e chip-rèk in foul <span class="a">VEUR</span>-jeun</div>
+        <button class="plb" onclick="playLine('en-GB',`A shipwreck in full version`)">▶</button>
+        <div class="lyric-ipa">ə ˈʃɪpɹɛk ɪn fʊl ˈvɜːʒən</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">L'instinct nous guide... la raison fuit</div>
+        <div class="lyric-syllabic">lin-<span class="a">STIN</span> nou guid... la rè-<span class="a">ZON</span> fui</div>
+        <button class="plb" onclick="playLine('fr-FR',`L'instinct nous guide... la raison fuit`)">▶</button>
+        <div class="lyric-ipa">lɛ̃s.tɛ̃ nu ɡid la ʁɛ.zɔ̃ fɥi</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">El instinto nos guía... la razón huye</div>
+        <div class="lyric-syllabic">el ins-<span class="a">TIN</span>-to nos <span class="a">GI</span>-a... la ra-<span class="a">SON</span> <span class="a">U</span>-ye</div>
+        <button class="plb" onclick="playLine('es-ES',`El instinto nos guía... la razón huye`)">▶</button>
+        <div class="lyric-ipa">el insˈtinto nos ˈɣia la ɾaˈson ˈuʝe</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">Instinct guides us... reason flees</div>
+        <div class="lyric-syllabic"><span class="a">IN</span>-stinkt gaïdz eus... <span class="a">RI</span>-zeun fliz</div>
+        <button class="plb" onclick="playLine('en-GB',`Instinct guides us... reason flees`)">▶</button>
+        <div class="lyric-ipa">ˈɪnstɪŋkt ɡaɪdz ʌs ˈɹiːzən fliːz</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">On est les enfants de la nuit</div>
+        <div class="lyric-syllabic">on é lé zan-<span class="a">FAN</span> deu la nui</div>
+        <button class="plb" onclick="playLine('fr-FR',`On est les enfants de la nuit`)">▶</button>
+        <div class="lyric-ipa">ɔ̃.n‿e le.z‿ɑ̃.fɑ̃ də la nɥi</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Somos los hijos de la noche</div>
+        <div class="lyric-syllabic"><span class="a">SO</span>-mos los <span class="a">I</span>-khos de la <span class="a">NO</span>-tche</div>
+        <button class="plb" onclick="playLine('es-ES',`Somos los hijos de la noche`)">▶</button>
+        <div class="lyric-ipa">ˈsomos los ˈixos ðe la ˈnotʃe</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">We are the children of the night</div>
+        <div class="lyric-syllabic">wi ar ze <span class="a">TCHIL</span>-dreun ov ze naït</div>
+        <button class="plb" onclick="playLine('en-GB',`We are the children of the night`)">▶</button>
+        <div class="lyric-ipa">wiː ɑː ðə ˈtʃɪldɹən ɒv ðə naɪt</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Écorchés vifs sous la lumière</div>
+        <div class="lyric-syllabic">é-kor-<span class="a">CHÉ</span> vif sou la lu-<span class="a">MYÈR</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`Écorchés vifs sous la lumière`)">▶</button>
+        <div class="lyric-ipa">e.kɔʁ.ʃe vif su la ly.mjɛʁ</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Despellejados vivos bajo la luz</div>
+        <div class="lyric-syllabic">des-pe-ye-<span class="a">KHA</span>-dos <span class="a">VI</span>-vos <span class="a">BA</span>-kho la lus</div>
+        <button class="plb" onclick="playLine('es-ES',`Despellejados vivos bajo la luz`)">▶</button>
+        <div class="lyric-ipa">despeʝeˈxaðos ˈβiβos ˈbaxo la lus</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">Flayed alive under the light</div>
+        <div class="lyric-syllabic">fléïd a-<span class="a">LAÏV</span> <span class="a">EUN</span>-deur ze laït</div>
+        <button class="plb" onclick="playLine('en-GB',`Flayed alive under the light`)">▶</button>
+        <div class="lyric-ipa">fleɪd əˈlaɪv ˈʌndə ðə laɪt</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">On s'aime à s'en mordre la poussière</div>
+        <div class="lyric-syllabic">on sèm a san mordr la pou-<span class="a">SYÈR</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`On s'aime à s'en mordre la poussière`)">▶</button>
+        <div class="lyric-ipa">ɔ̃ sɛm a sɑ̃ mɔʁdʁ la pu.sjɛʁ</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Nos amamos hasta morder el polvo</div>
+        <div class="lyric-syllabic">nos a-<span class="a">MA</span>-mos <span class="a">AS</span>-ta mor-<span class="a">DER</span> el <span class="a">POL</span>-vo</div>
+        <button class="plb" onclick="playLine('es-ES',`Nos amamos hasta morder el polvo`)">▶</button>
+        <div class="lyric-ipa">nos aˈmamos ˈasta moɾˈðeɾ el ˈpolβo</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">We love each other to bite the dust</div>
+        <div class="lyric-syllabic">wi leuv itch <span class="a">EU</span>-zeur tou baït ze deust</div>
+        <button class="plb" onclick="playLine('en-GB',`We love each other to bite the dust`)">▶</button>
+        <div class="lyric-ipa">wiː lʌv iːtʃ ˈʌðə tuː baɪt ðə dʌst</div>
+      </div>
+</div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="peda_bridge">
+    <div class="sec-head">
+      <span class="sec-label">✦ Pont — Chuchoté ✦</span>
+      <span class="vb duo">🍀🐂 Duo</span>
+    </div>
+    <div class="col-hdr">
+      <div class="lt FR">🇫🇷 Français</div>
+      <div class="lt ES">🇪🇸 Español</div>
+      <div class="lt EN">🇬🇧 English</div>
+    </div>
+    <div class="instr-row-p">
+      <div class="lc fr"><em class="instr">[Presque a cappella] [Pulsation basse grave] — chuchoté, très proche du micro</em></div>
+      <div class="lc es"><em class="instr">[Casi a cappella] [Pulso de bajo grave] — susurrado, muy cerca del micrófono</em></div>
+      <div class="lc en"><em class="instr">[Almost a cappella] [Low bass pulse] — whispered, very close to the mic</em></div>
+    </div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Ne pars pas... (addiction...)</div>
+        <div class="lyric-syllabic">neu par pa... (a-dik-<span class="a">SYON</span>...)</div>
+        <button class="plb" onclick="playLine('fr-FR',`Ne pars pas... (addiction...)`)">▶</button>
+        <div class="lyric-ipa">nə paʁ pa a.dik.sjɔ̃</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">No te vayas... (adicción...)</div>
+        <div class="lyric-syllabic">no te <span class="a">VA</span>-yas... (a-dik-<span class="a">SYON</span>...)</div>
+        <button class="plb" onclick="playLine('es-ES',`No te vayas... (adicción...)`)">▶</button>
+        <div class="lyric-ipa">no te ˈβaʝas aðikˈsjon</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">Do not leave... (addiction...)</div>
+        <div class="lyric-syllabic">dou not liv... (a-<span class="a">DIK</span>-cheun...)</div>
+        <button class="plb" onclick="playLine('en-GB',`Do not leave... (addiction...)`)">▶</button>
+        <div class="lyric-ipa">duː nɒt liːv əˈdɪkʃən</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Fuis-moi...</div>
+        <div class="lyric-syllabic">fui mwa...</div>
+        <button class="plb" onclick="playLine('fr-FR',`Fuis-moi...`)">▶</button>
+        <div class="lyric-ipa">fɥi mwa</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Húyeme...</div>
+        <div class="lyric-syllabic"><span class="a">U</span>-ye-me...</div>
+        <button class="plb" onclick="playLine('es-ES',`Húyeme...`)">▶</button>
+        <div class="lyric-ipa">ˈuʝeme</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">Run from me...</div>
+        <div class="lyric-syllabic">reun from mi...</div>
+        <button class="plb" onclick="playLine('en-GB',`Run from me...`)">▶</button>
+        <div class="lyric-ipa">ɹʌn fɹɒm miː</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Embrasse-moi... (addiction...)</div>
+        <div class="lyric-syllabic">an-<span class="a">BRAS</span> mwa... (a-dik-<span class="a">SYON</span>...)</div>
+        <button class="plb" onclick="playLine('fr-FR',`Embrasse-moi... (addiction...)`)">▶</button>
+        <div class="lyric-ipa">ɑ̃.bʁas mwa a.dik.sjɔ̃</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Abrázame... (adicción...)</div>
+        <div class="lyric-syllabic">a-<span class="a">BRA</span>-sa-me... (a-dik-<span class="a">SYON</span>...)</div>
+        <button class="plb" onclick="playLine('es-ES',`Abrázame... (adicción...)`)">▶</button>
+        <div class="lyric-ipa">aˈbɾasame aðikˈsjon</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">Hold me... (addiction...)</div>
+        <div class="lyric-syllabic">hold mi... (a-<span class="a">DIK</span>-cheun...)</div>
+        <button class="plb" onclick="playLine('en-GB',`Hold me... (addiction...)`)">▶</button>
+        <div class="lyric-ipa">həʊld miː əˈdɪkʃən</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Tue-moi...</div>
+        <div class="lyric-syllabic">tu mwa...</div>
+        <button class="plb" onclick="playLine('fr-FR',`Tue-moi...`)">▶</button>
+        <div class="lyric-ipa">ty mwa</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Mátame...</div>
+        <div class="lyric-syllabic"><span class="a">MA</span>-ta-me...</div>
+        <button class="plb" onclick="playLine('es-ES',`Mátame...`)">▶</button>
+        <div class="lyric-ipa">ˈmatame</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">Kill me...</div>
+        <div class="lyric-syllabic">kil mi...</div>
+        <button class="plb" onclick="playLine('en-GB',`Kill me...`)">▶</button>
+        <div class="lyric-ipa">kɪl miː</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">C'est bon quand ça saigne... (addiction...)</div>
+        <div class="lyric-syllabic">cé bon kan sa sègn... (a-dik-<span class="a">SYON</span>...)</div>
+        <button class="plb" onclick="playLine('fr-FR',`C'est bon quand ça saigne... (addiction...)`)">▶</button>
+        <div class="lyric-ipa">sɛ bɔ̃ kɑ̃ sa sɛɲ a.dik.sjɔ̃</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Es bueno cuando sangra... (adicción...)</div>
+        <div class="lyric-syllabic">es <span class="a">BWE</span>-no <span class="a">KWAN</span>-do <span class="a">SAN</span>-gra... (a-dik-<span class="a">SYON</span>...)</div>
+        <button class="plb" onclick="playLine('es-ES',`Es bueno cuando sangra... (adicción...)`)">▶</button>
+        <div class="lyric-ipa">es ˈbweno ˈkwando ˈsaŋɡɾa aðikˈsjon</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">It feels good when it bleeds... (addiction...)</div>
+        <div class="lyric-syllabic">it filz goud wen it blidz... (a-<span class="a">DIK</span>-cheun...)</div>
+        <button class="plb" onclick="playLine('en-GB',`It feels good when it bleeds... (addiction...)`)">▶</button>
+        <div class="lyric-ipa">ɪt fiːlz ɡʊd wɛn ɪt bliːdz əˈdɪkʃən</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">C'est nous...</div>
+        <div class="lyric-syllabic">cé nou...</div>
+        <button class="plb" onclick="playLine('fr-FR',`C'est nous...`)">▶</button>
+        <div class="lyric-ipa">sɛ nu</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Somos nosotros...</div>
+        <div class="lyric-syllabic"><span class="a">SO</span>-mos no-<span class="a">SO</span>-tros...</div>
+        <button class="plb" onclick="playLine('es-ES',`Somos nosotros...`)">▶</button>
+        <div class="lyric-ipa">ˈsomos noˈsotɾos</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">That is us...</div>
+        <div class="lyric-syllabic">zat iz eus...</div>
+        <button class="plb" onclick="playLine('en-GB',`That is us...`)">▶</button>
+        <div class="lyric-ipa">ðæt ɪz ʌs</div>
+      </div>
+</div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="peda_finalchorus">
+    <div class="sec-head">
+      <span class="sec-label">✦ Refrain Final ✦</span>
+      <span class="vb duo">🍀🐂 Duo</span>
+    </div>
+    <div class="col-hdr">
+      <div class="lt FR">🇫🇷 Français</div>
+      <div class="lt ES">🇪🇸 Español</div>
+      <div class="lt EN">🇬🇧 English</div>
+    </div>
+    <div class="instr-row-p">
+      <div class="lc fr"><em class="instr">[Atmosphère gothique totale] [Violons qui s'envolent] [Sub bass au maximum]</em></div>
+      <div class="lc es"><em class="instr">[Atmósfera gótica total] [Violines que se elevan] [Bajo sub al máximo]</em></div>
+      <div class="lc en"><em class="instr">[Full gothic atmosphere] [Violins soaring] [Sub bass strongest]</em></div>
+    </div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Mon addiction... ma contre-addiction</div>
+        <div class="lyric-syllabic">mon a-dik-<span class="a">SYON</span>... ma kontr a-dik-<span class="a">SYON</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`Mon addiction... ma contre-addiction`)">▶</button>
+        <div class="lyric-ipa">mɔ̃.n‿a.dik.sjɔ̃ ma kɔ̃tʁ a.dik.sjɔ̃</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Mi adicción... mi contra-adicción</div>
+        <div class="lyric-syllabic">mi a-dik-<span class="a">SYON</span>... mi <span class="a">KON</span>-tra a-dik-<span class="a">SYON</span></div>
+        <button class="plb" onclick="playLine('es-ES',`Mi adicción... mi contra-adicción`)">▶</button>
+        <div class="lyric-ipa">mi aðikˈsjon mi ˈkontɾa aðikˈsjon</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">My addiction... my counter-addiction</div>
+        <div class="lyric-syllabic">maï a-<span class="a">DIK</span>-cheun... maï <span class="a">KAOUN</span>-teur a-<span class="a">DIK</span>-cheun</div>
+        <button class="plb" onclick="playLine('en-GB',`My addiction... my counter-addiction`)">▶</button>
+        <div class="lyric-ipa">maɪ əˈdɪkʃən maɪ ˈkaʊntəɹ əˈdɪkʃən</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">On est l'aimant... et la collision</div>
+        <div class="lyric-syllabic">on é lé-<span class="a">MAN</span>... é la ko-li-<span class="a">ZYON</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`On est l'aimant... et la collision`)">▶</button>
+        <div class="lyric-ipa">ɔ̃.n‿e le.mɑ̃ e la kɔ.li.zjɔ̃</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Somos el imán... y la colisión</div>
+        <div class="lyric-syllabic"><span class="a">SO</span>-mos el i-<span class="a">MAN</span>... i la ko-li-<span class="a">SYON</span></div>
+        <button class="plb" onclick="playLine('es-ES',`Somos el imán... y la colisión`)">▶</button>
+        <div class="lyric-ipa">ˈsomos el iˈman i la koliˈsjon</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">We are the magnet... and the collision</div>
+        <div class="lyric-syllabic">wi ar ze <span class="a">MAG</span>-neut... and ze keu-<span class="a">LI</span>-jeun</div>
+        <button class="plb" onclick="playLine('en-GB',`We are the magnet... and the collision`)">▶</button>
+        <div class="lyric-ipa">wiː ɑː ðə ˈmæɡnɪt ænd ðə kəˈlɪʒən</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">C'est sale... c'est beau... c'est animal</div>
+        <div class="lyric-syllabic">cé sal... cé bo... cé a-ni-<span class="a">MAL</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`C'est sale... c'est beau... c'est animal`)">▶</button>
+        <div class="lyric-ipa">sɛ sal sɛ bo sɛ a.ni.mal</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Es sucio... es bello... es animal</div>
+        <div class="lyric-syllabic">es <span class="a">SU</span>-syo... es <span class="a">BE</span>-yo... es a-ni-<span class="a">MAL</span></div>
+        <button class="plb" onclick="playLine('es-ES',`Es sucio... es bello... es animal`)">▶</button>
+        <div class="lyric-ipa">es ˈsusjo es ˈbeʝo es aniˈmal</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">It is dirty... it is beautiful... it is animal</div>
+        <div class="lyric-syllabic">it iz <span class="a">DEUR</span>-ti... it iz <span class="a">BYU</span>-ti-feul... it iz <span class="a">A</span>-ni-meul</div>
+        <button class="plb" onclick="playLine('en-GB',`It is dirty... it is beautiful... it is animal`)">▶</button>
+        <div class="lyric-ipa">ɪt ɪz ˈdɜːti ɪt ɪz ˈbjuːtəfəl ɪt ɪz ˈænɪməl</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">On se fait du bien... on se fait du mal</div>
+        <div class="lyric-syllabic">on seu fé du byin... on seu fé du mal</div>
+        <button class="plb" onclick="playLine('fr-FR',`On se fait du bien... on se fait du mal`)">▶</button>
+        <div class="lyric-ipa">ɔ̃ sə fɛ dy bjɛ̃ ɔ̃ sə fɛ dy mal</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Nos hacemos bien... nos hacemos mal</div>
+        <div class="lyric-syllabic">nos a-<span class="a">SE</span>-mos byen... nos a-<span class="a">SE</span>-mos mal</div>
+        <button class="plb" onclick="playLine('es-ES',`Nos hacemos bien... nos hacemos mal`)">▶</button>
+        <div class="lyric-ipa">nos aˈsemos βjen nos aˈsemos mal</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">We do each other good... we do each other harm</div>
+        <div class="lyric-syllabic">wi dou itch <span class="a">EU</span>-zeur goud... wi dou itch <span class="a">EU</span>-zeur harm</div>
+        <button class="plb" onclick="playLine('en-GB',`We do each other good... we do each other harm`)">▶</button>
+        <div class="lyric-ipa">wiː duː iːtʃ ˈʌðə ɡʊd wiː duː iːtʃ ˈʌðə hɑːm</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Je veux fuir... je veux ta morsure</div>
+        <div class="lyric-syllabic">je veu fu-<span class="a">IR</span>... je veu ta mor-<span class="a">SUR</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`Je veux fuir... je veux ta morsure`)">▶</button>
+        <div class="lyric-ipa">ʒə vø fɥ.iʁ ʒə vø ta mɔʁ.syʁ</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Quiero huir... quiero tu mordisco</div>
+        <div class="lyric-syllabic"><span class="a">KYE</span>-ro u-<span class="a">IR</span>... <span class="a">KYE</span>-ro tu mor-<span class="a">DIS</span>-ko</div>
+        <button class="plb" onclick="playLine('es-ES',`Quiero huir... quiero tu mordisco`)">▶</button>
+        <div class="lyric-ipa">ˈkjeɾo uˈiɾ ˈkjeɾo tu moɾˈðisko</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">I want to flee... I want your bite</div>
+        <div class="lyric-syllabic">aï want tou fli... aï want your baït</div>
+        <button class="plb" onclick="playLine('en-GB',`I want to flee... I want your bite`)">▶</button>
+        <div class="lyric-ipa">aɪ wɒnt tuː fliː aɪ wɒnt jɔː baɪt</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Ta tendresse... comme une brûlure (addiction...)</div>
+        <div class="lyric-syllabic">ta tan-<span class="a">DRES</span>... kom u-neu bru-<span class="a">LUR</span> (a-dik-<span class="a">SYON</span>...)</div>
+        <button class="plb" onclick="playLine('fr-FR',`Ta tendresse... comme une brûlure (addiction...)`)">▶</button>
+        <div class="lyric-ipa">ta tɑ̃.dʁɛs kɔm yn bʁy.lyʁ a.dik.sjɔ̃</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Tu ternura... como una quemadura (adicción...)</div>
+        <div class="lyric-syllabic">tu ter-<span class="a">NU</span>-ra... <span class="a">KO</span>-mo <span class="a">U</span>-na ke-ma-<span class="a">DU</span>-ra (a-dik-<span class="a">SYON</span>...)</div>
+        <button class="plb" onclick="playLine('es-ES',`Tu ternura... como una quemadura (adicción...)`)">▶</button>
+        <div class="lyric-ipa">tu teɾˈnuɾa ˈkomo ˈuna kemaˈðuɾa aðikˈsjon</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">Your tenderness... like a burn (addiction...)</div>
+        <div class="lyric-syllabic">your <span class="a">TEN</span>-deur-nes... laïk e beurn (a-<span class="a">DIK</span>-cheun...)</div>
+        <button class="plb" onclick="playLine('en-GB',`Your tenderness... like a burn (addiction...)`)">▶</button>
+        <div class="lyric-ipa">jɔː ˈtɛndənəs laɪk ə bɜːn əˈdɪkʃən</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Addiction... contre-addiction</div>
+        <div class="lyric-syllabic">a-dik-<span class="a">SYON</span>... kontr a-dik-<span class="a">SYON</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`Addiction... contre-addiction`)">▶</button>
+        <div class="lyric-ipa">a.dik.sjɔ̃ kɔ̃tʁ a.dik.sjɔ̃</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Adicción... contra-adicción</div>
+        <div class="lyric-syllabic">a-dik-<span class="a">SYON</span>... kon-tra-a-dik-<span class="a">SYON</span></div>
+        <button class="plb" onclick="playLine('es-ES',`Adicción... contra-adicción`)">▶</button>
+        <div class="lyric-ipa">aðikˈsjon kontɾaaðikˈsjon</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">Addiction... counter-addiction</div>
+        <div class="lyric-syllabic">a-<span class="a">DIK</span>-cheun... <span class="a">KAOUN</span>-teur a-<span class="a">DIK</span>-cheun</div>
+        <button class="plb" onclick="playLine('en-GB',`Addiction... counter-addiction`)">▶</button>
+        <div class="lyric-ipa">əˈdɪkʃən ˈkaʊntəɹ əˈdɪkʃən</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">On est la chute... et l'ascension</div>
+        <div class="lyric-syllabic">on é la chut... é las-san-<span class="a">SYON</span></div>
+        <button class="plb" onclick="playLine('fr-FR',`On est la chute... et l'ascension`)">▶</button>
+        <div class="lyric-ipa">ɔ̃.n‿e la ʃyt e las.ɑ̃.sjɔ̃</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Somos la caída... y la ascensión</div>
+        <div class="lyric-syllabic"><span class="a">SO</span>-mos la ka-<span class="a">I</span>-da... i la as-en-<span class="a">SYON</span></div>
+        <button class="plb" onclick="playLine('es-ES',`Somos la caída... y la ascensión`)">▶</button>
+        <div class="lyric-ipa">ˈsomos la kaˈiða i la asenˈsjon</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">We are the fall... and the ascension</div>
+        <div class="lyric-syllabic">wi ar ze fol... and ze a-<span class="a">SEN</span>-cheun</div>
+        <button class="plb" onclick="playLine('en-GB',`We are the fall... and the ascension`)">▶</button>
+        <div class="lyric-ipa">wiː ɑː ðə fɔːl ænd ði əˈsɛnʃən</div>
+      </div>
+</div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+  <section class="sec" id="peda_outro">
+    <div class="sec-head">
+      <span class="sec-label">✦ Outro ✦</span>
+      <span class="vb duo">🍀🐂 Duo</span>
+    </div>
+    <div class="col-hdr">
+      <div class="lt FR">🇫🇷 Français</div>
+      <div class="lt ES">🇪🇸 Español</div>
+      <div class="lt EN">🇬🇧 English</div>
+    </div>
+    <div class="instr-row-p">
+      <div class="lc fr"><em class="instr">[Slide guitare] [Violon grave] [Basse qui s'efface]</em></div>
+      <div class="lc es"><em class="instr">[Guitarra slide] [Violín grave] [Bajo que se desvanece]</em></div>
+      <div class="lc en"><em class="instr">[Slide guitar] [Low violin] [Bass fading]</em></div>
+    </div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">On dérive...</div>
+        <div class="lyric-syllabic">on dé-<span class="a">RIV</span>...</div>
+        <button class="plb" onclick="playLine('fr-FR',`On dérive...`)">▶</button>
+        <div class="lyric-ipa">ɔ̃ de.ʁiv</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">A la deriva...</div>
+        <div class="lyric-syllabic">a la de-<span class="a">RI</span>-va...</div>
+        <button class="plb" onclick="playLine('es-ES',`A la deriva...`)">▶</button>
+        <div class="lyric-ipa">a la deˈɾiβa</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">We drift...</div>
+        <div class="lyric-syllabic">wi drift...</div>
+        <button class="plb" onclick="playLine('en-GB',`We drift...`)">▶</button>
+        <div class="lyric-ipa">wiː dɹɪft</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Sous les eaux troubles de l'instinct...</div>
+        <div class="lyric-syllabic">sou lé zo trubl deu lin-<span class="a">STIN</span>...</div>
+        <button class="plb" onclick="playLine('fr-FR',`Sous les eaux troubles de l'instinct...`)">▶</button>
+        <div class="lyric-ipa">su le.z‿o tʁybl də lɛ̃s.tɛ̃</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Bajo las aguas turbias del instinto...</div>
+        <div class="lyric-syllabic"><span class="a">BA</span>-kho las <span class="a">A</span>-gwas <span class="a">TUR</span>-byas del ins-<span class="a">TIN</span>-to...</div>
+        <button class="plb" onclick="playLine('es-ES',`Bajo las aguas turbias del instinto...`)">▶</button>
+        <div class="lyric-ipa">ˈbaxo las ˈaɣwas ˈtuɾβjas del insˈtinto</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">Under the dark waters of instinct...</div>
+        <div class="lyric-syllabic"><span class="a">EUN</span>-deur ze dark <span class="a">WO</span>-teurz ov <span class="a">IN</span>-stinkt...</div>
+        <button class="plb" onclick="playLine('en-GB',`Under the dark waters of instinct...`)">▶</button>
+        <div class="lyric-ipa">ˈʌndə ðə dɑːk ˈwɔːtəz ɒv ˈɪnstɪŋkt</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">Et les âmes sont perdues dans le péché...</div>
+        <div class="lyric-syllabic">é lé zam son pèr-<span class="a">DU</span> dan leu pé-<span class="a">CHÉ</span>...</div>
+        <button class="plb" onclick="playLine('fr-FR',`Et les âmes sont perdues dans le péché...`)">▶</button>
+        <div class="lyric-ipa">e le.z‿am sɔ̃ pɛʁ.dy dɑ̃ lə pe.ʃe</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">Y las almas perdidas en el pecado...</div>
+        <div class="lyric-syllabic">i las <span class="a">AL</span>-mas per-<span class="a">DI</span>-das en el pe-<span class="a">KA</span>-do...</div>
+        <button class="plb" onclick="playLine('es-ES',`Y las almas perdidas en el pecado...`)">▶</button>
+        <div class="lyric-ipa">i las ˈalmas peɾˈðiðas en el peˈkaðo</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">And souls are lost in sin...</div>
+        <div class="lyric-syllabic">and soulz ar lost in sin...</div>
+        <button class="plb" onclick="playLine('en-GB',`And souls are lost in sin...`)">▶</button>
+        <div class="lyric-ipa">ænd səʊlz ɑː lɒst ɪn sɪn</div>
+      </div>
+</div>
+<div class="opt-c-row">
+<div class="lc fr">
+        <div class="lyric-text">(Les hameçons perdus dans le pêcher...)</div>
+        <div class="lyric-syllabic">(lé za-meu-<span class="a">SON</span> pèr-<span class="a">DU</span> dan leu pè-<span class="a">CHÉ</span>...)</div>
+        <button class="plb" onclick="playLine('fr-FR',`(Les hameçons perdus dans le pêcher...)`)">▶</button>
+        <div class="lyric-ipa">le.z‿a.mə.sɔ̃ pɛʁ.dy dɑ̃ lə pɛ.ʃe</div>
+      </div>
+<div class="lc es">
+        <div class="lyric-text">(Los anzuelos perdidos en el pecado...)</div>
+        <div class="lyric-syllabic">(los an-<span class="a">SWE</span>-los per-<span class="a">DI</span>-dos en el pe-<span class="a">KA</span>-do...)</div>
+        <button class="plb" onclick="playLine('es-ES',`(Los anzuelos perdidos en el pecado...)`)">▶</button>
+        <div class="lyric-ipa">los anˈswelos peɾˈðiðos en el peˈkaðo</div>
+      </div>
+<div class="lc en">
+        <div class="lyric-text">(Lost hooks in the sin...)</div>
+        <div class="lyric-syllabic">(lost houks in ze sin...)</div>
+        <button class="plb" onclick="playLine('en-GB',`(Lost hooks in the sin...)`)">▶</button>
+        <div class="lyric-ipa">lɒst hʊks ɪn ðə sɪn</div>
+      </div>
+</div>
+    <div class="sec-divider">𝄞 ─────── ─────── ─────── 𝄞</div>
+  </section>
+<div style="margin:0 32px 8px"><h3 style="font-family:Cinzel,serif;font-size:.78rem;color:var(--gold);letter-spacing:.2em">✦ GUIDE DES SONS DIFFICILES ✦</h3></div>
+<div class="sh-row">
+  <div class="lc fr sh"><h4>🇫🇷 Sons difficiles</h4><div class="shi"><span class="sk">Nasale ON</span><span class="sd">son dans le nez — <strong>addiction, collision</strong> = "a-dik-SYON" — jamais "syonn"</span></div><div class="shi"><span class="sk">R guttural</span><span class="sd">vient de la gorge — <strong>morsure, brûlure</strong> = "mor-SUR", "bru-LUR" — jamais un R anglais</span></div><div class="shi"><span class="sk">EU impossible</span><span class="sd">lèvres en O + son E — <strong>cœur, peur</strong> = entre "deux" et "feu"</span></div><div class="shi"><span class="sk">U impossible</span><span class="sd">lèvres en O + son I — <strong>fuir, nuit</strong> — jamais le "you" anglais</span></div><div class="shi"><span class="sk">Liaison</span><span class="sd"><strong>les zombres, deux zaimants</strong> — le S final s'enchaîne à la voyelle suivante</span></div><div class="shi"><span class="sk">Muet final</span><span class="sd"><strong>morsure, brûlure</strong> — le E final ne se prononce jamais</span></div></div>
+  <div class="lc es sh"><h4>🇪🇸 Sonidos difíciles</h4><div class="shi"><span class="sk">D spirant</span><span class="sd">très doux entre voyelles — <strong>adicción, quemadura</strong> → presque un "th" anglais léger</span></div><div class="shi"><span class="sk">RR / R simple</span><span class="sd"><strong>ternura, garras</strong> → un seul battement de langue, pas un roulement complet</span></div><div class="shi"><span class="sk">J/G → KH</span><span class="sd">guttural doux — <strong>huye, ceder mejor</strong> → "U-ye", "me-KHOR"</span></div><div class="shi"><span class="sk">Accent obligatoire</span><span class="sd"><strong>imán, colisión, corazón</strong> → accent tonique fort sur la syllabe marquée</span></div><div class="shi"><span class="sk">LL/Y → Y</span><span class="sd"><strong>vayas, vendernos</strong> → consonne mouillée légère, jamais "ll" anglais</span></div><div class="shi"><span class="sk">B/V identiques</span><span class="sd"><strong>vivos, vicios</strong> → B et V se prononcent presque pareil, son doux</span></div></div>
+  <div class="lc en sh"><h4>🇬🇧 Difficult sounds</h4><div class="shi"><span class="sk">TH → Z / S</span><span class="sd">langue entre les dents — <strong>each other, the</strong> = "itch ZE", "ze" — jamais "ze" dur</span></div><div class="shi"><span class="sk">R américain/britannique</span><span class="sd">langue recourbée — <strong>burn, varnish</strong> — jamais roulé</span></div><div class="shi"><span class="sk">WORTH/HURT → EUR</span><span class="sd"><strong>hurts, worth</strong> = "heurts", "weurz" — voyelle centrale + R</span></div><div class="shi"><span class="sk">CH → TCH</span><span class="sd"><strong>children</strong> = "TCHIL-dreun" — jamais "sh"</span></div><div class="shi"><span class="sk">BITE/FLEE diphtongues</span><span class="sd"><strong>bite, flee</strong> = "baït" (aï long), "fli" (i long et tendu)</span></div><div class="shi"><span class="sk">ADDICTION accent</span><span class="sd"><strong>addiction</strong> = "a-DIK-cheun" — accent sur la 2e syllabe, jamais la 1ère</span></div></div>
+</div>
+<footer>
+  <a href="https://www.trefleminotaure.com">www.trefleminotaure.com</a>
+  &nbsp;·&nbsp; © 2026 Trèfle &amp; Minotaure &nbsp;·&nbsp; Addiction, contre-addiction — Guide Pédagogique
+</footer>
+</div>
+<script>
+let spd=1.0;
+function setSpeed(s,btn){
+  spd=s;
+  document.querySelectorAll(".cbtn").forEach(b=>b.classList.remove("on"));
+  btn.classList.add("on");
+}
+function playLine(lang,txt){
+  speechSynthesis.cancel();
+  const u=new SpeechSynthesisUtterance(txt);
+  u.lang=lang;u.rate=spd;
+  speechSynthesis.speak(u);
+}
+</script>
+</body>
+</html>
