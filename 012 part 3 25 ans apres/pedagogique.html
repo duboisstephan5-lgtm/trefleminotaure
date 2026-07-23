@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>25 Ans Après — Guide phonétique trilingue</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Cinzel:wght@500;700&family=IM+Fell+English:ital@0;1&family=Noto+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root { --gold: #b8962e; --parchment: #f5ecd7; --outer: #2a1f10; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: radial-gradient(ellipse at center, #3a2a16 0%, #2a1f10 70%, #1a1208 100%);
+    font-family: "Cormorant Garamond", serif;
+    color: #2a1f10;
+    min-height: 100vh;
+    padding: 24px 12px 60px;
+  }
+  .page {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: var(--parchment);
+    border: 2px solid #c4a97a;
+    border-radius: 10px;
+    box-shadow: 0 0 40px rgba(0,0,0,0.6);
+    padding: 32px clamp(14px, 4vw, 48px);
+  }
+  header { text-align: center; border-bottom: 1px solid #c4a97a; padding-bottom: 18px; margin-bottom: 22px; }
+  header h1 {
+    font-family: "IM Fell English", serif; font-style: italic;
+    font-size: clamp(1.4rem, 3.6vw, 2.2rem); margin: 0 0 6px; color: #2a1f10;
+  }
+  header .subtitle {
+    font-family: "Cinzel", serif; font-size: 0.82rem; letter-spacing: 0.07em;
+    color: var(--gold); text-transform: uppercase;
+  }
+  header p.desc { font-style: italic; max-width: 760px; margin: 14px auto 0; font-size: 0.95rem; opacity: .85; }
+
+  .controls {
+    display: flex; flex-wrap: wrap; gap: 18px; justify-content: center; align-items: center;
+    margin: 20px 0 26px; padding: 14px; background: #efe2bf; border-radius: 8px; border: 1px solid #d8c79a;
+  }
+  .control-group { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+  .control-group label {
+    font-family: "Cinzel", serif; font-size: 0.65rem; letter-spacing: 0.06em; color: #7a5e20; text-transform: uppercase;
+  }
+  .btn-row { display: flex; gap: 6px; flex-wrap: wrap; justify-content: center; }
+  .btn-row button {
+    font-family: "Cinzel", serif; font-size: 0.72rem; border: 1px solid var(--gold);
+    background: #fffaf0; color: #5a4520; border-radius: 6px; padding: 7px 13px; cursor: pointer; transition: all .2s;
+  }
+  .btn-row button:hover { background: var(--gold); color: #fff; }
+  .btn-row button.active { background: var(--gold); color: #fff; }
+
+  .song-sec { margin-bottom: 26px; border-radius: 8px; overflow: hidden; border: 1px solid #d8c79a; }
+  .sec-head { background: #e9dab3; padding: 8px 14px; border-bottom: 1px solid #d8c79a; }
+  .sec-name {
+    font-family: "Cinzel", serif; font-size: 0.78rem; letter-spacing: 0.04em; color: #5a4520; text-transform: uppercase;
+  }
+
+  .opt-c-row { border-bottom: 1px solid #e2d3a8; }
+  .opt-c-row:last-child { border-bottom: none; }
+  .row-cells { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1px; background: #d8c79a; }
+  .lc { padding: 10px 12px 12px; background: #fffaf0; position: relative; }
+  .lc.fr { background: #e8f0fc; }
+  .lc.es { background: #f5ead5; }
+  .lc.en { background: #fce8ec; }
+
+  .badge {
+    display: inline-block; font-family: "Cinzel", serif; font-style: normal; font-size: 0.52rem;
+    letter-spacing: 0.04em; text-transform: uppercase; padding: 2px 7px; border-radius: 10px;
+    margin-bottom: 5px;
+  }
+  .badge-trefle { background: #c8dcf8; color: #1a3a6b; }
+  .badge-minotaure { background: #2a1f10; color: #f5ecd7; }
+  .badge-duo { background: var(--gold); color: #fff; }
+
+  .lyric-text { font-style: italic; font-size: 0.97rem; line-height: 1.4; margin-bottom: 4px; }
+  .lyric-text.instr-line { opacity: 0.55; }
+  .lyric-syllabic { font-weight: 700; font-size: 0.80rem; line-height: 1.5; margin-bottom: 4px; }
+  .lyric-syllabic .a { text-decoration: underline; text-decoration-color: #c0392b; text-decoration-thickness: 2px; color: #8b1a1a; }
+
+  .plb {
+    font-family: "Cinzel", serif; font-size: 0.43rem; background: var(--gold); color: #fff;
+    border: none; border-radius: 50%; width: 22px; height: 22px; cursor: pointer; margin-bottom: 4px;
+  }
+  .plb:hover { background: #9a7a20; }
+
+  .lyric-ipa { font-family: "Noto Serif", "Noto Sans", serif; font-size: 0.64rem; opacity: .56; }
+  .lyric-ipa::before { content: "/ "; color: var(--gold); }
+  .lyric-ipa::after  { content: " /"; color: var(--gold); }
+
+  .instru-sec .opt-c-row { opacity: 0.6; }
+
+  .hints-row, .foreign-row {
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1px; background: #d8c79a; margin-top: 1px;
+  }
+  .sound-hints, .foreign-block { background: #fffaf0; padding: 10px 12px; font-size: 0.78rem; }
+  .sh-fr, .fb-fr { background: #e8f0fc; }
+  .sh-es, .fb-es { background: #f5ead5; }
+  .sh-en, .fb-en { background: #fce8ec; }
+  .sh-title { font-family: "Cinzel", serif; font-size: 0.6rem; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 6px; color: #5a4520; }
+  .sound-hints ul { margin: 0; padding-left: 16px; }
+  .sound-hints li { margin-bottom: 4px; }
+  .foreign-block { font-style: italic; }
+
+  body.show-fr .lc.es, body.show-fr .lc.en,
+  body.show-fr .sh-es, body.show-fr .sh-en,
+  body.show-fr .fb-es, body.show-fr .fb-en { display: none; }
+  body.show-es .lc.fr, body.show-es .lc.en,
+  body.show-es .sh-fr, body.show-es .sh-en,
+  body.show-es .fb-fr, body.show-es .fb-en { display: none; }
+  body.show-en .lc.fr, body.show-en .lc.es,
+  body.show-en .sh-fr, body.show-en .sh-es,
+  body.show-en .fb-fr, body.show-en .fb-es { display: none; }
+  body.show-fr .row-cells, body.show-es .row-cells, body.show-en .row-cells,
+  body.show-fr .hints-row, body.show-es .hints-row, body.show-en .hints-row,
+  body.show-fr .foreign-row, body.show-es .foreign-row, body.show-en .foreign-row {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    text-align: center; margin-top: 30px; padding-top: 16px; border-top: 1px solid #c4a97a;
+    font-family: "Cinzel", serif; font-size: 0.7rem; letter-spacing: 0.05em; color: #7a5e20;
+  }
+  footer a { color: var(--gold); text-decoration: none; }
+
+  @media (max-width: 800px) {
+    .row-cells, .hints-row, .foreign-row { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <h1>25 Ans Après <span style="opacity:.5">/</span> 25 Years Later <span style="opacity:.5">/</span> 25 Años Después</h1>
+    <div class="subtitle">Guide phonétique trilingue — Option C</div>
+    <p class="desc">Chaque ligne affiche le texte original, son découpage syllabique propre à sa langue (accent tonique souligné en rouge), un bouton d&#x2019;écoute, puis sa transcription IPA spécifique à cette langue.</p>
+  </header>
+
+  <div class="controls">
+    <div class="control-group">
+      <label>Langue</label>
+      <div class="btn-row">
+        <button class="lang-btn active" data-lang="all" onclick="setLang('all')">Trilingue</button>
+        <button class="lang-btn" data-lang="fr" onclick="setLang('fr')">🇫🇷 Français</button>
+        <button class="lang-btn" data-lang="es" onclick="setLang('es')">🇪🇸 Español</button>
+        <button class="lang-btn" data-lang="en" onclick="setLang('en')">🇬🇧 English</button>
+      </div>
+    </div>
+    <div class="control-group">
+      <label>Vitesse TTS</label>
+      <div class="btn-row">
+        <button class="speed-btn" data-speed="0.7" onclick="setSpeed(0.7)">× 0.7</button>
+        <button class="speed-btn active" data-speed="0.9" onclick="setSpeed(0.9)">× 0.9</button>
+        <button class="speed-btn" data-speed="1.0" onclick="setSpeed(1.0)">× 1.0</button>
+      </div>
+    </div>
+  </div>
+
+  
+      <section class="song-sec" id="sec-cycle1">
+        <div class="sec-head">
+          <span class="sec-name">Cycle 1 / Ciclo 1 / Cycle 1</span>
+        </div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">La vie n'a jamais déposé les armes</div>
+            <div class="lyric-syllabic">La <span class="a">vie</span> n'a ja-<span class="a">mais</span> dé-po-<span class="a">sé</span> les <span class="a">armes</span></div>
+            <button class="plb" id="plb-cycle1-fr-0" data-text="La vie n&#x27;a jamais déposé les armes" data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">la vi na ʒamɛ depoze lez‿aʁm</div>
+          </div>
+            <div class="lc es">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">La vida nunca bajó sus armas</div>
+            <div class="lyric-syllabic">La <span class="a">vi</span>-da <span class="a">nun</span>-ca ba-<span class="a">jó</span> sus <span class="a">ar</span>-mas</div>
+            <button class="plb" id="plb-cycle1-es-0" data-text="La vida nunca bajó sus armas" data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">la ˈbiða ˈnunka baˈxo sus ˈaɾmas</div>
+          </div>
+            <div class="lc en">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Life never once laid down its arms</div>
+            <div class="lyric-syllabic"><span class="a">Life</span> <span class="a">nev</span>-er once <span class="a">laid</span> down its <span class="a">arms</span></div>
+            <button class="plb" id="plb-cycle1-en-0" data-text="Life never once laid down its arms" data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">laɪf ˈnɛvər wʌns leɪd daʊn ɪts ɑːrmz</div>
+          </div>
+          </div></div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Personne n'est venu sécher nos larmes</div>
+            <div class="lyric-syllabic">Per-<span class="a">sonne</span> n'est ve-<span class="a">nu</span> sé-<span class="a">cher</span> nos <span class="a">larmes</span></div>
+            <button class="plb" id="plb-cycle1-fr-1" data-text="Personne n&#x27;est venu sécher nos larmes" data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">pɛʁsɔn nɛ vəny seʃe no laʁm</div>
+          </div>
+            <div class="lc es">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Nadie vino a secar nuestras lágrimas</div>
+            <div class="lyric-syllabic"><span class="a">Na</span>-die <span class="a">vi</span>-no a se-<span class="a">car</span> <span class="a">nues</span>-tras <span class="a">lá</span>-gri-mas</div>
+            <button class="plb" id="plb-cycle1-es-1" data-text="Nadie vino a secar nuestras lágrimas" data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ˈnaðje ˈbino a seˈkaɾ ˈnwestɾas ˈlaɣɾimas</div>
+          </div>
+            <div class="lc en">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">No one came to dry these tears of ours</div>
+            <div class="lyric-syllabic">No one <span class="a">came</span> to <span class="a">dry</span> these <span class="a">tears</span> of <span class="a">ours</span></div>
+            <button class="plb" id="plb-cycle1-en-1" data-text="No one came to dry these tears of ours" data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">noʊ wʌn keɪm tuː draɪ ðiːz tɪərz ʌv aʊərz</div>
+          </div>
+          </div></div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">On nous a menti une fois de trop</div>
+            <div class="lyric-syllabic">On nous a men-<span class="a">ti</span> u-ne <span class="a">fois</span> de <span class="a">trop</span></div>
+            <button class="plb" id="plb-cycle1-fr-2" data-text="On nous a menti une fois de trop" data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ɔ̃ nuz‿a mɑ̃ti yn fwa də tʁo</div>
+          </div>
+            <div class="lc es">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Nos mintieron una vez más</div>
+            <div class="lyric-syllabic">Nos min-<span class="a">tie</span>-ron u-na <span class="a">vez</span> <span class="a">más</span></div>
+            <button class="plb" id="plb-cycle1-es-2" data-text="Nos mintieron una vez más" data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">nos minˈtjeɾon una beθ mas</div>
+          </div>
+            <div class="lc en">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">They lied to us one time too many</div>
+            <div class="lyric-syllabic">They <span class="a">lied</span> to us one <span class="a">time</span> too <span class="a">man</span>-y</div>
+            <button class="plb" id="plb-cycle1-en-2" data-text="They lied to us one time too many" data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ðeɪ laɪd tuː ʌs wʌn taɪm tuː ˈmɛni</div>
+          </div>
+          </div></div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">La justice ferme les yeux si haut</div>
+            <div class="lyric-syllabic">La jus-<span class="a">tice</span> <span class="a">ferme</span> les <span class="a">yeux</span> si <span class="a">haut</span></div>
+            <button class="plb" id="plb-cycle1-fr-3" data-text="La justice ferme les yeux si haut" data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">la ʒystis fɛʁm lez‿jø si o</div>
+          </div>
+            <div class="lc es">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">La justicia cierra los ojos con facilidad</div>
+            <div class="lyric-syllabic">La jus-<span class="a">ti</span>-cia <span class="a">cie</span>-rra los <span class="a">o</span>-jos con fa-ci-li-<span class="a">dad</span></div>
+            <button class="plb" id="plb-cycle1-es-3" data-text="La justicia cierra los ojos con facilidad" data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">la xusˈtiθja ˈθjera los ˈoxos kon faθiliˈðað</div>
+          </div>
+            <div class="lc en">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Justice closes its eyes so easily</div>
+            <div class="lyric-syllabic"><span class="a">Jus</span>-tice <span class="a">clos</span>-es its <span class="a">eyes</span> so <span class="a">ea</span>-si-ly</div>
+            <button class="plb" id="plb-cycle1-en-3" data-text="Justice closes its eyes so easily" data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ˈdʒʌstɪs ˈkloʊzɪz ɪts aɪz soʊ ˈiːzəli</div>
+          </div>
+          </div></div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-duo">Trèfle &amp; Minotaure</span>
+            <div class="lyric-text">...on nous a menti...</div>
+            <div class="lyric-syllabic">...on nous a men-<span class="a">ti</span>...</div>
+            <button class="plb" id="plb-cycle1-fr-4" data-text="...on nous a menti..." data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ɔ̃ nuz‿a mɑ̃ti</div>
+          </div>
+            <div class="lc es">
+            <span class="badge badge-duo">Trèfle &amp; Minotaure</span>
+            <div class="lyric-text">...nos mintieron...</div>
+            <div class="lyric-syllabic">...nos min-<span class="a">tie</span>-ron...</div>
+            <button class="plb" id="plb-cycle1-es-4" data-text="...nos mintieron..." data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">nos minˈtjeɾon</div>
+          </div>
+            <div class="lc en">
+            <span class="badge badge-duo">Trèfle &amp; Minotaure</span>
+            <div class="lyric-text">...they lied to us...</div>
+            <div class="lyric-syllabic">...they <span class="a">lied</span> to us...</div>
+            <button class="plb" id="plb-cycle1-en-4" data-text="...they lied to us..." data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ðeɪ laɪd tuː ʌs</div>
+          </div>
+          </div></div>
+        <div class="hints-row"><div class="sound-hints sh-fr"><div class="sh-title">🇫🇷 Sons difficiles (Français)</div><ul><li><strong>menti / déliée</strong> — e muet et nasale — le « en » se prononce nasal, sans consonne finale entendue.</li><li><strong>cœur / seul</strong> — eu/œ — lèvres arrondies, bouche mi-ouverte, un son unique sans glissement.</li><li><strong>toujours / racines</strong> — r français — fricative légère à l'arrière de la gorge, jamais roulée.</li><li><strong>chemin / origines</strong> — liaison en chantant — les syllabes s'enchaînent sans coupure entre les mots.</li></ul></div><div class="sound-hints sh-es"><div class="sh-title">🇪🇸 Sons difficiles (Español)</div><ul><li><strong>jamás / corazón</strong> — accent tonique final — la voix appuie nettement la dernière syllabe accentuée.</li><li><strong>cierra / justicia</strong> — c/z castillans — devant e/i, prononcés [θ], comme le « th » anglais sourd.</li><li><strong>separarnos / soltó</strong> — r simple — une seule vibration brève de la langue.</li><li><strong>siempre / siendo</strong> — diphtongue ie — les deux voyelles fusionnent en une syllabe rapide.</li></ul></div><div class="sound-hints sh-en"><div class="sh-title">🇬🇧 Sons difficiles (English)</div><ul><li><strong>understood / apart</strong> — th/schwa — voyelle neutre très brève dans les syllabes non accentuées.</li><li><strong>forever / together</strong> — r américain — langue recourbée en arrière, jamais roulée.</li><li><strong>twin souls / beginning</strong> — accent lexical — une seule syllabe forte par mot, les autres restent légères.</li><li><strong>always us / tears us</strong> — liaison — les mots s'enchaînent sans pause en chantant.</li></ul></div></div>
+
+      </section>
+
+      <section class="song-sec" id="sec-cycle2">
+        <div class="sec-head">
+          <span class="sec-name">Cycle 2 / Ciclo 2 / Cycle 2</span>
+        </div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-duo">Trèfle &amp; Minotaure</span>
+            <div class="lyric-text">Nous les écorchés, les incompris</div>
+            <div class="lyric-syllabic">Nous les é-cor-<span class="a">chés</span>, les in-com-<span class="a">pris</span></div>
+            <button class="plb" id="plb-cycle2-fr-0" data-text="Nous les écorchés, les incompris" data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">nu lez‿ekɔʁʃe lez‿ɛ̃kɔ̃pʁi</div>
+          </div>
+            <div class="lc es">
+            <span class="badge badge-duo">Trèfle &amp; Minotaure</span>
+            <div class="lyric-text">Nosotros, los heridos, los incomprendidos</div>
+            <div class="lyric-syllabic">No-<span class="a">so</span>-tros, los he-<span class="a">ri</span>-dos, los in-com-pren-<span class="a">di</span>-dos</div>
+            <button class="plb" id="plb-cycle2-es-0" data-text="Nosotros, los heridos, los incomprendidos" data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">noˈsotɾos los eˈɾiðos los iŋkompɾenˈdiðos</div>
+          </div>
+            <div class="lc en">
+            <span class="badge badge-duo">Trèfle &amp; Minotaure</span>
+            <div class="lyric-text">We, the wounded, the misunderstood</div>
+            <div class="lyric-syllabic">We, the <span class="a">wound</span>-ed, the mis-un-der-<span class="a">stood</span></div>
+            <button class="plb" id="plb-cycle2-en-0" data-text="We, the wounded, the misunderstood" data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">wiː ðə ˈwuːndɪd ðə ˌmɪsʌndərˈstʊd</div>
+          </div>
+          </div></div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-duo">Trèfle &amp; Minotaure</span>
+            <div class="lyric-text">Ceux qu'on aimait n'ont jamais compris</div>
+            <div class="lyric-syllabic"><span class="a">Ceux</span> qu'on ai-<span class="a">mait</span> n'ont ja-<span class="a">mais</span> com-<span class="a">pris</span></div>
+            <button class="plb" id="plb-cycle2-fr-1" data-text="Ceux qu&#x27;on aimait n&#x27;ont jamais compris" data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">sø kɔ̃n‿ɛmɛ nɔ̃ ʒamɛ kɔ̃pʁi</div>
+          </div>
+            <div class="lc es">
+            <span class="badge badge-duo">Trèfle &amp; Minotaure</span>
+            <div class="lyric-text">Los que amábamos nunca comprendieron</div>
+            <div class="lyric-syllabic">Los que a-<span class="a">má</span>-ba-mos <span class="a">nun</span>-ca com-pren-<span class="a">die</span>-ron</div>
+            <button class="plb" id="plb-cycle2-es-1" data-text="Los que amábamos nunca comprendieron" data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">los ke aˈmaβamos ˈnunka kompɾenˈdjeɾon</div>
+          </div>
+            <div class="lc en">
+            <span class="badge badge-duo">Trèfle &amp; Minotaure</span>
+            <div class="lyric-text">Those we loved never understood</div>
+            <div class="lyric-syllabic">Those we <span class="a">loved</span> <span class="a">nev</span>-er un-der-<span class="a">stood</span></div>
+            <button class="plb" id="plb-cycle2-en-1" data-text="Those we loved never understood" data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ðoʊz wiː lʌvd ˈnɛvər ˌʌndərˈstʊd</div>
+          </div>
+          </div></div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-duo">Trèfle &amp; Minotaure</span>
+            <div class="lyric-text">Mais une seule chose reste vraie</div>
+            <div class="lyric-syllabic">Mais u-ne <span class="a">seule</span> <span class="a">chose</span> <span class="a">reste</span> <span class="a">vraie</span></div>
+            <button class="plb" id="plb-cycle2-fr-2" data-text="Mais une seule chose reste vraie" data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">mɛz‿yn sœl ʃoz ʁɛst vʁɛ</div>
+          </div>
+            <div class="lc es">
+            <span class="badge badge-duo">Trèfle &amp; Minotaure</span>
+            <div class="lyric-text">Pero una sola cosa sigue siendo verdad</div>
+            <div class="lyric-syllabic"><span class="a">Pe</span>-ro u-na <span class="a">so</span>-la <span class="a">co</span>-sa <span class="a">si</span>-gue <span class="a">sien</span>-do ver-<span class="a">dad</span></div>
+            <button class="plb" id="plb-cycle2-es-2" data-text="Pero una sola cosa sigue siendo verdad" data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ˈpeɾo una ˈsola ˈkosa ˈsiɣe ˈsjendo beɾˈðað</div>
+          </div>
+            <div class="lc en">
+            <span class="badge badge-duo">Trèfle &amp; Minotaure</span>
+            <div class="lyric-text">But one thing alone has always stayed true</div>
+            <div class="lyric-syllabic">But one <span class="a">thing</span> a-<span class="a">lone</span> has <span class="a">al</span>-ways <span class="a">stayed</span> <span class="a">true</span></div>
+            <button class="plb" id="plb-cycle2-en-2" data-text="But one thing alone has always stayed true" data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">bʌt wʌn θɪŋ əˈloʊn hæz ˈɔːlweɪz steɪd truː</div>
+          </div>
+          </div></div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-duo">Trèfle &amp; Minotaure</span>
+            <div class="lyric-text">Ta main dans la mienne ne s'est jamais déliée</div>
+            <div class="lyric-syllabic">Ta <span class="a">main</span> dans la <span class="a">mienne</span> ne s'est ja-<span class="a">mais</span> dé-li-<span class="a">ée</span></div>
+            <button class="plb" id="plb-cycle2-fr-3" data-text="Ta main dans la mienne ne s&#x27;est jamais déliée" data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ta mɛ̃ dɑ̃ la mjɛn nə sɛ ʒamɛ delje</div>
+          </div>
+            <div class="lc es">
+            <span class="badge badge-duo">Trèfle &amp; Minotaure</span>
+            <div class="lyric-text">Tu mano en la mía jamás se soltó</div>
+            <div class="lyric-syllabic">Tu <span class="a">ma</span>-no en la <span class="a">mí</span>-a ja-<span class="a">más</span> se sol-<span class="a">tó</span></div>
+            <button class="plb" id="plb-cycle2-es-3" data-text="Tu mano en la mía jamás se soltó" data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">tu ˈmano en la ˈmia xaˈmas se solˈto</div>
+          </div>
+            <div class="lc en">
+            <span class="badge badge-duo">Trèfle &amp; Minotaure</span>
+            <div class="lyric-text">Your hand in mine has never let go</div>
+            <div class="lyric-syllabic">Your <span class="a">hand</span> in <span class="a">mine</span> has <span class="a">nev</span>-er <span class="a">let</span> <span class="a">go</span></div>
+            <button class="plb" id="plb-cycle2-en-3" data-text="Your hand in mine has never let go" data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">jʊər hænd ɪn maɪn hæz ˈnɛvər lɛt ɡoʊ</div>
+          </div>
+          </div></div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-duo">Trèfle &amp; Minotaure</span>
+            <div class="lyric-text">...jamais déliée...</div>
+            <div class="lyric-syllabic">...ja-<span class="a">mais</span> dé-li-<span class="a">ée</span>...</div>
+            <button class="plb" id="plb-cycle2-fr-4" data-text="...jamais déliée..." data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ʒamɛ delje</div>
+          </div>
+            <div class="lc es">
+            <span class="badge badge-duo">Trèfle &amp; Minotaure</span>
+            <div class="lyric-text">...jamás se soltó...</div>
+            <div class="lyric-syllabic">...ja-<span class="a">más</span> se sol-<span class="a">tó</span>...</div>
+            <button class="plb" id="plb-cycle2-es-4" data-text="...jamás se soltó..." data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">xaˈmas se solˈto</div>
+          </div>
+            <div class="lc en">
+            <span class="badge badge-duo">Trèfle &amp; Minotaure</span>
+            <div class="lyric-text">...never let go...</div>
+            <div class="lyric-syllabic">...<span class="a">nev</span>-er <span class="a">let</span> <span class="a">go</span>...</div>
+            <button class="plb" id="plb-cycle2-en-4" data-text="...never let go..." data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ˈnɛvər lɛt ɡoʊ</div>
+          </div>
+          </div></div>
+        <div class="hints-row"><div class="sound-hints sh-fr"><div class="sh-title">🇫🇷 Sons difficiles (Français)</div><ul><li><strong>menti / déliée</strong> — e muet et nasale — le « en » se prononce nasal, sans consonne finale entendue.</li><li><strong>cœur / seul</strong> — eu/œ — lèvres arrondies, bouche mi-ouverte, un son unique sans glissement.</li><li><strong>toujours / racines</strong> — r français — fricative légère à l'arrière de la gorge, jamais roulée.</li><li><strong>chemin / origines</strong> — liaison en chantant — les syllabes s'enchaînent sans coupure entre les mots.</li></ul></div><div class="sound-hints sh-es"><div class="sh-title">🇪🇸 Sons difficiles (Español)</div><ul><li><strong>jamás / corazón</strong> — accent tonique final — la voix appuie nettement la dernière syllabe accentuée.</li><li><strong>cierra / justicia</strong> — c/z castillans — devant e/i, prononcés [θ], comme le « th » anglais sourd.</li><li><strong>separarnos / soltó</strong> — r simple — une seule vibration brève de la langue.</li><li><strong>siempre / siendo</strong> — diphtongue ie — les deux voyelles fusionnent en une syllabe rapide.</li></ul></div><div class="sound-hints sh-en"><div class="sh-title">🇬🇧 Sons difficiles (English)</div><ul><li><strong>understood / apart</strong> — th/schwa — voyelle neutre très brève dans les syllabes non accentuées.</li><li><strong>forever / together</strong> — r américain — langue recourbée en arrière, jamais roulée.</li><li><strong>twin souls / beginning</strong> — accent lexical — une seule syllabe forte par mot, les autres restent légères.</li><li><strong>always us / tears us</strong> — liaison — les mots s'enchaînent sans pause en chantant.</li></ul></div></div>
+
+      </section>
+
+      <section class="song-sec" id="sec-bridge">
+        <div class="sec-head">
+          <span class="sec-name">Bridge / Bridge / Bridge</span>
+        </div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Toujours toi...</div>
+            <div class="lyric-syllabic">Tou-<span class="a">jours</span> <span class="a">toi</span>...</div>
+            <button class="plb" id="plb-bridge-fr-0" data-text="Toujours toi..." data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">tuʒuʁ twa</div>
+          </div>
+            <div class="lc es">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Siempre tú...</div>
+            <div class="lyric-syllabic"><span class="a">Siem</span>-pre <span class="a">tú</span>...</div>
+            <button class="plb" id="plb-bridge-es-0" data-text="Siempre tú..." data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ˈsjempɾe tu</div>
+          </div>
+            <div class="lc en">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Always you...</div>
+            <div class="lyric-syllabic"><span class="a">Al</span>-ways <span class="a">you</span>...</div>
+            <button class="plb" id="plb-bridge-en-0" data-text="Always you..." data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ˈɔːlweɪz juː</div>
+          </div>
+          </div></div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Toujours moi...</div>
+            <div class="lyric-syllabic">Tou-<span class="a">jours</span> <span class="a">moi</span>...</div>
+            <button class="plb" id="plb-bridge-fr-1" data-text="Toujours moi..." data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">tuʒuʁ mwa</div>
+          </div>
+            <div class="lc es">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Siempre yo...</div>
+            <div class="lyric-syllabic"><span class="a">Siem</span>-pre <span class="a">yo</span>...</div>
+            <button class="plb" id="plb-bridge-es-1" data-text="Siempre yo..." data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ˈsjempɾe ʝo</div>
+          </div>
+            <div class="lc en">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Always me...</div>
+            <div class="lyric-syllabic"><span class="a">Al</span>-ways <span class="a">me</span>...</div>
+            <button class="plb" id="plb-bridge-en-1" data-text="Always me..." data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ˈɔːlweɪz miː</div>
+          </div>
+          </div></div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Ma main...</div>
+            <div class="lyric-syllabic">Ma <span class="a">main</span>...</div>
+            <button class="plb" id="plb-bridge-fr-2" data-text="Ma main..." data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ma mɛ̃</div>
+          </div>
+            <div class="lc es">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Mi mano...</div>
+            <div class="lyric-syllabic">Mi <span class="a">ma</span>-no...</div>
+            <button class="plb" id="plb-bridge-es-2" data-text="Mi mano..." data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">mi ˈmano</div>
+          </div>
+            <div class="lc en">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">My hand...</div>
+            <div class="lyric-syllabic">My <span class="a">hand</span>...</div>
+            <button class="plb" id="plb-bridge-en-2" data-text="My hand..." data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">maɪ hænd</div>
+          </div>
+          </div></div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Ta main...</div>
+            <div class="lyric-syllabic">Ta <span class="a">main</span>...</div>
+            <button class="plb" id="plb-bridge-fr-3" data-text="Ta main..." data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ta mɛ̃</div>
+          </div>
+            <div class="lc es">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Tu mano...</div>
+            <div class="lyric-syllabic">Tu <span class="a">ma</span>-no...</div>
+            <button class="plb" id="plb-bridge-es-3" data-text="Tu mano..." data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">tu ˈmano</div>
+          </div>
+            <div class="lc en">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Your hand...</div>
+            <div class="lyric-syllabic">Your <span class="a">hand</span>...</div>
+            <button class="plb" id="plb-bridge-en-3" data-text="Your hand..." data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">jʊər hænd</div>
+          </div>
+          </div></div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Ton cœur...</div>
+            <div class="lyric-syllabic">Ton <span class="a">cœur</span>...</div>
+            <button class="plb" id="plb-bridge-fr-4" data-text="Ton cœur..." data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">tɔ̃ kœʁ</div>
+          </div>
+            <div class="lc es">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Tu corazón...</div>
+            <div class="lyric-syllabic">Tu co-ra-<span class="a">zón</span>...</div>
+            <button class="plb" id="plb-bridge-es-4" data-text="Tu corazón..." data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">tu koɾaˈθon</div>
+          </div>
+            <div class="lc en">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Your heart...</div>
+            <div class="lyric-syllabic">Your <span class="a">heart</span>...</div>
+            <button class="plb" id="plb-bridge-en-4" data-text="Your heart..." data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">jʊər hɑːrt</div>
+          </div>
+          </div></div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Mon cœur...</div>
+            <div class="lyric-syllabic">Mon <span class="a">cœur</span>...</div>
+            <button class="plb" id="plb-bridge-fr-5" data-text="Mon cœur..." data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">mɔ̃ kœʁ</div>
+          </div>
+            <div class="lc es">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Mi corazón...</div>
+            <div class="lyric-syllabic">Mi co-ra-<span class="a">zón</span>...</div>
+            <button class="plb" id="plb-bridge-es-5" data-text="Mi corazón..." data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">mi koɾaˈθon</div>
+          </div>
+            <div class="lc en">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">My heart...</div>
+            <div class="lyric-syllabic">My <span class="a">heart</span>...</div>
+            <button class="plb" id="plb-bridge-en-5" data-text="My heart..." data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">maɪ hɑːrt</div>
+          </div>
+          </div></div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-duo">Trèfle &amp; Minotaure</span>
+            <div class="lyric-text">Toujours nous...</div>
+            <div class="lyric-syllabic">Tou-<span class="a">jours</span> <span class="a">nous</span>...</div>
+            <button class="plb" id="plb-bridge-fr-6" data-text="Toujours nous..." data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">tuʒuʁ nu</div>
+          </div>
+            <div class="lc es">
+            <span class="badge badge-duo">Trèfle &amp; Minotaure</span>
+            <div class="lyric-text">Siempre nosotros...</div>
+            <div class="lyric-syllabic"><span class="a">Siem</span>-pre no-<span class="a">so</span>-tros...</div>
+            <button class="plb" id="plb-bridge-es-6" data-text="Siempre nosotros..." data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ˈsjempɾe noˈsotɾos</div>
+          </div>
+            <div class="lc en">
+            <span class="badge badge-duo">Trèfle &amp; Minotaure</span>
+            <div class="lyric-text">Always us...</div>
+            <div class="lyric-syllabic"><span class="a">Al</span>-ways <span class="a">us</span>...</div>
+            <button class="plb" id="plb-bridge-en-6" data-text="Always us..." data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ˈɔːlweɪz ʌs</div>
+          </div>
+          </div></div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-duo">Trèfle &amp; Minotaure</span>
+            <div class="lyric-text">Un seul chemin...</div>
+            <div class="lyric-syllabic">Un <span class="a">seul</span> che-<span class="a">min</span>...</div>
+            <button class="plb" id="plb-bridge-fr-7" data-text="Un seul chemin..." data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">œ̃ sœl ʃəmɛ̃</div>
+          </div>
+            <div class="lc es">
+            <span class="badge badge-duo">Trèfle &amp; Minotaure</span>
+            <div class="lyric-text">Un solo camino...</div>
+            <div class="lyric-syllabic">Un <span class="a">so</span>-lo ca-<span class="a">mi</span>-no...</div>
+            <button class="plb" id="plb-bridge-es-7" data-text="Un solo camino..." data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">un ˈsolo kaˈmino</div>
+          </div>
+            <div class="lc en">
+            <span class="badge badge-duo">Trèfle &amp; Minotaure</span>
+            <div class="lyric-text">One single path...</div>
+            <div class="lyric-syllabic">One <span class="a">sin</span>-gle <span class="a">path</span>...</div>
+            <button class="plb" id="plb-bridge-en-7" data-text="One single path..." data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">wʌn ˈsɪŋɡl pæθ</div>
+          </div>
+          </div></div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-duo">Trèfle &amp; Minotaure</span>
+            <div class="lyric-text">...toujours nous... ...un seul chemin...</div>
+            <div class="lyric-syllabic">...tou-<span class="a">jours</span> <span class="a">nous</span>... ...un <span class="a">seul</span> che-<span class="a">min</span>...</div>
+            <button class="plb" id="plb-bridge-fr-8" data-text="...toujours nous... ...un seul chemin..." data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">tuʒuʁ nu œ̃ sœl ʃəmɛ̃</div>
+          </div>
+            <div class="lc es">
+            <span class="badge badge-duo">Trèfle &amp; Minotaure</span>
+            <div class="lyric-text">...siempre nosotros... ...un solo camino...</div>
+            <div class="lyric-syllabic">...<span class="a">siem</span>-pre no-<span class="a">so</span>-tros... ...un <span class="a">so</span>-lo ca-<span class="a">mi</span>-no...</div>
+            <button class="plb" id="plb-bridge-es-8" data-text="...siempre nosotros... ...un solo camino..." data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ˈsjempɾe noˈsotɾos un ˈsolo kaˈmino</div>
+          </div>
+            <div class="lc en">
+            <span class="badge badge-duo">Trèfle &amp; Minotaure</span>
+            <div class="lyric-text">...always us... ...one single path...</div>
+            <div class="lyric-syllabic">...<span class="a">al</span>-ways <span class="a">us</span>... ...one <span class="a">sin</span>-gle <span class="a">path</span>...</div>
+            <button class="plb" id="plb-bridge-en-8" data-text="...always us... ...one single path..." data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ˈɔːlweɪz ʌs wʌn ˈsɪŋɡl pæθ</div>
+          </div>
+          </div></div>
+        <div class="hints-row"><div class="sound-hints sh-fr"><div class="sh-title">🇫🇷 Sons difficiles (Français)</div><ul><li><strong>menti / déliée</strong> — e muet et nasale — le « en » se prononce nasal, sans consonne finale entendue.</li><li><strong>cœur / seul</strong> — eu/œ — lèvres arrondies, bouche mi-ouverte, un son unique sans glissement.</li><li><strong>toujours / racines</strong> — r français — fricative légère à l'arrière de la gorge, jamais roulée.</li><li><strong>chemin / origines</strong> — liaison en chantant — les syllabes s'enchaînent sans coupure entre les mots.</li></ul></div><div class="sound-hints sh-es"><div class="sh-title">🇪🇸 Sons difficiles (Español)</div><ul><li><strong>jamás / corazón</strong> — accent tonique final — la voix appuie nettement la dernière syllabe accentuée.</li><li><strong>cierra / justicia</strong> — c/z castillans — devant e/i, prononcés [θ], comme le « th » anglais sourd.</li><li><strong>separarnos / soltó</strong> — r simple — une seule vibration brève de la langue.</li><li><strong>siempre / siendo</strong> — diphtongue ie — les deux voyelles fusionnent en une syllabe rapide.</li></ul></div><div class="sound-hints sh-en"><div class="sh-title">🇬🇧 Sons difficiles (English)</div><ul><li><strong>understood / apart</strong> — th/schwa — voyelle neutre très brève dans les syllabes non accentuées.</li><li><strong>forever / together</strong> — r américain — langue recourbée en arrière, jamais roulée.</li><li><strong>twin souls / beginning</strong> — accent lexical — une seule syllabe forte par mot, les autres restent légères.</li><li><strong>always us / tears us</strong> — liaison — les mots s'enchaînent sans pause en chantant.</li></ul></div></div>
+
+      </section>
+
+      <section class="song-sec" id="sec-cycle3">
+        <div class="sec-head">
+          <span class="sec-name">Cycle 3 / Ciclo 3 / Cycle 3</span>
+        </div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Nos mains sont attachées pour toujours</div>
+            <div class="lyric-syllabic">Nos <span class="a">mains</span> sont at-ta-<span class="a">chées</span> pour tou-<span class="a">jours</span></div>
+            <button class="plb" id="plb-cycle3-fr-0" data-text="Nos mains sont attachées pour toujours" data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">no mɛ̃ sɔ̃t‿ataʃe puʁ tuʒuʁ</div>
+          </div>
+            <div class="lc es">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Nuestras manos unidas para siempre</div>
+            <div class="lyric-syllabic"><span class="a">Nues</span>-tras <span class="a">ma</span>-nos u-<span class="a">ni</span>-das <span class="a">pa</span>-ra <span class="a">siem</span>-pre</div>
+            <button class="plb" id="plb-cycle3-es-0" data-text="Nuestras manos unidas para siempre" data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ˈnwestɾas ˈmanos uˈniðas ˈpaɾa ˈsjempɾe</div>
+          </div>
+            <div class="lc en">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Our hands are bound forever tight</div>
+            <div class="lyric-syllabic">Our <span class="a">hands</span> are <span class="a">bound</span> for-<span class="a">ev</span>-er <span class="a">tight</span></div>
+            <button class="plb" id="plb-cycle3-en-0" data-text="Our hands are bound forever tight" data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">aʊər hændz ɑːr baʊnd fərˈɛvər taɪt</div>
+          </div>
+          </div></div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Nos cœurs cousus l'un à l'autre au fil des jours</div>
+            <div class="lyric-syllabic">Nos <span class="a">cœurs</span> cou-<span class="a">sus</span> l'un à l'<span class="a">autre</span> au <span class="a">fil</span> des <span class="a">jours</span></div>
+            <button class="plb" id="plb-cycle3-fr-1" data-text="Nos cœurs cousus l&#x27;un à l&#x27;autre au fil des jours" data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">no kœʁ kuzy lœ̃n‿a lotʁ o fil de ʒuʁ</div>
+          </div>
+            <div class="lc es">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Nuestros corazones cosidos día tras día</div>
+            <div class="lyric-syllabic"><span class="a">Nues</span>-tros co-ra-<span class="a">zo</span>-nes co-<span class="a">si</span>-dos <span class="a">dí</span>-a tras <span class="a">dí</span>-a</div>
+            <button class="plb" id="plb-cycle3-es-1" data-text="Nuestros corazones cosidos día tras día" data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ˈnwestɾos koɾaˈθones koˈsiðos ˈdia tɾas ˈdia</div>
+          </div>
+            <div class="lc en">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Our hearts stitched together day and night</div>
+            <div class="lyric-syllabic">Our <span class="a">hearts</span> <span class="a">stitched</span> to-<span class="a">geth</span>-er <span class="a">day</span> and <span class="a">night</span></div>
+            <button class="plb" id="plb-cycle3-en-1" data-text="Our hearts stitched together day and night" data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">aʊər hɑːrts stɪtʃt təˈɡɛðər deɪ ænd naɪt</div>
+          </div>
+          </div></div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Nos âmes jumelles depuis les origines</div>
+            <div class="lyric-syllabic">Nos <span class="a">âmes</span> ju-<span class="a">melles</span> de-<span class="a">puis</span> les o-ri-<span class="a">gines</span></div>
+            <button class="plb" id="plb-cycle3-fr-2" data-text="Nos âmes jumelles depuis les origines" data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">noz‿am ʒymɛl dəpɥi lez‿ɔʁiʒin</div>
+          </div>
+            <div class="lc es">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Almas gemelas desde el principio</div>
+            <div class="lyric-syllabic"><span class="a">Al</span>-mas ge-<span class="a">me</span>-las <span class="a">des</span>-de el prin-<span class="a">ci</span>-pio</div>
+            <button class="plb" id="plb-cycle3-es-2" data-text="Almas gemelas desde el principio" data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ˈalmas xeˈmelas ˈdesðe el pɾinˈθipjo</div>
+          </div>
+            <div class="lc en">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Our twin souls since the very beginning</div>
+            <div class="lyric-syllabic">Our <span class="a">twin</span> <span class="a">souls</span> since the <span class="a">ve</span>-ry be-<span class="a">gin</span>-ning</div>
+            <button class="plb" id="plb-cycle3-en-2" data-text="Our twin souls since the very beginning" data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">aʊər twɪn soʊlz sɪns ðə ˈvɛri bɪˈɡɪnɪŋ</div>
+          </div>
+          </div></div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Rien ni personne n'a eu raison de nos racines</div>
+            <div class="lyric-syllabic"><span class="a">Rien</span> ni per-<span class="a">sonne</span> n'a eu rai-<span class="a">son</span> de nos ra-<span class="a">cines</span></div>
+            <button class="plb" id="plb-cycle3-fr-3" data-text="Rien ni personne n&#x27;a eu raison de nos racines" data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ʁjɛ̃ ni pɛʁsɔn na y ʁɛzɔ̃ də no ʁasin</div>
+          </div>
+            <div class="lc es">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Nada logró separarnos jamás</div>
+            <div class="lyric-syllabic"><span class="a">Na</span>-da lo-<span class="a">gró</span> se-pa-<span class="a">rar</span>-nos ja-<span class="a">más</span></div>
+            <button class="plb" id="plb-cycle3-es-3" data-text="Nada logró separarnos jamás" data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ˈnaða loˈɣɾo sepaˈɾaɾnos xaˈmas</div>
+          </div>
+            <div class="lc en">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Nothing has ever torn us apart</div>
+            <div class="lyric-syllabic"><span class="a">No</span>-thing has <span class="a">ev</span>-er <span class="a">torn</span> us a-<span class="a">part</span></div>
+            <button class="plb" id="plb-cycle3-en-3" data-text="Nothing has ever torn us apart" data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ˈnʌθɪŋ hæz ˈɛvər tɔːrn ʌs əˈpɑːrt</div>
+          </div>
+          </div></div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-duo">Trèfle &amp; Minotaure</span>
+            <div class="lyric-text">...rien ne nous sépare...</div>
+            <div class="lyric-syllabic">...<span class="a">rien</span> ne nous sé-<span class="a">pare</span>...</div>
+            <button class="plb" id="plb-cycle3-fr-4" data-text="...rien ne nous sépare..." data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ʁjɛ̃ nə nu sepaʁ</div>
+          </div>
+            <div class="lc es">
+            <span class="badge badge-duo">Trèfle &amp; Minotaure</span>
+            <div class="lyric-text">...nada nos separa...</div>
+            <div class="lyric-syllabic">...<span class="a">na</span>-da nos se-<span class="a">pa</span>-ra...</div>
+            <button class="plb" id="plb-cycle3-es-4" data-text="...nada nos separa..." data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ˈnaða nos seˈpaɾa</div>
+          </div>
+            <div class="lc en">
+            <span class="badge badge-duo">Trèfle &amp; Minotaure</span>
+            <div class="lyric-text">...nothing tears us apart...</div>
+            <div class="lyric-syllabic">...<span class="a">no</span>-thing <span class="a">tears</span> us a-<span class="a">part</span>...</div>
+            <button class="plb" id="plb-cycle3-en-4" data-text="...nothing tears us apart..." data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ˈnʌθɪŋ tɪərz ʌs əˈpɑːrt</div>
+          </div>
+          </div></div>
+        <div class="hints-row"><div class="sound-hints sh-fr"><div class="sh-title">🇫🇷 Sons difficiles (Français)</div><ul><li><strong>menti / déliée</strong> — e muet et nasale — le « en » se prononce nasal, sans consonne finale entendue.</li><li><strong>cœur / seul</strong> — eu/œ — lèvres arrondies, bouche mi-ouverte, un son unique sans glissement.</li><li><strong>toujours / racines</strong> — r français — fricative légère à l'arrière de la gorge, jamais roulée.</li><li><strong>chemin / origines</strong> — liaison en chantant — les syllabes s'enchaînent sans coupure entre les mots.</li></ul></div><div class="sound-hints sh-es"><div class="sh-title">🇪🇸 Sons difficiles (Español)</div><ul><li><strong>jamás / corazón</strong> — accent tonique final — la voix appuie nettement la dernière syllabe accentuée.</li><li><strong>cierra / justicia</strong> — c/z castillans — devant e/i, prononcés [θ], comme le « th » anglais sourd.</li><li><strong>separarnos / soltó</strong> — r simple — une seule vibration brève de la langue.</li><li><strong>siempre / siendo</strong> — diphtongue ie — les deux voyelles fusionnent en une syllabe rapide.</li></ul></div><div class="sound-hints sh-en"><div class="sh-title">🇬🇧 Sons difficiles (English)</div><ul><li><strong>understood / apart</strong> — th/schwa — voyelle neutre très brève dans les syllabes non accentuées.</li><li><strong>forever / together</strong> — r américain — langue recourbée en arrière, jamais roulée.</li><li><strong>twin souls / beginning</strong> — accent lexical — une seule syllabe forte par mot, les autres restent légères.</li><li><strong>always us / tears us</strong> — liaison — les mots s'enchaînent sans pause en chantant.</li></ul></div></div>
+
+      </section>
+
+      <section class="song-sec" id="sec-outro">
+        <div class="sec-head">
+          <span class="sec-name">Outro / Outro / Outro</span>
+        </div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-duo">Trèfle &amp; Minotaure</span>
+            <div class="lyric-text">Vingt-cinq ans...</div>
+            <div class="lyric-syllabic"><span class="a">Vingt</span>-cinq <span class="a">ans</span>...</div>
+            <button class="plb" id="plb-outro-fr-0" data-text="Vingt-cinq ans..." data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">vɛ̃tsɛ̃k ɑ̃</div>
+          </div>
+            <div class="lc es">
+            <span class="badge badge-duo">Trèfle &amp; Minotaure</span>
+            <div class="lyric-text">Veinticinco años...</div>
+            <div class="lyric-syllabic">Vein-ti-<span class="a">cin</span>-co <span class="a">a</span>-ños...</div>
+            <button class="plb" id="plb-outro-es-0" data-text="Veinticinco años..." data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">bejntiˈθiŋko ˈaɲos</div>
+          </div>
+            <div class="lc en">
+            <span class="badge badge-duo">Trèfle &amp; Minotaure</span>
+            <div class="lyric-text">Twenty-five years...</div>
+            <div class="lyric-syllabic"><span class="a">Twen</span>-ty-five <span class="a">years</span>...</div>
+            <button class="plb" id="plb-outro-en-0" data-text="Twenty-five years..." data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ˈtwɛnti faɪv jɪərz</div>
+          </div>
+          </div></div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-duo">Trèfle &amp; Minotaure</span>
+            <div class="lyric-text">et toujours debout</div>
+            <div class="lyric-syllabic">et tou-<span class="a">jours</span> de-<span class="a">bout</span></div>
+            <button class="plb" id="plb-outro-fr-1" data-text="et toujours debout" data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">e tuʒuʁ dəbu</div>
+          </div>
+            <div class="lc es">
+            <span class="badge badge-duo">Trèfle &amp; Minotaure</span>
+            <div class="lyric-text">y seguimos de pie</div>
+            <div class="lyric-syllabic">y se-<span class="a">gui</span>-mos de <span class="a">pie</span></div>
+            <button class="plb" id="plb-outro-es-1" data-text="y seguimos de pie" data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">i seˈɣimos ðe pje</div>
+          </div>
+            <div class="lc en">
+            <span class="badge badge-duo">Trèfle &amp; Minotaure</span>
+            <div class="lyric-text">still standing strong</div>
+            <div class="lyric-syllabic"><span class="a">Still</span> <span class="a">stand</span>-ing <span class="a">strong</span></div>
+            <button class="plb" id="plb-outro-en-1" data-text="still standing strong" data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">stɪl ˈstændɪŋ strɒŋ</div>
+          </div>
+          </div></div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-duo">Trèfle &amp; Minotaure</span>
+            <div class="lyric-text">Vingt-cinq ans...</div>
+            <div class="lyric-syllabic"><span class="a">Vingt</span>-cinq <span class="a">ans</span>...</div>
+            <button class="plb" id="plb-outro-fr-2" data-text="Vingt-cinq ans..." data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">vɛ̃tsɛ̃k ɑ̃</div>
+          </div>
+            <div class="lc es">
+            <span class="badge badge-duo">Trèfle &amp; Minotaure</span>
+            <div class="lyric-text">Veinticinco años...</div>
+            <div class="lyric-syllabic">Vein-ti-<span class="a">cin</span>-co <span class="a">a</span>-ños...</div>
+            <button class="plb" id="plb-outro-es-2" data-text="Veinticinco años..." data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">bejntiˈθiŋko ˈaɲos</div>
+          </div>
+            <div class="lc en">
+            <span class="badge badge-duo">Trèfle &amp; Minotaure</span>
+            <div class="lyric-text">Twenty-five years...</div>
+            <div class="lyric-syllabic"><span class="a">Twen</span>-ty-five <span class="a">years</span>...</div>
+            <button class="plb" id="plb-outro-en-2" data-text="Twenty-five years..." data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ˈtwɛnti faɪv jɪərz</div>
+          </div>
+          </div></div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-duo">Trèfle &amp; Minotaure</span>
+            <div class="lyric-text">et toujours nous</div>
+            <div class="lyric-syllabic">et tou-<span class="a">jours</span> <span class="a">nous</span></div>
+            <button class="plb" id="plb-outro-fr-3" data-text="et toujours nous" data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">e tuʒuʁ nu</div>
+          </div>
+            <div class="lc es">
+            <span class="badge badge-duo">Trèfle &amp; Minotaure</span>
+            <div class="lyric-text">y seguimos siendo nosotros</div>
+            <div class="lyric-syllabic">y se-<span class="a">gui</span>-mos <span class="a">sien</span>-do no-<span class="a">so</span>-tros</div>
+            <button class="plb" id="plb-outro-es-3" data-text="y seguimos siendo nosotros" data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">i seˈɣimos ˈsjendo noˈsotɾos</div>
+          </div>
+            <div class="lc en">
+            <span class="badge badge-duo">Trèfle &amp; Minotaure</span>
+            <div class="lyric-text">still us</div>
+            <div class="lyric-syllabic"><span class="a">Still</span> <span class="a">us</span></div>
+            <button class="plb" id="plb-outro-en-3" data-text="still us" data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">stɪl ʌs</div>
+          </div>
+          </div></div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-duo">Trèfle &amp; Minotaure</span>
+            <div class="lyric-text">...toujours nous...</div>
+            <div class="lyric-syllabic">...tou-<span class="a">jours</span> <span class="a">nous</span>...</div>
+            <button class="plb" id="plb-outro-fr-4" data-text="...toujours nous..." data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">tuʒuʁ nu</div>
+          </div>
+            <div class="lc es">
+            <span class="badge badge-duo">Trèfle &amp; Minotaure</span>
+            <div class="lyric-text">...seguimos nosotros...</div>
+            <div class="lyric-syllabic">...se-<span class="a">gui</span>-mos no-<span class="a">so</span>-tros...</div>
+            <button class="plb" id="plb-outro-es-4" data-text="...seguimos nosotros..." data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">seˈɣimos noˈsotɾos</div>
+          </div>
+            <div class="lc en">
+            <span class="badge badge-duo">Trèfle &amp; Minotaure</span>
+            <div class="lyric-text">...still us...</div>
+            <div class="lyric-syllabic">...<span class="a">still</span> <span class="a">us</span>...</div>
+            <button class="plb" id="plb-outro-en-4" data-text="...still us..." data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">stɪl ʌs</div>
+          </div>
+          </div></div>
+        <div class="hints-row"><div class="sound-hints sh-fr"><div class="sh-title">🇫🇷 Sons difficiles (Français)</div><ul><li><strong>menti / déliée</strong> — e muet et nasale — le « en » se prononce nasal, sans consonne finale entendue.</li><li><strong>cœur / seul</strong> — eu/œ — lèvres arrondies, bouche mi-ouverte, un son unique sans glissement.</li><li><strong>toujours / racines</strong> — r français — fricative légère à l'arrière de la gorge, jamais roulée.</li><li><strong>chemin / origines</strong> — liaison en chantant — les syllabes s'enchaînent sans coupure entre les mots.</li></ul></div><div class="sound-hints sh-es"><div class="sh-title">🇪🇸 Sons difficiles (Español)</div><ul><li><strong>jamás / corazón</strong> — accent tonique final — la voix appuie nettement la dernière syllabe accentuée.</li><li><strong>cierra / justicia</strong> — c/z castillans — devant e/i, prononcés [θ], comme le « th » anglais sourd.</li><li><strong>separarnos / soltó</strong> — r simple — une seule vibration brève de la langue.</li><li><strong>siempre / siendo</strong> — diphtongue ie — les deux voyelles fusionnent en une syllabe rapide.</li></ul></div><div class="sound-hints sh-en"><div class="sh-title">🇬🇧 Sons difficiles (English)</div><ul><li><strong>understood / apart</strong> — th/schwa — voyelle neutre très brève dans les syllabes non accentuées.</li><li><strong>forever / together</strong> — r américain — langue recourbée en arrière, jamais roulée.</li><li><strong>twin souls / beginning</strong> — accent lexical — une seule syllabe forte par mot, les autres restent légères.</li><li><strong>always us / tears us</strong> — liaison — les mots s'enchaînent sans pause en chantant.</li></ul></div></div>
+
+      </section>
+
+
+  <footer>
+    <a href="https://www.trefleminotaure.com" target="_blank" rel="noopener">www.trefleminotaure.com</a> &middot; &copy; 2026 Trèfle &amp; Minotaure
+  </footer>
+
+</div>
+
+<script>
+const LANG_MAP = { fr: "fr-FR", es: "es-ES", en: "en-GB" };
+let curSpeed = 0.9;
+
+function setLang(lang) {
+  document.body.classList.remove("show-fr", "show-es", "show-en");
+  document.querySelectorAll(".lang-btn").forEach(b => b.classList.remove("active"));
+  document.querySelector(`.lang-btn[data-lang="${lang}"]`).classList.add("active");
+  if (lang !== "all") document.body.classList.add("show-" + lang);
+}
+
+function setSpeed(val) {
+  curSpeed = val;
+  document.querySelectorAll(".speed-btn").forEach(b => b.classList.remove("active"));
+  document.querySelector(`.speed-btn[data-speed="${val}"]`).classList.add("active");
+}
+
+function playLine(btn) {
+  if (!("speechSynthesis" in window)) {
+    alert("La synthèse vocale n'est pas supportée par ce navigateur.");
+    return;
+  }
+  const text = btn.getAttribute("data-text");
+  const lang = btn.getAttribute("data-lang");
+  window.speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = LANG_MAP[lang];
+  u.rate = curSpeed;
+  window.speechSynthesis.speak(u);
+}
+</script>
+</body>
+</html>

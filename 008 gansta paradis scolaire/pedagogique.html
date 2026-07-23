@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Gangsta Paradis Scolaire — Guide phonétique trilingue</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Cinzel:wght@500;700&family=IM+Fell+English:ital@0;1&family=Noto+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root { --gold: #b8962e; --parchment: #f5ecd7; --outer: #2a1f10; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: radial-gradient(ellipse at center, #3a2a16 0%, #2a1f10 70%, #1a1208 100%);
+    font-family: "Cormorant Garamond", serif;
+    color: #2a1f10;
+    min-height: 100vh;
+    padding: 24px 12px 60px;
+  }
+  .page {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: var(--parchment);
+    border: 2px solid #c4a97a;
+    border-radius: 10px;
+    box-shadow: 0 0 40px rgba(0,0,0,0.6);
+    padding: 32px clamp(14px, 4vw, 48px);
+  }
+  header { text-align: center; border-bottom: 1px solid #c4a97a; padding-bottom: 18px; margin-bottom: 22px; }
+  header h1 {
+    font-family: "IM Fell English", serif; font-style: italic;
+    font-size: clamp(1.4rem, 3.6vw, 2.2rem); margin: 0 0 6px; color: #2a1f10;
+  }
+  header .subtitle {
+    font-family: "Cinzel", serif; font-size: 0.82rem; letter-spacing: 0.07em;
+    color: var(--gold); text-transform: uppercase;
+  }
+  header p.desc { font-style: italic; max-width: 760px; margin: 14px auto 0; font-size: 0.95rem; opacity: .85; }
+
+  .controls {
+    display: flex; flex-wrap: wrap; gap: 18px; justify-content: center; align-items: center;
+    margin: 20px 0 26px; padding: 14px; background: #efe2bf; border-radius: 8px; border: 1px solid #d8c79a;
+  }
+  .control-group { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+  .control-group label {
+    font-family: "Cinzel", serif; font-size: 0.65rem; letter-spacing: 0.06em; color: #7a5e20; text-transform: uppercase;
+  }
+  .btn-row { display: flex; gap: 6px; flex-wrap: wrap; justify-content: center; }
+  .btn-row button {
+    font-family: "Cinzel", serif; font-size: 0.72rem; border: 1px solid var(--gold);
+    background: #fffaf0; color: #5a4520; border-radius: 6px; padding: 7px 13px; cursor: pointer; transition: all .2s;
+  }
+  .btn-row button:hover { background: var(--gold); color: #fff; }
+  .btn-row button.active { background: var(--gold); color: #fff; }
+
+  .song-sec { margin-bottom: 26px; border-radius: 8px; overflow: hidden; border: 1px solid #d8c79a; }
+  .sec-head { background: #e9dab3; padding: 8px 14px; border-bottom: 1px solid #d8c79a; }
+  .sec-name {
+    font-family: "Cinzel", serif; font-size: 0.78rem; letter-spacing: 0.04em; color: #5a4520; text-transform: uppercase;
+  }
+
+  .opt-c-row { border-bottom: 1px solid #e2d3a8; }
+  .opt-c-row:last-child { border-bottom: none; }
+  .row-cells { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1px; background: #d8c79a; }
+  .lc { padding: 10px 12px 12px; background: #fffaf0; position: relative; }
+  .lc.fr { background: #e8f0fc; }
+  .lc.es { background: #f5ead5; }
+  .lc.en { background: #fce8ec; }
+
+  .badge {
+    display: inline-block; font-family: "Cinzel", serif; font-style: normal; font-size: 0.52rem;
+    letter-spacing: 0.04em; text-transform: uppercase; padding: 2px 7px; border-radius: 10px;
+    margin-bottom: 5px;
+  }
+  .badge-trefle { background: #c8dcf8; color: #1a3a6b; }
+  .badge-minotaure { background: #2a1f10; color: #f5ecd7; }
+  .badge-duo { background: var(--gold); color: #fff; }
+  .badge-ghost { background: #ded9ea; color: #443a5c; }
+  .instr-note { font-style: italic; opacity: .6; padding: 10px 14px; font-size: .9rem; }
+
+  .lyric-text { font-style: italic; font-size: 0.97rem; line-height: 1.4; margin-bottom: 4px; }
+  .lyric-text.instr-line { opacity: 0.55; }
+  .lyric-syllabic { font-weight: 700; font-size: 0.80rem; line-height: 1.5; margin-bottom: 4px; }
+  .lyric-syllabic .a { text-decoration: underline; text-decoration-color: #c0392b; text-decoration-thickness: 2px; color: #8b1a1a; }
+
+  .plb {
+    font-family: "Cinzel", serif; font-size: 0.43rem; background: var(--gold); color: #fff;
+    border: none; border-radius: 50%; width: 22px; height: 22px; cursor: pointer; margin-bottom: 4px;
+  }
+  .plb:hover { background: #9a7a20; }
+
+  .lyric-ipa { font-family: "Noto Serif", "Noto Sans", serif; font-size: 0.64rem; opacity: .56; }
+  .lyric-ipa::before { content: "/ "; color: var(--gold); }
+  .lyric-ipa::after  { content: " /"; color: var(--gold); }
+
+  body.show-fr .lc.es, body.show-fr .lc.en { display: none; }
+  body.show-es .lc.fr, body.show-es .lc.en { display: none; }
+  body.show-en .lc.fr, body.show-en .lc.es { display: none; }
+  body.show-fr .row-cells, body.show-es .row-cells, body.show-en .row-cells { grid-template-columns: 1fr; }
+
+  footer {
+    text-align: center; margin-top: 30px; padding-top: 16px; border-top: 1px solid #c4a97a;
+    font-family: "Cinzel", serif; font-size: 0.7rem; letter-spacing: 0.05em; color: #7a5e20;
+  }
+  footer a { color: var(--gold); text-decoration: none; }
+
+  @media (max-width: 800px) {
+    .row-cells { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <h1>Gangsta Paradis Scolaire <span style="opacity:.5">/</span> Gangsta School Paradise <span style="opacity:.5">/</span> Gangsta Paraíso Escolar</h1>
+    <div class="subtitle">Guide phonétique trilingue — Option C</div>
+    <p class="desc">Chaque ligne affiche le texte original, son découpage syllabique propre à sa langue (accent tonique souligné en rouge), un bouton d&#x2019;écoute, puis sa transcription IPA spécifique à cette langue.</p>
+  </header>
+
+  <div class="controls">
+    <div class="control-group">
+      <label>Langue</label>
+      <div class="btn-row">
+        <button class="lang-btn active" data-lang="all" onclick="setLang('all')">Trilingue</button>
+        <button class="lang-btn" data-lang="fr" onclick="setLang('fr')">🇫🇷 Français</button>
+        <button class="lang-btn" data-lang="es" onclick="setLang('es')">🇪🇸 Español</button>
+        <button class="lang-btn" data-lang="en" onclick="setLang('en')">🇬🇧 English</button>
+      </div>
+    </div>
+    <div class="control-group">
+      <label>Vitesse TTS</label>
+      <div class="btn-row">
+        <button class="speed-btn" data-speed="0.7" onclick="setSpeed(0.7)">× 0.7</button>
+        <button class="speed-btn active" data-speed="0.9" onclick="setSpeed(0.9)">× 0.9</button>
+        <button class="speed-btn" data-speed="1" onclick="setSpeed(1)">× 1.0</button>
+      </div>
+    </div>
+  </div>
+
+  <section class="song-sec" id="sec-intro">
+        <div class="sec-head">
+          <span class="sec-name">Intro / Intro / Intro</span>
+        </div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Encore une minute de silence... dans une école pleine de bruit...</div>
+            <div class="lyric-syllabic">En-core une mi-nute de si-<span class="a">lence</span>... dans une é-cole pleine de <span class="a">bruit</span>...</div>
+            <button class="plb" id="plb-intro-fr-1" data-text="Encore une minute de silence... dans une école pleine de bruit..." data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ɑ̃kɔʁ yn minyt də silɑ̃s dɑ̃z‑yn ekɔl plɛn də bʁɥi</div>
+          </div><div class="lc es">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Un minuto más de silencio... en una escuela llena de ruido...</div>
+            <div class="lyric-syllabic">Un mi-<span class="a">nu</span>-to más de si-<span class="a">len</span>-cio... en u-na es-<span class="a">cue</span>-la lle-na de <span class="a">rui</span>-do...</div>
+            <button class="plb" id="plb-intro-es-1" data-text="Un minuto más de silencio... en una escuela llena de ruido..." data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">um miˈnuto mas ðe siˈlensjo en ˈuna esˈkwela ˈʎena ðe ˈrwiðo</div>
+          </div><div class="lc en">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">One more minute of silence... in a school full of noise...</div>
+            <div class="lyric-syllabic">One more <span class="a">min</span>-ute of <span class="a">si</span>-lence... in a <span class="a">school</span> full of <span class="a">noise</span>...</div>
+            <button class="plb" id="plb-intro-en-1" data-text="One more minute of silence... in a school full of noise..." data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">wʌn mɔːr ˈmɪnɪt əv ˈsaɪləns ɪn ə skuːl fʊl əv nɔɪz</div>
+          </div>
+          </div></div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Des enfants grandissent trop vite... dans un monde qui regarde ailleurs...</div>
+            <div class="lyric-syllabic">Des en-fants gran-dissent trop <span class="a">vite</span>... dans un monde qui re-garde ail-<span class="a">leurs</span>...</div>
+            <button class="plb" id="plb-intro-fr-2" data-text="Des enfants grandissent trop vite... dans un monde qui regarde ailleurs..." data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">dez‑ɑ̃fɑ̃ ɡʁɑ̃dis tʁo vit dɑ̃z‑œ̃ mɔ̃d ki ʁəɡaʁd ajœʁ</div>
+          </div><div class="lc es">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Los niños crecen demasiado rápido... en un mundo que mira hacia otro lado...</div>
+            <div class="lyric-syllabic">Los <span class="a">ni</span>-ños <span class="a">cre</span>-cen de-ma-sia-do <span class="a">rá</span>-pi-do... en un mun-do que <span class="a">mi</span>-ra ha-cia o-tro <span class="a">la</span>-do...</div>
+            <button class="plb" id="plb-intro-es-2" data-text="Los niños crecen demasiado rápido... en un mundo que mira hacia otro lado..." data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">los ˈniɲos ˈkɾesen demaˈsjaðo ˈrapiðo en um ˈmundo ke ˈmiɾa ˈasja ˈotɾo ˈlaðo</div>
+          </div><div class="lc en">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Children grow up too fast... in a world that looks away...</div>
+            <div class="lyric-syllabic"><span class="a">Chil</span>-dren grow up too <span class="a">fast</span>... in a <span class="a">world</span> that looks a-<span class="a">way</span>...</div>
+            <button class="plb" id="plb-intro-en-2" data-text="Children grow up too fast... in a world that looks away..." data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ˈtʃɪldrən ɡroʊ ʌp tuː fæst ɪn ə wɜːrld ðæt lʊks əˈweɪ</div>
+          </div>
+          </div></div>
+      </section>
+
+  <section class="song-sec" id="sec-verse1">
+        <div class="sec-head">
+          <span class="sec-name">Couplet 1 / Verso 1 / Verse 1</span>
+        </div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Dans les couloirs on filme les humiliations</div>
+            <div class="lyric-syllabic">Dans les cou-<span class="a">loirs</span> on filme les hu-mi-lia-<span class="a">tions</span></div>
+            <button class="plb" id="plb-verse1-fr-3" data-text="Dans les couloirs on filme les humiliations" data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">dɑ̃ le kulwaʁ ɔ̃ film lez‑ymiljasjɔ̃</div>
+          </div><div class="lc es">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">En los pasillos filman las humillaciones</div>
+            <div class="lyric-syllabic">En los pa-<span class="a">si</span>-llos <span class="a">fil</span>-man las hu-mi-lla-<span class="a">cio</span>-nes</div>
+            <button class="plb" id="plb-verse1-es-3" data-text="En los pasillos filman las humillaciones" data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">en los paˈsiʎos ˈfilman las umiʎaˈsjones</div>
+          </div><div class="lc en">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">In the hallways they film the humiliations</div>
+            <div class="lyric-syllabic">In the <span class="a">hall</span>-ways they <span class="a">film</span> the hu-mi-li-<span class="a">a</span>-tions</div>
+            <button class="plb" id="plb-verse1-en-3" data-text="In the hallways they film the humiliations" data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ɪn ðə ˈhɔːlweɪz ðeɪ fɪlm ðə hjuːˌmɪliˈeɪʃənz</div>
+          </div>
+          </div></div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Des téléphones levés comme des armes sans pardon</div>
+            <div class="lyric-syllabic">Des té-lé-phones le-<span class="a">vés</span> comme des armes sans par-<span class="a">don</span></div>
+            <button class="plb" id="plb-verse1-fr-4" data-text="Des téléphones levés comme des armes sans pardon" data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">de telefɔn ləve kɔm dez‑aʁm sɑ̃ paʁdɔ̃</div>
+          </div><div class="lc es">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Teléfonos levantados como armas sin perdón</div>
+            <div class="lyric-syllabic">Te-<span class="a">lé</span>-fo-nos le-van-<span class="a">ta</span>-dos co-mo ar-mas sin per-<span class="a">dón</span></div>
+            <button class="plb" id="plb-verse1-es-4" data-text="Teléfonos levantados como armas sin perdón" data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">teˈlefonos leβanˈtaðos ˈkomo ˈaɾmas sim peɾˈðon</div>
+          </div><div class="lc en">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Phones raised like weapons with no mercy</div>
+            <div class="lyric-syllabic"><span class="a">Phones</span> <span class="a">raised</span> like <span class="a">weap</span>-ons with no <span class="a">mer</span>-cy</div>
+            <button class="plb" id="plb-verse1-en-4" data-text="Phones raised like weapons with no mercy" data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">foʊnz reɪzd laɪk ˈwɛpənz wɪð noʊ ˈmɜːrsi</div>
+          </div>
+          </div></div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Les profs tiennent debout avec la peur dans les yeux</div>
+            <div class="lyric-syllabic">Les profs tiennent de-<span class="a">bout</span> a-vec la peur dans les <span class="a">yeux</span></div>
+            <button class="plb" id="plb-verse1-fr-5" data-text="Les profs tiennent debout avec la peur dans les yeux" data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">le pʁɔf tjɛn dəbu avɛk la pœʁ dɑ̃ lez‑jø</div>
+          </div><div class="lc es">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Los profesores siguen de pie con el miedo en los ojos</div>
+            <div class="lyric-syllabic">Los pro-fe-<span class="a">so</span>-res <span class="a">si</span>-guen de pie con el <span class="a">mie</span>-do en los <span class="a">o</span>-jos</div>
+            <button class="plb" id="plb-verse1-es-5" data-text="Los profesores siguen de pie con el miedo en los ojos" data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">los profeˈsoɾes ˈsiɣen de pje kon el ˈmjeðo en los ˈoxos</div>
+          </div><div class="lc en">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Teachers still standing with fear in their eyes</div>
+            <div class="lyric-syllabic"><span class="a">Teach</span>-ers still <span class="a">stand</span>-ing with <span class="a">fear</span> in their <span class="a">eyes</span></div>
+            <button class="plb" id="plb-verse1-en-5" data-text="Teachers still standing with fear in their eyes" data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ˈtiːtʃərz stɪl ˈstændɪŋ wɪð fɪr ɪn ðɛr aɪz</div>
+          </div>
+          </div></div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Pendant que certains parents transforment la colère en feu</div>
+            <div class="lyric-syllabic">Pen-dant que cer-tains pa-rents trans-<span class="a">for</span>ment la co-lère en <span class="a">feu</span></div>
+            <button class="plb" id="plb-verse1-fr-6" data-text="Pendant que certains parents transforment la colère en feu" data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">pɑ̃dɑ̃ kə sɛʁtɛ̃ paʁɑ̃ tʁɑ̃sfɔʁm la kɔlɛʁ ɑ̃ fø</div>
+          </div><div class="lc es">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Mientras algunos padres convierten la rabia en fuego</div>
+            <div class="lyric-syllabic">Mien-tras al-<span class="a">gu</span>-nos pa-dres con-<span class="a">vier</span>-ten la <span class="a">ra</span>-bia en <span class="a">fue</span>-go</div>
+            <button class="plb" id="plb-verse1-es-6" data-text="Mientras algunos padres convierten la rabia en fuego" data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ˈmjentɾas alˈɣunos ˈpaðɾes komˈbjeɾten la ˈraβja em ˈfweɣo</div>
+          </div><div class="lc en">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">While some parents turn anger into fire</div>
+            <div class="lyric-syllabic">While some <span class="a">par</span>-ents turn <span class="a">an</span>-ger in-to <span class="a">fire</span></div>
+            <button class="plb" id="plb-verse1-en-6" data-text="While some parents turn anger into fire" data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">waɪl sʌm ˈpɛrənts tɜːrn ˈæŋɡər ˈɪntuː faɪər</div>
+          </div>
+          </div></div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Un môme rentre chez lui avec le ventre retourné</div>
+            <div class="lyric-syllabic">Un môme rentre chez <span class="a">lui</span> a-vec le ven-tre re-tour-<span class="a">né</span></div>
+            <button class="plb" id="plb-verse1-fr-7" data-text="Un môme rentre chez lui avec le ventre retourné" data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">œ̃ mom ʁɑ̃tʁ ʃe lɥi avɛk lə vɑ̃tʁ ʁətuʁne</div>
+          </div><div class="lc es">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Un chico vuelve a casa con el estómago revuelto</div>
+            <div class="lyric-syllabic">Un <span class="a">chi</span>-co <span class="a">vuel</span>-ve a ca-sa con el es-<span class="a">tó</span>-ma-go re-<span class="a">vuel</span>-to</div>
+            <button class="plb" id="plb-verse1-es-7" data-text="Un chico vuelve a casa con el estómago revuelto" data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">un ˈtʃiko ˈbwelβe a ˈkasa kon el esˈtomaɣo reˈbwelto</div>
+          </div><div class="lc en">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">A kid goes home with his stomach turned inside out</div>
+            <div class="lyric-syllabic">A <span class="a">kid</span> goes <span class="a">home</span> with his <span class="a">stom</span>-ach turned in-<span class="a">side</span> <span class="a">out</span></div>
+            <button class="plb" id="plb-verse1-en-7" data-text="A kid goes home with his stomach turned inside out" data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ə kɪd ɡoʊz hoʊm wɪð hɪz ˈstʌmək tɜːrnd ɪnˈsaɪd aʊt</div>
+          </div>
+          </div></div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Demain sur les réseaux son visage va tourner</div>
+            <div class="lyric-syllabic">De-<span class="a">main</span> sur les ré-<span class="a">seaux</span> son vi-sage va tour-<span class="a">ner</span></div>
+            <button class="plb" id="plb-verse1-fr-8" data-text="Demain sur les réseaux son visage va tourner" data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">dəmɛ̃ syʁ le ʁezo sɔ̃ vizaʒ va tuʁne</div>
+          </div><div class="lc es">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Mañana en las redes su cara dará la vuelta</div>
+            <div class="lyric-syllabic">Ma-<span class="a">ña</span>-na en las <span class="a">re</span>-des su ca-ra da-<span class="a">rá</span> la <span class="a">vuel</span>-ta</div>
+            <button class="plb" id="plb-verse1-es-8" data-text="Mañana en las redes su cara dará la vuelta" data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">maˈɲana en las ˈreðes su ˈkaɾa ðaˈɾa la ˈbwelta</div>
+          </div><div class="lc en">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Tomorrow on the networks his face will go around</div>
+            <div class="lyric-syllabic">To-<span class="a">mor</span>-row on the <span class="a">net</span>-works his <span class="a">face</span> will go a-<span class="a">round</span></div>
+            <button class="plb" id="plb-verse1-en-8" data-text="Tomorrow on the networks his face will go around" data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">təˈmɒroʊ ɒn ðə ˈnɛtwɜːrks hɪz feɪs wɪl ɡoʊ əˈraʊnd</div>
+          </div>
+          </div></div>
+      </section>
+
+  <section class="song-sec" id="sec-chorus1">
+        <div class="sec-head">
+          <span class="sec-name">Refrain / Estribillo / Chorus</span>
+        </div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Paradis perdu...</div>
+            <div class="lyric-syllabic">Pa-ra-<span class="a">dis</span> per-<span class="a">du</span>...</div>
+            <button class="plb" id="plb-chorus1-fr-9" data-text="Paradis perdu..." data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">paʁadi pɛʁdy</div>
+          </div><div class="lc es">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Paraíso perdido...</div>
+            <div class="lyric-syllabic">Pa-ra-<span class="a">í</span>-so per-<span class="a">di</span>-do...</div>
+            <button class="plb" id="plb-chorus1-es-9" data-text="Paraíso perdido..." data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">paɾaˈiso peɾˈðiðo</div>
+          </div><div class="lc en">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Lost paradise...</div>
+            <div class="lyric-syllabic"><span class="a">Lost</span> <span class="a">par</span>-a-dise...</div>
+            <button class="plb" id="plb-chorus1-en-9" data-text="Lost paradise..." data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">lɒst ˈpærədaɪs</div>
+          </div>
+          </div></div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Dans les écoles de béton...</div>
+            <div class="lyric-syllabic">Dans les é-coles de bé-<span class="a">ton</span>...</div>
+            <button class="plb" id="plb-chorus1-fr-10" data-text="Dans les écoles de béton..." data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">dɑ̃ lez‑ekɔl də betɔ̃</div>
+          </div><div class="lc es">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">En las escuelas de cemento...</div>
+            <div class="lyric-syllabic">En las es-<span class="a">cue</span>-las de ce-<span class="a">men</span>-to...</div>
+            <button class="plb" id="plb-chorus1-es-10" data-text="En las escuelas de cemento..." data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">en las esˈkwelas ðe seˈmento</div>
+          </div><div class="lc en">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">In the concrete schools...</div>
+            <div class="lyric-syllabic">In the <span class="a">con</span>-crete <span class="a">schools</span>...</div>
+            <button class="plb" id="plb-chorus1-en-10" data-text="In the concrete schools..." data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ɪn ðə ˈkɒnkriːt skuːlz</div>
+          </div>
+          </div></div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Paradis perdu...</div>
+            <div class="lyric-syllabic">Pa-ra-<span class="a">dis</span> per-<span class="a">du</span>...</div>
+            <button class="plb" id="plb-chorus1-fr-11" data-text="Paradis perdu..." data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">paʁadi pɛʁdy</div>
+          </div><div class="lc es">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Paraíso perdido...</div>
+            <div class="lyric-syllabic">Pa-ra-<span class="a">í</span>-so per-<span class="a">di</span>-do...</div>
+            <button class="plb" id="plb-chorus1-es-11" data-text="Paraíso perdido..." data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">paɾaˈiso peɾˈðiðo</div>
+          </div><div class="lc en">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Lost paradise...</div>
+            <div class="lyric-syllabic"><span class="a">Lost</span> <span class="a">par</span>-a-dise...</div>
+            <button class="plb" id="plb-chorus1-en-11" data-text="Lost paradise..." data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">lɒst ˈpærədaɪs</div>
+          </div>
+          </div></div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Où les enfants apprennent la peur avant les leçons...</div>
+            <div class="lyric-syllabic">Où les en-fants ap-prennent la <span class="a">peur</span> a-vant les le-<span class="a">çons</span>...</div>
+            <button class="plb" id="plb-chorus1-fr-12" data-text="Où les enfants apprennent la peur avant les leçons..." data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">u lez‑ɑ̃fɑ̃ apʁɛn la pœʁ avɑ̃ le ləsɔ̃</div>
+          </div><div class="lc es">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Donde los niños aprenden el miedo antes que las lecciones...</div>
+            <div class="lyric-syllabic">Don-de los <span class="a">ni</span>-ños a-<span class="a">pren</span>-den el <span class="a">mie</span>-do an-tes que las lec-<span class="a">cio</span>-nes...</div>
+            <button class="plb" id="plb-chorus1-es-12" data-text="Donde los niños aprenden el miedo antes que las lecciones..." data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ˈdonde los ˈniɲos aˈpɾenden el ˈmjeðo ˈantes ke las lekˈsjones</div>
+          </div><div class="lc en">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Where children learn fear before the lessons...</div>
+            <div class="lyric-syllabic">Where <span class="a">chil</span>-dren <span class="a">learn</span> <span class="a">fear</span> be-<span class="a">fore</span> the <span class="a">les</span>-sons...</div>
+            <button class="plb" id="plb-chorus1-en-12" data-text="Where children learn fear before the lessons..." data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">wɛr ˈtʃɪldrən lɜːrn fɪr bɪˈfɔːr ðə ˈlɛsənz</div>
+          </div>
+          </div></div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Les sirènes chantent encore...</div>
+            <div class="lyric-syllabic">Les si-<span class="a">rènes</span> chantent en-<span class="a">core</span>...</div>
+            <button class="plb" id="plb-chorus1-fr-13" data-text="Les sirènes chantent encore..." data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">le siʁɛn ʃɑ̃t ɑ̃kɔʁ</div>
+          </div><div class="lc es">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Las sirenas siguen cantando...</div>
+            <div class="lyric-syllabic">Las si-<span class="a">re</span>-nas <span class="a">si</span>-guen can-<span class="a">tan</span>-do...</div>
+            <button class="plb" id="plb-chorus1-es-13" data-text="Las sirenas siguen cantando..." data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">las siˈɾenas ˈsiɣen kanˈtando</div>
+          </div><div class="lc en">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">The sirens still sing...</div>
+            <div class="lyric-syllabic">The <span class="a">si</span>-rens still <span class="a">sing</span>...</div>
+            <button class="plb" id="plb-chorus1-en-13" data-text="The sirens still sing..." data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ðə ˈsaɪrənz stɪl sɪŋ</div>
+          </div>
+          </div></div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Sous les lumières fatiguées...</div>
+            <div class="lyric-syllabic">Sous les lu-<span class="a">mières</span> fa-ti-<span class="a">guées</span>...</div>
+            <button class="plb" id="plb-chorus1-fr-14" data-text="Sous les lumières fatiguées..." data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">su le lymjɛʁ fatiɡe</div>
+          </div><div class="lc es">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Bajo las luces cansadas...</div>
+            <div class="lyric-syllabic">Ba-jo las <span class="a">lu</span>-ces can-<span class="a">sa</span>-das...</div>
+            <button class="plb" id="plb-chorus1-es-14" data-text="Bajo las luces cansadas..." data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ˈbaxo las ˈluses kanˈsaðas</div>
+          </div><div class="lc en">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Under the tired lights...</div>
+            <div class="lyric-syllabic"><span class="a">Un</span>-der the <span class="a">tired</span> <span class="a">lights</span>...</div>
+            <button class="plb" id="plb-chorus1-en-14" data-text="Under the tired lights..." data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ˈʌndər ðə taɪərd laɪts</div>
+          </div>
+          </div></div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-duo">Duo</span>
+            <div class="lyric-text">Et les adultes ferment les yeux comme si tout allait passer...</div>
+            <div class="lyric-syllabic">Et les a-dultes ferment les <span class="a">yeux</span> comme si tout al-lait pa-<span class="a">sser</span>...</div>
+            <button class="plb" id="plb-chorus1-fr-15" data-text="Et les adultes ferment les yeux comme si tout allait passer..." data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">e lez‑adylt fɛʁm lez‑jø kɔm si tut‑alɛ pase</div>
+          </div><div class="lc es">
+            <span class="badge badge-duo">Duo</span>
+            <div class="lyric-text">Y los adultos cierran los ojos como si todo fuera a pasar...</div>
+            <div class="lyric-syllabic">Y los a-<span class="a">dul</span>-tos <span class="a">cie</span>-rran los <span class="a">o</span>-jos co-mo si <span class="a">to</span>-do fue-ra a pa-<span class="a">sar</span>...</div>
+            <button class="plb" id="plb-chorus1-es-15" data-text="Y los adultos cierran los ojos como si todo fuera a pasar..." data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">i los aˈðultos ˈsjeran los ˈoxos ˈkomo si ˈtoðo ˈfweɾa a paˈsaɾ</div>
+          </div><div class="lc en">
+            <span class="badge badge-duo">Duo</span>
+            <div class="lyric-text">And the adults close their eyes as if everything would pass...</div>
+            <div class="lyric-syllabic">And the a-<span class="a">dults</span> <span class="a">close</span> their <span class="a">eyes</span> as if <span class="a">ev</span>-ery-thing would <span class="a">pass</span>...</div>
+            <button class="plb" id="plb-chorus1-en-15" data-text="And the adults close their eyes as if everything would pass..." data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ənd ði əˈdʌlts kloʊz ðɛr aɪz əz ɪf ˈɛvriθɪŋ wʊd pæs</div>
+          </div>
+          </div></div>
+      </section>
+
+  <section class="song-sec" id="sec-verse2">
+        <div class="sec-head">
+          <span class="sec-name">Couplet 2 / Verso 2 / Verse 2</span>
+        </div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Des professeurs insultés pour avoir voulu aider</div>
+            <div class="lyric-syllabic">Des pro-fe-sseurs in-sul-<span class="a">tés</span> pour a-voir vou-lu ai-<span class="a">der</span></div>
+            <button class="plb" id="plb-verse2-fr-16" data-text="Des professeurs insultés pour avoir voulu aider" data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">de pʁɔfesœʁ ɛ̃sylte puʁ avwaʁ vuly ede</div>
+          </div><div class="lc es">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Profesores insultados por haber querido ayudar</div>
+            <div class="lyric-syllabic">Pro-fe-<span class="a">so</span>-res in-sul-<span class="a">ta</span>-dos por ha-<span class="a">ber</span> que-<span class="a">ri</span>-do a-yu-<span class="a">dar</span></div>
+            <button class="plb" id="plb-verse2-es-16" data-text="Profesores insultados por haber querido ayudar" data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">profeˈsoɾes insulˈtaðos poɾ aˈβeɾ keˈɾiðo aʝuˈðaɾ</div>
+          </div><div class="lc en">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Teachers insulted for wanting to help</div>
+            <div class="lyric-syllabic"><span class="a">Teach</span>-ers in-<span class="a">sult</span>-ed for <span class="a">want</span>-ing to <span class="a">help</span></div>
+            <button class="plb" id="plb-verse2-en-16" data-text="Teachers insulted for wanting to help" data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ˈtiːtʃərz ɪnˈsʌltɪd fɔːr ˈwɒntɪŋ tuː hɛlp</div>
+          </div>
+          </div></div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Des menaces dans les classes pour une mauvaise vérité</div>
+            <div class="lyric-syllabic">Des me-<span class="a">na</span>-ces dans les clas-ses pour une mau-vaise vé-ri-<span class="a">té</span></div>
+            <button class="plb" id="plb-verse2-fr-17" data-text="Des menaces dans les classes pour une mauvaise vérité" data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">de mənas dɑ̃ le klas puʁ yn movɛz veʁite</div>
+          </div><div class="lc es">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Amenazas en las clases por una verdad incómoda</div>
+            <div class="lyric-syllabic">A-me-<span class="a">na</span>-zas en las cla-ses por u-na ver-<span class="a">dad</span> in-<span class="a">có</span>-mo-da</div>
+            <button class="plb" id="plb-verse2-es-17" data-text="Amenazas en las clases por una verdad incómoda" data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ameˈnasas en las ˈklases poɾ ˈuna beɾˈðað inˈkomoða</div>
+          </div><div class="lc en">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Threats in classrooms for one wrong truth</div>
+            <div class="lyric-syllabic"><span class="a">Threats</span> in <span class="a">class</span>-rooms for one <span class="a">wrong</span> <span class="a">truth</span></div>
+            <button class="plb" id="plb-verse2-en-17" data-text="Threats in classrooms for one wrong truth" data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">θrɛts ɪn ˈklæsruːmz fɔːr wʌn rɒŋ truːθ</div>
+          </div>
+          </div></div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Les journaux parlent trois jours</div>
+            <div class="lyric-syllabic">Les jour-naux parlent trois <span class="a">jours</span></div>
+            <button class="plb" id="plb-verse2-fr-18" data-text="Les journaux parlent trois jours" data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">le ʒuʁno paʁl tʁwa ʒuʁ</div>
+          </div><div class="lc es">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Los periódicos hablan tres días</div>
+            <div class="lyric-syllabic">Los pe-<span class="a">rió</span>-di-cos <span class="a">ha</span>-blan tres <span class="a">dí</span>-as</div>
+            <button class="plb" id="plb-verse2-es-18" data-text="Los periódicos hablan tres días" data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">los peˈɾjoðikos ˈaβlan tɾes ˈdias</div>
+          </div><div class="lc en">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">The papers talk for three days</div>
+            <div class="lyric-syllabic">The <span class="a">pa</span>-pers <span class="a">talk</span> for <span class="a">three</span> <span class="a">days</span></div>
+            <button class="plb" id="plb-verse2-en-18" data-text="The papers talk for three days" data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ðə ˈpeɪpərz tɔːk fɔːr θriː deɪz</div>
+          </div>
+          </div></div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Puis changent déjà de drame</div>
+            <div class="lyric-syllabic">Puis changent dé-<span class="a">jà</span> de <span class="a">drame</span></div>
+            <button class="plb" id="plb-verse2-fr-19" data-text="Puis changent déjà de drame" data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">pɥi ʃɑ̃ʒ deʒa də dʁam</div>
+          </div><div class="lc es">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Y ya pasan al siguiente drama</div>
+            <div class="lyric-syllabic">Y ya <span class="a">pa</span>-san al si-<span class="a">guien</span>-te <span class="a">dra</span>-ma</div>
+            <button class="plb" id="plb-verse2-es-19" data-text="Y ya pasan al siguiente drama" data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">i ʝa ˈpasan al siˈɣjente ˈdɾama</div>
+          </div><div class="lc en">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Then move on to the next drama</div>
+            <div class="lyric-syllabic">Then <span class="a">move</span> on to the <span class="a">next</span> <span class="a">dra</span>-ma</div>
+            <button class="plb" id="plb-verse2-en-19" data-text="Then move on to the next drama" data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ðɛn muːv ɒn tuː ðə nɛkst ˈdrɑːmə</div>
+          </div>
+          </div></div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Mais les familles gardent les cicatrices</div>
+            <div class="lyric-syllabic">Mais les fa-<span class="a">milles</span> gardent les ci-ca-<span class="a">trices</span></div>
+            <button class="plb" id="plb-verse2-fr-20" data-text="Mais les familles gardent les cicatrices" data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">mɛ le famij ɡaʁd le sikatʁis</div>
+          </div><div class="lc es">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Pero las familias guardan las cicatrices</div>
+            <div class="lyric-syllabic">Pe-ro las fa-<span class="a">mi</span>-lias <span class="a">guar</span>-dan las ci-ca-<span class="a">tri</span>-ces</div>
+            <button class="plb" id="plb-verse2-es-20" data-text="Pero las familias guardan las cicatrices" data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ˈpeɾo las faˈmiljas ˈɣwaɾðan las sikaˈtɾises</div>
+          </div><div class="lc en">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">But families keep the scars</div>
+            <div class="lyric-syllabic">But <span class="a">fam</span>-i-lies <span class="a">keep</span> the <span class="a">scars</span></div>
+            <button class="plb" id="plb-verse2-en-20" data-text="But families keep the scars" data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">bʌt ˈfæməliz kiːp ðə skɑːrz</div>
+          </div>
+          </div></div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Longtemps après les flammes</div>
+            <div class="lyric-syllabic">Long-<span class="a">temps</span> a-près les <span class="a">flammes</span></div>
+            <button class="plb" id="plb-verse2-fr-21" data-text="Longtemps après les flammes" data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">lɔ̃tɑ̃ apʁɛ le flam</div>
+          </div><div class="lc es">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Mucho después de las llamas</div>
+            <div class="lyric-syllabic"><span class="a">Mu</span>-cho des-<span class="a">pués</span> de las <span class="a">lla</span>-mas</div>
+            <button class="plb" id="plb-verse2-es-21" data-text="Mucho después de las llamas" data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ˈmutʃo despˈwes ðe las ˈʎamas</div>
+          </div><div class="lc en">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Long after the flames</div>
+            <div class="lyric-syllabic"><span class="a">Long</span> <span class="a">af</span>-ter the <span class="a">flames</span></div>
+            <button class="plb" id="plb-verse2-en-21" data-text="Long after the flames" data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">lɒŋ ˈæftər ðə fleɪmz</div>
+          </div>
+          </div></div>
+      </section>
+
+  <section class="song-sec" id="sec-break">
+        <div class="sec-head"><span class="sec-name">Break instrumental / Break instrumental / Break</span></div>
+        <div class="instr-note">[Dialogue violon gothique / saxophone ténor mélancolique] / [Diálogo violín gótico / saxofón tenor melancólico] / [Dialogue gothic violin / melancholic tenor saxophone]</div>
+      </section>
+
+  <section class="song-sec" id="sec-verse3">
+        <div class="sec-head">
+          <span class="sec-name">Couplet 3 / Verso 3 / Verse 3</span>
+        </div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Un autre tireur fou dans un monde déjà malade</div>
+            <div class="lyric-syllabic">Un autre ti-<span class="a">reur</span> fou dans un monde dé-jà ma-<span class="a">lade</span></div>
+            <button class="plb" id="plb-verse3-fr-22" data-text="Un autre tireur fou dans un monde déjà malade" data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">œ̃n‑otʁ tiʁœʁ fu dɑ̃z‑œ̃ mɔ̃d deʒa malad</div>
+          </div><div class="lc es">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Otro tirador solitario en un mundo ya enfermo</div>
+            <div class="lyric-syllabic">O-tro ti-ra-<span class="a">dor</span> so-li-<span class="a">ta</span>-rio en un mun-do ya en-<span class="a">fer</span>-mo</div>
+            <button class="plb" id="plb-verse3-es-22" data-text="Otro tirador solitario en un mundo ya enfermo" data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ˈotɾo tiɾaˈðoɾ soliˈtaɾjo en um ˈmundo ʝa emˈfeɾmo</div>
+          </div><div class="lc en">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Another lone shooter in an already sick world</div>
+            <div class="lyric-syllabic">A-<span class="a">noth</span>-er <span class="a">lone</span> <span class="a">shoot</span>-er in an al-<span class="a">read</span>-y <span class="a">sick</span> <span class="a">world</span></div>
+            <button class="plb" id="plb-verse3-en-22" data-text="Another lone shooter in an already sick world" data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">əˈnʌðər loʊn ˈʃuːtər ɪn ən ɔːlˈrɛdi sɪk wɜːrld</div>
+          </div>
+          </div></div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Des noms deviennent hashtags avant de tomber dans le silence</div>
+            <div class="lyric-syllabic">Des noms de-<span class="a">vien</span>nent <span class="a">hash</span>tags a-vant de tom-<span class="a">ber</span> dans le si-<span class="a">lence</span></div>
+            <button class="plb" id="plb-verse3-fr-23" data-text="Des noms deviennent hashtags avant de tomber dans le silence" data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">de nɔ̃ dəvjɛn aʃtaɡ avɑ̃ də tɔ̃be dɑ̃ lə silɑ̃s</div>
+          </div><div class="lc es">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Los nombres se convierten en hashtags antes de caer en el silencio</div>
+            <div class="lyric-syllabic">Los <span class="a">nom</span>-bres se con-<span class="a">vier</span>-ten en hashtags an-tes de ca-<span class="a">er</span> en el si-<span class="a">len</span>-cio</div>
+            <button class="plb" id="plb-verse3-es-23" data-text="Los nombres se convierten en hashtags antes de caer en el silencio" data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">los ˈnombɾes se komˈbjeɾten en ˈxaʃtaɣs ˈantes ðe kaˈeɾ en el siˈlensjo</div>
+          </div><div class="lc en">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Names become hashtags before falling into silence</div>
+            <div class="lyric-syllabic"><span class="a">Names</span> be-<span class="a">come</span> <span class="a">hash</span>-tags be-<span class="a">fore</span> <span class="a">fall</span>-ing in-to <span class="a">si</span>-lence</div>
+            <button class="plb" id="plb-verse3-en-23" data-text="Names become hashtags before falling into silence" data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">neɪmz bɪˈkʌm ˈhæʃtæɡz bɪˈfɔːr ˈfɔːlɪŋ ˈɪntuː ˈsaɪləns</div>
+          </div>
+          </div></div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">On construit des prisons mentales dans des cerveaux d'adolescents</div>
+            <div class="lyric-syllabic">On cons-<span class="a">truit</span> des pri-sons men-<span class="a">ta</span>-les dans des cer-<span class="a">veaux</span> d'a-do-le-<span class="a">scents</span></div>
+            <button class="plb" id="plb-verse3-fr-24" data-text="On construit des prisons mentales dans des cerveaux d'adolescents" data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ɔ̃ kɔ̃stʁɥi de pʁizɔ̃ mɑ̃tal dɑ̃ de sɛʁvo dadɔlesɑ̃</div>
+          </div><div class="lc es">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Construimos prisiones mentales en cerebros adolescentes</div>
+            <div class="lyric-syllabic">Cons-<span class="a">trui</span>-mos pri-<span class="a">sio</span>-nes men-<span class="a">ta</span>-les en ce-<span class="a">re</span>-bros a-do-les-<span class="a">cen</span>-tes</div>
+            <button class="plb" id="plb-verse3-es-24" data-text="Construimos prisiones mentales en cerebros adolescentes" data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">konsˈtɾwimos pɾiˈsjones menˈtales en seˈɾeβɾos aðolesˈsentes</div>
+          </div><div class="lc en">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">We build mental prisons inside teenage brains</div>
+            <div class="lyric-syllabic">We <span class="a">build</span> <span class="a">men</span>-tal <span class="a">pris</span>-ons in-<span class="a">side</span> <span class="a">teen</span>-age <span class="a">brains</span></div>
+            <button class="plb" id="plb-verse3-en-24" data-text="We build mental prisons inside teenage brains" data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">wi bɪld ˈmɛntəl ˈprɪzənz ɪnˈsaɪd ˈtiːneɪdʒ breɪnz</div>
+          </div>
+          </div></div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Puis on demande pourquoi la violence pousse maintenant</div>
+            <div class="lyric-syllabic">Puis on de-<span class="a">mande</span> pour-<span class="a">quoi</span> la vio-lence pousse main-te-<span class="a">nant</span></div>
+            <button class="plb" id="plb-verse3-fr-25" data-text="Puis on demande pourquoi la violence pousse maintenant" data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">pɥiz‑ɔ̃ dəmɑ̃d puʁkwa la vjɔlɑ̃s pus mɛ̃tnɑ̃</div>
+          </div><div class="lc es">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Y luego preguntamos por qué la violencia crece ahora</div>
+            <div class="lyric-syllabic">Y <span class="a">lue</span>-go pre-gun-<span class="a">ta</span>-mos por qué la vio-<span class="a">len</span>-cia <span class="a">cre</span>-ce a-<span class="a">ho</span>-ra</div>
+            <button class="plb" id="plb-verse3-es-25" data-text="Y luego preguntamos por qué la violencia crece ahora" data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">i ˈlweɣo pɾeɣunˈtamos poɾ ˈke la bjoˈlensja ˈkɾese aˈoɾa</div>
+          </div><div class="lc en">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Then we ask why violence is growing now</div>
+            <div class="lyric-syllabic">Then we <span class="a">ask</span> <span class="a">why</span> <span class="a">vi</span>-o-lence is <span class="a">grow</span>-ing <span class="a">now</span></div>
+            <button class="plb" id="plb-verse3-en-25" data-text="Then we ask why violence is growing now" data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ðɛn wi æsk waɪ ˈvaɪələns ɪz ˈɡroʊɪŋ naʊ</div>
+          </div>
+          </div></div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Les écrans vendent la haine</div>
+            <div class="lyric-syllabic">Les é-crans <span class="a">vendent</span> la <span class="a">haine</span></div>
+            <button class="plb" id="plb-verse3-fr-26" data-text="Les écrans vendent la haine" data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">lez‑ekʁɑ̃ vɑ̃d la ɛn</div>
+          </div><div class="lc es">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Las pantallas venden el odio</div>
+            <div class="lyric-syllabic">Las pan-<span class="a">ta</span>-llas <span class="a">ven</span>-den el <span class="a">o</span>-dio</div>
+            <button class="plb" id="plb-verse3-es-26" data-text="Las pantallas venden el odio" data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">las panˈtaʎas ˈbenden el ˈoðjo</div>
+          </div><div class="lc en">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">The screens sell hate</div>
+            <div class="lyric-syllabic">The <span class="a">screens</span> <span class="a">sell</span> <span class="a">hate</span></div>
+            <button class="plb" id="plb-verse3-en-26" data-text="The screens sell hate" data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ðə skriːnz sɛl heɪt</div>
+          </div>
+          </div></div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Et les enfants la respirent</div>
+            <div class="lyric-syllabic">Et les en-fants la res-<span class="a">pirent</span></div>
+            <button class="plb" id="plb-verse3-fr-27" data-text="Et les enfants la respirent" data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">e lez‑ɑ̃fɑ̃ la ʁɛspiʁ</div>
+          </div><div class="lc es">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Y los niños lo respiran</div>
+            <div class="lyric-syllabic">Y los <span class="a">ni</span>-ños lo res-<span class="a">pi</span>-ran</div>
+            <button class="plb" id="plb-verse3-es-27" data-text="Y los niños lo respiran" data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">i los ˈniɲos lo resˈpiɾan</div>
+          </div><div class="lc en">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">And children breathe it in</div>
+            <div class="lyric-syllabic">And <span class="a">chil</span>-dren <span class="a">breathe</span> it in</div>
+            <button class="plb" id="plb-verse3-en-27" data-text="And children breathe it in" data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ənd ˈtʃɪldrən briːð ɪt ɪn</div>
+          </div>
+          </div></div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Pendant que les puissants débattent</div>
+            <div class="lyric-syllabic">Pen-dant que les puis-<span class="a">sants</span> dé-<span class="a">battent</span></div>
+            <button class="plb" id="plb-verse3-fr-28" data-text="Pendant que les puissants débattent" data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">pɑ̃dɑ̃ kə le pɥisɑ̃ debat</div>
+          </div><div class="lc es">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Mientras los poderosos debaten</div>
+            <div class="lyric-syllabic">Mien-tras los po-de-<span class="a">ro</span>-sos de-<span class="a">ba</span>-ten</div>
+            <button class="plb" id="plb-verse3-es-28" data-text="Mientras los poderosos debaten" data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ˈmjentɾas los poðeˈɾosos deˈβaten</div>
+          </div><div class="lc en">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">While the powerful debate</div>
+            <div class="lyric-syllabic">While the <span class="a">pow</span>-er-ful de-<span class="a">bate</span></div>
+            <button class="plb" id="plb-verse3-en-28" data-text="While the powerful debate" data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">waɪl ðə ˈpaʊərfʊl dɪˈbeɪt</div>
+          </div>
+          </div></div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Les salles de classe chavirent</div>
+            <div class="lyric-syllabic">Les salles de classe cha-<span class="a">virent</span></div>
+            <button class="plb" id="plb-verse3-fr-29" data-text="Les salles de classe chavirent" data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">le sal də klas ʃaviʁ</div>
+          </div><div class="lc es">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Las aulas se hunden</div>
+            <div class="lyric-syllabic">Las <span class="a">au</span>-las se <span class="a">hun</span>-den</div>
+            <button class="plb" id="plb-verse3-es-29" data-text="Las aulas se hunden" data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">las ˈawlas se ˈunden</div>
+          </div><div class="lc en">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">The classrooms are sinking</div>
+            <div class="lyric-syllabic">The <span class="a">class</span>-rooms are <span class="a">sink</span>-ing</div>
+            <button class="plb" id="plb-verse3-en-29" data-text="The classrooms are sinking" data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ðə ˈklæsruːmz ɑːr ˈsɪŋkɪŋ</div>
+          </div>
+          </div></div>
+      </section>
+
+  <section class="song-sec" id="sec-chorusfinal">
+        <div class="sec-head">
+          <span class="sec-name">Refrain Final / Estribillo Final / Final Chorus</span>
+        </div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Paradis perdu...</div>
+            <div class="lyric-syllabic">Pa-ra-<span class="a">dis</span> per-<span class="a">du</span>...</div>
+            <button class="plb" id="plb-chorusfinal-fr-30" data-text="Paradis perdu..." data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">paʁadi pɛʁdy</div>
+          </div><div class="lc es">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Paraíso perdido...</div>
+            <div class="lyric-syllabic">Pa-ra-<span class="a">í</span>-so per-<span class="a">di</span>-do...</div>
+            <button class="plb" id="plb-chorusfinal-es-30" data-text="Paraíso perdido..." data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">paɾaˈiso peɾˈðiðo</div>
+          </div><div class="lc en">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Lost paradise...</div>
+            <div class="lyric-syllabic"><span class="a">Lost</span> <span class="a">par</span>-a-dise...</div>
+            <button class="plb" id="plb-chorusfinal-en-30" data-text="Lost paradise..." data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">lɒst ˈpærədaɪs</div>
+          </div>
+          </div></div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Dans les écoles de nos villes...</div>
+            <div class="lyric-syllabic">Dans les é-coles de nos <span class="a">villes</span>...</div>
+            <button class="plb" id="plb-chorusfinal-fr-31" data-text="Dans les écoles de nos villes..." data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">dɑ̃ lez‑ekɔl də no vil</div>
+          </div><div class="lc es">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">En las escuelas de nuestras ciudades...</div>
+            <div class="lyric-syllabic">En las es-<span class="a">cue</span>-las de <span class="a">nues</span>-tras ciu-<span class="a">da</span>-des...</div>
+            <button class="plb" id="plb-chorusfinal-es-31" data-text="En las escuelas de nuestras ciudades..." data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">en las esˈkwelas ðe ˈnwestɾas sjuˈðaðes</div>
+          </div><div class="lc en">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">In the schools of our cities...</div>
+            <div class="lyric-syllabic">In the <span class="a">schools</span> of our <span class="a">cit</span>-ies...</div>
+            <button class="plb" id="plb-chorusfinal-en-31" data-text="In the schools of our cities..." data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ɪn ðə skuːlz əv aʊər ˈsɪtiz</div>
+          </div>
+          </div></div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Paradis perdu...</div>
+            <div class="lyric-syllabic">Pa-ra-<span class="a">dis</span> per-<span class="a">du</span>...</div>
+            <button class="plb" id="plb-chorusfinal-fr-32" data-text="Paradis perdu..." data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">paʁadi pɛʁdy</div>
+          </div><div class="lc es">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Paraíso perdido...</div>
+            <div class="lyric-syllabic">Pa-ra-<span class="a">í</span>-so per-<span class="a">di</span>-do...</div>
+            <button class="plb" id="plb-chorusfinal-es-32" data-text="Paraíso perdido..." data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">paɾaˈiso peɾˈðiðo</div>
+          </div><div class="lc en">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Lost paradise...</div>
+            <div class="lyric-syllabic"><span class="a">Lost</span> <span class="a">par</span>-a-dise...</div>
+            <button class="plb" id="plb-chorusfinal-en-32" data-text="Lost paradise..." data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">lɒst ˈpærədaɪs</div>
+          </div>
+          </div></div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Où survivre devient difficile...</div>
+            <div class="lyric-syllabic">Où sur-<span class="a">vivre</span> de-vient di-ffi-<span class="a">cile</span>...</div>
+            <button class="plb" id="plb-chorusfinal-fr-33" data-text="Où survivre devient difficile..." data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">u syʁvivʁ dəvjɛ̃ difisil</div>
+          </div><div class="lc es">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Donde sobrevivir se vuelve difícil...</div>
+            <div class="lyric-syllabic">Don-de so-bre-vi-<span class="a">vir</span> se <span class="a">vuel</span>-ve di-<span class="a">fí</span>-cil...</div>
+            <button class="plb" id="plb-chorusfinal-es-33" data-text="Donde sobrevivir se vuelve difícil..." data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ˈdonde soβɾeβiˈβiɾ se ˈbwelβe diˈfisil</div>
+          </div><div class="lc en">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Where surviving becomes difficult...</div>
+            <div class="lyric-syllabic">Where sur-<span class="a">viv</span>-ing be-<span class="a">comes</span> <span class="a">dif</span>-fi-cult...</div>
+            <button class="plb" id="plb-chorusfinal-en-33" data-text="Where surviving becomes difficult..." data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">wɛr sərˈvaɪvɪŋ bɪˈkʌmz ˈdɪfɪkəlt</div>
+          </div>
+          </div></div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Les sirènes chantent encore...</div>
+            <div class="lyric-syllabic">Les si-<span class="a">rènes</span> chantent en-<span class="a">core</span>...</div>
+            <button class="plb" id="plb-chorusfinal-fr-34" data-text="Les sirènes chantent encore..." data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">le siʁɛn ʃɑ̃t ɑ̃kɔʁ</div>
+          </div><div class="lc es">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Las sirenas siguen cantando...</div>
+            <div class="lyric-syllabic">Las si-<span class="a">re</span>-nas <span class="a">si</span>-guen can-<span class="a">tan</span>-do...</div>
+            <button class="plb" id="plb-chorusfinal-es-34" data-text="Las sirenas siguen cantando..." data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">las siˈɾenas ˈsiɣen kanˈtando</div>
+          </div><div class="lc en">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">The sirens still sing...</div>
+            <div class="lyric-syllabic">The <span class="a">si</span>-rens still <span class="a">sing</span>...</div>
+            <button class="plb" id="plb-chorusfinal-en-34" data-text="The sirens still sing..." data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ðə ˈsaɪrənz stɪl sɪŋ</div>
+          </div>
+          </div></div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Sous les lumières bleues...</div>
+            <div class="lyric-syllabic">Sous les lu-<span class="a">mières</span> <span class="a">bleues</span>...</div>
+            <button class="plb" id="plb-chorusfinal-fr-35" data-text="Sous les lumières bleues..." data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">su le lymjɛʁ blø</div>
+          </div><div class="lc es">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Bajo las luces azules...</div>
+            <div class="lyric-syllabic">Ba-jo las <span class="a">lu</span>-ces a-<span class="a">zu</span>-les...</div>
+            <button class="plb" id="plb-chorusfinal-es-35" data-text="Bajo las luces azules..." data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ˈbaxo las ˈluses aˈsules</div>
+          </div><div class="lc en">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Under the blue lights...</div>
+            <div class="lyric-syllabic"><span class="a">Un</span>-der the <span class="a">blue</span> <span class="a">lights</span>...</div>
+            <button class="plb" id="plb-chorusfinal-en-35" data-text="Under the blue lights..." data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ˈʌndər ðə bluː laɪts</div>
+          </div>
+          </div></div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-duo">Duo</span>
+            <div class="lyric-text">Et les enfants cherchent encore un endroit où grandir heureux...</div>
+            <div class="lyric-syllabic">Et les en-fants cherchent en-<span class="a">core</span> un en-<span class="a">droit</span> où gran-<span class="a">dir</span> heu-<span class="a">reux</span>...</div>
+            <button class="plb" id="plb-chorusfinal-fr-36" data-text="Et les enfants cherchent encore un endroit où grandir heureux..." data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">e lez‑ɑ̃fɑ̃ ʃɛʁʃ ɑ̃kɔʁ œ̃n‑ɑ̃dʁwa u ɡʁɑ̃diʁ œʁø</div>
+          </div><div class="lc es">
+            <span class="badge badge-duo">Duo</span>
+            <div class="lyric-text">Y los niños siguen buscando un lugar donde crecer felices...</div>
+            <div class="lyric-syllabic">Y los <span class="a">ni</span>-ños <span class="a">si</span>-guen bus-<span class="a">can</span>-do un lu-<span class="a">gar</span> don-de cre-<span class="a">cer</span> fe-<span class="a">li</span>-ces...</div>
+            <button class="plb" id="plb-chorusfinal-es-36" data-text="Y los niños siguen buscando un lugar donde crecer felices..." data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">i los ˈniɲos ˈsiɣen busˈkando un luˈɣaɾ ˈdonde kɾeˈseɾ feˈlises</div>
+          </div><div class="lc en">
+            <span class="badge badge-duo">Duo</span>
+            <div class="lyric-text">And children are still searching for a place where they can grow up happy...</div>
+            <div class="lyric-syllabic">And <span class="a">chil</span>-dren are still <span class="a">search</span>-ing for a <span class="a">place</span> where they can <span class="a">grow</span> up <span class="a">hap</span>-py...</div>
+            <button class="plb" id="plb-chorusfinal-en-36" data-text="And children are still searching for a place where they can grow up happy..." data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ənd ˈtʃɪldrən ər stɪl ˈsɜːrtʃɪŋ fɔːr ə pleɪs wɛr ðeɪ kən ɡroʊ ʌp ˈhæpi</div>
+          </div>
+          </div></div>
+      </section>
+
+  <section class="song-sec" id="sec-outro">
+        <div class="sec-head">
+          <span class="sec-name">Outro / Outro / Outro</span>
+        </div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">On leur avait promis demain...</div>
+            <div class="lyric-syllabic">On leur a-vait pro-<span class="a">mis</span> de-<span class="a">main</span>...</div>
+            <button class="plb" id="plb-outro-fr-37" data-text="On leur avait promis demain..." data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ɔ̃ lœʁ avɛ pʁɔmi dəmɛ̃</div>
+          </div><div class="lc es">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">Les habíamos prometido el mañana...</div>
+            <div class="lyric-syllabic">Les ha-<span class="a">bí</span>-a-mos pro-me-<span class="a">ti</span>-do el ma-<span class="a">ña</span>-na...</div>
+            <button class="plb" id="plb-outro-es-37" data-text="Les habíamos prometido el mañana..." data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">les aˈβiamos pɾomeˈtiðo el maˈɲana</div>
+          </div><div class="lc en">
+            <span class="badge badge-trefle">Trèfle</span>
+            <div class="lyric-text">We had promised them tomorrow...</div>
+            <div class="lyric-syllabic">We had <span class="a">prom</span>-ised them to-<span class="a">mor</span>-row...</div>
+            <button class="plb" id="plb-outro-en-37" data-text="We had promised them tomorrow..." data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">wi həd ˈprɒmɪst ðəm təˈmɒroʊ</div>
+          </div>
+          </div></div>
+        <div class="opt-c-row">
+          <div class="row-cells">
+            <div class="lc fr">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Mais demain semble fatigué...</div>
+            <div class="lyric-syllabic">Mais de-<span class="a">main</span> semble fa-ti-<span class="a">gué</span>...</div>
+            <button class="plb" id="plb-outro-fr-38" data-text="Mais demain semble fatigué..." data-lang="fr" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">mɛ dəmɛ̃ sɑ̃bl fatiɡe</div>
+          </div><div class="lc es">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">Pero el mañana parece cansado...</div>
+            <div class="lyric-syllabic">Pe-ro el ma-<span class="a">ña</span>-na pa-<span class="a">re</span>-ce can-<span class="a">sa</span>-do...</div>
+            <button class="plb" id="plb-outro-es-38" data-text="Pero el mañana parece cansado..." data-lang="es" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">ˈpeɾo el maˈɲana paˈɾese kanˈsaðo</div>
+          </div><div class="lc en">
+            <span class="badge badge-minotaure">Minotaure</span>
+            <div class="lyric-text">But tomorrow seems tired...</div>
+            <div class="lyric-syllabic">But to-<span class="a">mor</span>-row <span class="a">seems</span> <span class="a">tired</span>...</div>
+            <button class="plb" id="plb-outro-en-38" data-text="But tomorrow seems tired..." data-lang="en" onclick="playLine(this)" aria-label="Écouter cette ligne">&#9658;</button>
+            <div class="lyric-ipa">bʌt təˈmɒroʊ siːmz taɪərd</div>
+          </div>
+          </div></div>
+      </section>
+
+</div>
+
+<script>
+const LANG_MAP = { fr: "fr-FR", es: "es-ES", en: "en-GB" };
+let curSpeed = 0.9;
+
+function setLang(lang) {
+  document.body.classList.remove("show-fr", "show-es", "show-en");
+  document.querySelectorAll(".lang-btn").forEach(b => b.classList.remove("active"));
+  document.querySelector(`.lang-btn[data-lang="${lang}"]`).classList.add("active");
+  if (lang !== "all") document.body.classList.add("show-" + lang);
+}
+
+function setSpeed(val) {
+  curSpeed = val;
+  document.querySelectorAll(".speed-btn").forEach(b => b.classList.remove("active"));
+  document.querySelector(`.speed-btn[data-speed="${val}"]`).classList.add("active");
+}
+
+function playLine(btn) {
+  if (!("speechSynthesis" in window)) {
+    alert("La synthèse vocale n'est pas supportée par ce navigateur.");
+    return;
+  }
+  const txt = btn.getAttribute("data-text");
+  const lang = btn.getAttribute("data-lang");
+  window.speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(txt);
+  u.lang = LANG_MAP[lang];
+  u.rate = curSpeed;
+  window.speechSynthesis.speak(u);
+}
+</script>
+<footer>tréfle.minotaure · www.trefleminotaure.com · © 2026</footer>
+</body>
+</html>

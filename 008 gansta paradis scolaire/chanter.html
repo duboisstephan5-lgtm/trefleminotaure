@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Gangsta Paradis Scolaire / Gangsta School Paradise / Gangsta Paraíso Escolar — Paroles</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Cinzel:wght@500;700&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root { --gold: #b8962e; --parchment: #f5ecd7; --outer: #2a1f10; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--outer);
+    background: radial-gradient(ellipse at center, #3a2a16 0%, #2a1f10 70%, #1a1208 100%);
+    font-family: "Cormorant Garamond", serif;
+    color: #2a1f10;
+    min-height: 100vh;
+    padding: 24px 12px 60px;
+  }
+  .page {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: var(--parchment);
+    border: 2px solid #c4a97a;
+    border-radius: 10px;
+    box-shadow: 0 0 40px rgba(0,0,0,0.6);
+    padding: 32px clamp(14px, 4vw, 48px);
+  }
+  header { text-align: center; border-bottom: 1px solid #c4a97a; padding-bottom: 18px; margin-bottom: 22px; }
+  header h1 {
+    font-family: "IM Fell English", serif; font-style: italic;
+    font-size: clamp(1.6rem, 4vw, 2.6rem); margin: 0 0 6px; color: #2a1f10;
+  }
+  header .subtitle { font-family: "Cinzel", serif; font-size: 0.85rem; letter-spacing: 0.08em; color: var(--gold); text-transform: uppercase; }
+  .meta { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 14px; }
+  .meta span {
+    font-family: "Cinzel", serif; font-size: 0.7rem; letter-spacing: 0.04em; background: #efe2bf;
+    border: 1px solid #c4a97a; border-radius: 20px; padding: 4px 12px; color: #5a4520;
+  }
+  .controls {
+    display: flex; flex-wrap: wrap; gap: 18px; justify-content: center; align-items: center;
+    margin: 20px 0 26px; padding: 14px; background: #efe2bf; border-radius: 8px; border: 1px solid #d8c79a;
+  }
+  .control-group { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+  .control-group label { font-family: "Cinzel", serif; font-size: 0.65rem; letter-spacing: 0.06em; color: #7a5e20; text-transform: uppercase; }
+  .btn-row { display: flex; gap: 6px; flex-wrap: wrap; justify-content: center; }
+  .btn-row button {
+    font-family: "Cinzel", serif; font-size: 0.72rem; border: 1px solid var(--gold); background: #fffaf0;
+    color: #5a4520; border-radius: 6px; padding: 7px 13px; cursor: pointer; transition: all .2s;
+  }
+  .btn-row button:hover { background: var(--gold); color: #fff; }
+  .btn-row button.active { background: var(--gold); color: #fff; }
+
+  .song-sec { margin-bottom: 22px; border-radius: 8px; overflow: hidden; border: 1px solid #d8c79a; }
+  .sec-head { display: flex; align-items: center; justify-content: space-between; background: #e9dab3; padding: 8px 14px; border-bottom: 1px solid #d8c79a; }
+  .sec-name { font-family: "Cinzel", serif; font-size: 0.78rem; letter-spacing: 0.04em; color: #5a4520; text-transform: uppercase; }
+  .playbtn {
+    background: var(--gold); color: #fff; border: none; border-radius: 50%; width: 30px; height: 30px;
+    cursor: pointer; font-size: 0.85rem; line-height: 1; flex-shrink: 0;
+  }
+  .playbtn:hover { background: #9a7a20; }
+
+  .cols { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1px; background: #d8c79a; }
+  .col { padding: 14px 14px 18px; background: #fffaf0; }
+  .col-fr, .lc.fr { background: #e8f0fc; border-radius: 4px; }
+  .col-es, .lc.es { background: #f5ead5; border-radius: 4px; }
+  .col-en, .lc.en { background: #fce8ec; border-radius: 4px; }
+  .lt { font-family: "Cinzel", serif; font-size: 0.62rem; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 8px; }
+  .col-fr .lt { color: #1a3a6b; }
+  .col-es .lt { color: #7a5010; }
+  .col-en .lt { color: #8b1a3a; }
+
+  .lyrics { font-style: italic; font-size: 1.15rem; line-height: 1.5; }
+  .lyric-line { margin: 0 0 8px; }
+  .badge {
+    display: inline-block; font-family: "Cinzel", serif; font-style: normal; font-size: 0.55rem;
+    letter-spacing: 0.04em; text-transform: uppercase; padding: 2px 7px; border-radius: 10px;
+    margin-right: 7px; vertical-align: middle; position: relative; top: -1px;
+  }
+  .badge-trefle { background: #c8dcf8; color: #1a3a6b; }
+  .badge-minotaure { background: #2a1f10; color: #f5ecd7; }
+  .badge-duo { background: var(--gold); color: #fff; }
+  .badge-ghost { background: #ded9ea; color: #443a5c; }
+
+  .instru-sec .lyrics { opacity: 0.5; font-style: italic; }
+  .instru-sec .col { filter: grayscale(0.3); }
+
+  body.show-fr .col-es, body.show-fr .col-en { display: none; }
+  body.show-es .col-fr, body.show-es .col-en { display: none; }
+  body.show-en .col-fr, body.show-en .col-es { display: none; }
+  body.show-fr .cols, body.show-es .cols, body.show-en .cols { grid-template-columns: 1fr; }
+
+  footer {
+    text-align: center; margin-top: 30px; padding-top: 16px; border-top: 1px solid #c4a97a;
+    font-family: "Cinzel", serif; font-size: 0.7rem; letter-spacing: 0.05em; color: #7a5e20;
+  }
+  footer a { color: var(--gold); text-decoration: none; }
+
+  @media (max-width: 800px) {
+    .cols { grid-template-columns: 1fr; }
+    body:not(.show-fr):not(.show-es):not(.show-en) .col { border-bottom: 1px solid #d8c79a; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <h1>Gangsta Paradis Scolaire <span style="opacity:.5">/</span> Gangsta School Paradise <span style="opacity:.5">/</span> Gangsta Paraíso Escolar</h1>
+    <div class="subtitle">Cinematic street opera — duo réel</div>
+    <div class="meta">
+      <span>95 BPM</span>
+      <span>Dark gothic urban pop</span>
+      <span>Trèfle & Minotaure — duo réel 50/50</span>
+      <span>⚠ Thème sensible — violence scolaire</span>
+    </div>
+  </header>
+
+  <div class="controls">
+    <div class="control-group">
+      <label>Langue</label>
+      <div class="btn-row">
+        <button class="lang-btn active" data-lang="all" onclick="setLang('all')">Trilingue</button>
+        <button class="lang-btn" data-lang="fr" onclick="setLang('fr')">🇫🇷 Français</button>
+        <button class="lang-btn" data-lang="es" onclick="setLang('es')">🇪🇸 Español</button>
+        <button class="lang-btn" data-lang="en" onclick="setLang('en')">🇬🇧 English</button>
+      </div>
+    </div>
+    <div class="control-group">
+      <label>Vitesse TTS</label>
+      <div class="btn-row">
+        <button class="speed-btn" data-speed="0.7" onclick="setSpeed(0.7)">× 0.7</button>
+        <button class="speed-btn active" data-speed="0.9" onclick="setSpeed(0.9)">× 0.9</button>
+        <button class="speed-btn" data-speed="1" onclick="setSpeed(1)">× 1.0</button>
+      </div>
+    </div>
+  </div>
+
+  <section class="song-sec" id="sec-intro">
+        <div class="sec-head">
+          <span class="sec-name">Intro / Intro / Intro</span>
+          <button class="playbtn" onclick="playSec('intro')" aria-label="Écouter cette section">&#9658;</button>
+        </div>
+        <div class="cols">
+          <div class="col col-fr">
+          <div class="lt">Intro</div>
+          <div class="lyrics">
+          <p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Encore une minute de silence... dans une école pleine de bruit...</p><p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Des enfants grandissent trop vite... dans un monde qui regarde ailleurs...</p>
+          </div>
+        </div>
+          <div class="col col-es">
+          <div class="lt">Intro</div>
+          <div class="lyrics">
+          <p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Un minuto más de silencio... en una escuela llena de ruido...</p><p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Los niños crecen demasiado rápido... en un mundo que mira hacia otro lado...</p>
+          </div>
+        </div>
+          <div class="col col-en">
+          <div class="lt">Intro</div>
+          <div class="lyrics">
+          <p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>One more minute of silence... in a school full of noise...</p><p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Children grow up too fast... in a world that looks away...</p>
+          </div>
+        </div>
+        </div>
+      </section>
+
+  <section class="song-sec" id="sec-verse1">
+        <div class="sec-head">
+          <span class="sec-name">Couplet 1 / Verso 1 / Verse 1</span>
+          <button class="playbtn" onclick="playSec('verse1')" aria-label="Écouter cette section">&#9658;</button>
+        </div>
+        <div class="cols">
+          <div class="col col-fr">
+          <div class="lt">Couplet 1</div>
+          <div class="lyrics">
+          <p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Dans les couloirs on filme les humiliations</p><p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Des téléphones levés comme des armes sans pardon</p><p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Les profs tiennent debout avec la peur dans les yeux</p><p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Pendant que certains parents transforment la colère en feu</p><p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Un môme rentre chez lui avec le ventre retourné</p><p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Demain sur les réseaux son visage va tourner</p>
+          </div>
+        </div>
+          <div class="col col-es">
+          <div class="lt">Verso 1</div>
+          <div class="lyrics">
+          <p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>En los pasillos filman las humillaciones</p><p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Teléfonos levantados como armas sin perdón</p><p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Los profesores siguen de pie con el miedo en los ojos</p><p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Mientras algunos padres convierten la rabia en fuego</p><p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Un chico vuelve a casa con el estómago revuelto</p><p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Mañana en las redes su cara dará la vuelta</p>
+          </div>
+        </div>
+          <div class="col col-en">
+          <div class="lt">Verse 1</div>
+          <div class="lyrics">
+          <p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>In the hallways they film the humiliations</p><p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Phones raised like weapons with no mercy</p><p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Teachers still standing with fear in their eyes</p><p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>While some parents turn anger into fire</p><p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>A kid goes home with his stomach turned inside out</p><p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Tomorrow on the networks his face will go around</p>
+          </div>
+        </div>
+        </div>
+      </section>
+
+  <section class="song-sec" id="sec-chorus1">
+        <div class="sec-head">
+          <span class="sec-name">Refrain / Estribillo / Chorus</span>
+          <button class="playbtn" onclick="playSec('chorus1')" aria-label="Écouter cette section">&#9658;</button>
+        </div>
+        <div class="cols">
+          <div class="col col-fr">
+          <div class="lt">Refrain</div>
+          <div class="lyrics">
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Paradis perdu...</p><p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Dans les écoles de béton...</p><p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Paradis perdu...</p><p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Où les enfants apprennent la peur avant les leçons...</p><p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Les sirènes chantent encore...</p><p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Sous les lumières fatiguées...</p><p class="lyric-line"><span class="badge badge-duo">Duo</span>Et les adultes ferment les yeux comme si tout allait passer...</p>
+          </div>
+        </div>
+          <div class="col col-es">
+          <div class="lt">Estribillo</div>
+          <div class="lyrics">
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Paraíso perdido...</p><p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>En las escuelas de cemento...</p><p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Paraíso perdido...</p><p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Donde los niños aprenden el miedo antes que las lecciones...</p><p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Las sirenas siguen cantando...</p><p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Bajo las luces cansadas...</p><p class="lyric-line"><span class="badge badge-duo">Duo</span>Y los adultos cierran los ojos como si todo fuera a pasar...</p>
+          </div>
+        </div>
+          <div class="col col-en">
+          <div class="lt">Chorus</div>
+          <div class="lyrics">
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Lost paradise...</p><p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>In the concrete schools...</p><p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Lost paradise...</p><p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Where children learn fear before the lessons...</p><p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>The sirens still sing...</p><p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Under the tired lights...</p><p class="lyric-line"><span class="badge badge-duo">Duo</span>And the adults close their eyes as if everything would pass...</p>
+          </div>
+        </div>
+        </div>
+      </section>
+
+  <section class="song-sec" id="sec-verse2">
+        <div class="sec-head">
+          <span class="sec-name">Couplet 2 / Verso 2 / Verse 2</span>
+          <button class="playbtn" onclick="playSec('verse2')" aria-label="Écouter cette section">&#9658;</button>
+        </div>
+        <div class="cols">
+          <div class="col col-fr">
+          <div class="lt">Couplet 2</div>
+          <div class="lyrics">
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Des professeurs insultés pour avoir voulu aider</p><p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Des menaces dans les classes pour une mauvaise vérité</p><p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Les journaux parlent trois jours</p><p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Puis changent déjà de drame</p><p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Mais les familles gardent les cicatrices</p><p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Longtemps après les flammes</p>
+          </div>
+        </div>
+          <div class="col col-es">
+          <div class="lt">Verso 2</div>
+          <div class="lyrics">
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Profesores insultados por haber querido ayudar</p><p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Amenazas en las clases por una verdad incómoda</p><p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Los periódicos hablan tres días</p><p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Y ya pasan al siguiente drama</p><p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Pero las familias guardan las cicatrices</p><p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Mucho después de las llamas</p>
+          </div>
+        </div>
+          <div class="col col-en">
+          <div class="lt">Verse 2</div>
+          <div class="lyrics">
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Teachers insulted for wanting to help</p><p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Threats in classrooms for one wrong truth</p><p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>The papers talk for three days</p><p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Then move on to the next drama</p><p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>But families keep the scars</p><p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Long after the flames</p>
+          </div>
+        </div>
+        </div>
+      </section>
+
+  <section class="song-sec instru-sec" id="sec-break">
+        <div class="sec-head">
+          <span class="sec-name">Break instrumental / Break instrumental / Break</span>
+          <button class="playbtn" onclick="playSec('break')" aria-label="Écouter cette section">&#9658;</button>
+        </div>
+        <div class="cols">
+          <div class="col col-fr">
+          <div class="lt">Break instrumental</div>
+          <div class="lyrics">
+          <p class="lyric-line instr-line">[Dialogue violon gothique / saxophone ténor mélancolique]</p>
+          </div>
+        </div>
+          <div class="col col-es">
+          <div class="lt">Break instrumental</div>
+          <div class="lyrics">
+          <p class="lyric-line instr-line">[Diálogo violín gótico / saxofón tenor melancólico]</p>
+          </div>
+        </div>
+          <div class="col col-en">
+          <div class="lt">Break</div>
+          <div class="lyrics">
+          <p class="lyric-line instr-line">[Dialogue gothic violin / melancholic tenor saxophone]</p>
+          </div>
+        </div>
+        </div>
+      </section>
+
+  <section class="song-sec" id="sec-verse3">
+        <div class="sec-head">
+          <span class="sec-name">Couplet 3 / Verso 3 / Verse 3</span>
+          <button class="playbtn" onclick="playSec('verse3')" aria-label="Écouter cette section">&#9658;</button>
+        </div>
+        <div class="cols">
+          <div class="col col-fr">
+          <div class="lt">Couplet 3</div>
+          <div class="lyrics">
+          <p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Un autre tireur fou dans un monde déjà malade</p><p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Des noms deviennent hashtags avant de tomber dans le silence</p><p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>On construit des prisons mentales dans des cerveaux d'adolescents</p><p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Puis on demande pourquoi la violence pousse maintenant</p><p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Les écrans vendent la haine</p><p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Et les enfants la respirent</p><p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Pendant que les puissants débattent</p><p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Les salles de classe chavirent</p>
+          </div>
+        </div>
+          <div class="col col-es">
+          <div class="lt">Verso 3</div>
+          <div class="lyrics">
+          <p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Otro tirador solitario en un mundo ya enfermo</p><p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Los nombres se convierten en hashtags antes de caer en el silencio</p><p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Construimos prisiones mentales en cerebros adolescentes</p><p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Y luego preguntamos por qué la violencia crece ahora</p><p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Las pantallas venden el odio</p><p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Y los niños lo respiran</p><p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Mientras los poderosos debaten</p><p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Las aulas se hunden</p>
+          </div>
+        </div>
+          <div class="col col-en">
+          <div class="lt">Verse 3</div>
+          <div class="lyrics">
+          <p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Another lone shooter in an already sick world</p><p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Names become hashtags before falling into silence</p><p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>We build mental prisons inside teenage brains</p><p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Then we ask why violence is growing now</p><p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>The screens sell hate</p><p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>And children breathe it in</p><p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>While the powerful debate</p><p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>The classrooms are sinking</p>
+          </div>
+        </div>
+        </div>
+      </section>
+
+  <section class="song-sec" id="sec-chorusfinal">
+        <div class="sec-head">
+          <span class="sec-name">Refrain Final / Estribillo Final / Final Chorus</span>
+          <button class="playbtn" onclick="playSec('chorusfinal')" aria-label="Écouter cette section">&#9658;</button>
+        </div>
+        <div class="cols">
+          <div class="col col-fr">
+          <div class="lt">Refrain Final</div>
+          <div class="lyrics">
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Paradis perdu...</p><p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Dans les écoles de nos villes...</p><p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Paradis perdu...</p><p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Où survivre devient difficile...</p><p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Les sirènes chantent encore...</p><p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Sous les lumières bleues...</p><p class="lyric-line"><span class="badge badge-duo">Duo</span>Et les enfants cherchent encore un endroit où grandir heureux...</p>
+          </div>
+        </div>
+          <div class="col col-es">
+          <div class="lt">Estribillo Final</div>
+          <div class="lyrics">
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Paraíso perdido...</p><p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>En las escuelas de nuestras ciudades...</p><p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Paraíso perdido...</p><p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Donde sobrevivir se vuelve difícil...</p><p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Las sirenas siguen cantando...</p><p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Bajo las luces azules...</p><p class="lyric-line"><span class="badge badge-duo">Duo</span>Y los niños siguen buscando un lugar donde crecer felices...</p>
+          </div>
+        </div>
+          <div class="col col-en">
+          <div class="lt">Final Chorus</div>
+          <div class="lyrics">
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Lost paradise...</p><p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>In the schools of our cities...</p><p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Lost paradise...</p><p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Where surviving becomes difficult...</p><p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>The sirens still sing...</p><p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Under the blue lights...</p><p class="lyric-line"><span class="badge badge-duo">Duo</span>And children are still searching for a place where they can grow up happy...</p>
+          </div>
+        </div>
+        </div>
+      </section>
+
+  <section class="song-sec" id="sec-outro">
+        <div class="sec-head">
+          <span class="sec-name">Outro / Outro / Outro</span>
+          <button class="playbtn" onclick="playSec('outro')" aria-label="Écouter cette section">&#9658;</button>
+        </div>
+        <div class="cols">
+          <div class="col col-fr">
+          <div class="lt">Outro</div>
+          <div class="lyrics">
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>On leur avait promis demain...</p><p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Mais demain semble fatigué...</p>
+          </div>
+        </div>
+          <div class="col col-es">
+          <div class="lt">Outro</div>
+          <div class="lyrics">
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>Les habíamos prometido el mañana...</p><p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>Pero el mañana parece cansado...</p>
+          </div>
+        </div>
+          <div class="col col-en">
+          <div class="lt">Outro</div>
+          <div class="lyrics">
+          <p class="lyric-line"><span class="badge badge-trefle">Trèfle</span>We had promised them tomorrow...</p><p class="lyric-line"><span class="badge badge-minotaure">Minotaure</span>But tomorrow seems tired...</p>
+          </div>
+        </div>
+        </div>
+      </section>
+
+
+<footer>tréfle.minotaure · <a href="https://www.trefleminotaure.com">www.trefleminotaure.com</a> · © 2026</footer>
+</div>
+
+<script>
+const SECS = {
+  "intro": { fr: "Encore une minute de silence... dans une école pleine de bruit... Des enfants grandissent trop vite... dans un monde qui regarde ailleurs...", es: "Un minuto más de silencio... en una escuela llena de ruido... Los niños crecen demasiado rápido... en un mundo que mira hacia otro lado...", en: "One more minute of silence... in a school full of noise... Children grow up too fast... in a world that looks away..." },
+  "verse1": { fr: "Dans les couloirs on filme les humiliations Des téléphones levés comme des armes sans pardon Les profs tiennent debout avec la peur dans les yeux Pendant que certains parents transforment la colère en feu Un môme rentre chez lui avec le ventre retourné Demain sur les réseaux son visage va tourner", es: "En los pasillos filman las humillaciones Teléfonos levantados como armas sin perdón Los profesores siguen de pie con el miedo en los ojos Mientras algunos padres convierten la rabia en fuego Un chico vuelve a casa con el estómago revuelto Mañana en las redes su cara dará la vuelta", en: "In the hallways they film the humiliations Phones raised like weapons with no mercy Teachers still standing with fear in their eyes While some parents turn anger into fire A kid goes home with his stomach turned inside out Tomorrow on the networks his face will go around" },
+  "chorus1": { fr: "Paradis perdu... Dans les écoles de béton... Paradis perdu... Où les enfants apprennent la peur avant les leçons... Les sirènes chantent encore... Sous les lumières fatiguées... Et les adultes ferment les yeux comme si tout allait passer...", es: "Paraíso perdido... En las escuelas de cemento... Paraíso perdido... Donde los niños aprenden el miedo antes que las lecciones... Las sirenas siguen cantando... Bajo las luces cansadas... Y los adultos cierran los ojos como si todo fuera a pasar...", en: "Lost paradise... In the concrete schools... Lost paradise... Where children learn fear before the lessons... The sirens still sing... Under the tired lights... And the adults close their eyes as if everything would pass..." },
+  "verse2": { fr: "Des professeurs insultés pour avoir voulu aider Des menaces dans les classes pour une mauvaise vérité Les journaux parlent trois jours Puis changent déjà de drame Mais les familles gardent les cicatrices Longtemps après les flammes", es: "Profesores insultados por haber querido ayudar Amenazas en las clases por una verdad incómoda Los periódicos hablan tres días Y ya pasan al siguiente drama Pero las familias guardan las cicatrices Mucho después de las llamas", en: "Teachers insulted for wanting to help Threats in classrooms for one wrong truth The papers talk for three days Then move on to the next drama But families keep the scars Long after the flames" },
+  "break": { fr: "[Dialogue violon gothique / saxophone ténor mélancolique]", es: "[Diálogo violín gótico / saxofón tenor melancólico]", en: "[Dialogue gothic violin / melancholic tenor saxophone]" },
+  "verse3": { fr: "Un autre tireur fou dans un monde déjà malade Des noms deviennent hashtags avant de tomber dans le silence On construit des prisons mentales dans des cerveaux d'adolescents Puis on demande pourquoi la violence pousse maintenant Les écrans vendent la haine Et les enfants la respirent Pendant que les puissants débattent Les salles de classe chavirent", es: "Otro tirador solitario en un mundo ya enfermo Los nombres se convierten en hashtags antes de caer en el silencio Construimos prisiones mentales en cerebros adolescentes Y luego preguntamos por qué la violencia crece ahora Las pantallas venden el odio Y los niños lo respiran Mientras los poderosos debaten Las aulas se hunden", en: "Another lone shooter in an already sick world Names become hashtags before falling into silence We build mental prisons inside teenage brains Then we ask why violence is growing now The screens sell hate And children breathe it in While the powerful debate The classrooms are sinking" },
+  "chorusfinal": { fr: "Paradis perdu... Dans les écoles de nos villes... Paradis perdu... Où survivre devient difficile... Les sirènes chantent encore... Sous les lumières bleues... Et les enfants cherchent encore un endroit où grandir heureux...", es: "Paraíso perdido... En las escuelas de nuestras ciudades... Paraíso perdido... Donde sobrevivir se vuelve difícil... Las sirenas siguen cantando... Bajo las luces azules... Y los niños siguen buscando un lugar donde crecer felices...", en: "Lost paradise... In the schools of our cities... Lost paradise... Where surviving becomes difficult... The sirens still sing... Under the blue lights... And children are still searching for a place where they can grow up happy..." },
+  "outro": { fr: "On leur avait promis demain... Mais demain semble fatigué...", es: "Les habíamos prometido el mañana... Pero el mañana parece cansado...", en: "We had promised them tomorrow... But tomorrow seems tired..." },
+};
+
+const LANG_MAP = { fr: "fr-FR", es: "es-ES", en: "en-GB" };
+let curLang = "fr";
+let curSpeed = 0.9;
+
+function setLang(lang) {
+  document.body.classList.remove("show-fr", "show-es", "show-en");
+  document.querySelectorAll(".lang-btn").forEach(b => b.classList.remove("active"));
+  document.querySelector(`.lang-btn[data-lang="${lang}"]`).classList.add("active");
+  if (lang === "all") {
+    curLang = "fr";
+  } else {
+    document.body.classList.add("show-" + lang);
+    curLang = lang;
+  }
+}
+
+function setSpeed(val) {
+  curSpeed = val;
+  document.querySelectorAll(".speed-btn").forEach(b => b.classList.remove("active"));
+  document.querySelector(`.speed-btn[data-speed="${val}"]`).classList.add("active");
+}
+
+function playSec(id) {
+  if (!("speechSynthesis" in window)) {
+    alert("La synthèse vocale n'est pas supportée par ce navigateur.");
+    return;
+  }
+  const entry = SECS[id];
+  if (!entry) return;
+  const txt = entry[curLang];
+  if (!txt) return;
+  window.speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(txt);
+  u.lang = LANG_MAP[curLang];
+  u.rate = curSpeed;
+  window.speechSynthesis.speak(u);
+}
+</script>
+</body>
+</html>

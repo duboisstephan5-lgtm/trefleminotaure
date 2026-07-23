@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ghosts of Tolerance — Paroles</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Cinzel:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #b8962e;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: #2a1f10;
+    background-image: radial-gradient(circle at 50% 0%, #3a2c18 0%, #2a1f10 70%);
+    font-family: "Cormorant Garamond", serif;
+    color: #2a1f10;
+    padding: 2rem 1rem;
+  }
+  .page {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #f5ecd7;
+    border: 2px solid #c4a97a;
+    border-radius: 12px;
+    padding: 2rem 2.5rem 3rem;
+    box-shadow: 0 0 40px rgba(0,0,0,0.4);
+  }
+  header {
+    text-align: center;
+    border-bottom: 2px solid #c4a97a;
+    padding-bottom: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  header h1 {
+    font-family: "Cinzel", serif;
+    font-size: 1.8rem;
+    margin: 0 0 0.3rem;
+    color: #2a1f10;
+    letter-spacing: 0.04em;
+  }
+  header .subtitle {
+    font-style: italic;
+    color: #6b5a35;
+    font-size: 1rem;
+    margin-bottom: 0.6rem;
+  }
+  .meta-badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 0.6rem;
+  }
+  .meta-badge {
+    background: #e8d8b0;
+    border: 1px solid #c4a97a;
+    border-radius: 20px;
+    padding: 0.25rem 0.9rem;
+    font-size: 0.85rem;
+    font-family: "Cinzel", serif;
+    color: #5c4a22;
+  }
+  .controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.8rem;
+    padding: 0.8rem;
+    background: #ecdfc0;
+    border-radius: 10px;
+    border: 1px solid #d4c298;
+  }
+  .control-group {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  .control-label {
+    font-family: "Cinzel", serif;
+    font-size: 0.75rem;
+    color: #6b5a35;
+    margin-right: 0.3rem;
+  }
+  .btn-toggle {
+    font-family: "Cinzel", serif;
+    font-size: 0.8rem;
+    padding: 0.35rem 0.9rem;
+    border-radius: 16px;
+    border: 1px solid #c4a97a;
+    background: #f5ecd7;
+    color: #5c4a22;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .btn-toggle.active {
+    background: var(--gold);
+    color: #fff;
+    border-color: var(--gold);
+  }
+  .btn-toggle:hover { opacity: 0.85; }
+
+  section.sec {
+    margin-bottom: 1.6rem;
+    border-bottom: 1px dashed #d4c298;
+    padding-bottom: 1.2rem;
+  }
+  .sec-head {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 0.7rem;
+    flex-wrap: wrap;
+  }
+  .section-label {
+    font-family: "Cinzel", serif;
+    font-size: 0.95rem;
+    color: #8a6a1f;
+    font-weight: 700;
+  }
+  .section-label .sep { color: #c4a97a; font-weight: 400; }
+  .voice-badge {
+    font-family: "Cinzel", serif;
+    font-size: 0.68rem;
+    padding: 0.15rem 0.6rem;
+    border-radius: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .voice-duo { background: #ddd0f0; color: #4a3a7a; }
+  .voice-instrumental { background: #d8d8d8; color: #555; }
+  .voice-ghost { background: #c8d8e8; color: #2a4a6b; }
+
+  .play-btn {
+    margin-left: auto;
+    background: var(--gold);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .play-btn:hover { opacity: 0.85; }
+
+  .instrumental-line {
+    font-style: italic;
+    opacity: 0.5;
+    text-align: center;
+    padding: 0.8rem 0;
+    font-size: 1rem;
+  }
+
+  .cols-wrap {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  @media (min-width: 700px) {
+    .cols-wrap { grid-template-columns: 1fr 1fr 1fr; }
+  }
+  .col {
+    border-radius: 6px;
+    padding: 0.6rem 0.8rem;
+  }
+  .col.fr { background: #e8f0fc; border: 1px solid #aac4f0; }
+  .col.es { background: #f5ead5; border: 1px solid #d4b87a; }
+  .col.en { background: #fce8ec; border: 1px solid #f0aabc; }
+  .col .lt {
+    font-family: "Cinzel", serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    display: inline-block;
+  }
+  .col.fr .lt { background: #c8dcf8; color: #1a3a6b; }
+  .col.es .lt { background: #e8d4a8; color: #7a5010; }
+  .col.en .lt { background: #f8d0dc; color: #8b1a3a; }
+  .lyric-line {
+    font-style: italic;
+    font-size: 1.15rem;
+    line-height: 1.5;
+    margin: 0 0 0.35rem;
+  }
+
+  /* Mode mono-langue */
+  body.show-fr .col.es, body.show-fr .col.en { display: none; }
+  body.show-es .col.fr, body.show-es .col.en { display: none; }
+  body.show-en .col.fr, body.show-en .col.es { display: none; }
+  body.show-fr .cols-wrap, body.show-es .cols-wrap, body.show-en .cols-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #d4c298;
+    font-size: 0.8rem;
+    color: #8a7a55;
+    font-style: italic;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <h1>Ghosts of Tolerance</h1>
+    <div class="subtitle">Les Fantômes de la Tolérance · Fantasmas de Tolerancia</div>
+    <div class="meta-badges">
+      <span class="meta-badge">Dark gothic minimalist rock</span>
+      <span class="meta-badge">95 BPM</span>
+      <span class="meta-badge">Tonalité mineure</span>
+      <span class="meta-badge">~6:15</span>
+      <span class="meta-badge">Trèfle</span>
+      <span class="meta-badge">Minotaure</span>
+      <span class="meta-badge">Duo</span>
+    </div>
+  </header>
+
+  <div class="controls">
+    <div class="control-group">
+      <span class="control-label">Langue</span>
+      <button class="btn-toggle active" data-lang="all" onclick="setLang('all')">Trilingue</button>
+      <button class="btn-toggle" data-lang="fr" onclick="setLang('fr')">🇫🇷 Français</button>
+      <button class="btn-toggle" data-lang="es" onclick="setLang('es')">🇪🇸 Español</button>
+      <button class="btn-toggle" data-lang="en" onclick="setLang('en')">🇬🇧 English</button>
+    </div>
+    <div class="control-group">
+      <span class="control-label">Vitesse</span>
+      <button class="btn-toggle" data-speed="0.7" onclick="setSpeed(0.7)">× 0.7</button>
+      <button class="btn-toggle active" data-speed="0.9" onclick="setSpeed(0.9)">× 0.9</button>
+      <button class="btn-toggle" data-speed="1.0" onclick="setSpeed(1.0)">× 1.0</button>
+    </div>
+  </div>
+
+
+    <section class="sec instrumental-sec" id="sec-intro">
+      <div class="sec-head">
+        <span class="section-label">Intro <span class="sep">/</span> Intro <span class="sep">/</span> Intro</span>
+        <span class="voice-badge voice-instrumental">Instrumental</span>
+        
+      </div>
+      <div class="instrumental-line">Intro / Intro / Intro</div>
+    </section>
+
+    <section class="sec " id="sec-couplet1">
+      <div class="sec-head">
+        <span class="section-label">Couplet 1 <span class="sep">/</span> Estrofa 1 <span class="sep">/</span> Verse 1</span>
+        <span class="voice-badge voice-duo">Duo</span>
+        <button class="play-btn" onclick="playSec('couplet1')" aria-label="Écouter cette section">▶</button>
+      </div>
+      <div class="cols-wrap">
+        <div class="col fr">
+          <div class="lt">Couplet 1</div>
+          <div class="lyrics"><p class="lyric-line">Quand on est petit, on nous fait de grands sermons,</p><p class="lyric-line">Et quand on grandit, on s'aperçoit</p><p class="lyric-line">que c'est loin d'être des convictions.</p><p class="lyric-line">Toutes ces discriminations, sont autant de noms,</p><p class="lyric-line">On n'a qu'une chose à faire, dire non à l'unisson.</p><p class="lyric-line">(Tous... ensemble...)</p><p class="lyric-line">Quelle que soit ta couleur de peau,</p><p class="lyric-line">Dans ton corps et dans tes veines,</p><p class="lyric-line">Le rouge coule à flot,</p><p class="lyric-line">Européen, africain,</p><p class="lyric-line">mon origine est extra-terrienne.</p></div>
+        </div>
+        <div class="col es">
+          <div class="lt">Estrofa 1</div>
+          <div class="lyrics"><p class="lyric-line">Cuando somos pequeños, nos dan grandes sermones,</p><p class="lyric-line">Y cuando crecemos, nos damos cuenta</p><p class="lyric-line">que están lejos de ser convicciones.</p><p class="lyric-line">Todas estas discriminaciones, son solo nombres distintos,</p><p class="lyric-line">Solo hay una cosa por hacer, decir no al unísono.</p><p class="lyric-line">(Todos... juntos...)</p><p class="lyric-line">Sea cual sea tu color de piel,</p><p class="lyric-line">En tu cuerpo y en tus venas,</p><p class="lyric-line">La sangre roja corre igual,</p><p class="lyric-line">Europeo, africano,</p><p class="lyric-line">mi origen es extraterrestre.</p></div>
+        </div>
+        <div class="col en">
+          <div class="lt">Verse 1</div>
+          <div class="lyrics"><p class="lyric-line">When we are small, they preach to us at length,</p><p class="lyric-line">And when we grow, we come to see</p><p class="lyric-line">these were never real convictions.</p><p class="lyric-line">All of these discriminations are just different names,</p><p class="lyric-line">There's only one thing left to do — say no, all as one.</p><p class="lyric-line">(All... together...)</p><p class="lyric-line">Whatever the colour of your skin,</p><p class="lyric-line">Inside your body, in your veins,</p><p class="lyric-line">Red runs the same for everyone,</p><p class="lyric-line">European, African,</p><p class="lyric-line">my own origin is from beyond the stars.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec " id="sec-refrain1">
+      <div class="sec-head">
+        <span class="section-label">Refrain <span class="sep">/</span> Estribillo <span class="sep">/</span> Chorus</span>
+        <span class="voice-badge voice-duo">Duo</span>
+        <button class="play-btn" onclick="playSec('refrain1')" aria-label="Écouter cette section">▶</button>
+      </div>
+      <div class="cols-wrap">
+        <div class="col fr">
+          <div class="lt">Refrain</div>
+          <div class="lyrics"><p class="lyric-line">Por el derecho a la vida</p><p class="lyric-line">Alors dis stop au racisme.</p><p class="lyric-line">Tous... les mêmes... mais différents...</p><p class="lyric-line">Tous différents... mais tous les mêmes...</p><p class="lyric-line">Tous les mêmes... dans nos différences...</p><p class="lyric-line">Mais on se doit... toutes tolérances...</p><p class="lyric-line">Car on a tous droit... aux mêmes chances...</p><p class="lyric-line">(Aux mêmes chances...)</p></div>
+        </div>
+        <div class="col es">
+          <div class="lt">Estribillo</div>
+          <div class="lyrics"><p class="lyric-line">Por el derecho a la vida</p><p class="lyric-line">Entonces di basta al racismo.</p><p class="lyric-line">Todos... los mismos... pero diferentes...</p><p class="lyric-line">Todos diferentes... pero todos los mismos...</p><p class="lyric-line">Todos los mismos... en nuestras diferencias...</p><p class="lyric-line">Pero nos debemos... toda tolerancia...</p><p class="lyric-line">Porque todos tenemos derecho... a las mismas oportunidades...</p><p class="lyric-line">(A las mismas oportunidades...)</p></div>
+        </div>
+        <div class="col en">
+          <div class="lt">Chorus</div>
+          <div class="lyrics"><p class="lyric-line">Por el derecho a la vida</p><p class="lyric-line">So say stop to racism.</p><p class="lyric-line">All... the same... yet different...</p><p class="lyric-line">All different... yet all the same...</p><p class="lyric-line">All the same... in our differences...</p><p class="lyric-line">But we all owe... each other tolerance...</p><p class="lyric-line">For we all deserve... the same chances...</p><p class="lyric-line">(The same chances...)</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec " id="sec-couplet2">
+      <div class="sec-head">
+        <span class="section-label">Couplet 2 <span class="sep">/</span> Estrofa 2 <span class="sep">/</span> Verse 2</span>
+        <span class="voice-badge voice-duo">Duo</span>
+        <button class="play-btn" onclick="playSec('couplet2')" aria-label="Écouter cette section">▶</button>
+      </div>
+      <div class="cols-wrap">
+        <div class="col fr">
+          <div class="lt">Couplet 2</div>
+          <div class="lyrics"><p class="lyric-line">Que tu crois en Bouddha, Jésus ou Jéhovah,</p><p class="lyric-line">Que tu crois en un dieu, ou que tu n'y crois pas,</p><p class="lyric-line">Quand tu ailles au paradis ou en enfer,</p><p class="lyric-line">Où tu finiras, ça restera un mystère.</p><p class="lyric-line">Car personne n'en est jamais revenu,</p><p class="lyric-line">Pour nous fournir l'exclu,</p><p class="lyric-line">Sinon ça serait passé au journal du soir, ça serait su.</p><p class="lyric-line">(Peut-être...)</p></div>
+        </div>
+        <div class="col es">
+          <div class="lt">Estrofa 2</div>
+          <div class="lyrics"><p class="lyric-line">Que creas en Buda, Jesús o Jehová,</p><p class="lyric-line">Que creas en un dios, o que no creas en nada,</p><p class="lyric-line">Cuando vayas al paraíso o al infierno,</p><p class="lyric-line">Dónde acabarás, seguirá siendo un misterio.</p><p class="lyric-line">Porque nadie ha vuelto jamás,</p><p class="lyric-line">Para darnos la prueba,</p><p class="lyric-line">Si no, ya habría salido en las noticias, todo el mundo lo sabría.</p><p class="lyric-line">(Tal vez...)</p></div>
+        </div>
+        <div class="col en">
+          <div class="lt">Verse 2</div>
+          <div class="lyrics"><p class="lyric-line">Whether you believe in Buddha, Jesus or Jehovah,</p><p class="lyric-line">Whether you believe in a god, or in none at all,</p><p class="lyric-line">When you go to heaven or to hell,</p><p class="lyric-line">Where you'll end up will stay a mystery.</p><p class="lyric-line">Because nobody has ever come back,</p><p class="lyric-line">To bring us the proof,</p><p class="lyric-line">If they had, it would be on the evening news, everyone would know.</p><p class="lyric-line">(Maybe...)</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec " id="sec-refrain2">
+      <div class="sec-head">
+        <span class="section-label">Refrain <span class="sep">/</span> Estribillo <span class="sep">/</span> Chorus</span>
+        <span class="voice-badge voice-duo">Duo</span>
+        <button class="play-btn" onclick="playSec('refrain2')" aria-label="Écouter cette section">▶</button>
+      </div>
+      <div class="cols-wrap">
+        <div class="col fr">
+          <div class="lt">Refrain</div>
+          <div class="lyrics"><p class="lyric-line">Por el derecho a la vida</p><p class="lyric-line">Alors dis stop aux attentats religieux.</p><p class="lyric-line">Tous... les mêmes... mais différents...</p><p class="lyric-line">Tous différents... mais tous les mêmes...</p><p class="lyric-line">Tous les mêmes... dans nos différences...</p><p class="lyric-line">Mais on se doit... toutes tolérances...</p><p class="lyric-line">Car on a tous droit... aux mêmes chances...</p></div>
+        </div>
+        <div class="col es">
+          <div class="lt">Estribillo</div>
+          <div class="lyrics"><p class="lyric-line">Por el derecho a la vida</p><p class="lyric-line">Entonces di basta a los atentados religiosos.</p><p class="lyric-line">Todos... los mismos... pero diferentes...</p><p class="lyric-line">Todos diferentes... pero todos los mismos...</p><p class="lyric-line">Todos los mismos... en nuestras diferencias...</p><p class="lyric-line">Pero nos debemos... toda tolerancia...</p><p class="lyric-line">Porque todos tenemos derecho... a las mismas oportunidades...</p></div>
+        </div>
+        <div class="col en">
+          <div class="lt">Chorus</div>
+          <div class="lyrics"><p class="lyric-line">Por el derecho a la vida</p><p class="lyric-line">So say stop to religious attacks.</p><p class="lyric-line">All... the same... yet different...</p><p class="lyric-line">All different... yet all the same...</p><p class="lyric-line">All the same... in our differences...</p><p class="lyric-line">But we all owe... each other tolerance...</p><p class="lyric-line">For we all deserve... the same chances...</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec instrumental-sec" id="sec-break1">
+      <div class="sec-head">
+        <span class="section-label">Break instrumental <span class="sep">/</span> Break instrumental <span class="sep">/</span> Instrumental break</span>
+        <span class="voice-badge voice-instrumental">Instrumental</span>
+        
+      </div>
+      <div class="instrumental-line">Break instrumental / Break instrumental / Instrumental break</div>
+    </section>
+
+    <section class="sec " id="sec-couplet3">
+      <div class="sec-head">
+        <span class="section-label">Couplet 3 <span class="sep">/</span> Estrofa 3 <span class="sep">/</span> Verse 3</span>
+        <span class="voice-badge voice-duo">Duo</span>
+        <button class="play-btn" onclick="playSec('couplet3')" aria-label="Écouter cette section">▶</button>
+      </div>
+      <div class="cols-wrap">
+        <div class="col fr">
+          <div class="lt">Couplet 3</div>
+          <div class="lyrics"><p class="lyric-line">Fifty Cent me l'a dit,</p><p class="lyric-line">la roue de la fortune tourne et retentit,</p><p class="lyric-line">Hier fortuné, pauvre demain,</p><p class="lyric-line">chance ou malchance, nul n'est maître de son destin.</p><p class="lyric-line">Et si Harry te dit que ce n'est pas sorcier,</p><p class="lyric-line">tu risques de te retrouver sans-abri dans une gare demain,</p><p class="lyric-line">Attention... prends un bon départ...</p><p class="lyric-line">Surtout si tu ne trouves pas le quai neuf trois quarts.</p><p class="lyric-line">(Neuf... trois quarts...)</p></div>
+        </div>
+        <div class="col es">
+          <div class="lt">Estrofa 3</div>
+          <div class="lyrics"><p class="lyric-line">Fifty Cent me lo dijo bien claro,</p><p class="lyric-line">La rueda de la fortuna gira y suena fuerte,</p><p class="lyric-line">Rico hoy, pobre mañana,</p><p class="lyric-line">suerte o desgracia, nadie es dueño de su destino.</p><p class="lyric-line">Y si Harry te dice que no es ningún misterio,</p><p class="lyric-line">puede que acabes sin techo en una estación, lo verás,</p><p class="lyric-line">Cuidado... empieza con buen pie...</p><p class="lyric-line">Sobre todo si no encuentras el andén nueve y tres cuartos.</p><p class="lyric-line">(Nueve... tres cuartos...)</p></div>
+        </div>
+        <div class="col en">
+          <div class="lt">Verse 3</div>
+          <div class="lyrics"><p class="lyric-line">Fifty Cent told me so himself,</p><p class="lyric-line">The wheel of fortune spins and rings its bell,</p><p class="lyric-line">Rich today, poor tomorrow,</p><p class="lyric-line">luck or ruin, no one masters their own fate.</p><p class="lyric-line">And if Harry tells you it's no big mystery,</p><p class="lyric-line">you might just end up homeless at a station, you'll see,</p><p class="lyric-line">Careful now... get a good head start...</p><p class="lyric-line">Especially if you can't find platform nine and three-quarters.</p><p class="lyric-line">(Nine... three-quarters...)</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec " id="sec-refrain3">
+      <div class="sec-head">
+        <span class="section-label">Refrain <span class="sep">/</span> Estribillo <span class="sep">/</span> Chorus</span>
+        <span class="voice-badge voice-duo">Duo</span>
+        <button class="play-btn" onclick="playSec('refrain3')" aria-label="Écouter cette section">▶</button>
+      </div>
+      <div class="cols-wrap">
+        <div class="col fr">
+          <div class="lt">Refrain</div>
+          <div class="lyrics"><p class="lyric-line">Por el derecho a la vida</p><p class="lyric-line">Alors dis stop aux différences sociales.</p><p class="lyric-line">Tous... les mêmes... mais différents...</p><p class="lyric-line">Tous différents... mais tous les mêmes...</p><p class="lyric-line">Tous les mêmes... dans nos différences...</p><p class="lyric-line">Mais on se doit... toutes tolérances...</p><p class="lyric-line">Car on a tous droit... aux mêmes chances...</p></div>
+        </div>
+        <div class="col es">
+          <div class="lt">Estribillo</div>
+          <div class="lyrics"><p class="lyric-line">Por el derecho a la vida</p><p class="lyric-line">Entonces di basta a las diferencias sociales.</p><p class="lyric-line">Todos... los mismos... pero diferentes...</p><p class="lyric-line">Todos diferentes... pero todos los mismos...</p><p class="lyric-line">Todos los mismos... en nuestras diferencias...</p><p class="lyric-line">Pero nos debemos... toda tolerancia...</p><p class="lyric-line">Porque todos tenemos derecho... a las mismas oportunidades...</p></div>
+        </div>
+        <div class="col en">
+          <div class="lt">Chorus</div>
+          <div class="lyrics"><p class="lyric-line">Por el derecho a la vida</p><p class="lyric-line">So say stop to social divides.</p><p class="lyric-line">All... the same... yet different...</p><p class="lyric-line">All different... yet all the same...</p><p class="lyric-line">All the same... in our differences...</p><p class="lyric-line">But we all owe... each other tolerance...</p><p class="lyric-line">For we all deserve... the same chances...</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec " id="sec-couplet4">
+      <div class="sec-head">
+        <span class="section-label">Couplet 4 <span class="sep">/</span> Estrofa 4 <span class="sep">/</span> Verse 4</span>
+        <span class="voice-badge voice-duo">Duo</span>
+        <button class="play-btn" onclick="playSec('couplet4')" aria-label="Écouter cette section">▶</button>
+      </div>
+      <div class="cols-wrap">
+        <div class="col fr">
+          <div class="lt">Couplet 4</div>
+          <div class="lyrics"><p class="lyric-line">Hommes... femmes... trans... bi...</p><p class="lyric-line">On a tous le droit d'aimer et de vivre,</p><p class="lyric-line">On a tous le droit de travailler pour le même salaire,</p><p class="lyric-line">Si ça n'a pas l'air de te plaire,</p><p class="lyric-line">c'est que ton cœur a pris la grève.</p><p class="lyric-line">(Grève...)</p><p class="lyric-line">Alors que tu en aies ou pas,</p><p class="lyric-line">Que tu te fasses opérer,</p><p class="lyric-line">Pour t'en placer ou t'en retirer,</p><p class="lyric-line">En plus de la paire que t'as déjà,</p><p class="lyric-line">Fais-toi greffer un peu d'humanité.</p></div>
+        </div>
+        <div class="col es">
+          <div class="lt">Estrofa 4</div>
+          <div class="lyrics"><p class="lyric-line">Hombres... mujeres... trans... bi...</p><p class="lyric-line">Todos tenemos derecho a amar y vivir,</p><p class="lyric-line">Todos tenemos derecho a trabajar por el mismo salario,</p><p class="lyric-line">Si eso no parece gustarte,</p><p class="lyric-line">es que tu corazón está de huelga.</p><p class="lyric-line">(De huelga...)</p><p class="lyric-line">Así que lo tengas o no,</p><p class="lyric-line">Que te operes para ponerte uno,</p><p class="lyric-line">o para quitarte el que ya tienes,</p><p class="lyric-line">Además del par que ya llevas puesto,</p><p class="lyric-line">hazte un trasplante de humanidad.</p></div>
+        </div>
+        <div class="col en">
+          <div class="lt">Verse 4</div>
+          <div class="lyrics"><p class="lyric-line">Men... women... trans... bi...</p><p class="lyric-line">We all have the right to love and to live,</p><p class="lyric-line">We all have the right to work for the same pay,</p><p class="lyric-line">If that doesn't seem to suit you well,</p><p class="lyric-line">your heart must be on strike today.</p><p class="lyric-line">(On strike...)</p><p class="lyric-line">So whether you're keeping it or letting it go,</p><p class="lyric-line">Whether you get it altered,</p><p class="lyric-line">to add one on or take one off,</p><p class="lyric-line">Beyond the pair you've already got,</p><p class="lyric-line">go get yourself a transplant of kindness.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec instrumental-sec" id="sec-break2">
+      <div class="sec-head">
+        <span class="section-label">Break instrumental final <span class="sep">/</span> Break instrumental final <span class="sep">/</span> Final instrumental break</span>
+        <span class="voice-badge voice-instrumental">Instrumental</span>
+        
+      </div>
+      <div class="instrumental-line">Break instrumental final / Break instrumental final / Final instrumental break</div>
+    </section>
+
+    <section class="sec " id="sec-refrain_final">
+      <div class="sec-head">
+        <span class="section-label">Refrain Final <span class="sep">/</span> Estribillo Final <span class="sep">/</span> Final Chorus</span>
+        <span class="voice-badge voice-duo">Duo</span>
+        <button class="play-btn" onclick="playSec('refrain_final')" aria-label="Écouter cette section">▶</button>
+      </div>
+      <div class="cols-wrap">
+        <div class="col fr">
+          <div class="lt">Refrain Final</div>
+          <div class="lyrics"><p class="lyric-line">Por el derecho a la vida</p><p class="lyric-line">Alors dis stop aux répressions de genre.</p><p class="lyric-line">Lutter avec les opprimés, c'est l'intelligence,</p><p class="lyric-line">Vaincre l'intolérance, ça a de l'importance.</p><p class="lyric-line">Por el derecho... à la vie...</p><p class="lyric-line">(Tous... les mêmes...)</p></div>
+        </div>
+        <div class="col es">
+          <div class="lt">Estribillo Final</div>
+          <div class="lyrics"><p class="lyric-line">Por el derecho a la vida</p><p class="lyric-line">Entonces di basta a la represión de género.</p><p class="lyric-line">Luchar junto a los oprimidos, eso es inteligencia,</p><p class="lyric-line">Vencer la intolerancia, eso es lo que importa.</p><p class="lyric-line">Por el derecho... a la vida...</p><p class="lyric-line">(Todos... los mismos...)</p></div>
+        </div>
+        <div class="col en">
+          <div class="lt">Final Chorus</div>
+          <div class="lyrics"><p class="lyric-line">Por el derecho a la vida</p><p class="lyric-line">So say stop to gender repression.</p><p class="lyric-line">Standing with the oppressed, that's intelligence,</p><p class="lyric-line">Beating intolerance, that's what matters most.</p><p class="lyric-line">Por el derecho... a la vida...</p><p class="lyric-line">(All... the same...)</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec " id="sec-outro">
+      <div class="sec-head">
+        <span class="section-label">Outro <span class="sep">/</span> Outro <span class="sep">/</span> Outro</span>
+        <span class="voice-badge voice-ghost">Ghost Voice</span>
+        <button class="play-btn" onclick="playSec('outro')" aria-label="Écouter cette section">▶</button>
+      </div>
+      <div class="cols-wrap">
+        <div class="col fr">
+          <div class="lt">Outro</div>
+          <div class="lyrics"><p class="lyric-line">(Tolérance... tolérance...)</p></div>
+        </div>
+        <div class="col es">
+          <div class="lt">Outro</div>
+          <div class="lyrics"><p class="lyric-line">(Tolerancia... tolerancia...)</p></div>
+        </div>
+        <div class="col en">
+          <div class="lt">Outro</div>
+          <div class="lyrics"><p class="lyric-line">(Tolerance... tolerance...)</p></div>
+        </div>
+      </div>
+    </section>
+
+  <footer>
+    www.trefleminotaure.com &middot; &copy; 2026 Trèfle &amp; Minotaure
+  </footer>
+
+</div>
+
+<script>
+  const SECS = {
+  "couplet1": {
+    "fr": "Quand on est petit, on nous fait de grands sermons, Et quand on grandit, on s'aperçoit que c'est loin d'être des convictions. Toutes ces discriminations, sont autant de noms, On n'a qu'une chose à faire, dire non à l'unisson. Tous, ensemble, Quelle que soit ta couleur de peau, Dans ton corps et dans tes veines, Le rouge coule à flot, Européen, africain, mon origine est extra-terrienne.",
+    "es": "Cuando somos pequeños, nos dan grandes sermones, Y cuando crecemos, nos damos cuenta que están lejos de ser convicciones. Todas estas discriminaciones, son solo nombres distintos, Solo hay una cosa por hacer, decir no al unísono. Todos, juntos, Sea cual sea tu color de piel, En tu cuerpo y en tus venas, La sangre roja corre igual, Europeo, africano, mi origen es extraterrestre.",
+    "en": "When we are small, they preach to us at length, And when we grow, we come to see these were never real convictions. All of these discriminations are just different names, There's only one thing left to do — say no, all as one. All, together, Whatever the colour of your skin, Inside your body, in your veins, Red runs the same for everyone, European, African, my own origin is from beyond the stars."
+  },
+  "refrain1": {
+    "fr": "Por el derecho a la vida Alors dis stop au racisme. Tous, les mêmes, mais différents, Tous différents, mais tous les mêmes, Tous les mêmes, dans nos différences, Mais on se doit, toutes tolérances, Car on a tous droit, aux mêmes chances, Aux mêmes chances,",
+    "es": "Por el derecho a la vida Entonces di basta al racismo. Todos, los mismos, pero diferentes, Todos diferentes, pero todos los mismos, Todos los mismos, en nuestras diferencias, Pero nos debemos, toda tolerancia, Porque todos tenemos derecho, a las mismas oportunidades, A las mismas oportunidades,",
+    "en": "Por el derecho a la vida So say stop to racism. All, the same, yet different, All different, yet all the same, All the same, in our differences, But we all owe, each other tolerance, For we all deserve, the same chances, The same chances,"
+  },
+  "couplet2": {
+    "fr": "Que tu crois en Bouddha, Jésus ou Jéhovah, Que tu crois en un dieu, ou que tu n'y crois pas, Quand tu ailles au paradis ou en enfer, Où tu finiras, ça restera un mystère. Car personne n'en est jamais revenu, Pour nous fournir l'exclu, Sinon ça serait passé au journal du soir, ça serait su. Peut-être,",
+    "es": "Que creas en Buda, Jesús o Jehová, Que creas en un dios, o que no creas en nada, Cuando vayas al paraíso o al infierno, Dónde acabarás, seguirá siendo un misterio. Porque nadie ha vuelto jamás, Para darnos la prueba, Si no, ya habría salido en las noticias, todo el mundo lo sabría. Tal vez,",
+    "en": "Whether you believe in Buddha, Jesus or Jehovah, Whether you believe in a god, or in none at all, When you go to heaven or to hell, Where you'll end up will stay a mystery. Because nobody has ever come back, To bring us the proof, If they had, it would be on the evening news, everyone would know. Maybe,"
+  },
+  "refrain2": {
+    "fr": "Por el derecho a la vida Alors dis stop aux attentats religieux. Tous, les mêmes, mais différents, Tous différents, mais tous les mêmes, Tous les mêmes, dans nos différences, Mais on se doit, toutes tolérances, Car on a tous droit, aux mêmes chances,",
+    "es": "Por el derecho a la vida Entonces di basta a los atentados religiosos. Todos, los mismos, pero diferentes, Todos diferentes, pero todos los mismos, Todos los mismos, en nuestras diferencias, Pero nos debemos, toda tolerancia, Porque todos tenemos derecho, a las mismas oportunidades,",
+    "en": "Por el derecho a la vida So say stop to religious attacks. All, the same, yet different, All different, yet all the same, All the same, in our differences, But we all owe, each other tolerance, For we all deserve, the same chances,"
+  },
+  "couplet3": {
+    "fr": "Fifty Cent me l'a dit, la roue de la fortune tourne et retentit, Hier fortuné, pauvre demain, chance ou malchance, nul n'est maître de son destin. Et si Harry te dit que ce n'est pas sorcier, tu risques de te retrouver sans-abri dans une gare demain, Attention, prends un bon départ, Surtout si tu ne trouves pas le quai neuf trois quarts. Neuf, trois quarts,",
+    "es": "Fifty Cent me lo dijo bien claro, La rueda de la fortuna gira y suena fuerte, Rico hoy, pobre mañana, suerte o desgracia, nadie es dueño de su destino. Y si Harry te dice que no es ningún misterio, puede que acabes sin techo en una estación, lo verás, Cuidado, empieza con buen pie, Sobre todo si no encuentras el andén nueve y tres cuartos. Nueve, tres cuartos,",
+    "en": "Fifty Cent told me so himself, The wheel of fortune spins and rings its bell, Rich today, poor tomorrow, luck or ruin, no one masters their own fate. And if Harry tells you it's no big mystery, you might just end up homeless at a station, you'll see, Careful now, get a good head start, Especially if you can't find platform nine and three-quarters. Nine, three-quarters,"
+  },
+  "refrain3": {
+    "fr": "Por el derecho a la vida Alors dis stop aux différences sociales. Tous, les mêmes, mais différents, Tous différents, mais tous les mêmes, Tous les mêmes, dans nos différences, Mais on se doit, toutes tolérances, Car on a tous droit, aux mêmes chances,",
+    "es": "Por el derecho a la vida Entonces di basta a las diferencias sociales. Todos, los mismos, pero diferentes, Todos diferentes, pero todos los mismos, Todos los mismos, en nuestras diferencias, Pero nos debemos, toda tolerancia, Porque todos tenemos derecho, a las mismas oportunidades,",
+    "en": "Por el derecho a la vida So say stop to social divides. All, the same, yet different, All different, yet all the same, All the same, in our differences, But we all owe, each other tolerance, For we all deserve, the same chances,"
+  },
+  "couplet4": {
+    "fr": "Hommes, femmes, trans, bi, On a tous le droit d'aimer et de vivre, On a tous le droit de travailler pour le même salaire, Si ça n'a pas l'air de te plaire, c'est que ton cœur a pris la grève. Grève, Alors que tu en aies ou pas, Que tu te fasses opérer, Pour t'en placer ou t'en retirer, En plus de la paire que t'as déjà, Fais-toi greffer un peu d'humanité.",
+    "es": "Hombres, mujeres, trans, bi, Todos tenemos derecho a amar y vivir, Todos tenemos derecho a trabajar por el mismo salario, Si eso no parece gustarte, es que tu corazón está de huelga. De huelga, Así que lo tengas o no, Que te operes para ponerte uno, o para quitarte el que ya tienes, Además del par que ya llevas puesto, hazte un trasplante de humanidad.",
+    "en": "Men, women, trans, bi, We all have the right to love and to live, We all have the right to work for the same pay, If that doesn't seem to suit you well, your heart must be on strike today. On strike, So whether you're keeping it or letting it go, Whether you get it altered, to add one on or take one off, Beyond the pair you've already got, go get yourself a transplant of kindness."
+  },
+  "refrain_final": {
+    "fr": "Por el derecho a la vida Alors dis stop aux répressions de genre. Lutter avec les opprimés, c'est l'intelligence, Vaincre l'intolérance, ça a de l'importance. Por el derecho, à la vie, Tous, les mêmes,",
+    "es": "Por el derecho a la vida Entonces di basta a la represión de género. Luchar junto a los oprimidos, eso es inteligencia, Vencer la intolerancia, eso es lo que importa. Por el derecho, a la vida, Todos, los mismos,",
+    "en": "Por el derecho a la vida So say stop to gender repression. Standing with the oppressed, that's intelligence, Beating intolerance, that's what matters most. Por el derecho, a la vida, All, the same,"
+  },
+  "outro": {
+    "fr": "Tolérance, tolérance,",
+    "es": "Tolerancia, tolerancia,",
+    "en": "Tolerance, tolerance,"
+  }
+};
+
+  const LANG_MAP = { fr: "fr-FR", es: "es-ES", en: "en-GB" };
+  let curLang = "fr";
+  let curSpeed = 0.9;
+
+  function setLang(lang) {
+    document.body.classList.remove("show-fr", "show-es", "show-en");
+    document.querySelectorAll(".btn-toggle[data-lang]").forEach(b => b.classList.remove("active"));
+    document.querySelector(`.btn-toggle[data-lang="${lang}"]`).classList.add("active");
+
+    if (lang === "all") {
+      curLang = "fr";
+    } else {
+      document.body.classList.add("show-" + lang);
+      curLang = lang;
+    }
+  }
+
+  function setSpeed(speed) {
+    curSpeed = speed;
+    document.querySelectorAll(".btn-toggle[data-speed]").forEach(b => b.classList.remove("active"));
+    document.querySelector(`.btn-toggle[data-speed="${speed}"]`).classList.add("active");
+  }
+
+  function playSec(id) {
+    if (!('speechSynthesis' in window)) {
+      alert("La synthèse vocale n'est pas disponible sur ce navigateur.");
+      return;
+    }
+    const data = SECS[id];
+    if (!data) return;
+    const txt = data[curLang];
+    window.speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(txt);
+    u.lang = LANG_MAP[curLang];
+    u.rate = curSpeed;
+    window.speechSynthesis.speak(u);
+  }
+</script>
+</body>
+</html>

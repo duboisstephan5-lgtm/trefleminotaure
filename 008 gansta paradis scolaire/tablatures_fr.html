@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gangsta Paradis Scolaire — Tablatures | tréfle.minotaure</title>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Cinzel:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--gold:#b8962e;--parchment:#f5ecd7;--dark:#2a1f10}
+body{background:#2a1f10;font-family:"Cormorant Garamond",serif;color:#2a1f10;min-height:100vh;padding:20px}
+.page{max-width:1100px;margin:0 auto;background:var(--parchment);border:2px solid #c4a97a;border-radius:8px;overflow:hidden}
+header{background:linear-gradient(135deg,#1a1008 0%,#2a1810 100%);padding:28px 32px 20px;border-bottom:2px solid var(--gold)}
+.htitle{font-family:"IM Fell English",serif;font-size:2rem;color:#e8d5a0;letter-spacing:.03em}
+.hmeta{display:flex;gap:12px;margin-top:12px;flex-wrap:wrap;align-items:center}
+.mpill{background:#2a1808;border:1px solid #6a4a20;color:#d4b87a;font-size:.7rem;padding:3px 10px;border-radius:16px;font-family:"Cinzel",serif;letter-spacing:.08em}
+.langbar{background:#1a1008;padding:8px 32px;display:flex;gap:8px;border-bottom:1px solid var(--gold)}
+.langbtn{padding:4px 12px;border:1px solid #6a4a20;background:transparent;color:#d4b87a;border-radius:4px;text-decoration:none;font-family:"Cinzel",serif;font-size:.72rem;letter-spacing:.06em}
+.langbtn.on{background:var(--gold);color:#1a1008;border-color:var(--gold)}
+.controls{background:#f0e8d0;padding:12px 32px;border-bottom:1px solid #d4b87a;display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.ctrl-label{font-family:"Cinzel",serif;font-size:.65rem;color:#7a5010;letter-spacing:.1em;text-transform:uppercase;margin-right:6px}
+.cbtn{padding:7px 18px;border:1px solid #c4a97a;background:transparent;border-radius:4px;cursor:pointer;font-family:"Cinzel",serif;font-size:.78rem;color:#7a5010;transition:all .2s}
+.cbtn:hover,.cbtn.on{background:var(--gold);color:#fff;border-color:var(--gold)}
+.sec{padding:22px 32px}
+.sec-label{font-family:"Cinzel",serif;font-size:.85rem;letter-spacing:.14em;color:var(--gold);text-transform:uppercase;margin-bottom:10px;border-bottom:1px solid #d4b87a;padding-bottom:6px}
+.warnbox{background:#3a2510;border:1px solid #6a4a20;border-radius:6px;padding:12px 16px;margin-bottom:16px;font-size:.9rem;color:#d4b87a;line-height:1.5}
+.warnbox b{color:#e8c060}
+.tipbox{margin-bottom:16px}
+.tipbox h4{font-family:"Cinzel",serif;font-size:.75rem;color:#7a5010;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
+.tipbox ul{margin-left:20px;font-size:.95rem;line-height:1.6}
+.tabblock{background:#1a1008;color:#d4b87a;padding:16px;border-radius:6px;overflow-x:auto;margin-bottom:8px;max-width:100%}
+.tabblock pre{font-family:"Roboto Mono",monospace;font-size:.78rem;line-height:1.4;white-space:pre}
+.notebox{font-style:italic;color:#7a5010;margin-bottom:12px;font-size:.88rem}
+.instrpanel{display:none}
+.instrpanel.on{display:block}
+.tips-toggle-hide{display:none !important}
+.chordgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-top:8px}
+.chordcard{background:#fffaf0;border:1px solid #d4b87a;border-radius:6px;padding:10px 12px}
+.chordbars{font-family:"Cinzel",serif;font-size:.62rem;color:#7a5010;letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px}
+.chordname{font-family:"Cinzel",serif;font-size:1.1rem;color:#5a4520;margin-bottom:4px}
+.chordnotes{font-size:.85rem;color:#5a4520;word-wrap:break-word}
+footer{background:#1a1008;color:#888;text-align:center;padding:16px;font-family:"Cinzel",serif;font-size:.7rem;letter-spacing:.1em;border-top:2px solid var(--gold)}
+footer a{color:#b8962e;text-decoration:none}
+@media print{.controls,.langbar{display:none}}
+</style>
+</head>
+<body>
+<div class="page">
+<header>
+  <div class="htitle">Gangsta Paradis Scolaire</div>
+  <div class="hmeta">
+    <span class="mpill">⏱ 95 BPM</span>
+    <span class="mpill">Mineur</span>
+  </div>
+</header>
+<div class="langbar">
+  <a class="langbtn on" href="tablatures_fr.html">🇫🇷 Français</a>
+  <a class="langbtn" href="tablatures_en.html">🇬🇧 English</a>
+  <a class="langbtn" href="tablatures_es.html">🇪🇸 Español</a>
+</div>
+<div class="controls">
+  <span class="ctrl-label">Instrument</span>
+  <button class="cbtn on" onclick="showInstr('basse',this)">🎸 Basse</button>
+  <button class="cbtn" onclick="showInstr('piano',this)">🎹 Piano</button>
+  <button class="cbtn" onclick="showInstr('synth',this)">🎹 Synthé</button>
+  <span style="width:1px;background:#d4b87a;align-self:stretch"></span>
+  <span class="ctrl-label">Niveau</span>
+  <button class="cbtn on" id="lvl-avec" onclick="setLevel('avec')">Avec conseils</button>
+  <button class="cbtn" id="lvl-pro" onclick="setLevel('pro')">Tablature seule (Pro)</button>
+</div>
+
+<div class="sec">
+  <div class="warnbox"><b>⚠️ Avertissement</b> — Ce document a été généré automatiquement par analyse audio (extraction à l'écoute) sur les pistes réelles de cette version française. Le tempo, les notes et les positions sont des estimations algorithmiques : des erreurs ou imprécisions sont possibles. Validez toujours à l'oreille avec l'enregistrement original.</div>
+  <div class="notebox">Tempo confirmé à 95 BPM (mesuré sur le mix complet, cohérent avec le prompt Suno). Chanson de 100 mesures. Note : le fichier mix fourni dure 294,8s contre 252,7s pour les pistes séparées (bass/piano/synthé/voix) — ces dernières ont servi de référence pour le comptage des mesures. Violon, saxophone et batterie mentionnés dans le prompt n'ont pas de piste dédiée fournie, donc non représentés ici.</div>
+
+  <div class="instrpanel on" id="panel-basse">
+    <div class="sec-label">✦ Tablature — Basse ✦</div>
+    <div class="tipbox"><h4>Conseils</h4><ul><li>Écoute d'abord l'enregistrement plusieurs fois avant de jouer, pour mémoriser le rythme général.</li><li>Joue très lentement au départ — la vitesse viendra avec la répétition, pas l'inverse.</li><li>Travaille un bloc de 4 mesures à la fois avant de passer au suivant.</li><li>Repère les motifs répétitifs de la basse hypnotique avant de jouer la section entière.</li><li>Le tempo est stable à 95 BPM sans ralentissement — reste rigoureux du début à la fin.</li><li>Identifie les silences volontaires (---) : ils font partie du groove, ne les remplis pas.</li></ul></div>
+    <div class="tabblock"><pre>==== Mesures 1-16 ====
+m1 m2 m3 m4 m5 m6 m7 m8 m9 m10 m11 m12 m13 m14 m15 m16
+G |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+D |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+A |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|-0-|-0-|-0-|-0-|-0-|-0-|-0-|-0-|-0-|-0-|-0-|-0-|-0-|-0-|-0-|-0-|-0-|---|
+E |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|-3-|-3-|
+
+==== Mesures 17-32 ====
+m17 m18 m19 m20 m21 m22 m23 m24 m25 m26 m27 m28 m29 m30 m31 m32
+G |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+D |---|---|---|---|---|---|-0-|-0-|-0-|-0-|-0-|-0-|-0-|-0-|-0-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+A |---|---|---|---|---|---|---|---|---|---|---|---|---|---|-0-|-0-|-0-|-0-|-0-|-0-|-0-|-0-|-0-|-0-|-0-|-0-|-0-|-0-|-0-|-0-|-0-|---|---|---|---|---|---|---|---|-0-|-0-|-0-|-0-|-0-|-0-|-0-|-0-|-0-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|-0-|
+E |-3-|-3-|-3-|-3-|-3-|-3-|-3-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|-3-|-3-|-3-|-3-|-3-|---|---|---|---|---|---|---|---|---|---|---|-3-|-3-|-3-|-3-|-3-|-3-|-3-|-3-|-3-|---|---|---|---|---|---|---|---|
+
+==== Mesures 33-48 ====
+m33 m34 m35 m36 m37 m38 m39 m40 m41 m42 m43 m44 m45 m46 m47 m48
+G |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+D |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|-0-|---|---|-0-|-0-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|-0-|---|-0-|-0-|-0-|-0-|-0-|
+A |-0-|-0-|-0-|-0-|---|---|---|---|-0-|-0-|-0-|-0-|-0-|-0-|-0-|-0-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|-0-|-0-|-0-|-0-|-0-|---|---|---|-0-|-0-|-0-|-0-|-0-|-0-|-0-|-0-|-0-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+E |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|-3-|-3-|-3-|-3-|-3-|-3-|-3-|-3-|-3-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|-3-|-3-|-3-|-3-|-3-|-3-|-3-|-3-|---|---|---|---|---|---|---|
+
+==== Mesures 49-64 ====
+m49 m50 m51 m52 m53 m54 m55 m56 m57 m58 m59 m60 m61 m62 m63 m64
+G |---|---|-2-|-2-|-2-|---|-2-|---|-2-|-2-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+D |-0-|-0-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|-0-|-0-|-0-|-0-|-0-|-0-|-0-|-0-|-0-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+A |---|-0-|---|-0-|-0-|-0-|-0-|-0-|-0-|-0-|-0-|-0-|-0-|-0-|-0-|-0-|-0-|-0-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|-0-|-0-|-0-|-0-|-0-|-0-|-0-|-0-|---|---|---|---|---|---|---|---|---|---|-0-|-0-|-0-|-0-|-0-|-0-|-0-|-0-|-0-|---|---|---|
+E |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|-3-|-3-|-3-|-3-|-3-|-3-|-3-|-3-|-3-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|-3-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|-3-|-3-|-3-|-3-|
+
+==== Mesures 65-80 ====
+m65 m66 m67 m68 m69 m70 m71 m72 m73 m74 m75 m76 m77 m78 m79 m80
+G |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|-2-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|-2-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+D |---|---|---|---|-0-|-0-|-0-|-0-|-0-|-0-|-0-|-0-|-0-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|-0-|-0-|-0-|-0-|-0-|-0-|-0-|-0-|-0-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+A |---|---|---|---|---|---|---|---|---|---|---|---|---|-0-|-0-|-0-|-0-|---|---|---|---|-0-|-0-|-0-|-0-|-0-|-0-|-0-|-0-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|-0-|-0-|-0-|-0-|-0-|---|---|---|-0-|-0-|-0-|-0-|-0-|-0-|-0-|-0-|-0-|---|---|
+E |-3-|-3-|-3-|-3-|-3-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|-3-|-3-|-3-|-3-|-3-|-3-|-3-|-3-|-3-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|-3-|-3-|-3-|
+
+==== Mesures 81-96 ====
+m81 m82 m83 m84 m85 m86 m87 m88 m89 m90 m91 m92 m93 m94 m95 m96
+G |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+D |---|---|---|---|---|---|-0-|-0-|-0-|-0-|-0-|-0-|-0-|-0-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|-0-|-0-|-0-|-0-|-0-|-0-|-0-|-0-|-0-|
+A |---|---|---|---|---|---|---|---|---|---|---|---|---|---|-0-|-0-|-0-|-0-|-0-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|-0-|-0-|-0-|-0-|-0-|-0-|-0-|-0-|-0-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+E |-3-|-3-|-3-|-3-|-3-|-3-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|-4-|-3-|-4-|-3-|-3-|-3-|-3-|-3-|-3-|---|---|---|---|---|---|---|---|---|
+
+==== Mesures 97-100 ====
+m97 m98 m99 m100
+G |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+D |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+A |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+E |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|</pre></div>
+    <div class="notebox">Couvert : mesures 12-96 (basse hypnotique continue, avec un léger creux 86-89). Absente sur l'intro solo de violon.</div>
+  </div>
+
+  <div class="instrpanel" id="panel-piano">
+    <div class="sec-label">✦ Piano — Accords ✦</div>
+    <div class="tipbox"><h4>Conseils</h4><ul><li>Écoute d'abord l'enregistrement plusieurs fois avant de jouer, pour mémoriser le rythme général.</li><li>Joue très lentement au départ — la vitesse viendra avec la répétition, pas l'inverse.</li><li>Travaille un bloc de 4 mesures à la fois avant de passer au suivant.</li><li>Repère les motifs répétitifs de la basse hypnotique avant de jouer la section entière.</li><li>Le tempo est stable à 95 BPM sans ralentissement — reste rigoureux du début à la fin.</li><li>Identifie les silences volontaires (---) : ils font partie du groove, ne les remplis pas.</li></ul></div>
+    <div class="notebox">Piano réel (stem clavier dédié, ostinato sombre). Actif par passages : intro (4-12), pont (42-59), outro (85-90) ; silencieux ailleurs (là où le piano cède la place au synthé et à la voix).</div>
+    <div class="chordgrid">
+      <div class="chordcard"><div class="chordbars">Mesures 4–7</div><div class="chordname">Am</div><div class="chordnotes">Am = A – C – E</div></div>
+      <div class="chordcard"><div class="chordbars">Mesures 8–9</div><div class="chordname">Em</div><div class="chordnotes">Em = E – G – B</div></div>
+      <div class="chordcard"><div class="chordbars">Mesures 10–12</div><div class="chordname">Dm</div><div class="chordnotes">Dm = D – F – A</div></div>
+      <div class="chordcard"><div class="chordbars">Mesures 42–43</div><div class="chordname">Am</div><div class="chordnotes">Am = A – C – E</div></div>
+      <div class="chordcard"><div class="chordbars">Mesures 49–50</div><div class="chordname">A</div><div class="chordnotes">A = A – C# – E</div></div>
+      <div class="chordcard"><div class="chordbars">Mesures 51–52</div><div class="chordname">Am</div><div class="chordnotes">Am = A – C – E</div></div>
+      <div class="chordcard"><div class="chordbars">Mesures 53</div><div class="chordname">G</div><div class="chordnotes">G = G – B – D</div></div>
+      <div class="chordcard"><div class="chordbars">Mesures 55–56</div><div class="chordname">Dm</div><div class="chordnotes">Dm = D – F – A</div></div>
+      <div class="chordcard"><div class="chordbars">Mesures 57–58</div><div class="chordname">Am</div><div class="chordnotes">Am = A – C – E</div></div>
+      <div class="chordcard"><div class="chordbars">Mesures 59</div><div class="chordname">G</div><div class="chordnotes">G = G – B – D</div></div>
+      <div class="chordcard"><div class="chordbars">Mesures 85</div><div class="chordname">C</div><div class="chordnotes">C = C – E – G</div></div>
+      <div class="chordcard"><div class="chordbars">Mesures 86–87</div><div class="chordname">Am</div><div class="chordnotes">Am = A – C – E</div></div>
+      <div class="chordcard"><div class="chordbars">Mesures 88</div><div class="chordname">Em</div><div class="chordnotes">Em = E – G – B</div></div>
+      <div class="chordcard"><div class="chordbars">Mesures 89–90</div><div class="chordname">G</div><div class="chordnotes">G = G – B – D</div></div>
+    </div>
+  </div>
+
+  <div class="instrpanel" id="panel-synth">
+    <div class="sec-label">✦ Synthé — Accords ✦</div>
+    <div class="tipbox"><h4>Conseils</h4><ul><li>Écoute d'abord l'enregistrement plusieurs fois avant de jouer, pour mémoriser le rythme général.</li><li>Joue très lentement au départ — la vitesse viendra avec la répétition, pas l'inverse.</li><li>Travaille un bloc de 4 mesures à la fois avant de passer au suivant.</li><li>Repère les motifs répétitifs de la basse hypnotique avant de jouer la section entière.</li><li>Le tempo est stable à 95 BPM sans ralentissement — reste rigoureux du début à la fin.</li><li>Identifie les silences volontaires (---) : ils font partie du groove, ne les remplis pas.</li></ul></div>
+    <div class="notebox">Le synthé ne se joue pas en tablature — accords en notation lettre internationale. Actif quasi continu de la mesure 12 à 97 (textures pads/chœurs froids en soutien).</div>
+    <div class="chordgrid">
+      <div class="chordcard"><div class="chordbars">Mesures 12</div><div class="chordname">E</div><div class="chordnotes">E = E – G# – B</div></div>
+      <div class="chordcard"><div class="chordbars">Mesures 13–15</div><div class="chordname">A</div><div class="chordnotes">A = A – C# – E</div></div>
+      <div class="chordcard"><div class="chordbars">Mesures 16</div><div class="chordname">D</div><div class="chordnotes">D = D – F# – A</div></div>
+      <div class="chordcard"><div class="chordbars">Mesures 17–18</div><div class="chordname">G</div><div class="chordnotes">G = G – B – D</div></div>
+      <div class="chordcard"><div class="chordbars">Mesures 19–20</div><div class="chordname">Dm</div><div class="chordnotes">Dm = D – F – A</div></div>
+      <div class="chordcard"><div class="chordbars">Mesures 21–24</div><div class="chordname">Am</div><div class="chordnotes">Am = A – C – E</div></div>
+      <div class="chordcard"><div class="chordbars">Mesures 25</div><div class="chordname">G</div><div class="chordnotes">G = G – B – D</div></div>
+      <div class="chordcard"><div class="chordbars">Mesures 26</div><div class="chordname">Gm</div><div class="chordnotes">Gm = G – A# – D</div></div>
+      <div class="chordcard"><div class="chordbars">Mesures 27–28</div><div class="chordname">Am</div><div class="chordnotes">Am = A – C – E</div></div>
+      <div class="chordcard"><div class="chordbars">Mesures 29–30</div><div class="chordname">G</div><div class="chordnotes">G = G – B – D</div></div>
+      <div class="chordcard"><div class="chordbars">Mesures 31–32</div><div class="chordname">Dm</div><div class="chordnotes">Dm = D – F – A</div></div>
+      <div class="chordcard"><div class="chordbars">Mesures 33</div><div class="chordname">Am</div><div class="chordnotes">Am = A – C – E</div></div>
+      <div class="chordcard"><div class="chordbars">Mesures 34</div><div class="chordname">C</div><div class="chordnotes">C = C – E – G</div></div>
+      <div class="chordcard"><div class="chordbars">Mesures 35–36</div><div class="chordname">Am</div><div class="chordnotes">Am = A – C – E</div></div>
+      <div class="chordcard"><div class="chordbars">Mesures 37–38</div><div class="chordname">G</div><div class="chordnotes">G = G – B – D</div></div>
+      <div class="chordcard"><div class="chordbars">Mesures 39–40</div><div class="chordname">Dm</div><div class="chordnotes">Dm = D – F – A</div></div>
+      <div class="chordcard"><div class="chordbars">Mesures 41–44</div><div class="chordname">Am</div><div class="chordnotes">Am = A – C – E</div></div>
+      <div class="chordcard"><div class="chordbars">Mesures 45–46</div><div class="chordname">G</div><div class="chordnotes">G = G – B – D</div></div>
+      <div class="chordcard"><div class="chordbars">Mesures 47–48</div><div class="chordname">Dm</div><div class="chordnotes">Dm = D – F – A</div></div>
+      <div class="chordcard"><div class="chordbars">Mesures 49–50</div><div class="chordname">A</div><div class="chordnotes">A = A – C# – E</div></div>
+      <div class="chordcard"><div class="chordbars">Mesures 51–52</div><div class="chordname">Am</div><div class="chordnotes">Am = A – C – E</div></div>
+      <div class="chordcard"><div class="chordbars">Mesures 53–54</div><div class="chordname">G</div><div class="chordnotes">G = G – B – D</div></div>
+      <div class="chordcard"><div class="chordbars">Mesures 55–56</div><div class="chordname">Dm</div><div class="chordnotes">Dm = D – F – A</div></div>
+      <div class="chordcard"><div class="chordbars">Mesures 57–58</div><div class="chordname">Am</div><div class="chordnotes">Am = A – C – E</div></div>
+      <div class="chordcard"><div class="chordbars">Mesures 59</div><div class="chordname">D</div><div class="chordnotes">D = D – F# – A</div></div>
+      <div class="chordcard"><div class="chordbars">Mesures 60–61</div><div class="chordname">G</div><div class="chordnotes">G = G – B – D</div></div>
+      <div class="chordcard"><div class="chordbars">Mesures 62–63</div><div class="chordname">Am</div><div class="chordnotes">Am = A – C – E</div></div>
+      <div class="chordcard"><div class="chordbars">Mesures 64–65</div><div class="chordname">G</div><div class="chordnotes">G = G – B – D</div></div>
+      <div class="chordcard"><div class="chordbars">Mesures 66–67</div><div class="chordname">Dm</div><div class="chordnotes">Dm = D – F – A</div></div>
+      <div class="chordcard"><div class="chordbars">Mesures 68–71</div><div class="chordname">Am</div><div class="chordnotes">Am = A – C – E</div></div>
+      <div class="chordcard"><div class="chordbars">Mesures 72–73</div><div class="chordname">G</div><div class="chordnotes">G = G – B – D</div></div>
+      <div class="chordcard"><div class="chordbars">Mesures 74–76</div><div class="chordname">Dm</div><div class="chordnotes">Dm = D – F – A</div></div>
+      <div class="chordcard"><div class="chordbars">Mesures 77–79</div><div class="chordname">Am</div><div class="chordnotes">Am = A – C – E</div></div>
+      <div class="chordcard"><div class="chordbars">Mesures 80–81</div><div class="chordname">Em</div><div class="chordnotes">Em = E – G – B</div></div>
+      <div class="chordcard"><div class="chordbars">Mesures 82–83</div><div class="chordname">Dm</div><div class="chordnotes">Dm = D – F – A</div></div>
+      <div class="chordcard"><div class="chordbars">Mesures 84–86</div><div class="chordname">Am</div><div class="chordnotes">Am = A – C – E</div></div>
+      <div class="chordcard"><div class="chordbars">Mesures 90–92</div><div class="chordname">Am</div><div class="chordnotes">Am = A – C – E</div></div>
+      <div class="chordcard"><div class="chordbars">Mesures 93</div><div class="chordname">C</div><div class="chordnotes">C = C – E – G</div></div>
+      <div class="chordcard"><div class="chordbars">Mesures 94</div><div class="chordname">Gm</div><div class="chordnotes">Gm = G – A# – D</div></div>
+      <div class="chordcard"><div class="chordbars">Mesures 95</div><div class="chordname">Dm</div><div class="chordnotes">Dm = D – F – A</div></div>
+      <div class="chordcard"><div class="chordbars">Mesures 96</div><div class="chordname">D</div><div class="chordnotes">D = D – F# – A</div></div>
+      <div class="chordcard"><div class="chordbars">Mesures 97</div><div class="chordname">A</div><div class="chordnotes">A = A – C# – E</div></div>
+    </div>
+  </div>
+</div>
+</div>
+<footer>tréfle.minotaure · www.trefleminotaure.com · © 2026</footer>
+<script>
+function showInstr(name,btn){
+  document.querySelectorAll('.instrpanel').forEach(p=>p.classList.remove('on'));
+  document.getElementById('panel-'+name).classList.add('on');
+  document.querySelectorAll('.controls .cbtn').forEach(b=>{ if(b.id!=='lvl-avec'&&b.id!=='lvl-pro') b.classList.remove('on'); });
+  btn.classList.add('on');
+}
+function setLevel(mode){
+  document.getElementById('lvl-avec').classList.toggle('on', mode==='avec');
+  document.getElementById('lvl-pro').classList.toggle('on', mode==='pro');
+  document.querySelectorAll('.tipbox').forEach(t=>{
+    t.classList.toggle('tips-toggle-hide', mode==='pro');
+  });
+}
+</script>
+</body>
+</html>
