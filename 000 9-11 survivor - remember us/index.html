@@ -260,12 +260,6 @@
 let catalogue = [];
 let searchQuery = '';
 
-const CONFIG_LABELS = {
-  duo: '🎭 Real Duo',
-  minotaure_solo: '🐂 Minotaure solo',
-  trefle_solo: '🍀 Trèfle solo',
-};
-
 function filterSearch(q) {
   searchQuery = q.toLowerCase();
   render();
@@ -296,12 +290,6 @@ function buildCard(s) {
   const linkPed = `<a class="lbtn lbtn-ped" href="${d}pedagogique.html">🎓 Pédagogique <span style="opacity:.6">/ Educational / Pedagógico</span></a>`;
 
   const warnPill = s.sensible ? `<span class="pill pill-warn">⚠️ Thème sensible</span>` : '';
-  const bpmPill = s.bpm ? `<span class="pill pill-bpm">⏱ ${s.bpm} BPM</span>` : '';
-  const duree = (s.duree && s.duree !== 'A COMPLETER') ? `<span class="pill pill-bpm">${s.duree}</span>` : '';
-  const stylePill = (s.style && s.style !== 'A COMPLETER') ? `<span class="pill pill-style">${s.style}</span>` : '';
-  const albumPill = (s.album && s.album !== 'A COMPLETER') ? `<span class="pill pill-album">${s.album}</span>` : '';
-  const configLabel = (s.config && s.config !== 'A COMPLETER') ? (CONFIG_LABELS[s.config] || s.config) : '';
-  const configPill = configLabel ? `<span class="pill pill-config">${configLabel}</span>` : '';
 
   const sousTitres = [s.soustitre.en, s.soustitre.es]
     .filter(t => t && t !== s.titre.fr && t !== s.titre.en)
@@ -317,11 +305,6 @@ function buildCard(s) {
             ${sousTitres ? `<div class="card-sub-titles">${sousTitres}</div>` : ''}
           </div>
           <div class="card-meta">
-            ${stylePill}
-            ${bpmPill}
-            ${duree}
-            ${configPill}
-            ${albumPill}
             ${warnPill}
           </div>
           <div class="card-links" onclick="event.stopPropagation()">
