@@ -141,10 +141,11 @@
     background: linear-gradient(135deg, #1a1208 0%, #150e06 100%);
     border: 1px solid #2a1e0a;
     border-radius: 8px;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
     overflow: hidden;
     transition: border-color 0.2s, box-shadow 0.2s;
   }
+  .card { cursor: pointer; }
   .card:hover { border-color: #4a3418; box-shadow: 0 4px 24px rgba(0,0,0,0.5), 0 0 0 1px rgba(184,150,46,0.1); }
   .card-inner { display: grid; grid-template-columns: 64px 1fr auto; gap: 0; align-items: stretch; }
   .card-num {
@@ -153,18 +154,32 @@
     font-family: "Cinzel", serif; font-size: 1rem; color: var(--gold);
     border-right: 1px solid #2a1e0a; padding: 20px 0; letter-spacing: 0.05em;
   }
-  .card-body { padding: 16px 20px; }
-  .card-titles { margin-bottom: 8px; }
+  .card-body { padding: 14px 20px; }
+  .card-titles { margin-bottom: 6px; }
   .card-main-title { font-family: "IM Fell English", serif; font-size: 1.2rem; color: #e8d5a0; line-height: 1.2; }
   .card-sub-titles { font-family: "Cinzel", serif; font-size: 0.65rem; color: var(--muted); letter-spacing: 0.1em; margin-top: 3px; }
-  .card-meta { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
+  .card-meta { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
   .pill { font-family: "Cinzel", serif; font-size: 0.6rem; padding: 2px 8px; border-radius: 12px; letter-spacing: 0.06em; border: 1px solid; }
   .pill-style { background: #1a1a2a; color: #8888cc; border-color: #2a2a4a; }
   .pill-bpm { background: #1a2a1a; color: #88cc88; border-color: #2a4a2a; }
   .pill-config { background: #2a1a2a; color: #cc88cc; border-color: #4a2a4a; }
   .pill-album { background: #2a1a0a; color: var(--gold-light); border-color: #4a2a10; }
   .pill-warn { background: #2a0808; color: #f0a0a0; border-color: #4a1010; }
-  .card-links { display: flex; gap: 8px; flex-wrap: wrap; }
+  .card-links { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; }
+  .tab-line {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    font-family: "Cinzel", serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.04em;
+    color: var(--gold-light);
+  }
+  .tab-line .tab-label { color: var(--muted); }
+  .tab-line a { color: var(--gold-light); text-decoration: none; border-bottom: 1px dotted var(--gold); }
+  .tab-line a:hover { color: #fff; }
+  .tab-line .sep { opacity: 0.4; }
   .lbtn {
     font-family: "Cinzel", serif; font-size: 0.62rem; padding: 5px 12px; border-radius: 4px;
     text-decoration: none; letter-spacing: 0.08em; border: 1px solid; transition: all 0.18s;
@@ -207,15 +222,10 @@
 <div class="hero">
   <span class="hero-clover">🍀</span>
   <h1 class="hero-title">Trèfle<span class="hero-dot">.</span>Minotaure</h1>
-  <p class="hero-sub">Paroles · Guide pédagogique · Tablatures</p>
-  <p class="hero-desc">Ressources trilingues pour chanter, apprendre et jouer les chansons du groupe — Français · Español · English</p>
+  <p class="hero-sub">Paroles / Lyrics / Letras · Pédagogique / Guide / Guía · Tablatures / Tabs / Tablaturas</p>
 </div>
 
 <div class="filters">
-  <span class="f-label">Filtrer</span>
-  <button class="fbtn on" onclick="setFilter('all',this)">Tout</button>
-  <button class="fbtn" onclick="setFilter('duo',this)">Duo</button>
-  <button class="fbtn" onclick="setFilter('solo',this)">Solo</button>
   <div class="search-wrap">
     <input type="text" id="search" placeholder="Rechercher une chanson..." oninput="filterSearch(this.value)">
   </div>
@@ -248,7 +258,6 @@
 */
 
 let catalogue = [];
-let activeFilter = 'all';
 let searchQuery = '';
 
 const CONFIG_LABELS = {
@@ -257,21 +266,12 @@ const CONFIG_LABELS = {
   trefle_solo: '🍀 Trèfle solo',
 };
 
-function setFilter(f, btn) {
-  activeFilter = f;
-  document.querySelectorAll('.fbtn').forEach(b => b.classList.remove('on'));
-  btn.classList.add('on');
-  render();
-}
-
 function filterSearch(q) {
   searchQuery = q.toLowerCase();
   render();
 }
 
 function matches(song) {
-  if (activeFilter === 'duo' && song.config !== 'duo') return false;
-  if (activeFilter === 'solo' && !(song.config || '').includes('solo')) return false;
   if (searchQuery) {
     const txt = [
       song.titre.fr, song.titre.en, song.titre.es,
@@ -283,13 +283,17 @@ function matches(song) {
   return true;
 }
 
+function buildTitreTrilingue(titre) {
+  const vals = [titre.fr, titre.en, titre.es].filter(t => t && t !== 'A COMPLETER');
+  const unique = [...new Set(vals)];
+  return unique.join(' <span style="opacity:.5">/</span> ');
+}
+
 function buildCard(s) {
   const d = encodeURI(s.dossier) + '/';
 
-  const linkChanter = `<a class="lbtn lbtn-chanter" href="${d}chanter.html">📖 Chanter</a>`;
-  const linkPed = `<a class="lbtn lbtn-ped" href="${d}pedagogique.html">🎓 Pédagogique</a>`;
-  const linkTab = `<a class="lbtn lbtn-tab" href="${d}tablatures_fr.html">🎸 Tablatures</a>`;
-  const linkIndex = `<a class="lbtn lbtn-chanter" href="${d}index.html">🏠 Page</a>`;
+  const linkChanter = `<a class="lbtn lbtn-chanter" href="${d}chanter.html">📖 Chanter <span style="opacity:.6">/ Sing / Cantar</span></a>`;
+  const linkPed = `<a class="lbtn lbtn-ped" href="${d}pedagogique.html">🎓 Pédagogique <span style="opacity:.6">/ Educational / Pedagógico</span></a>`;
 
   const warnPill = s.sensible ? `<span class="pill pill-warn">⚠️ Thème sensible</span>` : '';
   const bpmPill = s.bpm ? `<span class="pill pill-bpm">⏱ ${s.bpm} BPM</span>` : '';
@@ -304,12 +308,12 @@ function buildCard(s) {
     .join(' · ');
 
   return `
-    <div class="card">
+    <div class="card" onclick="window.location.href='${d}index.html'">
       <div class="card-inner">
         <div class="card-num">${s.id}</div>
         <div class="card-body">
           <div class="card-titles">
-            <div class="card-main-title">${s.titre.fr}</div>
+            <div class="card-main-title">${buildTitreTrilingue(s.titre)}</div>
             ${sousTitres ? `<div class="card-sub-titles">${sousTitres}</div>` : ''}
           </div>
           <div class="card-meta">
@@ -320,11 +324,17 @@ function buildCard(s) {
             ${albumPill}
             ${warnPill}
           </div>
-          <div class="card-links">
-            ${linkIndex}
+          <div class="card-links" onclick="event.stopPropagation()">
             ${linkChanter}
             ${linkPed}
-            ${linkTab}
+          </div>
+          <div class="tab-line" onclick="event.stopPropagation()">
+            <span class="tab-label">🎸</span>
+            <a href="${d}tablatures_fr.html">Français</a>
+            <span class="sep">|</span>
+            <a href="${d}tablatures_en.html">English</a>
+            <span class="sep">|</span>
+            <a href="${d}tablatures_es.html">Español</a>
           </div>
         </div>
         <div class="card-lang">
