@@ -21,7 +21,7 @@
     },
     {
       "id": "001",
-      "titre": { "fr": "Ombres des villes", "en": "A COMPLETER", "es": "A COMPLETER" },
+      "titre": { "fr": "Ombres des villes", "en": "Shadow of the City", "es": "Sombras de la ciudad" },
       "soustitre": { "fr": "", "en": "", "es": "" },
       "dossier": "001 ombres des villes",
       "style": "A COMPLETER",
@@ -34,7 +34,7 @@
     },
     {
       "id": "002",
-      "titre": { "fr": "Amour interdit à Téhéran", "en": "A COMPLETER", "es": "A COMPLETER" },
+      "titre": { "fr": "Amour interdit à Téhéran", "en": "Forbidden Love in Tehran", "es": "Amor prohibido en Teherán" },
       "soustitre": { "fr": "", "en": "", "es": "" },
       "dossier": "002 Amour interdit a téhéran",
       "style": "A COMPLETER",
@@ -47,7 +47,7 @@
     },
     {
       "id": "003",
-      "titre": { "fr": "Tu vois papa", "en": "A COMPLETER", "es": "A COMPLETER" },
+      "titre": { "fr": "Tu vois papa", "en": "You See, Dad", "es": "¿Ves, papá?" },
       "soustitre": { "fr": "", "en": "", "es": "" },
       "dossier": "003 tu vois papa",
       "style": "A COMPLETER",
@@ -60,7 +60,7 @@
     },
     {
       "id": "004",
-      "titre": { "fr": "Addiction contre addiction", "en": "A COMPLETER", "es": "A COMPLETER" },
+      "titre": { "fr": "Addiction contre addiction", "en": "Addiction Against Addiction", "es": "Adicción contra adicción" },
       "soustitre": { "fr": "", "en": "", "es": "" },
       "dossier": "004 addiction contre addiction",
       "style": "A COMPLETER",
@@ -73,7 +73,7 @@
     },
     {
       "id": "005",
-      "titre": { "fr": "L'amour... pas la guerre", "en": "A COMPLETER", "es": "A COMPLETER" },
+      "titre": { "fr": "L'amour... pas la guerre", "en": "Love... Not War", "es": "Amor... no guerra" },
       "soustitre": { "fr": "", "en": "", "es": "" },
       "dossier": "005 l'amour...pas la guerre",
       "style": "A COMPLETER",
@@ -112,7 +112,7 @@
     },
     {
       "id": "008",
-      "titre": { "fr": "Gangsta paradis scolaire", "en": "A COMPLETER", "es": "A COMPLETER" },
+      "titre": { "fr": "Gangsta paradis scolaire", "en": "School Gangsta Paradise", "es": "Paraíso gangsta escolar" },
       "soustitre": { "fr": "", "en": "", "es": "" },
       "dossier": "008 gansta paradis scolaire",
       "style": "A COMPLETER",
@@ -138,7 +138,7 @@
     },
     {
       "id": "010",
-      "titre": { "fr": "Le serment du labyrinthe — Partie 1", "en": "A COMPLETER", "es": "A COMPLETER" },
+      "titre": { "fr": "Le serment du labyrinthe — Partie 1", "en": "The Labyrinth's Oath — Part 1", "es": "El juramento del laberinto — Parte 1" },
       "soustitre": { "fr": "", "en": "", "es": "" },
       "dossier": "010 part 1 le serment du labyrinthe",
       "style": "A COMPLETER",
@@ -151,7 +151,7 @@
     },
     {
       "id": "011",
-      "titre": { "fr": "La main tendue — Partie 2", "en": "A COMPLETER", "es": "A COMPLETER" },
+      "titre": { "fr": "La main tendue — Partie 2", "en": "The Helping Hand — Part 2", "es": "La mano tendida — Parte 2" },
       "soustitre": { "fr": "", "en": "", "es": "" },
       "dossier": "011 part 2 la main tendue",
       "style": "A COMPLETER",
@@ -164,7 +164,7 @@
     },
     {
       "id": "012",
-      "titre": { "fr": "25 ans après — Partie 3", "en": "A COMPLETER", "es": "A COMPLETER" },
+      "titre": { "fr": "25 ans après — Partie 3", "en": "25 Years Later — Part 3", "es": "25 años después — Parte 3" },
       "soustitre": { "fr": "", "en": "", "es": "" },
       "dossier": "012 part 3 25 ans apres",
       "style": "A COMPLETER",
