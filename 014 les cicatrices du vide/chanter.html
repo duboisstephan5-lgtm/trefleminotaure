@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Les cicatrices du vide — Paroles</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body { margin:0; background:#1c1420; background-image: radial-gradient(circle at 50% 0%, #2a1f30, #120c16 80%); font-family:'Cormorant Garamond', serif; }
+  .page { max-width:920px; margin:30px auto; background:#f2ece8; border:3px solid #6b5a6f; border-radius:10px; padding:30px 40px 50px; }
+  header { text-align:center; margin-bottom:20px; }
+  header h1 { font-family:'Cinzel', serif; color:#2a1f30; font-size:2rem; margin-bottom:4px; }
+  .meta { color:#6b5a6f; font-size:.95rem; }
+  .controls { display:flex; justify-content:center; gap:24px; flex-wrap:wrap; margin:18px 0 26px; }
+  .ctrl-group { display:flex; gap:6px; align-items:center; }
+  .ctrl-group label { font-size:.85rem; color:#5a3d5f; margin-right:4px; }
+  button.langbtn, button.speedbtn { font-family:'Cinzel', serif; font-size:.8rem; padding:6px 14px; border-radius:6px; border:1px solid #a68aad; background:#fff8ea; cursor:pointer; }
+  button.langbtn.active, button.speedbtn.active { background:#7a3d8a; color:#fff; }
+  .sec { margin-bottom:26px; border-top:1px solid #cbb8d0; padding-top:14px; }
+  .sec-head { display:flex; align-items:center; gap:10px; margin-bottom:10px; }
+  .section-label { font-family:'Cinzel', serif; font-weight:600; color:#2a1f30; font-size:1rem; }
+  .playbtn { margin-left:auto; border:none; background:#7a3d8a; color:#fff; border-radius:50%; width:30px; height:30px; cursor:pointer; font-size:.85rem; }
+  .tagrow { font-size:.75rem; font-style:italic; color:#b8962e; margin:6px 0; }
+  .lyric-row { display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; margin-bottom:6px; font-size:1.1rem; }
+  .lyric-row.ghost { opacity:.65; font-style:italic; }
+  .col { padding:4px 8px; border-radius:4px; }
+  .col.fr { background:#e8f0fc; }
+  .col.es { background:#f5ead5; }
+  .col.en { background:#fce8ec; }
+  body.show-fr .col.es, body.show-fr .col.en { display:none; }
+  body.show-fr .lyric-row { grid-template-columns:1fr; }
+  body.show-es .col.fr, body.show-es .col.en { display:none; }
+  body.show-es .lyric-row { grid-template-columns:1fr; }
+  body.show-en .col.fr, body.show-en .col.es { display:none; }
+  body.show-en .lyric-row { grid-template-columns:1fr; }
+  footer { text-align:center; margin-top:34px; color:#6b5a6f; font-size:.85rem; border-top:1px solid #cbb8d0; padding-top:14px; }
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <h1>Les cicatrices du vide <span style="opacity:.5;">/ Scars of the Void / Las cicatrices del vacío</span></h1>
+    <div class="meta">Dark Poetic Alternative · Talking Blues · Dark Rock · ~5-6 min</div>
+  </header>
+
+  <div class="controls">
+    <div class="ctrl-group">
+      <label>Langue :</label>
+      <button class="langbtn active" onclick="setLang('all')">Trilingue</button>
+      <button class="langbtn" onclick="setLang('fr')">🇫🇷 Français</button>
+      <button class="langbtn" onclick="setLang('es')">🇪🇸 Español</button>
+      <button class="langbtn" onclick="setLang('en')">🇬🇧 English</button>
+    </div>
+    <div class="ctrl-group">
+      <label>Vitesse :</label>
+      <button class="speedbtn" onclick="setSpeed(0.7)">× 0.7</button>
+      <button class="speedbtn active" onclick="setSpeed(0.9)">× 0.9</button>
+      <button class="speedbtn" onclick="setSpeed(1.0)">× 1.0</button>
+    </div>
+  </div>
+
+  
+  <section class="sec" id="sec-intro">
+    <div class="sec-head">
+      <span class="section-label">Intro — a cappella / Intro — a capela / Intro — a cappella</span>
+      <button class="playbtn" onclick="playSec('intro')">▶</button>
+    </div>
+    <div class="tagrow">[SPOKEN A CAPPELLA]</div>
+<div class="lyric-row">
+      <div class="col fr">Je n'avais pas de mode d'emploi...</div>
+      <div class="col es">No venía con un manual de instrucciones...</div>
+      <div class="col en">I didn't come with an instruction manual...</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">Personne ne m'avait appris comment on devient une mère —</div>
+      <div class="col es">Nadie me enseñó cómo se convierte una en madre —</div>
+      <div class="col en">No one ever taught me how to become a mother —</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">quand on a d'abord dû apprendre à survivre.</div>
+      <div class="col es">cuando primero tuvo que aprender a sobrevivir.</div>
+      <div class="col en">when you first had to learn how to survive.</div>
+    </div>
+<div class="tagrow">[LICK]</div>
+<div class="lyric-row">
+      <div class="col fr">Je ne savais pas toujours comment vous aimer correctement...</div>
+      <div class="col es">No siempre supe cómo amaros como debía...</div>
+      <div class="col en">I didn't always know how to love you the right way...</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">Je savais seulement — que je vous aimais.</div>
+      <div class="col es">Te amaba.</div>
+      <div class="col en">I loved you.</div>
+    </div>
+<div class="lyric-row ghost">
+      <div class="col fr">(Love...)</div>
+      <div class="col es">(Amour...)</div>
+      <div class="col en">(Amour...)</div>
+    </div>
+<div class="tagrow">[LICK]</div>
+<div class="lyric-row">
+      <div class="col fr">Alors j'ai fait comme j'ai pu. (Con amor...)</div>
+      <div class="col es">Así que hice lo que pude. (Avec amour...)</div>
+      <div class="col en">So I did what I could. (Avec amour...)</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">Comme nous avons pu.</div>
+      <div class="col es">Como pudimos.</div>
+      <div class="col en">As best we could.</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">Avec nos peurs — nos erreurs — nos cicatrices.</div>
+      <div class="col es">Con nuestros miedos — nuestros errores — nuestras cicatrices.</div>
+      <div class="col en">With our fears — our mistakes — our scars.</div>
+    </div>
+<div class="tagrow">[LICK]</div>
+<div class="lyric-row">
+      <div class="col fr">On voulait seulement que les nôtres ne deviennent jamais les vôtres.</div>
+      <div class="col es">Solo queríamos que las nuestras nunca fueran las vuestras.</div>
+      <div class="col en">We only wanted ours to never become yours.</div>
+    </div>
+<div class="tagrow">[SPOKEN]</div>
+<div class="lyric-row">
+      <div class="col fr">Vous vous souvenez de ce qu'on ne pouvait pas vous offrir...</div>
+      <div class="col es">Vosotros recordáis lo que no pudimos daros...</div>
+      <div class="col en">You remember what we couldn't give you...</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">Moi — de ce qu'on refusait de vous laisser manquer.</div>
+      <div class="col es">Yo recuerdo — lo que nos negamos a dejaros necesitar.</div>
+      <div class="col en">I remember — what we refused to let you go without.</div>
+    </div>
+<div class="lyric-row ghost">
+      <div class="col fr">(Love...)</div>
+      <div class="col es">(Amour...)</div>
+      <div class="col en">(Amour...)</div>
+    </div>
+<div class="tagrow">[LICK]</div>
+<div class="lyric-row">
+      <div class="col fr">Vos assiettes étaient pleines —</div>
+      <div class="col es">Vuestros platos estaban llenos —</div>
+      <div class="col en">Your plates were full —</div>
+    </div>
+<div class="tagrow">[LICK]</div>
+<div class="lyric-row">
+      <div class="col fr">les nôtres... parfois vides.</div>
+      <div class="col es">los nuestros... a veces vacíos.</div>
+      <div class="col en">ours... sometimes empty.</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">Alors on se levait...</div>
+      <div class="col es">Así que nos levantábamos...</div>
+      <div class="col en">So we got up...</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">Ménage — téléphone — travail à chercher...</div>
+      <div class="col es">Limpieza — llamadas — buscar trabajo...</div>
+      <div class="col en">Cleaning — phone calls — hunting for work...</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">N'importe quelle excuse pour que vous ne regardiez pas nos assiettes.</div>
+      <div class="col es">Cualquier excusa para que no vierais nuestros platos.</div>
+      <div class="col en">Any excuse so you wouldn't look at our plates.</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">Vous ne deviez pas savoir. Ni porter ça.</div>
+      <div class="col es">No debíais saberlo. Ni cargar con eso.</div>
+      <div class="col en">You weren't supposed to know. Or carry that.</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">Vous étiez des enfants — (Love...)</div>
+      <div class="col es">Erais niños — (Amour...)</div>
+      <div class="col en">You were children — (Amour...)</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">nous... les parents. (Con amor...)</div>
+      <div class="col es">nosotros... los padres. (Avec amour...)</div>
+      <div class="col en">we... the parents. (Avec amour...)</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">Même quand nous ne savions plus comment l'être.</div>
+      <div class="col es">Incluso cuando ya no sabíamos cómo serlo.</div>
+      <div class="col en">Even when we no longer knew how to be that.</div>
+    </div>
+<div class="lyric-row ghost">
+      <div class="col fr">(Je suis là...)</div>
+      <div class="col es">(Je suis là...)</div>
+      <div class="col en">(Je suis là...)</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">On n'avait pas grand-chose...</div>
+      <div class="col es">No teníamos gran cosa...</div>
+      <div class="col en">We didn't have much...</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">Alors — on inventait. [LICK]</div>
+      <div class="col es">Así que — inventábamos. [LICK]</div>
+      <div class="col en">So — we invented. [LICK]</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">On réparait. [LICK]</div>
+      <div class="col es">Reparábamos. [LICK]</div>
+      <div class="col en">We repaired. [LICK]</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">On cachait. [LICK]</div>
+      <div class="col es">Lo escondíamos. [LICK]</div>
+      <div class="col en">We hid it. [LICK]</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">On recommençait. [LICK]</div>
+      <div class="col es">Volvíamos a empezar. [LICK]</div>
+      <div class="col en">We started over. [LICK]</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">On faisait... de la magie invisible.</div>
+      <div class="col es">Hacíamos... magia invisible.</div>
+      <div class="col en">We made... invisible magic.</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">Cette magie que personne ne remarque —</div>
+      <div class="col es">Esa magia que nadie nota —</div>
+      <div class="col en">That magic no one ever notices —</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">justement... quand elle fonctionne.</div>
+      <div class="col es">justo... cuando funciona.</div>
+      <div class="col en">precisely... when it works.</div>
+    </div>
+  </section>
+
+  <section class="sec" id="sec-montee">
+    <div class="sec-head">
+      <span class="section-label">Montée / Ostinato / Subida / Ostinato / Rising / Ostinato</span>
+      <button class="playbtn" onclick="playSec('montee')">▶</button>
+    </div>
+    <div class="tagrow">[BUILD]</div>
+<div class="lyric-row">
+      <div class="col fr">Vous regardiez ce que les autres avaient —</div>
+      <div class="col es">Vosotros mirabais lo que otros tenían —</div>
+      <div class="col en">You watched what other kids had —</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">les vacances — les maisons —</div>
+      <div class="col es">las vacaciones — las casas —</div>
+      <div class="col en">the holidays — the houses —</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">ce qu'on ne pouvait pas vous donner.</div>
+      <div class="col es">lo que no podíamos daros.</div>
+      <div class="col en">what we couldn't give you.</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">Nous... on regardait ceux qui avaient encore moins.</div>
+      <div class="col es">Nosotros... mirábamos a los que tenían aún menos.</div>
+      <div class="col en">We... watched those who had even less.</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">On savait à quelle vitesse on peut tout perdre.</div>
+      <div class="col es">Sabíamos lo rápido que se puede perder todo.</div>
+      <div class="col en">We knew how fast you can lose everything.</div>
+    </div>
+<div class="tagrow">[LICK]</div>
+<div class="lyric-row">
+      <div class="col fr">C'est peut-être pour ça qu'on avait peur.</div>
+      <div class="col es">Quizá por eso teníamos miedo.</div>
+      <div class="col en">Maybe that's why we were afraid.</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">Trop peur. (Miedo...)</div>
+      <div class="col es">Demasiado miedo. (Peur...)</div>
+      <div class="col en">Too afraid. (Peur...)</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">Des rencontres [LICK]</div>
+      <div class="col es">De los encuentros [LICK]</div>
+      <div class="col en">Of new people [LICK]</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">des routes [LICK]</div>
+      <div class="col es">de los caminos [LICK]</div>
+      <div class="col en">of the roads [LICK]</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">des choix [LICK]</div>
+      <div class="col es">de las decisiones [LICK]</div>
+      <div class="col en">of the choices [LICK]</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">Vous appeliez ça de la méfiance.</div>
+      <div class="col es">Vosotros lo llamabais desconfianza.</div>
+      <div class="col en">You called it mistrust.</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">Nous — essayer de vous protéger.</div>
+      <div class="col es">Nosotros — intentar protegeros.</div>
+      <div class="col en">We called it — trying to protect you.</div>
+    </div>
+<div class="tagrow">[LICK REPEATS]</div>
+<div class="lyric-row">
+      <div class="col fr">Peut-être maladroitement — trop fort —</div>
+      <div class="col es">Quizá torpemente — demasiado fuerte —</div>
+      <div class="col en">Maybe clumsily — too tightly —</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">peut-être qu'on s'est trompés.</div>
+      <div class="col es">quizá nos equivocamos.</div>
+      <div class="col en">maybe we got it wrong.</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">Mais jamais — jamais —</div>
+      <div class="col es">Pero nunca — nunca —</div>
+      <div class="col en">But never — never —</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">pour vous empêcher de vivre.</div>
+      <div class="col es">para impediros vivir.</div>
+      <div class="col en">to stop you from living.</div>
+    </div>
+<div class="tagrow">[OSTINATO]</div>
+<div class="lyric-row">
+      <div class="col fr">Je voulais que vous viviez ! (Vida...)</div>
+      <div class="col es">¡Quería que vivierais! (Vivre...)</div>
+      <div class="col en">I wanted you to live! (Vivre...)</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">Voilà... que vous viviez ! (Vida...)</div>
+      <div class="col es">Eso... ¡que vivierais! (Vivre...)</div>
+      <div class="col en">That's it... that you live! (Vivre...)</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">Que vous appreniez — construisiez —</div>
+      <div class="col es">Que aprendierais — construyerais —</div>
+      <div class="col en">That you would learn — build —</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">que vous alliez plus loin que nous !</div>
+      <div class="col es">¡que fuerais más lejos que nosotros!</div>
+      <div class="col en">that you'd go further than we did!</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">Sans connaître nos routes —</div>
+      <div class="col es">Sin conocer nuestros caminos —</div>
+      <div class="col en">Without knowing our roads —</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">nos peurs — nos cicatrices !</div>
+      <div class="col es">¡nuestros miedos — nuestras cicatrices!</div>
+      <div class="col en">our fears — our scars!</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">Et maintenant... je vous regarde — de loin.</div>
+      <div class="col es">Y ahora... os miro — desde lejos.</div>
+      <div class="col en">And now... I watch you — from far away.</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">Je vous vois tomber...</div>
+      <div class="col es">Os veo caer...</div>
+      <div class="col en">I see you falling...</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">sans pouvoir tendre la main.</div>
+      <div class="col es">sin poder tenderos la mano.</div>
+      <div class="col en">unable to reach out my hand.</div>
+    </div>
+<div class="lyric-row ghost">
+      <div class="col fr">(Respire...)</div>
+      <div class="col es">(Respire...)</div>
+      <div class="col en">(Respire...)</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">Je vous avais prévenues...</div>
+      <div class="col es">Os había avisado...</div>
+      <div class="col en">I had warned you...</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">Pas parce que j'avais toujours raison !</div>
+      <div class="col es">¡No porque siempre tuviera razón!</div>
+      <div class="col en">Not because I was always right!</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">Mais parce que je connaissais déjà</div>
+      <div class="col es">Sino porque ya conocía</div>
+      <div class="col en">But because I already knew</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">la douleur qui vous attendait !</div>
+      <div class="col es">¡el dolor que os esperaba!</div>
+      <div class="col en">the pain that was waiting for you!</div>
+    </div>
+<div class="tagrow">[SLIDE][DRUMS]</div>
+<div class="lyric-row">
+      <div class="col fr">Vous m'avez dit : ce n'est plus la même époque.</div>
+      <div class="col es">Me dijisteis: ya no es la misma época.</div>
+      <div class="col en">You told me: it's not the same time anymore.</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">Que nous étions vieux. (Too old...)</div>
+      <div class="col es">Éramos viejos. (Trop vieux...)</div>
+      <div class="col en">We were old. (Trop vieux...)</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">Que nous ne comprenions rien.</div>
+      <div class="col es">Que no entendíamos nada.</div>
+      <div class="col en">That we understood nothing.</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">Peut-être !</div>
+      <div class="col es">¡Quizá!</div>
+      <div class="col en">Maybe!</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">Peut-être que je ne comprends plus votre monde !</div>
+      <div class="col es">¡Quizá ya no entienda vuestro mundo!</div>
+      <div class="col en">Maybe I don't understand your world anymore!</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">Mais la douleur — elle...</div>
+      <div class="col es">Pero el dolor — ¿acaso...?</div>
+      <div class="col en">But the pain — does it...</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">a-t-elle tellement changé ?</div>
+      <div class="col es">¿ha cambiado tanto?</div>
+      <div class="col en">has it really changed that much?</div>
+    </div>
+<div class="tagrow">[BUILD]</div>
+<div class="lyric-row">
+      <div class="col fr">Les époques changent !</div>
+      <div class="col es">¡Las épocas cambian!</div>
+      <div class="col en">Times change!</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">Les visages — les maisons — les mots changent !</div>
+      <div class="col es">¡Los rostros — las casas — las palabras cambian!</div>
+      <div class="col en">Faces — houses — words all change!</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">Mais dites-moi —</div>
+      <div class="col es">Pero decidme —</div>
+      <div class="col en">But tell me —</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">Pourquoi les cicatrices se ressemblent-elles autant ?</div>
+      <div class="col es">¿Por qué se parecen tanto las cicatrices?</div>
+      <div class="col en">Why do the scars all look the same?</div>
+    </div>
+  </section>
+
+  <section class="sec" id="sec-rock">
+    <div class="sec-head">
+      <span class="section-label">Explosion Rock / Climax / Explosión Rock / Clímax / Rock Explosion / Climax</span>
+      <button class="playbtn" onclick="playSec('rock')">▶</button>
+    </div>
+    <div class="tagrow">[ROCK]</div>
+<div class="lyric-row">
+      <div class="col fr">JE NE VOULAIS PAS CHOISIR VOTRE ROUTE !</div>
+      <div class="col es">¡NO QUERÍA ELEGIR VUESTRO CAMINO!</div>
+      <div class="col en">I DIDN'T WANT TO CHOOSE YOUR PATH!</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">JE VOULAIS VOUS ÉVITER LES RAVINS !</div>
+      <div class="col es">¡QUERÍA AHORRAROS LOS BARRANCOS!</div>
+      <div class="col en">I WANTED TO SPARE YOU THE RAVINES!</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">JE NE VOULAIS PAS VIVRE À VOTRE PLACE !</div>
+      <div class="col es">¡NO QUERÍA VIVIR EN VUESTRO LUGAR!</div>
+      <div class="col en">I DIDN'T WANT TO LIVE YOUR LIFE FOR YOU!</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">JE VOULAIS QUE ÇA S'ARRÊTE AVEC NOUS !</div>
+      <div class="col es">¡QUERÍA QUE TERMINARA CON NOSOTROS!</div>
+      <div class="col en">I WANTED IT TO END WITH US!</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">Nos peurs ! Nos chutes ! Nos nuits ! Nos blessures !</div>
+      <div class="col es">¡Nuestros miedos! ¡Nuestras caídas! ¡Nuestras noches! ¡Nuestras heridas!</div>
+      <div class="col en">Our fears! Our falls! Our nights! Our wounds!</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">QUE ÇA S'ARRÊTE AVEC NOUS !</div>
+      <div class="col es">¡QUE TERMINARA CON NOSOTROS!</div>
+      <div class="col en">THAT IT WOULD END WITH US!</div>
+    </div>
+<div class="tagrow">[VIOLIN]</div>
+<div class="lyric-row">
+      <div class="col fr">Et aujourd'hui — je regarde une porte fermée !</div>
+      <div class="col es">¡Y hoy — miro una puerta cerrada!</div>
+      <div class="col en">And today — I stare at a closed door!</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">Moi — qui compte les jours !</div>
+      <div class="col es">¡Yo — que cuento los días!</div>
+      <div class="col en">Me — who counts the days!</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">Qui imagine les anniversaires !</div>
+      <div class="col es">¡Que imagina los cumpleaños!</div>
+      <div class="col en">Who imagines the birthdays!</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">Qui me demande...</div>
+      <div class="col es">Que se pregunta...</div>
+      <div class="col en">Who wonders...</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">à quoi ressemble le sourire de mon petit-fils !</div>
+      <div class="col es">¡cómo será la sonrisa de mi nieto!</div>
+      <div class="col en">what my grandson's smile even looks like!</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">C'est ça que tu appelles acheter son amour ?</div>
+      <div class="col es">¿A eso le llamas comprar su amor?</div>
+      <div class="col en">Is that what you call buying his love?</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">Je ne voulais pas l'acheter !</div>
+      <div class="col es">¡No quería comprarlo!</div>
+      <div class="col en">I didn't want to buy it!</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">JE VOULAIS DU TEMPS !</div>
+      <div class="col es">¡QUERÍA TIEMPO!</div>
+      <div class="col en">I WANTED TIME!</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">Des matins ! Des rires ! Des souvenirs !</div>
+      <div class="col es">¡Mañanas! ¡Risas! ¡Recuerdos!</div>
+      <div class="col en">Mornings! Laughter! Memories!</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">Un château de sable ! Une histoire avant de dormir !</div>
+      <div class="col es">¡Un castillo de arena! ¡Un cuento antes de dormir!</div>
+      <div class="col en">A sandcastle! A bedtime story!</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">CINQ JOURS !</div>
+      <div class="col es">¡CINCO DÍAS!</div>
+      <div class="col en">FIVE DAYS!</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">Cinq jours...</div>
+      <div class="col es">Cinco días...</div>
+      <div class="col en">Five days...</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">pour être simplement —</div>
+      <div class="col es">para simplemente ser —</div>
+      <div class="col en">just to simply be —</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">ses grands-parents !</div>
+      <div class="col es">¡sus abuelos!</div>
+      <div class="col en">his grandparents!</div>
+    </div>
+<div class="tagrow">[SURGE]</div>
+<div class="lyric-row">
+      <div class="col fr">Parce qu'un jour — quelqu'un nous a offert ça !</div>
+      <div class="col es">¡Porque un día — alguien nos regaló eso!</div>
+      <div class="col en">Because one day — someone gave us that!</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">Quand nous ne pouvions pas nous l'offrir !</div>
+      <div class="col es">¡Cuando no podíamos dárnoslo nosotros mismos!</div>
+      <div class="col en">When we couldn't give it to ourselves!</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">Et je n'ai jamais oublié !</div>
+      <div class="col es">¡Y nunca lo olvidé!</div>
+      <div class="col en">And I never forgot it!</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">Je voulais faire passer ce geste —</div>
+      <div class="col es">Quería transmitir ese gesto —</div>
+      <div class="col en">I wanted to pass that gesture on —</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">d'une génération... À L'AUTRE !</div>
+      <div class="col es">de una generación... ¡A LA OTRA!</div>
+      <div class="col en">from one generation... TO THE NEXT!</div>
+    </div>
+<div class="tagrow">[CLIMAX]</div>
+<div class="lyric-row">
+      <div class="col fr">JE NE VEUX RIEN ACHETER !</div>
+      <div class="col es">¡NO QUIERO COMPRAR NADA!</div>
+      <div class="col en">I DON'T WANT TO BUY ANYTHING!</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">RIEN PRENDRE ! RIEN PROUVER !</div>
+      <div class="col es">¡NO TOMAR NADA! ¡NO DEMOSTRAR NADA!</div>
+      <div class="col en">TAKE NOTHING! PROVE NOTHING!</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">JE VEUX MES ENFANTS !</div>
+      <div class="col es">¡QUIERO A MIS HIJOS!</div>
+      <div class="col en">I WANT MY CHILDREN!</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">JE VEUX CONNAÎTRE MES PETITS-ENFANTS !</div>
+      <div class="col es">¡QUIERO CONOCER A MIS NIETOS!</div>
+      <div class="col en">I WANT TO KNOW MY GRANDCHILDREN!</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">JE VEUX POUVOIR LES AIMER ! (LOVE!)</div>
+      <div class="col es">¡QUIERO PODER AMARLOS! (AMOUR!)</div>
+      <div class="col en">I WANT TO BE ABLE TO LOVE THEM! (AMOUR!)</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">C'EST TOUT !</div>
+      <div class="col es">¡ESO ES TODO!</div>
+      <div class="col en">THAT'S ALL!</div>
+    </div>
+<div class="lyric-row ghost">
+      <div class="col fr">(Je suis avec toi...)</div>
+      <div class="col es">(Je suis avec toi...)</div>
+      <div class="col en">(Je suis avec toi...)</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">On n'était pas parfaits ! Jamais prétendu !</div>
+      <div class="col es">¡No éramos perfectos! ¡Nunca lo pretendimos!</div>
+      <div class="col en">We weren't perfect! Never claimed to be!</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">On s'est trompés ! On a eu peur !</div>
+      <div class="col es">¡Nos equivocamos! ¡Tuvimos miedo!</div>
+      <div class="col en">We got it wrong! We were afraid!</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">On a parfois serré trop fort !</div>
+      <div class="col es">¡A veces apretamos demasiado fuerte!</div>
+      <div class="col en">Sometimes we held on too tight!</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">Mais putain — ON A FAIT DE NOTRE MIEUX !</div>
+      <div class="col es">¡Pero joder — HICIMOS TODO LO QUE PUDIMOS!</div>
+      <div class="col en">But damn it — WE DID OUR BEST!</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">AVEC RIEN ! NOS BLESSURES !</div>
+      <div class="col es">¡CON NADA! ¡NUESTRAS HERIDAS!</div>
+      <div class="col en">WITH NOTHING! OUR WOUNDS!</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">NOS PEURS ! NOS MAINS VIDES !</div>
+      <div class="col es">¡NUESTROS MIEDOS! ¡NUESTRAS MANOS VACÍAS!</div>
+      <div class="col en">OUR FEARS! OUR EMPTY HANDS!</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">ON A FAIT — DE LA MAGIE — INVISIBLE !</div>
+      <div class="col es">¡HICIMOS — MAGIA — INVISIBLE!</div>
+      <div class="col en">WE MADE — INVISIBLE — MAGIC!</div>
+    </div>
+  </section>
+
+  <section class="sec" id="sec-decay">
+    <div class="sec-head">
+      <span class="section-label">Retour au vide / Vuelta al vacío / Return to the Void</span>
+      <button class="playbtn" onclick="playSec('decay')">▶</button>
+    </div>
+    <div class="tagrow">[STOP]</div>
+<div class="tagrow">[SPOKEN]</div>
+<div class="lyric-row">
+      <div class="col fr">Pourquoi...</div>
+      <div class="col es">Por qué...</div>
+      <div class="col en">Why...</div>
+    </div>
+<div class="tagrow">[LICK SOFT]</div>
+<div class="lyric-row">
+      <div class="col fr">Pourquoi le vide m'en a fait autant ?</div>
+      <div class="col es">¿Por qué el vacío me quitó tanto?</div>
+      <div class="col en">Why did the emptiness take so much from me?</div>
+    </div>
+<div class="tagrow">[SOFTER]</div>
+<div class="lyric-row">
+      <div class="col fr">D'abord... nos parents.</div>
+      <div class="col es">Primero... nuestros padres.</div>
+      <div class="col en">First... our parents.</div>
+    </div>
+<div class="tagrow">[LOWER]</div>
+<div class="lyric-row">
+      <div class="col fr">Le vide de ce qu'ils n'ont pas su nous donner.</div>
+      <div class="col es">El vacío de lo que no supieron darnos.</div>
+      <div class="col en">The emptiness of what they couldn't give us.</div>
+    </div>
+<div class="tagrow">[SLOWER]</div>
+<div class="lyric-row">
+      <div class="col fr">Puis... les difficultés de la vie.</div>
+      <div class="col es">Luego... las dificultades de la vida.</div>
+      <div class="col en">Then... life's hardships.</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">Les maisons — les assiettes — les lendemains...</div>
+      <div class="col es">Las casas — los platos — los mañanas...</div>
+      <div class="col en">The houses — the plates — the tomorrows...</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">qu'il fallait toujours réinventer.</div>
+      <div class="col es">que siempre había que reinventar.</div>
+      <div class="col en">that always had to be reinvented.</div>
+    </div>
+<div class="tagrow">[LOW NOTES]</div>
+<div class="lyric-row">
+      <div class="col fr">Et maintenant — mes enfants.</div>
+      <div class="col es">Y ahora — mis hijos.</div>
+      <div class="col en">And now — my children.</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">Mes petits-enfants.</div>
+      <div class="col es">Mis nietos.</div>
+      <div class="col en">My grandchildren.</div>
+    </div>
+<div class="tagrow">[ONE NOTE]</div>
+<div class="lyric-row">
+      <div class="col fr">C'est étrange...</div>
+      <div class="col es">Es extraño...</div>
+      <div class="col en">It's strange...</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">Toute ma vie — j'ai essayé de remplir les vides.</div>
+      <div class="col es">Toda mi vida — intenté llenar los vacíos.</div>
+      <div class="col en">My whole life — I tried to fill the emptiness.</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">Les vôtres...</div>
+      <div class="col es">Los vuestros...</div>
+      <div class="col en">Yours...</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">Les nôtres...</div>
+      <div class="col es">Los nuestros...</div>
+      <div class="col en">Ours...</div>
+    </div>
+<div class="tagrow">[FAINT NOTE]</div>
+<div class="lyric-row">
+      <div class="col fr">Et aujourd'hui...</div>
+      <div class="col es">Y hoy...</div>
+      <div class="col en">And today...</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">je ne sais plus comment remplir celui-là.</div>
+      <div class="col es">ya no sé cómo llenar este.</div>
+      <div class="col en">I no longer know how to fill this one.</div>
+    </div>
+<div class="tagrow">[BREATH]</div>
+<div class="lyric-row">
+      <div class="col fr">Alors... je vais simplement laisser une place.</div>
+      <div class="col es">Así que... simplemente dejaré un lugar.</div>
+      <div class="col en">So... I'll simply leave a place.</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">Pour vous.</div>
+      <div class="col es">Para vosotros.</div>
+      <div class="col en">For you.</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">Pour eux.</div>
+      <div class="col es">Para ellos.</div>
+      <div class="col en">For them.</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">Même si vous ne venez pas...</div>
+      <div class="col es">Aunque no vengáis...</div>
+      <div class="col en">Even if you never come...</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">Même si vous ne savez pas qu'elle est là.</div>
+      <div class="col es">Aunque no sepáis que está ahí.</div>
+      <div class="col en">Even if you don't know it's there.</div>
+    </div>
+<div class="lyric-row ghost">
+      <div class="col fr">(Moi... je suis là.)</div>
+      <div class="col es">(Moi... je suis là.)</div>
+      <div class="col en">(Moi... je suis là.)</div>
+    </div>
+<div class="tagrow">[BREATH]</div>
+<div class="lyric-row">
+      <div class="col fr">Pourquoi...</div>
+      <div class="col es">Por qué...</div>
+      <div class="col en">Why...</div>
+    </div>
+<div class="tagrow">[WHISPER]</div>
+<div class="lyric-row">
+      <div class="col fr">Pourquoi faut-il toujours...</div>
+      <div class="col es">Por qué siempre tiene que ser...</div>
+      <div class="col en">Why must it always be...</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">que ceux qu'on aime...</div>
+      <div class="col es">que los que amamos...</div>
+      <div class="col en">that the ones we love...</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">laissent les plus grandes cicatrices...</div>
+      <div class="col es">dejan las cicatrices más profundas...</div>
+      <div class="col en">leave the deepest scars...</div>
+    </div>
+<div class="tagrow">[FAINT NOTE]</div>
+<div class="lyric-row">
+      <div class="col fr">...du vide ?</div>
+      <div class="col es">...del vacío?</div>
+      <div class="col en">...of emptiness?</div>
+    </div>
+<div class="lyric-row">
+      <div class="col fr">Pourquoi...</div>
+      <div class="col es">Por qué...</div>
+      <div class="col en">Why...</div>
+    </div>
+<div class="lyric-row ghost">
+      <div class="col fr">(Why...?)</div>
+      <div class="col es">(Pourquoi...?)</div>
+      <div class="col en">(Pourquoi...?)</div>
+    </div>
+<div class="tagrow">[END]</div>
+  </section>
+
+  <footer>www.trefleminotaure.com · © 2026 Trèfle &amp; Minotaure</footer>
+</div>
+
+<script>
+const SECS = {
+  "intro": {
+    "fr": "Je n'avais pas de mode d'emploi... Personne ne m'avait appris comment on devient une mère — quand on a d'abord dû apprendre à survivre. Je ne savais pas toujours comment vous aimer correctement... Je savais seulement — que je vous aimais. (Love...) Alors j'ai fait comme j'ai pu. (Con amor...) Comme nous avons pu. Avec nos peurs — nos erreurs — nos cicatrices. On voulait seulement que les nôtres ne deviennent jamais les vôtres. Vous vous souvenez de ce qu'on ne pouvait pas vous offrir... Moi — de ce qu'on refusait de vous laisser manquer. (Love...) Vos assiettes étaient pleines — les nôtres... parfois vides. Alors on se levait... Ménage — téléphone — travail à chercher... N'importe quelle excuse pour que vous ne regardiez pas nos assiettes. Vous ne deviez pas savoir. Ni porter ça. Vous étiez des enfants — (Love...) nous... les parents. (Con amor...) Même quand nous ne savions plus comment l'être. (Je suis là...) On n'avait pas grand-chose... Alors — on inventait. [LICK] On réparait. [LICK] On cachait. [LICK] On recommençait. [LICK] On faisait... de la magie invisible. Cette magie que personne ne remarque — justement... quand elle fonctionne.",
+    "es": "No venía con un manual de instrucciones... Nadie me enseñó cómo se convierte una en madre — cuando primero tuvo que aprender a sobrevivir. No siempre supe cómo amaros como debía... Te amaba. (Amour...) Así que hice lo que pude. (Avec amour...) Como pudimos. Con nuestros miedos — nuestros errores — nuestras cicatrices. Solo queríamos que las nuestras nunca fueran las vuestras. Vosotros recordáis lo que no pudimos daros... Yo recuerdo — lo que nos negamos a dejaros necesitar. (Amour...) Vuestros platos estaban llenos — los nuestros... a veces vacíos. Así que nos levantábamos... Limpieza — llamadas — buscar trabajo... Cualquier excusa para que no vierais nuestros platos. No debíais saberlo. Ni cargar con eso. Erais niños — (Amour...) nosotros... los padres. (Avec amour...) Incluso cuando ya no sabíamos cómo serlo. (Je suis là...) No teníamos gran cosa... Así que — inventábamos. [LICK] Reparábamos. [LICK] Lo escondíamos. [LICK] Volvíamos a empezar. [LICK] Hacíamos... magia invisible. Esa magia que nadie nota — justo... cuando funciona.",
+    "en": "I didn't come with an instruction manual... No one ever taught me how to become a mother — when you first had to learn how to survive. I didn't always know how to love you the right way... I loved you. (Amour...) So I did what I could. (Avec amour...) As best we could. With our fears — our mistakes — our scars. We only wanted ours to never become yours. You remember what we couldn't give you... I remember — what we refused to let you go without. (Amour...) Your plates were full — ours... sometimes empty. So we got up... Cleaning — phone calls — hunting for work... Any excuse so you wouldn't look at our plates. You weren't supposed to know. Or carry that. You were children — (Amour...) we... the parents. (Avec amour...) Even when we no longer knew how to be that. (Je suis là...) We didn't have much... So — we invented. [LICK] We repaired. [LICK] We hid it. [LICK] We started over. [LICK] We made... invisible magic. That magic no one ever notices — precisely... when it works."
+  },
+  "montee": {
+    "fr": "Vous regardiez ce que les autres avaient — les vacances — les maisons — ce qu'on ne pouvait pas vous donner. Nous... on regardait ceux qui avaient encore moins. On savait à quelle vitesse on peut tout perdre. C'est peut-être pour ça qu'on avait peur. Trop peur. (Miedo...) Des rencontres [LICK] des routes [LICK] des choix [LICK] Vous appeliez ça de la méfiance. Nous — essayer de vous protéger. Peut-être maladroitement — trop fort — peut-être qu'on s'est trompés. Mais jamais — jamais — pour vous empêcher de vivre. Je voulais que vous viviez ! (Vida...) Voilà... que vous viviez ! (Vida...) Que vous appreniez — construisiez — que vous alliez plus loin que nous ! Sans connaître nos routes — nos peurs — nos cicatrices ! Et maintenant... je vous regarde — de loin. Je vous vois tomber... sans pouvoir tendre la main. (Respire...) Je vous avais prévenues... Pas parce que j'avais toujours raison ! Mais parce que je connaissais déjà la douleur qui vous attendait ! Vous m'avez dit : ce n'est plus la même époque. Que nous étions vieux. (Too old...) Que nous ne comprenions rien. Peut-être ! Peut-être que je ne comprends plus votre monde ! Mais la douleur — elle... a-t-elle tellement changé ? Les époques changent ! Les visages — les maisons — les mots changent ! Mais dites-moi — Pourquoi les cicatrices se ressemblent-elles autant ?",
+    "es": "Vosotros mirabais lo que otros tenían — las vacaciones — las casas — lo que no podíamos daros. Nosotros... mirábamos a los que tenían aún menos. Sabíamos lo rápido que se puede perder todo. Quizá por eso teníamos miedo. Demasiado miedo. (Peur...) De los encuentros [LICK] de los caminos [LICK] de las decisiones [LICK] Vosotros lo llamabais desconfianza. Nosotros — intentar protegeros. Quizá torpemente — demasiado fuerte — quizá nos equivocamos. Pero nunca — nunca — para impediros vivir. ¡Quería que vivierais! (Vivre...) Eso... ¡que vivierais! (Vivre...) Que aprendierais — construyerais — ¡que fuerais más lejos que nosotros! Sin conocer nuestros caminos — ¡nuestros miedos — nuestras cicatrices! Y ahora... os miro — desde lejos. Os veo caer... sin poder tenderos la mano. (Respire...) Os había avisado... ¡No porque siempre tuviera razón! Sino porque ya conocía ¡el dolor que os esperaba! Me dijisteis: ya no es la misma época. Éramos viejos. (Trop vieux...) Que no entendíamos nada. ¡Quizá! ¡Quizá ya no entienda vuestro mundo! Pero el dolor — ¿acaso...? ¿ha cambiado tanto? ¡Las épocas cambian! ¡Los rostros — las casas — las palabras cambian! Pero decidme — ¿Por qué se parecen tanto las cicatrices?",
+    "en": "You watched what other kids had — the holidays — the houses — what we couldn't give you. We... watched those who had even less. We knew how fast you can lose everything. Maybe that's why we were afraid. Too afraid. (Peur...) Of new people [LICK] of the roads [LICK] of the choices [LICK] You called it mistrust. We called it — trying to protect you. Maybe clumsily — too tightly — maybe we got it wrong. But never — never — to stop you from living. I wanted you to live! (Vivre...) That's it... that you live! (Vivre...) That you would learn — build — that you'd go further than we did! Without knowing our roads — our fears — our scars! And now... I watch you — from far away. I see you falling... unable to reach out my hand. (Respire...) I had warned you... Not because I was always right! But because I already knew the pain that was waiting for you! You told me: it's not the same time anymore. We were old. (Trop vieux...) That we understood nothing. Maybe! Maybe I don't understand your world anymore! But the pain — does it... has it really changed that much? Times change! Faces — houses — words all change! But tell me — Why do the scars all look the same?"
+  },
+  "rock": {
+    "fr": "JE NE VOULAIS PAS CHOISIR VOTRE ROUTE ! JE VOULAIS VOUS ÉVITER LES RAVINS ! JE NE VOULAIS PAS VIVRE À VOTRE PLACE ! JE VOULAIS QUE ÇA S'ARRÊTE AVEC NOUS ! Nos peurs ! Nos chutes ! Nos nuits ! Nos blessures ! QUE ÇA S'ARRÊTE AVEC NOUS ! Et aujourd'hui — je regarde une porte fermée ! Moi — qui compte les jours ! Qui imagine les anniversaires ! Qui me demande... à quoi ressemble le sourire de mon petit-fils ! C'est ça que tu appelles acheter son amour ? Je ne voulais pas l'acheter ! JE VOULAIS DU TEMPS ! Des matins ! Des rires ! Des souvenirs ! Un château de sable ! Une histoire avant de dormir ! CINQ JOURS ! Cinq jours... pour être simplement — ses grands-parents ! Parce qu'un jour — quelqu'un nous a offert ça ! Quand nous ne pouvions pas nous l'offrir ! Et je n'ai jamais oublié ! Je voulais faire passer ce geste — d'une génération... À L'AUTRE ! JE NE VEUX RIEN ACHETER ! RIEN PRENDRE ! RIEN PROUVER ! JE VEUX MES ENFANTS ! JE VEUX CONNAÎTRE MES PETITS-ENFANTS ! JE VEUX POUVOIR LES AIMER ! (LOVE!) C'EST TOUT ! (Je suis avec toi...) On n'était pas parfaits ! Jamais prétendu ! On s'est trompés ! On a eu peur ! On a parfois serré trop fort ! Mais putain — ON A FAIT DE NOTRE MIEUX ! AVEC RIEN ! NOS BLESSURES ! NOS PEURS ! NOS MAINS VIDES ! ON A FAIT — DE LA MAGIE — INVISIBLE !",
+    "es": "¡NO QUERÍA ELEGIR VUESTRO CAMINO! ¡QUERÍA AHORRAROS LOS BARRANCOS! ¡NO QUERÍA VIVIR EN VUESTRO LUGAR! ¡QUERÍA QUE TERMINARA CON NOSOTROS! ¡Nuestros miedos! ¡Nuestras caídas! ¡Nuestras noches! ¡Nuestras heridas! ¡QUE TERMINARA CON NOSOTROS! ¡Y hoy — miro una puerta cerrada! ¡Yo — que cuento los días! ¡Que imagina los cumpleaños! Que se pregunta... ¡cómo será la sonrisa de mi nieto! ¿A eso le llamas comprar su amor? ¡No quería comprarlo! ¡QUERÍA TIEMPO! ¡Mañanas! ¡Risas! ¡Recuerdos! ¡Un castillo de arena! ¡Un cuento antes de dormir! ¡CINCO DÍAS! Cinco días... para simplemente ser — ¡sus abuelos! ¡Porque un día — alguien nos regaló eso! ¡Cuando no podíamos dárnoslo nosotros mismos! ¡Y nunca lo olvidé! Quería transmitir ese gesto — de una generación... ¡A LA OTRA! ¡NO QUIERO COMPRAR NADA! ¡NO TOMAR NADA! ¡NO DEMOSTRAR NADA! ¡QUIERO A MIS HIJOS! ¡QUIERO CONOCER A MIS NIETOS! ¡QUIERO PODER AMARLOS! (AMOUR!) ¡ESO ES TODO! (Je suis avec toi...) ¡No éramos perfectos! ¡Nunca lo pretendimos! ¡Nos equivocamos! ¡Tuvimos miedo! ¡A veces apretamos demasiado fuerte! ¡Pero joder — HICIMOS TODO LO QUE PUDIMOS! ¡CON NADA! ¡NUESTRAS HERIDAS! ¡NUESTROS MIEDOS! ¡NUESTRAS MANOS VACÍAS! ¡HICIMOS — MAGIA — INVISIBLE!",
+    "en": "I DIDN'T WANT TO CHOOSE YOUR PATH! I WANTED TO SPARE YOU THE RAVINES! I DIDN'T WANT TO LIVE YOUR LIFE FOR YOU! I WANTED IT TO END WITH US! Our fears! Our falls! Our nights! Our wounds! THAT IT WOULD END WITH US! And today — I stare at a closed door! Me — who counts the days! Who imagines the birthdays! Who wonders... what my grandson's smile even looks like! Is that what you call buying his love? I didn't want to buy it! I WANTED TIME! Mornings! Laughter! Memories! A sandcastle! A bedtime story! FIVE DAYS! Five days... just to simply be — his grandparents! Because one day — someone gave us that! When we couldn't give it to ourselves! And I never forgot it! I wanted to pass that gesture on — from one generation... TO THE NEXT! I DON'T WANT TO BUY ANYTHING! TAKE NOTHING! PROVE NOTHING! I WANT MY CHILDREN! I WANT TO KNOW MY GRANDCHILDREN! I WANT TO BE ABLE TO LOVE THEM! (AMOUR!) THAT'S ALL! (Je suis avec toi...) We weren't perfect! Never claimed to be! We got it wrong! We were afraid! Sometimes we held on too tight! But damn it — WE DID OUR BEST! WITH NOTHING! OUR WOUNDS! OUR FEARS! OUR EMPTY HANDS! WE MADE — INVISIBLE — MAGIC!"
+  },
+  "decay": {
+    "fr": "Pourquoi... Pourquoi le vide m'en a fait autant ? D'abord... nos parents. Le vide de ce qu'ils n'ont pas su nous donner. Puis... les difficultés de la vie. Les maisons — les assiettes — les lendemains... qu'il fallait toujours réinventer. Et maintenant — mes enfants. Mes petits-enfants. C'est étrange... Toute ma vie — j'ai essayé de remplir les vides. Les vôtres... Les nôtres... Et aujourd'hui... je ne sais plus comment remplir celui-là. Alors... je vais simplement laisser une place. Pour vous. Pour eux. Même si vous ne venez pas... Même si vous ne savez pas qu'elle est là. (Moi... je suis là.) Pourquoi... Pourquoi faut-il toujours... que ceux qu'on aime... laissent les plus grandes cicatrices... ...du vide ? Pourquoi... (Why...?)",
+    "es": "Por qué... ¿Por qué el vacío me quitó tanto? Primero... nuestros padres. El vacío de lo que no supieron darnos. Luego... las dificultades de la vida. Las casas — los platos — los mañanas... que siempre había que reinventar. Y ahora — mis hijos. Mis nietos. Es extraño... Toda mi vida — intenté llenar los vacíos. Los vuestros... Los nuestros... Y hoy... ya no sé cómo llenar este. Así que... simplemente dejaré un lugar. Para vosotros. Para ellos. Aunque no vengáis... Aunque no sepáis que está ahí. (Moi... je suis là.) Por qué... Por qué siempre tiene que ser... que los que amamos... dejan las cicatrices más profundas... ...del vacío? Por qué... (Pourquoi...?)",
+    "en": "Why... Why did the emptiness take so much from me? First... our parents. The emptiness of what they couldn't give us. Then... life's hardships. The houses — the plates — the tomorrows... that always had to be reinvented. And now — my children. My grandchildren. It's strange... My whole life — I tried to fill the emptiness. Yours... Ours... And today... I no longer know how to fill this one. So... I'll simply leave a place. For you. For them. Even if you never come... Even if you don't know it's there. (Moi... je suis là.) Why... Why must it always be... that the ones we love... leave the deepest scars... ...of emptiness? Why... (Pourquoi...?)"
+  }
+};
+const LANG_MAP = { fr:"fr-FR", es:"es-ES", en:"en-GB" };
+let curLang = "fr";
+let curSpeed = 0.9;
+
+function setLang(l){
+  document.body.classList.remove("show-fr","show-es","show-en");
+  document.querySelectorAll(".langbtn").forEach(b=>b.classList.remove("active"));
+  event.target.classList.add("active");
+  if (l==="all") { curLang="fr"; } else { document.body.classList.add("show-"+l); curLang=l; }
+}
+function setSpeed(v){
+  curSpeed = v;
+  document.querySelectorAll(".speedbtn").forEach(b=>b.classList.remove("active"));
+  event.target.classList.add("active");
+}
+function playSec(id){
+  const txt = SECS[id][curLang];
+  if (!txt || !("speechSynthesis" in window)) return;
+  window.speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(txt);
+  u.lang = LANG_MAP[curLang];
+  u.rate = curSpeed;
+  window.speechSynthesis.speak(u);
+}
+</script>
+</body>
+</html>

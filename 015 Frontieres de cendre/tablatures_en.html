@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Frontières de cendre — Tablatures | tréfle.minotaure</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Cinzel:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root { --gold:#b8962e; --parchment:#f5ecd7; }
+  * { box-sizing:border-box; }
+  body { margin:0; background: radial-gradient(ellipse at center, #1c2038 0%, #10121c 70%, #08090f 100%); font-family:"Cormorant Garamond", serif; color:#2a1f10; padding:24px 12px 60px; }
+  .page { max-width:900px; margin:0 auto; background:var(--parchment); border:2px solid #4a5a8f; border-radius:10px; box-shadow:0 0 40px rgba(0,0,0,.6); padding:28px clamp(14px,4vw,44px); }
+  header { text-align:center; border-bottom:1px solid #4a5a8f; padding-bottom:16px; margin-bottom:18px; }
+  header h1 { font-family:"Cinzel", serif; font-size:1.5rem; margin:0 0 4px; }
+  .meta { font-size:.82rem; color:var(--gold); text-transform:uppercase; letter-spacing:.06em; }
+  .disclaimer { font-size:.78rem; opacity:.75; font-style:italic; text-align:center; margin:14px 0 20px; max-width:640px; margin-left:auto; margin-right:auto; }
+  .controls { display:flex; flex-wrap:wrap; gap:14px; justify-content:center; margin:18px 0 26px; }
+  button.instbtn, button.lvlbtn { font-family:"Cinzel", serif; font-size:.78rem; padding:7px 16px; border-radius:6px; border:1px solid #4a5a8f; background:#fff8ea; cursor:pointer; }
+  button.instbtn.active, button.lvlbtn.active { background:var(--gold); color:#fff; }
+  .sec-row { display:none; margin-bottom:18px; border-top:1px solid #c3cbe0; padding-top:10px; }
+  body.i-basse .sec-row[data-inst="basse"] { display:block; }
+  body.i-violon .sec-row[data-inst="violon"] { display:block; }
+  body.i-synthe .sec-row[data-inst="synthe"] { display:block; }
+  h4 { font-family:"Cinzel", serif; font-size:.95rem; margin:0 0 8px; color:#1c2038; }
+  .bar-ref { font-size:.72rem; color:var(--gold); font-weight:normal; margin-left:8px; }
+  pre.tab { font-family:"Courier New", monospace; font-size:.85rem; background:#efe2bf; border:1px solid #d8c79a; border-radius:6px; padding:10px 14px; overflow-x:auto; white-space:pre; margin:6px 0; }
+  p.notes-line { font-family:"Courier New", monospace; font-size:.9rem; background:#efe2bf; border:1px solid #d8c79a; border-radius:6px; padding:10px 14px; margin:6px 0; }
+  p.advice { font-size:.85rem; margin:4px 0 0; }
+  p.chord-center { font-size:.95rem; margin:6px 0 2px; }
+  body.pro .advice { display:none; }
+  footer { text-align:center; margin-top:30px; color:#3d4a70; font-size:.82rem; border-top:1px solid #c3cbe0; padding-top:14px; }
+</style>
+</head>
+<body class="i-basse">
+<div class="page">
+  <header>
+    <h1>Borders of Ash — Tablatures</h1>
+    <div class="meta">Bass · Violin · Synth — 136 BPM — Dark Electro-Pop / Ukrainian Folk</div>
+  </header>
+
+  <p class="disclaimer">Document généré par analyse audio des stems Suno (onset detection + pYIN + chroma) — à valider à l'oreille avant interprétation. Pas de stem guitare fourni. Instrumental distinct de la version FR (tempo et tonalité différents).</p>
+
+  <div class="controls">
+    <button class="instbtn active" onclick="setInst(this,'basse')">🎸 Basse</button>
+    <button class="instbtn" onclick="setInst(this,'violon')">🎻 Violon</button>
+    <button class="instbtn" onclick="setInst(this,'synthe')">🎹 Synthé</button>
+  </div>
+  <div class="controls">
+    <button class="lvlbtn active" onclick="setLevel(this,'tips')">Avec conseils</button>
+    <button class="lvlbtn" onclick="setLevel(this,'pro')">Tablature seule (Pro)</button>
+  </div>
+
+  <section class="sec"><div class="sec-row" data-inst="basse">
+    <h4>Intro <span class="bar-ref">mesure 1 — 0:00</span></h4>
+    <p class="advice">Silencieuse sur cette section.</p>
+  </div>
+<div class="sec-row" data-inst="violon">
+    <h4>Intro <span class="bar-ref">mesure 1 — 0:00</span></h4>
+    <p class="advice">Violon présent sur cette section — jeu bref, mélodie non détaillée sur cette version.</p>
+  </div>
+<div class="sec-row" data-inst="synthe">
+    <h4>Intro <span class="bar-ref">mesure 1 — 0:00</span></h4>
+    <p class="advice">Silencieux sur cette section.</p>
+  </div></section>
+<section class="sec"><div class="sec-row" data-inst="basse">
+    <h4>Verse 1 / Pre-Chorus / DROP <span class="bar-ref">mesure 12 — 0:20</span></h4>
+    <pre class="tab">G|------------------------|
+D|------------------------|
+A|-1--1--1--1--1--1-----1-|
+E|-------------------4----|</pre><p class="advice">La pulsation sidechainée entre ici — croches régulières sur Fa, laisser le sidechain (compression au kick) faire le mouvement.</p>
+  </div>
+<div class="sec-row" data-inst="violon">
+    <h4>Verse 1 / Pre-Chorus / DROP <span class="bar-ref">mesure 12 — 0:20</span></h4>
+    <p class="advice">Silencieux sur cette section.</p>
+  </div>
+<div class="sec-row" data-inst="synthe">
+    <h4>Verse 1 / Pre-Chorus / DROP <span class="bar-ref">mesure 12 — 0:20</span></h4>
+    <p class="advice">Silencieux sur cette section.</p>
+  </div></section>
+<section class="sec"><div class="sec-row" data-inst="basse">
+    <h4>Chorus / Verse 2 <span class="bar-ref">mesure 54 — 1:35</span></h4>
+    <pre class="tab">G|------------------------|
+D|------------------------|
+A|-1--1--1--1--1--1-----1-|
+E|-------------------4----|</pre><p class="advice">Continuer la pulsation en croches, sidechain constant.</p>
+  </div>
+<div class="sec-row" data-inst="violon">
+    <h4>Chorus / Verse 2 <span class="bar-ref">mesure 54 — 1:35</span></h4>
+    <p class="advice">Silencieux sur cette section.</p>
+  </div>
+<div class="sec-row" data-inst="synthe">
+    <h4>Chorus / Verse 2 <span class="bar-ref">mesure 54 — 1:35</span></h4>
+    <p class="chord-center">Centre tonal : <b>A#</b></p><p class="advice">Présence par vagues, nappe discrète.</p>
+  </div></section>
+<section class="sec"><div class="sec-row" data-inst="basse">
+    <h4>Bridge / Violin Break <span class="bar-ref">mesure 114 — 3:20</span></h4>
+    <pre class="tab">G|------------------------|
+D|------------------------|
+A|-1--1--1--1--1--1-----1-|
+E|-------------------4----|</pre><p class="advice">Continuer la pulsation en croches, sidechain constant.</p>
+  </div>
+<div class="sec-row" data-inst="violon">
+    <h4>Bridge / Violin Break <span class="bar-ref">mesure 114 — 3:20</span></h4>
+    <p class="advice">Silencieux sur cette section.</p>
+  </div>
+<div class="sec-row" data-inst="synthe">
+    <h4>Bridge / Violin Break <span class="bar-ref">mesure 114 — 3:20</span></h4>
+    <p class="chord-center">Centre tonal : <b>A#</b></p><p class="advice">Nappe continue en soutien.</p>
+  </div></section>
+<section class="sec"><div class="sec-row" data-inst="basse">
+    <h4>Final Chorus / Outro / Final Whisper <span class="bar-ref">mesure 159 — 4:40</span></h4>
+    <pre class="tab">G|------------------------|
+D|------------------------|
+A|-1--1--1--1--1--1-----1-|
+E|-------------------4----|</pre><p class="advice">Continuer la pulsation en croches, sidechain constant.</p>
+  </div>
+<div class="sec-row" data-inst="violon">
+    <h4>Final Chorus / Outro / Final Whisper <span class="bar-ref">mesure 159 — 4:40</span></h4>
+    <p class="advice">Violon présent sur cette section — jeu bref, mélodie non détaillée sur cette version.</p>
+  </div>
+<div class="sec-row" data-inst="synthe">
+    <h4>Final Chorus / Outro / Final Whisper <span class="bar-ref">mesure 159 — 4:40</span></h4>
+    <p class="chord-center">Centre tonal : <b>A#</b></p><p class="advice">Présence par vagues, nappe discrète.</p>
+  </div></section>
+
+  <footer>www.trefleminotaure.com · © 2026 Trèfle &amp; Minotaure</footer>
+</div>
+
+<script>
+function setInst(btn, inst){
+  document.body.classList.remove("i-basse","i-violon","i-synthe");
+  document.body.classList.add("i-"+inst);
+  document.querySelectorAll(".instbtn").forEach(b=>b.classList.remove("active"));
+  btn.classList.add("active");
+}
+function setLevel(btn, lvl){
+  document.body.classList.toggle("pro", lvl==="pro");
+  document.querySelectorAll(".lvlbtn").forEach(b=>b.classList.remove("active"));
+  btn.classList.add("active");
+}
+</script>
+</body>
+</html>
