@@ -1,0 +1,1606 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>J'ai vu sous un voile... plus de lumière — Guide de prononciation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,500&family=Cinzel:wght@600&family=IM+Fell+English&family=Noto+Serif:wght@400&display=swap" rel="stylesheet">
+<style>
+  :root { --gold:#b8962e; }
+  body { margin:0; background:#2a1f10; background-image: radial-gradient(circle at 50% 0%, #3a2a18, #120c16 80%); font-family:'Cormorant Garamond', serif; }
+  .page { max-width:1000px; margin:30px auto; background:#f5ecd7; border:3px solid #c4a97a; border-radius:10px; padding:30px clamp(14px,4vw,44px) 50px; }
+  header { text-align:center; margin-bottom:20px; }
+  header h1 { font-family:'IM Fell English', serif; color:#2a1f30; font-size:1.7rem; }
+  .meta { color:#6b5a6f; font-size:.9rem; }
+  .controls { display:flex; justify-content:center; gap:14px; flex-wrap:wrap; margin:18px 0 26px; }
+  button.langbtn, button.speedbtn { font-family:'Cinzel', serif; font-size:.75rem; padding:6px 12px; border-radius:6px; border:1px solid #a68aad; background:#fff8ea; cursor:pointer; }
+  button.langbtn.active, button.speedbtn.active { background:var(--gold); color:#fff; }
+  .sec-title { font-family:'Cinzel', serif; color:#1c2038; font-size:1.05rem; margin:26px 0 6px; border-top:1px solid #c4a97a; padding-top:14px; }
+  .tagrow { font-size:.75rem; font-style:italic; color:var(--gold); opacity:.85; margin:3px 0; }
+  .opt-c-row { display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; margin-bottom:10px; }
+  .lc { padding:6px 10px; border-radius:4px; position:relative; }
+  .lc.fr { background:#e8f0fc; border:1px solid #aac4f0; }
+  .lc.es { background:#f5ead5; border:1px solid #d4b87a; }
+  .lc.en { background:#fce8ec; border:1px solid #f0aabc; }
+  .lyric-text { font-family:'Cormorant Garamond', serif; font-style:italic; font-size:.97rem; color:#2a2a2a; }
+  .lyric-syllabic { font-family:'Cormorant Garamond', serif; font-weight:700; font-size:.80rem; margin-top:3px; color:#2a1f30; }
+  .lyric-syllabic .a { color:#c0392b; text-decoration:underline; text-decoration-color:#c0392b; }
+  .plb { margin-top:4px; font-family:'Cinzel', serif; font-size:.43rem; border:none; background:var(--gold); color:#fff; border-radius:50%; width:16px; height:16px; cursor:pointer; line-height:1; }
+  .lyric-ipa { font-family:"Noto Serif","Noto Sans",serif; font-size:.64rem; opacity:.56; margin-top:3px; color:#333; }
+  .lyric-ipa::before { content:"/ "; color:var(--gold); }
+  .lyric-ipa::after { content:" /"; color:var(--gold); }
+  .sound-hints { display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; margin:4px 0 16px; }
+  .sh { font-size:.78rem; padding:8px 10px; border-radius:6px; background:#fff8ea; border:1px dashed #c4a97a; }
+  body.show-fr .lc.es, body.show-fr .lc.en { display:none; }
+  body.show-fr .opt-c-row { grid-template-columns:1fr; }
+  body.show-fr .sound-hints { grid-template-columns:1fr; }
+  body.show-fr .sh.es, body.show-fr .sh.en { display:none; }
+  body.show-es .lc.fr, body.show-es .lc.en { display:none; }
+  body.show-es .opt-c-row { grid-template-columns:1fr; }
+  body.show-es .sound-hints { grid-template-columns:1fr; }
+  body.show-es .sh.fr, body.show-es .sh.en { display:none; }
+  body.show-en .lc.fr, body.show-en .lc.es { display:none; }
+  body.show-en .opt-c-row { grid-template-columns:1fr; }
+  body.show-en .sound-hints { grid-template-columns:1fr; }
+  body.show-en .sh.fr, body.show-en .sh.es { display:none; }
+  footer { text-align:center; margin-top:34px; color:#6b5a6f; font-size:.85rem; border-top:1px solid #cbb8d0; padding-top:14px; }
+</style>
+</head>
+<body class="show-fr">
+<div class="page">
+  <header>
+    <h1>J'ai vu sous un voile... plus de lumière — Guide de prononciation</h1>
+    <div class="meta">Option C · Syllabique + IPA · FR / ES / EN — chaque langue conserve sa propre découpe syllabique et sa propre transcription</div>
+  </header>
+
+  <div class="controls">
+    <button class="langbtn" onclick="setLang(this,'all')">Trilingue</button>
+    <button class="langbtn active" onclick="setLang(this,'fr')">🇫🇷 Français</button>
+    <button class="langbtn" onclick="setLang(this,'es')">🇪🇸 Español</button>
+    <button class="langbtn" onclick="setLang(this,'en')">🇬🇧 English</button>
+    <button class="speedbtn" onclick="setSpeed(this,0.7)">× 0.7</button>
+    <button class="speedbtn active" onclick="setSpeed(this,0.9)">× 0.9</button>
+    <button class="speedbtn" onclick="setSpeed(this,1.0)">× 1.0</button>
+  </div>
+
+  <h3 class="sec-title">Intro / Intro / Intro</h3>
+<div class="tagrow">[Intro — parlé, télévision en arrière-plan]</div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">J&#x27;ai vu deux filles à la télévision...</div>
+        <div class="lyric-syllabic">J&#x27;ai vu deux filles à la té-lé-vi-<span class="a">sion</span>...</div>
+        <button class="plb" onclick="speakLine(this,'J\'ai vu deux filles à la télévision...','fr')">▶</button>
+        <div class="lyric-ipa">ʒe vy dø fij a la televizjɔ̃</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Vi a dos chicas en la televisión...</div>
+        <div class="lyric-syllabic">Vi a dos chi-cas en la te-le-vi-<span class="a">sión</span>...</div>
+        <button class="plb" onclick="speakLine(this,'Vi a dos chicas en la televisión...','es')">▶</button>
+        <div class="lyric-ipa">bi a ðos ˈtʃikas en la teleβiˈsjon</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">I saw two girls on television...</div>
+        <div class="lyric-syllabic">I saw two girls on tel-e-<span class="a">vi</span>-sion...</div>
+        <button class="plb" onclick="speakLine(this,'I saw two girls on television...','en')">▶</button>
+        <div class="lyric-ipa">aɪ sɔ tu ɡɜrlz ɒn ˌtɛlɪˈvɪʒən</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Deux visages derrière une fenêtre...</div>
+        <div class="lyric-syllabic">Deux vi-sa-ges der-rière une fe-<span class="a">nê</span>-tre...</div>
+        <button class="plb" onclick="speakLine(this,'Deux visages derrière une fenêtre...','fr')">▶</button>
+        <div class="lyric-ipa">dø vizaʒ dɛʁjɛʁ yn fənɛtʁ</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Dos rostros tras una ventana...</div>
+        <div class="lyric-syllabic">Dos ros-tros tras u-na ven-<span class="a">ta</span>-na...</div>
+        <button class="plb" onclick="speakLine(this,'Dos rostros tras una ventana...','es')">▶</button>
+        <div class="lyric-ipa">ðos ˈrostɾos tɾas ˈuna βenˈtana</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">Two faces behind a window...</div>
+        <div class="lyric-syllabic">Two fa-ces be-hind a <span class="a">win</span>-dow...</div>
+        <button class="plb" onclick="speakLine(this,'Two faces behind a window...','en')">▶</button>
+        <div class="lyric-ipa">tu ˈfeɪsɪz bɪˈhaɪnd ə ˈwɪndoʊ</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Deux cahiers cachés dans la nuit...</div>
+        <div class="lyric-syllabic">Deux ca-hiers ca-chés dans la <span class="a">nuit</span>...</div>
+        <button class="plb" onclick="speakLine(this,'Deux cahiers cachés dans la nuit...','fr')">▶</button>
+        <div class="lyric-ipa">dø kaje kaʃe dɑ̃ la nɥi</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Dos cuadernos escondidos en la noche...</div>
+        <div class="lyric-syllabic">Dos cua-der-nos es-con-di-dos en la <span class="a">no</span>-che...</div>
+        <button class="plb" onclick="speakLine(this,'Dos cuadernos escondidos en la noche...','es')">▶</button>
+        <div class="lyric-ipa">ðos kwaˈðeɾnos eskonˈdiðos en la ˈnotʃe</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">Two notebooks hidden in the night...</div>
+        <div class="lyric-syllabic">Two note-books hid-den in the <span class="a">night</span>...</div>
+        <button class="plb" onclick="speakLine(this,'Two notebooks hidden in the night...','en')">▶</button>
+        <div class="lyric-ipa">tu ˈnoʊtbʊks ˈhɪdən ɪn ðə naɪt</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Et je suis restée là.</div>
+        <div class="lyric-syllabic">Et je suis res-<span class="a">tée</span> là.</div>
+        <button class="plb" onclick="speakLine(this,'Et je suis restée là.','fr')">▶</button>
+        <div class="lyric-ipa">e ʒə sɥi ʁɛste la</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Y yo me quedé ahí.</div>
+        <div class="lyric-syllabic">Y yo me que-<span class="a">dé</span> a-hí.</div>
+        <button class="plb" onclick="speakLine(this,'Y yo me quedé ahí.','es')">▶</button>
+        <div class="lyric-ipa">i ʝo me keˈðe aˈi</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">And I just stayed there.</div>
+        <div class="lyric-syllabic">And I just <span class="a">stayed</span> there.</div>
+        <button class="plb" onclick="speakLine(this,'And I just stayed there.','en')">▶</button>
+        <div class="lyric-ipa">ænd aɪ dʒʌst steɪd ðɛr</div>
+      </div></div>
+<h3 class="sec-title">Couplet 1 / Estrofa 1 / Verse 1</h3>
+<div class="tagrow">[Verse 1 — Trèfle]</div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Deux ombres penchées sous une faible lumière,</div>
+        <div class="lyric-syllabic">Deux om-bres pen-chées sous une fai-ble lu-<span class="a">miè</span>-re,</div>
+        <button class="plb" onclick="speakLine(this,'Deux ombres penchées sous une faible lumière,','fr')">▶</button>
+        <div class="lyric-ipa">dø zɔ̃bʁ pɑ̃ʃe su yn fɛbl lymjɛʁ</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Dos sombras inclinadas bajo una luz débil,</div>
+        <div class="lyric-syllabic">Dos som-bras in-cli-na-das ba-jo u-na luz <span class="a">dé</span>-bil,</div>
+        <button class="plb" onclick="speakLine(this,'Dos sombras inclinadas bajo una luz débil,','es')">▶</button>
+        <div class="lyric-ipa">ðos ˈsombɾas iŋkliˈnaðas ˈbaxo ˈuna luθ ˈðeβil</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">Two shadows bent beneath a fading light,</div>
+        <div class="lyric-syllabic">Two shad-ows bent be-neath a <span class="a">fad</span>-ing light,</div>
+        <button class="plb" onclick="speakLine(this,'Two shadows bent beneath a fading light,','en')">▶</button>
+        <div class="lyric-ipa">tu ˈʃædoʊz bɛnt bɪˈniθ ə ˈfeɪdɪŋ laɪt</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Les pages tournent sans un bruit, sans une prière,</div>
+        <div class="lyric-syllabic">Les pa-ges tour-nent sans un bruit, sans une pri-<span class="a">è</span>-re,</div>
+        <button class="plb" onclick="speakLine(this,'Les pages tournent sans un bruit, sans une prière,','fr')">▶</button>
+        <div class="lyric-ipa">le paʒ tuʁn sɑ̃z‿œ̃ bʁɥi sɑ̃z‿yn pʁijɛʁ</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Las páginas pasan sin ruido, sin oración,</div>
+        <div class="lyric-syllabic">Las pá-gi-nas pa-san sin rui-do, sin o-ra-<span class="a">ción</span>,</div>
+        <button class="plb" onclick="speakLine(this,'Las páginas pasan sin ruido, sin oración,','es')">▶</button>
+        <div class="lyric-ipa">las ˈpaxinas ˈpasan sin ˈrwiðo sin oɾaˈsjon</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">Pages turning without a sound, without a prayer,</div>
+        <div class="lyric-syllabic">Pa-ges turn-ing with-out a sound, with-out a <span class="a">prayer</span>,</div>
+        <button class="plb" onclick="speakLine(this,'Pages turning without a sound, without a prayer,','en')">▶</button>
+        <div class="lyric-ipa">ˈpeɪdʒɪz ˈtɜrnɪŋ wɪðˈaʊt ə saʊnd wɪðˈaʊt ə prɛr</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Kaboul s&#x27;endort, les rues ferment leurs frontières,</div>
+        <div class="lyric-syllabic">Ka-boul s&#x27;en-dort, les rues fer-ment leurs fron-<span class="a">tiè</span>-res,</div>
+        <button class="plb" onclick="speakLine(this,'Kaboul s\'endort, les rues ferment leurs frontières,','fr')">▶</button>
+        <div class="lyric-ipa">kabul sɑ̃dɔʁ le ʁy fɛʁm lœʁ fʁɔ̃tjɛʁ</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Kabul se duerme, las calles cierran sus fronteras,</div>
+        <div class="lyric-syllabic">Ka-bul se duer-me, las ca-lles cie-rran sus fron-<span class="a">te</span>-ras,</div>
+        <button class="plb" onclick="speakLine(this,'Kabul se duerme, las calles cierran sus fronteras,','es')">▶</button>
+        <div class="lyric-ipa">kaˈβul se ˈðweɾme las ˈkaʎes ˈsjeran sus fɾonˈteɾas</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">Kabul falls asleep, the streets seal their borders,</div>
+        <div class="lyric-syllabic">Ka-bul falls a-sleep, the streets seal their <span class="a">bor</span>-ders,</div>
+        <button class="plb" onclick="speakLine(this,'Kabul falls asleep, the streets seal their borders,','en')">▶</button>
+        <div class="lyric-ipa">ˈkɑbʊl fɔlz əˈslip ðə strits sil ðɛr ˈbɔrdərz</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Elles apprennent en silence ce qu&#x27;on leur interdit de faire.</div>
+        <div class="lyric-syllabic">El-les ap-pren-nent en si-len-ce ce qu&#x27;on leur in-ter-<span class="a">dit</span> de faire.</div>
+        <button class="plb" onclick="speakLine(this,'Elles apprennent en silence ce qu\'on leur interdit de faire.','fr')">▶</button>
+        <div class="lyric-ipa">ɛlz apʁɛn ɑ̃ silɑ̃s sə kɔ̃ lœʁ ɛ̃tɛʁdi də fɛʁ</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Ellas aprenden en silencio lo que les prohíben hacer.</div>
+        <div class="lyric-syllabic">E-llas a-pren-den en si-len-cio lo que les pro-hí-ben ha-<span class="a">cer</span>.</div>
+        <button class="plb" onclick="speakLine(this,'Ellas aprenden en silencio lo que les prohíben hacer.','es')">▶</button>
+        <div class="lyric-ipa">ˈeʎas aˈpɾenden en siˈlensjo lo ke les pɾoˈiβen aˈseɾ</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">They learn in silence what they&#x27;re forbidden to do.</div>
+        <div class="lyric-syllabic">They learn in si-lence what they&#x27;re for-<span class="a">bid</span>-den to do.</div>
+        <button class="plb" onclick="speakLine(this,'They learn in silence what they\'re forbidden to do.','en')">▶</button>
+        <div class="lyric-ipa">ðeɪ lɜrn ɪn ˈsaɪləns wʌt ðɛr fərˈbɪdən tu du</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Elles voudraient soigner, elles voudraient guérir,</div>
+        <div class="lyric-syllabic">El-les vou-draient soi-gner, el-les vou-draient gué-<span class="a">rir</span>,</div>
+        <button class="plb" onclick="speakLine(this,'Elles voudraient soigner, elles voudraient guérir,','fr')">▶</button>
+        <div class="lyric-ipa">ɛl vudʁɛ swaɲe ɛl vudʁɛ ɡeʁiʁ</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Ellas querrían curar, ellas querrían sanar,</div>
+        <div class="lyric-syllabic">E-llas que-rrí-an cu-rar, e-llas que-rrí-an sa-<span class="a">nar</span>,</div>
+        <button class="plb" onclick="speakLine(this,'Ellas querrían curar, ellas querrían sanar,','es')">▶</button>
+        <div class="lyric-ipa">ˈeʎas keˈrian kuˈɾaɾ ˈeʎas keˈrian saˈnaɾ</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">They wish to heal, they wish to cure,</div>
+        <div class="lyric-syllabic">They wish to heal, they wish to <span class="a">cure</span>,</div>
+        <button class="plb" onclick="speakLine(this,'They wish to heal, they wish to cure,','en')">▶</button>
+        <div class="lyric-ipa">ðeɪ wɪʃ tu hil ðeɪ wɪʃ tu kjʊr</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Apprendre, comprendre, choisir leur avenir,</div>
+        <div class="lyric-syllabic">Ap-pren-dre, com-pren-dre, choi-sir leur a-ve-<span class="a">nir</span>,</div>
+        <button class="plb" onclick="speakLine(this,'Apprendre, comprendre, choisir leur avenir,','fr')">▶</button>
+        <div class="lyric-ipa">apʁɑ̃dʁ kɔ̃pʁɑ̃dʁ ʃwaziʁ lœʁ avniʁ</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Aprender, comprender, elegir su futuro,</div>
+        <div class="lyric-syllabic">A-pren-der, com-pren-der, e-le-gir su fu-<span class="a">tu</span>-ro,</div>
+        <button class="plb" onclick="speakLine(this,'Aprender, comprender, elegir su futuro,','es')">▶</button>
+        <div class="lyric-ipa">apɾenˈdeɾ kompɾenˈdeɾ eleˈxiɾ su fuˈtuɾo</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">To learn, to understand, to choose their future,</div>
+        <div class="lyric-syllabic">To learn, to un-der-stand, to choose their <span class="a">fu</span>-ture,</div>
+        <button class="plb" onclick="speakLine(this,'To learn, to understand, to choose their future,','en')">▶</button>
+        <div class="lyric-ipa">tu lɜrn tu ˌʌndərˈstænd tu tʃuz ðɛr ˈfjutʃər</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Alors dans la nuit, elles allument leur écran,</div>
+        <div class="lyric-syllabic">A-lors dans la nuit, el-les al-lu-ment leur é-<span class="a">cran</span>,</div>
+        <button class="plb" onclick="speakLine(this,'Alors dans la nuit, elles allument leur écran,','fr')">▶</button>
+        <div class="lyric-ipa">alɔʁ dɑ̃ la nɥi ɛl alym lœʁ ekʁɑ̃</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Así que en la noche, encienden su pantalla,</div>
+        <div class="lyric-syllabic">A-sí que en la no-che, en-cien-den su pan-<span class="a">ta</span>-lla,</div>
+        <button class="plb" onclick="speakLine(this,'Así que en la noche, encienden su pantalla,','es')">▶</button>
+        <div class="lyric-ipa">aˈsi ke en la ˈnotʃe enˈsjenden su panˈtaʎa</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">So in the night, they light up their screen,</div>
+        <div class="lyric-syllabic">So in the night, they light up their <span class="a">screen</span>,</div>
+        <button class="plb" onclick="speakLine(this,'So in the night, they light up their screen,','en')">▶</button>
+        <div class="lyric-ipa">soʊ ɪn ðə naɪt ðeɪ laɪt ʌp ðɛr skrin</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Et regardent un monde qui leur échappe pourtant.</div>
+        <div class="lyric-syllabic">Et re-gar-dent un mon-de qui leur é-cha-ppe pour-<span class="a">tant</span>.</div>
+        <button class="plb" onclick="speakLine(this,'Et regardent un monde qui leur échappe pourtant.','fr')">▶</button>
+        <div class="lyric-ipa">e ʁəɡaʁd œ̃ mɔ̃d ki lœʁ eʃap puʁtɑ̃</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Y miran un mundo que aún se les escapa.</div>
+        <div class="lyric-syllabic">Y mi-ran un mun-do que a-ún se les es-<span class="a">ca</span>-pa.</div>
+        <button class="plb" onclick="speakLine(this,'Y miran un mundo que aún se les escapa.','es')">▶</button>
+        <div class="lyric-ipa">i ˈmiɾan un ˈmundo ke aˈun se les esˈkapa</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">And watch a world that still slips from their hands.</div>
+        <div class="lyric-syllabic">And watch a world that still slips from their <span class="a">hands</span>.</div>
+        <button class="plb" onclick="speakLine(this,'And watch a world that still slips from their hands.','en')">▶</button>
+        <div class="lyric-ipa">ænd wɒtʃ ə wɜrld ðæt stɪl slɪps frʌm ðɛr hændz</div>
+      </div></div>
+<div class="sound-hints">
+<div class="sh fr">🇫🇷 Le son nasal <b>an/en</b> (« prennent », « interdit... faire ») se prononce dans le nez, bouche ouverte, sans prononcer le "n".</div>
+<div class="sh es">🇪🇸 La <b>r</b> simple de « prohíben » et « futuro » se tape légèrement contre le palais — une seule vibration, plus douce que le rr.</div>
+<div class="sh en">🇬🇧 The <b>th</b> of « they're » et « forbidden to do » — langue entre les dents, un souffle, pas un "z" ou un "d".</div>
+</div>
+<h3 class="sec-title">Voix fantôme / Voz fantasma / Ghost Voice</h3>
+<div class="tagrow">[Ghost Voice — distant, spectral]</div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Décortique...</div>
+        <div class="lyric-syllabic">Dé-cor-<span class="a">tique</span>...</div>
+        <button class="plb" onclick="speakLine(this,'Décortique...','fr')">▶</button>
+        <div class="lyric-ipa">dekɔʁtik</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Descascara...</div>
+        <div class="lyric-syllabic">Des-cas-<span class="a">ca</span>-ra...</div>
+        <button class="plb" onclick="speakLine(this,'Descascara...','es')">▶</button>
+        <div class="lyric-ipa">deskaskaɾa</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">Shelling...</div>
+        <div class="lyric-syllabic"><span class="a">Shell</span>-ing...</div>
+        <button class="plb" onclick="speakLine(this,'Shelling...','en')">▶</button>
+        <div class="lyric-ipa">ʃɛlɪŋ</div>
+      </div></div>
+<h3 class="sec-title">Refrain / Estribillo / Chorus</h3>
+<div class="tagrow">[Chorus — Trèfle]</div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Sur l&#x27;écran bleu, je les vois regarder,</div>
+        <div class="lyric-syllabic">Sur l&#x27;é-cran bleu, je les vois re-gar-<span class="a">der</span>,</div>
+        <button class="plb" onclick="speakLine(this,'Sur l\'écran bleu, je les vois regarder,','fr')">▶</button>
+        <div class="lyric-ipa">syʁ lekʁɑ̃ blø ʒə le vwa ʁəɡaʁde</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">En la pantalla azul, las veo mirar,</div>
+        <div class="lyric-syllabic">En la pan-ta-lla a-zul, las ve-o mi-<span class="a">rar</span>,</div>
+        <button class="plb" onclick="speakLine(this,'En la pantalla azul, las veo mirar,','es')">▶</button>
+        <div class="lyric-ipa">en la panˈtaʎa aˈsul las ˈβeo miˈɾaɾ</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">On the blue screen, I watch them watching,</div>
+        <div class="lyric-syllabic">On the blue screen, I watch them <span class="a">watch</span>-ing,</div>
+        <button class="plb" onclick="speakLine(this,'On the blue screen, I watch them watching,','en')">▶</button>
+        <div class="lyric-ipa">ɒn ðə blu skrin aɪ wɒtʃ ðəm ˈwɒtʃɪŋ</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Des filles qui rient, qui choisissent, qui peuvent étudier,</div>
+        <div class="lyric-syllabic">Des filles qui rient, qui choi-si-ssent, qui peuvent é-tu-<span class="a">dier</span>,</div>
+        <button class="plb" onclick="speakLine(this,'Des filles qui rient, qui choisissent, qui peuvent étudier,','fr')">▶</button>
+        <div class="lyric-ipa">de fij ki ʁi ki ʃwazis ki pœv etydje</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Chicas que ríen, que eligen, que pueden estudiar,</div>
+        <div class="lyric-syllabic">Chi-cas que rí-en, que e-li-gen, que pue-den es-tu-<span class="a">diar</span>,</div>
+        <button class="plb" onclick="speakLine(this,'Chicas que ríen, que eligen, que pueden estudiar,','es')">▶</button>
+        <div class="lyric-ipa">ˈtʃikas ke ˈrien ke eˈlixen ke ˈpweðen estuˈðjaɾ</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">Girls who laugh, who choose, who get to study,</div>
+        <div class="lyric-syllabic">Girls who laugh, who choose, who get to <span class="a">stud</span>-y,</div>
+        <button class="plb" onclick="speakLine(this,'Girls who laugh, who choose, who get to study,','en')">▶</button>
+        <div class="lyric-ipa">ɡɜrlz hu læf hu tʃuz hu ɡɛt tu ˈstʌdi</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Des blouses blanches, des livres, des portes ouvertes,</div>
+        <div class="lyric-syllabic">Des blou-ses blan-ches, des li-vres, des por-tes ou-<span class="a">ver</span>-tes,</div>
+        <button class="plb" onclick="speakLine(this,'Des blouses blanches, des livres, des portes ouvertes,','fr')">▶</button>
+        <div class="lyric-ipa">de bluz blɑ̃ʃ de livʁ de pɔʁt uvɛʁt</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Batas blancas, libros, puertas abiertas,</div>
+        <div class="lyric-syllabic">Ba-tas blan-cas, li-bros, puer-tas a-bier-<span class="a">tas</span>,</div>
+        <button class="plb" onclick="speakLine(this,'Batas blancas, libros, puertas abiertas,','es')">▶</button>
+        <div class="lyric-ipa">ˈbatas ˈblankas ˈliβɾos ˈpweɾtas aˈβjeɾtas</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">White coats, open books, doors left open,</div>
+        <div class="lyric-syllabic">White coats, o-pen books, doors left <span class="a">o</span>-pen,</div>
+        <button class="plb" onclick="speakLine(this,'White coats, open books, doors left open,','en')">▶</button>
+        <div class="lyric-ipa">waɪt koʊts ˈoʊpən bʊks dɔrz lɛft ˈoʊpən</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Une vie qu&#x27;elles pourraient vivre,</div>
+        <div class="lyric-syllabic">U-ne vie qu&#x27;el-les pou-rraient <span class="a">vi</span>-vre,</div>
+        <button class="plb" onclick="speakLine(this,'Une vie qu\'elles pourraient vivre,','fr')">▶</button>
+        <div class="lyric-ipa">yn vi kɛl puʁʁɛ vivʁ</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Una vida que podrían vivir,</div>
+        <div class="lyric-syllabic">U-na vi-da que po-drí-an vi-<span class="a">vir</span>,</div>
+        <button class="plb" onclick="speakLine(this,'Una vida que podrían vivir,','es')">▶</button>
+        <div class="lyric-ipa">ˈuna ˈβiða ke poˈðɾian biˈβiɾ</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">A life that they could live,</div>
+        <div class="lyric-syllabic">A life that they could <span class="a">live</span>,</div>
+        <button class="plb" onclick="speakLine(this,'A life that they could live,','en')">▶</button>
+        <div class="lyric-ipa">ə laɪf ðæt ðeɪ kʊd lɪv</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Une vie qu&#x27;on leur retire.</div>
+        <div class="lyric-syllabic">U-ne vie qu&#x27;on leur re-<span class="a">ti</span>-re.</div>
+        <button class="plb" onclick="speakLine(this,'Une vie qu\'on leur retire.','fr')">▶</button>
+        <div class="lyric-ipa">yn vi kɔ̃ lœʁ ʁətiʁ</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Una vida que les quitan.</div>
+        <div class="lyric-syllabic">U-na vi-da que les qui-<span class="a">tan</span>.</div>
+        <button class="plb" onclick="speakLine(this,'Una vida que les quitan.','es')">▶</button>
+        <div class="lyric-ipa">ˈuna ˈβiða ke les ˈkitan</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">A life that&#x27;s taken from them.</div>
+        <div class="lyric-syllabic">A life that&#x27;s <span class="a">tak</span>-en from them.</div>
+        <button class="plb" onclick="speakLine(this,'A life that\'s taken from them.','en')">▶</button>
+        <div class="lyric-ipa">ə laɪf ðæts ˈteɪkən frʌm ðəm</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">J&#x27;ai vu sous un voile...</div>
+        <div class="lyric-syllabic">J&#x27;ai vu sous un <span class="a">voi</span>-le...</div>
+        <button class="plb" onclick="speakLine(this,'J\'ai vu sous un voile...','fr')">▶</button>
+        <div class="lyric-ipa">ʒe vy suz‿œ̃ vwal</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Vi bajo un velo...</div>
+        <div class="lyric-syllabic">Vi ba-jo un <span class="a">ve</span>-lo...</div>
+        <button class="plb" onclick="speakLine(this,'Vi bajo un velo...','es')">▶</button>
+        <div class="lyric-ipa">bi ˈβaxo un ˈβelo</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">I saw beneath a veil...</div>
+        <div class="lyric-syllabic">I saw be-neath a <span class="a">veil</span>...</div>
+        <button class="plb" onclick="speakLine(this,'I saw beneath a veil...','en')">▶</button>
+        <div class="lyric-ipa">aɪ sɔ bɪˈniθ ə veɪl</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Plus de lumière.</div>
+        <div class="lyric-syllabic">Plus de lu-<span class="a">miè</span>-re.</div>
+        <button class="plb" onclick="speakLine(this,'Plus de lumière.','fr')">▶</button>
+        <div class="lyric-ipa">ply də lymjɛʁ</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Ya no hay luz.</div>
+        <div class="lyric-syllabic">Ya no hay <span class="a">luz</span>.</div>
+        <button class="plb" onclick="speakLine(this,'Ya no hay luz.','es')">▶</button>
+        <div class="lyric-ipa">ʝa no aj luθ</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">No more light.</div>
+        <div class="lyric-syllabic">No more <span class="a">light</span>.</div>
+        <button class="plb" onclick="speakLine(this,'No more light.','en')">▶</button>
+        <div class="lyric-ipa">noʊ mɔr laɪt</div>
+      </div></div>
+<h3 class="sec-title">Couplet 2 / Estrofa 2 / Verse 2</h3>
+<div class="tagrow">[Verse 2 — Trèfle]</div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Sur YouTube, elles regardent le monde,</div>
+        <div class="lyric-syllabic">Sur You-Tube, el-les re-gar-dent le <span class="a">mon</span>-de,</div>
+        <button class="plb" onclick="speakLine(this,'Sur YouTube, elles regardent le monde,','fr')">▶</button>
+        <div class="lyric-ipa">syʁ jutub ɛl ʁəɡaʁd lə mɔ̃d</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">En YouTube, ellas miran el mundo,</div>
+        <div class="lyric-syllabic">En You-Tube, e-llas mi-ran el <span class="a">mun</span>-do,</div>
+        <button class="plb" onclick="speakLine(this,'En YouTube, ellas miran el mundo,','es')">▶</button>
+        <div class="lyric-ipa">en ˈjutuβ ˈeʎas ˈmiɾan el ˈmundo</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">On YouTube, they&#x27;re watching the world,</div>
+        <div class="lyric-syllabic">On You-Tube, they&#x27;re watch-ing the <span class="a">world</span>,</div>
+        <button class="plb" onclick="speakLine(this,'On YouTube, they\'re watching the world,','en')">▶</button>
+        <div class="lyric-ipa">ɒn ˈjutub ðɛr ˈwɒtʃɪŋ ðə wɜrld</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Des filles qui parlent, qui marchent, qui répondent,</div>
+        <div class="lyric-syllabic">Des filles qui par-lent, qui mar-chent, qui ré-pon-<span class="a">dent</span>,</div>
+        <button class="plb" onclick="speakLine(this,'Des filles qui parlent, qui marchent, qui répondent,','fr')">▶</button>
+        <div class="lyric-ipa">de fij ki paʁl ki maʁʃ ki ʁepɔ̃d</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Chicas que hablan, que caminan, que responden,</div>
+        <div class="lyric-syllabic">Chi-cas que ha-blan, que ca-mi-nan, que res-pon-<span class="a">den</span>,</div>
+        <button class="plb" onclick="speakLine(this,'Chicas que hablan, que caminan, que responden,','es')">▶</button>
+        <div class="lyric-ipa">ˈtʃikas ke ˈaβlan ke kaˈminan ke resˈponden</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">Girls who speak, who walk, who answer back,</div>
+        <div class="lyric-syllabic">Girls who speak, who walk, who an-swer <span class="a">back</span>,</div>
+        <button class="plb" onclick="speakLine(this,'Girls who speak, who walk, who answer back,','en')">▶</button>
+        <div class="lyric-ipa">ɡɜrlz hu spik hu wɔk hu ˈænsər bæk</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Elles rêvent de devenir médecins un jour,</div>
+        <div class="lyric-syllabic">El-les rê-vent de de-ve-nir mé-de-cins un <span class="a">jour</span>,</div>
+        <button class="plb" onclick="speakLine(this,'Elles rêvent de devenir médecins un jour,','fr')">▶</button>
+        <div class="lyric-ipa">ɛl ʁɛv də dəvniʁ medsɛ̃z‿œ̃ ʒuʁ</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Sueñan con ser médicas algún día,</div>
+        <div class="lyric-syllabic">Sue-ñan con ser mé-di-cas al-gún <span class="a">dí</span>-a,</div>
+        <button class="plb" onclick="speakLine(this,'Sueñan con ser médicas algún día,','es')">▶</button>
+        <div class="lyric-ipa">ˈsweɲan kon seɾ ˈmeðikas alˈɣun ˈdia</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">They dream of becoming doctors one day,</div>
+        <div class="lyric-syllabic">They dream of be-com-ing <span class="a">doc</span>-tors one day,</div>
+        <button class="plb" onclick="speakLine(this,'They dream of becoming doctors one day,','en')">▶</button>
+        <div class="lyric-ipa">ðeɪ drim ʌv bɪˈkʌmɪŋ ˈdɒktərz wʌn deɪ</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">De soigner, de guérir, de donner à leur tour.</div>
+        <div class="lyric-syllabic">De soi-gner, de gué-rir, de don-ner à leur <span class="a">tour</span>.</div>
+        <button class="plb" onclick="speakLine(this,'De soigner, de guérir, de donner à leur tour.','fr')">▶</button>
+        <div class="lyric-ipa">də swaɲe də ɡeʁiʁ də dɔne a lœʁ tuʁ</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Con curar, con sanar, con dar a su vez.</div>
+        <div class="lyric-syllabic">Con cu-rar, con sa-nar, con dar a su <span class="a">vez</span>.</div>
+        <button class="plb" onclick="speakLine(this,'Con curar, con sanar, con dar a su vez.','es')">▶</button>
+        <div class="lyric-ipa">kon kuˈɾaɾ kon saˈnaɾ kon ðaɾ a su βeθ</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">To heal, to cure, to give in return.</div>
+        <div class="lyric-syllabic">To heal, to cure, to give in re-<span class="a">turn</span>.</div>
+        <button class="plb" onclick="speakLine(this,'To heal, to cure, to give in return.','en')">▶</button>
+        <div class="lyric-ipa">tu hil tu kjʊr tu ɡɪv ɪn rɪˈtɜrn</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Je les regarde à travers mon écran,</div>
+        <div class="lyric-syllabic">Je les re-gar-de à tra-vers mon é-<span class="a">cran</span>,</div>
+        <button class="plb" onclick="speakLine(this,'Je les regarde à travers mon écran,','fr')">▶</button>
+        <div class="lyric-ipa">ʒə le ʁəɡaʁd a tʁavɛʁ mɔ̃n‿ekʁɑ̃</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Las miro a través de mi pantalla,</div>
+        <div class="lyric-syllabic">Las mi-ro a tra-vés de mi pan-<span class="a">ta</span>-lla,</div>
+        <button class="plb" onclick="speakLine(this,'Las miro a través de mi pantalla,','es')">▶</button>
+        <div class="lyric-ipa">las ˈmiɾo a tɾaˈβes ðe mi panˈtaʎa</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">I watch them through my own screen,</div>
+        <div class="lyric-syllabic">I watch them through my own <span class="a">screen</span>,</div>
+        <button class="plb" onclick="speakLine(this,'I watch them through my own screen,','en')">▶</button>
+        <div class="lyric-ipa">aɪ wɒtʃ ðəm θru maɪ oʊn skrin</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Et je découvre leur silence lentement,</div>
+        <div class="lyric-syllabic">Et je dé-cou-vre leur si-len-ce len-te-<span class="a">ment</span>,</div>
+        <button class="plb" onclick="speakLine(this,'Et je découvre leur silence lentement,','fr')">▶</button>
+        <div class="lyric-ipa">e ʒə dekuvʁ lœʁ silɑ̃s lɑ̃tmɑ̃</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Y descubro su silencio poco a poco,</div>
+        <div class="lyric-syllabic">Y des-cu-bro su si-len-cio po-co a <span class="a">po</span>-co,</div>
+        <button class="plb" onclick="speakLine(this,'Y descubro su silencio poco a poco,','es')">▶</button>
+        <div class="lyric-ipa">i desˈkuβɾo su siˈlensjo ˈpoko a ˈpoko</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">And slowly I discover their silence,</div>
+        <div class="lyric-syllabic">And slow-ly I dis-cov-er their si-<span class="a">lence</span>,</div>
+        <button class="plb" onclick="speakLine(this,'And slowly I discover their silence,','en')">▶</button>
+        <div class="lyric-ipa">ænd ˈsloʊli aɪ dɪsˈkʌvər ðɛr ˈsaɪləns</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Deux jeunes filles devant cette lumière bleue,</div>
+        <div class="lyric-syllabic">Deux jeu-nes filles de-vant ce-tte lu-miè-re <span class="a">bleue</span>,</div>
+        <button class="plb" onclick="speakLine(this,'Deux jeunes filles devant cette lumière bleue,','fr')">▶</button>
+        <div class="lyric-ipa">dø ʒœn fij dəvɑ̃ sɛt lymjɛʁ blø</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Dos jóvenes frente a esta luz azul,</div>
+        <div class="lyric-syllabic">Dos jó-ve-nes fren-te a es-ta luz a-<span class="a">zul</span>,</div>
+        <button class="plb" onclick="speakLine(this,'Dos jóvenes frente a esta luz azul,','es')">▶</button>
+        <div class="lyric-ipa">ðos ˈxoβenes ˈfɾente a ˈesta luθ aˈsul</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">Two young girls before this blue light,</div>
+        <div class="lyric-syllabic">Two young girls be-fore this blue <span class="a">light</span>,</div>
+        <button class="plb" onclick="speakLine(this,'Two young girls before this blue light,','en')">▶</button>
+        <div class="lyric-ipa">tu jʌŋ ɡɜrlz bɪˈfɔr ðɪs blu laɪt</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Qui voient leur avenir vivre dans les yeux des autres.</div>
+        <div class="lyric-syllabic">Qui voient leur a-ve-nir vi-vre dans les yeux des <span class="a">au</span>-tres.</div>
+        <button class="plb" onclick="speakLine(this,'Qui voient leur avenir vivre dans les yeux des autres.','fr')">▶</button>
+        <div class="lyric-ipa">ki vwa lœʁ avniʁ vivʁ dɑ̃ lez‿jø dez‿otʁ</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Que ven su futuro vivir en los ojos de otras.</div>
+        <div class="lyric-syllabic">Que ven su fu-tu-ro vi-vir en los o-jos de <span class="a">o</span>-tras.</div>
+        <button class="plb" onclick="speakLine(this,'Que ven su futuro vivir en los ojos de otras.','es')">▶</button>
+        <div class="lyric-ipa">ke βen su fuˈtuɾo biˈβiɾ en los ˈoxos ðe ˈotɾas</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">Seeing their future live in someone else&#x27;s eyes.</div>
+        <div class="lyric-syllabic">See-ing their fu-ture live in some-one <span class="a">el</span>-se&#x27;s eyes.</div>
+        <button class="plb" onclick="speakLine(this,'Seeing their future live in someone else\'s eyes.','en')">▶</button>
+        <div class="lyric-ipa">ˈsiɪŋ ðɛr ˈfjutʃər lɪv ɪn ˈsʌmwʌn ˈɛlsɪz aɪz</div>
+      </div></div>
+<h3 class="sec-title">Couplet 3 / Estrofa 3 / Verse 3</h3>
+<div class="tagrow">[Verse 3 — Trèfle, plus intime]</div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Puis j&#x27;ai vu leurs mères, derrière leur histoire,</div>
+        <div class="lyric-syllabic">Puis j&#x27;ai vu leurs mè-res, der-rière leur his-<span class="a">toi</span>-re,</div>
+        <button class="plb" onclick="speakLine(this,'Puis j\'ai vu leurs mères, derrière leur histoire,','fr')">▶</button>
+        <div class="lyric-ipa">pɥi ʒe vy lœʁ mɛʁ dɛʁjɛʁ lœʁ istwaʁ</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Luego vi a sus madres, detrás de su historia,</div>
+        <div class="lyric-syllabic">Lue-go vi a sus ma-dres, de-trás de su his-<span class="a">to</span>-ria,</div>
+        <button class="plb" onclick="speakLine(this,'Luego vi a sus madres, detrás de su historia,','es')">▶</button>
+        <div class="lyric-ipa">ˈlweɣo bi a sus ˈmaðɾes ðeˈtɾas ðe su isˈtoɾja</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">Then I saw their mothers, behind their story,</div>
+        <div class="lyric-syllabic">Then I saw their moth-ers, be-hind their <span class="a">sto</span>-ry,</div>
+        <button class="plb" onclick="speakLine(this,'Then I saw their mothers, behind their story,','en')">▶</button>
+        <div class="lyric-ipa">ðɛn aɪ sɔ ðɛr ˈmʌðərz bɪˈhaɪnd ðɛr ˈstɔri</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Leurs mains cassant des noix dans le fond de ma mémoire,</div>
+        <div class="lyric-syllabic">Leurs mains ca-ssant des noix dans le fond de ma mé-<span class="a">moi</span>-re,</div>
+        <button class="plb" onclick="speakLine(this,'Leurs mains cassant des noix dans le fond de ma mémoire,','fr')">▶</button>
+        <div class="lyric-ipa">lœʁ mɛ̃ kasɑ̃ de nwa dɑ̃ lə fɔ̃ də ma memwaʁ</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Sus manos partiendo nueces en el fondo de mi memoria,</div>
+        <div class="lyric-syllabic">Sus ma-nos par-tien-do nue-ces en el fon-do de mi me-<span class="a">mo</span>-ria,</div>
+        <button class="plb" onclick="speakLine(this,'Sus manos partiendo nueces en el fondo de mi memoria,','es')">▶</button>
+        <div class="lyric-ipa">sus ˈmanos paɾˈtjendo ˈnweses en el ˈfondo ðe mi meˈmoɾja</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">Their hands cracking nuts deep in my memory,</div>
+        <div class="lyric-syllabic">Their hands crack-ing nuts deep in my <span class="a">mem</span>-o-ry,</div>
+        <button class="plb" onclick="speakLine(this,'Their hands cracking nuts deep in my memory,','en')">▶</button>
+        <div class="lyric-ipa">ðɛr hændz ˈkrækɪŋ nʌts dip ɪn maɪ ˈmɛməri</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Sous leurs voiles de coton, elles savaient tant de choses,</div>
+        <div class="lyric-syllabic">Sous leurs voi-les de co-ton, el-les sa-vaient tant de <span class="a">cho</span>-ses,</div>
+        <button class="plb" onclick="speakLine(this,'Sous leurs voiles de coton, elles savaient tant de choses,','fr')">▶</button>
+        <div class="lyric-ipa">su lœʁ vwal də kɔtɔ̃ ɛl savɛ tɑ̃ də ʃoz</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Bajo sus velos de algodón, sabían tantas cosas,</div>
+        <div class="lyric-syllabic">Ba-jo sus ve-los de al-go-dón, sa-bí-an tan-tas <span class="a">co</span>-sas,</div>
+        <button class="plb" onclick="speakLine(this,'Bajo sus velos de algodón, sabían tantas cosas,','es')">▶</button>
+        <div class="lyric-ipa">ˈbaxo sus ˈβelos ðe alɣoˈðon saˈβian ˈtantas ˈkosas</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">Under their cotton veils, they knew so much,</div>
+        <div class="lyric-syllabic">Un-der their cot-ton veils, they knew so <span class="a">much</span>,</div>
+        <button class="plb" onclick="speakLine(this,'Under their cotton veils, they knew so much,','en')">▶</button>
+        <div class="lyric-ipa">ˈʌndər ðɛr ˈkɒtən veɪlz ðeɪ nu soʊ mʌtʃ</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Mais aucune page ouverte ne leur fut jamais offerte.</div>
+        <div class="lyric-syllabic">Mais au-cu-ne pa-ge ou-ver-te ne leur fut ja-mais o-<span class="a">ffer</span>-te.</div>
+        <button class="plb" onclick="speakLine(this,'Mais aucune page ouverte ne leur fut jamais offerte.','fr')">▶</button>
+        <div class="lyric-ipa">mɛ okyn paʒ uvɛʁt nə lœʁ fy ʒamɛ ɔfɛʁt</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Pero ninguna página abierta les fue jamás ofrecida.</div>
+        <div class="lyric-syllabic">Pe-ro nin-gu-na pá-gi-na a-bier-ta les fue ja-más o-fre-<span class="a">ci</span>-da.</div>
+        <button class="plb" onclick="speakLine(this,'Pero ninguna página abierta les fue jamás ofrecida.','es')">▶</button>
+        <div class="lyric-ipa">ˈpeɾo ninˈɣuna ˈpaxina aˈβjeɾta les fwe xaˈmas ofɾeˈsiða</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">But not one open page was ever offered them.</div>
+        <div class="lyric-syllabic">But not one o-pen page was ev-er <span class="a">of</span>-fered them.</div>
+        <button class="plb" onclick="speakLine(this,'But not one open page was ever offered them.','en')">▶</button>
+        <div class="lyric-ipa">bʌt nɒt wʌn ˈoʊpən peɪdʒ wʌz ˈɛvər ˈɒfərd ðəm</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Et leurs filles portent encore leurs espoirs,</div>
+        <div class="lyric-syllabic">Et leurs filles por-tent en-co-re leurs es-<span class="a">poirs</span>,</div>
+        <button class="plb" onclick="speakLine(this,'Et leurs filles portent encore leurs espoirs,','fr')">▶</button>
+        <div class="lyric-ipa">e lœʁ fij pɔʁt ɑ̃kɔʁ lœʁz‿ɛspwaʁ</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Y sus hijas cargan todavía su esperanza,</div>
+        <div class="lyric-syllabic">Y sus hi-jas car-gan to-da-ví-a su es-pe-<span class="a">ran</span>-za,</div>
+        <button class="plb" onclick="speakLine(this,'Y sus hijas cargan todavía su esperanza,','es')">▶</button>
+        <div class="lyric-ipa">i sus ˈixas ˈkaɾɣan toðaˈβia su espeˈɾansa</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">And their daughters still carry their hopes,</div>
+        <div class="lyric-syllabic">And their daugh-ters still ca-rry their <span class="a">hopes</span>,</div>
+        <button class="plb" onclick="speakLine(this,'And their daughters still carry their hopes,','en')">▶</button>
+        <div class="lyric-ipa">ænd ðɛr ˈdɔtərz stɪl ˈkæri ðɛr hoʊps</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Leurs cahiers contre elles, dans le fond du noir,</div>
+        <div class="lyric-syllabic">Leurs ca-hiers con-tre el-les, dans le fond du <span class="a">noir</span>,</div>
+        <button class="plb" onclick="speakLine(this,'Leurs cahiers contre elles, dans le fond du noir,','fr')">▶</button>
+        <div class="lyric-ipa">lœʁ kaje kɔ̃tʁ‿ɛl dɑ̃ lə fɔ̃ dy nwaʁ</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Cuadernos contra el pecho, en el fondo de lo oscuro,</div>
+        <div class="lyric-syllabic">Cua-der-nos con-tra el pe-cho, en el fon-do de lo os-<span class="a">cu</span>-ro,</div>
+        <button class="plb" onclick="speakLine(this,'Cuadernos contra el pecho, en el fondo de lo oscuro,','es')">▶</button>
+        <div class="lyric-ipa">kwaˈðeɾnos ˈkontɾa el ˈpetʃo en el ˈfondo ðe lo osˈkuɾo</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">Notebooks held close, deep in the dark,</div>
+        <div class="lyric-syllabic">Note-books held close, deep in the <span class="a">dark</span>,</div>
+        <button class="plb" onclick="speakLine(this,'Notebooks held close, deep in the dark,','en')">▶</button>
+        <div class="lyric-ipa">ˈnoʊtbʊks hɛld kloʊs dip ɪn ðə dɑrk</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Une génération regarde ce qu&#x27;elle pourrait devenir,</div>
+        <div class="lyric-syllabic">U-ne gé-né-ra-tion re-gar-de ce qu&#x27;el-le pou-rrait de-ve-<span class="a">nir</span>,</div>
+        <button class="plb" onclick="speakLine(this,'Une génération regarde ce qu\'elle pourrait devenir,','fr')">▶</button>
+        <div class="lyric-ipa">yn ʒeneʁasjɔ̃ ʁəɡaʁd sə kɛl puʁʁɛ dəvniʁ</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Una generación mira lo que podría llegar a ser,</div>
+        <div class="lyric-syllabic">U-na ge-ne-ra-ción mi-ra lo que po-drí-a lle-gar a <span class="a">ser</span>,</div>
+        <button class="plb" onclick="speakLine(this,'Una generación mira lo que podría llegar a ser,','es')">▶</button>
+        <div class="lyric-ipa">ˈuna xeneɾaˈsjon ˈmiɾa lo ke poˈðɾia ʎeˈɣaɾ a ˈseɾ</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">One generation watches what it could become,</div>
+        <div class="lyric-syllabic">One gen-er-a-tion watch-es what it could be-<span class="a">come</span>,</div>
+        <button class="plb" onclick="speakLine(this,'One generation watches what it could become,','en')">▶</button>
+        <div class="lyric-ipa">wʌn ˌdʒɛnəˈreɪʃən ˈwɒtʃɪz wʌt ɪt kʊd bɪˈkʌm</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Pendant qu&#x27;une autre n&#x27;a jamais eu le droit de choisir.</div>
+        <div class="lyric-syllabic">Pen-dant qu&#x27;u-ne au-tre n&#x27;a ja-mais eu le droit de choi-<span class="a">sir</span>.</div>
+        <button class="plb" onclick="speakLine(this,'Pendant qu\'une autre n\'a jamais eu le droit de choisir.','fr')">▶</button>
+        <div class="lyric-ipa">pɑ̃dɑ̃ kyn otʁ na ʒamɛz‿y lə dʁwa də ʃwaziʁ</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Mientras otra nunca tuvo el derecho de elegir.</div>
+        <div class="lyric-syllabic">Mien-tras o-tra nun-ca tu-vo el de-re-cho de e-le-<span class="a">gir</span>.</div>
+        <button class="plb" onclick="speakLine(this,'Mientras otra nunca tuvo el derecho de elegir.','es')">▶</button>
+        <div class="lyric-ipa">ˈmjentɾas ˈotɾa ˈnunka ˈtuβo el deˈɾetʃo ðe eleˈxiɾ</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">While another never had the right to choose.</div>
+        <div class="lyric-syllabic">While an-oth-er nev-er had the right to <span class="a">choose</span>.</div>
+        <button class="plb" onclick="speakLine(this,'While another never had the right to choose.','en')">▶</button>
+        <div class="lyric-ipa">waɪl əˈnʌðər ˈnɛvər hæd ðə raɪt tu tʃuz</div>
+      </div></div>
+<h3 class="sec-title">Voix fantôme / Voz fantasma / Ghost Voice</h3>
+<div class="tagrow">[Ghost Voice — de plus en plus hantée]</div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Décortique...</div>
+        <div class="lyric-syllabic">Dé-cor-<span class="a">tique</span>...</div>
+        <button class="plb" onclick="speakLine(this,'Décortique...','fr')">▶</button>
+        <div class="lyric-ipa">dekɔʁtik</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Descascara...</div>
+        <div class="lyric-syllabic">Des-cas-<span class="a">ca</span>-ra...</div>
+        <button class="plb" onclick="speakLine(this,'Descascara...','es')">▶</button>
+        <div class="lyric-ipa">deskaskaɾa</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">Shelling...</div>
+        <div class="lyric-syllabic"><span class="a">Shell</span>-ing...</div>
+        <button class="plb" onclick="speakLine(this,'Shelling...','en')">▶</button>
+        <div class="lyric-ipa">ʃɛlɪŋ</div>
+      </div></div>
+<h3 class="sec-title">Pont / Puente / Bridge</h3>
+<div class="tagrow">[Bridge — Minotaure, froid, distant, documentaire]</div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Puis j&#x27;ai vu les puissants se rapprocher sur l&#x27;écran,</div>
+        <div class="lyric-syllabic">Puis j&#x27;ai vu les pui-ssants se ra-pro-cher sur l&#x27;é-<span class="a">cran</span>,</div>
+        <button class="plb" onclick="speakLine(this,'Puis j\'ai vu les puissants se rapprocher sur l\'écran,','fr')">▶</button>
+        <div class="lyric-ipa">pɥi ʒe vy le pɥisɑ̃ sə ʁapʁoʃe syʁ lekʁɑ̃</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Luego vi a los poderosos acercarse en la pantalla,</div>
+        <div class="lyric-syllabic">Lue-go vi a los po-de-ro-sos a-cer-car-se en la pan-<span class="a">ta</span>-lla,</div>
+        <button class="plb" onclick="speakLine(this,'Luego vi a los poderosos acercarse en la pantalla,','es')">▶</button>
+        <div class="lyric-ipa">ˈlweɣo bi a los poðeˈɾosos aseɾˈkaɾse en la panˈtaʎa</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">Then I saw the powerful drawing close on screen,</div>
+        <div class="lyric-syllabic">Then I saw the pow-er-ful draw-ing close on <span class="a">screen</span>,</div>
+        <button class="plb" onclick="speakLine(this,'Then I saw the powerful drawing close on screen,','en')">▶</button>
+        <div class="lyric-ipa">ðɛn aɪ sɔ ðə ˈpaʊərfʊl ˈdrɔɪŋ kloʊz ɒn skrin</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Des hommes qui parlent de peuples, de coutumes et de temps,</div>
+        <div class="lyric-syllabic">Des hom-mes qui par-lent de peu-ples, de cou-tu-mes et de <span class="a">temps</span>,</div>
+        <button class="plb" onclick="speakLine(this,'Des hommes qui parlent de peuples, de coutumes et de temps,','fr')">▶</button>
+        <div class="lyric-ipa">dez‿ɔm ki paʁl də pœpl də kutym e də tɑ̃</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Hombres que hablan de pueblos, de costumbres, de tiempo,</div>
+        <div class="lyric-syllabic">Hom-bres que ha-blan de pue-blos, de cos-tum-bres, de <span class="a">tiem</span>-po,</div>
+        <button class="plb" onclick="speakLine(this,'Hombres que hablan de pueblos, de costumbres, de tiempo,','es')">▶</button>
+        <div class="lyric-ipa">ˈombɾes ke ˈaβlan de ˈpweβlos de kosˈtumbɾes de ˈtjempo</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">Men who speak of peoples, of customs, of time,</div>
+        <div class="lyric-syllabic">Men who speak of peo-ples, of cus-toms, of <span class="a">time</span>,</div>
+        <button class="plb" onclick="speakLine(this,'Men who speak of peoples, of customs, of time,','en')">▶</button>
+        <div class="lyric-ipa">mɛn hu spik ʌv ˈpipəlz ʌv ˈkʌstəmz ʌv taɪm</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Des alliances qui se nouent loin au-dessus des toits,</div>
+        <div class="lyric-syllabic">Des a-llian-ces qui se nouent loin au-de-ssus des <span class="a">toits</span>,</div>
+        <button class="plb" onclick="speakLine(this,'Des alliances qui se nouent loin au-dessus des toits,','fr')">▶</button>
+        <div class="lyric-ipa">dez‿aljɑ̃s ki sə nu lwɛ̃ odsy de twa</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Alianzas que se tejen muy por encima de los techos,</div>
+        <div class="lyric-syllabic">A-lian-zas que se te-jen muy por en-ci-ma de los <span class="a">te</span>-chos,</div>
+        <button class="plb" onclick="speakLine(this,'Alianzas que se tejen muy por encima de los techos,','es')">▶</button>
+        <div class="lyric-ipa">aˈljansas ke se ˈtexen mwi poɾ enˈsima ðe los ˈtetʃos</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">Alliances forming far above the rooftops,</div>
+        <div class="lyric-syllabic">Al-li-anc-es form-ing far a-bove the <span class="a">roof</span>-tops,</div>
+        <button class="plb" onclick="speakLine(this,'Alliances forming far above the rooftops,','en')">▶</button>
+        <div class="lyric-ipa">əˈlaɪənsɪz ˈfɔrmɪŋ fɑr əˈbʌv ðə ˈruftɒps</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Pendant que deux jeunes filles cherchent encore leur voix.</div>
+        <div class="lyric-syllabic">Pen-dant que deux jeu-nes filles cher-chent en-co-re leur <span class="a">voix</span>.</div>
+        <button class="plb" onclick="speakLine(this,'Pendant que deux jeunes filles cherchent encore leur voix.','fr')">▶</button>
+        <div class="lyric-ipa">pɑ̃dɑ̃ kə dø ʒœn fij ʃɛʁʃ ɑ̃kɔʁ lœʁ vwa</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Mientras dos jóvenes aún buscan su voz.</div>
+        <div class="lyric-syllabic">Mien-tras dos jó-ve-nes a-ún bus-can su <span class="a">voz</span>.</div>
+        <button class="plb" onclick="speakLine(this,'Mientras dos jóvenes aún buscan su voz.','es')">▶</button>
+        <div class="lyric-ipa">ˈmjentɾas ðos ˈxoβenes aˈun ˈβuskan su βoθ</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">While two young girls still search for their voice.</div>
+        <div class="lyric-syllabic">While two young girls still search for their <span class="a">voice</span>.</div>
+        <button class="plb" onclick="speakLine(this,'While two young girls still search for their voice.','en')">▶</button>
+        <div class="lyric-ipa">waɪl tu jʌŋ ɡɜrlz stɪl sɜrtʃ fɔr ðɛr vɔɪs</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Ils parlent de liberté selon leurs propres frontières,</div>
+        <div class="lyric-syllabic">Ils par-lent de li-ber-té se-lon leurs pro-pres fron-<span class="a">tiè</span>-res,</div>
+        <button class="plb" onclick="speakLine(this,'Ils parlent de liberté selon leurs propres frontières,','fr')">▶</button>
+        <div class="lyric-ipa">il paʁl də libɛʁte səlɔ̃ lœʁ pʁɔpʁ fʁɔ̃tjɛʁ</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Hablan de libertad según sus propias fronteras,</div>
+        <div class="lyric-syllabic">Ha-blan de li-ber-tad se-gún sus pro-pias fron-<span class="a">te</span>-ras,</div>
+        <button class="plb" onclick="speakLine(this,'Hablan de libertad según sus propias fronteras,','es')">▶</button>
+        <div class="lyric-ipa">ˈaβlan de liβeɾˈtað seˈɣun sus ˈpɾopjas fɾonˈteɾas</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">They speak of freedom by their own borders,</div>
+        <div class="lyric-syllabic">They speak of free-dom by their own <span class="a">bor</span>-ders,</div>
+        <button class="plb" onclick="speakLine(this,'They speak of freedom by their own borders,','en')">▶</button>
+        <div class="lyric-ipa">ðeɪ spik ʌv ˈfridəm baɪ ðɛr oʊn ˈbɔrdərz</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Et derrière leurs discours, des femmes perdent leur lumière.</div>
+        <div class="lyric-syllabic">Et der-rière leurs dis-cours, des fem-mes per-dent leur lu-<span class="a">miè</span>-re.</div>
+        <button class="plb" onclick="speakLine(this,'Et derrière leurs discours, des femmes perdent leur lumière.','fr')">▶</button>
+        <div class="lyric-ipa">e dɛʁjɛʁ lœʁ diskuʁ de fam pɛʁd lœʁ lymjɛʁ</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Y detrás de sus discursos, las mujeres pierden su luz.</div>
+        <div class="lyric-syllabic">Y de-trás de sus dis-cur-sos, las mu-je-res pier-den su <span class="a">luz</span>.</div>
+        <button class="plb" onclick="speakLine(this,'Y detrás de sus discursos, las mujeres pierden su luz.','es')">▶</button>
+        <div class="lyric-ipa">i ðeˈtɾas ðe sus disˈkuɾsos las muˈxeɾes ˈpjeɾðen su luθ</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">And behind their speeches, women lose their light.</div>
+        <div class="lyric-syllabic">And be-hind their speech-es, wom-en lose their <span class="a">light</span>.</div>
+        <button class="plb" onclick="speakLine(this,'And behind their speeches, women lose their light.','en')">▶</button>
+        <div class="lyric-ipa">ænd bɪˈhaɪnd ðɛr ˈspitʃɪz ˈwɪmɪn luz ðɛr laɪt</div>
+      </div></div>
+<div class="sound-hints">
+<div class="sh fr">🇫🇷 Le <b>r</b> français de « rapprocher » se fait au fond de la gorge, doux, jamais roulé.</div>
+<div class="sh es">🇪🇸 La <b>ll</b> de « techos » se prononce comme un "tch" doux dans beaucoup d'accents — pas comme un "l" français.</div>
+<div class="sh en">🇬🇧 Le groupe <b>-ough-</b> de « rooftops » ne se prononce pas « ou » — c'est un "u" bref, comme dans "book".</div>
+</div>
+<h3 class="sec-title">Couplet 4 / Estrofa 4 / Verse 4</h3>
+<div class="tagrow">[Verse 4 — Trèfle]</div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Les années passent sous un pouvoir qui vole...</div>
+        <div class="lyric-syllabic">Les an-nées pa-ssent sous un pou-voir qui <span class="a">vo</span>-le...</div>
+        <button class="plb" onclick="speakLine(this,'Les années passent sous un pouvoir qui vole...','fr')">▶</button>
+        <div class="lyric-ipa">lez‿ane pas suz‿œ̃ puvwaʁ ki vɔl</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Los años pasan bajo un poder que roba...</div>
+        <div class="lyric-syllabic">Los a-ños pa-san ba-jo un po-der que <span class="a">ro</span>-ba...</div>
+        <button class="plb" onclick="speakLine(this,'Los años pasan bajo un poder que roba...','es')">▶</button>
+        <div class="lyric-ipa">los ˈaɲos ˈpasan ˈbaxo un poˈðeɾ ke ˈroβa</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">The years go by under a power that steals...</div>
+        <div class="lyric-syllabic">The years go by un-der a pow-er that <span class="a">steals</span>...</div>
+        <button class="plb" onclick="speakLine(this,'The years go by under a power that steals...','en')">▶</button>
+        <div class="lyric-ipa">ðə jɪrz ɡoʊ baɪ ˈʌndər ə ˈpaʊər ðæt stilz</div>
+      </div></div>
+<h3 class="sec-title">Parlé / Hablado / Spoken Word</h3>
+<div class="tagrow">[STOP TOTAL — silence absolu]</div>
+<div class="tagrow">[Spoken Word — Trèfle, seule, sans musique]</div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Et je regarde encore...</div>
+        <div class="lyric-syllabic">Et je re-gar-de en-<span class="a">co</span>-re...</div>
+        <button class="plb" onclick="speakLine(this,'Et je regarde encore...','fr')">▶</button>
+        <div class="lyric-ipa">e ʒə ʁəɡaʁd ɑ̃kɔʁ</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Y sigo mirando...</div>
+        <div class="lyric-syllabic">Y si-go mi-<span class="a">ran</span>-do...</div>
+        <button class="plb" onclick="speakLine(this,'Y sigo mirando...','es')">▶</button>
+        <div class="lyric-ipa">i ˈsiɣo miˈɾando</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">And I keep watching...</div>
+        <div class="lyric-syllabic">And I keep <span class="a">watch</span>-ing...</div>
+        <button class="plb" onclick="speakLine(this,'And I keep watching...','en')">▶</button>
+        <div class="lyric-ipa">ænd aɪ kip ˈwɒtʃɪŋ</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Je regarde...</div>
+        <div class="lyric-syllabic">Je re-<span class="a">gar</span>-de...</div>
+        <button class="plb" onclick="speakLine(this,'Je regarde...','fr')">▶</button>
+        <div class="lyric-ipa">ʒə ʁəɡaʁd</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Estoy mirando...</div>
+        <div class="lyric-syllabic">Es-toy mi-<span class="a">ran</span>-do...</div>
+        <button class="plb" onclick="speakLine(this,'Estoy mirando...','es')">▶</button>
+        <div class="lyric-ipa">esˈtoj miˈɾando</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">I&#x27;m watching...</div>
+        <div class="lyric-syllabic">I&#x27;m <span class="a">watch</span>-ing...</div>
+        <button class="plb" onclick="speakLine(this,'I\'m watching...','en')">▶</button>
+        <div class="lyric-ipa">aɪm ˈwɒtʃɪŋ</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Leurs visages...</div>
+        <div class="lyric-syllabic">Leurs vi-<span class="a">sa</span>-ges...</div>
+        <button class="plb" onclick="speakLine(this,'Leurs visages...','fr')">▶</button>
+        <div class="lyric-ipa">lœʁ vizaʒ</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Sus rostros...</div>
+        <div class="lyric-syllabic">Sus <span class="a">ros</span>-tros...</div>
+        <button class="plb" onclick="speakLine(this,'Sus rostros...','es')">▶</button>
+        <div class="lyric-ipa">sus ˈrostɾos</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">Their faces...</div>
+        <div class="lyric-syllabic">Their <span class="a">fac</span>-es...</div>
+        <button class="plb" onclick="speakLine(this,'Their faces...','en')">▶</button>
+        <div class="lyric-ipa">ðɛr ˈfeɪsɪz</div>
+      </div></div>
+<h3 class="sec-title">Couplet final / Estrofa final / Final Verse</h3>
+<div class="tagrow">[VIOLIN — cri bref]</div>
+<div class="tagrow">[RETURN — bass + drums + guitar]</div>
+<div class="tagrow">[Trèfle — de plus en plus forte]</div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Leurs regards qui espèrent malgré le temps qui passe,</div>
+        <div class="lyric-syllabic">Leurs re-gards qui es-pè-rent mal-gré le temps qui <span class="a">pa</span>-sse,</div>
+        <button class="plb" onclick="speakLine(this,'Leurs regards qui espèrent malgré le temps qui passe,','fr')">▶</button>
+        <div class="lyric-ipa">lœʁ ʁəɡaʁ ki ɛspɛʁ malɡʁe lə tɑ̃ ki pas</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Sus miradas que esperan pese al tiempo que pasa,</div>
+        <div class="lyric-syllabic">Sus mi-ra-das que es-pe-ran pe-se al tiem-po que <span class="a">pa</span>-sa,</div>
+        <button class="plb" onclick="speakLine(this,'Sus miradas que esperan pese al tiempo que pasa,','es')">▶</button>
+        <div class="lyric-ipa">sus miˈɾaðas ke esˈpeɾan ˈpese al ˈtjempo ke ˈpasa</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">Their eyes still hoping despite the passing time,</div>
+        <div class="lyric-syllabic">Their eyes still hop-ing de-spite the pass-ing <span class="a">time</span>,</div>
+        <button class="plb" onclick="speakLine(this,'Their eyes still hoping despite the passing time,','en')">▶</button>
+        <div class="lyric-ipa">ðɛr aɪz stɪl ˈhoʊpɪŋ dɪˈspaɪt ðə ˈpæsɪŋ taɪm</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Leurs rêves enfermés derrière les murs et les traces,</div>
+        <div class="lyric-syllabic">Leurs rê-ves en-fer-més der-rière les murs et les <span class="a">tra</span>-ces,</div>
+        <button class="plb" onclick="speakLine(this,'Leurs rêves enfermés derrière les murs et les traces,','fr')">▶</button>
+        <div class="lyric-ipa">lœʁ ʁɛvz‿ɑ̃fɛʁme dɛʁjɛʁ le myʁz‿e le tʁas</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Sus sueños encerrados tras los muros, tras las huellas,</div>
+        <div class="lyric-syllabic">Sus sue-ños en-ce-rra-dos tras los mu-ros, tras las hue-<span class="a">llas</span>,</div>
+        <button class="plb" onclick="speakLine(this,'Sus sueños encerrados tras los muros, tras las huellas,','es')">▶</button>
+        <div class="lyric-ipa">sus ˈsweɲos enseˈraðos tɾas los ˈmuɾos tɾas las ˈweʎas</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">Their dreams locked behind these walls, these traces,</div>
+        <div class="lyric-syllabic">Their dreams locked be-hind these walls, these <span class="a">tra</span>-ces,</div>
+        <button class="plb" onclick="speakLine(this,'Their dreams locked behind these walls, these traces,','en')">▶</button>
+        <div class="lyric-ipa">ðɛr drimz lɒkt bɪˈhaɪnd ðiz wɔlz ðiz ˈtreɪsɪz</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Elles grandissent sans école, sans choisir leur chemin,</div>
+        <div class="lyric-syllabic">El-les gran-di-ssent sans é-co-le, sans choi-sir leur che-<span class="a">min</span>,</div>
+        <button class="plb" onclick="speakLine(this,'Elles grandissent sans école, sans choisir leur chemin,','fr')">▶</button>
+        <div class="lyric-ipa">ɛl ɡʁɑ̃dis sɑ̃z‿ekɔl sɑ̃ ʃwaziʁ lœʁ ʃəmɛ̃</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Crecen sin escuela, sin elegir su camino,</div>
+        <div class="lyric-syllabic">Cre-cen sin es-cue-la, sin e-le-gir su ca-<span class="a">mi</span>-no,</div>
+        <button class="plb" onclick="speakLine(this,'Crecen sin escuela, sin elegir su camino,','es')">▶</button>
+        <div class="lyric-ipa">ˈkɾesen sin esˈkwela sin eleˈxiɾ su kaˈmino</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">They grow up with no school, no path of their own,</div>
+        <div class="lyric-syllabic">They grow up with no school, no path of their <span class="a">own</span>,</div>
+        <button class="plb" onclick="speakLine(this,'They grow up with no school, no path of their own,','en')">▶</button>
+        <div class="lyric-ipa">ðeɪ ɡroʊ ʌp wɪð noʊ skul noʊ pæθ ʌv ðɛr oʊn</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Pendant que nous regardons ailleurs,</div>
+        <div class="lyric-syllabic">Pen-dant que nous re-gar-dons ai-<span class="a">lleurs</span>,</div>
+        <button class="plb" onclick="speakLine(this,'Pendant que nous regardons ailleurs,','fr')">▶</button>
+        <div class="lyric-ipa">pɑ̃dɑ̃ kə nu ʁəɡaʁdɔ̃z‿ajœʁ</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Mientras nosotros miramos hacia otro lado,</div>
+        <div class="lyric-syllabic">Mien-tras no-so-tros mi-ra-mos ha-cia o-tro <span class="a">la</span>-do,</div>
+        <button class="plb" onclick="speakLine(this,'Mientras nosotros miramos hacia otro lado,','es')">▶</button>
+        <div class="lyric-ipa">ˈmjentɾas noˈsotɾos miˈɾamos ˈasja ˈotɾo ˈlaðo</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">While we look away,</div>
+        <div class="lyric-syllabic">While we look a-<span class="a">way</span>,</div>
+        <button class="plb" onclick="speakLine(this,'While we look away,','en')">▶</button>
+        <div class="lyric-ipa">waɪl wi lʊk əˈweɪ</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Pendant que le silence gagne du terrain.</div>
+        <div class="lyric-syllabic">Pen-dant que le si-len-ce ga-gne du te-<span class="a">rrain</span>.</div>
+        <button class="plb" onclick="speakLine(this,'Pendant que le silence gagne du terrain.','fr')">▶</button>
+        <div class="lyric-ipa">pɑ̃dɑ̃ kə lə silɑ̃s ɡaɲ dy teʁɛ̃</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Mientras el silencio gana terreno.</div>
+        <div class="lyric-syllabic">Mien-tras el si-len-cio ga-na te-<span class="a">rre</span>-no.</div>
+        <button class="plb" onclick="speakLine(this,'Mientras el silencio gana terreno.','es')">▶</button>
+        <div class="lyric-ipa">ˈmjentɾas el siˈlensjo ˈɣana teˈreno</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">While the silence gains ground.</div>
+        <div class="lyric-syllabic">While the si-lence gains <span class="a">ground</span>.</div>
+        <button class="plb" onclick="speakLine(this,'While the silence gains ground.','en')">▶</button>
+        <div class="lyric-ipa">waɪl ðə ˈsaɪləns ɡeɪnz ɡraʊnd</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Leur silence est forcé.</div>
+        <div class="lyric-syllabic">Leur si-len-ce est for-<span class="a">cé</span>.</div>
+        <button class="plb" onclick="speakLine(this,'Leur silence est forcé.','fr')">▶</button>
+        <div class="lyric-ipa">lœʁ silɑ̃sɛ fɔʁse</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Su silencio es forzado.</div>
+        <div class="lyric-syllabic">Su si-len-cio es for-<span class="a">za</span>-do.</div>
+        <button class="plb" onclick="speakLine(this,'Su silencio es forzado.','es')">▶</button>
+        <div class="lyric-ipa">su siˈlensjo es foɾˈsaðo</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">Their silence is forced.</div>
+        <div class="lyric-syllabic">Their si-lence is <span class="a">forced</span>.</div>
+        <button class="plb" onclick="speakLine(this,'Their silence is forced.','en')">▶</button>
+        <div class="lyric-ipa">ðɛr ˈsaɪləns ɪz fɔrst</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Mais le nôtre...</div>
+        <div class="lyric-syllabic">Mais le <span class="a">nô</span>-tre...</div>
+        <button class="plb" onclick="speakLine(this,'Mais le nôtre...','fr')">▶</button>
+        <div class="lyric-ipa">mɛ lə notʁ</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Pero el nuestro...</div>
+        <div class="lyric-syllabic">Pe-ro el nues-<span class="a">tro</span>...</div>
+        <button class="plb" onclick="speakLine(this,'Pero el nuestro...','es')">▶</button>
+        <div class="lyric-ipa">ˈpeɾo el ˈnwestɾo</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">But ours...</div>
+        <div class="lyric-syllabic">But <span class="a">ours</span>...</div>
+        <button class="plb" onclick="speakLine(this,'But ours...','en')">▶</button>
+        <div class="lyric-ipa">bʌt aʊrz</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Qui l&#x27;a accepté ?</div>
+        <div class="lyric-syllabic">Qui l&#x27;a ac-cep-<span class="a">té</span> ?</div>
+        <button class="plb" onclick="speakLine(this,'Qui l\'a accepté ?','fr')">▶</button>
+        <div class="lyric-ipa">ki la aksɛpte</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">¿Quién lo aceptó?</div>
+        <div class="lyric-syllabic">¿Quién lo a-cep-<span class="a">tó</span>?</div>
+        <button class="plb" onclick="speakLine(this,'¿Quién lo aceptó?','es')">▶</button>
+        <div class="lyric-ipa">kjen lo aθepˈto</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">Who accepted that?</div>
+        <div class="lyric-syllabic">Who ac-cept-ed <span class="a">that</span>?</div>
+        <button class="plb" onclick="speakLine(this,'Who accepted that?','en')">▶</button>
+        <div class="lyric-ipa">hu əkˈsɛptɪd ðæt</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Leur voix est enfermée.</div>
+        <div class="lyric-syllabic">Leur voix est en-fer-<span class="a">mée</span>.</div>
+        <button class="plb" onclick="speakLine(this,'Leur voix est enfermée.','fr')">▶</button>
+        <div class="lyric-ipa">lœʁ vwaz‿ɑ̃fɛʁme</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Su voz está encerrada.</div>
+        <div class="lyric-syllabic">Su voz es-tá en-ce-<span class="a">rra</span>-da.</div>
+        <button class="plb" onclick="speakLine(this,'Su voz está encerrada.','es')">▶</button>
+        <div class="lyric-ipa">su βoθ esˈta enseˈraða</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">Their voice is locked away.</div>
+        <div class="lyric-syllabic">Their voice is locked a-<span class="a">way</span>.</div>
+        <button class="plb" onclick="speakLine(this,'Their voice is locked away.','en')">▶</button>
+        <div class="lyric-ipa">ðɛr vɔɪs ɪz lɒkt əˈweɪ</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Mais pourquoi laisser la nôtre se taire ?</div>
+        <div class="lyric-syllabic">Mais pour-quoi lai-sser la nô-tre se <span class="a">tai</span>-re ?</div>
+        <button class="plb" onclick="speakLine(this,'Mais pourquoi laisser la nôtre se taire ?','fr')">▶</button>
+        <div class="lyric-ipa">mɛ puʁkwa lɛse la notʁ sə tɛʁ</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">¿Por qué dejar que la nuestra calle también?</div>
+        <div class="lyric-syllabic">¿Por qué de-jar que la nues-tra ca-lle tam-<span class="a">bién</span>?</div>
+        <button class="plb" onclick="speakLine(this,'¿Por qué dejar que la nuestra calle también?','es')">▶</button>
+        <div class="lyric-ipa">poɾ ˈke ðeˈxaɾ ke la ˈnwestɾa ˈkaʎe tamˈbjen</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">So why let ours stay silent too?</div>
+        <div class="lyric-syllabic">So why let ours stay si-lent <span class="a">too</span>?</div>
+        <button class="plb" onclick="speakLine(this,'So why let ours stay silent too?','en')">▶</button>
+        <div class="lyric-ipa">soʊ waɪ lɛt aʊrz steɪ ˈsaɪlənt tu</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Je les ai vues.</div>
+        <div class="lyric-syllabic">Je les ai <span class="a">vues</span>.</div>
+        <button class="plb" onclick="speakLine(this,'Je les ai vues.','fr')">▶</button>
+        <div class="lyric-ipa">ʒə lez‿e vy</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Las he visto.</div>
+        <div class="lyric-syllabic">Las he <span class="a">vis</span>-to.</div>
+        <button class="plb" onclick="speakLine(this,'Las he visto.','es')">▶</button>
+        <div class="lyric-ipa">las e ˈβisto</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">I have seen them.</div>
+        <div class="lyric-syllabic">I have <span class="a">seen</span> them.</div>
+        <button class="plb" onclick="speakLine(this,'I have seen them.','en')">▶</button>
+        <div class="lyric-ipa">aɪ hæv sin ðəm</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Je ne peux plus détourner les yeux.</div>
+        <div class="lyric-syllabic">Je ne peux plus dé-tour-ner les <span class="a">yeux</span>.</div>
+        <button class="plb" onclick="speakLine(this,'Je ne peux plus détourner les yeux.','fr')">▶</button>
+        <div class="lyric-ipa">ʒə nə pø ply detuʁne lez‿jø</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Ya no puedo apartar la mirada.</div>
+        <div class="lyric-syllabic">Ya no pue-do a-par-tar la mi-<span class="a">ra</span>-da.</div>
+        <button class="plb" onclick="speakLine(this,'Ya no puedo apartar la mirada.','es')">▶</button>
+        <div class="lyric-ipa">ʝa no ˈpweðo apaɾˈtaɾ la miˈɾaða</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">I can&#x27;t look away anymore.</div>
+        <div class="lyric-syllabic">I can&#x27;t look a-way an-y-<span class="a">more</span>.</div>
+        <button class="plb" onclick="speakLine(this,'I can\'t look away anymore.','en')">▶</button>
+        <div class="lyric-ipa">aɪ kænt lʊk əˈweɪ ˌɛniˈmɔr</div>
+      </div></div>
+<div class="sound-hints">
+<div class="sh fr">🇫🇷 Les points de suspension (« Mais le nôtre... ») demandent une vraie pause silencieuse avant de reprendre le souffle.</div>
+<div class="sh es">🇪🇸 L'accent écrit de « ¿Quién lo aceptó? » indique la syllabe forte : ac-cep-TÓ, à ne pas manquer en espagnol.</div>
+<div class="sh en">🇬🇧 « Who accepted that? » — le "t" final de "that" est presque avalé en anglais courant, pas besoin de le marquer fort.</div>
+</div>
+<h3 class="sec-title">Refrain final / Estribillo final / Final Chorus</h3>
+<div class="tagrow">[Final Chorus — Trèfle + Minotaure, rock puissant]</div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">On voudrait soigner, on voudrait guérir,</div>
+        <div class="lyric-syllabic">On vou-drait soi-gner, on vou-drait gué-<span class="a">rir</span>,</div>
+        <button class="plb" onclick="speakLine(this,'On voudrait soigner, on voudrait guérir,','fr')">▶</button>
+        <div class="lyric-ipa">ɔ̃ vudʁɛ swaɲe ɔ̃ vudʁɛ ɡeʁiʁ</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Querríamos curar, querríamos sanar,</div>
+        <div class="lyric-syllabic">Que-rrí-a-mos cu-rar, que-rrí-a-mos sa-<span class="a">nar</span>,</div>
+        <button class="plb" onclick="speakLine(this,'Querríamos curar, querríamos sanar,','es')">▶</button>
+        <div class="lyric-ipa">keˈriamos kuˈɾaɾ keˈriamos saˈnaɾ</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">We wish to heal, we wish to cure,</div>
+        <div class="lyric-syllabic">We wish to heal, we wish to <span class="a">cure</span>,</div>
+        <button class="plb" onclick="speakLine(this,'We wish to heal, we wish to cure,','en')">▶</button>
+        <div class="lyric-ipa">wi wɪʃ tu hil wi wɪʃ tu kjʊr</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">On voudrait apprendre, comprendre et choisir,</div>
+        <div class="lyric-syllabic">On vou-drait ap-pren-dre, com-pren-dre et choi-<span class="a">sir</span>,</div>
+        <button class="plb" onclick="speakLine(this,'On voudrait apprendre, comprendre et choisir,','fr')">▶</button>
+        <div class="lyric-ipa">ɔ̃ vudʁɛt‿apʁɑ̃dʁ kɔ̃pʁɑ̃dʁ e ʃwaziʁ</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Querríamos aprender, comprender y elegir,</div>
+        <div class="lyric-syllabic">Que-rrí-a-mos a-pren-der, com-pren-der y e-le-<span class="a">gir</span>,</div>
+        <button class="plb" onclick="speakLine(this,'Querríamos aprender, comprender y elegir,','es')">▶</button>
+        <div class="lyric-ipa">keˈriamos apɾenˈdeɾ kompɾenˈdeɾ i eleˈxiɾ</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">We wish to learn, understand and choose,</div>
+        <div class="lyric-syllabic">We wish to learn, un-der-stand and <span class="a">choose</span>,</div>
+        <button class="plb" onclick="speakLine(this,'We wish to learn, understand and choose,','en')">▶</button>
+        <div class="lyric-ipa">wi wɪʃ tu lɜrn ˌʌndərˈstænd ænd tʃuz</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Sur l&#x27;écran bleu, leur lumière apparaît,</div>
+        <div class="lyric-syllabic">Sur l&#x27;é-cran bleu, leur lu-miè-re ap-pa-<span class="a">raît</span>,</div>
+        <button class="plb" onclick="speakLine(this,'Sur l\'écran bleu, leur lumière apparaît,','fr')">▶</button>
+        <div class="lyric-ipa">syʁ lekʁɑ̃ blø lœʁ lymjɛʁ apaʁɛ</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">En la pantalla azul, su luz aparece,</div>
+        <div class="lyric-syllabic">En la pan-ta-lla a-zul, su luz a-pa-<span class="a">re</span>-ce,</div>
+        <button class="plb" onclick="speakLine(this,'En la pantalla azul, su luz aparece,','es')">▶</button>
+        <div class="lyric-ipa">en la panˈtaʎa aˈsul su luθ apaˈɾese</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">On the blue screen, their light appears,</div>
+        <div class="lyric-syllabic">On the blue screen, their light ap-<span class="a">pears</span>,</div>
+        <button class="plb" onclick="speakLine(this,'On the blue screen, their light appears,','en')">▶</button>
+        <div class="lyric-ipa">ɒn ðə blu skrin ðɛr laɪt əˈpɪrz</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Une autre vie existe,</div>
+        <div class="lyric-syllabic">U-ne au-tre vie e-<span class="a">xis</span>-te,</div>
+        <button class="plb" onclick="speakLine(this,'Une autre vie existe,','fr')">▶</button>
+        <div class="lyric-ipa">yn otʁ vi eɡzist</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Otra vida existe,</div>
+        <div class="lyric-syllabic">O-tra vi-da e-<span class="a">xis</span>-te,</div>
+        <button class="plb" onclick="speakLine(this,'Otra vida existe,','es')">▶</button>
+        <div class="lyric-ipa">ˈotɾa ˈβiða eɣˈsiste</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">Another life exists,</div>
+        <div class="lyric-syllabic">An-oth-er life ex-<span class="a">ists</span>,</div>
+        <button class="plb" onclick="speakLine(this,'Another life exists,','en')">▶</button>
+        <div class="lyric-ipa">əˈnʌðər laɪf ɪɡˈzɪsts</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Elles le savent désormais.</div>
+        <div class="lyric-syllabic">El-les le savent dé-sor-<span class="a">mais</span>.</div>
+        <button class="plb" onclick="speakLine(this,'Elles le savent désormais.','fr')">▶</button>
+        <div class="lyric-ipa">ɛl lə sav dezɔʁmɛ</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Ahora lo saben.</div>
+        <div class="lyric-syllabic">A-ho-ra lo <span class="a">sa</span>-ben.</div>
+        <button class="plb" onclick="speakLine(this,'Ahora lo saben.','es')">▶</button>
+        <div class="lyric-ipa">aˈoɾa lo ˈsaβen</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">They know it now.</div>
+        <div class="lyric-syllabic">They know it <span class="a">now</span>.</div>
+        <button class="plb" onclick="speakLine(this,'They know it now.','en')">▶</button>
+        <div class="lyric-ipa">ðeɪ noʊ ɪt naʊ</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">J&#x27;ai vu sous un voile...</div>
+        <div class="lyric-syllabic">J&#x27;ai vu sous un <span class="a">voi</span>-le...</div>
+        <button class="plb" onclick="speakLine(this,'J\'ai vu sous un voile...','fr')">▶</button>
+        <div class="lyric-ipa">ʒe vy suz‿œ̃ vwal</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Vi bajo un velo...</div>
+        <div class="lyric-syllabic">Vi ba-jo un <span class="a">ve</span>-lo...</div>
+        <button class="plb" onclick="speakLine(this,'Vi bajo un velo...','es')">▶</button>
+        <div class="lyric-ipa">bi ˈβaxo un ˈβelo</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">I saw beneath a veil...</div>
+        <div class="lyric-syllabic">I saw be-neath a <span class="a">veil</span>...</div>
+        <button class="plb" onclick="speakLine(this,'I saw beneath a veil...','en')">▶</button>
+        <div class="lyric-ipa">aɪ sɔ bɪˈniθ ə veɪl</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Plus de lumière.</div>
+        <div class="lyric-syllabic">Plus de lu-<span class="a">miè</span>-re.</div>
+        <button class="plb" onclick="speakLine(this,'Plus de lumière.','fr')">▶</button>
+        <div class="lyric-ipa">ply də lymjɛʁ</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Ya no hay luz.</div>
+        <div class="lyric-syllabic">Ya no hay <span class="a">luz</span>.</div>
+        <button class="plb" onclick="speakLine(this,'Ya no hay luz.','es')">▶</button>
+        <div class="lyric-ipa">ʝa no aj luθ</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">No more light.</div>
+        <div class="lyric-syllabic">No more <span class="a">light</span>.</div>
+        <button class="plb" onclick="speakLine(this,'No more light.','en')">▶</button>
+        <div class="lyric-ipa">noʊ mɔr laɪt</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">J&#x27;ai vu leurs visages,</div>
+        <div class="lyric-syllabic">J&#x27;ai vu leurs vi-<span class="a">sa</span>-ges,</div>
+        <button class="plb" onclick="speakLine(this,'J\'ai vu leurs visages,','fr')">▶</button>
+        <div class="lyric-ipa">ʒe vy lœʁ vizaʒ</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Vi sus rostros,</div>
+        <div class="lyric-syllabic">Vi sus <span class="a">ros</span>-tros,</div>
+        <button class="plb" onclick="speakLine(this,'Vi sus rostros,','es')">▶</button>
+        <div class="lyric-ipa">bi sus ˈrostɾos</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">I saw their faces,</div>
+        <div class="lyric-syllabic">I saw their <span class="a">fac</span>-es,</div>
+        <button class="plb" onclick="speakLine(this,'I saw their faces,','en')">▶</button>
+        <div class="lyric-ipa">aɪ sɔ ðɛr ˈfeɪsɪz</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">J&#x27;ai entendu leur silence.</div>
+        <div class="lyric-syllabic">J&#x27;ai en-ten-du leur si-<span class="a">len</span>-ce.</div>
+        <button class="plb" onclick="speakLine(this,'J\'ai entendu leur silence.','fr')">▶</button>
+        <div class="lyric-ipa">ʒe ɑ̃tɑ̃dy lœʁ silɑ̃s</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Escuché su silencio.</div>
+        <div class="lyric-syllabic">Es-cu-ché su si-<span class="a">len</span>-cio.</div>
+        <button class="plb" onclick="speakLine(this,'Escuché su silencio.','es')">▶</button>
+        <div class="lyric-ipa">eskuˈtʃe su siˈlensjo</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">I heard their silence.</div>
+        <div class="lyric-syllabic">I heard their <span class="a">si</span>-lence.</div>
+        <button class="plb" onclick="speakLine(this,'I heard their silence.','en')">▶</button>
+        <div class="lyric-ipa">aɪ hɜrd ðɛr ˈsaɪləns</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">J&#x27;ai vu sous un voile...</div>
+        <div class="lyric-syllabic">J&#x27;ai vu sous un <span class="a">voi</span>-le...</div>
+        <button class="plb" onclick="speakLine(this,'J\'ai vu sous un voile...','fr')">▶</button>
+        <div class="lyric-ipa">ʒe vy suz‿œ̃ vwal</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Vi bajo un velo...</div>
+        <div class="lyric-syllabic">Vi ba-jo un <span class="a">ve</span>-lo...</div>
+        <button class="plb" onclick="speakLine(this,'Vi bajo un velo...','es')">▶</button>
+        <div class="lyric-ipa">bi ˈβaxo un ˈβelo</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">I saw beneath a veil...</div>
+        <div class="lyric-syllabic">I saw be-neath a <span class="a">veil</span>...</div>
+        <button class="plb" onclick="speakLine(this,'I saw beneath a veil...','en')">▶</button>
+        <div class="lyric-ipa">aɪ sɔ bɪˈniθ ə veɪl</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Plus de lumière.</div>
+        <div class="lyric-syllabic">Plus de lu-<span class="a">miè</span>-re.</div>
+        <button class="plb" onclick="speakLine(this,'Plus de lumière.','fr')">▶</button>
+        <div class="lyric-ipa">ply də lymjɛʁ</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Ya no hay luz.</div>
+        <div class="lyric-syllabic">Ya no hay <span class="a">luz</span>.</div>
+        <button class="plb" onclick="speakLine(this,'Ya no hay luz.','es')">▶</button>
+        <div class="lyric-ipa">ʝa no aj luθ</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">No more light.</div>
+        <div class="lyric-syllabic">No more <span class="a">light</span>.</div>
+        <button class="plb" onclick="speakLine(this,'No more light.','en')">▶</button>
+        <div class="lyric-ipa">noʊ mɔr laɪt</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Mais leur lumière n&#x27;est pas morte,</div>
+        <div class="lyric-syllabic">Mais leur lu-miè-re n&#x27;est pas <span class="a">mor</span>-te,</div>
+        <button class="plb" onclick="speakLine(this,'Mais leur lumière n\'est pas morte,','fr')">▶</button>
+        <div class="lyric-ipa">mɛ lœʁ lymjɛʁ nɛ pa mɔʁt</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Pero su luz no está muerta,</div>
+        <div class="lyric-syllabic">Pe-ro su luz no es-tá <span class="a">muer</span>-ta,</div>
+        <button class="plb" onclick="speakLine(this,'Pero su luz no está muerta,','es')">▶</button>
+        <div class="lyric-ipa">ˈpeɾo su luθ no esˈta ˈmweɾta</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">But their light is not dead,</div>
+        <div class="lyric-syllabic">But their light is not <span class="a">dead</span>,</div>
+        <button class="plb" onclick="speakLine(this,'But their light is not dead,','en')">▶</button>
+        <div class="lyric-ipa">bʌt ðɛr laɪt ɪz nɒt dɛd</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Elle attend qu&#x27;on la regarde.</div>
+        <div class="lyric-syllabic">El-le at-tend qu&#x27;on la re-<span class="a">gar</span>-de.</div>
+        <button class="plb" onclick="speakLine(this,'Elle attend qu\'on la regarde.','fr')">▶</button>
+        <div class="lyric-ipa">ɛl atɑ̃ kɔ̃ la ʁəɡaʁd</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Espera que alguien la mire.</div>
+        <div class="lyric-syllabic">Es-pe-ra que al-guien la <span class="a">mi</span>-re.</div>
+        <button class="plb" onclick="speakLine(this,'Espera que alguien la mire.','es')">▶</button>
+        <div class="lyric-ipa">esˈpeɾa ke ˈalɣjen la ˈmiɾe</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">It&#x27;s waiting to be seen.</div>
+        <div class="lyric-syllabic">It&#x27;s wait-ing to be <span class="a">seen</span>.</div>
+        <button class="plb" onclick="speakLine(this,'It\'s waiting to be seen.','en')">▶</button>
+        <div class="lyric-ipa">ɪts ˈweɪtɪŋ tu bi sin</div>
+      </div></div>
+<h3 class="sec-title">Sursaut final / Impulso final / Final Rock Surge</h3>
+<div class="tagrow">[Final Rock Surge]</div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Alors regardez.</div>
+        <div class="lyric-syllabic">A-lors re-gar-<span class="a">dez</span>.</div>
+        <button class="plb" onclick="speakLine(this,'Alors regardez.','fr')">▶</button>
+        <div class="lyric-ipa">alɔʁ ʁəɡaʁde</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Entonces miren.</div>
+        <div class="lyric-syllabic">En-ton-ces <span class="a">mi</span>-ren.</div>
+        <button class="plb" onclick="speakLine(this,'Entonces miren.','es')">▶</button>
+        <div class="lyric-ipa">enˈtonses ˈmiɾen</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">So look.</div>
+        <div class="lyric-syllabic">So <span class="a">look</span>.</div>
+        <button class="plb" onclick="speakLine(this,'So look.','en')">▶</button>
+        <div class="lyric-ipa">soʊ lʊk</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Regardez.</div>
+        <div class="lyric-syllabic">Re-gar-<span class="a">dez</span>.</div>
+        <button class="plb" onclick="speakLine(this,'Regardez.','fr')">▶</button>
+        <div class="lyric-ipa">ʁəɡaʁde</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Miren.</div>
+        <div class="lyric-syllabic"><span class="a">Mi</span>-ren.</div>
+        <button class="plb" onclick="speakLine(this,'Miren.','es')">▶</button>
+        <div class="lyric-ipa">ˈmiɾen</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">Look.</div>
+        <div class="lyric-syllabic"><span class="a">Look</span>.</div>
+        <button class="plb" onclick="speakLine(this,'Look.','en')">▶</button>
+        <div class="lyric-ipa">lʊk</div>
+      </div></div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Ne laissez pas gagner le silence.</div>
+        <div class="lyric-syllabic">Ne lai-ssez pas ga-gner le si-<span class="a">len</span>-ce.</div>
+        <button class="plb" onclick="speakLine(this,'Ne laissez pas gagner le silence.','fr')">▶</button>
+        <div class="lyric-ipa">nə lɛse pa ɡaɲe lə silɑ̃s</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">No dejen que gane el silencio.</div>
+        <div class="lyric-syllabic">No de-jen que ga-ne el si-<span class="a">len</span>-cio.</div>
+        <button class="plb" onclick="speakLine(this,'No dejen que gane el silencio.','es')">▶</button>
+        <div class="lyric-ipa">no ˈðexen ke ˈɣane el siˈlensjo</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">Don&#x27;t let the silence win.</div>
+        <div class="lyric-syllabic">Don&#x27;t let the si-lence <span class="a">win</span>.</div>
+        <button class="plb" onclick="speakLine(this,'Don\'t let the silence win.','en')">▶</button>
+        <div class="lyric-ipa">doʊnt lɛt ðə ˈsaɪləns wɪn</div>
+      </div></div>
+<h3 class="sec-title">Outro / Outro / Outro</h3>
+<div class="tagrow">[Outro — Trèfle, chuchoté]</div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Je les ai vues...</div>
+        <div class="lyric-syllabic">Je les ai <span class="a">vues</span>...</div>
+        <button class="plb" onclick="speakLine(this,'Je les ai vues...','fr')">▶</button>
+        <div class="lyric-ipa">ʒə lez‿e vy</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Las he visto...</div>
+        <div class="lyric-syllabic">Las he <span class="a">vis</span>-to...</div>
+        <button class="plb" onclick="speakLine(this,'Las he visto...','es')">▶</button>
+        <div class="lyric-ipa">las e ˈβisto</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">I have seen them...</div>
+        <div class="lyric-syllabic">I have <span class="a">seen</span> them...</div>
+        <button class="plb" onclick="speakLine(this,'I have seen them...','en')">▶</button>
+        <div class="lyric-ipa">aɪ hæv sin ðəm</div>
+      </div></div>
+<h3 class="sec-title">Voix fantôme (fondu) / Voz fantasma (desvaneciendo) / Ghost Voice (fading)</h3>
+<div class="tagrow">[Ghost Voice — fading, presque imperceptible]</div>
+<div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Décortique...</div>
+        <div class="lyric-syllabic">Dé-cor-<span class="a">tique</span>...</div>
+        <button class="plb" onclick="speakLine(this,'Décortique...','fr')">▶</button>
+        <div class="lyric-ipa">dekɔʁtik</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Descascara...</div>
+        <div class="lyric-syllabic">Des-cas-<span class="a">ca</span>-ra...</div>
+        <button class="plb" onclick="speakLine(this,'Descascara...','es')">▶</button>
+        <div class="lyric-ipa">deskaskaɾa</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">Shelling...</div>
+        <div class="lyric-syllabic"><span class="a">Shell</span>-ing...</div>
+        <button class="plb" onclick="speakLine(this,'Shelling...','en')">▶</button>
+        <div class="lyric-ipa">ʃɛlɪŋ</div>
+      </div></div>
+
+  <footer>www.trefleminotaure.com · © 2026 Trèfle &amp; Minotaure</footer>
+</div>
+
+<script>
+const LANG_MAP = { fr:"fr-FR", es:"es-ES", en:"en-GB" };
+let curSpeed = 0.9;
+function setLang(btn, l){
+  document.body.classList.remove("show-fr","show-es","show-en");
+  document.querySelectorAll(".langbtn").forEach(b=>b.classList.remove("active"));
+  btn.classList.add("active");
+  if (l!=="all") document.body.classList.add("show-"+l);
+}
+function setSpeed(btn, v){
+  curSpeed = v;
+  document.querySelectorAll(".speedbtn").forEach(b=>b.classList.remove("active"));
+  btn.classList.add("active");
+}
+function speakLine(btn, text, lang){
+  if (!("speechSynthesis" in window)) return;
+  window.speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = LANG_MAP[lang];
+  u.rate = curSpeed;
+  window.speechSynthesis.speak(u);
+}
+</script>
+</body>
+</html>

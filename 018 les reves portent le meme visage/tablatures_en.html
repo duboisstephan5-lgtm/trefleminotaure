@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Dreams Wear the Same Face — Tablatures | tréfle.minotaure</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Cinzel:wght@500;700&display=swap" rel="stylesheet">
+<style>
+
+  :root { --gold:#b8962e; --parchment:#f5ecd7; }
+  * { box-sizing:border-box; }
+  body { margin:0; background: radial-gradient(ellipse at center, #1c2038 0%, #10121c 70%, #08090f 100%); font-family:"Cormorant Garamond", serif; color:#2a1f10; padding:24px 12px 60px; }
+  .page { max-width:900px; margin:0 auto; background:var(--parchment); border:2px solid #4a5a8f; border-radius:10px; box-shadow:0 0 40px rgba(0,0,0,.6); padding:28px clamp(14px,4vw,44px); }
+  header { text-align:center; border-bottom:1px solid #4a5a8f; padding-bottom:16px; margin-bottom:18px; }
+  header h1 { font-family:"Cinzel", serif; font-size:1.4rem; margin:0 0 4px; }
+  .meta { font-size:.82rem; color:var(--gold); text-transform:uppercase; letter-spacing:.06em; }
+  .disclaimer { font-size:.78rem; opacity:.75; font-style:italic; text-align:center; margin:14px 0 20px; max-width:640px; margin-left:auto; margin-right:auto; }
+  .controls { display:flex; flex-wrap:wrap; gap:14px; justify-content:center; margin:18px 0 26px; }
+  button.instbtn, button.lvlbtn { font-family:"Cinzel", serif; font-size:.78rem; padding:7px 16px; border-radius:6px; border:1px solid #4a5a8f; background:#fff8ea; cursor:pointer; }
+  button.instbtn.active, button.lvlbtn.active { background:var(--gold); color:#fff; }
+  .sec-row { display:none; margin-bottom:18px; border-top:1px solid #c3cbe0; padding-top:10px; }
+  h4 { font-family:"Cinzel", serif; font-size:.95rem; margin:0 0 8px; color:#1c2038; }
+  .bar-ref { font-size:.72rem; color:var(--gold); font-weight:normal; margin-left:8px; }
+  pre.tab { font-family:"Courier New", monospace; font-size:.85rem; background:#efe2bf; border:1px solid #d8c79a; border-radius:6px; padding:10px 14px; overflow-x:auto; white-space:pre; margin:6px 0; max-width:100%; }
+  p.advice { font-size:.85rem; margin:4px 0 0; word-wrap:break-word; }
+  p.chord-center { font-size:.95rem; margin:6px 0 2px; }
+  body.pro .advice { display:none; }
+  footer { text-align:center; margin-top:30px; color:#3d4a70; font-size:.82rem; border-top:1px solid #c3cbe0; padding-top:14px; }
+  .tips-block { background:#efe2bf; border:1px solid #d8c79a; border-radius:8px; padding:14px 18px; margin:22px 0; font-size:.85rem; }
+  .tips-block h4 { margin-top:0; }
+  body.pro .tips-block { display:none; }
+
+  body.i-basse .sec-row[data-inst="basse"] { display:block; }
+  body.i-guitare .sec-row[data-inst="guitare"] { display:block; }
+  body.i-synthe .sec-row[data-inst="synthe"] { display:block; }
+</style>
+</head>
+<body class="i-basse">
+<div class="page">
+  <header>
+    <h1>Dreams Wear the Same Face — Tablatures</h1>
+    <div class="meta">Bass · Guitar · Synth — 110 BPM — Folk Migrant Ballad</div>
+  </header>
+  <p class="disclaimer">Document généré par analyse audio des stems Suno (onset detection + pYIN + chroma) — à valider à l'oreille avant interprétation. Stem clavier fourni mais trop sporadique pour un rôle jouable distinct — non inclus. Pas de stem violon envoyé sur cette version. Contrairement à la version FR, la basse ne s'interrompt pas pendant le pont parlé.</p>
+  <div class="controls">
+    <button class="instbtn active" onclick="setInst(this,'basse')">🎸 Basse</button>
+    <button class="instbtn" onclick="setInst(this,'guitare')">🎸 Guitare</button>
+    <button class="instbtn" onclick="setInst(this,'synthe')">🎹 Synthé</button>
+  </div>
+  <div class="controls">
+    <button class="lvlbtn active" onclick="setLevel(this,'tips')">Avec conseils</button>
+    <button class="lvlbtn" onclick="setLevel(this,'pro')">Tablature seule (Pro)</button>
+  </div>
+
+  <section class="sec"><div class="sec-row" data-inst="basse">
+      <h4>Intro (vietnamien) <span class="bar-ref">mesure 1 — 0:00</span></h4>
+      <p class="advice">Silencieux sur cette section.</p>
+    </div><div class="sec-row" data-inst="guitare">
+      <h4>Intro (vietnamien) <span class="bar-ref">mesure 1 — 0:00</span></h4>
+      <p class="chord-center">Centre tonal : <b>C</b></p>
+      <p class="advice">Présence discrète en arpège sous la voix seule de Trèfle.</p>
+    </div><div class="sec-row" data-inst="synthe">
+      <h4>Intro (vietnamien) <span class="bar-ref">mesure 1 — 0:00</span></h4>
+      <p class="chord-center">Centre tonal : <b>E</b></p>
+      <p class="advice">Nappe légère en fond.</p>
+    </div></section><section class="sec"><div class="sec-row" data-inst="basse">
+      <h4>Couplets 1-2 (Minotaure) <span class="bar-ref">mesure 29 — 1:00</span></h4>
+      <pre class="tab">D|-2--------3-----|
+G|----7--7-----2--7-|</pre>
+      <p class="advice">Ligne marchée plus mouvante que sur la version FR — passe par Mi, Ré aigu, Fa et La.</p>
+    </div><div class="sec-row" data-inst="guitare">
+      <h4>Couplets 1-2 (Minotaure) <span class="bar-ref">mesure 29 — 1:00</span></h4>
+      <p class="chord-center">Centre tonal : <b>D</b></p>
+      <p class="advice">Motif clean pentatonique.</p>
+    </div><div class="sec-row" data-inst="synthe">
+      <h4>Couplets 1-2 (Minotaure) <span class="bar-ref">mesure 29 — 1:00</span></h4>
+      <p class="chord-center">Centre tonal : <b>D</b></p>
+      <p class="advice">Nappe continue.</p>
+    </div></section><section class="sec"><div class="sec-row" data-inst="basse">
+      <h4>Refrain 1 (duo) <span class="bar-ref">mesure 55 — 1:58</span></h4>
+      <pre class="tab">D|-2-----------|
+G|----2--2-----|</pre>
+      <p class="advice">Se stabilise sur Mi puis La — plus simple que dans les couplets.</p>
+    </div><div class="sec-row" data-inst="guitare">
+      <h4>Refrain 1 (duo) <span class="bar-ref">mesure 55 — 1:58</span></h4>
+      <p class="chord-center">Centre tonal : <b>A</b></p>
+      <p class="advice">Dynamique légèrement plus présente pour le duo.</p>
+    </div><div class="sec-row" data-inst="synthe">
+      <h4>Refrain 1 (duo) <span class="bar-ref">mesure 55 — 1:58</span></h4>
+      <p class="chord-center">Centre tonal : <b>A</b></p>
+      <p class="advice">Nappe continue.</p>
+    </div></section><section class="sec"><div class="sec-row" data-inst="basse">
+      <h4>Couplet 3 + Pont parlé <span class="bar-ref">mesure 67 — 2:24</span></h4>
+      <pre class="tab">D|-2-----------|
+G|----7--2-----|</pre>
+      <p class="advice">Continue sans coupure pendant le pont parlé, à la différence de la version FR — la basse reste présente en soutien discret pendant que Minotaure parle.</p>
+    </div><div class="sec-row" data-inst="guitare">
+      <h4>Couplet 3 + Pont parlé <span class="bar-ref">mesure 67 — 2:24</span></h4>
+      <p class="chord-center">Centre tonal : <b>A → D</b></p>
+      <p class="advice">Continue sans coupure.</p>
+    </div><div class="sec-row" data-inst="synthe">
+      <h4>Couplet 3 + Pont parlé <span class="bar-ref">mesure 67 — 2:24</span></h4>
+      <p class="chord-center">Centre tonal : <b>A</b></p>
+      <p class="advice">Nappe continue.</p>
+    </div></section><section class="sec"><div class="sec-row" data-inst="basse">
+      <h4>Refrain 2 + Outro (duo) <span class="bar-ref">mesure 71 — 2:33</span></h4>
+      <pre class="tab">D|-2-----------|
+G|----2--7--5--|</pre>
+      <p class="advice">Motif plus riche en fin de morceau, remonte jusqu'à Do (corde Sol case 5).</p>
+    </div><div class="sec-row" data-inst="guitare">
+      <h4>Refrain 2 + Outro (duo) <span class="bar-ref">mesure 71 — 2:33</span></h4>
+      <p class="chord-center">Centre tonal : <b>A</b></p>
+      <p class="advice">Dynamique stable jusqu'à la fin de cette section.</p>
+    </div><div class="sec-row" data-inst="synthe">
+      <h4>Refrain 2 + Outro (duo) <span class="bar-ref">mesure 71 — 2:33</span></h4>
+      <p class="chord-center">Centre tonal : <b>E</b></p>
+      <p class="advice">Nappe continue.</p>
+    </div></section><section class="sec"><div class="sec-row" data-inst="basse">
+      <h4>Outro (vietnamien) <span class="bar-ref">mesure 94 — 3:22</span></h4>
+      <p class="advice">Un dernier accent bref vers 3:28-3:34 (mesure ~96), puis silence jusqu'à la fin.</p>
+    </div><div class="sec-row" data-inst="guitare">
+      <h4>Outro (vietnamien) <span class="bar-ref">mesure 94 — 3:22</span></h4>
+      <p class="advice">Reste présent en arpège discret, en écho à l'intro.</p>
+    </div><div class="sec-row" data-inst="synthe">
+      <h4>Outro (vietnamien) <span class="bar-ref">mesure 94 — 3:22</span></h4>
+      <p class="advice">Nappe continue jusqu'au fondu final.</p>
+    </div></section>
+
+  <div class="tips-block">
+    <h4>Conseils généraux</h4>
+    <p class="advice">À la différence de la version FR, la basse ne coupe pas pendant le pont parlé — elle reste présente pour soutenir le passage. Cette version est aussi la seule à recevoir un stem clavier avec des apparitions ponctuelles, trop éparses pour un bouton dédié.</p>
+  </div>
+
+  <footer>www.trefleminotaure.com · © 2026 Trèfle &amp; Minotaure</footer>
+</div>
+<script>
+
+function setInst(btn, inst){
+  document.body.classList.remove("i-basse","i-guitare","i-synthe");
+  document.body.classList.add("i-"+inst);
+  document.querySelectorAll(".instbtn").forEach(b=>b.classList.remove("active"));
+  btn.classList.add("active");
+}
+function setLevel(btn, lvl){
+  document.body.classList.toggle("pro", lvl==="pro");
+  document.querySelectorAll(".lvlbtn").forEach(b=>b.classList.remove("active"));
+  btn.classList.add("active");
+}
+
+</script>
+</body>
+</html>

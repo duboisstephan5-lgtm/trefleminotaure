@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Les rêves portent le même visage — Paroles</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Cinzel:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:#10121c; background-image: radial-gradient(circle at 50% 0%, #1c2038, #08090f 80%); font-family:'Cormorant Garamond', serif; }
+  .page { max-width:960px; margin:30px auto; background:#f5ecd7; border:3px solid #4a5a8f; border-radius:10px; padding:30px clamp(14px,4vw,44px) 50px; }
+  header { text-align:center; margin-bottom:20px; }
+  header h1 { font-family:'Cinzel', serif; color:#1c2038; font-size:1.6rem; margin-bottom:4px; }
+  .meta { color:#4a5a8f; font-size:.95rem; }
+  .controls { display:flex; justify-content:center; gap:24px; flex-wrap:wrap; margin:18px 0 26px; }
+  .ctrl-group { display:flex; gap:6px; align-items:center; }
+  .ctrl-group label { font-size:.85rem; color:#3d4a70; margin-right:4px; }
+  button.langbtn, button.speedbtn { font-family:'Cinzel', serif; font-size:.8rem; padding:6px 14px; border-radius:6px; border:1px solid #8a9ac9; background:#fff; cursor:pointer; }
+  button.langbtn.active, button.speedbtn.active { background:#2e3f7a; color:#fff; }
+  .sec { margin-bottom:26px; border-top:1px solid #c3cbe0; padding-top:14px; }
+  .sec-head { display:flex; align-items:center; gap:10px; margin-bottom:10px; flex-wrap:wrap; }
+  .section-label { font-family:'Cinzel', serif; font-weight:600; color:#1c2038; font-size:1rem; }
+  .voice-badge { font-size:.72rem; color:#fff; background:#b8962e; border-radius:10px; padding:2px 10px; }
+  .playbtn { margin-left:auto; border:none; background:#2e3f7a; color:#fff; border-radius:50%; width:30px; height:30px; cursor:pointer; font-size:.85rem; }
+  .tagrow { font-size:.78rem; font-style:italic; color:#b8962e; opacity:.85; margin:4px 0; }
+  .lyric-row { display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; margin-bottom:6px; font-size:1.15rem; font-style:italic; }
+  .lyric-row.ghost { opacity:.75; }
+  .col { padding:4px 8px; border-radius:4px; }
+  .col.fr { background:#e8f0fc; }
+  .col.es { background:#f5ead5; }
+  .col.en { background:#fce8ec; }
+  body.show-fr .col.es, body.show-fr .col.en { display:none; }
+  body.show-fr .lyric-row { grid-template-columns:1fr; }
+  body.show-es .col.fr, body.show-es .col.en { display:none; }
+  body.show-es .lyric-row { grid-template-columns:1fr; }
+  body.show-en .col.fr, body.show-en .col.es { display:none; }
+  body.show-en .lyric-row { grid-template-columns:1fr; }
+  footer { text-align:center; margin-top:34px; color:#3d4a70; font-size:.85rem; border-top:1px solid #c3cbe0; padding-top:14px; }
+</style>
+</head>
+<body class="show-fr">
+<div class="page">
+  <header>
+    <h1>Les rêves portent le même visage <span style="opacity:.5;">/ Los sueños llevan el mismo rostro / Dreams Wear the Same Face</span></h1>
+    <div class="meta">Folk Migrant Ballad · World-Folk Fusion · 80 BPM · Minotaure &amp; Trèfle</div>
+  </header>
+
+  <div class="controls">
+    <div class="ctrl-group">
+      <label>Langue :</label>
+      <button class="langbtn" onclick="setLang('all')">Trilingue</button>
+      <button class="langbtn active" onclick="setLang('fr')">🇫🇷 Français</button>
+      <button class="langbtn" onclick="setLang('es')">🇪🇸 Español</button>
+      <button class="langbtn" onclick="setLang('en')">🇬🇧 English</button>
+    </div>
+    <div class="ctrl-group">
+      <label>Vitesse :</label>
+      <button class="speedbtn" onclick="setSpeed(0.7)">× 0.7</button>
+      <button class="speedbtn active" onclick="setSpeed(0.9)">× 0.9</button>
+      <button class="speedbtn" onclick="setSpeed(1.0)">× 1.0</button>
+    </div>
+  </div>
+
+  <section class="sec" id="sec-intro_vn">
+    <div class="sec-head">
+      <span class="section-label">Intro (vietnamien) / Intro (vietnamita) / Intro (Vietnamese)</span>
+      <span class="voice-badge">Trèfle seule — vietnamien</span>
+      <button class="playbtn" onclick="playSec('intro_vn')">▶</button>
+    </div>
+<div class="tagrow">[TRÈFLE — FEMALE VOCAL ONLY]</div>
+<div class="lyric-row ghost">
+      <div class="col fr">Người thương của em...</div>
+      <div class="col es">Người thương của em...</div>
+      <div class="col en">Người thương của em...</div>
+    </div>
+<div class="lyric-row ghost">
+      <div class="col fr">Hãy đi, nếu anh buộc phải đi...</div>
+      <div class="col es">Hãy đi, nếu anh buộc phải đi...</div>
+      <div class="col en">Hãy đi, nếu anh buộc phải đi...</div>
+    </div>
+<div class="lyric-row ghost">
+      <div class="col fr">Chúng em sẽ giữ cho mái ấm luôn tràn đầy sức sống...</div>
+      <div class="col es">Chúng em sẽ giữ cho mái ấm luôn tràn đầy sức sống...</div>
+      <div class="col en">Chúng em sẽ giữ cho mái ấm luôn tràn đầy sức sống...</div>
+    </div>
+<div class="lyric-row ghost">
+      <div class="col fr">Các con sẽ chờ anh...</div>
+      <div class="col es">Các con sẽ chờ anh...</div>
+      <div class="col en">Các con sẽ chờ anh...</div>
+    </div>
+<div class="lyric-row ghost">
+      <div class="col fr">Đừng bao giờ quên đường về...</div>
+      <div class="col es">Đừng bao giờ quên đường về...</div>
+      <div class="col en">Đừng bao giờ quên đường về...</div>
+    </div>
+<div class="lyric-row ghost">
+      <div class="col fr">Hãy trở về với chúng em...</div>
+      <div class="col es">Hãy trở về với chúng em...</div>
+      <div class="col en">Hãy trở về với chúng em...</div>
+    </div>
+  </section>
+<section class="sec" id="sec-verse1">
+    <div class="sec-head">
+      <span class="section-label">Couplet 1 / Estrofa 1 / Verse 1</span>
+      <span class="voice-badge">Minotaure seul</span>
+      <button class="playbtn" onclick="playSec('verse1')">▶</button>
+    </div>
+<div class="tagrow">[MINOTAURE — MALE VOCAL ONLY]</div>
+<div class="lyric-row ">
+      <div class="col fr">La terre a nourri mon père,</div>
+      <div class="col es">La tierra alimentó a mi padre,</div>
+      <div class="col en">The land fed my father,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Mon grand-père avant lui.</div>
+      <div class="col es">A mi abuelo antes que él.</div>
+      <div class="col en">My grandfather before him.</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Aujourd&#x27;hui les champs se taisent,</div>
+      <div class="col es">Hoy los campos callan,</div>
+      <div class="col en">Today the fields fall silent,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Et le grenier sonne le vide.</div>
+      <div class="col es">Y el granero suena vacío.</div>
+      <div class="col en">And the barn rings empty.</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Je ferme la vieille barrière,</div>
+      <div class="col es">Cierro la vieja cancela,</div>
+      <div class="col en">I close the old gate,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Je regarde une dernière fois la rivière.</div>
+      <div class="col es">Miro el río por última vez.</div>
+      <div class="col en">I look at the river one last time.</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Je pars avant le lever du soleil,</div>
+      <div class="col es">Parto antes del amanecer,</div>
+      <div class="col en">I leave before sunrise,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Le cœur plus lourd que mon sac.</div>
+      <div class="col es">El corazón más pesado que mi bolsa.</div>
+      <div class="col en">My heart heavier than my bag.</div>
+    </div>
+  </section>
+<section class="sec" id="sec-verse2">
+    <div class="sec-head">
+      <span class="section-label">Couplet 2 / Estrofa 2 / Verse 2</span>
+      <span class="voice-badge">Minotaure seul</span>
+      <button class="playbtn" onclick="playSec('verse2')">▶</button>
+    </div>
+<div class="tagrow">[MINOTAURE — MALE VOCAL ONLY]</div>
+<div class="lyric-row ">
+      <div class="col fr">Chaque pas m&#x27;éloigne de vous,</div>
+      <div class="col es">Cada paso me aleja de vosotros,</div>
+      <div class="col en">Every step takes me from you,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Chaque pas me rapproche d&#x27;un rêve.</div>
+      <div class="col es">Cada paso me acerca a un sueño.</div>
+      <div class="col en">Every step brings me closer to a dream.</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Je ne quitte pas notre village,</div>
+      <div class="col es">No abandono nuestro pueblo,</div>
+      <div class="col en">I&#x27;m not leaving our village,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Je poursuis demain.</div>
+      <div class="col es">Persigo el mañana.</div>
+      <div class="col en">I&#x27;m chasing tomorrow.</div>
+    </div>
+  </section>
+<section class="sec" id="sec-chorus1">
+    <div class="sec-head">
+      <span class="section-label">Refrain 1 / Estribillo 1 / Chorus 1</span>
+      <span class="voice-badge">Trèfle + Minotaure — duo</span>
+      <button class="playbtn" onclick="playSec('chorus1')">▶</button>
+    </div>
+<div class="tagrow">[TRÈFLE + MINOTAURE — DUET]</div>
+<div class="lyric-row ">
+      <div class="col fr">Je partirai pour que vos jours soient plus doux,</div>
+      <div class="col es">Partiré para que vuestros días sean más dulces,</div>
+      <div class="col en">I&#x27;ll leave so your days can be softer,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Pour que vos mains ne connaissent plus la faim.</div>
+      <div class="col es">Para que vuestras manos no conozcan más el hambre.</div>
+      <div class="col en">So your hands never know hunger again.</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Même si la ville m&#x27;oublie,</div>
+      <div class="col es">Aunque la ciudad me olvide,</div>
+      <div class="col en">Even if the city forgets me,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Même si mon nom disparaît,</div>
+      <div class="col es">Aunque mi nombre desaparezca,</div>
+      <div class="col en">Even if my name disappears,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Chaque pièce gagnée reviendra vers vous,</div>
+      <div class="col es">Cada moneda ganada volverá a vosotros,</div>
+      <div class="col en">Every coin earned will find its way back to you,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Car mon chemin porte votre avenir.</div>
+      <div class="col es">Porque mi camino lleva vuestro futuro.</div>
+      <div class="col en">Because my road carries your future.</div>
+    </div>
+  </section>
+<section class="sec" id="sec-verse3">
+    <div class="sec-head">
+      <span class="section-label">Couplet 3 / Estrofa 3 / Verse 3</span>
+      <span class="voice-badge">Minotaure seul</span>
+      <button class="playbtn" onclick="playSec('verse3')">▶</button>
+    </div>
+<div class="tagrow">[MINOTAURE — MALE VOCAL ONLY]</div>
+<div class="lyric-row ">
+      <div class="col fr">Les immeubles touchent les nuages,</div>
+      <div class="col es">Los edificios tocan las nubes,</div>
+      <div class="col en">The buildings touch the clouds,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Mais je dors sous un plafond trop bas.</div>
+      <div class="col es">Pero duermo bajo un techo demasiado bajo.</div>
+      <div class="col en">But I sleep under a ceiling too low.</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Douze heures à bâtir les rêves des autres,</div>
+      <div class="col es">Doce horas construyendo los sueños de otros,</div>
+      <div class="col en">Twelve hours building other people&#x27;s dreams,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">En gardant les miens dans ma poche.</div>
+      <div class="col es">Guardando los míos en mi bolsillo.</div>
+      <div class="col en">Keeping mine in my pocket.</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Les rues ne connaissent pas mon histoire,</div>
+      <div class="col es">Las calles no conocen mi historia,</div>
+      <div class="col en">The streets don&#x27;t know my story,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">La foule traverse mon silence.</div>
+      <div class="col es">La multitud atraviesa mi silencio.</div>
+      <div class="col en">The crowd walks through my silence.</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Je regarde les lumières des fenêtres,</div>
+      <div class="col es">Miro las luces de las ventanas,</div>
+      <div class="col en">I watch the lights in the windows,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">En imaginant la lampe de notre maison.</div>
+      <div class="col es">Imaginando la lámpara de nuestra casa.</div>
+      <div class="col en">Imagining the lamp of our home.</div>
+    </div>
+  </section>
+<section class="sec" id="sec-bridge">
+    <div class="sec-head">
+      <span class="section-label">Pont (parlé) / Puente (hablado) / Bridge (spoken)</span>
+      <span class="voice-badge">Minotaure — parlé</span>
+      <button class="playbtn" onclick="playSec('bridge')">▶</button>
+    </div>
+<div class="tagrow">[MINOTAURE — MALE VOCAL ONLY — SPOKEN]</div>
+<div class="lyric-row ">
+      <div class="col fr">On dit que la ville offre un avenir...</div>
+      <div class="col es">Dicen que la ciudad ofrece un futuro...</div>
+      <div class="col en">They say the city offers a future...</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Mais personne ne voit les kilomètres</div>
+      <div class="col es">Pero nadie ve los kilómetros</div>
+      <div class="col en">But no one sees the miles</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Qui séparent un père</div>
+      <div class="col es">Que separan a un padre</div>
+      <div class="col en">That separate a father</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Du premier sourire de son enfant.</div>
+      <div class="col es">De la primera sonrisa de su hijo.</div>
+      <div class="col en">From his child&#x27;s first smile.</div>
+    </div>
+  </section>
+<section class="sec" id="sec-chorus2">
+    <div class="sec-head">
+      <span class="section-label">Refrain 2 / Estribillo 2 / Chorus 2</span>
+      <span class="voice-badge">Trèfle + Minotaure — duo</span>
+      <button class="playbtn" onclick="playSec('chorus2')">▶</button>
+    </div>
+<div class="tagrow">[TRÈFLE + MINOTAURE — DUET]</div>
+<div class="lyric-row ">
+      <div class="col fr">Tiens bon...</div>
+      <div class="col es">Resiste...</div>
+      <div class="col en">Hold on...</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Nous gardons la porte ouverte.</div>
+      <div class="col es">Guardamos la puerta abierta.</div>
+      <div class="col en">We keep the door open.</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Nos enfants parlent encore de toi.</div>
+      <div class="col es">Nuestros hijos aún hablan de ti.</div>
+      <div class="col en">Our children still speak of you.</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Reviens-nous vite...</div>
+      <div class="col es">Vuelve pronto...</div>
+      <div class="col en">Come back to us soon...</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Ne laisse pas les saisons voler notre temps.</div>
+      <div class="col es">No dejes que las estaciones roben nuestro tiempo.</div>
+      <div class="col en">Don&#x27;t let the seasons steal our time.</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Reviens-nous...</div>
+      <div class="col es">Vuelve...</div>
+      <div class="col en">Come back to us...</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Notre maison connaît encore ton nom.</div>
+      <div class="col es">Nuestra casa aún conoce tu nombre.</div>
+      <div class="col en">Our home still knows your name.</div>
+    </div>
+  </section>
+<section class="sec" id="sec-outro_min">
+    <div class="sec-head">
+      <span class="section-label">Outro / Outro / Outro</span>
+      <span class="voice-badge">Minotaure seul</span>
+      <button class="playbtn" onclick="playSec('outro_min')">▶</button>
+    </div>
+<div class="tagrow">[MINOTAURE — MALE VOCAL ONLY]</div>
+<div class="tagrow">[Đàn bầu — touche unique après « Hanoï »]</div>
+<div class="lyric-row ">
+      <div class="col fr">À Hanoï...</div>
+      <div class="col es">En Hanói...</div>
+      <div class="col en">In Hanoi...</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">En Lagos...</div>
+      <div class="col es">En Lagos...</div>
+      <div class="col en">In Lagos...</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">À Mumbai...</div>
+      <div class="col es">En Bombay...</div>
+      <div class="col en">In Mumbai...</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Les villes changent de nom...</div>
+      <div class="col es">Las ciudades cambian de nombre...</div>
+      <div class="col en">Cities change their names...</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Mais les rêves portent le même visage.</div>
+      <div class="col es">Pero los sueños llevan el mismo rostro.</div>
+      <div class="col en">But dreams wear the same face.</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Parce qu&#x27;on ne quitte jamais la terre par oubli...</div>
+      <div class="col es">Porque nunca se deja la tierra por olvido...</div>
+      <div class="col en">Because no one ever leaves their land out of forgetting...</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">On la quitte pour ceux qu&#x27;on aime.</div>
+      <div class="col es">Se deja por quienes se ama.</div>
+      <div class="col en">They leave it for the ones they love.</div>
+    </div>
+  </section>
+<section class="sec" id="sec-outro_vn">
+    <div class="sec-head">
+      <span class="section-label">Outro (vietnamien) / Outro (vietnamita) / Outro (Vietnamese)</span>
+      <span class="voice-badge">Trèfle seule — vietnamien</span>
+      <button class="playbtn" onclick="playSec('outro_vn')">▶</button>
+    </div>
+<div class="tagrow">[TRÈFLE — FEMALE VOCAL ONLY]</div>
+<div class="lyric-row ghost">
+      <div class="col fr">Anh phải đi vì thương yêu chúng em...</div>
+      <div class="col es">Anh phải đi vì thương yêu chúng em...</div>
+      <div class="col en">Anh phải đi vì thương yêu chúng em...</div>
+    </div>
+<div class="lyric-row ghost">
+      <div class="col fr">Anh đi để gửi tiền về cho chúng em...</div>
+      <div class="col es">Anh đi để gửi tiền về cho chúng em...</div>
+      <div class="col en">Anh đi để gửi tiền về cho chúng em...</div>
+    </div>
+<div class="lyric-row ghost">
+      <div class="col fr">Hãy trở về thật nhanh...</div>
+      <div class="col es">Hãy trở về thật nhanh...</div>
+      <div class="col en">Hãy trở về thật nhanh...</div>
+    </div>
+<div class="lyric-row ghost">
+      <div class="col fr">Chúng em vẫn đang chờ...</div>
+      <div class="col es">Chúng em vẫn đang chờ...</div>
+      <div class="col en">Chúng em vẫn đang chờ...</div>
+    </div>
+<div class="lyric-row ghost">
+      <div class="col fr">Đừng để các con lớn lên mà không có anh...</div>
+      <div class="col es">Đừng để các con lớn lên mà không có anh...</div>
+      <div class="col en">Đừng để các con lớn lên mà không có anh...</div>
+    </div>
+  </section>
+
+  <footer>www.trefleminotaure.com · © 2026 Trèfle &amp; Minotaure</footer>
+</div>
+
+<script>
+const SECS = {
+  "intro_vn": {
+    "fr": "Người thương của em... Hãy đi, nếu anh buộc phải đi... Chúng em sẽ giữ cho mái ấm luôn tràn đầy sức sống... Các con sẽ chờ anh... Đừng bao giờ quên đường về... Hãy trở về với chúng em...",
+    "es": "Người thương của em... Hãy đi, nếu anh buộc phải đi... Chúng em sẽ giữ cho mái ấm luôn tràn đầy sức sống... Các con sẽ chờ anh... Đừng bao giờ quên đường về... Hãy trở về với chúng em...",
+    "en": "Người thương của em... Hãy đi, nếu anh buộc phải đi... Chúng em sẽ giữ cho mái ấm luôn tràn đầy sức sống... Các con sẽ chờ anh... Đừng bao giờ quên đường về... Hãy trở về với chúng em..."
+  },
+  "verse1": {
+    "fr": "La terre a nourri mon père, Mon grand-père avant lui. Aujourd'hui les champs se taisent, Et le grenier sonne le vide. Je ferme la vieille barrière, Je regarde une dernière fois la rivière. Je pars avant le lever du soleil, Le cœur plus lourd que mon sac.",
+    "es": "La tierra alimentó a mi padre, A mi abuelo antes que él. Hoy los campos callan, Y el granero suena vacío. Cierro la vieja cancela, Miro el río por última vez. Parto antes del amanecer, El corazón más pesado que mi bolsa.",
+    "en": "The land fed my father, My grandfather before him. Today the fields fall silent, And the barn rings empty. I close the old gate, I look at the river one last time. I leave before sunrise, My heart heavier than my bag."
+  },
+  "verse2": {
+    "fr": "Chaque pas m'éloigne de vous, Chaque pas me rapproche d'un rêve. Je ne quitte pas notre village, Je poursuis demain.",
+    "es": "Cada paso me aleja de vosotros, Cada paso me acerca a un sueño. No abandono nuestro pueblo, Persigo el mañana.",
+    "en": "Every step takes me from you, Every step brings me closer to a dream. I'm not leaving our village, I'm chasing tomorrow."
+  },
+  "chorus1": {
+    "fr": "Je partirai pour que vos jours soient plus doux, Pour que vos mains ne connaissent plus la faim. Même si la ville m'oublie, Même si mon nom disparaît, Chaque pièce gagnée reviendra vers vous, Car mon chemin porte votre avenir.",
+    "es": "Partiré para que vuestros días sean más dulces, Para que vuestras manos no conozcan más el hambre. Aunque la ciudad me olvide, Aunque mi nombre desaparezca, Cada moneda ganada volverá a vosotros, Porque mi camino lleva vuestro futuro.",
+    "en": "I'll leave so your days can be softer, So your hands never know hunger again. Even if the city forgets me, Even if my name disappears, Every coin earned will find its way back to you, Because my road carries your future."
+  },
+  "verse3": {
+    "fr": "Les immeubles touchent les nuages, Mais je dors sous un plafond trop bas. Douze heures à bâtir les rêves des autres, En gardant les miens dans ma poche. Les rues ne connaissent pas mon histoire, La foule traverse mon silence. Je regarde les lumières des fenêtres, En imaginant la lampe de notre maison.",
+    "es": "Los edificios tocan las nubes, Pero duermo bajo un techo demasiado bajo. Doce horas construyendo los sueños de otros, Guardando los míos en mi bolsillo. Las calles no conocen mi historia, La multitud atraviesa mi silencio. Miro las luces de las ventanas, Imaginando la lámpara de nuestra casa.",
+    "en": "The buildings touch the clouds, But I sleep under a ceiling too low. Twelve hours building other people's dreams, Keeping mine in my pocket. The streets don't know my story, The crowd walks through my silence. I watch the lights in the windows, Imagining the lamp of our home."
+  },
+  "bridge": {
+    "fr": "On dit que la ville offre un avenir... Mais personne ne voit les kilomètres Qui séparent un père Du premier sourire de son enfant.",
+    "es": "Dicen que la ciudad ofrece un futuro... Pero nadie ve los kilómetros Que separan a un padre De la primera sonrisa de su hijo.",
+    "en": "They say the city offers a future... But no one sees the miles That separate a father From his child's first smile."
+  },
+  "chorus2": {
+    "fr": "Tiens bon... Nous gardons la porte ouverte. Nos enfants parlent encore de toi. Reviens-nous vite... Ne laisse pas les saisons voler notre temps. Reviens-nous... Notre maison connaît encore ton nom.",
+    "es": "Resiste... Guardamos la puerta abierta. Nuestros hijos aún hablan de ti. Vuelve pronto... No dejes que las estaciones roben nuestro tiempo. Vuelve... Nuestra casa aún conoce tu nombre.",
+    "en": "Hold on... We keep the door open. Our children still speak of you. Come back to us soon... Don't let the seasons steal our time. Come back to us... Our home still knows your name."
+  },
+  "outro_min": {
+    "fr": "À Hanoï... En Lagos... À Mumbai... Les villes changent de nom... Mais les rêves portent le même visage. Parce qu'on ne quitte jamais la terre par oubli... On la quitte pour ceux qu'on aime.",
+    "es": "En Hanói... En Lagos... En Bombay... Las ciudades cambian de nombre... Pero los sueños llevan el mismo rostro. Porque nunca se deja la tierra por olvido... Se deja por quienes se ama.",
+    "en": "In Hanoi... In Lagos... In Mumbai... Cities change their names... But dreams wear the same face. Because no one ever leaves their land out of forgetting... They leave it for the ones they love."
+  },
+  "outro_vn": {
+    "fr": "Anh phải đi vì thương yêu chúng em... Anh đi để gửi tiền về cho chúng em... Hãy trở về thật nhanh... Chúng em vẫn đang chờ... Đừng để các con lớn lên mà không có anh...",
+    "es": "Anh phải đi vì thương yêu chúng em... Anh đi để gửi tiền về cho chúng em... Hãy trở về thật nhanh... Chúng em vẫn đang chờ... Đừng để các con lớn lên mà không có anh...",
+    "en": "Anh phải đi vì thương yêu chúng em... Anh đi để gửi tiền về cho chúng em... Hãy trở về thật nhanh... Chúng em vẫn đang chờ... Đừng để các con lớn lên mà không có anh..."
+  }
+};
+const LANG_MAP = { fr:"fr-FR", es:"es-ES", en:"en-GB" };
+let curLang = "fr";
+let curSpeed = 0.9;
+function setLang(l){
+  document.body.classList.remove("show-fr","show-es","show-en");
+  document.querySelectorAll(".langbtn").forEach(b=>b.classList.remove("active"));
+  event.target.classList.add("active");
+  if (l==="all") { curLang="fr"; } else { document.body.classList.add("show-"+l); curLang=l; }
+}
+function setSpeed(v){
+  curSpeed = v;
+  document.querySelectorAll(".speedbtn").forEach(b=>b.classList.remove("active"));
+  event.target.classList.add("active");
+}
+function playSec(id){
+  const txt = SECS[id][curLang];
+  if (!txt || !("speechSynthesis" in window)) return;
+  window.speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(txt);
+  u.lang = LANG_MAP[curLang];
+  u.rate = curSpeed;
+  window.speechSynthesis.speak(u);
+}
+</script>
+</body>
+</html>

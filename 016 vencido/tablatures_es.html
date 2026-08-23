@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Vanquished — Tablatures | tréfle.minotaure</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Cinzel:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root { --gold:#b8962e; --parchment:#f5ecd7; }
+  * { box-sizing:border-box; }
+  body { margin:0; background: radial-gradient(ellipse at center, #1c2038 0%, #10121c 70%, #08090f 100%); font-family:"Cormorant Garamond", serif; color:#2a1f10; padding:24px 12px 60px; }
+  .page { max-width:900px; margin:0 auto; background:var(--parchment); border:2px solid #4a5a8f; border-radius:10px; box-shadow:0 0 40px rgba(0,0,0,.6); padding:28px clamp(14px,4vw,44px); }
+  header { text-align:center; border-bottom:1px solid #4a5a8f; padding-bottom:16px; margin-bottom:18px; }
+  header h1 { font-family:"Cinzel", serif; font-size:1.5rem; margin:0 0 4px; }
+  .meta { font-size:.82rem; color:var(--gold); text-transform:uppercase; letter-spacing:.06em; }
+  .disclaimer { font-size:.78rem; opacity:.75; font-style:italic; text-align:center; margin:14px 0 20px; max-width:640px; margin-left:auto; margin-right:auto; }
+  .controls { display:flex; flex-wrap:wrap; gap:14px; justify-content:center; margin:18px 0 26px; }
+  button.instbtn, button.lvlbtn { font-family:"Cinzel", serif; font-size:.78rem; padding:7px 16px; border-radius:6px; border:1px solid #4a5a8f; background:#fff8ea; cursor:pointer; }
+  button.instbtn.active, button.lvlbtn.active { background:var(--gold); color:#fff; }
+  .sec-row { display:none; margin-bottom:18px; border-top:1px solid #c3cbe0; padding-top:10px; }
+  body.i-basse .sec-row[data-inst="basse"] { display:block; }
+  body.i-guitare .sec-row[data-inst="guitare"] { display:block; }
+  body.i-synthe .sec-row[data-inst="synthe"] { display:block; }
+  h4 { font-family:"Cinzel", serif; font-size:.95rem; margin:0 0 8px; color:#1c2038; }
+  .bar-ref { font-size:.72rem; color:var(--gold); font-weight:normal; margin-left:8px; }
+  pre.tab { font-family:"Courier New", monospace; font-size:.85rem; background:#efe2bf; border:1px solid #d8c79a; border-radius:6px; padding:10px 14px; overflow-x:auto; white-space:pre; margin:6px 0; }
+  p.notes-line { font-family:"Courier New", monospace; font-size:.9rem; background:#efe2bf; border:1px solid #d8c79a; border-radius:6px; padding:10px 14px; margin:6px 0; }
+  p.advice { font-size:.85rem; margin:4px 0 0; }
+  p.chord-center { font-size:.95rem; margin:6px 0 2px; }
+  body.pro .advice { display:none; }
+  footer { text-align:center; margin-top:30px; color:#3d4a70; font-size:.82rem; border-top:1px solid #c3cbe0; padding-top:14px; }
+</style>
+</head>
+<body class="i-basse">
+<div class="page">
+  <header>
+    <h1>Vanquished — Tablatures</h1>
+    <div class="meta">Bass · Guitar · Synth — 128 BPM — Dark Gothic Minimalist Rock</div>
+  </header>
+
+  <p class="disclaimer">Document généré par analyse audio des stems Suno (onset detection + pYIN + chroma) — à valider à l'oreille avant interprétation. Pas de stem violon fourni sur cette version. Instrumental distinct des versions FR et EN (tempo et motifs différents).</p>
+
+  <div class="controls">
+    <button class="instbtn active" onclick="setInst(this,'basse')">🎸 Basse</button>
+    <button class="instbtn" onclick="setInst(this,'guitare')">🎸 Guitare</button>
+    <button class="instbtn" onclick="setInst(this,'synthe')">🎹 Synthé</button>
+  </div>
+  <div class="controls">
+    <button class="lvlbtn active" onclick="setLevel(this,'tips')">Avec conseils</button>
+    <button class="lvlbtn" onclick="setLevel(this,'pro')">Tablature seule (Pro)</button>
+  </div>
+
+  <section class="sec"><div class="sec-row" data-inst="basse">
+    <h4>Intro <span class="bar-ref">mesure 1 — 0:00</span></h4>
+    <pre class="tab">G|-2--2--2--2-------------|
+D|------------2--2--2--2--|
+A|------------------------|
+E|------------------------|</pre><p class="advice">Oscillation par blocs entre A2 et E2 — tempo rapide, rester serré en 16èmes.</p>
+  </div>
+<div class="sec-row" data-inst="guitare">
+    <h4>Intro <span class="bar-ref">mesure 1 — 0:00</span></h4>
+    <pre class="tab">e|------------------------|
+B|------------------------|
+G|-2--2--2--2-------------|
+D|------------2--2--2--2--|
+A|------------------------|
+E|------------------------|</pre><p class="advice">Même mouvement que la basse, doublé à la guitare dès l'intro.</p>
+  </div>
+<div class="sec-row" data-inst="synthe">
+    <h4>Intro <span class="bar-ref">mesure 1 — 0:00</span></h4>
+    <p class="chord-center">Centre tonal : <b>Am</b></p><p class="advice">Nappe posée dès le début, intro la plus longue des 3 versions.</p>
+  </div></section>
+
+<section class="sec"><div class="sec-row" data-inst="basse">
+    <h4>Verse 1 / Chorus <span class="bar-ref">mesure 18 — 0:32</span></h4>
+    <pre class="tab">G|-2--2--2--2-------------|
+D|------------2--2--2--2--|
+A|------------------------|
+E|------------------------|</pre><p class="advice">Oscillation continue A2/E2, moteur rythmique du couplet et du refrain.</p>
+  </div>
+<div class="sec-row" data-inst="guitare">
+    <h4>Verse 1 / Chorus <span class="bar-ref">mesure 18 — 0:32</span></h4>
+    <pre class="tab">e|------------------------|
+B|------------------------|
+G|-2--2--2--2-------------|
+D|------------2--2--2--2--|
+A|------------------------|
+E|------------------------|</pre><p class="advice">Rythmique continue, doublage serré de la basse.</p>
+  </div>
+<div class="sec-row" data-inst="synthe">
+    <h4>Verse 1 / Chorus <span class="bar-ref">mesure 18 — 0:32</span></h4>
+    <p class="chord-center">Centre tonal : <b>Em</b></p><p class="advice">Nappe qui se déplace vers le degré v, tension avant le retour à Am.</p>
+  </div></section>
+
+<section class="sec"><div class="sec-row" data-inst="basse">
+    <h4>Verse 2 / Verse 3 / Chorus <span class="bar-ref">mesure 52 — 1:36</span></h4>
+    <pre class="tab">G|-2--2--2--2-------------|
+D|------------2--2--2--2--|
+A|------------------------|
+E|------------------------|</pre><p class="advice">Section la plus longue — garder l'oscillation A2/E2 strictement régulière.</p>
+  </div>
+<div class="sec-row" data-inst="guitare">
+    <h4>Verse 2 / Verse 3 / Chorus <span class="bar-ref">mesure 52 — 1:36</span></h4>
+    <pre class="tab">e|------------------------|
+B|------------------------|
+G|-2--2--2--2-------------|
+D|------------2--2--2--2--|
+A|------------------------|
+E|------------------------|</pre><p class="advice">Rythmique continue sur toute la section.</p>
+  </div>
+<div class="sec-row" data-inst="synthe">
+    <h4>Verse 2 / Verse 3 / Chorus <span class="bar-ref">mesure 52 — 1:36</span></h4>
+    <p class="chord-center">Centre tonal : <b>Am</b></p><p class="advice">Nappe continue en soutien harmonique.</p>
+  </div></section>
+
+<section class="sec"><div class="sec-row" data-inst="basse">
+    <h4>Instrumental Break <span class="bar-ref">mesure 92 — 2:50</span></h4>
+    <pre class="tab">G|-2--2--2--2-------------|
+D|------------2--2--2--2--|
+A|------------------------|
+E|------------------------|</pre><p class="advice">Continuer le même groove, section la plus longue en instrumental pur des 3 versions.</p>
+  </div>
+<div class="sec-row" data-inst="guitare">
+    <h4>Instrumental Break <span class="bar-ref">mesure 92 — 2:50</span></h4>
+    <pre class="tab">e|------------------------|
+B|------------------------|
+G|-2--2--2--2-------------|
+D|------------2--2--2--2--|
+A|------------------------|
+E|------------------------|</pre><p class="advice">Rythmique continue, pas de passage mélodique détaché ici — la guitare ne prend pas le rôle du violon sur cette version.</p>
+  </div>
+<div class="sec-row" data-inst="synthe">
+    <h4>Instrumental Break <span class="bar-ref">mesure 92 — 2:50</span></h4>
+    <p class="chord-center">Centre tonal : <b>Am</b></p><p class="advice">Nappe continue en soutien.</p>
+  </div></section>
+
+<section class="sec"><div class="sec-row" data-inst="basse">
+    <h4>Bridge (Spoken Word) <span class="bar-ref">mesure 107 — 3:18</span></h4>
+    <pre class="tab">G|-2--2--2--2-------------|
+D|------------2--2--2--2--|
+A|------------------------|
+E|------------------------|</pre><p class="advice">Basse continue derrière la voix parlée.</p>
+  </div>
+<div class="sec-row" data-inst="guitare">
+    <h4>Bridge (Spoken Word) <span class="bar-ref">mesure 107 — 3:18</span></h4>
+    <pre class="tab">e|------------------------|
+B|------------------------|
+G|-2--2--2--2-------------|
+D|------------------------|
+A|------------------------|
+E|------------------------|</pre><p class="advice">Guitare allégée — surtout A2, moins de mouvement vers E2 qu'ailleurs.</p>
+  </div>
+<div class="sec-row" data-inst="synthe">
+    <h4>Bridge (Spoken Word) <span class="bar-ref">mesure 107 — 3:18</span></h4>
+    <p class="chord-center">Centre tonal : <b>A</b></p><p class="advice">Couleur majeure inattendue sur ce passage parlé — tierce picarde, contraste net avec le reste du morceau en mineur.</p>
+  </div></section>
+
+<section class="sec"><div class="sec-row" data-inst="basse">
+    <h4>Final Chorus / Outro <span class="bar-ref">mesure 122 — 3:48</span></h4>
+    <pre class="tab">G|-2--2--2--2-------------|
+D|------------2--2--2--2--|
+A|------------------------|
+E|------------------------|</pre><p class="advice">Reprendre le groove principal, laisser filer en fondu jusqu'au silence.</p>
+  </div>
+<div class="sec-row" data-inst="guitare">
+    <h4>Final Chorus / Outro <span class="bar-ref">mesure 122 — 3:48</span></h4>
+    <pre class="tab">e|------------------------|
+B|------------------------|
+G|-2--2--2--2-------------|
+D|------------2--2--2--2--|
+A|------------------------|
+E|------------------------|</pre><p class="advice">Rythmique continue, fondu progressif jusqu'au silence final.</p>
+  </div>
+<div class="sec-row" data-inst="synthe">
+    <h4>Final Chorus / Outro <span class="bar-ref">mesure 122 — 3:48</span></h4>
+    <p class="chord-center">Centre tonal : <b>Am</b></p><p class="advice">Retour au mineur, nappe qui s'éteint progressivement.</p>
+  </div></section>
+
+  <footer>www.trefleminotaure.com · © 2026 Trèfle &amp; Minotaure</footer>
+</div>
+
+<script>
+function setInst(btn, inst){
+  document.body.classList.remove("i-basse","i-guitare","i-synthe");
+  document.body.classList.add("i-"+inst);
+  document.querySelectorAll(".instbtn").forEach(b=>b.classList.remove("active"));
+  btn.classList.add("active");
+}
+function setLevel(btn, lvl){
+  document.body.classList.toggle("pro", lvl==="pro");
+  document.querySelectorAll(".lvlbtn").forEach(b=>b.classList.remove("active"));
+  btn.classList.add("active");
+}
+</script>
+</body>
+</html>

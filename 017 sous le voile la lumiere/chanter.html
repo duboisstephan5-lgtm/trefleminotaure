@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>J'ai vu sous un voile... plus de lumière — Paroles</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Cinzel:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:#10121c; background-image: radial-gradient(circle at 50% 0%, #1c2038, #08090f 80%); font-family:'Cormorant Garamond', serif; }
+  .page { max-width:960px; margin:30px auto; background:#f5ecd7; border:3px solid #4a5a8f; border-radius:10px; padding:30px clamp(14px,4vw,44px) 50px; }
+  header { text-align:center; margin-bottom:20px; }
+  header h1 { font-family:'Cinzel', serif; color:#1c2038; font-size:1.7rem; margin-bottom:4px; }
+  .meta { color:#4a5a8f; font-size:.95rem; }
+  .controls { display:flex; justify-content:center; gap:24px; flex-wrap:wrap; margin:18px 0 26px; }
+  .ctrl-group { display:flex; gap:6px; align-items:center; }
+  .ctrl-group label { font-size:.85rem; color:#3d4a70; margin-right:4px; }
+  button.langbtn, button.speedbtn { font-family:'Cinzel', serif; font-size:.8rem; padding:6px 14px; border-radius:6px; border:1px solid #8a9ac9; background:#fff; cursor:pointer; }
+  button.langbtn.active, button.speedbtn.active { background:#2e3f7a; color:#fff; }
+  .sec { margin-bottom:26px; border-top:1px solid #c3cbe0; padding-top:14px; }
+  .sec-head { display:flex; align-items:center; gap:10px; margin-bottom:10px; flex-wrap:wrap; }
+  .section-label { font-family:'Cinzel', serif; font-weight:600; color:#1c2038; font-size:1rem; }
+  .voice-badge { font-size:.72rem; color:#fff; background:#b8962e; border-radius:10px; padding:2px 10px; }
+  .playbtn { margin-left:auto; border:none; background:#2e3f7a; color:#fff; border-radius:50%; width:30px; height:30px; cursor:pointer; font-size:.85rem; }
+  .tagrow { font-size:.78rem; font-style:italic; color:#b8962e; opacity:.85; margin:4px 0; }
+  .lyric-row { display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; margin-bottom:6px; font-size:1.15rem; font-style:italic; }
+  .lyric-row.ghost { opacity:.65; font-style:italic; }
+  .col { padding:4px 8px; border-radius:4px; }
+  .col.fr { background:#e8f0fc; }
+  .col.es { background:#f5ead5; }
+  .col.en { background:#fce8ec; }
+  body.show-fr .col.es, body.show-fr .col.en { display:none; }
+  body.show-fr .lyric-row { grid-template-columns:1fr; }
+  body.show-es .col.fr, body.show-es .col.en { display:none; }
+  body.show-es .lyric-row { grid-template-columns:1fr; }
+  body.show-en .col.fr, body.show-en .col.es { display:none; }
+  body.show-en .lyric-row { grid-template-columns:1fr; }
+  footer { text-align:center; margin-top:34px; color:#3d4a70; font-size:.85rem; border-top:1px solid #c3cbe0; padding-top:14px; }
+</style>
+</head>
+<body class="show-fr">
+<div class="page">
+  <header>
+    <h1>J'ai vu sous un voile... plus de lumière <span style="opacity:.5;">/ Vi bajo un velo... ya no hay luz / I Saw Beneath a Veil... No More Light</span></h1>
+    <div class="meta">Dark Gothic Cinematic · Duo Rock · 122 BPM · Trèfle &amp; Minotaure</div>
+  </header>
+
+  <div class="controls">
+    <div class="ctrl-group">
+      <label>Langue :</label>
+      <button class="langbtn" onclick="setLang('all')">Trilingue</button>
+      <button class="langbtn active" onclick="setLang('fr')">🇫🇷 Français</button>
+      <button class="langbtn" onclick="setLang('es')">🇪🇸 Español</button>
+      <button class="langbtn" onclick="setLang('en')">🇬🇧 English</button>
+    </div>
+    <div class="ctrl-group">
+      <label>Vitesse :</label>
+      <button class="speedbtn" onclick="setSpeed(0.7)">× 0.7</button>
+      <button class="speedbtn active" onclick="setSpeed(0.9)">× 0.9</button>
+      <button class="speedbtn" onclick="setSpeed(1.0)">× 1.0</button>
+    </div>
+  </div>
+
+  <section class="sec" id="sec-intro">
+    <div class="sec-head">
+      <span class="section-label">Intro / Intro / Intro</span>
+      <span class="voice-badge">Trèfle — parlé</span>
+      <button class="playbtn" onclick="playSec('intro')">▶</button>
+    </div>
+<div class="tagrow">[Intro — parlé, télévision en arrière-plan]</div>
+<div class="lyric-row ">
+      <div class="col fr">J&#x27;ai vu deux filles à la télévision...</div>
+      <div class="col es">Vi a dos chicas en la televisión...</div>
+      <div class="col en">I saw two girls on television...</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Deux visages derrière une fenêtre...</div>
+      <div class="col es">Dos rostros tras una ventana...</div>
+      <div class="col en">Two faces behind a window...</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Deux cahiers cachés dans la nuit...</div>
+      <div class="col es">Dos cuadernos escondidos en la noche...</div>
+      <div class="col en">Two notebooks hidden in the night...</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Et je suis restée là.</div>
+      <div class="col es">Y yo me quedé ahí.</div>
+      <div class="col en">And I just stayed there.</div>
+    </div>
+  </section>
+<section class="sec" id="sec-verse1">
+    <div class="sec-head">
+      <span class="section-label">Couplet 1 / Estrofa 1 / Verse 1</span>
+      <span class="voice-badge">Trèfle</span>
+      <button class="playbtn" onclick="playSec('verse1')">▶</button>
+    </div>
+<div class="tagrow">[Verse 1 — Trèfle]</div>
+<div class="lyric-row ">
+      <div class="col fr">Deux ombres penchées sous une faible lumière,</div>
+      <div class="col es">Dos sombras inclinadas bajo una luz débil,</div>
+      <div class="col en">Two shadows bent beneath a fading light,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Les pages tournent sans un bruit, sans une prière,</div>
+      <div class="col es">Las páginas pasan sin ruido, sin oración,</div>
+      <div class="col en">Pages turning without a sound, without a prayer,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Kaboul s&#x27;endort, les rues ferment leurs frontières,</div>
+      <div class="col es">Kabul se duerme, las calles cierran sus fronteras,</div>
+      <div class="col en">Kabul falls asleep, the streets seal their borders,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Elles apprennent en silence ce qu&#x27;on leur interdit de faire.</div>
+      <div class="col es">Ellas aprenden en silencio lo que les prohíben hacer.</div>
+      <div class="col en">They learn in silence what they&#x27;re forbidden to do.</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Elles voudraient soigner, elles voudraient guérir,</div>
+      <div class="col es">Ellas querrían curar, ellas querrían sanar,</div>
+      <div class="col en">They wish to heal, they wish to cure,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Apprendre, comprendre, choisir leur avenir,</div>
+      <div class="col es">Aprender, comprender, elegir su futuro,</div>
+      <div class="col en">To learn, to understand, to choose their future,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Alors dans la nuit, elles allument leur écran,</div>
+      <div class="col es">Así que en la noche, encienden su pantalla,</div>
+      <div class="col en">So in the night, they light up their screen,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Et regardent un monde qui leur échappe pourtant.</div>
+      <div class="col es">Y miran un mundo que aún se les escapa.</div>
+      <div class="col en">And watch a world that still slips from their hands.</div>
+    </div>
+  </section>
+<section class="sec" id="sec-ghost1">
+    <div class="sec-head">
+      <span class="section-label">Voix fantôme / Voz fantasma / Ghost Voice</span>
+      <span class="voice-badge">Voix fantôme</span>
+      <button class="playbtn" onclick="playSec('ghost1')">▶</button>
+    </div>
+<div class="tagrow">[Ghost Voice — distant, spectral]</div>
+<div class="lyric-row ghost">
+      <div class="col fr">Décortique...</div>
+      <div class="col es">Descascara...</div>
+      <div class="col en">Shelling...</div>
+    </div>
+  </section>
+<section class="sec" id="sec-chorus1">
+    <div class="sec-head">
+      <span class="section-label">Refrain / Estribillo / Chorus</span>
+      <span class="voice-badge">Trèfle</span>
+      <button class="playbtn" onclick="playSec('chorus1')">▶</button>
+    </div>
+<div class="tagrow">[Chorus — Trèfle]</div>
+<div class="lyric-row ">
+      <div class="col fr">Sur l&#x27;écran bleu, je les vois regarder,</div>
+      <div class="col es">En la pantalla azul, las veo mirar,</div>
+      <div class="col en">On the blue screen, I watch them watching,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Des filles qui rient, qui choisissent, qui peuvent étudier,</div>
+      <div class="col es">Chicas que ríen, que eligen, que pueden estudiar,</div>
+      <div class="col en">Girls who laugh, who choose, who get to study,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Des blouses blanches, des livres, des portes ouvertes,</div>
+      <div class="col es">Batas blancas, libros, puertas abiertas,</div>
+      <div class="col en">White coats, open books, doors left open,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Une vie qu&#x27;elles pourraient vivre,</div>
+      <div class="col es">Una vida que podrían vivir,</div>
+      <div class="col en">A life that they could live,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Une vie qu&#x27;on leur retire.</div>
+      <div class="col es">Una vida que les quitan.</div>
+      <div class="col en">A life that&#x27;s taken from them.</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">J&#x27;ai vu sous un voile...</div>
+      <div class="col es">Vi bajo un velo...</div>
+      <div class="col en">I saw beneath a veil...</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Plus de lumière.</div>
+      <div class="col es">Ya no hay luz.</div>
+      <div class="col en">No more light.</div>
+    </div>
+  </section>
+<section class="sec" id="sec-verse2">
+    <div class="sec-head">
+      <span class="section-label">Couplet 2 / Estrofa 2 / Verse 2</span>
+      <span class="voice-badge">Trèfle</span>
+      <button class="playbtn" onclick="playSec('verse2')">▶</button>
+    </div>
+<div class="tagrow">[Verse 2 — Trèfle]</div>
+<div class="lyric-row ">
+      <div class="col fr">Sur YouTube, elles regardent le monde,</div>
+      <div class="col es">En YouTube, ellas miran el mundo,</div>
+      <div class="col en">On YouTube, they&#x27;re watching the world,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Des filles qui parlent, qui marchent, qui répondent,</div>
+      <div class="col es">Chicas que hablan, que caminan, que responden,</div>
+      <div class="col en">Girls who speak, who walk, who answer back,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Elles rêvent de devenir médecins un jour,</div>
+      <div class="col es">Sueñan con ser médicas algún día,</div>
+      <div class="col en">They dream of becoming doctors one day,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">De soigner, de guérir, de donner à leur tour.</div>
+      <div class="col es">Con curar, con sanar, con dar a su vez.</div>
+      <div class="col en">To heal, to cure, to give in return.</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Je les regarde à travers mon écran,</div>
+      <div class="col es">Las miro a través de mi pantalla,</div>
+      <div class="col en">I watch them through my own screen,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Et je découvre leur silence lentement,</div>
+      <div class="col es">Y descubro su silencio poco a poco,</div>
+      <div class="col en">And slowly I discover their silence,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Deux jeunes filles devant cette lumière bleue,</div>
+      <div class="col es">Dos jóvenes frente a esta luz azul,</div>
+      <div class="col en">Two young girls before this blue light,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Qui voient leur avenir vivre dans les yeux des autres.</div>
+      <div class="col es">Que ven su futuro vivir en los ojos de otras.</div>
+      <div class="col en">Seeing their future live in someone else&#x27;s eyes.</div>
+    </div>
+  </section>
+<section class="sec" id="sec-verse3">
+    <div class="sec-head">
+      <span class="section-label">Couplet 3 / Estrofa 3 / Verse 3</span>
+      <span class="voice-badge">Trèfle</span>
+      <button class="playbtn" onclick="playSec('verse3')">▶</button>
+    </div>
+<div class="tagrow">[Verse 3 — Trèfle, plus intime]</div>
+<div class="lyric-row ">
+      <div class="col fr">Puis j&#x27;ai vu leurs mères, derrière leur histoire,</div>
+      <div class="col es">Luego vi a sus madres, detrás de su historia,</div>
+      <div class="col en">Then I saw their mothers, behind their story,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Leurs mains cassant des noix dans le fond de ma mémoire,</div>
+      <div class="col es">Sus manos partiendo nueces en el fondo de mi memoria,</div>
+      <div class="col en">Their hands cracking nuts deep in my memory,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Sous leurs voiles de coton, elles savaient tant de choses,</div>
+      <div class="col es">Bajo sus velos de algodón, sabían tantas cosas,</div>
+      <div class="col en">Under their cotton veils, they knew so much,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Mais aucune page ouverte ne leur fut jamais offerte.</div>
+      <div class="col es">Pero ninguna página abierta les fue jamás ofrecida.</div>
+      <div class="col en">But not one open page was ever offered them.</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Et leurs filles portent encore leurs espoirs,</div>
+      <div class="col es">Y sus hijas cargan todavía su esperanza,</div>
+      <div class="col en">And their daughters still carry their hopes,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Leurs cahiers contre elles, dans le fond du noir,</div>
+      <div class="col es">Cuadernos contra el pecho, en el fondo de lo oscuro,</div>
+      <div class="col en">Notebooks held close, deep in the dark,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Une génération regarde ce qu&#x27;elle pourrait devenir,</div>
+      <div class="col es">Una generación mira lo que podría llegar a ser,</div>
+      <div class="col en">One generation watches what it could become,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Pendant qu&#x27;une autre n&#x27;a jamais eu le droit de choisir.</div>
+      <div class="col es">Mientras otra nunca tuvo el derecho de elegir.</div>
+      <div class="col en">While another never had the right to choose.</div>
+    </div>
+  </section>
+<section class="sec" id="sec-ghost2">
+    <div class="sec-head">
+      <span class="section-label">Voix fantôme / Voz fantasma / Ghost Voice</span>
+      <span class="voice-badge">Voix fantôme</span>
+      <button class="playbtn" onclick="playSec('ghost2')">▶</button>
+    </div>
+<div class="tagrow">[Ghost Voice — de plus en plus hantée]</div>
+<div class="lyric-row ghost">
+      <div class="col fr">Décortique...</div>
+      <div class="col es">Descascara...</div>
+      <div class="col en">Shelling...</div>
+    </div>
+  </section>
+<section class="sec" id="sec-bridge">
+    <div class="sec-head">
+      <span class="section-label">Pont / Puente / Bridge</span>
+      <span class="voice-badge">Minotaure</span>
+      <button class="playbtn" onclick="playSec('bridge')">▶</button>
+    </div>
+<div class="tagrow">[Bridge — Minotaure, froid, distant, documentaire]</div>
+<div class="lyric-row ">
+      <div class="col fr">Puis j&#x27;ai vu les puissants se rapprocher sur l&#x27;écran,</div>
+      <div class="col es">Luego vi a los poderosos acercarse en la pantalla,</div>
+      <div class="col en">Then I saw the powerful drawing close on screen,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Des hommes qui parlent de peuples, de coutumes et de temps,</div>
+      <div class="col es">Hombres que hablan de pueblos, de costumbres, de tiempo,</div>
+      <div class="col en">Men who speak of peoples, of customs, of time,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Des alliances qui se nouent loin au-dessus des toits,</div>
+      <div class="col es">Alianzas que se tejen muy por encima de los techos,</div>
+      <div class="col en">Alliances forming far above the rooftops,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Pendant que deux jeunes filles cherchent encore leur voix.</div>
+      <div class="col es">Mientras dos jóvenes aún buscan su voz.</div>
+      <div class="col en">While two young girls still search for their voice.</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Ils parlent de liberté selon leurs propres frontières,</div>
+      <div class="col es">Hablan de libertad según sus propias fronteras,</div>
+      <div class="col en">They speak of freedom by their own borders,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Et derrière leurs discours, des femmes perdent leur lumière.</div>
+      <div class="col es">Y detrás de sus discursos, las mujeres pierden su luz.</div>
+      <div class="col en">And behind their speeches, women lose their light.</div>
+    </div>
+  </section>
+<section class="sec" id="sec-verse4">
+    <div class="sec-head">
+      <span class="section-label">Couplet 4 / Estrofa 4 / Verse 4</span>
+      <span class="voice-badge">Trèfle</span>
+      <button class="playbtn" onclick="playSec('verse4')">▶</button>
+    </div>
+<div class="tagrow">[Verse 4 — Trèfle]</div>
+<div class="lyric-row ">
+      <div class="col fr">Les années passent sous un pouvoir qui vole...</div>
+      <div class="col es">Los años pasan bajo un poder que roba...</div>
+      <div class="col en">The years go by under a power that steals...</div>
+    </div>
+  </section>
+<section class="sec" id="sec-spoken">
+    <div class="sec-head">
+      <span class="section-label">Parlé / Hablado / Spoken Word</span>
+      <span class="voice-badge">Trèfle — parlé, a cappella</span>
+      <button class="playbtn" onclick="playSec('spoken')">▶</button>
+    </div>
+<div class="tagrow">[STOP TOTAL — silence absolu]</div>
+<div class="tagrow">[Spoken Word — Trèfle, seule, sans musique]</div>
+<div class="lyric-row ">
+      <div class="col fr">Et je regarde encore...</div>
+      <div class="col es">Y sigo mirando...</div>
+      <div class="col en">And I keep watching...</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Je regarde...</div>
+      <div class="col es">Estoy mirando...</div>
+      <div class="col en">I&#x27;m watching...</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Leurs visages...</div>
+      <div class="col es">Sus rostros...</div>
+      <div class="col en">Their faces...</div>
+    </div>
+  </section>
+<section class="sec" id="sec-forceful">
+    <div class="sec-head">
+      <span class="section-label">Couplet final / Estrofa final / Final Verse</span>
+      <span class="voice-badge">Trèfle</span>
+      <button class="playbtn" onclick="playSec('forceful')">▶</button>
+    </div>
+<div class="tagrow">[VIOLIN — cri bref]</div>
+<div class="tagrow">[RETURN — bass + drums + guitar]</div>
+<div class="tagrow">[Trèfle — de plus en plus forte]</div>
+<div class="lyric-row ">
+      <div class="col fr">Leurs regards qui espèrent malgré le temps qui passe,</div>
+      <div class="col es">Sus miradas que esperan pese al tiempo que pasa,</div>
+      <div class="col en">Their eyes still hoping despite the passing time,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Leurs rêves enfermés derrière les murs et les traces,</div>
+      <div class="col es">Sus sueños encerrados tras los muros, tras las huellas,</div>
+      <div class="col en">Their dreams locked behind these walls, these traces,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Elles grandissent sans école, sans choisir leur chemin,</div>
+      <div class="col es">Crecen sin escuela, sin elegir su camino,</div>
+      <div class="col en">They grow up with no school, no path of their own,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Pendant que nous regardons ailleurs,</div>
+      <div class="col es">Mientras nosotros miramos hacia otro lado,</div>
+      <div class="col en">While we look away,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Pendant que le silence gagne du terrain.</div>
+      <div class="col es">Mientras el silencio gana terreno.</div>
+      <div class="col en">While the silence gains ground.</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Leur silence est forcé.</div>
+      <div class="col es">Su silencio es forzado.</div>
+      <div class="col en">Their silence is forced.</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Mais le nôtre...</div>
+      <div class="col es">Pero el nuestro...</div>
+      <div class="col en">But ours...</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Qui l&#x27;a accepté ?</div>
+      <div class="col es">¿Quién lo aceptó?</div>
+      <div class="col en">Who accepted that?</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Leur voix est enfermée.</div>
+      <div class="col es">Su voz está encerrada.</div>
+      <div class="col en">Their voice is locked away.</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Mais pourquoi laisser la nôtre se taire ?</div>
+      <div class="col es">¿Por qué dejar que la nuestra calle también?</div>
+      <div class="col en">So why let ours stay silent too?</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Je les ai vues.</div>
+      <div class="col es">Las he visto.</div>
+      <div class="col en">I have seen them.</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Je ne peux plus détourner les yeux.</div>
+      <div class="col es">Ya no puedo apartar la mirada.</div>
+      <div class="col en">I can&#x27;t look away anymore.</div>
+    </div>
+  </section>
+<section class="sec" id="sec-finalchorus">
+    <div class="sec-head">
+      <span class="section-label">Refrain final / Estribillo final / Final Chorus</span>
+      <span class="voice-badge">Trèfle + Minotaure</span>
+      <button class="playbtn" onclick="playSec('finalchorus')">▶</button>
+    </div>
+<div class="tagrow">[Final Chorus — Trèfle + Minotaure, rock puissant]</div>
+<div class="lyric-row ">
+      <div class="col fr">On voudrait soigner, on voudrait guérir,</div>
+      <div class="col es">Querríamos curar, querríamos sanar,</div>
+      <div class="col en">We wish to heal, we wish to cure,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">On voudrait apprendre, comprendre et choisir,</div>
+      <div class="col es">Querríamos aprender, comprender y elegir,</div>
+      <div class="col en">We wish to learn, understand and choose,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Sur l&#x27;écran bleu, leur lumière apparaît,</div>
+      <div class="col es">En la pantalla azul, su luz aparece,</div>
+      <div class="col en">On the blue screen, their light appears,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Une autre vie existe,</div>
+      <div class="col es">Otra vida existe,</div>
+      <div class="col en">Another life exists,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Elles le savent désormais.</div>
+      <div class="col es">Ahora lo saben.</div>
+      <div class="col en">They know it now.</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">J&#x27;ai vu sous un voile...</div>
+      <div class="col es">Vi bajo un velo...</div>
+      <div class="col en">I saw beneath a veil...</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Plus de lumière.</div>
+      <div class="col es">Ya no hay luz.</div>
+      <div class="col en">No more light.</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">J&#x27;ai vu leurs visages,</div>
+      <div class="col es">Vi sus rostros,</div>
+      <div class="col en">I saw their faces,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">J&#x27;ai entendu leur silence.</div>
+      <div class="col es">Escuché su silencio.</div>
+      <div class="col en">I heard their silence.</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">J&#x27;ai vu sous un voile...</div>
+      <div class="col es">Vi bajo un velo...</div>
+      <div class="col en">I saw beneath a veil...</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Plus de lumière.</div>
+      <div class="col es">Ya no hay luz.</div>
+      <div class="col en">No more light.</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Mais leur lumière n&#x27;est pas morte,</div>
+      <div class="col es">Pero su luz no está muerta,</div>
+      <div class="col en">But their light is not dead,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Elle attend qu&#x27;on la regarde.</div>
+      <div class="col es">Espera que alguien la mire.</div>
+      <div class="col en">It&#x27;s waiting to be seen.</div>
+    </div>
+  </section>
+<section class="sec" id="sec-surge">
+    <div class="sec-head">
+      <span class="section-label">Sursaut final / Impulso final / Final Rock Surge</span>
+      <span class="voice-badge">Trèfle + Minotaure</span>
+      <button class="playbtn" onclick="playSec('surge')">▶</button>
+    </div>
+<div class="tagrow">[Final Rock Surge]</div>
+<div class="lyric-row ">
+      <div class="col fr">Alors regardez.</div>
+      <div class="col es">Entonces miren.</div>
+      <div class="col en">So look.</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Regardez.</div>
+      <div class="col es">Miren.</div>
+      <div class="col en">Look.</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Ne laissez pas gagner le silence.</div>
+      <div class="col es">No dejen que gane el silencio.</div>
+      <div class="col en">Don&#x27;t let the silence win.</div>
+    </div>
+  </section>
+<section class="sec" id="sec-outro">
+    <div class="sec-head">
+      <span class="section-label">Outro / Outro / Outro</span>
+      <span class="voice-badge">Trèfle — chuchoté</span>
+      <button class="playbtn" onclick="playSec('outro')">▶</button>
+    </div>
+<div class="tagrow">[Outro — Trèfle, chuchoté]</div>
+<div class="lyric-row ">
+      <div class="col fr">Je les ai vues...</div>
+      <div class="col es">Las he visto...</div>
+      <div class="col en">I have seen them...</div>
+    </div>
+  </section>
+<section class="sec" id="sec-ghost3">
+    <div class="sec-head">
+      <span class="section-label">Voix fantôme (fondu) / Voz fantasma (desvaneciendo) / Ghost Voice (fading)</span>
+      <span class="voice-badge">Voix fantôme</span>
+      <button class="playbtn" onclick="playSec('ghost3')">▶</button>
+    </div>
+<div class="tagrow">[Ghost Voice — fading, presque imperceptible]</div>
+<div class="lyric-row ghost">
+      <div class="col fr">Décortique...</div>
+      <div class="col es">Descascara...</div>
+      <div class="col en">Shelling...</div>
+    </div>
+  </section>
+
+  <footer>www.trefleminotaure.com · © 2026 Trèfle &amp; Minotaure</footer>
+</div>
+
+<script>
+const SECS = {
+  "intro": {
+    "fr": "J'ai vu deux filles à la télévision... Deux visages derrière une fenêtre... Deux cahiers cachés dans la nuit... Et je suis restée là.",
+    "es": "Vi a dos chicas en la televisión... Dos rostros tras una ventana... Dos cuadernos escondidos en la noche... Y yo me quedé ahí.",
+    "en": "I saw two girls on television... Two faces behind a window... Two notebooks hidden in the night... And I just stayed there."
+  },
+  "verse1": {
+    "fr": "Deux ombres penchées sous une faible lumière, Les pages tournent sans un bruit, sans une prière, Kaboul s'endort, les rues ferment leurs frontières, Elles apprennent en silence ce qu'on leur interdit de faire. Elles voudraient soigner, elles voudraient guérir, Apprendre, comprendre, choisir leur avenir, Alors dans la nuit, elles allument leur écran, Et regardent un monde qui leur échappe pourtant.",
+    "es": "Dos sombras inclinadas bajo una luz débil, Las páginas pasan sin ruido, sin oración, Kabul se duerme, las calles cierran sus fronteras, Ellas aprenden en silencio lo que les prohíben hacer. Ellas querrían curar, ellas querrían sanar, Aprender, comprender, elegir su futuro, Así que en la noche, encienden su pantalla, Y miran un mundo que aún se les escapa.",
+    "en": "Two shadows bent beneath a fading light, Pages turning without a sound, without a prayer, Kabul falls asleep, the streets seal their borders, They learn in silence what they're forbidden to do. They wish to heal, they wish to cure, To learn, to understand, to choose their future, So in the night, they light up their screen, And watch a world that still slips from their hands."
+  },
+  "ghost1": {
+    "fr": "Décortique...",
+    "es": "Descascara...",
+    "en": "Shelling..."
+  },
+  "chorus1": {
+    "fr": "Sur l'écran bleu, je les vois regarder, Des filles qui rient, qui choisissent, qui peuvent étudier, Des blouses blanches, des livres, des portes ouvertes, Une vie qu'elles pourraient vivre, Une vie qu'on leur retire. J'ai vu sous un voile... Plus de lumière.",
+    "es": "En la pantalla azul, las veo mirar, Chicas que ríen, que eligen, que pueden estudiar, Batas blancas, libros, puertas abiertas, Una vida que podrían vivir, Una vida que les quitan. Vi bajo un velo... Ya no hay luz.",
+    "en": "On the blue screen, I watch them watching, Girls who laugh, who choose, who get to study, White coats, open books, doors left open, A life that they could live, A life that's taken from them. I saw beneath a veil... No more light."
+  },
+  "verse2": {
+    "fr": "Sur YouTube, elles regardent le monde, Des filles qui parlent, qui marchent, qui répondent, Elles rêvent de devenir médecins un jour, De soigner, de guérir, de donner à leur tour. Je les regarde à travers mon écran, Et je découvre leur silence lentement, Deux jeunes filles devant cette lumière bleue, Qui voient leur avenir vivre dans les yeux des autres.",
+    "es": "En YouTube, ellas miran el mundo, Chicas que hablan, que caminan, que responden, Sueñan con ser médicas algún día, Con curar, con sanar, con dar a su vez. Las miro a través de mi pantalla, Y descubro su silencio poco a poco, Dos jóvenes frente a esta luz azul, Que ven su futuro vivir en los ojos de otras.",
+    "en": "On YouTube, they're watching the world, Girls who speak, who walk, who answer back, They dream of becoming doctors one day, To heal, to cure, to give in return. I watch them through my own screen, And slowly I discover their silence, Two young girls before this blue light, Seeing their future live in someone else's eyes."
+  },
+  "verse3": {
+    "fr": "Puis j'ai vu leurs mères, derrière leur histoire, Leurs mains cassant des noix dans le fond de ma mémoire, Sous leurs voiles de coton, elles savaient tant de choses, Mais aucune page ouverte ne leur fut jamais offerte. Et leurs filles portent encore leurs espoirs, Leurs cahiers contre elles, dans le fond du noir, Une génération regarde ce qu'elle pourrait devenir, Pendant qu'une autre n'a jamais eu le droit de choisir.",
+    "es": "Luego vi a sus madres, detrás de su historia, Sus manos partiendo nueces en el fondo de mi memoria, Bajo sus velos de algodón, sabían tantas cosas, Pero ninguna página abierta les fue jamás ofrecida. Y sus hijas cargan todavía su esperanza, Cuadernos contra el pecho, en el fondo de lo oscuro, Una generación mira lo que podría llegar a ser, Mientras otra nunca tuvo el derecho de elegir.",
+    "en": "Then I saw their mothers, behind their story, Their hands cracking nuts deep in my memory, Under their cotton veils, they knew so much, But not one open page was ever offered them. And their daughters still carry their hopes, Notebooks held close, deep in the dark, One generation watches what it could become, While another never had the right to choose."
+  },
+  "ghost2": {
+    "fr": "Décortique...",
+    "es": "Descascara...",
+    "en": "Shelling..."
+  },
+  "bridge": {
+    "fr": "Puis j'ai vu les puissants se rapprocher sur l'écran, Des hommes qui parlent de peuples, de coutumes et de temps, Des alliances qui se nouent loin au-dessus des toits, Pendant que deux jeunes filles cherchent encore leur voix. Ils parlent de liberté selon leurs propres frontières, Et derrière leurs discours, des femmes perdent leur lumière.",
+    "es": "Luego vi a los poderosos acercarse en la pantalla, Hombres que hablan de pueblos, de costumbres, de tiempo, Alianzas que se tejen muy por encima de los techos, Mientras dos jóvenes aún buscan su voz. Hablan de libertad según sus propias fronteras, Y detrás de sus discursos, las mujeres pierden su luz.",
+    "en": "Then I saw the powerful drawing close on screen, Men who speak of peoples, of customs, of time, Alliances forming far above the rooftops, While two young girls still search for their voice. They speak of freedom by their own borders, And behind their speeches, women lose their light."
+  },
+  "verse4": {
+    "fr": "Les années passent sous un pouvoir qui vole...",
+    "es": "Los años pasan bajo un poder que roba...",
+    "en": "The years go by under a power that steals..."
+  },
+  "spoken": {
+    "fr": "Et je regarde encore... Je regarde... Leurs visages...",
+    "es": "Y sigo mirando... Estoy mirando... Sus rostros...",
+    "en": "And I keep watching... I'm watching... Their faces..."
+  },
+  "forceful": {
+    "fr": "Leurs regards qui espèrent malgré le temps qui passe, Leurs rêves enfermés derrière les murs et les traces, Elles grandissent sans école, sans choisir leur chemin, Pendant que nous regardons ailleurs, Pendant que le silence gagne du terrain. Leur silence est forcé. Mais le nôtre... Qui l'a accepté ? Leur voix est enfermée. Mais pourquoi laisser la nôtre se taire ? Je les ai vues. Je ne peux plus détourner les yeux.",
+    "es": "Sus miradas que esperan pese al tiempo que pasa, Sus sueños encerrados tras los muros, tras las huellas, Crecen sin escuela, sin elegir su camino, Mientras nosotros miramos hacia otro lado, Mientras el silencio gana terreno. Su silencio es forzado. Pero el nuestro... ¿Quién lo aceptó? Su voz está encerrada. ¿Por qué dejar que la nuestra calle también? Las he visto. Ya no puedo apartar la mirada.",
+    "en": "Their eyes still hoping despite the passing time, Their dreams locked behind these walls, these traces, They grow up with no school, no path of their own, While we look away, While the silence gains ground. Their silence is forced. But ours... Who accepted that? Their voice is locked away. So why let ours stay silent too? I have seen them. I can't look away anymore."
+  },
+  "finalchorus": {
+    "fr": "On voudrait soigner, on voudrait guérir, On voudrait apprendre, comprendre et choisir, Sur l'écran bleu, leur lumière apparaît, Une autre vie existe, Elles le savent désormais. J'ai vu sous un voile... Plus de lumière. J'ai vu leurs visages, J'ai entendu leur silence. J'ai vu sous un voile... Plus de lumière. Mais leur lumière n'est pas morte, Elle attend qu'on la regarde.",
+    "es": "Querríamos curar, querríamos sanar, Querríamos aprender, comprender y elegir, En la pantalla azul, su luz aparece, Otra vida existe, Ahora lo saben. Vi bajo un velo... Ya no hay luz. Vi sus rostros, Escuché su silencio. Vi bajo un velo... Ya no hay luz. Pero su luz no está muerta, Espera que alguien la mire.",
+    "en": "We wish to heal, we wish to cure, We wish to learn, understand and choose, On the blue screen, their light appears, Another life exists, They know it now. I saw beneath a veil... No more light. I saw their faces, I heard their silence. I saw beneath a veil... No more light. But their light is not dead, It's waiting to be seen."
+  },
+  "surge": {
+    "fr": "Alors regardez. Regardez. Ne laissez pas gagner le silence.",
+    "es": "Entonces miren. Miren. No dejen que gane el silencio.",
+    "en": "So look. Look. Don't let the silence win."
+  },
+  "outro": {
+    "fr": "Je les ai vues...",
+    "es": "Las he visto...",
+    "en": "I have seen them..."
+  },
+  "ghost3": {
+    "fr": "Décortique...",
+    "es": "Descascara...",
+    "en": "Shelling..."
+  }
+};
+const LANG_MAP = { fr:"fr-FR", es:"es-ES", en:"en-GB" };
+let curLang = "fr";
+let curSpeed = 0.9;
+function setLang(l){
+  document.body.classList.remove("show-fr","show-es","show-en");
+  document.querySelectorAll(".langbtn").forEach(b=>b.classList.remove("active"));
+  event.target.classList.add("active");
+  if (l==="all") { curLang="fr"; } else { document.body.classList.add("show-"+l); curLang=l; }
+}
+function setSpeed(v){
+  curSpeed = v;
+  document.querySelectorAll(".speedbtn").forEach(b=>b.classList.remove("active"));
+  event.target.classList.add("active");
+}
+function playSec(id){
+  const txt = SECS[id][curLang];
+  if (!txt || !("speechSynthesis" in window)) return;
+  window.speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(txt);
+  u.lang = LANG_MAP[curLang];
+  u.rate = curSpeed;
+  window.speechSynthesis.speak(u);
+}
+</script>
+</body>
+</html>

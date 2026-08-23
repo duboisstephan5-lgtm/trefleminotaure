@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>I Saw Beneath a Veil... No More Light — Tablatures | tréfle.minotaure</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Cinzel:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root { --gold:#b8962e; --parchment:#f5ecd7; }
+  * { box-sizing:border-box; }
+  body { margin:0; background: radial-gradient(ellipse at center, #1c2038 0%, #10121c 70%, #08090f 100%); font-family:"Cormorant Garamond", serif; color:#2a1f10; padding:24px 12px 60px; }
+  .page { max-width:900px; margin:0 auto; background:var(--parchment); border:2px solid #4a5a8f; border-radius:10px; box-shadow:0 0 40px rgba(0,0,0,.6); padding:28px clamp(14px,4vw,44px); }
+  header { text-align:center; border-bottom:1px solid #4a5a8f; padding-bottom:16px; margin-bottom:18px; }
+  header h1 { font-family:"Cinzel", serif; font-size:1.5rem; margin:0 0 4px; }
+  .meta { font-size:.82rem; color:var(--gold); text-transform:uppercase; letter-spacing:.06em; }
+  .disclaimer { font-size:.78rem; opacity:.75; font-style:italic; text-align:center; margin:14px 0 20px; max-width:640px; margin-left:auto; margin-right:auto; }
+  .controls { display:flex; flex-wrap:wrap; gap:14px; justify-content:center; margin:18px 0 26px; }
+  button.instbtn, button.lvlbtn { font-family:"Cinzel", serif; font-size:.78rem; padding:7px 16px; border-radius:6px; border:1px solid #4a5a8f; background:#fff8ea; cursor:pointer; }
+  button.instbtn.active, button.lvlbtn.active { background:var(--gold); color:#fff; }
+  .sec-row { display:none; margin-bottom:18px; border-top:1px solid #c3cbe0; padding-top:10px; }
+  body.i-basse .sec-row[data-inst="basse"] { display:block; }
+  body.i-guitare .sec-row[data-inst="guitare"] { display:block; }
+  body.i-violon .sec-row[data-inst="violon"] { display:block; }
+  body.i-synthe .sec-row[data-inst="synthe"] { display:block; }
+  h4 { font-family:"Cinzel", serif; font-size:.95rem; margin:0 0 8px; color:#1c2038; }
+  .bar-ref { font-size:.72rem; color:var(--gold); font-weight:normal; margin-left:8px; }
+  pre.tab { font-family:"Courier New", monospace; font-size:.85rem; background:#efe2bf; border:1px solid #d8c79a; border-radius:6px; padding:10px 14px; overflow-x:auto; white-space:pre; margin:6px 0; max-width:100%; }
+  p.notes-line { font-family:"Courier New", monospace; font-size:.9rem; background:#efe2bf; border:1px solid #d8c79a; border-radius:6px; padding:10px 14px; margin:6px 0; word-wrap:break-word; }
+  p.advice { font-size:.85rem; margin:4px 0 0; word-wrap:break-word; }
+  p.chord-center { font-size:.95rem; margin:6px 0 2px; }
+  body.pro .advice { display:none; }
+  footer { text-align:center; margin-top:30px; color:#3d4a70; font-size:.82rem; border-top:1px solid #c3cbe0; padding-top:14px; }
+  .tips-block { background:#efe2bf; border:1px solid #d8c79a; border-radius:8px; padding:14px 18px; margin:22px 0; font-size:.85rem; }
+  .tips-block h4 { margin-top:0; }
+  body.pro .tips-block { display:none; }
+</style>
+</head>
+<body class="i-basse">
+<div class="page">
+  <header>
+    <h1>I Saw Beneath a Veil... No More Light — Tablatures</h1>
+    <div class="meta">Bass · Guitar · Violin · Synth — 122 BPM — Dark Gothic Cinematic / Duo Rock</div>
+  </header>
+
+  <p class="disclaimer">Document généré par analyse audio des stems Suno (onset detection + pYIN + chroma) — à valider à l'oreille avant interprétation. Pas de stem clavier fourni sur cette version. Le violon n'est présent que sur l'intro (0:07-0:31) puis totalement silencieux sur le reste du morceau — instrumental distinct de la version FR, pas de cri de violon sur cette version.</p>
+
+  <div class="controls">
+    <button class="instbtn active" onclick="setInst(this,'basse')">🎸 Basse</button>
+    <button class="instbtn" onclick="setInst(this,'guitare')">🎸 Guitare</button>
+    <button class="instbtn" onclick="setInst(this,'violon')">🎻 Violon</button>
+    <button class="instbtn" onclick="setInst(this,'synthe')">🎹 Synthé</button>
+  </div>
+  <div class="controls">
+    <button class="lvlbtn active" onclick="setLevel(this,'tips')">Avec conseils</button>
+    <button class="lvlbtn" onclick="setLevel(this,'pro')">Tablature seule (Pro)</button>
+  </div>
+
+  <section class="sec">
+    <div class="sec-row" data-inst="basse">
+      <h4>Intro <span class="bar-ref">mesure 1 — 0:00</span></h4>
+      <p class="advice">Silencieuse jusqu'à 0:39.</p>
+    </div>
+    <div class="sec-row" data-inst="guitare">
+      <h4>Intro <span class="bar-ref">mesure 1 — 0:00</span></h4>
+      <p class="advice">Entrées éparses avant 0:39, pas de motif net à jouer sur cette section.</p>
+    </div>
+    <div class="sec-row" data-inst="violon">
+      <h4>Intro <span class="bar-ref">mesure 1 — 0:00</span></h4>
+      <p class="chord-center">Centre tonal : <b>G</b></p>
+      <p class="advice">Seule apparition du violon sur tout le morceau, entre 0:07 et 0:31 — jeu bref sous la voix parlée.</p>
+    </div>
+    <div class="sec-row" data-inst="synthe">
+      <h4>Intro <span class="bar-ref">mesure 1 — 0:00</span></h4>
+      <p class="advice">Silencieux avant 0:07.</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="sec-row" data-inst="basse">
+      <h4>Verses / Chorus / Bridge <span class="bar-ref">mesure 21 — 0:39</span></h4>
+      <pre class="tab">G|-3--3--3--3--3--3--3--3-|
+D|------------------------|
+A|------------------------|
+E|------------------------|</pre>
+      <p class="advice">Pulsation régulière en croches sur la corde de Sol, position fixe. Courtes coupures rythmiques autour de 1:10-1:47 (voix fantôme / transitions de couplet).</p>
+    </div>
+    <div class="sec-row" data-inst="guitare">
+      <h4>Verses / Chorus / Bridge <span class="bar-ref">mesure 21 — 0:39</span></h4>
+      <pre class="tab">e|------------------------|
+B|------------------------|
+G|------------------------|
+D|------------------------|
+A|------------------------|
+E|-5--5--5--5--5--5--5--5-|</pre>
+      <p class="advice">Power chord étouffé (palm mute) sur la corde de Mi grave, même pulsation que la basse.</p>
+    </div>
+    <div class="sec-row" data-inst="violon">
+      <h4>Verses / Chorus / Bridge <span class="bar-ref">mesure 21 — 0:39</span></h4>
+      <p class="advice">Silencieux sur toute cette section.</p>
+    </div>
+    <div class="sec-row" data-inst="synthe">
+      <h4>Verses / Chorus / Bridge <span class="bar-ref">mesure 21 — 0:39</span></h4>
+      <p class="chord-center">Centre tonal : <b>A</b></p>
+      <p class="advice">Nappe continue en soutien.</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="sec-row" data-inst="basse">
+      <h4>Bass tacet <span class="bar-ref">mesure 89 — 2:52</span></h4>
+      <p class="advice">Seul décrochage de la basse sur tout le morceau (6 secondes) — guitare et synthé continuent de jouer, pas d'arrêt collectif ici contrairement à la version FR.</p>
+    </div>
+    <div class="sec-row" data-inst="guitare">
+      <h4>Bass tacet <span class="bar-ref">mesure 89 — 2:52</span></h4>
+      <pre class="tab">e|------------------------|
+B|------------------------|
+G|------------------------|
+D|------------------------|
+A|------------------------|
+E|-5--5--5--5--5--5--5--5-|</pre>
+      <p class="advice">Continue le même motif sans interruption pendant que la basse se tait.</p>
+    </div>
+    <div class="sec-row" data-inst="violon">
+      <h4>Bass tacet <span class="bar-ref">mesure 89 — 2:52</span></h4>
+      <p class="advice">Silencieux.</p>
+    </div>
+    <div class="sec-row" data-inst="synthe">
+      <h4>Bass tacet <span class="bar-ref">mesure 89 — 2:52</span></h4>
+      <p class="chord-center">Centre tonal : <b>D</b></p>
+      <p class="advice">Nappe continue, ne s'interrompt pas.</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="sec-row" data-inst="basse">
+      <h4>Final Verse / Chorus build <span class="bar-ref">mesure 92 — 2:58</span></h4>
+      <pre class="tab">G|-3--3--3--3--3--3--3--3-|
+D|------------------------|
+A|------------------------|
+E|------------------------|</pre>
+      <p class="advice">Retour de la pulsation régulière, entrées plus syncopées jusqu'à 3:54.</p>
+    </div>
+    <div class="sec-row" data-inst="guitare">
+      <h4>Final Verse / Chorus build <span class="bar-ref">mesure 92 — 2:58</span></h4>
+      <pre class="tab">e|------------------------|
+B|------------------------|
+G|------------------------|
+D|------------------------|
+A|------------------------|
+E|-5--5--5--5--5--5--5--5-|</pre>
+      <p class="advice">Même position, attaques plus syncopées et plus courtes.</p>
+    </div>
+    <div class="sec-row" data-inst="violon">
+      <h4>Final Verse / Chorus build <span class="bar-ref">mesure 92 — 2:58</span></h4>
+      <p class="advice">Silencieux.</p>
+    </div>
+    <div class="sec-row" data-inst="synthe">
+      <h4>Final Verse / Chorus build <span class="bar-ref">mesure 92 — 2:58</span></h4>
+      <p class="chord-center">Centre tonal : <b>A</b></p>
+      <p class="advice">Nappe continue en soutien.</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="sec-row" data-inst="basse">
+      <h4>Pause rythmique <span class="bar-ref">mesure 120 — 3:54</span></h4>
+      <p class="advice">Série de courtes coupures rythmiques rapprochées — jouer les entrées par à-coups plutôt qu'en continu, à l'oreille sur cette section précise.</p>
+    </div>
+    <div class="sec-row" data-inst="guitare">
+      <h4>Pause rythmique <span class="bar-ref">mesure 120 — 3:54</span></h4>
+      <p class="advice">Suit les mêmes coupures rythmiques que la basse.</p>
+    </div>
+    <div class="sec-row" data-inst="violon">
+      <h4>Pause rythmique <span class="bar-ref">mesure 120 — 3:54</span></h4>
+      <p class="advice">Silencieux.</p>
+    </div>
+    <div class="sec-row" data-inst="synthe">
+      <h4>Pause rythmique <span class="bar-ref">mesure 120 — 3:54</span></h4>
+      <p class="chord-center">Centre tonal : <b>D</b></p>
+      <p class="advice">Nappe continue, seul soutien harmonique constant sur cette section.</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="sec-row" data-inst="basse">
+      <h4>Final Chorus / Outro <span class="bar-ref">mesure 128 — 4:09</span></h4>
+      <pre class="tab">G|-3--3--3--2-------------|
+D|------------0--0--0--0--|
+A|------------------------|
+E|------------------------|</pre>
+      <p class="advice">Alterne entre la corde de Sol et la corde de Ré à vide au fil des dernières phrases, jusqu'au fondu final vers 6:10.</p>
+    </div>
+    <div class="sec-row" data-inst="guitare">
+      <h4>Final Chorus / Outro <span class="bar-ref">mesure 128 — 4:09</span></h4>
+      <pre class="tab">e|------------------------|
+B|------------------------|
+G|------------------------|
+D|------------------------|
+A|------------------------|
+E|-5--5--5--5--5--5--5--5-|</pre>
+      <p class="advice">Power chord étouffé, même position, jusqu'au fondu final.</p>
+    </div>
+    <div class="sec-row" data-inst="violon">
+      <h4>Final Chorus / Outro <span class="bar-ref">mesure 128 — 4:09</span></h4>
+      <p class="advice">Silencieux.</p>
+    </div>
+    <div class="sec-row" data-inst="synthe">
+      <h4>Final Chorus / Outro <span class="bar-ref">mesure 128 — 4:09</span></h4>
+      <p class="chord-center">Centre tonal : <b>A</b></p>
+      <p class="advice">Nappe continue jusqu'au fondu final.</p>
+    </div>
+  </section>
+
+  <div class="tips-block">
+    <h4>Conseils généraux</h4>
+    <p class="advice">Basse et guitare jouent la même pulsation rythmique en octaves différentes — travailler d'abord la basse seule. Sur cette version anglaise, le violon n'intervient qu'à l'intro : pas besoin de le préparer pour le reste du morceau. La vraie difficulté ici est rythmique, pas mélodique — la pause de 3:54 à 4:09 demande de bien sentir les coupures courtes à l'oreille plutôt que de compter mécaniquement.</p>
+  </div>
+
+  <footer>www.trefleminotaure.com · © 2026 Trèfle &amp; Minotaure</footer>
+</div>
+
+<script>
+function setInst(btn, inst){
+  document.body.classList.remove("i-basse","i-guitare","i-violon","i-synthe");
+  document.body.classList.add("i-"+inst);
+  document.querySelectorAll(".instbtn").forEach(b=>b.classList.remove("active"));
+  btn.classList.add("active");
+}
+function setLevel(btn, lvl){
+  document.body.classList.toggle("pro", lvl==="pro");
+  document.querySelectorAll(".lvlbtn").forEach(b=>b.classList.remove("active"));
+  btn.classList.add("active");
+}
+</script>
+</body>
+</html>
