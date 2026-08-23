@@ -213,6 +213,45 @@
       "config": "A COMPLETER",
       "themes": [],
       "sensible": false
+    },
+    {
+      "id": "016",
+      "titre": { "fr": "Vaincu", "en": "Vanquished", "es": "Vencido" },
+      "soustitre": { "fr": "", "en": "", "es": "" },
+      "dossier": "016 vencido",
+      "style": "A COMPLETER",
+      "bpm": null,
+      "duree": "A COMPLETER",
+      "album": "A COMPLETER",
+      "config": "A COMPLETER",
+      "themes": [],
+      "sensible": false
+    },
+    {
+      "id": "017",
+      "titre": { "fr": "Sous le voile, la lumière", "en": "Under the Veil, the Light", "es": "Bajo el velo, la luz" },
+      "soustitre": { "fr": "", "en": "", "es": "" },
+      "dossier": "017 sous le voile la lumiere",
+      "style": "A COMPLETER",
+      "bpm": null,
+      "duree": "A COMPLETER",
+      "album": "A COMPLETER",
+      "config": "A COMPLETER",
+      "themes": [],
+      "sensible": false
+    },
+    {
+      "id": "018",
+      "titre": { "fr": "Les rêves portent le même visage", "en": "Dreams Wear the Same Face", "es": "Los sueños llevan el mismo rostro" },
+      "soustitre": { "fr": "", "en": "", "es": "" },
+      "dossier": "018 les reves portent le meme visage",
+      "style": "A COMPLETER",
+      "bpm": null,
+      "duree": "A COMPLETER",
+      "album": "A COMPLETER",
+      "config": "A COMPLETER",
+      "themes": [],
+      "sensible": false
     }
   ]
 }
