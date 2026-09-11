@@ -47,7 +47,7 @@
     },
     {
       "id": "003",
-      "titre": { "fr": "Tu vois papa", "en": "You See, Dad", "es": "¿Ves, papá?" },
+      "titre": { "fr": "Tu vois papa (L'héritage du vice)", "en": "You See, Dad (The Legacy of Vice)", "es": "¿Ves, papá? (La herencia del vicio)" },
       "soustitre": { "fr": "", "en": "", "es": "" },
       "dossier": "003 tu vois papa",
       "style": "A COMPLETER",
@@ -55,7 +55,7 @@
       "duree": "A COMPLETER",
       "album": "A COMPLETER",
       "config": "A COMPLETER",
-      "themes": [],
+      "themes": ["inceste", "violence conjugale", "idées suicidaires"],
       "sensible": true
     },
     {
@@ -224,12 +224,12 @@
       "duree": "A COMPLETER",
       "album": "A COMPLETER",
       "config": "A COMPLETER",
-      "themes": [],
+      "themes": ["solitude", "précarité", "injustice sociale"],
       "sensible": false
     },
     {
       "id": "017",
-      "titre": { "fr": "Sous le voile, la lumière", "en": "Under the Veil, the Light", "es": "Bajo el velo, la luz" },
+      "titre": { "fr": "Sous le voile, la lumière", "en": "I Saw Beneath a Veil... No More Light", "es": "Vi bajo un velo... Ya no hay luz" },
       "soustitre": { "fr": "", "en": "", "es": "" },
       "dossier": "017 sous le voile la lumiere",
       "style": "A COMPLETER",
@@ -237,8 +237,8 @@
       "duree": "A COMPLETER",
       "album": "A COMPLETER",
       "config": "A COMPLETER",
-      "themes": [],
-      "sensible": false
+      "themes": ["Afghanistan", "éducation", "liberté"],
+      "sensible": true
     },
     {
       "id": "018",
@@ -250,7 +250,7 @@
       "duree": "A COMPLETER",
       "album": "A COMPLETER",
       "config": "A COMPLETER",
-      "themes": [],
+      "themes": ["exil économique", "migration", "séparation familiale"],
       "sensible": false
     }
   ]
