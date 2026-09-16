@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>11-M — GHOSTS OF ATOCHA — Tablatures | tréfle.minotaure</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Cinzel:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root { --gold:#b8962e; --parchment:#f5ecd7; }
+  * { box-sizing:border-box; }
+  body { margin:0; background: radial-gradient(ellipse at center, #1c2038 0%, #10121c 70%, #08090f 100%); font-family:"Cormorant Garamond", serif; color:#2a1f10; padding:24px 12px 60px; }
+  .page { max-width:900px; margin:0 auto; background:var(--parchment); border:2px solid #4a5a8f; border-radius:10px; box-shadow:0 0 40px rgba(0,0,0,.6); padding:28px clamp(14px,4vw,44px); }
+  header { text-align:center; border-bottom:1px solid #4a5a8f; padding-bottom:16px; margin-bottom:18px; }
+  header h1 { font-family:"Cinzel", serif; font-size:1.5rem; margin:0 0 4px; }
+  .meta { font-size:.82rem; color:var(--gold); text-transform:uppercase; letter-spacing:.06em; }
+  .disclaimer { font-size:.78rem; opacity:.75; font-style:italic; text-align:center; margin:14px 0 20px; max-width:640px; margin-left:auto; margin-right:auto; }
+  .controls { display:flex; flex-wrap:wrap; gap:14px; justify-content:center; margin:18px 0 26px; }
+  button.instbtn, button.lvlbtn { font-family:"Cinzel", serif; font-size:.78rem; padding:7px 16px; border-radius:6px; border:1px solid #4a5a8f; background:#fff8ea; cursor:pointer; }
+  button.instbtn.active, button.lvlbtn.active { background:var(--gold); color:#fff; }
+  .sec-row { display:none; margin-bottom:18px; border-top:1px solid #c3cbe0; padding-top:10px; }
+  body.i-bass .sec-row[data-inst="bass"] { display:block; }
+  body.i-guitar .sec-row[data-inst="guitar"] { display:block; }
+  body.i-keys .sec-row[data-inst="keys"] { display:block; }
+  body.i-synth .sec-row[data-inst="synth"] { display:block; }
+  body.i-strings .sec-row[data-inst="strings"] { display:block; }
+  h4 { font-family:"Cinzel", serif; font-size:.95rem; margin:0 0 8px; color:#1c2038; }
+  .bar-ref { font-size:.72rem; color:var(--gold); font-weight:normal; margin-left:8px; }
+  pre.tab { font-family:"Courier New", monospace; font-size:.85rem; background:#efe2bf; border:1px solid #d8c79a; border-radius:6px; padding:10px 14px; overflow-x:auto; white-space:pre; margin:6px 0; max-width:100%; }
+  p.advice { font-size:.85rem; margin:4px 0 0; word-wrap:break-word; }
+  p.chord-center { font-size:.95rem; margin:6px 0 2px; }
+  body.pro .advice { display:none; }
+  footer { text-align:center; margin-top:30px; color:#3d4a70; font-size:.82rem; border-top:1px solid #c3cbe0; padding-top:14px; }
+  .tips-block { background:#efe2bf; border:1px solid #d8c79a; border-radius:8px; padding:14px 18px; margin:22px 0; font-size:.85rem; }
+  .tips-block h4 { margin-top:0; }
+  body.pro .tips-block { display:none; }
+</style>
+</head>
+<body class="i-bass">
+<div class="page">
+  <header>
+    <h1>11-M — GHOSTS OF ATOCHA — Tablatures</h1>
+    <div class="meta">Bajo, Guitarra nylon, Teclado, Sintetizador, Violín — 108 BPM — Gothic Folk Cinematic</div>
+  </header>
+
+  <p class="disclaimer">Documento generado por análisis de audio de los stems de Suno (onset detection + pYIN + chroma) — validar de oído antes de interpretar. Tempo medido sobre la mezcla completa.</p>
+
+  <div class="controls">
+    <button class="instbtn active" onclick="setInst(this,'bass')">🎸 Bajo</button><button class="instbtn" onclick="setInst(this,'guitar')">🎸 Guitarra nylon</button><button class="instbtn" onclick="setInst(this,'keys')">🎹 Teclado</button><button class="instbtn" onclick="setInst(this,'synth')">🎹 Sintetizador</button><button class="instbtn" onclick="setInst(this,'strings')">🎻 Violín</button>
+  </div>
+  <div class="controls">
+    <button class="lvlbtn active" onclick="setLevel(this,'tips')">Con consejos</button>
+    <button class="lvlbtn" onclick="setLevel(this,'pro')">Tablatura sola (Pro)</button>
+  </div>
+
+  <section class="sec"><div class="sec-row" data-inst="bass"><h4>Intro <span class="bar-ref">mesure 1 — 0:00</span></h4><p class="advice">Sección instrumental.</p></div></section><section class="sec"><div class="sec-row" data-inst="bass"><h4>Verse 1 <span class="bar-ref">mesure 5 — 0:09</span></h4><pre class="tab">G|-------------|
+D|-------------|
+A|-0-0-0-0-0-0-|
+E|-------------|</pre><p class="advice">Motivo hipnótico repetido — posición fija, pull-off/hammer-on para el efecto latido.</p></div><div class="sec-row" data-inst="guitar"><h4>Verse 1 <span class="bar-ref">mesure 5 — 0:09</span></h4><pre class="tab">e|---------------|
+B|---------------|
+G|---------------|
+D|---------------|
+A|-----0-0-3---0-|
+E|-0-0-------1---|</pre><p class="advice">Motivo hipnótico repetido — posición fija, pull-off/hammer-on para el efecto latido.</p></div><div class="sec-row" data-inst="keys"><h4>Verse 1 <span class="bar-ref">mesure 5 — 0:09</span></h4><p class="advice">Silencioso en esta sección.</p></div><div class="sec-row" data-inst="synth"><h4>Verse 1 <span class="bar-ref">mesure 5 — 0:09</span></h4><p class="advice">Silencioso en esta sección.</p></div><div class="sec-row" data-inst="strings"><h4>Verse 1 <span class="bar-ref">mesure 5 — 0:09</span></h4><p class="chord-center">Acorde : <b>Am</b></p><p class="advice">Colchón/acorde sostenido, atmósfera melancólica constante.</p></div></section><section class="sec"><div class="sec-row" data-inst="bass"><h4>Verse 2 <span class="bar-ref">mesure 15 — 0:32</span></h4><pre class="tab">G|---|
+D|---|
+A|-0-|
+E|---|</pre><p class="advice">Motivo hipnótico repetido — posición fija, pull-off/hammer-on para el efecto latido.</p></div><div class="sec-row" data-inst="guitar"><h4>Verse 2 <span class="bar-ref">mesure 15 — 0:32</span></h4><pre class="tab">e|-----------------|
+B|-----------------|
+G|-----------------|
+D|-----------------|
+A|-0-0-0-----------|
+E|-------0-0-3-0-0-|</pre><p class="advice">Motivo hipnótico repetido — posición fija, pull-off/hammer-on para el efecto latido.</p></div><div class="sec-row" data-inst="keys"><h4>Verse 2 <span class="bar-ref">mesure 15 — 0:32</span></h4><p class="advice">Silencioso en esta sección.</p></div><div class="sec-row" data-inst="synth"><h4>Verse 2 <span class="bar-ref">mesure 15 — 0:32</span></h4><p class="advice">Silencioso en esta sección.</p></div><div class="sec-row" data-inst="strings"><h4>Verse 2 <span class="bar-ref">mesure 15 — 0:32</span></h4><p class="chord-center">Acorde : <b>Em</b></p><p class="advice">Colchón/acorde sostenido, atmósfera melancólica constante.</p></div></section><section class="sec"><div class="sec-row" data-inst="bass"><h4>Chorus <span class="bar-ref">mesure 26 — 0:56</span></h4><pre class="tab">G|-----------------|
+D|-----------------|
+A|-0-0-0-0-0-------|
+E|-----------0-0-0-|</pre><p class="advice">Motivo hipnótico repetido — posición fija, pull-off/hammer-on para el efecto latido.</p></div><div class="sec-row" data-inst="guitar"><h4>Chorus <span class="bar-ref">mesure 26 — 0:56</span></h4><pre class="tab">e|-----------------|
+B|-----------------|
+G|-----------------|
+D|-----------------|
+A|-0-0-0-0---0-0-0-|
+E|---------4-------|</pre><p class="advice">Motivo hipnótico repetido — posición fija, pull-off/hammer-on para el efecto latido.</p></div><div class="sec-row" data-inst="keys"><h4>Chorus <span class="bar-ref">mesure 26 — 0:56</span></h4><p class="chord-center">Acorde : <b>A</b></p><p class="advice">Colchón/acorde sostenido, atmósfera melancólica constante.</p></div><div class="sec-row" data-inst="synth"><h4>Chorus <span class="bar-ref">mesure 26 — 0:56</span></h4><p class="chord-center">Acorde : <b>Am</b></p><p class="advice">Colchón/acorde sostenido, atmósfera melancólica constante.</p></div><div class="sec-row" data-inst="strings"><h4>Chorus <span class="bar-ref">mesure 26 — 0:56</span></h4><p class="advice">Silencioso en esta sección.</p></div></section><section class="sec"><div class="sec-row" data-inst="bass"><h4>Refrain <span class="bar-ref">mesure 36 — 1:18</span></h4><pre class="tab">G|-----------------|
+D|-----------------|
+A|---0-0-------0-0-|
+E|-0-----0-0-0-----|</pre><p class="advice">Motivo hipnótico repetido — posición fija, pull-off/hammer-on para el efecto latido.</p></div><div class="sec-row" data-inst="guitar"><h4>Refrain <span class="bar-ref">mesure 36 — 1:18</span></h4><pre class="tab">e|---------------|
+B|---------------|
+G|---------------|
+D|---------------|
+A|---------------|
+E|-0-0-0-0-0-0-0-|</pre><p class="advice">Motivo hipnótico repetido — posición fija, pull-off/hammer-on para el efecto latido.</p></div><div class="sec-row" data-inst="keys"><h4>Refrain <span class="bar-ref">mesure 36 — 1:18</span></h4><p class="chord-center">Acorde : <b>A</b></p><p class="advice">Colchón/acorde sostenido, atmósfera melancólica constante.</p></div><div class="sec-row" data-inst="synth"><h4>Refrain <span class="bar-ref">mesure 36 — 1:18</span></h4><p class="chord-center">Acorde : <b>Am</b></p><p class="advice">Colchón/acorde sostenido, atmósfera melancólica constante.</p></div><div class="sec-row" data-inst="strings"><h4>Refrain <span class="bar-ref">mesure 36 — 1:18</span></h4><p class="advice">Silencioso en esta sección.</p></div></section><section class="sec"><div class="sec-row" data-inst="bass"><h4>Ghost Voice <span class="bar-ref">mesure 45 — 1:38</span></h4><p class="advice">Silencioso en esta sección.</p></div><div class="sec-row" data-inst="guitar"><h4>Ghost Voice <span class="bar-ref">mesure 45 — 1:38</span></h4><pre class="tab">e|-----------------|
+B|-----------------|
+G|-----------------|
+D|---------------0-|
+A|---0-0-2-2-3-3---|
+E|-0---------------|</pre><p class="advice">Motivo hipnótico repetido — posición fija, pull-off/hammer-on para el efecto latido.</p></div><div class="sec-row" data-inst="keys"><h4>Ghost Voice <span class="bar-ref">mesure 45 — 1:38</span></h4><p class="advice">Silencioso en esta sección.</p></div><div class="sec-row" data-inst="synth"><h4>Ghost Voice <span class="bar-ref">mesure 45 — 1:38</span></h4><p class="chord-center">Acorde : <b>Em</b></p><p class="advice">Colchón/acorde sostenido, atmósfera melancólica constante.</p></div><div class="sec-row" data-inst="strings"><h4>Ghost Voice <span class="bar-ref">mesure 45 — 1:38</span></h4><p class="advice">Silencioso en esta sección.</p></div></section><section class="sec"><div class="sec-row" data-inst="bass"><h4>Verse 3 <span class="bar-ref">mesure 48 — 1:46</span></h4><pre class="tab">G|-----------------|
+D|-----------------|
+A|-0-0-0---0-------|
+E|-------3---0-0-0-|</pre><p class="advice">Motivo hipnótico repetido — posición fija, pull-off/hammer-on para el efecto latido.</p></div><div class="sec-row" data-inst="guitar"><h4>Verse 3 <span class="bar-ref">mesure 48 — 1:46</span></h4><pre class="tab">e|-0-0-0-----------|
+B|-------3-3-3-3-1-|
+G|-----------------|
+D|-----------------|
+A|-----------------|
+E|-----------------|</pre><p class="advice">Motivo hipnótico repetido — posición fija, pull-off/hammer-on para el efecto latido.</p></div><div class="sec-row" data-inst="keys"><h4>Verse 3 <span class="bar-ref">mesure 48 — 1:46</span></h4><p class="advice">Silencioso en esta sección.</p></div><div class="sec-row" data-inst="synth"><h4>Verse 3 <span class="bar-ref">mesure 48 — 1:46</span></h4><p class="chord-center">Acorde : <b>Am</b></p><p class="advice">Colchón/acorde sostenido, atmósfera melancólica constante.</p></div><div class="sec-row" data-inst="strings"><h4>Verse 3 <span class="bar-ref">mesure 48 — 1:46</span></h4><p class="chord-center">Acorde : <b>C#m</b></p><p class="advice">Colchón/acorde sostenido, atmósfera melancólica constante.</p></div></section><section class="sec"><div class="sec-row" data-inst="bass"><h4>Verse 4 <span class="bar-ref">mesure 60 — 2:12</span></h4><pre class="tab">G|---------------|
+D|---------------|
+A|---------0-0-0-|
+E|-0-0-0-0-------|</pre><p class="advice">Motivo hipnótico repetido — posición fija, pull-off/hammer-on para el efecto latido.</p></div><div class="sec-row" data-inst="guitar"><h4>Verse 4 <span class="bar-ref">mesure 60 — 2:12</span></h4><pre class="tab">e|-----------------|
+B|-----------------|
+G|-----------------|
+D|-----------------|
+A|-----------------|
+E|-0-0-0-3-0-0-0-3-|</pre><p class="advice">Motivo hipnótico repetido — posición fija, pull-off/hammer-on para el efecto latido.</p></div><div class="sec-row" data-inst="keys"><h4>Verse 4 <span class="bar-ref">mesure 60 — 2:12</span></h4><p class="advice">Silencioso en esta sección.</p></div><div class="sec-row" data-inst="synth"><h4>Verse 4 <span class="bar-ref">mesure 60 — 2:12</span></h4><p class="chord-center">Acorde : <b>A</b></p><p class="advice">Colchón/acorde sostenido, atmósfera melancólica constante.</p></div><div class="sec-row" data-inst="strings"><h4>Verse 4 <span class="bar-ref">mesure 60 — 2:12</span></h4><p class="advice">Silencioso en esta sección.</p></div></section><section class="sec"><div class="sec-row" data-inst="bass"><h4>Bridge (Violin Solo) <span class="bar-ref">mesure 70 — 2:34</span></h4><p class="advice">Sección instrumental.</p></div></section><section class="sec"><div class="sec-row" data-inst="bass"><h4>Ghost Voice <span class="bar-ref">mesure 82 — 3:01</span></h4><pre class="tab">G|---------------|
+D|---------------|
+A|-0-0-0-0-0-0-0-|
+E|---------------|</pre><p class="advice">Motivo hipnótico repetido — posición fija, pull-off/hammer-on para el efecto latido.</p></div><div class="sec-row" data-inst="guitar"><h4>Ghost Voice <span class="bar-ref">mesure 82 — 3:01</span></h4><pre class="tab">e|-----------------|
+B|-----------------|
+G|-1-1-------------|
+D|-----------------|
+A|-----0-0-0-0-0-0-|
+E|-----------------|</pre><p class="advice">Motivo hipnótico repetido — posición fija, pull-off/hammer-on para el efecto latido.</p></div><div class="sec-row" data-inst="keys"><h4>Ghost Voice <span class="bar-ref">mesure 82 — 3:01</span></h4><p class="advice">Silencioso en esta sección.</p></div><div class="sec-row" data-inst="synth"><h4>Ghost Voice <span class="bar-ref">mesure 82 — 3:01</span></h4><p class="chord-center">Acorde : <b>Am</b></p><p class="advice">Colchón/acorde sostenido, atmósfera melancólica constante.</p></div><div class="sec-row" data-inst="strings"><h4>Ghost Voice <span class="bar-ref">mesure 82 — 3:01</span></h4><p class="advice">Silencioso en esta sección.</p></div></section><section class="sec"><div class="sec-row" data-inst="bass"><h4>Chorus <span class="bar-ref">mesure 88 — 3:15</span></h4><pre class="tab">G|-----------------|
+D|-----------------|
+A|-----------------|
+E|-0-0-0-0-0-0-0-0-|</pre><p class="advice">Motivo hipnótico repetido — posición fija, pull-off/hammer-on para el efecto latido.</p></div><div class="sec-row" data-inst="guitar"><h4>Chorus <span class="bar-ref">mesure 88 — 3:15</span></h4><pre class="tab">e|---------------|
+B|---------------|
+G|---------------|
+D|---------------|
+A|---------------|
+E|-0-0-0-0-0-0-0-|</pre><p class="advice">Motivo hipnótico repetido — posición fija, pull-off/hammer-on para el efecto latido.</p></div><div class="sec-row" data-inst="keys"><h4>Chorus <span class="bar-ref">mesure 88 — 3:15</span></h4><p class="advice">Silencioso en esta sección.</p></div><div class="sec-row" data-inst="synth"><h4>Chorus <span class="bar-ref">mesure 88 — 3:15</span></h4><p class="chord-center">Acorde : <b>Am</b></p><p class="advice">Colchón/acorde sostenido, atmósfera melancólica constante.</p></div><div class="sec-row" data-inst="strings"><h4>Chorus <span class="bar-ref">mesure 88 — 3:15</span></h4><p class="advice">Silencioso en esta sección.</p></div></section><section class="sec"><div class="sec-row" data-inst="bass"><h4>Verse 5 <span class="bar-ref">mesure 98 — 3:37</span></h4><pre class="tab">G|---------------|
+D|---------------|
+A|-0-0-0-0-0-0-0-|
+E|---------------|</pre><p class="advice">Motivo hipnótico repetido — posición fija, pull-off/hammer-on para el efecto latido.</p></div><div class="sec-row" data-inst="guitar"><h4>Verse 5 <span class="bar-ref">mesure 98 — 3:37</span></h4><pre class="tab">e|-------------|
+B|-------------|
+G|-------------|
+D|-----------0-|
+A|-0-0-2-2-3---|
+E|-------------|</pre><p class="advice">Motivo hipnótico repetido — posición fija, pull-off/hammer-on para el efecto latido.</p></div><div class="sec-row" data-inst="keys"><h4>Verse 5 <span class="bar-ref">mesure 98 — 3:37</span></h4><p class="advice">Silencioso en esta sección.</p></div><div class="sec-row" data-inst="synth"><h4>Verse 5 <span class="bar-ref">mesure 98 — 3:37</span></h4><p class="chord-center">Acorde : <b>A</b></p><p class="advice">Colchón/acorde sostenido, atmósfera melancólica constante.</p></div><div class="sec-row" data-inst="strings"><h4>Verse 5 <span class="bar-ref">mesure 98 — 3:37</span></h4><p class="advice">Silencioso en esta sección.</p></div></section><section class="sec"><div class="sec-row" data-inst="bass"><h4>Outro <span class="bar-ref">mesure 108 — 3:58</span></h4><pre class="tab">G|-----------------|
+D|-----------------|
+A|-0-0-0-0-0-------|
+E|-----------0-0-0-|</pre><p class="advice">Motivo hipnótico repetido — posición fija, pull-off/hammer-on para el efecto latido.</p></div><div class="sec-row" data-inst="guitar"><h4>Outro <span class="bar-ref">mesure 108 — 3:58</span></h4><pre class="tab">e|---------|
+B|---------|
+G|---------|
+D|---------|
+A|-0-0-----|
+E|-----0-0-|</pre><p class="advice">Motivo hipnótico repetido — posición fija, pull-off/hammer-on para el efecto latido.</p></div><div class="sec-row" data-inst="keys"><h4>Outro <span class="bar-ref">mesure 108 — 3:58</span></h4><p class="advice">Silencioso en esta sección.</p></div><div class="sec-row" data-inst="synth"><h4>Outro <span class="bar-ref">mesure 108 — 3:58</span></h4><p class="chord-center">Acorde : <b>Am</b></p><p class="advice">Colchón/acorde sostenido, atmósfera melancólica constante.</p></div><div class="sec-row" data-inst="strings"><h4>Outro <span class="bar-ref">mesure 108 — 3:58</span></h4><p class="advice">Silencioso en esta sección.</p></div></section><section class="sec"><div class="sec-row" data-inst="bass"><h4>Ghost Voice (fading) <span class="bar-ref">mesure 114 — 4:13</span></h4><pre class="tab">G|-----------------|
+D|-----------------|
+A|---0-0-0-0-0-0-0-|
+E|-0---------------|</pre><p class="advice">Motivo hipnótico repetido — posición fija, pull-off/hammer-on para el efecto latido.</p></div><div class="sec-row" data-inst="guitar"><h4>Ghost Voice (fading) <span class="bar-ref">mesure 114 — 4:13</span></h4><pre class="tab">e|-------------|
+B|-------------|
+G|-1-1---------|
+D|-------------|
+A|-----0-0-0-0-|
+E|-------------|</pre><p class="advice">Motivo hipnótico repetido — posición fija, pull-off/hammer-on para el efecto latido.</p></div><div class="sec-row" data-inst="keys"><h4>Ghost Voice (fading) <span class="bar-ref">mesure 114 — 4:13</span></h4><p class="advice">Silencioso en esta sección.</p></div><div class="sec-row" data-inst="synth"><h4>Ghost Voice (fading) <span class="bar-ref">mesure 114 — 4:13</span></h4><p class="chord-center">Acorde : <b>A</b></p><p class="advice">Colchón/acorde sostenido, atmósfera melancólica constante.</p></div><div class="sec-row" data-inst="strings"><h4>Ghost Voice (fading) <span class="bar-ref">mesure 114 — 4:13</span></h4><p class="advice">Silencioso en esta sección.</p></div></section><section class="sec"><div class="sec-row" data-inst="bass"><h4>End <span class="bar-ref">mesure 121 — 4:28</span></h4><p class="advice">Sección instrumental.</p></div></section>
+
+  <div class="tips-block">
+    <h4>Consejos generales</h4>
+    <p class="advice">Motivo hipnótico repetido — posición fija, pull-off/hammer-on para el efecto latido. Colchón/acorde sostenido, atmósfera melancólica constante.</p>
+  </div>
+
+  <footer>www.trefleminotaure.com · © 2026 Trèfle &amp; Minotaure</footer>
+</div>
+
+<script>
+function setInst(btn, inst){
+  document.body.className = document.body.className.replace(/i-[a-z]+/g, '').trim();
+  document.body.classList.add("i-"+inst);
+  document.querySelectorAll(".instbtn").forEach(b=>b.classList.remove("active"));
+  btn.classList.add("active");
+}
+function setLevel(btn, lvl){
+  document.body.classList.toggle("pro", lvl==="pro");
+  document.querySelectorAll(".lvlbtn").forEach(b=>b.classList.remove("active"));
+  btn.classList.add("active");
+}
+</script>
+</body>
+</html>

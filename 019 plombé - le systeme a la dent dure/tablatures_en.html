@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>DRILL &amp; BILL — Tablatures | tréfle.minotaure</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Cinzel:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root { --gold:#b8962e; --parchment:#f5ecd7; }
+  * { box-sizing:border-box; }
+  body { margin:0; background: radial-gradient(ellipse at center, #1c2038 0%, #10121c 70%, #08090f 100%); font-family:"Cormorant Garamond", serif; color:#2a1f10; padding:24px 12px 60px; }
+  .page { max-width:900px; margin:0 auto; background:var(--parchment); border:2px solid #4a5a8f; border-radius:10px; box-shadow:0 0 40px rgba(0,0,0,.6); padding:28px clamp(14px,4vw,44px); }
+  header { text-align:center; border-bottom:1px solid #4a5a8f; padding-bottom:16px; margin-bottom:18px; }
+  header h1 { font-family:"Cinzel", serif; font-size:1.5rem; margin:0 0 4px; }
+  .meta { font-size:.82rem; color:var(--gold); text-transform:uppercase; letter-spacing:.06em; }
+  .disclaimer { font-size:.78rem; opacity:.75; font-style:italic; text-align:center; margin:14px 0 20px; max-width:640px; margin-left:auto; margin-right:auto; }
+  .controls { display:flex; flex-wrap:wrap; gap:14px; justify-content:center; margin:18px 0 26px; }
+  button.instbtn, button.lvlbtn { font-family:"Cinzel", serif; font-size:.78rem; padding:7px 16px; border-radius:6px; border:1px solid #4a5a8f; background:#fff8ea; cursor:pointer; }
+  button.instbtn.active, button.lvlbtn.active { background:var(--gold); color:#fff; }
+  .sec-row { display:none; margin-bottom:18px; border-top:1px solid #c3cbe0; padding-top:10px; }
+  body.i-basse .sec-row[data-inst="basse"] { display:block; }
+  body.i-guitare .sec-row[data-inst="guitare"] { display:block; }
+  body.i-violon .sec-row[data-inst="violon"] { display:block; }
+  body.i-synthe .sec-row[data-inst="synthe"] { display:block; }
+  h4 { font-family:"Cinzel", serif; font-size:.95rem; margin:0 0 8px; color:#1c2038; }
+  .bar-ref { font-size:.72rem; color:var(--gold); font-weight:normal; margin-left:8px; }
+  pre.tab { font-family:"Courier New", monospace; font-size:.85rem; background:#efe2bf; border:1px solid #d8c79a; border-radius:6px; padding:10px 14px; overflow-x:auto; white-space:pre; margin:6px 0; max-width:100%; }
+  p.advice { font-size:.85rem; margin:4px 0 0; word-wrap:break-word; }
+  p.chord-center { font-size:.95rem; margin:6px 0 2px; }
+  body.pro .advice { display:none; }
+  footer { text-align:center; margin-top:30px; color:#3d4a70; font-size:.82rem; border-top:1px solid #c3cbe0; padding-top:14px; }
+  .tips-block { background:#efe2bf; border:1px solid #d8c79a; border-radius:8px; padding:14px 18px; margin:22px 0; font-size:.85rem; }
+  .tips-block h4 { margin-top:0; }
+  body.pro .tips-block { display:none; }
+</style>
+</head>
+<body class="i-basse">
+<div class="page">
+  <header>
+    <h1>DRILL &amp; BILL — Tablatures</h1>
+    <div class="meta">Bass · Guitar · Violin · Synth — 129 BPM — Electro Dance-Rock / Duo Satire</div>
+  </header>
+
+  <p class="disclaimer">Document generated from Suno stem audio analysis (onset detection + pYIN + chroma) — verify by ear before performing. Tempo measured at 129 BPM on the full mix. Strings (violin) are nearly inaudible throughout the track (under 10% of the runtime, below extraction threshold) — not included as a separate button on any of the 3 versions.</p>
+
+  <div class="controls">
+    <button class="instbtn active" onclick="setInst(this,'basse')">🎸 Basse</button>
+    <button class="instbtn" onclick="setInst(this,'guitare')">🎸 Guitare</button>
+    <button class="instbtn" onclick="setInst(this,'violon')">🎻 Violon</button>
+    <button class="instbtn" onclick="setInst(this,'synthe')">🎹 Synthé</button>
+  </div>
+  <div class="controls">
+    <button class="lvlbtn active" onclick="setLevel(this,'tips')">Avec conseils</button>
+    <button class="lvlbtn" onclick="setLevel(this,'pro')">Tablature seule (Pro)</button>
+  </div>
+
+  <section class="sec">
+    <div class="sec-row" data-inst="basse">
+      <h4>Intro <span class="bar-ref">mesure 1 — 0:00</span></h4>
+      <pre class="tab">G|------------------------|
+D|------------------------|
+A|----3-----3-----4-----4-|
+E|-1-----4-----4-----1----|</pre>
+      <p class="advice">Hypnotic looping riff for this section — fixed position, steady picking or pull-offs/hammer-ons for smoothness.</p>
+    </div>
+    <div class="sec-row" data-inst="guitare">
+      <h4>Intro <span class="bar-ref">mesure 1 — 0:00</span></h4>
+      <pre class="tab">e|------------------------|
+B|------------------------|
+G|------------------------|
+D|------------------------|
+A|------------------------|
+E|-1-1-1-1-1-1-1-1-|</pre>
+      <p class="advice">Palm-muted power chord, same rhythmic pulse as the bass.</p>
+    </div>
+    <div class="sec-row" data-inst="violon">
+      <h4>Intro <span class="bar-ref">mesure 1 — 0:00</span></h4>
+      <p class="advice">Silent through this section.</p>
+    </div>
+    <div class="sec-row" data-inst="synthe">
+      <h4>Intro <span class="bar-ref">mesure 1 — 0:00</span></h4>
+      <p class="chord-center">Centre tonal : <b>Fm</b></p>
+      <p class="advice">Repetitive pad/hook, constant support through this section.</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="sec-row" data-inst="basse">
+      <h4>Verse 1 <span class="bar-ref">mesure 15 — 0:26</span></h4>
+      <pre class="tab">G|------------------------|
+D|------------------------|
+A|----3-----4-----4-----4-|
+E|-1-----1-----1-----1----|</pre>
+      <p class="advice">Hypnotic looping riff for this section — fixed position, steady picking or pull-offs/hammer-ons for smoothness.</p>
+    </div>
+    <div class="sec-row" data-inst="guitare">
+      <h4>Verse 1 <span class="bar-ref">mesure 15 — 0:26</span></h4>
+      <p class="advice">Silent through this section.</p>
+    </div>
+    <div class="sec-row" data-inst="violon">
+      <h4>Verse 1 <span class="bar-ref">mesure 15 — 0:26</span></h4>
+      <p class="advice">Silent through this section.</p>
+    </div>
+    <div class="sec-row" data-inst="synthe">
+      <h4>Verse 1 <span class="bar-ref">mesure 15 — 0:26</span></h4>
+      <p class="chord-center">Centre tonal : <b>Fm</b></p>
+      <p class="advice">Repetitive pad/hook, constant support through this section.</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="sec-row" data-inst="basse">
+      <h4>Chorus <span class="bar-ref">mesure 36 — 1:05</span></h4>
+      <pre class="tab">G|------------------------|
+D|------------------------|
+A|-4-----4----------------|
+E|----4-----4--0--4--0--1-|</pre>
+      <p class="advice">Hypnotic looping riff for this section — fixed position, steady picking or pull-offs/hammer-ons for smoothness.</p>
+    </div>
+    <div class="sec-row" data-inst="guitare">
+      <h4>Chorus <span class="bar-ref">mesure 36 — 1:05</span></h4>
+      <pre class="tab">e|------------------------|
+B|------------------------|
+G|------------------------|
+D|------------------------|
+A|------------------------|
+E|-4-4-4-4-4-4-4-4-|</pre>
+      <p class="advice">Palm-muted power chord, same rhythmic pulse as the bass.</p>
+    </div>
+    <div class="sec-row" data-inst="violon">
+      <h4>Chorus <span class="bar-ref">mesure 36 — 1:05</span></h4>
+      <p class="advice">Silent through this section.</p>
+    </div>
+    <div class="sec-row" data-inst="synthe">
+      <h4>Chorus <span class="bar-ref">mesure 36 — 1:05</span></h4>
+      <p class="chord-center">Centre tonal : <b>Fm</b></p>
+      <p class="advice">Repetitive pad/hook, constant support through this section.</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="sec-row" data-inst="basse">
+      <h4>Verse 2 <span class="bar-ref">mesure 45 — 1:21</span></h4>
+      <pre class="tab">G|------------------------|
+D|------------------------|
+A|----3-----3-----3-----3-|
+E|-4-----4-----4-----4----|</pre>
+      <p class="advice">Hypnotic looping riff for this section — fixed position, steady picking or pull-offs/hammer-ons for smoothness.</p>
+    </div>
+    <div class="sec-row" data-inst="guitare">
+      <h4>Verse 2 <span class="bar-ref">mesure 45 — 1:21</span></h4>
+      <p class="advice">Silent through this section.</p>
+    </div>
+    <div class="sec-row" data-inst="violon">
+      <h4>Verse 2 <span class="bar-ref">mesure 45 — 1:21</span></h4>
+      <p class="advice">Silent through this section.</p>
+    </div>
+    <div class="sec-row" data-inst="synthe">
+      <h4>Verse 2 <span class="bar-ref">mesure 45 — 1:21</span></h4>
+      <p class="chord-center">Centre tonal : <b>Fm</b></p>
+      <p class="advice">Repetitive pad/hook, constant support through this section.</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="sec-row" data-inst="basse">
+      <h4>Bridge / Break <span class="bar-ref">mesure 59 — 1:47</span></h4>
+      <pre class="tab">G|------------------------|
+D|------------------------|
+A|----3-------------------|
+E|-4-----1--4--1--4--1--3-|</pre>
+      <p class="advice">Hypnotic looping riff for this section — fixed position, steady picking or pull-offs/hammer-ons for smoothness.</p>
+    </div>
+    <div class="sec-row" data-inst="guitare">
+      <h4>Bridge / Break <span class="bar-ref">mesure 59 — 1:47</span></h4>
+      <pre class="tab">e|------------------------|
+B|------------------------|
+G|------------------------|
+D|------------------------|
+A|-6-6-6-6-6-6-6-6-|
+E|------------------------|</pre>
+      <p class="advice">Palm-muted power chord, same rhythmic pulse as the bass.</p>
+    </div>
+    <div class="sec-row" data-inst="violon">
+      <h4>Bridge / Break <span class="bar-ref">mesure 59 — 1:47</span></h4>
+      <p class="advice">Silent through this section.</p>
+    </div>
+    <div class="sec-row" data-inst="synthe">
+      <h4>Bridge / Break <span class="bar-ref">mesure 59 — 1:47</span></h4>
+      <p class="chord-center">Centre tonal : <b>G#</b></p>
+      <p class="advice">Repetitive pad/hook, constant support through this section.</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="sec-row" data-inst="basse">
+      <h4>Verse 3 (climax) <span class="bar-ref">mesure 69 — 2:06</span></h4>
+      <pre class="tab">G|------------------------|
+D|------------------------|
+A|----4-----4-----4-----4-|
+E|-1-----1-----1-----1----|</pre>
+      <p class="advice">Hypnotic looping riff for this section — fixed position, steady picking or pull-offs/hammer-ons for smoothness.</p>
+    </div>
+    <div class="sec-row" data-inst="guitare">
+      <h4>Verse 3 (climax) <span class="bar-ref">mesure 69 — 2:06</span></h4>
+      <pre class="tab">e|------------------------|
+B|------------------------|
+G|------------------------|
+D|------------------------|
+A|-1-1-1-1-1-1-1-1-|
+E|------------------------|</pre>
+      <p class="advice">Palm-muted power chord, same rhythmic pulse as the bass.</p>
+    </div>
+    <div class="sec-row" data-inst="violon">
+      <h4>Verse 3 (climax) <span class="bar-ref">mesure 69 — 2:06</span></h4>
+      <p class="advice">Silent through this section.</p>
+    </div>
+    <div class="sec-row" data-inst="synthe">
+      <h4>Verse 3 (climax) <span class="bar-ref">mesure 69 — 2:06</span></h4>
+      <p class="chord-center">Centre tonal : <b>Fm</b></p>
+      <p class="advice">Repetitive pad/hook, constant support through this section.</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="sec-row" data-inst="basse">
+      <h4>Final Chorus <span class="bar-ref">mesure 101 — 3:05</span></h4>
+      <pre class="tab">G|------------------------|
+D|------------------------|
+A|----------------------4-|
+E|-2--0--4--1--4--1--4----|</pre>
+      <p class="advice">Hypnotic looping riff for this section — fixed position, steady picking or pull-offs/hammer-ons for smoothness.</p>
+    </div>
+    <div class="sec-row" data-inst="guitare">
+      <h4>Final Chorus <span class="bar-ref">mesure 101 — 3:05</span></h4>
+      <pre class="tab">e|------------------------|
+B|------------------------|
+G|------------------------|
+D|------------------------|
+A|------------------------|
+E|-4-4-4-4-4-4-4-4-|</pre>
+      <p class="advice">Palm-muted power chord, same rhythmic pulse as the bass.</p>
+    </div>
+    <div class="sec-row" data-inst="violon">
+      <h4>Final Chorus <span class="bar-ref">mesure 101 — 3:05</span></h4>
+      <p class="advice">Silent through this section.</p>
+    </div>
+    <div class="sec-row" data-inst="synthe">
+      <h4>Final Chorus <span class="bar-ref">mesure 101 — 3:05</span></h4>
+      <p class="chord-center">Centre tonal : <b>Fm</b></p>
+      <p class="advice">Repetitive pad/hook, constant support through this section.</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="sec-row" data-inst="basse">
+      <h4>Outro (guitar/sax solo) <span class="bar-ref">mesure 116 — 3:33</span></h4>
+      <pre class="tab">G|------------------|
+D|------------------|
+A|------------------|
+E|-1--4--0--4--0--1-|</pre>
+      <p class="advice">Hypnotic looping riff for this section — fixed position, steady picking or pull-offs/hammer-ons for smoothness.</p>
+    </div>
+    <div class="sec-row" data-inst="guitare">
+      <h4>Outro (guitar/sax solo) <span class="bar-ref">mesure 116 — 3:33</span></h4>
+      <pre class="tab">e|------------------------|
+B|------------------------|
+G|------------------------|
+D|------------------------|
+A|-3-3-3-3-3-3-3-3-|
+E|------------------------|</pre>
+      <p class="advice">Palm-muted power chord, same rhythmic pulse as the bass.</p>
+    </div>
+    <div class="sec-row" data-inst="violon">
+      <h4>Outro (guitar/sax solo) <span class="bar-ref">mesure 116 — 3:33</span></h4>
+      <p class="advice">Silent through this section.</p>
+    </div>
+    <div class="sec-row" data-inst="synthe">
+      <h4>Outro (guitar/sax solo) <span class="bar-ref">mesure 116 — 3:33</span></h4>
+      <p class="chord-center">Centre tonal : <b>Fm</b></p>
+      <p class="advice">Repetitive pad/hook, constant support through this section.</p>
+    </div>
+  </section>
+
+  <div class="tips-block">
+    <h4>Conseils généraux</h4>
+    <p class="advice">The bass carries the track's hypnotic DNA: a short repeating riff that loops within each section, sometimes shifting from one section to the next — practice section by section rather than learning one riff for the whole song. Guitar follows the same rhythmic pulse as the bass, low register, palm-muted. The synth carries the main hook (saturated 'bip-bip'): stay repetitive and insistent rather than adding variation.</p>
+  </div>
+
+  <footer>www.trefleminotaure.com · © 2026 Trèfle &amp; Minotaure</footer>
+</div>
+
+<script>
+function setInst(btn, inst){
+  document.body.classList.remove("i-basse","i-guitare","i-violon","i-synthe");
+  document.body.classList.add("i-"+inst);
+  document.querySelectorAll(".instbtn").forEach(b=>b.classList.remove("active"));
+  btn.classList.add("active");
+}
+function setLevel(btn, lvl){
+  document.body.classList.toggle("pro", lvl==="pro");
+  document.querySelectorAll(".lvlbtn").forEach(b=>b.classList.remove("active"));
+  btn.classList.add("active");
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>PLOMBÉ — Le système a la dent dure — Paroles</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Cinzel:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:#10121c; background-image: radial-gradient(circle at 50% 0%, #1c2038, #08090f 80%); font-family:'Cormorant Garamond', serif; }
+  .page { max-width:960px; margin:30px auto; background:#f5ecd7; border:3px solid #4a5a8f; border-radius:10px; padding:30px clamp(14px,4vw,44px) 50px; }
+  header { text-align:center; margin-bottom:20px; }
+  header h1 { font-family:'Cinzel', serif; color:#1c2038; font-size:1.7rem; margin-bottom:4px; }
+  .meta { color:#4a5a8f; font-size:.95rem; }
+  .controls { display:flex; justify-content:center; gap:24px; flex-wrap:wrap; margin:18px 0 26px; }
+  .ctrl-group { display:flex; gap:6px; align-items:center; }
+  .ctrl-group label { font-size:.85rem; color:#3d4a70; margin-right:4px; }
+  button.langbtn, button.speedbtn { font-family:'Cinzel', serif; font-size:.8rem; padding:6px 14px; border-radius:6px; border:1px solid #8a9ac9; background:#fff; cursor:pointer; }
+  button.langbtn.active, button.speedbtn.active { background:#2e3f7a; color:#fff; }
+  .sec { margin-bottom:26px; border-top:1px solid #c3cbe0; padding-top:14px; }
+  .sec-head { display:flex; align-items:center; gap:10px; margin-bottom:10px; flex-wrap:wrap; }
+  .section-label { font-family:'Cinzel', serif; font-weight:600; color:#1c2038; font-size:1rem; }
+  .voice-badge { font-size:.72rem; color:#fff; background:#b8962e; border-radius:10px; padding:2px 10px; }
+  .playbtn { margin-left:auto; border:none; background:#2e3f7a; color:#fff; border-radius:50%; width:30px; height:30px; cursor:pointer; font-size:.85rem; }
+  .tagrow { font-size:.78rem; font-style:italic; color:#b8962e; opacity:.85; margin:4px 0; }
+  .lyric-row { display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; margin-bottom:6px; font-size:1.15rem; font-style:italic; }
+  .lyric-row.ghost { opacity:.65; font-style:italic; }
+  .col { padding:4px 8px; border-radius:4px; }
+  .col.fr { background:#e8f0fc; }
+  .col.es { background:#f5ead5; }
+  .col.en { background:#fce8ec; }
+  body.show-fr .col.es, body.show-fr .col.en { display:none; }
+  body.show-fr .lyric-row { grid-template-columns:1fr; }
+  body.show-es .col.fr, body.show-es .col.en { display:none; }
+  body.show-es .lyric-row { grid-template-columns:1fr; }
+  body.show-en .col.fr, body.show-en .col.es { display:none; }
+  body.show-en .lyric-row { grid-template-columns:1fr; }
+  footer { text-align:center; margin-top:34px; color:#3d4a70; font-size:.85rem; border-top:1px solid #c3cbe0; padding-top:14px; }
+</style>
+</head>
+<body class="show-fr">
+<div class="page">
+  <header>
+    <h1>PLOMBÉ — Le système a la dent dure <span style="opacity:.5;">/ EMPASTADO — El sistema no perdona / DRILL &amp; BILL</span></h1>
+    <div class="meta">Electro Dance-Rock · Satire · 130 BPM · Trèfle &amp; Minotaure</div>
+  </header>
+
+  <div class="controls">
+    <div class="ctrl-group">
+      <label>Langue :</label>
+      <button class="langbtn" onclick="setLang('all')">Trilingue</button>
+      <button class="langbtn active" onclick="setLang('fr')">🇫🇷 Français</button>
+      <button class="langbtn" onclick="setLang('es')">🇪🇸 Español</button>
+      <button class="langbtn" onclick="setLang('en')">🇬🇧 English</button>
+    </div>
+    <div class="ctrl-group">
+      <label>Vitesse :</label>
+      <button class="speedbtn" onclick="setSpeed(0.7)">× 0.7</button>
+      <button class="speedbtn active" onclick="setSpeed(0.9)">× 0.9</button>
+      <button class="speedbtn" onclick="setSpeed(1.0)">× 1.0</button>
+    </div>
+  </div>
+
+<section class="sec" id="sec-intro">
+    <div class="sec-head">
+      <span class="section-label">Intro / Intro / Intro</span>
+      <span class="voice-badge">Minotaure</span>
+      <button class="playbtn" onclick="playSec('intro')">▶</button>
+    </div>
+<div class="tagrow">[Intro — full groove from first second]</div>
+<div class="lyric-row">
+      <div class="col fr">HOUA !</div>
+      <div class="col es">HOUA !</div>
+      <div class="col en">HOUA !</div>
+    </div>
+  </section><section class="sec" id="sec-couplet1">
+    <div class="sec-head">
+      <span class="section-label">Couplet 1 / Verso 1 / Verse 1</span>
+      <span class="voice-badge">Trèfle &amp; Minotaure</span>
+      <button class="playbtn" onclick="playSec('couplet1')">▶</button>
+    </div>
+<div class="tagrow">[Verse 1 — alternating duet]</div>
+<div class="lyric-row">
+      <div class="col fr">Chaque année je m&#x27;asseyais sur cette chaise —</div>
+      <div class="col es">Cada año me sentaba en esa silla —</div>
+      <div class="col en">Every year I&#x27;d sit down in that chair —</div>
+    </div><div class="lyric-row">
+      <div class="col fr">Cabinet impeccable, sourire tranquille —</div>
+      <div class="col es">Consulta impecable, sonrisa tranquila —</div>
+      <div class="col en">Spotless office, a calm little smile —</div>
+    </div><div class="lyric-row">
+      <div class="col fr">Ma vieille dentiste connaissait mon nom —</div>
+      <div class="col es">Mi antigua dentista sabía mi nombre —</div>
+      <div class="col en">My old dentist knew my name —</div>
+    </div><div class="lyric-row">
+      <div class="col fr">Un luxe perdu dans le système —</div>
+      <div class="col es">Un lujo perdido en el sistema —</div>
+      <div class="col en">A luxury lost inside the system —</div>
+    </div><div class="lyric-row">
+      <div class="col fr">Mais un matin elle a pris sa retraite —</div>
+      <div class="col es">Pero una mañana se jubiló —</div>
+      <div class="col en">But one morning she retired for good —</div>
+    </div><div class="lyric-row">
+      <div class="col fr">Et mon rendez-vous est tombé dans le vide —</div>
+      <div class="col es">Y mi cita cayó en el vacío —</div>
+      <div class="col en">And my appointment fell into the void —</div>
+    </div><div class="lyric-row">
+      <div class="col fr">Une molaire a explosé dans ma bouche —</div>
+      <div class="col es">Una muela explotó en mi boca —</div>
+      <div class="col en">A molar exploded in my mouth —</div>
+    </div><div class="lyric-row">
+      <div class="col fr">Et six mois d&#x27;attente m&#x27;ont écrasé —</div>
+      <div class="col es">Y seis meses de espera me aplastaron —</div>
+      <div class="col en">And six months of waiting crushed me down —</div>
+    </div><div class="lyric-row">
+      <div class="col fr">HOUA !</div>
+      <div class="col es">HOUA !</div>
+      <div class="col en">HOUA !</div>
+    </div><div class="lyric-row">
+      <div class="col fr">Vous avez mal ?</div>
+      <div class="col es">¿Le duele ?</div>
+      <div class="col en">Does it hurt?</div>
+    </div><div class="lyric-row">
+      <div class="col fr">Comme c&#x27;est émouvant —</div>
+      <div class="col es">Qué conmovedor —</div>
+      <div class="col en">How very touching —</div>
+    </div><div class="lyric-row">
+      <div class="col fr">J&#x27;ai juste besoin d&#x27;un rendez-vous —</div>
+      <div class="col es">Solo necesito una cita —</div>
+      <div class="col en">I just need an appointment —</div>
+    </div><div class="lyric-row">
+      <div class="col fr">Bienvenue dans le futur médical —</div>
+      <div class="col es">Bienvenido al futuro médico —</div>
+      <div class="col en">Welcome to the future of healthcare —</div>
+    </div><div class="lyric-row">
+      <div class="col fr">où mourir coûte moins cher que guérir —</div>
+      <div class="col es">donde morir cuesta menos que curarse —</div>
+      <div class="col en">where dying costs less than getting cured —</div>
+    </div>
+  </section><section class="sec" id="sec-refrain">
+    <div class="sec-head">
+      <span class="section-label">Refrain / Estribillo / Chorus</span>
+      <span class="voice-badge">Trèfle &amp; Minotaure</span>
+      <button class="playbtn" onclick="playSec('refrain')">▶</button>
+    </div>
+<div class="tagrow">[Drop Chorus — hook + Ghost Voice]</div>
+<div class="lyric-row">
+      <div class="col fr">SOURIEZ —</div>
+      <div class="col es">¡SONRÍA!</div>
+      <div class="col en">SMILE!</div>
+    </div><div class="lyric-row">
+      <div class="col fr">VOUS ÊTES PLOMBÉS —</div>
+      <div class="col es">¡ESTÁ EMPASTADO!</div>
+      <div class="col en">YOU&#x27;VE BEEN DRILLED!</div>
+    </div><div class="lyric-row">
+      <div class="col fr">Souriez — vous êtes plombés —</div>
+      <div class="col es">Sonría — está empastado —</div>
+      <div class="col en">Smile — you&#x27;ve been drilled —</div>
+    </div><div class="lyric-row">
+      <div class="col fr">Vos petits soins quotidiens ?</div>
+      <div class="col es">¿Sus pequeños cuidados de cada día ?</div>
+      <div class="col en">Your little everyday care?</div>
+    </div><div class="lyric-row">
+      <div class="col fr">Déjà liquidés —</div>
+      <div class="col es">Ya liquidados —</div>
+      <div class="col en">Already liquidated —</div>
+    </div><div class="lyric-row ghost">
+      <div class="col fr">plombé — plombé — plombé —</div>
+      <div class="col es">empastado — empastado — empastado —</div>
+      <div class="col en">drilled — drilled — drilled —</div>
+    </div>
+  </section><section class="sec" id="sec-couplet2">
+    <div class="sec-head">
+      <span class="section-label">Couplet 2 / Verso 2 / Verse 2</span>
+      <span class="voice-badge">Trèfle &amp; Minotaure</span>
+      <button class="playbtn" onclick="playSec('couplet2')">▶</button>
+    </div>
+<div class="tagrow">[Verse 2 — groove locked, minimal drums return]</div>
+<div class="lyric-row">
+      <div class="col fr">Miracle —</div>
+      <div class="col es">Milagro —</div>
+      <div class="col en">Miracle —</div>
+    </div><div class="lyric-row">
+      <div class="col fr">un rendez-vous libre est apparu —</div>
+      <div class="col es">apareció una cita libre —</div>
+      <div class="col en">a free appointment has appeared —</div>
+    </div><div class="lyric-row">
+      <div class="col fr">Comme gagner à la loterie médicale —</div>
+      <div class="col es">Como ganar la lotería médica —</div>
+      <div class="col en">Like winning the medical lottery —</div>
+    </div><div class="lyric-row">
+      <div class="col fr">J&#x27;ai couru sauver ce qu&#x27;il reste de ma bouche —</div>
+      <div class="col es">Corrí a salvar lo que queda de mi boca —</div>
+      <div class="col en">I ran to save what&#x27;s left of my mouth —</div>
+    </div><div class="lyric-row">
+      <div class="col fr">Avant que mon salaire disparaisse —</div>
+      <div class="col es">Antes de que mi sueldo desaparezca —</div>
+      <div class="col en">Before my whole paycheck disappears —</div>
+    </div><div class="lyric-row">
+      <div class="col fr">Vous arrivez trop tard, cher monsieur —</div>
+      <div class="col es">Llega usted tarde, caballero —</div>
+      <div class="col en">You&#x27;ve arrived too late, dear sir —</div>
+    </div><div class="lyric-row">
+      <div class="col fr">Vous auriez dû souffrir un mardi pluvieux —</div>
+      <div class="col es">Debió sufrir un martes lluvioso —</div>
+      <div class="col en">You should&#x27;ve suffered on a rainy Tuesday —</div>
+    </div><div class="lyric-row">
+      <div class="col fr">HOUA !</div>
+      <div class="col es">HOUA !</div>
+      <div class="col en">HOUA !</div>
+    </div><div class="lyric-row">
+      <div class="col fr">Je voulais juste une simple vis —</div>
+      <div class="col es">Solo quería un simple tornillo —</div>
+      <div class="col en">I just wanted a simple screw —</div>
+    </div><div class="lyric-row">
+      <div class="col fr">Les petits budgets me dépriment —</div>
+      <div class="col es">Los presupuestos bajos me deprimen —</div>
+      <div class="col en">Small budgets depress me —</div>
+    </div><div class="lyric-row">
+      <div class="col fr">Moi je fais des sourires premium —</div>
+      <div class="col es">Yo hago sonrisas premium —</div>
+      <div class="col en">I only make premium smiles —</div>
+    </div><div class="lyric-row">
+      <div class="col fr">pas du bricolage pour pauvres —</div>
+      <div class="col es">no chapuzas para pobres —</div>
+      <div class="col en">not cheap fixes for the poor —</div>
+    </div>
+  </section><section class="sec" id="sec-bridge">
+    <div class="sec-head">
+      <span class="section-label">Bridge / Puente / Bridge</span>
+      <span class="voice-badge">Trèfle &amp; Minotaure</span>
+      <button class="playbtn" onclick="playSec('bridge')">▶</button>
+    </div>
+<div class="tagrow">[Bridge — breakdown into long drill silence]</div>
+<div class="lyric-row">
+      <div class="col fr">Alors on m&#x27;envoie —</div>
+      <div class="col es">Entonces me mandan —</div>
+      <div class="col en">So they send me off —</div>
+    </div><div class="lyric-row">
+      <div class="col fr">vers un autre spécialiste —</div>
+      <div class="col es">a otro especialista —</div>
+      <div class="col en">to yet another specialist —</div>
+    </div><div class="lyric-row">
+      <div class="col fr">Le labyrinthe médical adore les survivants fatigués —</div>
+      <div class="col es">El laberinto médico adora a los supervivientes cansados —</div>
+      <div class="col en">The medical maze adores its tired survivors —</div>
+    </div>
+  </section><section class="sec" id="sec-couplet3">
+    <div class="sec-head">
+      <span class="section-label">Couplet 3 / Verso 3 / Verse 3</span>
+      <span class="voice-badge">Trèfle &amp; Minotaure</span>
+      <button class="playbtn" onclick="playSec('couplet3')">▶</button>
+    </div>
+<div class="tagrow">[Verse 3 — climax build]</div>
+<div class="lyric-row">
+      <div class="col fr">Deuxième cabinet —</div>
+      <div class="col es">Segunda consulta —</div>
+      <div class="col en">Second office —</div>
+    </div><div class="lyric-row">
+      <div class="col fr">deuxième humiliation —</div>
+      <div class="col es">segunda humillación —</div>
+      <div class="col en">second humiliation —</div>
+    </div><div class="lyric-row">
+      <div class="col fr">La gencive a déjà refermé la tombe —</div>
+      <div class="col es">La encía ya cerró la tumba —</div>
+      <div class="col en">The gum has already sealed the grave —</div>
+    </div><div class="lyric-row">
+      <div class="col fr">Je veux juste retrouver mon sourire —</div>
+      <div class="col es">Solo quiero recuperar mi sonrisa —</div>
+      <div class="col en">I just want my smile back —</div>
+    </div><div class="lyric-row">
+      <div class="col fr">Maintenant il faut couper —</div>
+      <div class="col es">Ahora hay que cortar —</div>
+      <div class="col en">Now we have to cut —</div>
+    </div><div class="lyric-row">
+      <div class="col fr">ouvrir —</div>
+      <div class="col es">abrir —</div>
+      <div class="col en">open —</div>
+    </div><div class="lyric-row">
+      <div class="col fr">percer —</div>
+      <div class="col es">perforar —</div>
+      <div class="col en">drill —</div>
+    </div><div class="lyric-row">
+      <div class="col fr">facturer —</div>
+      <div class="col es">y facturar —</div>
+      <div class="col en">and bill —</div>
+    </div><div class="lyric-row">
+      <div class="col fr">Et combien coûte le droit de redevenir humain ?</div>
+      <div class="col es">¿Y cuánto cuesta el derecho a volver a ser humano ?</div>
+      <div class="col en">And how much does it cost to be human again?</div>
+    </div><div class="lyric-row">
+      <div class="col fr">Sans assurance privée ?</div>
+      <div class="col es">¿Sin seguro privado ?</div>
+      <div class="col en">Without private insurance?</div>
+    </div><div class="lyric-row">
+      <div class="col fr">Probablement un organe vital —</div>
+      <div class="col es">Probablemente un órgano vital —</div>
+      <div class="col en">Probably a vital organ —</div>
+    </div><div class="lyric-row">
+      <div class="col fr">Titane —</div>
+      <div class="col es">Titanio —</div>
+      <div class="col en">Titanium —</div>
+    </div><div class="lyric-row">
+      <div class="col fr">pivot —</div>
+      <div class="col es">poste —</div>
+      <div class="col en">post —</div>
+    </div><div class="lyric-row">
+      <div class="col fr">couronne —</div>
+      <div class="col es">corona —</div>
+      <div class="col en">crown —</div>
+    </div><div class="lyric-row">
+      <div class="col fr">scanner —</div>
+      <div class="col es">escáner —</div>
+      <div class="col en">scan —</div>
+    </div><div class="lyric-row">
+      <div class="col fr">radiographie —</div>
+      <div class="col es">radiografía —</div>
+      <div class="col en">X-ray —</div>
+    </div><div class="lyric-row">
+      <div class="col fr">devis —</div>
+      <div class="col es">presupuesto —</div>
+      <div class="col en">quote —</div>
+    </div><div class="lyric-row">
+      <div class="col fr">signature —</div>
+      <div class="col es">firma —</div>
+      <div class="col en">sign here —</div>
+    </div><div class="lyric-row">
+      <div class="col fr">Même respirer finit par coûter de l&#x27;argent —</div>
+      <div class="col es">Hasta respirar acaba costando dinero —</div>
+      <div class="col en">Even breathing ends up costing money —</div>
+    </div>
+  </section><section class="sec" id="sec-refrainfinal">
+    <div class="sec-head">
+      <span class="section-label">Refrain Final / Estribillo Final / Final Chorus</span>
+      <span class="voice-badge">Trèfle &amp; Minotaure</span>
+      <button class="playbtn" onclick="playSec('refrainfinal')">▶</button>
+    </div>
+<div class="tagrow">[Final Drop — huge electro dance-rock energy]</div>
+<div class="lyric-row">
+      <div class="col fr">Vous avez dépassé le délai légal —</div>
+      <div class="col es">Ha superado el plazo legal —</div>
+      <div class="col en">You&#x27;ve missed the legal deadline —</div>
+    </div><div class="lyric-row">
+      <div class="col fr">De seulement trois jours —</div>
+      <div class="col es">Solo por tres días —</div>
+      <div class="col en">By only three days —</div>
+    </div><div class="lyric-row">
+      <div class="col fr">Alors la réduction est morte, comme votre émail —</div>
+      <div class="col es">Así que el descuento ha muerto, como su esmalte —</div>
+      <div class="col en">So the discount is dead, like your enamel —</div>
+    </div><div class="lyric-row">
+      <div class="col fr">Souriez — vous êtes plombés —</div>
+      <div class="col es">Sonría — está empastado —</div>
+      <div class="col en">Smile — you&#x27;ve been drilled —</div>
+    </div><div class="lyric-row">
+      <div class="col fr">Votre santé quotidienne ?</div>
+      <div class="col es">¿Su salud diaria ?</div>
+      <div class="col en">Your everyday health?</div>
+    </div><div class="lyric-row">
+      <div class="col fr">Déjà vendue —</div>
+      <div class="col es">Ya vendida —</div>
+      <div class="col en">Already sold —</div>
+    </div><div class="lyric-row">
+      <div class="col fr">Souriez — vous êtes plombés —</div>
+      <div class="col es">Sonría — está empastado —</div>
+      <div class="col en">Smile — you&#x27;ve been drilled —</div>
+    </div><div class="lyric-row ghost">
+      <div class="col fr">plombé — HOUA — plombé — HOUA —</div>
+      <div class="col es">empastado — HOUA — empastado — HOUA —</div>
+      <div class="col en">drilled — HOUA — drilled — HOUA —</div>
+    </div>
+  </section><section class="sec" id="sec-outro">
+    <div class="sec-head">
+      <span class="section-label">Outro / Outro / Outro</span>
+      <span class="voice-badge">Trèfle &amp; Minotaure</span>
+      <button class="playbtn" onclick="playSec('outro')">▶</button>
+    </div>
+<div class="tagrow">[Outro — guitar and sax solo, fade to silence]</div>
+<div class="lyric-row">
+      <div class="col fr">Mon conseil —</div>
+      <div class="col es">Mi consejo —</div>
+      <div class="col en">My advice —</div>
+    </div><div class="lyric-row">
+      <div class="col fr">prenez une assurance premium —</div>
+      <div class="col es">consiga un seguro premium —</div>
+      <div class="col en">get yourself premium insurance —</div>
+    </div><div class="lyric-row">
+      <div class="col fr">Ou vendez vos dents avant qu&#x27;elles cassent —</div>
+      <div class="col es">O venda sus dientes antes de que se rompan —</div>
+      <div class="col en">Or sell your teeth before they break —</div>
+    </div><div class="lyric-row">
+      <div class="col fr">Le système adore les patients en retard —</div>
+      <div class="col es">El sistema adora a los pacientes atrasados —</div>
+      <div class="col en">The system loves patients running late —</div>
+    </div><div class="lyric-row ghost">
+      <div class="col fr">plombé — plombé —</div>
+      <div class="col es">empastado — empastado —</div>
+      <div class="col en">drilled — drilled —</div>
+    </div>
+  </section>
+
+  <footer>www.trefleminotaure.com · © 2026 Trèfle &amp; Minotaure</footer>
+</div>
+
+<script>
+const SECS = {
+  "intro": {
+    "fr": "HOUA !",
+    "es": "HOUA !",
+    "en": "HOUA !"
+  },
+  "couplet1": {
+    "fr": "Chaque année je m'asseyais sur cette chaise — Cabinet impeccable, sourire tranquille — Ma vieille dentiste connaissait mon nom — Un luxe perdu dans le système — Mais un matin elle a pris sa retraite — Et mon rendez-vous est tombé dans le vide — Une molaire a explosé dans ma bouche — Et six mois d'attente m'ont écrasé — HOUA ! Vous avez mal ? Comme c'est émouvant — J'ai juste besoin d'un rendez-vous — Bienvenue dans le futur médical — où mourir coûte moins cher que guérir —",
+    "es": "Cada año me sentaba en esa silla — Consulta impecable, sonrisa tranquila — Mi antigua dentista sabía mi nombre — Un lujo perdido en el sistema — Pero una mañana se jubiló — Y mi cita cayó en el vacío — Una muela explotó en mi boca — Y seis meses de espera me aplastaron — HOUA ! ¿Le duele ? Qué conmovedor — Solo necesito una cita — Bienvenido al futuro médico — donde morir cuesta menos que curarse —",
+    "en": "Every year I'd sit down in that chair — Spotless office, a calm little smile — My old dentist knew my name — A luxury lost inside the system — But one morning she retired for good — And my appointment fell into the void — A molar exploded in my mouth — And six months of waiting crushed me down — HOUA ! Does it hurt? How very touching — I just need an appointment — Welcome to the future of healthcare — where dying costs less than getting cured —"
+  },
+  "refrain": {
+    "fr": "SOURIEZ — VOUS ÊTES PLOMBÉS — Souriez — vous êtes plombés — Vos petits soins quotidiens ? Déjà liquidés — plombé — plombé — plombé —",
+    "es": "¡SONRÍA! ¡ESTÁ EMPASTADO! Sonría — está empastado — ¿Sus pequeños cuidados de cada día ? Ya liquidados — empastado — empastado — empastado —",
+    "en": "SMILE! YOU'VE BEEN DRILLED! Smile — you've been drilled — Your little everyday care? Already liquidated — drilled — drilled — drilled —"
+  },
+  "couplet2": {
+    "fr": "Miracle — un rendez-vous libre est apparu — Comme gagner à la loterie médicale — J'ai couru sauver ce qu'il reste de ma bouche — Avant que mon salaire disparaisse — Vous arrivez trop tard, cher monsieur — Vous auriez dû souffrir un mardi pluvieux — HOUA ! Je voulais juste une simple vis — Les petits budgets me dépriment — Moi je fais des sourires premium — pas du bricolage pour pauvres —",
+    "es": "Milagro — apareció una cita libre — Como ganar la lotería médica — Corrí a salvar lo que queda de mi boca — Antes de que mi sueldo desaparezca — Llega usted tarde, caballero — Debió sufrir un martes lluvioso — HOUA ! Solo quería un simple tornillo — Los presupuestos bajos me deprimen — Yo hago sonrisas premium — no chapuzas para pobres —",
+    "en": "Miracle — a free appointment has appeared — Like winning the medical lottery — I ran to save what's left of my mouth — Before my whole paycheck disappears — You've arrived too late, dear sir — You should've suffered on a rainy Tuesday — HOUA ! I just wanted a simple screw — Small budgets depress me — I only make premium smiles — not cheap fixes for the poor —"
+  },
+  "bridge": {
+    "fr": "Alors on m'envoie — vers un autre spécialiste — Le labyrinthe médical adore les survivants fatigués —",
+    "es": "Entonces me mandan — a otro especialista — El laberinto médico adora a los supervivientes cansados —",
+    "en": "So they send me off — to yet another specialist — The medical maze adores its tired survivors —"
+  },
+  "couplet3": {
+    "fr": "Deuxième cabinet — deuxième humiliation — La gencive a déjà refermé la tombe — Je veux juste retrouver mon sourire — Maintenant il faut couper — ouvrir — percer — facturer — Et combien coûte le droit de redevenir humain ? Sans assurance privée ? Probablement un organe vital — Titane — pivot — couronne — scanner — radiographie — devis — signature — Même respirer finit par coûter de l'argent —",
+    "es": "Segunda consulta — segunda humillación — La encía ya cerró la tumba — Solo quiero recuperar mi sonrisa — Ahora hay que cortar — abrir — perforar — y facturar — ¿Y cuánto cuesta el derecho a volver a ser humano ? ¿Sin seguro privado ? Probablemente un órgano vital — Titanio — poste — corona — escáner — radiografía — presupuesto — firma — Hasta respirar acaba costando dinero —",
+    "en": "Second office — second humiliation — The gum has already sealed the grave — I just want my smile back — Now we have to cut — open — drill — and bill — And how much does it cost to be human again? Without private insurance? Probably a vital organ — Titanium — post — crown — scan — X-ray — quote — sign here — Even breathing ends up costing money —"
+  },
+  "refrainfinal": {
+    "fr": "Vous avez dépassé le délai légal — De seulement trois jours — Alors la réduction est morte, comme votre émail — Souriez — vous êtes plombés — Votre santé quotidienne ? Déjà vendue — Souriez — vous êtes plombés — plombé — HOUA — plombé — HOUA —",
+    "es": "Ha superado el plazo legal — Solo por tres días — Así que el descuento ha muerto, como su esmalte — Sonría — está empastado — ¿Su salud diaria ? Ya vendida — Sonría — está empastado — empastado — HOUA — empastado — HOUA —",
+    "en": "You've missed the legal deadline — By only three days — So the discount is dead, like your enamel — Smile — you've been drilled — Your everyday health? Already sold — Smile — you've been drilled — drilled — HOUA — drilled — HOUA —"
+  },
+  "outro": {
+    "fr": "Mon conseil — prenez une assurance premium — Ou vendez vos dents avant qu'elles cassent — Le système adore les patients en retard — plombé — plombé —",
+    "es": "Mi consejo — consiga un seguro premium — O venda sus dientes antes de que se rompan — El sistema adora a los pacientes atrasados — empastado — empastado —",
+    "en": "My advice — get yourself premium insurance — Or sell your teeth before they break — The system loves patients running late — drilled — drilled —"
+  }
+};
+const LANG_MAP = { fr:"fr-FR", es:"es-ES", en:"en-GB" };
+let curLang = "fr";
+let curSpeed = 0.9;
+function setLang(l){
+  document.body.classList.remove("show-fr","show-es","show-en");
+  document.querySelectorAll(".langbtn").forEach(b=>b.classList.remove("active"));
+  event.target.classList.add("active");
+  if (l==="all") { curLang="fr"; } else { document.body.classList.add("show-"+l); curLang=l; }
+}
+function setSpeed(v){
+  curSpeed = v;
+  document.querySelectorAll(".speedbtn").forEach(b=>b.classList.remove("active"));
+  event.target.classList.add("active");
+}
+function playSec(id){
+  const txt = SECS[id][curLang];
+  if (!txt || !("speechSynthesis" in window)) return;
+  window.speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(txt);
+  u.lang = LANG_MAP[curLang];
+  u.rate = curSpeed;
+  window.speechSynthesis.speak(u);
+}
+</script>
+</body>
+</html>

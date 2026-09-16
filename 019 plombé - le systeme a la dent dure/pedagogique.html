@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>PLOMBÉ — Le système a la dent dure — Guide de prononciation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,500&family=Cinzel:wght@600&family=IM+Fell+English&family=Noto+Serif:wght@400&display=swap" rel="stylesheet">
+<style>
+  :root { --gold:#b8962e; }
+  body { margin:0; background:#2a1f10; background-image: radial-gradient(circle at 50% 0%, #3a2a18, #120c16 80%); font-family:'Cormorant Garamond', serif; }
+  .page { max-width:1000px; margin:30px auto; background:#f5ecd7; border:3px solid #c4a97a; border-radius:10px; padding:30px clamp(14px,4vw,44px) 50px; }
+  header { text-align:center; margin-bottom:20px; }
+  header h1 { font-family:'IM Fell English', serif; color:#2a1f30; font-size:1.7rem; }
+  .meta { color:#6b5a6f; font-size:.9rem; }
+  .controls { display:flex; justify-content:center; gap:14px; flex-wrap:wrap; margin:18px 0 26px; }
+  button.langbtn, button.speedbtn { font-family:'Cinzel', serif; font-size:.75rem; padding:6px 12px; border-radius:6px; border:1px solid #a68aad; background:#fff8ea; cursor:pointer; }
+  button.langbtn.active, button.speedbtn.active { background:var(--gold); color:#fff; }
+  .sec-title { font-family:'Cinzel', serif; color:#1c2038; font-size:1.05rem; margin:26px 0 6px; border-top:1px solid #c4a97a; padding-top:14px; }
+  .tagrow { font-size:.75rem; font-style:italic; color:var(--gold); opacity:.85; margin:3px 0; }
+  .opt-c-row { display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; margin-bottom:10px; }
+  .lc { padding:6px 10px; border-radius:4px; position:relative; }
+  .lc.fr { background:#e8f0fc; border:1px solid #aac4f0; }
+  .lc.es { background:#f5ead5; border:1px solid #d4b87a; }
+  .lc.en { background:#fce8ec; border:1px solid #f0aabc; }
+  .lyric-text { font-family:'Cormorant Garamond', serif; font-style:italic; font-size:.97rem; color:#2a2a2a; }
+  .lyric-syllabic { font-family:'Cormorant Garamond', serif; font-weight:700; font-size:.80rem; margin-top:3px; color:#2a1f30; }
+  .lyric-syllabic .a { color:#c0392b; text-decoration:underline; text-decoration-color:#c0392b; }
+  .plb { margin-top:4px; font-family:'Cinzel', serif; font-size:.43rem; border:none; background:var(--gold); color:#fff; border-radius:50%; width:16px; height:16px; cursor:pointer; line-height:1; }
+  .lyric-ipa { font-family:"Noto Serif","Noto Sans",serif; font-size:.64rem; opacity:.56; margin-top:3px; color:#333; }
+  .lyric-ipa::before { content:"/ "; color:var(--gold); }
+  .lyric-ipa::after { content:" /"; color:var(--gold); }
+  .sound-hints { display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; margin:4px 0 16px; }
+  .sh { font-size:.78rem; padding:8px 10px; border-radius:6px; background:#fff8ea; border:1px dashed #c4a97a; }
+  body.show-fr .lc.es, body.show-fr .lc.en { display:none; }
+  body.show-fr .opt-c-row { grid-template-columns:1fr; }
+  body.show-fr .sound-hints { grid-template-columns:1fr; }
+  body.show-fr .sh.es, body.show-fr .sh.en { display:none; }
+  body.show-es .lc.fr, body.show-es .lc.en { display:none; }
+  body.show-es .opt-c-row { grid-template-columns:1fr; }
+  body.show-es .sound-hints { grid-template-columns:1fr; }
+  body.show-es .sh.fr, body.show-es .sh.en { display:none; }
+  body.show-en .lc.fr, body.show-en .lc.es { display:none; }
+  body.show-en .opt-c-row { grid-template-columns:1fr; }
+  body.show-en .sound-hints { grid-template-columns:1fr; }
+  body.show-en .sh.fr, body.show-en .sh.es { display:none; }
+  footer { text-align:center; margin-top:34px; color:#6b5a6f; font-size:.85rem; border-top:1px solid #cbb8d0; padding-top:14px; }
+</style>
+</head>
+<body class="show-fr">
+<div class="page">
+  <header>
+    <h1>PLOMBÉ — Le système a la dent dure — Guide de prononciation</h1>
+    <div class="meta">Option C · Syllabique + IPA · FR / ES / EN — chaque langue conserve sa propre découpe syllabique et sa propre transcription</div>
+  </header>
+
+  <div class="controls">
+    <button class="langbtn" onclick="setLang(this,'all')">Trilingue</button>
+    <button class="langbtn active" onclick="setLang(this,'fr')">🇫🇷 Français</button>
+    <button class="langbtn" onclick="setLang(this,'es')">🇪🇸 Español</button>
+    <button class="langbtn" onclick="setLang(this,'en')">🇬🇧 English</button>
+    <button class="speedbtn" onclick="setSpeed(this,0.7)">× 0.7</button>
+    <button class="speedbtn active" onclick="setSpeed(this,0.9)">× 0.9</button>
+    <button class="speedbtn" onclick="setSpeed(this,1.0)">× 1.0</button>
+  </div>
+
+<h3 class="sec-title">Intro / Intro / Intro</h3><div class="tagrow">[Intro — full groove from first second]</div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">HOUA !</div>
+        <div class="lyric-syllabic"><span class="a">HOU</span>-A</div>
+        <button class="plb" onclick="speakLine(this,'HOUA !','fr')">▶</button>
+        <div class="lyric-ipa">wa</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">HOUA !</div>
+        <div class="lyric-syllabic"><span class="a">HOU</span>-A</div>
+        <button class="plb" onclick="speakLine(this,'HOUA !','es')">▶</button>
+        <div class="lyric-ipa">wa</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">HOUA !</div>
+        <div class="lyric-syllabic"><span class="a">HOU</span>-A</div>
+        <button class="plb" onclick="speakLine(this,'HOUA !','en')">▶</button>
+        <div class="lyric-ipa">wa</div>
+      </div></div><h3 class="sec-title">Couplet 1 / Verso 1 / Verse 1</h3><div class="tagrow">[Verse 1 — alternating duet]</div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Chaque année je m&#x27;asseyais sur cette chaise —</div>
+        <div class="lyric-syllabic">Chaque-an-née-je-m&#x27;as-se-yais-sur-cette-<span class="a">chaise</span></div>
+        <button class="plb" onclick="speakLine(this,'Chaque année je m\'asseyais sur cette chaise —','fr')">▶</button>
+        <div class="lyric-ipa">ʃak.a.ne.ʒə.ma.sə.jɛ.syʁ.sɛt.ʃɛz</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Cada año me sentaba en esa silla —</div>
+        <div class="lyric-syllabic">Ca-da-a-ño-me-sen-ta-ba-en-e-sa-<span class="a">si</span>-lla</div>
+        <button class="plb" onclick="speakLine(this,'Cada año me sentaba en esa silla —','es')">▶</button>
+        <div class="lyric-ipa">ka.ða.a.ɲo.me.sen.ta.βa.en.e.sa.si.ʝa</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">Every year I&#x27;d sit down in that chair —</div>
+        <div class="lyric-syllabic">Ev-ry-year-I&#x27;d-sit-down-in-that-<span class="a">chair</span></div>
+        <button class="plb" onclick="speakLine(this,'Every year I\'d sit down in that chair —','en')">▶</button>
+        <div class="lyric-ipa">ˈɛv.ri.jɪr.aɪd.sɪt.daʊn.ɪn.ðæt.tʃɛr</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Cabinet impeccable, sourire tranquille —</div>
+        <div class="lyric-syllabic">Ca-bi-net-im-pec-ca-ble-sou-ri-re-tran-<span class="a">quille</span></div>
+        <button class="plb" onclick="speakLine(this,'Cabinet impeccable, sourire tranquille —','fr')">▶</button>
+        <div class="lyric-ipa">ka.bi.nɛ.ɛ̃.pɛ.ka.blə.su.ʁiʁ.tʁɑ̃.kil</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Consulta impecable, sonrisa tranquila —</div>
+        <div class="lyric-syllabic">Con-sul-ta-im-pe-ca-ble-son-ri-sa-tran-<span class="a">qui</span>-la</div>
+        <button class="plb" onclick="speakLine(this,'Consulta impecable, sonrisa tranquila —','es')">▶</button>
+        <div class="lyric-ipa">kon.sul.ta.im.pe.ka.βle.son.ri.sa.tɾan.ki.la</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">Spotless office, a calm little smile —</div>
+        <div class="lyric-syllabic">Spot-less-of-fice-a-calm-lit-tle-<span class="a">smile</span></div>
+        <button class="plb" onclick="speakLine(this,'Spotless office, a calm little smile —','en')">▶</button>
+        <div class="lyric-ipa">ˈspɒt.ləs.ˈɒf.ɪs.ə.kɑːm.ˈlɪt.əl.smaɪl</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Ma vieille dentiste connaissait mon nom —</div>
+        <div class="lyric-syllabic">Ma-vieille-den-tis-te-con-nais-sait-mon-<span class="a">nom</span></div>
+        <button class="plb" onclick="speakLine(this,'Ma vieille dentiste connaissait mon nom —','fr')">▶</button>
+        <div class="lyric-ipa">ma.vjɛj.dɑ̃.tist.kɔ.nɛ.sɛ.mɔ̃.nɔ̃</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Mi antigua dentista sabía mi nombre —</div>
+        <div class="lyric-syllabic">Mi-an-ti-gua-den-tis-ta-sa-<span class="a">bí</span>-a-mi-nom-bre</div>
+        <button class="plb" onclick="speakLine(this,'Mi antigua dentista sabía mi nombre —','es')">▶</button>
+        <div class="lyric-ipa">mi.an.ti.ɣwa.den.tis.ta.sa.βi.a.mi.nom.bɾe</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">My old dentist knew my name —</div>
+        <div class="lyric-syllabic">My-old-den-tist-knew-my-<span class="a">name</span></div>
+        <button class="plb" onclick="speakLine(this,'My old dentist knew my name —','en')">▶</button>
+        <div class="lyric-ipa">maɪ.oʊld.ˈdɛn.tɪst.nuː.maɪ.neɪm</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Un luxe perdu dans le système —</div>
+        <div class="lyric-syllabic">Un-lu-xe-per-du-dans-le-sys-<span class="a">tème</span></div>
+        <button class="plb" onclick="speakLine(this,'Un luxe perdu dans le système —','fr')">▶</button>
+        <div class="lyric-ipa">œ̃.lyks.pɛʁ.dy.dɑ̃.lə.sis.tɛm</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Un lujo perdido en el sistema —</div>
+        <div class="lyric-syllabic">Un-lu-jo-per-di-do-en-el-sis-<span class="a">te</span>-ma</div>
+        <button class="plb" onclick="speakLine(this,'Un lujo perdido en el sistema —','es')">▶</button>
+        <div class="lyric-ipa">un.lu.xo.peɾ.ði.ðo.en.el.sis.te.ma</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">A luxury lost inside the system —</div>
+        <div class="lyric-syllabic">A-lux-u-ry-lost-in-side-the-<span class="a">sys</span>-tem</div>
+        <button class="plb" onclick="speakLine(this,'A luxury lost inside the system —','en')">▶</button>
+        <div class="lyric-ipa">ə.ˈlʌk.ʃə.ri.lɒst.ɪnˈsaɪd.ðə.ˈsɪs.təm</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Mais un matin elle a pris sa retraite —</div>
+        <div class="lyric-syllabic">Mais-un-ma-tin-elle-a-pris-sa-re-<span class="a">traite</span></div>
+        <button class="plb" onclick="speakLine(this,'Mais un matin elle a pris sa retraite —','fr')">▶</button>
+        <div class="lyric-ipa">mɛ.zœ̃.ma.tɛ̃.ɛ.la.pʁi.sa.ʁə.tʁɛt</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Pero una mañana se jubiló —</div>
+        <div class="lyric-syllabic">Pe-ro-u-na-ma-ña-na-se-ju-bi-<span class="a">ló</span></div>
+        <button class="plb" onclick="speakLine(this,'Pero una mañana se jubiló —','es')">▶</button>
+        <div class="lyric-ipa">pe.ɾo.u.na.ma.ɲa.na.se.xu.βi.lo</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">But one morning she retired for good —</div>
+        <div class="lyric-syllabic">But-one-morn-ing-she-re-tired-for-<span class="a">good</span></div>
+        <button class="plb" onclick="speakLine(this,'But one morning she retired for good —','en')">▶</button>
+        <div class="lyric-ipa">bʌt.wʌn.ˈmɔːr.nɪŋ.ʃi.rɪˈtaɪərd.fɔːr.ɡʊd</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Et mon rendez-vous est tombé dans le vide —</div>
+        <div class="lyric-syllabic">Et-mon-ren-dez-vous-est-tom-bé-dans-le-<span class="a">vide</span></div>
+        <button class="plb" onclick="speakLine(this,'Et mon rendez-vous est tombé dans le vide —','fr')">▶</button>
+        <div class="lyric-ipa">e.mɔ̃.ʁɑ̃.de.vu.ɛ.tɔ̃.be.dɑ̃.lə.vid</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Y mi cita cayó en el vacío —</div>
+        <div class="lyric-syllabic">Y-mi-ci-ta-ca-yó-en-el-va-<span class="a">cí</span>-o</div>
+        <button class="plb" onclick="speakLine(this,'Y mi cita cayó en el vacío —','es')">▶</button>
+        <div class="lyric-ipa">i.mi.si.ta.ka.ʝo.en.el.ba.si.o</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">And my appointment fell into the void —</div>
+        <div class="lyric-syllabic">And-my-ap-point-ment-fell-in-to-the-<span class="a">void</span></div>
+        <button class="plb" onclick="speakLine(this,'And my appointment fell into the void —','en')">▶</button>
+        <div class="lyric-ipa">ænd.maɪ.əˈpɔɪnt.mənt.fɛl.ˈɪn.tuː.ðə.vɔɪd</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Une molaire a explosé dans ma bouche —</div>
+        <div class="lyric-syllabic">U-ne-mo-lai-re-a-ex-plo-sé-dans-ma-<span class="a">bouche</span></div>
+        <button class="plb" onclick="speakLine(this,'Une molaire a explosé dans ma bouche —','fr')">▶</button>
+        <div class="lyric-ipa">yn.mɔ.lɛʁ.a.ɛk.splo.ze.dɑ̃.ma.buʃ</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Una muela explotó en mi boca —</div>
+        <div class="lyric-syllabic">U-na-mue-la-ex-plo-tó-en-mi-<span class="a">bo</span>-ca</div>
+        <button class="plb" onclick="speakLine(this,'Una muela explotó en mi boca —','es')">▶</button>
+        <div class="lyric-ipa">u.na.mwe.la.eks.plo.to.en.mi.bo.ka</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">A molar exploded in my mouth —</div>
+        <div class="lyric-syllabic">A-mo-lar-ex-plod-ed-in-my-<span class="a">mouth</span></div>
+        <button class="plb" onclick="speakLine(this,'A molar exploded in my mouth —','en')">▶</button>
+        <div class="lyric-ipa">ə.ˈmoʊ.lər.ɪkˈsploʊd.ɪd.ɪn.maɪ.maʊθ</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Et six mois d&#x27;attente m&#x27;ont écrasé —</div>
+        <div class="lyric-syllabic">Et-six-mois-d&#x27;at-ten-te-mont-é-cra-<span class="a">sé</span></div>
+        <button class="plb" onclick="speakLine(this,'Et six mois d\'attente m\'ont écrasé —','fr')">▶</button>
+        <div class="lyric-ipa">e.si.mwa.da.tɑ̃t.mɔ̃.te.kʁa.ze</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Y seis meses de espera me aplastaron —</div>
+        <div class="lyric-syllabic">Y-seis-me-ses-de-es-pe-ra-me-a-plas-ta-<span class="a">ron</span></div>
+        <button class="plb" onclick="speakLine(this,'Y seis meses de espera me aplastaron —','es')">▶</button>
+        <div class="lyric-ipa">i.sejs.me.ses.de.es.pe.ɾa.me.a.plas.ta.ɾon</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">And six months of waiting crushed me down —</div>
+        <div class="lyric-syllabic">And-six-months-of-wait-ing-crushed-me-<span class="a">down</span></div>
+        <button class="plb" onclick="speakLine(this,'And six months of waiting crushed me down —','en')">▶</button>
+        <div class="lyric-ipa">ænd.sɪks.mʌnθs.əv.ˈweɪt.ɪŋ.krʌʃt.mi.daʊn</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">HOUA !</div>
+        <div class="lyric-syllabic"><span class="a">HOU</span>-A</div>
+        <button class="plb" onclick="speakLine(this,'HOUA !','fr')">▶</button>
+        <div class="lyric-ipa">wa</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">HOUA !</div>
+        <div class="lyric-syllabic"><span class="a">HOU</span>-A</div>
+        <button class="plb" onclick="speakLine(this,'HOUA !','es')">▶</button>
+        <div class="lyric-ipa">wa</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">HOUA !</div>
+        <div class="lyric-syllabic"><span class="a">HOU</span>-A</div>
+        <button class="plb" onclick="speakLine(this,'HOUA !','en')">▶</button>
+        <div class="lyric-ipa">wa</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Vous avez mal ?</div>
+        <div class="lyric-syllabic">Vous-a-vez-<span class="a">mal</span></div>
+        <button class="plb" onclick="speakLine(this,'Vous avez mal ?','fr')">▶</button>
+        <div class="lyric-ipa">vu.za.ve.mal</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">¿Le duele ?</div>
+        <div class="lyric-syllabic">Le-<span class="a">due</span>-le</div>
+        <button class="plb" onclick="speakLine(this,'¿Le duele ?','es')">▶</button>
+        <div class="lyric-ipa">le.dwe.le</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">Does it hurt?</div>
+        <div class="lyric-syllabic">Does-it-<span class="a">hurt</span></div>
+        <button class="plb" onclick="speakLine(this,'Does it hurt?','en')">▶</button>
+        <div class="lyric-ipa">dʌz.ɪt.hɜːrt</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Comme c&#x27;est émouvant —</div>
+        <div class="lyric-syllabic">Comme-cest-é-mou-<span class="a">vant</span></div>
+        <button class="plb" onclick="speakLine(this,'Comme c\'est émouvant —','fr')">▶</button>
+        <div class="lyric-ipa">kɔm.sɛ.te.mu.vɑ̃</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Qué conmovedor —</div>
+        <div class="lyric-syllabic">Qué-con-mo-ve-<span class="a">dor</span></div>
+        <button class="plb" onclick="speakLine(this,'Qué conmovedor —','es')">▶</button>
+        <div class="lyric-ipa">ke.kon.mo.βe.ðoɾ</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">How very touching —</div>
+        <div class="lyric-syllabic">How-ve-ry-<span class="a">touch</span>-ing</div>
+        <button class="plb" onclick="speakLine(this,'How very touching —','en')">▶</button>
+        <div class="lyric-ipa">haʊ.ˈvɛ.ri.ˈtʌtʃ.ɪŋ</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">J&#x27;ai juste besoin d&#x27;un rendez-vous —</div>
+        <div class="lyric-syllabic">Jai-jus-te-be-soin-dun-ren-dez-<span class="a">vous</span></div>
+        <button class="plb" onclick="speakLine(this,'J\'ai juste besoin d\'un rendez-vous —','fr')">▶</button>
+        <div class="lyric-ipa">ʒe.ʒyst.bə.zwɛ̃.dœ̃.ʁɑ̃.de.vu</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Solo necesito una cita —</div>
+        <div class="lyric-syllabic">So-lo-ne-ce-si-to-u-na-<span class="a">ci</span>-ta</div>
+        <button class="plb" onclick="speakLine(this,'Solo necesito una cita —','es')">▶</button>
+        <div class="lyric-ipa">so.lo.ne.se.si.to.u.na.si.ta</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">I just need an appointment —</div>
+        <div class="lyric-syllabic">I-just-need-an-ap-<span class="a">point</span>-ment</div>
+        <button class="plb" onclick="speakLine(this,'I just need an appointment —','en')">▶</button>
+        <div class="lyric-ipa">aɪ.dʒʌst.niːd.ən.əˈpɔɪnt.mənt</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Bienvenue dans le futur médical —</div>
+        <div class="lyric-syllabic">Bien-ve-nue-dans-le-fu-tur-mé-di-<span class="a">cal</span></div>
+        <button class="plb" onclick="speakLine(this,'Bienvenue dans le futur médical —','fr')">▶</button>
+        <div class="lyric-ipa">bjɛ̃.və.ny.dɑ̃.lə.fy.tyʁ.me.di.kal</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Bienvenido al futuro médico —</div>
+        <div class="lyric-syllabic">Bien-ve-ni-do-al-fu-tu-ro-<span class="a">mé</span>-di-co</div>
+        <button class="plb" onclick="speakLine(this,'Bienvenido al futuro médico —','es')">▶</button>
+        <div class="lyric-ipa">bjen.be.ni.ðo.al.fu.tu.ɾo.me.ði.ko</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">Welcome to the future of healthcare —</div>
+        <div class="lyric-syllabic">Wel-come-to-the-fu-ture-of-<span class="a">health</span>-care</div>
+        <button class="plb" onclick="speakLine(this,'Welcome to the future of healthcare —','en')">▶</button>
+        <div class="lyric-ipa">ˈwɛl.kəm.tuː.ðə.ˈfjuː.tʃər.əv.ˈhɛlθ.kɛr</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">où mourir coûte moins cher que guérir —</div>
+        <div class="lyric-syllabic">où-mou-rir-coû-te-moins-cher-que-gué-<span class="a">rir</span></div>
+        <button class="plb" onclick="speakLine(this,'où mourir coûte moins cher que guérir —','fr')">▶</button>
+        <div class="lyric-ipa">u.mu.ʁiʁ.kut.mwɛ̃.ʃɛʁ.kə.ge.ʁiʁ</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">donde morir cuesta menos que curarse —</div>
+        <div class="lyric-syllabic">don-de-mo-rir-cues-ta-me-nos-que-cu-<span class="a">rar</span>-se</div>
+        <button class="plb" onclick="speakLine(this,'donde morir cuesta menos que curarse —','es')">▶</button>
+        <div class="lyric-ipa">don.de.mo.ɾiɾ.kwes.ta.me.nos.ke.ku.ɾaɾ.se</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">where dying costs less than getting cured —</div>
+        <div class="lyric-syllabic">where-dy-ing-costs-less-than-get-ting-<span class="a">cured</span></div>
+        <button class="plb" onclick="speakLine(this,'where dying costs less than getting cured —','en')">▶</button>
+        <div class="lyric-ipa">wɛr.ˈdaɪ.ɪŋ.kɒsts.lɛs.ðæn.ˈɡɛt.ɪŋ.kjʊrd</div>
+      </div></div><div class="sound-hints">
+<div class="sh fr">🇫🇷 Le <b>r</b> français grasseyé (« système », « retraite ») se fait au fond de la gorge, jamais roulé.</div>
+<div class="sh es">🇪🇸 La <b>ñ</b> de « año » et le <b>j</b> de « lujo » : la langue touche le palais, souffle guttural pour le j, jamais un simple "y".</div>
+<div class="sh en">🇬🇧 The <b>th</b> of « that chair » — tongue between the teeth, a soft breath, never a "z" or "d" sound.</div>
+</div><h3 class="sec-title">Refrain / Estribillo / Chorus</h3><div class="tagrow">[Drop Chorus — hook + Ghost Voice]</div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">SOURIEZ —</div>
+        <div class="lyric-syllabic">Sou-ri-<span class="a">ez</span></div>
+        <button class="plb" onclick="speakLine(this,'SOURIEZ —','fr')">▶</button>
+        <div class="lyric-ipa">su.ʁje</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">¡SONRÍA!</div>
+        <div class="lyric-syllabic">Son-<span class="a">rí</span>-a</div>
+        <button class="plb" onclick="speakLine(this,'¡SONRÍA!','es')">▶</button>
+        <div class="lyric-ipa">son.ri.a</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">SMILE!</div>
+        <div class="lyric-syllabic"><span class="a">SMILE</span></div>
+        <button class="plb" onclick="speakLine(this,'SMILE!','en')">▶</button>
+        <div class="lyric-ipa">smaɪl</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">VOUS ÊTES PLOMBÉS —</div>
+        <div class="lyric-syllabic">Vous-ê-tes-plom-<span class="a">bés</span></div>
+        <button class="plb" onclick="speakLine(this,'VOUS ÊTES PLOMBÉS —','fr')">▶</button>
+        <div class="lyric-ipa">vu.zɛt.plɔ̃.be</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">¡ESTÁ EMPASTADO!</div>
+        <div class="lyric-syllabic">Es-<span class="a">tá</span>-em-pas-ta-do</div>
+        <button class="plb" onclick="speakLine(this,'¡ESTÁ EMPASTADO!','es')">▶</button>
+        <div class="lyric-ipa">es.ta.em.pas.ta.ðo</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">YOU&#x27;VE BEEN DRILLED!</div>
+        <div class="lyric-syllabic">Youve-been-<span class="a">drilled</span></div>
+        <button class="plb" onclick="speakLine(this,'YOU\'VE BEEN DRILLED!','en')">▶</button>
+        <div class="lyric-ipa">juv.bin.drɪld</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Souriez — vous êtes plombés —</div>
+        <div class="lyric-syllabic">Sou-ri-ez-vous-ê-tes-plom-<span class="a">bés</span></div>
+        <button class="plb" onclick="speakLine(this,'Souriez — vous êtes plombés —','fr')">▶</button>
+        <div class="lyric-ipa">su.ʁje.vu.zɛt.plɔ̃.be</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Sonría — está empastado —</div>
+        <div class="lyric-syllabic">Son-<span class="a">rí</span>-a-es-tá-em-pas-ta-do</div>
+        <button class="plb" onclick="speakLine(this,'Sonría — está empastado —','es')">▶</button>
+        <div class="lyric-ipa">son.ri.a.es.ta.em.pas.ta.ðo</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">Smile — you&#x27;ve been drilled —</div>
+        <div class="lyric-syllabic">Smile-youve-been-<span class="a">drilled</span></div>
+        <button class="plb" onclick="speakLine(this,'Smile — you\'ve been drilled —','en')">▶</button>
+        <div class="lyric-ipa">smaɪl.juv.bin.drɪld</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Vos petits soins quotidiens ?</div>
+        <div class="lyric-syllabic">Vos-pe-tits-soins-quo-ti-<span class="a">diens</span></div>
+        <button class="plb" onclick="speakLine(this,'Vos petits soins quotidiens ?','fr')">▶</button>
+        <div class="lyric-ipa">vo.pə.ti.swɛ̃.kɔ.ti.djɛ̃</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">¿Sus pequeños cuidados de cada día ?</div>
+        <div class="lyric-syllabic">Sus-pe-que-ños-cui-da-dos-de-ca-da-<span class="a">dí</span>-a</div>
+        <button class="plb" onclick="speakLine(this,'¿Sus pequeños cuidados de cada día ?','es')">▶</button>
+        <div class="lyric-ipa">sus.pe.ke.ɲos.kwi.ða.ðos.de.ka.ða.di.a</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">Your little everyday care?</div>
+        <div class="lyric-syllabic">Your-lit-tle-ev-ry-day-<span class="a">care</span></div>
+        <button class="plb" onclick="speakLine(this,'Your little everyday care?','en')">▶</button>
+        <div class="lyric-ipa">jʊr.ˈlɪt.əl.ˈɛv.ri.deɪ.kɛr</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Déjà liquidés —</div>
+        <div class="lyric-syllabic">Dé-jà-li-qui-<span class="a">dés</span></div>
+        <button class="plb" onclick="speakLine(this,'Déjà liquidés —','fr')">▶</button>
+        <div class="lyric-ipa">de.ʒa.li.ki.de</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Ya liquidados —</div>
+        <div class="lyric-syllabic">Ya-li-qui-<span class="a">da</span>-dos</div>
+        <button class="plb" onclick="speakLine(this,'Ya liquidados —','es')">▶</button>
+        <div class="lyric-ipa">ʝa.li.ki.ða.ðos</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">Already liquidated —</div>
+        <div class="lyric-syllabic">Al-read-y-liq-ui-<span class="a">dat</span>-ed</div>
+        <button class="plb" onclick="speakLine(this,'Already liquidated —','en')">▶</button>
+        <div class="lyric-ipa">ɔːlˈrɛd.i.ˈlɪk.wɪ.deɪt.ɪd</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">plombé — plombé — plombé —</div>
+        <div class="lyric-syllabic">plom-<span class="a">bé</span>-plom-bé-plom-bé</div>
+        <button class="plb" onclick="speakLine(this,'plombé — plombé — plombé —','fr')">▶</button>
+        <div class="lyric-ipa">plɔ̃.be.plɔ̃.be.plɔ̃.be</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">empastado — empastado — empastado —</div>
+        <div class="lyric-syllabic">em-pas-<span class="a">ta</span>-do-em-pas-ta-do-em-pas-ta-do</div>
+        <button class="plb" onclick="speakLine(this,'empastado — empastado — empastado —','es')">▶</button>
+        <div class="lyric-ipa">em.pas.ta.ðo.em.pas.ta.ðo.em.pas.ta.ðo</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">drilled — drilled — drilled —</div>
+        <div class="lyric-syllabic"><span class="a">drilled</span>-drilled-drilled</div>
+        <button class="plb" onclick="speakLine(this,'drilled — drilled — drilled —','en')">▶</button>
+        <div class="lyric-ipa">drɪld.drɪld.drɪld</div>
+      </div></div><h3 class="sec-title">Couplet 2 / Verso 2 / Verse 2</h3><div class="tagrow">[Verse 2 — groove locked, minimal drums return]</div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Miracle —</div>
+        <div class="lyric-syllabic">Mi-<span class="a">ra</span>-cle</div>
+        <button class="plb" onclick="speakLine(this,'Miracle —','fr')">▶</button>
+        <div class="lyric-ipa">mi.ʁakl</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Milagro —</div>
+        <div class="lyric-syllabic">Mi-<span class="a">la</span>-gro</div>
+        <button class="plb" onclick="speakLine(this,'Milagro —','es')">▶</button>
+        <div class="lyric-ipa">mi.la.ɣɾo</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">Miracle —</div>
+        <div class="lyric-syllabic"><span class="a">Mir</span>-a-cle</div>
+        <button class="plb" onclick="speakLine(this,'Miracle —','en')">▶</button>
+        <div class="lyric-ipa">ˈmɪr.ə.kəl</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">un rendez-vous libre est apparu —</div>
+        <div class="lyric-syllabic">un-ren-dez-vous-li-bre-est-ap-pa-<span class="a">ru</span></div>
+        <button class="plb" onclick="speakLine(this,'un rendez-vous libre est apparu —','fr')">▶</button>
+        <div class="lyric-ipa">œ̃.ʁɑ̃.de.vu.libʁ.e.ta.pa.ʁy</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">apareció una cita libre —</div>
+        <div class="lyric-syllabic">a-pa-re-<span class="a">ció</span>-u-na-ci-ta-li-bre</div>
+        <button class="plb" onclick="speakLine(this,'apareció una cita libre —','es')">▶</button>
+        <div class="lyric-ipa">a.pa.ɾe.sjo.u.na.si.ta.li.βɾe</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">a free appointment has appeared —</div>
+        <div class="lyric-syllabic">a-free-ap-point-ment-has-ap-<span class="a">peared</span></div>
+        <button class="plb" onclick="speakLine(this,'a free appointment has appeared —','en')">▶</button>
+        <div class="lyric-ipa">ə.fri.əˈpɔɪnt.mənt.hæz.əˈpɪrd</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Comme gagner à la loterie médicale —</div>
+        <div class="lyric-syllabic">Comme-ga-gner-à-la-lo-te-rie-mé-di-<span class="a">cale</span></div>
+        <button class="plb" onclick="speakLine(this,'Comme gagner à la loterie médicale —','fr')">▶</button>
+        <div class="lyric-ipa">kɔm.ɡa.ɲe.a.la.lɔt.ʁi.me.di.kal</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Como ganar la lotería médica —</div>
+        <div class="lyric-syllabic">Co-mo-ga-nar-la-lo-te-<span class="a">rí</span>-a-mé-di-ca</div>
+        <button class="plb" onclick="speakLine(this,'Como ganar la lotería médica —','es')">▶</button>
+        <div class="lyric-ipa">ko.mo.ɣa.naɾ.la.lo.te.ɾi.a.me.ði.ka</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">Like winning the medical lottery —</div>
+        <div class="lyric-syllabic">Like-win-ning-the-med-i-cal-lot-ter-<span class="a">y</span></div>
+        <button class="plb" onclick="speakLine(this,'Like winning the medical lottery —','en')">▶</button>
+        <div class="lyric-ipa">laɪk.ˈwɪn.ɪŋ.ðə.ˈmɛd.ɪ.kəl.ˈlɒt.ər.i</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">J&#x27;ai couru sauver ce qu&#x27;il reste de ma bouche —</div>
+        <div class="lyric-syllabic">Jai-cou-ru-sau-ver-ce-quil-res-te-de-ma-<span class="a">bouche</span></div>
+        <button class="plb" onclick="speakLine(this,'J\'ai couru sauver ce qu\'il reste de ma bouche —','fr')">▶</button>
+        <div class="lyric-ipa">ʒe.ku.ʁy.so.ve.sə.kil.ʁɛst.də.ma.buʃ</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Corrí a salvar lo que queda de mi boca —</div>
+        <div class="lyric-syllabic">Co-<span class="a">rrí</span>-a-sal-var-lo-que-que-da-de-mi-bo-ca</div>
+        <button class="plb" onclick="speakLine(this,'Corrí a salvar lo que queda de mi boca —','es')">▶</button>
+        <div class="lyric-ipa">ko.ri.a.sal.baɾ.lo.ke.ke.ða.de.mi.bo.ka</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">I ran to save what&#x27;s left of my mouth —</div>
+        <div class="lyric-syllabic">I-ran-to-save-whats-left-of-my-<span class="a">mouth</span></div>
+        <button class="plb" onclick="speakLine(this,'I ran to save what\'s left of my mouth —','en')">▶</button>
+        <div class="lyric-ipa">aɪ.ræn.tuː.seɪv.wʌts.lɛft.əv.maɪ.maʊθ</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Avant que mon salaire disparaisse —</div>
+        <div class="lyric-syllabic">A-vant-que-mon-sa-lai-re-dis-pa-<span class="a">raisse</span></div>
+        <button class="plb" onclick="speakLine(this,'Avant que mon salaire disparaisse —','fr')">▶</button>
+        <div class="lyric-ipa">a.vɑ̃.kə.mɔ̃.sa.lɛʁ.dis.pa.ʁɛs</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Antes de que mi sueldo desaparezca —</div>
+        <div class="lyric-syllabic">An-tes-de-que-mi-<span class="a">suel</span>-do-de-sa-pa-rez-ca</div>
+        <button class="plb" onclick="speakLine(this,'Antes de que mi sueldo desaparezca —','es')">▶</button>
+        <div class="lyric-ipa">an.tes.de.ke.mi.swel.do.de.sa.pa.ɾes.ka</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">Before my whole paycheck disappears —</div>
+        <div class="lyric-syllabic">Be-fore-my-whole-pay-check-dis-ap-<span class="a">pears</span></div>
+        <button class="plb" onclick="speakLine(this,'Before my whole paycheck disappears —','en')">▶</button>
+        <div class="lyric-ipa">bɪˈfɔːr.maɪ.hoʊl.ˈpeɪ.tʃɛk.dɪs.əˈpɪrz</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Vous arrivez trop tard, cher monsieur —</div>
+        <div class="lyric-syllabic">Vous-ar-ri-vez-trop-tard-cher-mon-<span class="a">sieur</span></div>
+        <button class="plb" onclick="speakLine(this,'Vous arrivez trop tard, cher monsieur —','fr')">▶</button>
+        <div class="lyric-ipa">vu.za.ʁi.ve.tʁo.taʁ.ʃɛʁ.mə.sjø</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Llega usted tarde, caballero —</div>
+        <div class="lyric-syllabic">Lle-ga-us-<span class="a">ted</span>-tar-de-ca-ba-lle-ro</div>
+        <button class="plb" onclick="speakLine(this,'Llega usted tarde, caballero —','es')">▶</button>
+        <div class="lyric-ipa">ʝe.ɣa.us.teð.taɾ.ðe.ka.βa.ʝe.ɾo</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">You&#x27;ve arrived too late, dear sir —</div>
+        <div class="lyric-syllabic">Youve-ar-rived-too-late-dear-<span class="a">sir</span></div>
+        <button class="plb" onclick="speakLine(this,'You\'ve arrived too late, dear sir —','en')">▶</button>
+        <div class="lyric-ipa">juv.əˈraɪvd.tuː.leɪt.dɪr.sɜːr</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Vous auriez dû souffrir un mardi pluvieux —</div>
+        <div class="lyric-syllabic">Vous-au-riez-dû-souf-frir-un-mar-di-plu-vi-<span class="a">eux</span></div>
+        <button class="plb" onclick="speakLine(this,'Vous auriez dû souffrir un mardi pluvieux —','fr')">▶</button>
+        <div class="lyric-ipa">vu.zɔ.ʁje.dy.su.fʁiʁ.œ̃.maʁ.di.ply.vjø</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Debió sufrir un martes lluvioso —</div>
+        <div class="lyric-syllabic">De-<span class="a">bió</span>-su-frir-un-mar-tes-llu-vio-so</div>
+        <button class="plb" onclick="speakLine(this,'Debió sufrir un martes lluvioso —','es')">▶</button>
+        <div class="lyric-ipa">de.βjo.su.fɾiɾ.un.maɾ.tes.ʝu.βjo.so</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">You should&#x27;ve suffered on a rainy Tuesday —</div>
+        <div class="lyric-syllabic">You-shouldve-suf-fered-on-a-rain-y-<span class="a">Tues</span>-day</div>
+        <button class="plb" onclick="speakLine(this,'You should\'ve suffered on a rainy Tuesday —','en')">▶</button>
+        <div class="lyric-ipa">ju.ˈʃʊdəv.ˈsʌf.ərd.ɒn.ə.ˈreɪn.i.ˈtuːz.deɪ</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">HOUA !</div>
+        <div class="lyric-syllabic"><span class="a">HOU</span>-A</div>
+        <button class="plb" onclick="speakLine(this,'HOUA !','fr')">▶</button>
+        <div class="lyric-ipa">wa</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">HOUA !</div>
+        <div class="lyric-syllabic"><span class="a">HOU</span>-A</div>
+        <button class="plb" onclick="speakLine(this,'HOUA !','es')">▶</button>
+        <div class="lyric-ipa">wa</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">HOUA !</div>
+        <div class="lyric-syllabic"><span class="a">HOU</span>-A</div>
+        <button class="plb" onclick="speakLine(this,'HOUA !','en')">▶</button>
+        <div class="lyric-ipa">wa</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Je voulais juste une simple vis —</div>
+        <div class="lyric-syllabic">Je-vou-lais-jus-te-u-ne-sim-ple-<span class="a">vis</span></div>
+        <button class="plb" onclick="speakLine(this,'Je voulais juste une simple vis —','fr')">▶</button>
+        <div class="lyric-ipa">ʒə.vu.lɛ.ʒyst.yn.sɛ̃pl.vis</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Solo quería un simple tornillo —</div>
+        <div class="lyric-syllabic">So-lo-que-<span class="a">rí</span>-a-un-sim-ple-tor-ni-llo</div>
+        <button class="plb" onclick="speakLine(this,'Solo quería un simple tornillo —','es')">▶</button>
+        <div class="lyric-ipa">so.lo.ke.ɾi.a.un.sim.ple.toɾ.ni.ʝo</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">I just wanted a simple screw —</div>
+        <div class="lyric-syllabic">I-just-want-ed-a-sim-ple-<span class="a">screw</span></div>
+        <button class="plb" onclick="speakLine(this,'I just wanted a simple screw —','en')">▶</button>
+        <div class="lyric-ipa">aɪ.dʒʌst.ˈwɒnt.ɪd.ə.ˈsɪm.pəl.skruː</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Les petits budgets me dépriment —</div>
+        <div class="lyric-syllabic">Les-pe-tits-bud-gets-me-dé-pri-<span class="a">ment</span></div>
+        <button class="plb" onclick="speakLine(this,'Les petits budgets me dépriment —','fr')">▶</button>
+        <div class="lyric-ipa">le.pə.ti.byd.ʒɛ.mə.de.pʁim</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Los presupuestos bajos me deprimen —</div>
+        <div class="lyric-syllabic">Los-pre-su-pues-tos-<span class="a">ba</span>-jos-me-de-pri-men</div>
+        <button class="plb" onclick="speakLine(this,'Los presupuestos bajos me deprimen —','es')">▶</button>
+        <div class="lyric-ipa">los.pɾe.su.pwes.tos.ba.xos.me.de.pɾi.men</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">Small budgets depress me —</div>
+        <div class="lyric-syllabic">Small-bud-gets-de-<span class="a">press</span>-me</div>
+        <button class="plb" onclick="speakLine(this,'Small budgets depress me —','en')">▶</button>
+        <div class="lyric-ipa">smɔːl.ˈbʌdʒ.ɪts.dɪˈprɛs.mi</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Moi je fais des sourires premium —</div>
+        <div class="lyric-syllabic">Moi-je-fais-des-sou-ri-res-<span class="a">pre</span>-mi-um</div>
+        <button class="plb" onclick="speakLine(this,'Moi je fais des sourires premium —','fr')">▶</button>
+        <div class="lyric-ipa">mwa.ʒə.fɛ.de.su.ʁiʁ.pʁe.mjɔm</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Yo hago sonrisas premium —</div>
+        <div class="lyric-syllabic">Yo-<span class="a">ha</span>-go-son-ri-sas-pre-mium</div>
+        <button class="plb" onclick="speakLine(this,'Yo hago sonrisas premium —','es')">▶</button>
+        <div class="lyric-ipa">ʝo.a.ɣo.son.ri.sas.pɾe.mjum</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">I only make premium smiles —</div>
+        <div class="lyric-syllabic">I-on-ly-make-<span class="a">pre</span>-mi-um-smiles</div>
+        <button class="plb" onclick="speakLine(this,'I only make premium smiles —','en')">▶</button>
+        <div class="lyric-ipa">aɪ.ˈoʊn.li.meɪk.ˈpriː.mi.əm.smaɪlz</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">pas du bricolage pour pauvres —</div>
+        <div class="lyric-syllabic">pas-du-bri-co-<span class="a">la</span>-ge-pour-pauvres</div>
+        <button class="plb" onclick="speakLine(this,'pas du bricolage pour pauvres —','fr')">▶</button>
+        <div class="lyric-ipa">pa.dy.bʁi.kɔ.laʒ.puʁ.povʁ</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">no chapuzas para pobres —</div>
+        <div class="lyric-syllabic">no-cha-<span class="a">pu</span>-zas-pa-ra-po-bres</div>
+        <button class="plb" onclick="speakLine(this,'no chapuzas para pobres —','es')">▶</button>
+        <div class="lyric-ipa">no.tʃa.pu.sas.pa.ɾa.po.bɾes</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">not cheap fixes for the poor —</div>
+        <div class="lyric-syllabic">not-cheap-fix-es-for-the-<span class="a">poor</span></div>
+        <button class="plb" onclick="speakLine(this,'not cheap fixes for the poor —','en')">▶</button>
+        <div class="lyric-ipa">nɒt.tʃiːp.ˈfɪks.ɪz.fɔːr.ðə.pʊr</div>
+      </div></div><h3 class="sec-title">Bridge / Puente / Bridge</h3><div class="tagrow">[Bridge — breakdown into long drill silence]</div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Alors on m&#x27;envoie —</div>
+        <div class="lyric-syllabic">A-lors-on-men-<span class="a">voie</span></div>
+        <button class="plb" onclick="speakLine(this,'Alors on m\'envoie —','fr')">▶</button>
+        <div class="lyric-ipa">a.lɔʁ.zɔ̃.mɑ̃.vwa</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Entonces me mandan —</div>
+        <div class="lyric-syllabic">En-<span class="a">ton</span>-ces-me-man-dan</div>
+        <button class="plb" onclick="speakLine(this,'Entonces me mandan —','es')">▶</button>
+        <div class="lyric-ipa">en.ton.ses.me.man.dan</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">So they send me off —</div>
+        <div class="lyric-syllabic">So-they-send-me-<span class="a">off</span></div>
+        <button class="plb" onclick="speakLine(this,'So they send me off —','en')">▶</button>
+        <div class="lyric-ipa">soʊ.ðeɪ.sɛnd.mi.ɒf</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">vers un autre spécialiste —</div>
+        <div class="lyric-syllabic">vers-un-au-tre-spé-cia-<span class="a">liste</span></div>
+        <button class="plb" onclick="speakLine(this,'vers un autre spécialiste —','fr')">▶</button>
+        <div class="lyric-ipa">vɛʁ.zœ̃.notʁ.spe.sja.list</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">a otro especialista —</div>
+        <div class="lyric-syllabic">a-o-tro-es-pe-cia-<span class="a">lis</span>-ta</div>
+        <button class="plb" onclick="speakLine(this,'a otro especialista —','es')">▶</button>
+        <div class="lyric-ipa">a.o.tɾo.es.pe.sja.lis.ta</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">to yet another specialist —</div>
+        <div class="lyric-syllabic">to-yet-an-oth-er-<span class="a">spe</span>-cial-ist</div>
+        <button class="plb" onclick="speakLine(this,'to yet another specialist —','en')">▶</button>
+        <div class="lyric-ipa">tuː.jɛt.əˈnʌð.ər.ˈspɛʃ.əl.ɪst</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Le labyrinthe médical adore les survivants fatigués —</div>
+        <div class="lyric-syllabic">Le-la-by-rin-the-mé-di-cal-a-do-re-les-sur-vi-vants-fa-ti-<span class="a">gués</span></div>
+        <button class="plb" onclick="speakLine(this,'Le labyrinthe médical adore les survivants fatigués —','fr')">▶</button>
+        <div class="lyric-ipa">lə.la.bi.ʁɛ̃t.me.di.kal.a.dɔʁ.le.syʁ.vi.vɑ̃.fa.ti.ɡe</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">El laberinto médico adora a los supervivientes cansados —</div>
+        <div class="lyric-syllabic">El-la-be-<span class="a">rin</span>-to-mé-di-co-a-do-ra-a-los-su-per-vi-vien-tes-can-sa-dos</div>
+        <button class="plb" onclick="speakLine(this,'El laberinto médico adora a los supervivientes cansados —','es')">▶</button>
+        <div class="lyric-ipa">el.la.βe.rin.to.me.ði.ko.a.ðo.ɾa.a.los.su.peɾ.βi.βjen.tes.kan.sa.dos</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">The medical maze adores its tired survivors —</div>
+        <div class="lyric-syllabic">The-med-i-cal-maze-a-<span class="a">dores</span>-its-tired-sur-vi-vors</div>
+        <button class="plb" onclick="speakLine(this,'The medical maze adores its tired survivors —','en')">▶</button>
+        <div class="lyric-ipa">ðə.ˈmɛd.ɪ.kəl.meɪz.əˈdɔːrz.ɪts.taɪrd.sərˈvaɪ.vərz</div>
+      </div></div><h3 class="sec-title">Couplet 3 / Verso 3 / Verse 3</h3><div class="tagrow">[Verse 3 — climax build]</div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Deuxième cabinet —</div>
+        <div class="lyric-syllabic">Deu-xiè-me-ca-bi-<span class="a">net</span></div>
+        <button class="plb" onclick="speakLine(this,'Deuxième cabinet —','fr')">▶</button>
+        <div class="lyric-ipa">dø.zjɛm.ka.bi.nɛ</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Segunda consulta —</div>
+        <div class="lyric-syllabic">Se-<span class="a">gun</span>-da-con-sul-ta</div>
+        <button class="plb" onclick="speakLine(this,'Segunda consulta —','es')">▶</button>
+        <div class="lyric-ipa">se.ɣun.da.kon.sul.ta</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">Second office —</div>
+        <div class="lyric-syllabic">Sec-ond-<span class="a">of</span>-fice</div>
+        <button class="plb" onclick="speakLine(this,'Second office —','en')">▶</button>
+        <div class="lyric-ipa">ˈsɛk.ənd.ˈɒf.ɪs</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">deuxième humiliation —</div>
+        <div class="lyric-syllabic">deu-xiè-me-hu-mi-lia-<span class="a">tion</span></div>
+        <button class="plb" onclick="speakLine(this,'deuxième humiliation —','fr')">▶</button>
+        <div class="lyric-ipa">dø.zjɛm.y.mi.lja.sjɔ̃</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">segunda humillación —</div>
+        <div class="lyric-syllabic">se-gun-da-hu-mi-lla-<span class="a">ción</span></div>
+        <button class="plb" onclick="speakLine(this,'segunda humillación —','es')">▶</button>
+        <div class="lyric-ipa">se.ɣun.da.u.mi.ʝa.sjon</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">second humiliation —</div>
+        <div class="lyric-syllabic">sec-ond-hu-mil-i-<span class="a">a</span>-tion</div>
+        <button class="plb" onclick="speakLine(this,'second humiliation —','en')">▶</button>
+        <div class="lyric-ipa">ˈsɛk.ənd.hjuːˌmɪl.iˈeɪ.ʃən</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">La gencive a déjà refermé la tombe —</div>
+        <div class="lyric-syllabic">La-gen-ci-ve-a-dé-jà-re-fer-mé-la-<span class="a">tombe</span></div>
+        <button class="plb" onclick="speakLine(this,'La gencive a déjà refermé la tombe —','fr')">▶</button>
+        <div class="lyric-ipa">la.ʒɑ̃.siv.a.de.ʒa.ʁə.fɛʁ.me.la.tɔ̃b</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">La encía ya cerró la tumba —</div>
+        <div class="lyric-syllabic">La-en-<span class="a">cí</span>-a-ya-ce-rró-la-tum-ba</div>
+        <button class="plb" onclick="speakLine(this,'La encía ya cerró la tumba —','es')">▶</button>
+        <div class="lyric-ipa">la.en.si.a.ʝa.se.ro.la.tum.ba</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">The gum has already sealed the grave —</div>
+        <div class="lyric-syllabic">The-gum-has-al-read-y-sealed-the-<span class="a">grave</span></div>
+        <button class="plb" onclick="speakLine(this,'The gum has already sealed the grave —','en')">▶</button>
+        <div class="lyric-ipa">ðə.ɡʌm.hæz.ɔːlˈrɛd.i.siːld.ðə.ɡreɪv</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Je veux juste retrouver mon sourire —</div>
+        <div class="lyric-syllabic">Je-veux-jus-te-re-trou-ver-mon-sou-<span class="a">rire</span></div>
+        <button class="plb" onclick="speakLine(this,'Je veux juste retrouver mon sourire —','fr')">▶</button>
+        <div class="lyric-ipa">ʒə.vø.ʒyst.ʁə.tʁu.ve.mɔ̃.su.ʁiʁ</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Solo quiero recuperar mi sonrisa —</div>
+        <div class="lyric-syllabic">So-lo-quie-ro-re-cu-pe-<span class="a">rar</span>-mi-son-ri-sa</div>
+        <button class="plb" onclick="speakLine(this,'Solo quiero recuperar mi sonrisa —','es')">▶</button>
+        <div class="lyric-ipa">so.lo.kje.ɾo.re.ku.pe.ɾaɾ.mi.son.ri.sa</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">I just want my smile back —</div>
+        <div class="lyric-syllabic">I-just-want-my-<span class="a">smile</span>-back</div>
+        <button class="plb" onclick="speakLine(this,'I just want my smile back —','en')">▶</button>
+        <div class="lyric-ipa">aɪ.dʒʌst.wɒnt.maɪ.smaɪl.bæk</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Maintenant il faut couper —</div>
+        <div class="lyric-syllabic">Main-te-nant-il-faut-cou-<span class="a">per</span></div>
+        <button class="plb" onclick="speakLine(this,'Maintenant il faut couper —','fr')">▶</button>
+        <div class="lyric-ipa">mɛ̃t.nɑ̃.il.fo.ku.pe</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Ahora hay que cortar —</div>
+        <div class="lyric-syllabic">A-<span class="a">ho</span>-ra-hay-que-cor-tar</div>
+        <button class="plb" onclick="speakLine(this,'Ahora hay que cortar —','es')">▶</button>
+        <div class="lyric-ipa">a.o.ɾa.aj.ke.koɾ.taɾ</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">Now we have to cut —</div>
+        <div class="lyric-syllabic">Now-we-have-to-<span class="a">cut</span></div>
+        <button class="plb" onclick="speakLine(this,'Now we have to cut —','en')">▶</button>
+        <div class="lyric-ipa">naʊ.wi.hæv.tuː.kʌt</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">ouvrir —</div>
+        <div class="lyric-syllabic">ou-<span class="a">vrir</span></div>
+        <button class="plb" onclick="speakLine(this,'ouvrir —','fr')">▶</button>
+        <div class="lyric-ipa">u.vʁiʁ</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">abrir —</div>
+        <div class="lyric-syllabic">a-<span class="a">brir</span></div>
+        <button class="plb" onclick="speakLine(this,'abrir —','es')">▶</button>
+        <div class="lyric-ipa">a.βɾiɾ</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">open —</div>
+        <div class="lyric-syllabic"><span class="a">o</span>-pen</div>
+        <button class="plb" onclick="speakLine(this,'open —','en')">▶</button>
+        <div class="lyric-ipa">ˈoʊ.pən</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">percer —</div>
+        <div class="lyric-syllabic">per-<span class="a">cer</span></div>
+        <button class="plb" onclick="speakLine(this,'percer —','fr')">▶</button>
+        <div class="lyric-ipa">pɛʁ.se</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">perforar —</div>
+        <div class="lyric-syllabic">per-fo-<span class="a">rar</span></div>
+        <button class="plb" onclick="speakLine(this,'perforar —','es')">▶</button>
+        <div class="lyric-ipa">peɾ.fo.ɾaɾ</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">drill —</div>
+        <div class="lyric-syllabic"><span class="a">drill</span></div>
+        <button class="plb" onclick="speakLine(this,'drill —','en')">▶</button>
+        <div class="lyric-ipa">drɪl</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">facturer —</div>
+        <div class="lyric-syllabic">fac-tu-<span class="a">rer</span></div>
+        <button class="plb" onclick="speakLine(this,'facturer —','fr')">▶</button>
+        <div class="lyric-ipa">fak.ty.ʁe</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">y facturar —</div>
+        <div class="lyric-syllabic">y-fac-tu-<span class="a">rar</span></div>
+        <button class="plb" onclick="speakLine(this,'y facturar —','es')">▶</button>
+        <div class="lyric-ipa">i.fak.tu.ɾaɾ</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">and bill —</div>
+        <div class="lyric-syllabic">and-<span class="a">bill</span></div>
+        <button class="plb" onclick="speakLine(this,'and bill —','en')">▶</button>
+        <div class="lyric-ipa">ænd.bɪl</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Et combien coûte le droit de redevenir humain ?</div>
+        <div class="lyric-syllabic">Et-com-bien-coû-te-le-droit-de-re-de-ve-nir-hu-<span class="a">main</span></div>
+        <button class="plb" onclick="speakLine(this,'Et combien coûte le droit de redevenir humain ?','fr')">▶</button>
+        <div class="lyric-ipa">e.kɔ̃.bjɛ̃.kut.lə.dʁwa.də.ʁə.dəv.niʁ.y.mɛ̃</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">¿Y cuánto cuesta el derecho a volver a ser humano ?</div>
+        <div class="lyric-syllabic">Y-<span class="a">cuán</span>-to-cues-ta-el-de-re-cho-a-vol-ver-a-ser-hu-ma-no</div>
+        <button class="plb" onclick="speakLine(this,'¿Y cuánto cuesta el derecho a volver a ser humano ?','es')">▶</button>
+        <div class="lyric-ipa">i.kwan.to.kwes.ta.el.de.ɾe.tʃo.a.bol.beɾ.a.seɾ.u.ma.no</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">And how much does it cost to be human again?</div>
+        <div class="lyric-syllabic">And-how-much-does-it-cost-to-be-<span class="a">hu</span>-man-a-gain</div>
+        <button class="plb" onclick="speakLine(this,'And how much does it cost to be human again?','en')">▶</button>
+        <div class="lyric-ipa">ænd.haʊ.mʌtʃ.dʌz.ɪt.kɒst.tuː.bi.ˈhjuː.mən.əˈɡɛn</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Sans assurance privée ?</div>
+        <div class="lyric-syllabic">Sans-as-su-ran-ce-pri-<span class="a">vée</span></div>
+        <button class="plb" onclick="speakLine(this,'Sans assurance privée ?','fr')">▶</button>
+        <div class="lyric-ipa">sɑ̃.za.sy.ʁɑ̃s.pʁi.ve</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">¿Sin seguro privado ?</div>
+        <div class="lyric-syllabic">Sin-se-<span class="a">gu</span>-ro-pri-va-do</div>
+        <button class="plb" onclick="speakLine(this,'¿Sin seguro privado ?','es')">▶</button>
+        <div class="lyric-ipa">sin.se.ɣu.ɾo.pɾi.βa.ðo</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">Without private insurance?</div>
+        <div class="lyric-syllabic">With-out-<span class="a">pri</span>-vate-in-sur-ance</div>
+        <button class="plb" onclick="speakLine(this,'Without private insurance?','en')">▶</button>
+        <div class="lyric-ipa">wɪðˈaʊt.ˈpraɪ.vət.ɪnˈʃʊr.əns</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Probablement un organe vital —</div>
+        <div class="lyric-syllabic">Pro-ba-ble-ment-un-or-ga-ne-vi-<span class="a">tal</span></div>
+        <button class="plb" onclick="speakLine(this,'Probablement un organe vital —','fr')">▶</button>
+        <div class="lyric-ipa">pʁɔ.ba.blə.mɑ̃.œ̃.nɔʁ.ɡan.vi.tal</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Probablemente un órgano vital —</div>
+        <div class="lyric-syllabic">Pro-ba-ble-<span class="a">men</span>-te-un-ór-ga-no-vi-tal</div>
+        <button class="plb" onclick="speakLine(this,'Probablemente un órgano vital —','es')">▶</button>
+        <div class="lyric-ipa">pɾo.βa.βle.men.te.un.oɾ.ɣa.no.bi.tal</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">Probably a vital organ —</div>
+        <div class="lyric-syllabic">Prob-a-bly-a-<span class="a">vi</span>-tal-or-gan</div>
+        <button class="plb" onclick="speakLine(this,'Probably a vital organ —','en')">▶</button>
+        <div class="lyric-ipa">ˈprɒb.ə.bli.ə.ˈvaɪ.təl.ˈɔːr.ɡən</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Titane —</div>
+        <div class="lyric-syllabic">Ti-<span class="a">tane</span></div>
+        <button class="plb" onclick="speakLine(this,'Titane —','fr')">▶</button>
+        <div class="lyric-ipa">ti.tan</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Titanio —</div>
+        <div class="lyric-syllabic">Ti-<span class="a">ta</span>-nio</div>
+        <button class="plb" onclick="speakLine(this,'Titanio —','es')">▶</button>
+        <div class="lyric-ipa">ti.ta.njo</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">Titanium —</div>
+        <div class="lyric-syllabic">Ti-<span class="a">ta</span>-ni-um</div>
+        <button class="plb" onclick="speakLine(this,'Titanium —','en')">▶</button>
+        <div class="lyric-ipa">taɪˈteɪ.ni.əm</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">pivot —</div>
+        <div class="lyric-syllabic">pi-<span class="a">vot</span></div>
+        <button class="plb" onclick="speakLine(this,'pivot —','fr')">▶</button>
+        <div class="lyric-ipa">pi.vo</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">poste —</div>
+        <div class="lyric-syllabic"><span class="a">pos</span>-te</div>
+        <button class="plb" onclick="speakLine(this,'poste —','es')">▶</button>
+        <div class="lyric-ipa">pos.te</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">post —</div>
+        <div class="lyric-syllabic"><span class="a">post</span></div>
+        <button class="plb" onclick="speakLine(this,'post —','en')">▶</button>
+        <div class="lyric-ipa">poʊst</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">couronne —</div>
+        <div class="lyric-syllabic">cou-<span class="a">ronne</span></div>
+        <button class="plb" onclick="speakLine(this,'couronne —','fr')">▶</button>
+        <div class="lyric-ipa">ku.ʁɔn</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">corona —</div>
+        <div class="lyric-syllabic">co-<span class="a">ro</span>-na</div>
+        <button class="plb" onclick="speakLine(this,'corona —','es')">▶</button>
+        <div class="lyric-ipa">ko.ɾo.na</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">crown —</div>
+        <div class="lyric-syllabic"><span class="a">crown</span></div>
+        <button class="plb" onclick="speakLine(this,'crown —','en')">▶</button>
+        <div class="lyric-ipa">kraʊn</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">scanner —</div>
+        <div class="lyric-syllabic">scan-<span class="a">ner</span></div>
+        <button class="plb" onclick="speakLine(this,'scanner —','fr')">▶</button>
+        <div class="lyric-ipa">ska.nɛʁ</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">escáner —</div>
+        <div class="lyric-syllabic">es-<span class="a">cá</span>-ner</div>
+        <button class="plb" onclick="speakLine(this,'escáner —','es')">▶</button>
+        <div class="lyric-ipa">es.ka.neɾ</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">scan —</div>
+        <div class="lyric-syllabic"><span class="a">scan</span></div>
+        <button class="plb" onclick="speakLine(this,'scan —','en')">▶</button>
+        <div class="lyric-ipa">skæn</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">radiographie —</div>
+        <div class="lyric-syllabic">ra-dio-gra-<span class="a">phie</span></div>
+        <button class="plb" onclick="speakLine(this,'radiographie —','fr')">▶</button>
+        <div class="lyric-ipa">ʁa.djɔ.ɡʁa.fi</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">radiografía —</div>
+        <div class="lyric-syllabic">ra-dio-gra-<span class="a">fí</span>-a</div>
+        <button class="plb" onclick="speakLine(this,'radiografía —','es')">▶</button>
+        <div class="lyric-ipa">ra.ðjo.ɣɾa.fi.a</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">X-ray —</div>
+        <div class="lyric-syllabic"><span class="a">X</span>-ray</div>
+        <button class="plb" onclick="speakLine(this,'X-ray —','en')">▶</button>
+        <div class="lyric-ipa">ˈɛks.reɪ</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">devis —</div>
+        <div class="lyric-syllabic">de-<span class="a">vis</span></div>
+        <button class="plb" onclick="speakLine(this,'devis —','fr')">▶</button>
+        <div class="lyric-ipa">də.vi</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">presupuesto —</div>
+        <div class="lyric-syllabic">pre-su-<span class="a">pues</span>-to</div>
+        <button class="plb" onclick="speakLine(this,'presupuesto —','es')">▶</button>
+        <div class="lyric-ipa">pɾe.su.pwes.to</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">quote —</div>
+        <div class="lyric-syllabic"><span class="a">quote</span></div>
+        <button class="plb" onclick="speakLine(this,'quote —','en')">▶</button>
+        <div class="lyric-ipa">kwoʊt</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">signature —</div>
+        <div class="lyric-syllabic">si-gna-<span class="a">tu</span>-re</div>
+        <button class="plb" onclick="speakLine(this,'signature —','fr')">▶</button>
+        <div class="lyric-ipa">si.ɲa.tyʁ</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">firma —</div>
+        <div class="lyric-syllabic"><span class="a">fir</span>-ma</div>
+        <button class="plb" onclick="speakLine(this,'firma —','es')">▶</button>
+        <div class="lyric-ipa">fiɾ.ma</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">sign here —</div>
+        <div class="lyric-syllabic">sign-<span class="a">here</span></div>
+        <button class="plb" onclick="speakLine(this,'sign here —','en')">▶</button>
+        <div class="lyric-ipa">saɪn.hɪr</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Même respirer finit par coûter de l&#x27;argent —</div>
+        <div class="lyric-syllabic">Mê-me-res-pi-rer-fi-nit-par-coû-ter-de-lar-<span class="a">gent</span></div>
+        <button class="plb" onclick="speakLine(this,'Même respirer finit par coûter de l\'argent —','fr')">▶</button>
+        <div class="lyric-ipa">mɛm.ʁɛs.pi.ʁe.fi.ni.paʁ.ku.te.də.laʁ.ʒɑ̃</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Hasta respirar acaba costando dinero —</div>
+        <div class="lyric-syllabic">Has-ta-res-pi-<span class="a">rar</span>-a-ca-ba-cos-tan-do-di-ne-ro</div>
+        <button class="plb" onclick="speakLine(this,'Hasta respirar acaba costando dinero —','es')">▶</button>
+        <div class="lyric-ipa">as.ta.res.pi.ɾaɾ.a.ka.βa.kos.tan.do.di.ne.ɾo</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">Even breathing ends up costing money —</div>
+        <div class="lyric-syllabic">E-ven-breath-ing-ends-up-cost-ing-<span class="a">mon</span>-ey</div>
+        <button class="plb" onclick="speakLine(this,'Even breathing ends up costing money —','en')">▶</button>
+        <div class="lyric-ipa">ˈiː.vən.ˈbriːð.ɪŋ.ɛndz.ʌp.ˈkɒst.ɪŋ.ˈmʌn.i</div>
+      </div></div><div class="sound-hints">
+<div class="sh fr">🇫🇷 Les mots techniques enchaînés (« titane — pivot — couronne ») : détacher chaque syllabe finale, ne pas avaler les consonnes.</div>
+<div class="sh es">🇪🇸 La <b>rr</b> vibrante de « perforar » et « facturar » : plusieurs vibrations rapides de la langue, plus dure que le r simple.</div>
+<div class="sh en">🇬🇧 Stressed technical words (« titanium », « organ ») keep a clear primary stress — don't flatten the rhythm on the list.</div>
+</div><h3 class="sec-title">Refrain Final / Estribillo Final / Final Chorus</h3><div class="tagrow">[Final Drop — huge electro dance-rock energy]</div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Vous avez dépassé le délai légal —</div>
+        <div class="lyric-syllabic">Vous-a-vez-dé-pas-sé-le-dé-lai-lé-<span class="a">gal</span></div>
+        <button class="plb" onclick="speakLine(this,'Vous avez dépassé le délai légal —','fr')">▶</button>
+        <div class="lyric-ipa">vu.za.ve.de.pa.se.lə.de.lɛ.le.ɡal</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Ha superado el plazo legal —</div>
+        <div class="lyric-syllabic">Ha-su-pe-<span class="a">ra</span>-do-el-pla-zo-le-gal</div>
+        <button class="plb" onclick="speakLine(this,'Ha superado el plazo legal —','es')">▶</button>
+        <div class="lyric-ipa">a.su.pe.ɾa.ðo.el.pla.so.le.ɣal</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">You&#x27;ve missed the legal deadline —</div>
+        <div class="lyric-syllabic">Youve-missed-the-le-gal-<span class="a">dead</span>-line</div>
+        <button class="plb" onclick="speakLine(this,'You\'ve missed the legal deadline —','en')">▶</button>
+        <div class="lyric-ipa">juv.mɪst.ðə.ˈliː.ɡəl.ˈdɛd.laɪn</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">De seulement trois jours —</div>
+        <div class="lyric-syllabic">De-seu-le-ment-trois-<span class="a">jours</span></div>
+        <button class="plb" onclick="speakLine(this,'De seulement trois jours —','fr')">▶</button>
+        <div class="lyric-ipa">də.søl.mɑ̃.tʁwa.ʒuʁ</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Solo por tres días —</div>
+        <div class="lyric-syllabic">So-lo-por-tres-<span class="a">dí</span>-as</div>
+        <button class="plb" onclick="speakLine(this,'Solo por tres días —','es')">▶</button>
+        <div class="lyric-ipa">so.lo.poɾ.tɾes.di.as</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">By only three days —</div>
+        <div class="lyric-syllabic">By-on-ly-three-<span class="a">days</span></div>
+        <button class="plb" onclick="speakLine(this,'By only three days —','en')">▶</button>
+        <div class="lyric-ipa">baɪ.ˈoʊn.li.θriː.deɪz</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Alors la réduction est morte, comme votre émail —</div>
+        <div class="lyric-syllabic">A-lors-la-ré-duc-tion-est-morte-com-me-vo-tre-é-<span class="a">mail</span></div>
+        <button class="plb" onclick="speakLine(this,'Alors la réduction est morte, comme votre émail —','fr')">▶</button>
+        <div class="lyric-ipa">a.lɔʁ.la.ʁe.dyk.sjɔ̃.ɛ.mɔʁt.kɔm.vɔtʁ.e.maj</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Así que el descuento ha muerto, como su esmalte —</div>
+        <div class="lyric-syllabic">A-<span class="a">sí</span>-que-el-des-cuen-to-ha-muer-to-co-mo-su-es-mal-te</div>
+        <button class="plb" onclick="speakLine(this,'Así que el descuento ha muerto, como su esmalte —','es')">▶</button>
+        <div class="lyric-ipa">a.si.ke.el.des.kwen.to.a.mweɾ.to.ko.mo.su.es.mal.te</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">So the discount is dead, like your enamel —</div>
+        <div class="lyric-syllabic">So-the-dis-count-is-dead-like-your-e-<span class="a">nam</span>-el</div>
+        <button class="plb" onclick="speakLine(this,'So the discount is dead, like your enamel —','en')">▶</button>
+        <div class="lyric-ipa">soʊ.ðə.ˈdɪs.kaʊnt.ɪz.dɛd.laɪk.jʊr.ɪˈnæm.əl</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Souriez — vous êtes plombés —</div>
+        <div class="lyric-syllabic">Sou-ri-ez-vous-ê-tes-plom-<span class="a">bés</span></div>
+        <button class="plb" onclick="speakLine(this,'Souriez — vous êtes plombés —','fr')">▶</button>
+        <div class="lyric-ipa">su.ʁje.vu.zɛt.plɔ̃.be</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Sonría — está empastado —</div>
+        <div class="lyric-syllabic">Son-<span class="a">rí</span>-a-es-tá-em-pas-ta-do</div>
+        <button class="plb" onclick="speakLine(this,'Sonría — está empastado —','es')">▶</button>
+        <div class="lyric-ipa">son.ri.a.es.ta.em.pas.ta.ðo</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">Smile — you&#x27;ve been drilled —</div>
+        <div class="lyric-syllabic">Smile-youve-been-<span class="a">drilled</span></div>
+        <button class="plb" onclick="speakLine(this,'Smile — you\'ve been drilled —','en')">▶</button>
+        <div class="lyric-ipa">smaɪl.juv.bin.drɪld</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Votre santé quotidienne ?</div>
+        <div class="lyric-syllabic">Vo-tre-san-té-quo-ti-<span class="a">dienne</span></div>
+        <button class="plb" onclick="speakLine(this,'Votre santé quotidienne ?','fr')">▶</button>
+        <div class="lyric-ipa">vɔtʁ.sɑ̃.te.kɔ.ti.djɛn</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">¿Su salud diaria ?</div>
+        <div class="lyric-syllabic">Su-sa-<span class="a">lud</span>-di-a-ria</div>
+        <button class="plb" onclick="speakLine(this,'¿Su salud diaria ?','es')">▶</button>
+        <div class="lyric-ipa">su.sa.luð.dja.ɾja</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">Your everyday health?</div>
+        <div class="lyric-syllabic">Your-ev-ry-day-<span class="a">health</span></div>
+        <button class="plb" onclick="speakLine(this,'Your everyday health?','en')">▶</button>
+        <div class="lyric-ipa">jʊr.ˈɛv.ri.deɪ.hɛlθ</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Déjà vendue —</div>
+        <div class="lyric-syllabic">Dé-jà-ven-<span class="a">due</span></div>
+        <button class="plb" onclick="speakLine(this,'Déjà vendue —','fr')">▶</button>
+        <div class="lyric-ipa">de.ʒa.vɑ̃.dy</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Ya vendida —</div>
+        <div class="lyric-syllabic">Ya-ven-<span class="a">di</span>-da</div>
+        <button class="plb" onclick="speakLine(this,'Ya vendida —','es')">▶</button>
+        <div class="lyric-ipa">ʝa.ben.di.da</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">Already sold —</div>
+        <div class="lyric-syllabic">Al-read-y-<span class="a">sold</span></div>
+        <button class="plb" onclick="speakLine(this,'Already sold —','en')">▶</button>
+        <div class="lyric-ipa">ɔːlˈrɛd.i.soʊld</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Souriez — vous êtes plombés —</div>
+        <div class="lyric-syllabic">Sou-ri-ez-vous-ê-tes-plom-<span class="a">bés</span></div>
+        <button class="plb" onclick="speakLine(this,'Souriez — vous êtes plombés —','fr')">▶</button>
+        <div class="lyric-ipa">su.ʁje.vu.zɛt.plɔ̃.be</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Sonría — está empastado —</div>
+        <div class="lyric-syllabic">Son-<span class="a">rí</span>-a-es-tá-em-pas-ta-do</div>
+        <button class="plb" onclick="speakLine(this,'Sonría — está empastado —','es')">▶</button>
+        <div class="lyric-ipa">son.ri.a.es.ta.em.pas.ta.ðo</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">Smile — you&#x27;ve been drilled —</div>
+        <div class="lyric-syllabic">Smile-youve-been-<span class="a">drilled</span></div>
+        <button class="plb" onclick="speakLine(this,'Smile — you\'ve been drilled —','en')">▶</button>
+        <div class="lyric-ipa">smaɪl.juv.bin.drɪld</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">plombé — HOUA — plombé — HOUA —</div>
+        <div class="lyric-syllabic">plom-<span class="a">bé</span>-HOU-A-plom-bé-HOU-A</div>
+        <button class="plb" onclick="speakLine(this,'plombé — HOUA — plombé — HOUA —','fr')">▶</button>
+        <div class="lyric-ipa">plɔ̃.be.wa.plɔ̃.be.wa</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">empastado — HOUA — empastado — HOUA —</div>
+        <div class="lyric-syllabic">em-pas-<span class="a">ta</span>-do-HOU-A-em-pas-ta-do-HOU-A</div>
+        <button class="plb" onclick="speakLine(this,'empastado — HOUA — empastado — HOUA —','es')">▶</button>
+        <div class="lyric-ipa">em.pas.ta.ðo.wa.em.pas.ta.ðo.wa</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">drilled — HOUA — drilled — HOUA —</div>
+        <div class="lyric-syllabic"><span class="a">drilled</span>-HOU-A-drilled-HOU-A</div>
+        <button class="plb" onclick="speakLine(this,'drilled — HOUA — drilled — HOUA —','en')">▶</button>
+        <div class="lyric-ipa">drɪld.wa.drɪld.wa</div>
+      </div></div><h3 class="sec-title">Outro / Outro / Outro</h3><div class="tagrow">[Outro — guitar and sax solo, fade to silence]</div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Mon conseil —</div>
+        <div class="lyric-syllabic">Mon-con-<span class="a">seil</span></div>
+        <button class="plb" onclick="speakLine(this,'Mon conseil —','fr')">▶</button>
+        <div class="lyric-ipa">mɔ̃.kɔ̃.sɛj</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">Mi consejo —</div>
+        <div class="lyric-syllabic">Mi-con-<span class="a">se</span>-jo</div>
+        <button class="plb" onclick="speakLine(this,'Mi consejo —','es')">▶</button>
+        <div class="lyric-ipa">mi.kon.se.xo</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">My advice —</div>
+        <div class="lyric-syllabic">My-ad-<span class="a">vice</span></div>
+        <button class="plb" onclick="speakLine(this,'My advice —','en')">▶</button>
+        <div class="lyric-ipa">maɪ.ədˈvaɪs</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">prenez une assurance premium —</div>
+        <div class="lyric-syllabic">pre-nez-u-ne-as-su-ran-ce-<span class="a">pre</span>-mi-um</div>
+        <button class="plb" onclick="speakLine(this,'prenez une assurance premium —','fr')">▶</button>
+        <div class="lyric-ipa">pʁə.ne.yn.a.sy.ʁɑ̃s.pʁe.mjɔm</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">consiga un seguro premium —</div>
+        <div class="lyric-syllabic">con-<span class="a">si</span>-ga-un-se-gu-ro-pre-mium</div>
+        <button class="plb" onclick="speakLine(this,'consiga un seguro premium —','es')">▶</button>
+        <div class="lyric-ipa">kon.si.ɣa.un.se.ɣu.ɾo.pɾe.mjum</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">get yourself premium insurance —</div>
+        <div class="lyric-syllabic">get-your-self-<span class="a">pre</span>-mi-um-in-sur-ance</div>
+        <button class="plb" onclick="speakLine(this,'get yourself premium insurance —','en')">▶</button>
+        <div class="lyric-ipa">ɡɛt.jʊrˈsɛlf.ˈpriː.mi.əm.ɪnˈʃʊr.əns</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Ou vendez vos dents avant qu&#x27;elles cassent —</div>
+        <div class="lyric-syllabic">Ou-ven-dez-vos-dents-a-vant-quel-les-<span class="a">cassent</span></div>
+        <button class="plb" onclick="speakLine(this,'Ou vendez vos dents avant qu\'elles cassent —','fr')">▶</button>
+        <div class="lyric-ipa">u.vɑ̃.de.vo.dɑ̃.a.vɑ̃.kɛl.kas</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">O venda sus dientes antes de que se rompan —</div>
+        <div class="lyric-syllabic">O-ven-da-sus-dien-tes-an-tes-de-que-se-<span class="a">rom</span>-pan</div>
+        <button class="plb" onclick="speakLine(this,'O venda sus dientes antes de que se rompan —','es')">▶</button>
+        <div class="lyric-ipa">o.ben.da.sus.djen.tes.an.tes.de.ke.se.rom.pan</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">Or sell your teeth before they break —</div>
+        <div class="lyric-syllabic">Or-sell-your-teeth-be-fore-they-<span class="a">break</span></div>
+        <button class="plb" onclick="speakLine(this,'Or sell your teeth before they break —','en')">▶</button>
+        <div class="lyric-ipa">ɔːr.sɛl.jʊr.tiːθ.bɪˈfɔːr.ðeɪ.breɪk</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">Le système adore les patients en retard —</div>
+        <div class="lyric-syllabic">Le-sys-tè-me-a-do-re-les-pa-tients-en-re-<span class="a">tard</span></div>
+        <button class="plb" onclick="speakLine(this,'Le système adore les patients en retard —','fr')">▶</button>
+        <div class="lyric-ipa">lə.sis.tɛm.a.dɔʁ.le.pa.sjɑ̃.zɑ̃.ʁə.taʁ</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">El sistema adora a los pacientes atrasados —</div>
+        <div class="lyric-syllabic">El-sis-<span class="a">te</span>-ma-a-do-ra-a-los-pa-cien-tes-a-tra-sa-dos</div>
+        <button class="plb" onclick="speakLine(this,'El sistema adora a los pacientes atrasados —','es')">▶</button>
+        <div class="lyric-ipa">el.sis.te.ma.a.ðo.ɾa.a.los.pa.sjen.tes.a.tɾa.sa.dos</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">The system loves patients running late —</div>
+        <div class="lyric-syllabic">The-sys-tem-loves-pa-tients-run-ning-<span class="a">late</span></div>
+        <button class="plb" onclick="speakLine(this,'The system loves patients running late —','en')">▶</button>
+        <div class="lyric-ipa">ðə.ˈsɪs.təm.lʌvz.ˈpeɪ.ʃənts.ˈrʌn.ɪŋ.leɪt</div>
+      </div></div><div class="opt-c-row">
+      <div class="lc fr">
+        <div class="lyric-text">plombé — plombé —</div>
+        <div class="lyric-syllabic">plom-<span class="a">bé</span>-plom-bé</div>
+        <button class="plb" onclick="speakLine(this,'plombé — plombé —','fr')">▶</button>
+        <div class="lyric-ipa">plɔ̃.be.plɔ̃.be</div>
+      </div>
+      <div class="lc es">
+        <div class="lyric-text">empastado — empastado —</div>
+        <div class="lyric-syllabic">em-pas-<span class="a">ta</span>-do-em-pas-ta-do</div>
+        <button class="plb" onclick="speakLine(this,'empastado — empastado —','es')">▶</button>
+        <div class="lyric-ipa">em.pas.ta.ðo.em.pas.ta.ðo</div>
+      </div>
+      <div class="lc en">
+        <div class="lyric-text">drilled — drilled —</div>
+        <div class="lyric-syllabic"><span class="a">drilled</span>-drilled</div>
+        <button class="plb" onclick="speakLine(this,'drilled — drilled —','en')">▶</button>
+        <div class="lyric-ipa">drɪld.drɪld</div>
+      </div></div>
+
+  <footer>www.trefleminotaure.com · © 2026 Trèfle &amp; Minotaure</footer>
+</div>
+
+<script>
+const LANG_MAP = { fr:"fr-FR", es:"es-ES", en:"en-GB" };
+let curSpeed = 0.9;
+function setLang(btn, l){
+  document.body.classList.remove("show-fr","show-es","show-en");
+  document.querySelectorAll(".langbtn").forEach(b=>b.classList.remove("active"));
+  btn.classList.add("active");
+  if (l!=="all") document.body.classList.add("show-"+l);
+}
+function setSpeed(btn, v){
+  curSpeed = v;
+  document.querySelectorAll(".speedbtn").forEach(b=>b.classList.remove("active"));
+  btn.classList.add("active");
+}
+function speakLine(btn, text, lang){
+  if (!("speechSynthesis" in window)) return;
+  window.speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = LANG_MAP[lang];
+  u.rate = curSpeed;
+  window.speechSynthesis.speak(u);
+}
+</script>
+</body>
+</html>
