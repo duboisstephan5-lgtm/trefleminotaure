@@ -252,6 +252,54 @@
       "config": "A COMPLETER",
       "themes": ["exil économique", "migration", "séparation familiale"],
       "sensible": false
+    },
+    {
+      "id": "019",
+      "titre": { "fr": "Plombé — Le système a la dent dure", "en": "Weighed Down — The System Dies Hard", "es": "Agobiado — El sistema es duro de matar" },
+      "soustitre": { "fr": "", "en": "", "es": "" },
+      "dossier": "019 plombé - le systeme a la dent dure",
+      "style": "A COMPLETER",
+      "bpm": null,
+      "duree": "A COMPLETER",
+      "album": "A COMPLETER",
+      "config": "A COMPLETER",
+      "themes": ["humour noir", "système de santé"],
+      "sensible": false,
+      "humour_noir": true
+    },
+    {
+      "id": "020",
+      "titre": { "fr": "Bonnie and Clyde — Les enfants du système (version blues-rock)", "en": "Bonnie and Clyde — Children of the System (Blues-Rock Version)", "es": "Bonnie y Clyde — Los hijos del sistema (versión blues-rock)" },
+      "soustitre": { "fr": "", "en": "", "es": "" },
+      "themes": ["amour fou", "dérive sociale"],
+      "sensible": true
+    },
+    {
+      "id": "020bis",
+      "titre": { "fr": "Bonnie and Clyde — Les enfants du système (version dance)", "en": "Bonnie and Clyde — Children of the System (Dance Version)", "es": "Bonnie y Clyde — Los hijos del sistema (versión dance)" },
+      "soustitre": { "fr": "", "en": "", "es": "" },
+      "dossier": "020bis - Bonnie and Clyde - Les enfants du systeme (version dance)",
+      "style": "A COMPLETER",
+      "bpm": null,
+      "duree": "A COMPLETER",
+      "album": "A COMPLETER",
+      "config": "A COMPLETER",
+      "themes": ["amour fou", "dérive sociale"],
+      "sensible": true
+    },
+    {
+      "id": "021",
+      "titre": { "fr": "11M — Le fantôme d'Atocha", "en": "11M — Ghost of Atocha", "es": "11M — El fantasma de Atocha" },
+      "soustitre": { "fr": "", "en": "", "es": "" },
+      "dossier": "021 - 11M ghost of Atocha",
+      "_note_dossier": "A VERIFIER : nom exact du dossier corrige par l'utilisateur non confirme, a verifier avec une capture d'ecran.",
+      "style": "A COMPLETER",
+      "bpm": null,
+      "duree": "A COMPLETER",
+      "album": "A COMPLETER",
+      "config": "A COMPLETER",
+      "themes": ["attentat de Madrid", "terrorisme", "deuil collectif", "traumatisme du survivant"],
+      "sensible": true
     }
   ]
 }
