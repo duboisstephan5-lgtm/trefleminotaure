@@ -8,21 +8,41 @@
   "chansons": [
     {
       "id": "000",
-      "titre": { "fr": "9/11 Survivors — Remember Us", "en": "9/11 Survivors — Remember Us", "es": "9/11 Survivors — Remember Us" },
-      "soustitre": { "fr": "Souvenez-vous de nous", "es": "Recuérdanos", "en": "Remember Us" },
+      "titre": {
+        "fr": "9/11 Survivors — Remember Us",
+        "en": "9/11 Survivors — Remember Us",
+        "es": "9/11 Survivors — Remember Us"
+      },
+      "soustitre": {
+        "fr": "Souvenez-vous de nous",
+        "es": "Recuérdanos",
+        "en": "Remember Us"
+      },
       "dossier": "000 9-11 survivor - remember us",
       "style": "Gothic Folk Rock Cinématique · Cornemuse & Violon gothique",
       "bpm": null,
       "duree": "~5:06",
       "album": "Single",
       "config": "duo",
-      "themes": ["11 septembre", "SSPT", "culpabilité du survivant"],
+      "themes": [
+        "11 septembre",
+        "SSPT",
+        "culpabilité du survivant"
+      ],
       "sensible": true
     },
     {
       "id": "001",
-      "titre": { "fr": "Ombres des villes", "en": "Shadow of the City", "es": "Sombras de la ciudad" },
-      "soustitre": { "fr": "", "en": "", "es": "" },
+      "titre": {
+        "fr": "Ombres des villes",
+        "en": "Shadow of the City",
+        "es": "Sombras de la ciudad"
+      },
+      "soustitre": {
+        "fr": "",
+        "en": "",
+        "es": ""
+      },
       "dossier": "001 ombres des villes",
       "style": "A COMPLETER",
       "bpm": null,
@@ -34,8 +54,16 @@
     },
     {
       "id": "002",
-      "titre": { "fr": "Amour interdit à Téhéran", "en": "Forbidden Love in Tehran", "es": "Amor prohibido en Teherán" },
-      "soustitre": { "fr": "", "en": "", "es": "" },
+      "titre": {
+        "fr": "Amour interdit à Téhéran",
+        "en": "Forbidden Love in Tehran",
+        "es": "Amor prohibido en Teherán"
+      },
+      "soustitre": {
+        "fr": "",
+        "en": "",
+        "es": ""
+      },
       "dossier": "002 Amour interdit a téhéran",
       "style": "A COMPLETER",
       "bpm": null,
@@ -47,99 +75,189 @@
     },
     {
       "id": "003",
-      "titre": { "fr": "Tu vois papa (L'héritage du vice)", "en": "You See, Dad (The Legacy of Vice)", "es": "¿Ves, papá? (La herencia del vicio)" },
-      "soustitre": { "fr": "", "en": "", "es": "" },
+      "titre": {
+        "fr": "Tu vois papa (L'héritage du vice)",
+        "en": "You See, Dad (The Legacy of Vice)",
+        "es": "¿Ves, papá? (La herencia del vicio)"
+      },
+      "soustitre": {
+        "fr": "",
+        "en": "",
+        "es": ""
+      },
       "dossier": "003 tu vois papa",
       "style": "A COMPLETER",
       "bpm": null,
       "duree": "A COMPLETER",
       "album": "A COMPLETER",
       "config": "A COMPLETER",
-      "themes": ["inceste", "violence conjugale", "idées suicidaires"],
+      "themes": [
+        "inceste",
+        "violence conjugale",
+        "idées suicidaires"
+      ],
       "sensible": true
     },
     {
       "id": "004",
-      "titre": { "fr": "Addiction contre addiction", "en": "Addiction Against Addiction", "es": "Adicción contra adicción" },
-      "soustitre": { "fr": "", "en": "", "es": "" },
+      "titre": {
+        "fr": "Addiction contre addiction",
+        "en": "Addiction Against Addiction",
+        "es": "Adicción contra adicción"
+      },
+      "soustitre": {
+        "fr": "",
+        "en": "",
+        "es": ""
+      },
       "dossier": "004 addiction contre addiction",
       "style": "A COMPLETER",
       "bpm": null,
       "duree": "A COMPLETER",
       "album": "A COMPLETER",
       "config": "A COMPLETER",
-      "themes": ["addiction"],
+      "themes": [
+        "addiction"
+      ],
       "sensible": true
     },
     {
       "id": "005",
-      "titre": { "fr": "L'amour... pas la guerre", "en": "Love... Not War", "es": "Amor... no guerra" },
-      "soustitre": { "fr": "", "en": "", "es": "" },
-      "dossier": "005 l'amour...pas la guerre",
+      "titre": {
+        "fr": "L'amour... pas la guerre",
+        "en": "Love... Not War",
+        "es": "Amor... no guerra"
+      },
+      "soustitre": {
+        "fr": "",
+        "en": "",
+        "es": ""
+      },
+      "dossier": "005 l amour...pas la guerre",
       "style": "A COMPLETER",
       "bpm": null,
       "duree": "A COMPLETER",
       "album": "A COMPLETER",
       "config": "A COMPLETER",
-      "themes": ["guerre", "paix"],
+      "themes": [
+        "guerre",
+        "paix"
+      ],
       "sensible": true
     },
     {
       "id": "006",
-      "titre": { "fr": "Le dernier voyage", "en": "The Last Journey", "es": "El último viaje" },
-      "soustitre": { "fr": "Le monologue du chien abandonné", "es": "El monólogo del perro abandonado", "en": "The monologue of the abandoned dog" },
+      "titre": {
+        "fr": "Le dernier voyage",
+        "en": "The Last Journey",
+        "es": "El último viaje"
+      },
+      "soustitre": {
+        "fr": "Le monologue du chien abandonné",
+        "es": "El monólogo del perro abandonado",
+        "en": "The monologue of the abandoned dog"
+      },
       "dossier": "006 le dernier voyage",
       "style": "Dark Gothic Folk Balladry",
       "bpm": 75,
       "duree": "~4:41",
       "album": "Album 05 — Démons",
       "config": "minotaure_solo",
-      "themes": ["abandon animal", "fidélité", "fin de vie", "euthanasie"],
+      "themes": [
+        "abandon animal",
+        "fidélité",
+        "fin de vie",
+        "euthanasie"
+      ],
       "sensible": true
     },
     {
       "id": "007",
-      "titre": { "fr": "Berceuse noire", "en": "Dark Lullaby", "es": "Canción de cuna oscura" },
-      "soustitre": { "fr": "Dors, loin du vacarme", "es": "Duerme, lejos del ruido", "en": "Sleep, far from the noise" },
+      "titre": {
+        "fr": "Berceuse noire",
+        "en": "Dark Lullaby",
+        "es": "Canción de cuna oscura"
+      },
+      "soustitre": {
+        "fr": "Dors, loin du vacarme",
+        "es": "Duerme, lejos del ruido",
+        "en": "Sleep, far from the noise"
+      },
       "dossier": "007 berceuse noire",
       "style": "Dark Gothic Lullaby · Coldwave",
       "bpm": 68,
       "duree": "~3:25",
       "album": "Album 05 — Démons",
       "config": "duo",
-      "themes": ["insomnie", "protection", "nuit", "fragilité"],
+      "themes": [
+        "insomnie",
+        "protection",
+        "nuit",
+        "fragilité"
+      ],
       "sensible": false
     },
     {
       "id": "008",
-      "titre": { "fr": "Gangsta paradis scolaire", "en": "School Gangsta Paradise", "es": "Paraíso gangsta escolar" },
-      "soustitre": { "fr": "", "en": "", "es": "" },
+      "titre": {
+        "fr": "Gangsta paradis scolaire",
+        "en": "School Gangsta Paradise",
+        "es": "Paraíso gangsta escolar"
+      },
+      "soustitre": {
+        "fr": "",
+        "en": "",
+        "es": ""
+      },
       "dossier": "008 gansta paradis scolaire",
       "style": "A COMPLETER",
       "bpm": null,
       "duree": "A COMPLETER",
       "album": "A COMPLETER",
       "config": "A COMPLETER",
-      "themes": ["violence scolaire"],
+      "themes": [
+        "violence scolaire"
+      ],
       "sensible": true
     },
     {
       "id": "009",
-      "titre": { "fr": "Les Fantômes de la Tolérance", "en": "Ghosts of Tolerance", "es": "Fantasmas de Tolerancia" },
-      "soustitre": { "fr": "Tolérance — Diversité — Droits", "es": "Tolerancia — Diversidad — Derechos", "en": "Tolerance — Diversity — Rights" },
+      "titre": {
+        "fr": "Les Fantômes de la Tolérance",
+        "en": "Ghosts of Tolerance",
+        "es": "Fantasmas de Tolerancia"
+      },
+      "soustitre": {
+        "fr": "Tolérance — Diversité — Droits",
+        "es": "Tolerancia — Diversidad — Derechos",
+        "en": "Tolerance — Diversity — Rights"
+      },
       "dossier": "009 les fantomes de la tolérances",
       "style": "Dark Gothic Minimalist Rock",
       "bpm": 95,
       "duree": "~6:15",
       "album": "Album 05 — Démons",
       "config": "duo",
-      "themes": ["racisme", "religion", "genre", "droits sociaux"],
+      "themes": [
+        "racisme",
+        "religion",
+        "genre",
+        "droits sociaux"
+      ],
       "sensible": false
     },
     {
       "id": "010",
-      "titre": { "fr": "Le serment du labyrinthe — Partie 1", "en": "The Labyrinth's Oath — Part 1", "es": "El juramento del laberinto — Parte 1" },
-      "soustitre": { "fr": "", "en": "", "es": "" },
+      "titre": {
+        "fr": "Le serment du labyrinthe — Partie 1",
+        "en": "The Labyrinth's Oath — Part 1",
+        "es": "El juramento del laberinto — Parte 1"
+      },
+      "soustitre": {
+        "fr": "",
+        "en": "",
+        "es": ""
+      },
       "dossier": "010 part 1 le serment du labyrinthe",
       "style": "A COMPLETER",
       "bpm": null,
@@ -151,8 +269,16 @@
     },
     {
       "id": "011",
-      "titre": { "fr": "La main tendue — Partie 2", "en": "The Helping Hand — Part 2", "es": "La mano tendida — Parte 2" },
-      "soustitre": { "fr": "", "en": "", "es": "" },
+      "titre": {
+        "fr": "La main tendue — Partie 2",
+        "en": "The Helping Hand — Part 2",
+        "es": "La mano tendida — Parte 2"
+      },
+      "soustitre": {
+        "fr": "",
+        "en": "",
+        "es": ""
+      },
       "dossier": "011 part 2 la main tendue",
       "style": "A COMPLETER",
       "bpm": null,
@@ -164,8 +290,16 @@
     },
     {
       "id": "012",
-      "titre": { "fr": "25 ans après — Partie 3", "en": "25 Years Later — Part 3", "es": "25 años después — Parte 3" },
-      "soustitre": { "fr": "", "en": "", "es": "" },
+      "titre": {
+        "fr": "25 ans après — Partie 3",
+        "en": "25 Years Later — Part 3",
+        "es": "25 años después — Parte 3"
+      },
+      "soustitre": {
+        "fr": "",
+        "en": "",
+        "es": ""
+      },
       "dossier": "012 part 3 25 ans apres",
       "style": "A COMPLETER",
       "bpm": null,
@@ -177,8 +311,16 @@
     },
     {
       "id": "013",
-      "titre": { "fr": "Sous les cendres", "en": "Under the Ashes", "es": "Bajo las cenizas" },
-      "soustitre": { "fr": "", "en": "", "es": "" },
+      "titre": {
+        "fr": "Sous les cendres",
+        "en": "Under the Ashes",
+        "es": "Bajo las cenizas"
+      },
+      "soustitre": {
+        "fr": "",
+        "en": "",
+        "es": ""
+      },
       "dossier": "013 sous les cendres",
       "style": "A COMPLETER",
       "bpm": null,
@@ -190,21 +332,39 @@
     },
     {
       "id": "014",
-      "titre": { "fr": "Les cicatrices du vide", "en": "The Scars of the Void", "es": "Las cicatrices del vacío" },
-      "soustitre": { "fr": "", "en": "", "es": "" },
+      "titre": {
+        "fr": "Les cicatrices du vide",
+        "en": "The Scars of the Void",
+        "es": "Las cicatrices del vacío"
+      },
+      "soustitre": {
+        "fr": "",
+        "en": "",
+        "es": ""
+      },
       "dossier": "014 les cicatrices du vide",
       "style": "A COMPLETER",
       "bpm": null,
       "duree": "A COMPLETER",
       "album": "A COMPLETER",
       "config": "A COMPLETER",
-      "themes": ["choc des générations"],
+      "themes": [
+        "choc des générations"
+      ],
       "sensible": true
     },
     {
       "id": "015",
-      "titre": { "fr": "Frontières de cendre", "en": "Borders of Ash", "es": "Fronteras de ceniza" },
-      "soustitre": { "fr": "", "en": "", "es": "" },
+      "titre": {
+        "fr": "Frontières de cendre",
+        "en": "Borders of Ash",
+        "es": "Fronteras de ceniza"
+      },
+      "soustitre": {
+        "fr": "",
+        "en": "",
+        "es": ""
+      },
       "dossier": "015 Frontieres de cendre",
       "style": "A COMPLETER",
       "bpm": null,
@@ -216,89 +376,251 @@
     },
     {
       "id": "016",
-      "titre": { "fr": "Vaincu", "en": "Vanquished", "es": "Vencido" },
-      "soustitre": { "fr": "", "en": "", "es": "" },
+      "titre": {
+        "fr": "Vaincu",
+        "en": "Vanquished",
+        "es": "Vencido"
+      },
+      "soustitre": {
+        "fr": "",
+        "en": "",
+        "es": ""
+      },
       "dossier": "016 vencido",
       "style": "A COMPLETER",
       "bpm": null,
       "duree": "A COMPLETER",
       "album": "A COMPLETER",
       "config": "A COMPLETER",
-      "themes": ["solitude", "précarité", "injustice sociale"],
+      "themes": [
+        "solitude",
+        "précarité",
+        "injustice sociale"
+      ],
       "sensible": false
     },
     {
       "id": "017",
-      "titre": { "fr": "Sous le voile, la lumière", "en": "I Saw Beneath a Veil... No More Light", "es": "Vi bajo un velo... Ya no hay luz" },
-      "soustitre": { "fr": "", "en": "", "es": "" },
+      "titre": {
+        "fr": "Sous le voile, la lumière",
+        "en": "I Saw Beneath a Veil... No More Light",
+        "es": "Vi bajo un velo... Ya no hay luz"
+      },
+      "soustitre": {
+        "fr": "",
+        "en": "",
+        "es": ""
+      },
       "dossier": "017 sous le voile la lumiere",
       "style": "A COMPLETER",
       "bpm": null,
       "duree": "A COMPLETER",
       "album": "A COMPLETER",
       "config": "A COMPLETER",
-      "themes": ["Afghanistan", "éducation", "liberté"],
+      "themes": [
+        "Afghanistan",
+        "éducation",
+        "liberté"
+      ],
       "sensible": true
     },
     {
       "id": "018",
-      "titre": { "fr": "Les rêves portent le même visage", "en": "Dreams Wear the Same Face", "es": "Los sueños llevan el mismo rostro" },
-      "soustitre": { "fr": "", "en": "", "es": "" },
+      "titre": {
+        "fr": "Les rêves portent le même visage",
+        "en": "Dreams Wear the Same Face",
+        "es": "Los sueños llevan el mismo rostro"
+      },
+      "soustitre": {
+        "fr": "",
+        "en": "",
+        "es": ""
+      },
       "dossier": "018 les reves portent le meme visage",
       "style": "A COMPLETER",
       "bpm": null,
       "duree": "A COMPLETER",
       "album": "A COMPLETER",
       "config": "A COMPLETER",
-      "themes": ["exil économique", "migration", "séparation familiale"],
+      "themes": [
+        "exil économique",
+        "migration",
+        "séparation familiale"
+      ],
       "sensible": false
     },
     {
       "id": "019",
-      "titre": { "fr": "Plombé — Le système a la dent dure", "en": "Weighed Down — The System Dies Hard", "es": "Agobiado — El sistema es duro de matar" },
-      "soustitre": { "fr": "", "en": "", "es": "" },
+      "titre": {
+        "fr": "Plombé — Le système a la dent dure",
+        "en": "Weighed Down — The System Dies Hard",
+        "es": "Agobiado — El sistema es duro de matar"
+      },
+      "soustitre": {
+        "fr": "",
+        "en": "",
+        "es": ""
+      },
       "dossier": "019 plombé - le systeme a la dent dure",
       "style": "A COMPLETER",
       "bpm": null,
       "duree": "A COMPLETER",
       "album": "A COMPLETER",
       "config": "A COMPLETER",
-      "themes": ["humour noir", "système de santé"],
+      "themes": [
+        "humour noir",
+        "système de santé"
+      ],
       "sensible": false,
       "humour_noir": true
     },
     {
       "id": "020",
-      "titre": { "fr": "Bonnie and Clyde — Les enfants du système (version blues-rock)", "en": "Bonnie and Clyde — Children of the System (Blues-Rock Version)", "es": "Bonnie y Clyde — Los hijos del sistema (versión blues-rock)" },
-      "soustitre": { "fr": "", "en": "", "es": "" },
-      "themes": ["amour fou", "dérive sociale"],
-      "sensible": true
+      "titre": {
+        "fr": "Bonnie and Clyde — Les enfants du système (version blues-rock)",
+        "en": "Bonnie and Clyde — Children of the System (Blues-Rock Version)",
+        "es": "Bonnie y Clyde — Los hijos del sistema (versión blues-rock)"
+      },
+      "soustitre": {
+        "fr": "",
+        "en": "",
+        "es": ""
+      },
+      "themes": [
+        "amour fou",
+        "dérive sociale"
+      ],
+      "sensible": true,
+      "dossier": "020 bonnie and Clyde - Les enfants du systéme (version blues-rock)"
     },
     {
       "id": "020bis",
-      "titre": { "fr": "Bonnie and Clyde — Les enfants du système (version dance)", "en": "Bonnie and Clyde — Children of the System (Dance Version)", "es": "Bonnie y Clyde — Los hijos del sistema (versión dance)" },
-      "soustitre": { "fr": "", "en": "", "es": "" },
+      "titre": {
+        "fr": "Bonnie and Clyde — Les enfants du système (version dance)",
+        "en": "Bonnie and Clyde — Children of the System (Dance Version)",
+        "es": "Bonnie y Clyde — Los hijos del sistema (versión dance)"
+      },
+      "soustitre": {
+        "fr": "",
+        "en": "",
+        "es": ""
+      },
       "dossier": "020bis - Bonnie and Clyde - Les enfants du systeme (version dance)",
       "style": "A COMPLETER",
       "bpm": null,
       "duree": "A COMPLETER",
       "album": "A COMPLETER",
       "config": "A COMPLETER",
-      "themes": ["amour fou", "dérive sociale"],
+      "themes": [
+        "amour fou",
+        "dérive sociale"
+      ],
       "sensible": true
     },
     {
       "id": "021",
-      "titre": { "fr": "11M — Le fantôme d'Atocha", "en": "11M — Ghost of Atocha", "es": "11M — El fantasma de Atocha" },
-      "soustitre": { "fr": "", "en": "", "es": "" },
-      "dossier": "021 - 11M ghost of Atocha",
+      "titre": {
+        "fr": "11M — Le fantôme d'Atocha",
+        "en": "11M — Ghost of Atocha",
+        "es": "11M — El fantasma de Atocha"
+      },
+      "soustitre": {
+        "fr": "",
+        "en": "",
+        "es": ""
+      },
+      "dossier": "021 - 11M glost of Atocha",
       "_note_dossier": "A VERIFIER : nom exact du dossier corrige par l'utilisateur non confirme, a verifier avec une capture d'ecran.",
       "style": "A COMPLETER",
       "bpm": null,
       "duree": "A COMPLETER",
       "album": "A COMPLETER",
       "config": "A COMPLETER",
-      "themes": ["attentat de Madrid", "terrorisme", "deuil collectif", "traumatisme du survivant"],
+      "themes": [
+        "attentat de Madrid",
+        "terrorisme",
+        "deuil collectif",
+        "traumatisme du survivant"
+      ],
+      "sensible": true
+    },
+    {
+      "id": "022",
+      "titre": {
+        "fr": "Où es-tu, toi, toi, mon toit ?",
+        "en": "Where Are You, You, You, My Roof?",
+        "es": "¿Dónde estás, tú, tú, mi techo?"
+      },
+      "soustitre": {
+        "fr": "",
+        "en": "",
+        "es": ""
+      },
+      "dossier": "022- Ou es-tu toi, toi, mon toit",
+      "style": "Dark Poetic Alternative · Electro Dance · Reggaeton",
+      "bpm": null,
+      "duree": "A COMPLETER",
+      "album": "A COMPLETER",
+      "config": "A COMPLETER",
+      "themes": [
+        "sans-abrisme",
+        "administration",
+        "exclusion sociale",
+        "humour noir"
+      ],
+      "sensible": false,
+      "humour_noir": true
+    },
+    {
+      "id": "023",
+      "titre": {
+        "fr": "Ziin — Comme Bob Marley",
+        "en": "Ziin — Like Bob Marley",
+        "es": "Ziin — Como Bob Marley"
+      },
+      "soustitre": {
+        "fr": "",
+        "en": "",
+        "es": ""
+      },
+      "dossier": "023 ziin comme bob marley",
+      "style": "Reggae jamaïcain dansant · électro",
+      "bpm": null,
+      "duree": "A COMPLETER",
+      "album": "A COMPLETER",
+      "config": "A COMPLETER",
+      "themes": [
+        "violence des gangs",
+        "Jamaïque",
+        "résistance",
+        "deuil"
+      ],
+      "sensible": true
+    },
+    {
+      "id": "024",
+      "titre": {
+        "fr": "Le mur(mur) des silencieux",
+        "en": "The Mur(mur) of the Silenced",
+        "es": "El mur(mullo) de los que callan"
+      },
+      "soustitre": {
+        "fr": "",
+        "en": "",
+        "es": ""
+      },
+      "dossier": "024 le mur mur des silencieux",
+      "style": "Dark Gothic Alternative Rock · pulsation de boléro",
+      "bpm": null,
+      "duree": "A COMPLETER",
+      "album": "A COMPLETER",
+      "config": "A COMPLETER",
+      "themes": [
+        "violence de masse",
+        "traumatisme",
+        "oubli des victimes",
+        "survie"
+      ],
       "sensible": true
     }
   ]
