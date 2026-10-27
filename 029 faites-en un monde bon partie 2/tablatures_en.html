@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MAKE IT A BETTER WORLD — Part 2 — Tablatures | tréfle.minotaure</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Cinzel:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root { --gold:#b8962e; --parchment:#f5ecd7; }
+  * { box-sizing:border-box; }
+  body { margin:0; background: radial-gradient(ellipse at center, #1c2038 0%, #10121c 70%, #08090f 100%); font-family:"Cormorant Garamond", serif; color:#2a1f10; padding:24px 12px 60px; }
+  .page { max-width:900px; margin:0 auto; background:var(--parchment); border:2px solid #4a5a8f; border-radius:10px; box-shadow:0 0 40px rgba(0,0,0,.6); padding:28px clamp(14px,4vw,44px); }
+  header { text-align:center; border-bottom:1px solid #4a5a8f; padding-bottom:16px; margin-bottom:18px; }
+  header h1 { font-family:"Cinzel", serif; font-size:1.5rem; margin:0 0 4px; }
+  .meta { font-size:.82rem; color:var(--gold); text-transform:uppercase; letter-spacing:.06em; }
+  .disclaimer { font-size:.78rem; opacity:.75; font-style:italic; text-align:center; margin:14px 0 20px; max-width:640px; margin-left:auto; margin-right:auto; }
+  .controls { display:flex; flex-wrap:wrap; gap:14px; justify-content:center; margin:18px 0 26px; }
+  button.instbtn, button.lvlbtn { font-family:"Cinzel", serif; font-size:.78rem; padding:7px 16px; border-radius:6px; border:1px solid #4a5a8f; background:#fff8ea; cursor:pointer; }
+  button.instbtn.active, button.lvlbtn.active { background:var(--gold); color:#fff; }
+  .sec-row { display:none; margin-bottom:18px; border-top:1px solid #c3cbe0; padding-top:10px; }
+  body.i-bass .sec-row[data-inst="bass"] { display:block; }
+  body.i-guitar .sec-row[data-inst="guitar"] { display:block; }
+  body.i-keys .sec-row[data-inst="keys"] { display:block; }
+  body.i-synth .sec-row[data-inst="synth"] { display:block; }
+  body.i-strings .sec-row[data-inst="strings"] { display:block; }
+  body.i-wood .sec-row[data-inst="wood"] { display:block; }
+  h4 { font-family:"Cinzel", serif; font-size:.95rem; margin:0 0 8px; color:#1c2038; }
+  .bar-ref { font-size:.72rem; color:var(--gold); font-weight:normal; margin-left:8px; }
+  pre.tab { font-family:"Courier New", monospace; font-size:.85rem; background:#efe2bf; border:1px solid #d8c79a; border-radius:6px; padding:10px 14px; overflow-x:auto; white-space:pre; margin:6px 0; max-width:100%; }
+  p.advice { font-size:.85rem; margin:4px 0 0; word-wrap:break-word; }
+  p.chord-center { font-size:.95rem; margin:6px 0 2px; }
+  body.pro .advice { display:none; }
+  footer { text-align:center; margin-top:30px; color:#3d4a70; font-size:.82rem; border-top:1px solid #c3cbe0; padding-top:14px; }
+  .tips-block { background:#efe2bf; border:1px solid #d8c79a; border-radius:8px; padding:14px 18px; margin:22px 0; font-size:.85rem; }
+  .tips-block h4 { margin-top:0; }
+  body.pro .tips-block { display:none; }
+</style>
+</head>
+<body class="i-bass">
+<div class="page">
+  <header>
+    <h1>MAKE IT A BETTER WORLD — Part 2 — Tablatures</h1>
+    <div class="meta">Bass, Guitar, Keyboard, Electric violins, Synth, Saxophone — 116 BPM</div>
+  </header>
+
+  <p class="disclaimer">Document generated from audio analysis of the Suno stems (onset detection + pYIN + chroma) — validate by ear before performing. Fixed tempo: 116 BPM (Suno prompt).</p>
+
+  <div class="controls">
+    <button class="instbtn active" onclick="setInst(this,'bass')">🎸 Bass</button><button class="instbtn" onclick="setInst(this,'guitar')">🎸 Guitar</button><button class="instbtn" onclick="setInst(this,'keys')">🎹 Keyboard</button><button class="instbtn" onclick="setInst(this,'strings')">🎻 Electric violins</button><button class="instbtn" onclick="setInst(this,'synth')">🎹 Synth</button><button class="instbtn" onclick="setInst(this,'wood')">🎷 Saxophone</button>
+  </div>
+  <div class="controls">
+    <button class="lvlbtn active" onclick="setLevel(this,'tips')">With tips</button>
+    <button class="lvlbtn" onclick="setLevel(this,'pro')">Tab only (Pro)</button>
+  </div>
+
+  <section class="sec"><div class="sec-row" data-inst="bass"><h4>Bars 1–16 <span class="bar-ref">0:00</span></h4><pre class="tab">G|-----------------|
+D|---1-1-1-1-1-1-1-|
+A|-----------------|
+E|-3---------------|</pre><p class="advice">Looped motif in this section — fixed hand position, steady picking or legato for more fluidity.</p></div><div class="sec-row" data-inst="guitar"><h4>Bars 1–16 <span class="bar-ref">0:00</span></h4><p class="advice">Silent in this section.</p></div><div class="sec-row" data-inst="keys"><h4>Bars 1–16 <span class="bar-ref">0:00</span></h4><p class="chord-center">Chord : <b>Gm</b></p><p class="advice">Sustained pad/chord, constant support in this section.</p></div><div class="sec-row" data-inst="strings"><h4>Bars 1–16 <span class="bar-ref">0:00</span></h4><pre class="tab">E|-----1-----------|
+A|-5-5---5-3-5---6-|
+D|-------------5---|
+G|-----------------|</pre><p class="advice">Looped motif in this section — fixed hand position, steady picking or legato for more fluidity.</p></div><div class="sec-row" data-inst="synth"><h4>Bars 1–16 <span class="bar-ref">0:00</span></h4><p class="chord-center">Chord : <b>Gm</b></p><p class="advice">Sustained pad/chord, constant support in this section.</p></div><div class="sec-row" data-inst="wood"><h4>Bars 1–16 <span class="bar-ref">0:00</span></h4><p class="chord-center">Notes : <b>D5 F5 D5 C5 D5 G4 D#4 G4</b></p><p class="advice">Looped motif in this section — fixed hand position, steady picking or legato for more fluidity.</p></div></section><section class="sec"><div class="sec-row" data-inst="bass"><h4>Bars 17–32 <span class="bar-ref">0:33</span></h4><p class="advice">Silent in this section.</p></div><div class="sec-row" data-inst="guitar"><h4>Bars 17–32 <span class="bar-ref">0:33</span></h4><p class="advice">Silent in this section.</p></div><div class="sec-row" data-inst="keys"><h4>Bars 17–32 <span class="bar-ref">0:33</span></h4><p class="chord-center">Chord : <b>Gm</b></p><p class="advice">Sustained pad/chord, constant support in this section.</p></div><div class="sec-row" data-inst="strings"><h4>Bars 17–32 <span class="bar-ref">0:33</span></h4><p class="advice">Silent in this section.</p></div><div class="sec-row" data-inst="synth"><h4>Bars 17–32 <span class="bar-ref">0:33</span></h4><p class="chord-center">Chord : <b>D#</b></p><p class="advice">Sustained pad/chord, constant support in this section.</p></div><div class="sec-row" data-inst="wood"><h4>Bars 17–32 <span class="bar-ref">0:33</span></h4><p class="advice">Silent in this section.</p></div></section><section class="sec"><div class="sec-row" data-inst="bass"><h4>Bars 33–48 <span class="bar-ref">1:06</span></h4><pre class="tab">G|-----------------|
+D|-----------------|
+A|-----------------|
+E|-3-3-3-3-3-3-3-3-|</pre><p class="advice">Looped motif in this section — fixed hand position, steady picking or legato for more fluidity.</p></div><div class="sec-row" data-inst="guitar"><h4>Bars 33–48 <span class="bar-ref">1:06</span></h4><p class="advice">Silent in this section.</p></div><div class="sec-row" data-inst="keys"><h4>Bars 33–48 <span class="bar-ref">1:06</span></h4><p class="chord-center">Chord : <b>Gm</b></p><p class="advice">Sustained pad/chord, constant support in this section.</p></div><div class="sec-row" data-inst="strings"><h4>Bars 33–48 <span class="bar-ref">1:06</span></h4><p class="advice">Silent in this section.</p></div><div class="sec-row" data-inst="synth"><h4>Bars 33–48 <span class="bar-ref">1:06</span></h4><p class="chord-center">Chord : <b>Gm</b></p><p class="advice">Sustained pad/chord, constant support in this section.</p></div><div class="sec-row" data-inst="wood"><h4>Bars 33–48 <span class="bar-ref">1:06</span></h4><p class="chord-center">Notes : <b>A4 G4 A#4 G4 G4 A#4 G4 G4</b></p><p class="advice">Looped motif in this section — fixed hand position, steady picking or legato for more fluidity.</p></div></section><section class="sec"><div class="sec-row" data-inst="bass"><h4>Bars 49–64 <span class="bar-ref">1:39</span></h4><pre class="tab">G|-----------------|
+D|-----------------|
+A|-----------------|
+E|-3-3-3-3-3-3-3-3-|</pre><p class="advice">Looped motif in this section — fixed hand position, steady picking or legato for more fluidity.</p></div><div class="sec-row" data-inst="guitar"><h4>Bars 49–64 <span class="bar-ref">1:39</span></h4><p class="advice">Silent in this section.</p></div><div class="sec-row" data-inst="keys"><h4>Bars 49–64 <span class="bar-ref">1:39</span></h4><p class="chord-center">Chord : <b>Gm</b></p><p class="advice">Sustained pad/chord, constant support in this section.</p></div><div class="sec-row" data-inst="strings"><h4>Bars 49–64 <span class="bar-ref">1:39</span></h4><p class="advice">Silent in this section.</p></div><div class="sec-row" data-inst="synth"><h4>Bars 49–64 <span class="bar-ref">1:39</span></h4><p class="chord-center">Chord : <b>Gm</b></p><p class="advice">Sustained pad/chord, constant support in this section.</p></div><div class="sec-row" data-inst="wood"><h4>Bars 49–64 <span class="bar-ref">1:39</span></h4><p class="chord-center">Tonal center : <b>D</b></p><p class="advice">Sustained pad/chord, constant support in this section.</p></div></section><section class="sec"><div class="sec-row" data-inst="bass"><h4>Bars 65–80 <span class="bar-ref">2:12</span></h4><pre class="tab">G|-0-0-0-0-0-0-0-0-|
+D|-----------------|
+A|-----------------|
+E|-----------------|</pre><p class="advice">Looped motif in this section — fixed hand position, steady picking or legato for more fluidity.</p></div><div class="sec-row" data-inst="guitar"><h4>Bars 65–80 <span class="bar-ref">2:12</span></h4><p class="advice">Silent in this section.</p></div><div class="sec-row" data-inst="keys"><h4>Bars 65–80 <span class="bar-ref">2:12</span></h4><p class="chord-center">Chord : <b>G</b></p><p class="advice">Sustained pad/chord, constant support in this section.</p></div><div class="sec-row" data-inst="strings"><h4>Bars 65–80 <span class="bar-ref">2:12</span></h4><p class="advice">Silent in this section.</p></div><div class="sec-row" data-inst="synth"><h4>Bars 65–80 <span class="bar-ref">2:12</span></h4><p class="chord-center">Chord : <b>Gm</b></p><p class="advice">Sustained pad/chord, constant support in this section.</p></div><div class="sec-row" data-inst="wood"><h4>Bars 65–80 <span class="bar-ref">2:12</span></h4><p class="chord-center">Notes : <b>G#5 G#5 A5 A#5</b></p><p class="advice">Looped motif in this section — fixed hand position, steady picking or legato for more fluidity.</p></div></section><section class="sec"><div class="sec-row" data-inst="bass"><h4>Bars 81–96 <span class="bar-ref">2:45</span></h4><p class="advice">Silent in this section.</p></div><div class="sec-row" data-inst="guitar"><h4>Bars 81–96 <span class="bar-ref">2:45</span></h4><pre class="tab">e|-3-3-3-3-3-3-3-3-|
+B|-----------------|
+G|-----------------|
+D|-----------------|
+A|-----------------|
+E|-----------------|</pre><p class="advice">Looped motif in this section — fixed hand position, steady picking or legato for more fluidity.</p></div><div class="sec-row" data-inst="keys"><h4>Bars 81–96 <span class="bar-ref">2:45</span></h4><p class="chord-center">Chord : <b>Gm</b></p><p class="advice">Sustained pad/chord, constant support in this section.</p></div><div class="sec-row" data-inst="strings"><h4>Bars 81–96 <span class="bar-ref">2:45</span></h4><p class="advice">Silent in this section.</p></div><div class="sec-row" data-inst="synth"><h4>Bars 81–96 <span class="bar-ref">2:45</span></h4><p class="chord-center">Chord : <b>Gm</b></p><p class="advice">Sustained pad/chord, constant support in this section.</p></div><div class="sec-row" data-inst="wood"><h4>Bars 81–96 <span class="bar-ref">2:45</span></h4><p class="advice">Silent in this section.</p></div></section><section class="sec"><div class="sec-row" data-inst="bass"><h4>Bars 97–112 <span class="bar-ref">3:18</span></h4><pre class="tab">G|-0-3-3-3-3-------|
+D|-----------3-3-3-|
+A|-----------------|
+E|-----------------|</pre><p class="advice">Looped motif in this section — fixed hand position, steady picking or legato for more fluidity.</p></div><div class="sec-row" data-inst="guitar"><h4>Bars 97–112 <span class="bar-ref">3:18</span></h4><p class="advice">Silent in this section.</p></div><div class="sec-row" data-inst="keys"><h4>Bars 97–112 <span class="bar-ref">3:18</span></h4><p class="chord-center">Chord : <b>Gm</b></p><p class="advice">Sustained pad/chord, constant support in this section.</p></div><div class="sec-row" data-inst="strings"><h4>Bars 97–112 <span class="bar-ref">3:18</span></h4><p class="advice">Silent in this section.</p></div><div class="sec-row" data-inst="synth"><h4>Bars 97–112 <span class="bar-ref">3:18</span></h4><p class="chord-center">Chord : <b>Gm</b></p><p class="advice">Sustained pad/chord, constant support in this section.</p></div><div class="sec-row" data-inst="wood"><h4>Bars 97–112 <span class="bar-ref">3:18</span></h4><p class="advice">Silent in this section.</p></div></section><section class="sec"><div class="sec-row" data-inst="bass"><h4>Bars 112–127 <span class="bar-ref">3:51</span></h4><p class="chord-center">Tonal center : <b>G</b></p><p class="advice">Sustained pad/chord, constant support in this section.</p></div><div class="sec-row" data-inst="guitar"><h4>Bars 112–127 <span class="bar-ref">3:51</span></h4><p class="advice">Silent in this section.</p></div><div class="sec-row" data-inst="keys"><h4>Bars 112–127 <span class="bar-ref">3:51</span></h4><p class="advice">Silent in this section.</p></div><div class="sec-row" data-inst="strings"><h4>Bars 112–127 <span class="bar-ref">3:51</span></h4><p class="advice">Silent in this section.</p></div><div class="sec-row" data-inst="synth"><h4>Bars 112–127 <span class="bar-ref">3:51</span></h4><p class="chord-center">Chord : <b>Gm</b></p><p class="advice">Sustained pad/chord, constant support in this section.</p></div><div class="sec-row" data-inst="wood"><h4>Bars 112–127 <span class="bar-ref">3:51</span></h4><p class="advice">Silent in this section.</p></div></section><section class="sec"><div class="sec-row" data-inst="bass"><h4>Bars 129–144 <span class="bar-ref">4:24</span></h4><p class="chord-center">Tonal center : <b>G</b></p><p class="advice">Sustained pad/chord, constant support in this section.</p></div><div class="sec-row" data-inst="guitar"><h4>Bars 129–144 <span class="bar-ref">4:24</span></h4><p class="advice">Silent in this section.</p></div><div class="sec-row" data-inst="keys"><h4>Bars 129–144 <span class="bar-ref">4:24</span></h4><p class="advice">Silent in this section.</p></div><div class="sec-row" data-inst="strings"><h4>Bars 129–144 <span class="bar-ref">4:24</span></h4><p class="advice">Silent in this section.</p></div><div class="sec-row" data-inst="synth"><h4>Bars 129–144 <span class="bar-ref">4:24</span></h4><p class="advice">Silent in this section.</p></div><div class="sec-row" data-inst="wood"><h4>Bars 129–144 <span class="bar-ref">4:24</span></h4><p class="advice">Silent in this section.</p></div></section><section class="sec"><div class="sec-row" data-inst="bass"><h4>Bars 145–160 <span class="bar-ref">4:57</span></h4><pre class="tab">G|-0-0-0-0-----8-8-|
+D|---------1-1-----|
+A|-----------------|
+E|-----------------|</pre><p class="advice">Looped motif in this section — fixed hand position, steady picking or legato for more fluidity.</p></div><div class="sec-row" data-inst="guitar"><h4>Bars 145–160 <span class="bar-ref">4:57</span></h4><p class="advice">Silent in this section.</p></div><div class="sec-row" data-inst="keys"><h4>Bars 145–160 <span class="bar-ref">4:57</span></h4><p class="advice">Silent in this section.</p></div><div class="sec-row" data-inst="strings"><h4>Bars 145–160 <span class="bar-ref">4:57</span></h4><p class="advice">Silent in this section.</p></div><div class="sec-row" data-inst="synth"><h4>Bars 145–160 <span class="bar-ref">4:57</span></h4><p class="advice">Silent in this section.</p></div><div class="sec-row" data-inst="wood"><h4>Bars 145–160 <span class="bar-ref">4:57</span></h4><p class="advice">Silent in this section.</p></div></section><section class="sec"><div class="sec-row" data-inst="bass"><h4>Bars 161–176 <span class="bar-ref">5:31</span></h4><p class="chord-center">Tonal center : <b>G</b></p><p class="advice">Sustained pad/chord, constant support in this section.</p></div><div class="sec-row" data-inst="guitar"><h4>Bars 161–176 <span class="bar-ref">5:31</span></h4><pre class="tab">e|---------|
+B|---------|
+G|---------|
+D|---------|
+A|---1-----|
+E|-3---1-1-|</pre><p class="advice">Looped motif in this section — fixed hand position, steady picking or legato for more fluidity.</p></div><div class="sec-row" data-inst="keys"><h4>Bars 161–176 <span class="bar-ref">5:31</span></h4><p class="advice">Silent in this section.</p></div><div class="sec-row" data-inst="strings"><h4>Bars 161–176 <span class="bar-ref">5:31</span></h4><p class="advice">Silent in this section.</p></div><div class="sec-row" data-inst="synth"><h4>Bars 161–176 <span class="bar-ref">5:31</span></h4><p class="advice">Silent in this section.</p></div><div class="sec-row" data-inst="wood"><h4>Bars 161–176 <span class="bar-ref">5:31</span></h4><p class="advice">Silent in this section.</p></div></section><section class="sec"><div class="sec-row" data-inst="bass"><h4>Bars 177–192 <span class="bar-ref">6:04</span></h4><p class="advice">Silent in this section.</p></div><div class="sec-row" data-inst="guitar"><h4>Bars 177–192 <span class="bar-ref">6:04</span></h4><p class="advice">Silent in this section.</p></div><div class="sec-row" data-inst="keys"><h4>Bars 177–192 <span class="bar-ref">6:04</span></h4><p class="advice">Silent in this section.</p></div><div class="sec-row" data-inst="strings"><h4>Bars 177–192 <span class="bar-ref">6:04</span></h4><p class="advice">Silent in this section.</p></div><div class="sec-row" data-inst="synth"><h4>Bars 177–192 <span class="bar-ref">6:04</span></h4><p class="advice">Silent in this section.</p></div><div class="sec-row" data-inst="wood"><h4>Bars 177–192 <span class="bar-ref">6:04</span></h4><p class="advice">Silent in this section.</p></div></section>
+
+  <div class="tips-block">
+    <h4>General tips</h4>
+    <p class="advice">Looped motif in this section — fixed hand position, steady picking or legato for more fluidity. Sustained pad/chord, constant support in this section.</p>
+  </div>
+
+  <footer>www.trefleminotaure.com · © 2026 Trèfle &amp; Minotaure</footer>
+</div>
+
+<script>
+function setInst(btn, inst){
+  document.body.className = document.body.className.replace(/i-[a-z]+/g, '').trim();
+  document.body.classList.add("i-"+inst);
+  document.querySelectorAll(".instbtn").forEach(b=>b.classList.remove("active"));
+  btn.classList.add("active");
+}
+function setLevel(btn, lvl){
+  document.body.classList.toggle("pro", lvl==="pro");
+  document.querySelectorAll(".lvlbtn").forEach(b=>b.classList.remove("active"));
+  btn.classList.add("active");
+}
+</script>
+</body>
+</html>

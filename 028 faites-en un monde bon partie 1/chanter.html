@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>FAITES-EN UN MONDE BON — Partie 1 — Paroles</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Cinzel:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:#10121c; background-image: radial-gradient(circle at 50% 0%, #1c2038, #08090f 80%); font-family:'Cormorant Garamond', serif; }
+  .page { max-width:960px; margin:30px auto; background:#f5ecd7; border:3px solid #4a5a8f; border-radius:10px; padding:30px clamp(14px,4vw,44px) 50px; }
+  header { text-align:center; margin-bottom:20px; }
+  header h1 { font-family:'Cinzel', serif; color:#1c2038; font-size:1.7rem; margin-bottom:4px; }
+  .meta { color:#4a5a8f; font-size:.95rem; }
+  .controls { display:flex; justify-content:center; gap:24px; flex-wrap:wrap; margin:18px 0 26px; }
+  .ctrl-group { display:flex; gap:6px; align-items:center; }
+  .ctrl-group label { font-size:.85rem; color:#3d4a70; margin-right:4px; }
+  button.langbtn, button.speedbtn { font-family:'Cinzel', serif; font-size:.8rem; padding:6px 14px; border-radius:6px; border:1px solid #8a9ac9; background:#fff; cursor:pointer; }
+  button.langbtn.active, button.speedbtn.active { background:#2e3f7a; color:#fff; }
+  .sec { margin-bottom:26px; border-top:1px solid #c3cbe0; padding-top:14px; }
+  .sec-head { display:flex; align-items:center; gap:10px; margin-bottom:10px; flex-wrap:wrap; }
+  .section-label { font-family:'Cinzel', serif; font-weight:600; color:#1c2038; font-size:1rem; }
+  .voice-badge { font-size:.72rem; color:#fff; background:#b8962e; border-radius:10px; padding:2px 10px; }
+  .playbtn { margin-left:auto; border:none; background:#2e3f7a; color:#fff; border-radius:50%; width:30px; height:30px; cursor:pointer; font-size:.85rem; }
+  .tagrow { font-size:.78rem; font-style:italic; color:#b8962e; opacity:.85; margin:4px 0; }
+  .lyric-row { display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; margin-bottom:6px; font-size:1.15rem; font-style:italic; max-width:100%; }
+  .lyric-row.ghost { opacity:.65; font-style:italic; }
+  .instrumental { grid-column:1/-1; opacity:.5; font-style:italic; text-align:center; font-size:.85rem; margin:10px 0; color:#4a5a8f; }
+  .col { padding:4px 8px; border-radius:4px; word-wrap:break-word; max-width:100%; }
+  .col.fr { background:#e8f0fc; }
+  .col.es { background:#f5ead5; }
+  .col.en { background:#fce8ec; }
+  body.show-fr .col.es, body.show-fr .col.en { display:none; }
+  body.show-fr .lyric-row { grid-template-columns:1fr; }
+  body.show-es .col.fr, body.show-es .col.en { display:none; }
+  body.show-es .lyric-row { grid-template-columns:1fr; }
+  body.show-en .col.fr, body.show-en .col.es { display:none; }
+  body.show-en .lyric-row { grid-template-columns:1fr; }
+  footer { text-align:center; margin-top:34px; color:#3d4a70; font-size:.85rem; border-top:1px solid #c3cbe0; padding-top:14px; }
+</style>
+</head>
+<body class="show-fr">
+<div class="page">
+  <header>
+    <h1>FAITES-EN UN MONDE BON — Partie 1 <span style="opacity:.5;">/ HAGAMOS UN MUNDO MEJOR / MAKE IT A BETTER WORLD</span></h1>
+    <div class="meta">Concert live · Electro-dance &amp; danse irlandaise · 116 BPM · Trèfle &amp; Minotaure</div>
+  </header>
+
+  <div class="controls">
+    <div class="ctrl-group">
+      <label>Langue :</label>
+      <button class="langbtn" onclick="setLang('all')">Trilingue</button>
+      <button class="langbtn active" onclick="setLang('fr')">🇫🇷 Français</button>
+      <button class="langbtn" onclick="setLang('es')">🇪🇸 Español</button>
+      <button class="langbtn" onclick="setLang('en')">🇬🇧 English</button>
+    </div>
+    <div class="ctrl-group">
+      <label>Vitesse :</label>
+      <button class="speedbtn" onclick="setSpeed(0.7)">&#215; 0.7</button>
+      <button class="speedbtn active" onclick="setSpeed(0.9)">&#215; 0.9</button>
+      <button class="speedbtn" onclick="setSpeed(1.0)">&#215; 1.0</button>
+    </div>
+  </div>
+
+<section class="sec" id="sec-p1s1"><div class="sec-head"><span class="section-label">Intro live / Intro en directo / Live intro</span><button class="playbtn" onclick="playSec('p1s1')">&#9654;</button></div><div class="tagrow">[LIVE CONCERT INTRO — crowd ambience, electronic bass pulse and light percussion]</div><div class="tagrow">[Spoken intro — addressing the crowd]</div><div class="lyric-row"><div class="col fr">Bonjour, Mons !</div><div class="col es">¡Hola, Mons!</div><div class="col en">Hello, Mons!</div></div><div class="lyric-row"><div class="col fr">Bonjour, le monde !</div><div class="col es">¡Hola, mundo!</div><div class="col en">Hello, world!</div></div><div class="lyric-row"><div class="col fr">Est-ce que vous êtes là ?</div><div class="col es">¿Estáis ahí esta noche?</div><div class="col en">Are you out there tonight?</div></div><div class="tagrow">[Crowd — enthusiastic response]</div><div class="lyric-row"><div class="col fr">OUIIIII !</div><div class="col es">¡SÍÍÍÍÍ!</div><div class="col en">YEAHHHH!</div></div><div class="tagrow">[Lead vocal]</div><div class="lyric-row"><div class="col fr">Est-ce que vous m&#x27;entendez ?</div><div class="col es">¿Me oís?</div><div class="col en">Can you hear me?</div></div><div class="tagrow">[Crowd]</div><div class="lyric-row"><div class="col fr">OUIIIII !</div><div class="col es">¡SÍÍÍÍÍ!</div><div class="col en">YEAHHHH!</div></div><div class="tagrow">[Spoken, playful delivery]</div><div class="lyric-row"><div class="col fr">Moi, je vous entends pas !</div><div class="col es">¡NO OS OIGO!</div><div class="col en">I CAN&#x27;T HEAR YOU!</div></div><div class="lyric-row"><div class="col fr">PLUS FORT !</div><div class="col es">¡MÁS FUERTE!</div><div class="col en">LOUDER!</div></div><div class="tagrow">[Crowd — explosive cheers, clapping and stomping]</div><div class="tagrow">[Music settles into a steady electronic dance groove]</div></section><section class="sec" id="sec-p1s2"><div class="sec-head"><span class="section-label">Un monde un peu fou / Un mundo algo loco / A slightly crazy world</span><button class="playbtn" onclick="playSec('p1s2')">&#9654;</button></div><div class="tagrow">[Spoken, conversational delivery]</div><div class="lyric-row"><div class="col fr">Dites-moi…</div><div class="col es">Decidme una cosa…</div><div class="col en">Tell me something…</div></div><div class="lyric-row"><div class="col fr">Vous avez remarqué ?</div><div class="col es">¿Os habéis dado cuenta?</div><div class="col en">Have you noticed?</div></div><div class="lyric-row"><div class="col fr">On vit dans un monde un peu fou…</div><div class="col es">Este mundo se ha vuelto un poco loco…</div><div class="col en">This world has gone a little crazy…</div></div><div class="lyric-row"><div class="col fr">Des guerres, des attentats,</div><div class="col es">Guerras y atentados,</div><div class="col en">Wars and attacks,</div></div><div class="lyric-row"><div class="col fr">des rues qui s&#x27;embrasent,</div><div class="col es">calles ardiendo de rabia,</div><div class="col en">streets burning with anger,</div></div><div class="lyric-row"><div class="col fr">des colères qui débordent,</div><div class="col es">gente al límite,</div><div class="col en">people pushed to the limit,</div></div><div class="lyric-row"><div class="col fr">des vitrines qu&#x27;on fracasse…</div><div class="col es">escaparates destrozados…</div><div class="col en">shop windows smashed…</div></div><div class="tagrow">[Brief pause — crowd ambience]</div><div class="tagrow">[Lead vocal]</div><div class="lyric-row"><div class="col fr">Mais franchement…</div><div class="col es">Pero, sinceramente…</div><div class="col en">But honestly…</div></div><div class="lyric-row"><div class="col fr">Vous ne préférez pas vivre</div><div class="col es">¿No preferiríais vivir</div><div class="col en">Wouldn&#x27;t you rather live</div></div><div class="lyric-row"><div class="col fr">dans un monde de paix,</div><div class="col es">en un mundo de paz,</div><div class="col en">in a world of peace,</div></div><div class="lyric-row"><div class="col fr">d&#x27;amour…</div><div class="col es">de amor…</div><div class="col en">of love…</div></div><div class="tagrow">[Pause — crowd anticipation]</div><div class="lyric-row"><div class="col fr">ET DE DANSE ?</div><div class="col es">¿Y DE BAILE?</div><div class="col en">AND DANCE?</div></div><div class="tagrow">[Crowd — huge joyful response]</div><div class="lyric-row"><div class="col fr">OUIIIII !</div><div class="col es">¡SÍÍÍÍÍ!</div><div class="col en">YEAHHHH!</div></div><div class="tagrow">[Short instrumental break — pumping synth bass]</div><div class="tagrow">[Electric violin — fierce, fast melodic hook]</div><div class="tagrow">[Full band stops dead]</div><div class="tagrow">[Crowd — cheers and applause]</div></section><section class="sec" id="sec-p1s3"><div class="sec-head"><span class="section-label">Ce soir, on laisse la haine dehors / Esta noche dejamos fuera el odio / Tonight we leave hate outside</span><button class="playbtn" onclick="playSec('p1s3')">&#9654;</button></div><div class="tagrow">[Spoken delivery]</div><div class="lyric-row"><div class="col fr">Alors, ce soir,</div><div class="col es">¡Entonces, esta noche,</div><div class="col en">Then tonight,</div></div><div class="lyric-row"><div class="col fr">on laisse la haine dehors !</div><div class="col es">dejemos el odio fuera!</div><div class="col en">leave your hatred outside!</div></div><div class="lyric-row"><div class="col fr">Ici, on se retrouve,</div><div class="col es">Aquí nos reunimos,</div><div class="col en">Here, we stand together,</div></div><div class="lyric-row"><div class="col fr">on chante, on danse,</div><div class="col es">cantamos, bailamos</div><div class="col en">we sing, we dance,</div></div><div class="lyric-row"><div class="col fr">et on fait du bruit pour la paix !</div><div class="col es">¡y hacemos ruido por la paz!</div><div class="col en">and we make some noise for peace!</div></div><div class="tagrow">[Crowd cheers]</div></section><section class="sec" id="sec-p1s4"><div class="sec-head"><span class="section-label">Pieds et danse / Pies y baile / Feet and dance</span><button class="playbtn" onclick="playSec('p1s4')">&#9654;</button></div><div class="tagrow">[Irish hard-shoe foot percussion — rapid rhythmic pattern]</div><div class="tagrow">[Electronic beat returns — powerful and driving]</div><div class="tagrow">[Rhythmic vocal delivery]</div><div class="lyric-row"><div class="col fr">Regarde tes pieds, ils connaissent le chemin,</div><div class="col es">Mira tus pies, conocen el camino,</div><div class="col en">Look at your feet, they know the way,</div></div><div class="lyric-row"><div class="col fr">Laisse tes soucis, vis l&#x27;instant qui vient.</div><div class="col es">deja tus preocupaciones, vive el destino.</div><div class="col en">Leave your worries, live this day.</div></div><div class="lyric-row"><div class="col fr">Les cordes électriques s&#x27;allument dans la nuit,</div><div class="col es">¡Las cuerdas eléctricas encienden la noche,</div><div class="col en">Electric strings ignite the night,</div></div><div class="lyric-row"><div class="col fr">Ensemble on se lève, ensemble on construit !</div><div class="col es">juntos nos alzamos, sin miedo ni reproches!</div><div class="col en">Together we rise, together we shine!</div></div><div class="tagrow">[Rhythmic melodic vocal delivery]</div><div class="lyric-row"><div class="col fr">Un pas en avant, deux pas de côté,</div><div class="col es">Un paso adelante, dos hacia un lado,</div><div class="col en">One step forward, two steps aside,</div></div><div class="lyric-row"><div class="col fr">Fais vibrer le sol, laisse-toi emporter !</div><div class="col es">siente cómo tiembla el suelo bajo tus pasos.</div><div class="col en">Feel the floor shake, enjoy the ride!</div></div><div class="lyric-row"><div class="col fr">Les pieds frappent fort, les violons s&#x27;embrasent,</div><div class="col es">¡Los pies golpean fuerte, los violines arden,</div><div class="col en">Feet strike hard and the violins blaze,</div></div><div class="lyric-row"><div class="col fr">Ce soir, tous ensemble, faisons trembler la place !</div><div class="col es">juntos encendemos el mundo esta noche!</div><div class="col en">Together we set this world ablaze!</div></div><div class="tagrow">[Short drum and percussion break]</div><div class="tagrow">[Irish hard-shoe footwork — fast, precise rhythmic pattern]</div><div class="tagrow">[Electric violin — aggressive, incisive melodic run]</div><div class="tagrow">[Saxophone — punchy answering phrase]</div></section><section class="sec" id="sec-p1s5"><div class="sec-head"><span class="section-label">Vous aimez la paix ? / ¿Amáis la paz? / Do you love peace?</span><button class="playbtn" onclick="playSec('p1s5')">&#9654;</button></div><div class="tagrow">[Calling to the crowd]</div><div class="lyric-row"><div class="col fr">Vous aimez la paix ?</div><div class="col es">¿QUERÉIS PAZ?</div><div class="col en">DO YOU WANT PEACE?</div></div><div class="tagrow">[Crowd]</div><div class="lyric-row"><div class="col fr">OUIIIII !</div><div class="col es">¡SÍÍÍÍÍ!</div><div class="col en">YEAHHHH!</div></div><div class="tagrow">[Lead vocal]</div><div class="lyric-row"><div class="col fr">J&#x27;ai rien entendu !</div><div class="col es">¡NO OS OIGO!</div><div class="col en">I CAN&#x27;T HEAR YOU!</div></div><div class="lyric-row"><div class="col fr">VOUS AIMEZ LA PAIX ?</div><div class="col es">¿QUERÉIS PAZ?</div><div class="col en">DO YOU WANT PEACE?</div></div><div class="tagrow">[Crowd — louder]</div><div class="lyric-row"><div class="col fr">OUIIIII !</div><div class="col es">¡SÍÍÍÍÍ!</div><div class="col en">YEAHHHH!</div></div><div class="tagrow">[Lead vocal]</div><div class="lyric-row"><div class="col fr">ALORS, CRIEZ-LE !</div><div class="col es">¡PUES GRITADLO!</div><div class="col en">THEN SHOUT IT OUT!</div></div><div class="tagrow">[Music stops dead]</div><div class="tagrow">[Crowd — rhythmic chant, clapping in time]</div><div class="lyric-row"><div class="col fr">LA PAIX ! LA PAIX ! LA PAIX !</div><div class="col es">¡PAZ! ¡PAZ! ¡PAZ!</div><div class="col en">PEACE! PEACE! PEACE!</div></div></section><section class="sec" id="sec-p1s6"><div class="sec-head"><span class="section-label">Chant trilingue / Cántico trilingüe / Trilingual chant</span><button class="playbtn" onclick="playSec('p1s6')">&#9654;</button></div><div class="tagrow">[Full band returns — explosive electro-dance groove]</div><div class="tagrow">[Lead vocal]</div><div class="lyric-row"><div class="col fr">PAIX !</div><div class="col es">¡PAIX!</div><div class="col en">PAIX!</div></div><div class="tagrow">[Crowd]</div><div class="lyric-row"><div class="col fr">PEACE !</div><div class="col es">¡PEACE!</div><div class="col en">PEACE!</div></div><div class="tagrow">[Lead vocal — melodic phrase]</div><div class="lyric-row"><div class="col fr">PAZ !</div><div class="col es">¡PAZ!</div><div class="col en">PAZ!</div></div><div class="tagrow">[Entire crowd]</div><div class="lyric-row"><div class="col fr">PAIX ! PEACE ! PAZ !</div><div class="col es">¡PAIX! ¡PEACE! ¡PAZ!</div><div class="col en">PAIX! PEACE! PAZ!</div></div><div class="tagrow">[Lead vocal]</div><div class="lyric-row"><div class="col fr">AMOUR !</div><div class="col es">¡AMOUR!</div><div class="col en">AMOUR!</div></div><div class="tagrow">[Crowd]</div><div class="lyric-row"><div class="col fr">LOVE ! AMOR !</div><div class="col es">¡LOVE! ¡AMOR!</div><div class="col en">LOVE! AMOR!</div></div><div class="tagrow">[Lead vocal — melodic phrase]</div><div class="lyric-row"><div class="col fr">DANSE !</div><div class="col es">¡DANSE!</div><div class="col en">DANSE!</div></div><div class="tagrow">[Crowd]</div><div class="lyric-row"><div class="col fr">DANCE ! DANZA !</div><div class="col es">¡DANCE! ¡DANZA!</div><div class="col en">DANCE! DANZA!</div></div><div class="tagrow">[Full band — fierce electric violin and saxophone exchange]</div><div class="tagrow">[Electronic bass — melodic flourishes, slides, hammer-ons and pull-offs]</div><div class="tagrow">[Crowd clapping and stomping in rhythm]</div><div class="tagrow">[Driving electronic dance groove continues]</div><div class="tagrow">[Crowd chanting]</div><div class="lyric-row"><div class="col fr">PAIX ! PEACE ! PAZ !</div><div class="col es">¡PAZ! ¡PAIX! ¡PEACE!</div><div class="col en">PEACE! PAIX! PAZ!</div></div><div class="lyric-row"><div class="col fr">AMOUR ! LOVE ! AMOR !</div><div class="col es">¡AMOR! ¡AMOUR! ¡LOVE!</div><div class="col en">LOVE! AMOUR! AMOR!</div></div><div class="lyric-row"><div class="col fr">DANSE ! DANCE ! DANZA !</div><div class="col es">¡BAILE! ¡DANSE! ¡DANCE!</div><div class="col en">DANCE! DANSE! DANZA!</div></div></section><section class="sec" id="sec-p1s7"><div class="sec-head"><span class="section-label">Fin de la partie 1 / Final de la parte 1 / End of part 1</span></div><div class="tagrow">[Ending section — instrumental groove continues, building anticipation for Part 2]</div></section>
+
+  <footer>www.trefleminotaure.com · © 2026 Trèfle &amp; Minotaure</footer>
+</div>
+
+<script>
+const SECS = {
+ "p1s1": {
+  "fr": "Bonjour, Mons ! Bonjour, le monde ! Est-ce que vous êtes là ? OUIIIII ! Est-ce que vous m'entendez ? OUIIIII ! Moi, je vous entends pas ! PLUS FORT !",
+  "en": "Hello, Mons! Hello, world! Are you out there tonight? YEAHHHH! Can you hear me? YEAHHHH! I CAN'T HEAR YOU! LOUDER!",
+  "es": "¡Hola, Mons! ¡Hola, mundo! ¿Estáis ahí esta noche? ¡SÍÍÍÍÍ! ¿Me oís? ¡SÍÍÍÍÍ! ¡NO OS OIGO! ¡MÁS FUERTE!"
+ },
+ "p1s2": {
+  "fr": "Dites-moi… Vous avez remarqué ? On vit dans un monde un peu fou… Des guerres, des attentats, des rues qui s'embrasent, des colères qui débordent, des vitrines qu'on fracasse… Mais franchement… Vous ne préférez pas vivre dans un monde de paix, d'amour… ET DE DANSE ? OUIIIII !",
+  "en": "Tell me something… Have you noticed? This world has gone a little crazy… Wars and attacks, streets burning with anger, people pushed to the limit, shop windows smashed… But honestly… Wouldn't you rather live in a world of peace, of love… AND DANCE? YEAHHHH!",
+  "es": "Decidme una cosa… ¿Os habéis dado cuenta? Este mundo se ha vuelto un poco loco… Guerras y atentados, calles ardiendo de rabia, gente al límite, escaparates destrozados… Pero, sinceramente… ¿No preferiríais vivir en un mundo de paz, de amor… ¿Y DE BAILE? ¡SÍÍÍÍÍ!"
+ },
+ "p1s3": {
+  "fr": "Alors, ce soir, on laisse la haine dehors ! Ici, on se retrouve, on chante, on danse, et on fait du bruit pour la paix !",
+  "en": "Then tonight, leave your hatred outside! Here, we stand together, we sing, we dance, and we make some noise for peace!",
+  "es": "¡Entonces, esta noche, dejemos el odio fuera! Aquí nos reunimos, cantamos, bailamos ¡y hacemos ruido por la paz!"
+ },
+ "p1s4": {
+  "fr": "Regarde tes pieds, ils connaissent le chemin, Laisse tes soucis, vis l'instant qui vient. Les cordes électriques s'allument dans la nuit, Ensemble on se lève, ensemble on construit ! Un pas en avant, deux pas de côté, Fais vibrer le sol, laisse-toi emporter ! Les pieds frappent fort, les violons s'embrasent, Ce soir, tous ensemble, faisons trembler la place !",
+  "en": "Look at your feet, they know the way, Leave your worries, live this day. Electric strings ignite the night, Together we rise, together we shine! One step forward, two steps aside, Feel the floor shake, enjoy the ride! Feet strike hard and the violins blaze, Together we set this world ablaze!",
+  "es": "Mira tus pies, conocen el camino, deja tus preocupaciones, vive el destino. ¡Las cuerdas eléctricas encienden la noche, juntos nos alzamos, sin miedo ni reproches! Un paso adelante, dos hacia un lado, siente cómo tiembla el suelo bajo tus pasos. ¡Los pies golpean fuerte, los violines arden, juntos encendemos el mundo esta noche!"
+ },
+ "p1s5": {
+  "fr": "Vous aimez la paix ? OUIIIII ! J'ai rien entendu ! VOUS AIMEZ LA PAIX ? OUIIIII ! ALORS, CRIEZ-LE ! LA PAIX ! LA PAIX ! LA PAIX !",
+  "en": "DO YOU WANT PEACE? YEAHHHH! I CAN'T HEAR YOU! DO YOU WANT PEACE? YEAHHHH! THEN SHOUT IT OUT! PEACE! PEACE! PEACE!",
+  "es": "¿QUERÉIS PAZ? ¡SÍÍÍÍÍ! ¡NO OS OIGO! ¿QUERÉIS PAZ? ¡SÍÍÍÍÍ! ¡PUES GRITADLO! ¡PAZ! ¡PAZ! ¡PAZ!"
+ },
+ "p1s6": {
+  "fr": "PAIX ! PEACE ! PAZ ! PAIX ! PEACE ! PAZ ! AMOUR ! LOVE ! AMOR ! DANSE ! DANCE ! DANZA ! PAIX ! PEACE ! PAZ ! AMOUR ! LOVE ! AMOR ! DANSE ! DANCE ! DANZA !",
+  "en": "PAIX! PEACE! PAZ! PAIX! PEACE! PAZ! AMOUR! LOVE! AMOR! DANSE! DANCE! DANZA! PEACE! PAIX! PAZ! LOVE! AMOUR! AMOR! DANCE! DANSE! DANZA!",
+  "es": "¡PAIX! ¡PEACE! ¡PAZ! ¡PAIX! ¡PEACE! ¡PAZ! ¡AMOUR! ¡LOVE! ¡AMOR! ¡DANSE! ¡DANCE! ¡DANZA! ¡PAZ! ¡PAIX! ¡PEACE! ¡AMOR! ¡AMOUR! ¡LOVE! ¡BAILE! ¡DANSE! ¡DANCE!"
+ }
+};
+const LANG_MAP = { fr:"fr-FR", es:"es-ES", en:"en-GB" };
+let curLang = "fr";
+let curSpeed = 0.9;
+function setLang(l){
+  document.body.classList.remove("show-fr","show-es","show-en");
+  document.querySelectorAll(".langbtn").forEach(b=>b.classList.remove("active"));
+  event.target.classList.add("active");
+  if (l==="all") { curLang="fr"; } else { document.body.classList.add("show-"+l); curLang=l; }
+}
+function setSpeed(v){
+  curSpeed = v;
+  document.querySelectorAll(".speedbtn").forEach(b=>b.classList.remove("active"));
+  event.target.classList.add("active");
+}
+function playSec(id){
+  const txt = SECS[id][curLang];
+  if (!txt || !("speechSynthesis" in window)) return;
+  window.speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(txt);
+  u.lang = LANG_MAP[curLang];
+  u.rate = curSpeed;
+  window.speechSynthesis.speak(u);
+}
+</script>
+</body>
+</html>
