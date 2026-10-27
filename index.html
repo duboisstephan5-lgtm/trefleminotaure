@@ -268,7 +268,7 @@ function filterSearch(q) {
 function matches(song) {
   if (searchQuery) {
     const txt = [
-      song.titre.fr, song.titre.en, song.titre.es,
+      (song.titre||{}).fr, (song.titre||{}).en, (song.titre||{}).es,
       song.style, song.album,
       ...(song.themes || [])
     ].join(' ').toLowerCase();
@@ -278,6 +278,7 @@ function matches(song) {
 }
 
 function buildTitreTrilingue(titre) {
+  titre = titre || {};
   const vals = [titre.fr, titre.en, titre.es].filter(t => t && t !== 'A COMPLETER');
   const unique = [...new Set(vals)];
   return unique.join(' <span style="opacity:.5">/</span> ');
@@ -291,7 +292,7 @@ function buildCard(s) {
 
   const warnPill = s.sensible ? `<span class="pill pill-warn">⚠️ Thème sensible</span>` : '';
 
-  const sousTitres = [s.soustitre.en, s.soustitre.es]
+  const sousTitres = [(s.soustitre||{}).en, (s.soustitre||{}).es]
     .filter(t => t && t !== s.titre.fr && t !== s.titre.en)
     .join(' · ');
 
@@ -335,7 +336,7 @@ function render() {
   if (filtered.length === 0) {
     container.innerHTML = '<div class="empty">Aucune chanson ne correspond à ce filtre.</div>';
   } else {
-    container.innerHTML = filtered.map(buildCard).join('');
+    container.innerHTML = filtered.map(s => { try { return buildCard(s); } catch (e) { console.error('Entrée ignorée', s && s.id, e); return ''; } }).join('');
   }
 }
 
@@ -345,7 +346,8 @@ fetch('catalogue.json')
     catalogue = data.chansons;
     render();
   })
-  .catch(() => {
+  .catch((e) => {
+    console.error(e);
     document.getElementById('cards').innerHTML =
       '<div class="empty">Impossible de charger le catalogue.</div>';
   });
