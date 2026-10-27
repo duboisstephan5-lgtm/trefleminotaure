@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>ÉCRANS OF THE LIFE DE LA NOCHE — Guide de prononciation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,500&family=Cinzel:wght@600&family=IM+Fell+English&family=Noto+Serif:wght@400&display=swap" rel="stylesheet">
+<style>
+  :root { --gold:#b8962e; }
+  body { margin:0; background:#2a1f10; background-image: radial-gradient(circle at 50% 0%, #3a2a18, #120c16 80%); font-family:'Cormorant Garamond', serif; }
+  .page { max-width:1000px; margin:30px auto; background:#f5ecd7; border:3px solid #c4a97a; border-radius:10px; padding:30px clamp(14px,4vw,44px) 50px; }
+  header { text-align:center; margin-bottom:20px; }
+  header h1 { font-family:'IM Fell English', serif; color:#2a1f30; font-size:1.7rem; }
+  .meta { color:#6b5a6f; font-size:.9rem; }
+  .controls { display:flex; justify-content:center; gap:14px; flex-wrap:wrap; margin:18px 0 26px; }
+  button.langbtn, button.speedbtn { font-family:'Cinzel', serif; font-size:.75rem; padding:6px 12px; border-radius:6px; border:1px solid #a68aad; background:#fff8ea; cursor:pointer; }
+  button.langbtn.active, button.speedbtn.active { background:var(--gold); color:#fff; }
+  .sec-title { font-family:'Cinzel', serif; color:#1c2038; font-size:1.05rem; margin:26px 0 6px; border-top:1px solid #c4a97a; padding-top:14px; }
+  .tagrow { font-size:.75rem; font-style:italic; color:var(--gold); opacity:.85; margin:3px 0; }
+  .instrumental { opacity:.5; font-style:italic; text-align:center; font-size:.9rem; margin:8px 0; color:#6b5a6f; }
+  .opt-c-row { display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; margin-bottom:10px; }
+  .lc { padding:6px 10px; border-radius:4px; position:relative; word-wrap:break-word; max-width:100%; }
+  .lc.fr { background:#e8f0fc; border:1px solid #aac4f0; }
+  .lc.es { background:#f5ead5; border:1px solid #d4b87a; }
+  .lc.en { background:#fce8ec; border:1px solid #f0aabc; }
+  .lyric-text { font-family:'Cormorant Garamond', serif; font-style:italic; font-size:.97rem; color:#2a2a2a; word-wrap:break-word; }
+  .lyric-syllabic { font-family:'Cormorant Garamond', serif; font-weight:700; font-size:.80rem; margin-top:3px; color:#2a1f30; word-wrap:break-word; }
+  .lyric-syllabic .a { color:#c0392b; text-decoration:underline; text-decoration-color:#c0392b; }
+  .plb { margin-top:4px; font-family:'Cinzel', serif; font-size:.43rem; border:none; background:var(--gold); color:#fff; border-radius:50%; width:16px; height:16px; cursor:pointer; line-height:1; }
+  .lyric-ipa { font-family:"Noto Serif","Noto Sans",serif; font-size:.64rem; opacity:.56; margin-top:3px; color:#333; word-wrap:break-word; }
+  .lyric-ipa::before { content:"/ "; color:var(--gold); }
+  .lyric-ipa::after { content:" /"; color:var(--gold); }
+  .sound-hints { display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; margin:4px 0 16px; }
+  .sh { font-size:.78rem; padding:8px 10px; border-radius:6px; background:#fff8ea; border:1px dashed #c4a97a; word-wrap:break-word; }
+  .foreign-block { display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; margin:4px 0 16px; }
+  .fb { font-size:.78rem; padding:8px 10px; border-radius:6px; background:#efe2bf; border:1px solid #d8c79a; word-wrap:break-word; }
+  body.show-fr .lc.es, body.show-fr .lc.en { display:none; }
+  body.show-fr .opt-c-row { grid-template-columns:1fr; }
+  body.show-fr .sound-hints, body.show-fr .foreign-block { grid-template-columns:1fr; }
+  body.show-fr .sh.es, body.show-fr .sh.en, body.show-fr .fb.es, body.show-fr .fb.en { display:none; }
+  body.show-es .lc.fr, body.show-es .lc.en { display:none; }
+  body.show-es .opt-c-row { grid-template-columns:1fr; }
+  body.show-es .sound-hints, body.show-es .foreign-block { grid-template-columns:1fr; }
+  body.show-es .sh.fr, body.show-es .sh.en, body.show-es .fb.fr, body.show-es .fb.en { display:none; }
+  body.show-en .lc.fr, body.show-en .lc.es { display:none; }
+  body.show-en .opt-c-row { grid-template-columns:1fr; }
+  body.show-en .sound-hints, body.show-en .foreign-block { grid-template-columns:1fr; }
+  body.show-en .sh.fr, body.show-en .sh.es, body.show-en .fb.fr, body.show-en .fb.es { display:none; }
+  footer { text-align:center; margin-top:34px; color:#6b5a6f; font-size:.85rem; border-top:1px solid #cbb8d0; padding-top:14px; }
+
+  .spk { font-family:'Cinzel', serif; font-size:.68rem; letter-spacing:.1em; text-transform:uppercase; color:#b8962e; margin:10px 0 2px; }
+</style>
+</head>
+
+<body class="show-fr">
+<div class="page">
+  <header>
+    <h1>ÉCRANS OF THE LIFE DE LA NOCHE — Guide de prononciation</h1>
+    <div class="meta">Option C · Syllabique + IPA · FR / ES / EN — chaque langue conserve sa propre découpe syllabique et sa propre transcription</div>
+  </header>
+
+  <div class="controls">
+    <button class="langbtn" onclick="setLang(this,'all')">Trilingue</button>
+    <button class="langbtn active" onclick="setLang(this,'fr')">🇫🇷 Français</button>
+    <button class="langbtn" onclick="setLang(this,'es')">🇪🇸 Español</button>
+    <button class="langbtn" onclick="setLang(this,'en')">🇬🇧 English</button>
+    <button class="speedbtn" onclick="setSpeed(this,0.7)">&#215; 0.7</button>
+    <button class="speedbtn active" onclick="setSpeed(this,0.9)">&#215; 0.9</button>
+    <button class="speedbtn" onclick="setSpeed(this,1.0)">&#215; 1.0</button>
+  </div>
+
+<h3 class="sec-title">Structure de la chanson</h3><div class="tagrow">Intro instrumentale · Partie 1 en français (Minotaure, slam, vers 0:28) · transition · Partie 2 en anglais (Trèfle, rock mélodique, vers 1:41) · respiration · Partie 3 en espagnol (duo Trèfle et Minotaure, vers 3:13) · climax final · outro</div>
+<h3 class="sec-title">Les huit lignes, chantées dans les trois langues</h3><div class="tagrow">Chaque ligne dit la même chose dans les trois langues. La même ligne est chantée en français, puis en anglais, puis en espagnol. Pas de refrain.</div><div class="spk">Minotaure (FR) · Trèfle (EN) · Trèfle &amp; Minotaure (ES)</div>
+<div class="opt-c-row"><div class="lc fr"><div class="lyric-text">Le bleu de l’écran éclaire mon visage</div><div class="lyric-syllabic">Le-bleu-de-l’é-cran-é-clai-re-mon-vi-<span class="a">sa</span>-ge</div><button class="plb" onclick="speakLine(this,'Le bleu de l’écran éclaire mon visage','fr')">&#9654;</button><div class="lyric-ipa">lə blˈø də lekʁˈɑ̃ eklˈɛʁ mɔ̃ vizˈaʒ</div></div><div class="lc es"><div class="lyric-text">El azul ilumina mi rostro,</div><div class="lyric-syllabic">El-a-zul-i-lu-mi-na-mi-<span class="a">ros</span>-tro</div><button class="plb" onclick="speakLine(this,'El azul ilumina mi rostro,','es')">&#9654;</button><div class="lyric-ipa">el aθˈul ˌilumˈina mi rˈostɾo</div></div><div class="lc en"><div class="lyric-text">The blue screen lights up my face,</div><div class="lyric-syllabic">The-blue-screen-lights-up-my-<span class="a">face</span></div><button class="plb" onclick="speakLine(this,'The blue screen lights up my face,','en')">&#9654;</button><div class="lyric-ipa">ðə blˈuː skɹˈiːn lˈaɪts ˌʌp maɪ fˈeɪs</div></div></div>
+<div class="opt-c-row"><div class="lc fr"><div class="lyric-text">Je glisse un doigt sur ton image</div><div class="lyric-syllabic">Je-glis-se-un-doigt-sur-ton-i-<span class="a">ma</span>-ge</div><button class="plb" onclick="speakLine(this,'Je glisse un doigt sur ton image','fr')">&#9654;</button><div class="lyric-ipa">ʒə ɡlˈis œ̃ dwˈa syʁ tɔ̃n imˈaʒ</div></div><div class="lc es"><div class="lyric-text">Deslizo un dedo y te busco.</div><div class="lyric-syllabic">Des-li-zo-un-de-do-y-te-<span class="a">bus</span>-co</div><button class="plb" onclick="speakLine(this,'Deslizo un dedo y te busco.','es')">&#9654;</button><div class="lyric-ipa">deslˈiθo ˈun dˈeðo i te βˈusko</div></div><div class="lc en"><div class="lyric-text">I swipe my finger, search your trace.</div><div class="lyric-syllabic">I-swipe-my-fin-ger-search-your-<span class="a">trace</span></div><button class="plb" onclick="speakLine(this,'I swipe my finger, search your trace.','en')">&#9654;</button><div class="lyric-ipa">aɪ swˈaɪp maɪ fˈɪŋɡə sˈɜːtʃ jɔː tɹˈeɪs</div></div></div>
+<div class="opt-c-row"><div class="lc fr"><div class="lyric-text">Un message envoyé silence digital</div><div class="lyric-syllabic">Un-mes-sa-ge-en-voy-é-si-len-ce-di-gi-<span class="a">tal</span></div><button class="plb" onclick="speakLine(this,'Un message envoyé silence digital','fr')">&#9654;</button><div class="lyric-ipa">œ̃ mɛsˈaʒ ɑ̃vwajˈe silˈɑ̃s diʒitˈal</div></div><div class="lc es"><div class="lyric-text">Un mensaje, silencio digital,</div><div class="lyric-syllabic">Un-men-sa-je-si-len-cio-di-gi-<span class="a">tal</span></div><button class="plb" onclick="speakLine(this,'Un mensaje, silencio digital,','es')">&#9654;</button><div class="lyric-ipa">ˈun mensˈaxe silˈɛnθjo ðˌixitˈal</div></div><div class="lc en"><div class="lyric-text">A message sent, the silence grows,</div><div class="lyric-syllabic">A-mes-sage-sent-the-si-lence-<span class="a">grows</span></div><button class="plb" onclick="speakLine(this,'A message sent, the silence grows,','en')">&#9654;</button><div class="lyric-ipa">ɐ mˈɛsɪdʒ sˈɛnt ðə sˈaɪləns ɡɹˈəʊz</div></div></div>
+<div class="opt-c-row"><div class="lc fr"><div class="lyric-text">Cette distance me fait mal</div><div class="lyric-syllabic">Cet-te-dis-tan-ce-me-fait-<span class="a">mal</span></div><button class="plb" onclick="speakLine(this,'Cette distance me fait mal','fr')">&#9654;</button><div class="lyric-ipa">sɛt distˈɑ̃s mə fˈɛ mˈal</div></div><div class="lc es"><div class="lyric-text">Esta distancia me hace mal.</div><div class="lyric-syllabic">Es-ta-dis-tan-cia-me-ha-ce-<span class="a">mal</span></div><button class="plb" onclick="speakLine(this,'Esta distancia me hace mal.','es')">&#9654;</button><div class="lyric-ipa">ˈesta ðistˈanθja me ˈaθe mˈal</div></div><div class="lc en"><div class="lyric-text">This distance hurts more than it shows.</div><div class="lyric-syllabic">This-dis-tance-hurts-more-than-it-<span class="a">shows</span></div><button class="plb" onclick="speakLine(this,'This distance hurts more than it shows.','en')">&#9654;</button><div class="lyric-ipa">ðɪs dˈɪstəns hˈɜːts mˈɔː ðɐn ɪt ʃˈəʊz</div></div></div>
+<div class="opt-c-row"><div class="lc fr"><div class="lyric-text">On s’aime à travers les miroirs</div><div class="lyric-syllabic">On-s’ai-me-à-tra-vers-les-mi-<span class="a">roirs</span></div><button class="plb" onclick="speakLine(this,'On s’aime à travers les miroirs','fr')">&#9654;</button><div class="lyric-ipa">ɔ̃ sˈɛm a tʁavˈɛʁ le miʁwˈaʁ</div></div><div class="lc es"><div class="lyric-text">Nos amamos tras el cristal,</div><div class="lyric-syllabic">Nos-a-ma-mos-tras-el-cris-<span class="a">tal</span></div><button class="plb" onclick="speakLine(this,'Nos amamos tras el cristal,','es')">&#9654;</button><div class="lyric-ipa">nos amˈamos tɾas el kɾistˈal</div></div><div class="lc en"><div class="lyric-text">We love each other through the glass,</div><div class="lyric-syllabic">We-love-each-oth-er-through-the-<span class="a">glass</span></div><button class="plb" onclick="speakLine(this,'We love each other through the glass,','en')">&#9654;</button><div class="lyric-ipa">wiː lˈʌv ˈiːtʃ ˈʌðə θɹuː ðə ɡlˈas</div></div></div>
+<div class="opt-c-row"><div class="lc fr"><div class="lyric-text">Perdus ensemble dans le noir</div><div class="lyric-syllabic">Per-dus-en-sem-ble-dans-le-<span class="a">noir</span></div><button class="plb" onclick="speakLine(this,'Perdus ensemble dans le noir','fr')">&#9654;</button><div class="lyric-ipa">pɛʁdˈy ɑ̃sˈɑ̃bl dɑ̃ lə nwˈaʁ</div></div><div class="lc es"><div class="lyric-text">En un reflejo irreal.</div><div class="lyric-syllabic">En-un-re-fle-jo-i-rre-<span class="a">al</span></div><button class="plb" onclick="speakLine(this,'En un reflejo irreal.','es')">&#9654;</button><div class="lyric-ipa">en ˈun reflˈexo ˌireˈal</div></div><div class="lc en"><div class="lyric-text">We watch the lonely hours pass.</div><div class="lyric-syllabic">We-watch-the-lone-ly-hours-<span class="a">pass</span></div><button class="plb" onclick="speakLine(this,'We watch the lonely hours pass.','en')">&#9654;</button><div class="lyric-ipa">wiː wˈɒtʃ ðə lˈəʊnli ˈaʊəz pˈas</div></div></div>
+<div class="opt-c-row"><div class="lc fr"><div class="lyric-text">Connectés au réseau mais tellement seuls</div><div class="lyric-syllabic">Con-nec-tés-au-ré-seau-mais-tel-le-ment-<span class="a">seuls</span></div><button class="plb" onclick="speakLine(this,'Connectés au réseau mais tellement seuls','fr')">&#9654;</button><div class="lyric-ipa">kɔnɛktˈez o ʁezˈo mɛ tɛlmˈɑ̃ sˈœl</div></div><div class="lc es"><div class="lyric-text">Conectados, pero tan solos,</div><div class="lyric-syllabic">Co-nec-ta-dos-pe-ro-tan-<span class="a">so</span>-los</div><button class="plb" onclick="speakLine(this,'Conectados, pero tan solos,','es')">&#9654;</button><div class="lyric-ipa">kˌonektˈaðos pˌeɾo tˈan sˈolos</div></div><div class="lc en"><div class="lyric-text">Connected online, yet all alone,</div><div class="lyric-syllabic">Con-nect-ed-on-line-yet-all-<span class="a">a</span>-lone</div><button class="plb" onclick="speakLine(this,'Connected online, yet all alone,','en')">&#9654;</button><div class="lyric-ipa">kənˈɛktɪd ˈɒnlaɪn jˈɛt ˈɔːl ɐlˈəʊn</div></div></div>
+<div class="opt-c-row"><div class="lc fr"><div class="lyric-text">La technologie est notre linceul</div><div class="lyric-syllabic">La-tech-no-lo-gie-est-no-tre-lin-<span class="a">ceul</span></div><button class="plb" onclick="speakLine(this,'La technologie est notre linceul','fr')">&#9654;</button><div class="lyric-ipa">la tɛknoloʒˈi ɛ notʁ lɛ̃sˈœl</div></div><div class="lc es"><div class="lyric-text">La tecnología nos deja solos.</div><div class="lyric-syllabic">La-tec-no-lo-gí-a-nos-de-ja-<span class="a">so</span>-los</div><button class="plb" onclick="speakLine(this,'La tecnología nos deja solos.','es')">&#9654;</button><div class="lyric-ipa">la tˌeknoloxˈia nos ðˈexa sˈolos</div></div><div class="lc en"><div class="lyric-text">Technology has chilled our home.</div><div class="lyric-syllabic">Tech-nol-o-gy-has-chilled-our-<span class="a">home</span></div><button class="plb" onclick="speakLine(this,'Technology has chilled our home.','en')">&#9654;</button><div class="lyric-ipa">tɛknˈɒlədʒi hɐz tʃˈɪld ˌaʊə hˈəʊm</div></div></div>
+<h3 class="sec-title">Outro</h3><div class="tagrow">Une seule des deux voix murmure, puis silence</div><div class="spk">Trèfle ou Minotaure</div><div class="opt-c-row"><div class="lc fr"><div class="lyric-text">Signal perdu</div><div class="lyric-syllabic">Si-gnal-per-<span class="a">du</span></div><button class="plb" onclick="speakLine(this,'Signal perdu','fr')">&#9654;</button><div class="lyric-ipa">sinjˈal pɛʁdˈy</div></div><div class="lc es"><div class="lyric-text">Señal perdida</div><div class="lyric-syllabic">Se-ñal-per-<span class="a">di</span>-da</div><button class="plb" onclick="speakLine(this,'Señal perdida','es')">&#9654;</button><div class="lyric-ipa">seɲˈal peɾðˈiða</div></div><div class="lc en"><div class="lyric-text">Signal lost</div><div class="lyric-syllabic">Sig-nal-<span class="a">lost</span></div><button class="plb" onclick="speakLine(this,'Signal lost','en')">&#9654;</button><div class="lyric-ipa">sˈɪɡnəl lˈɒst</div></div></div>
+<h3 class="sec-title">Sons difficiles</h3>
+<div class="sound-hints"><div class="sh fr">🇫🇷 Dans « écran », « an » est une voyelle nasale /ɑ̃/ : on ne prononce pas le « n ». Le « r » se dit au fond de la gorge, /ʁ/. « Linceul » se dit /lɛ̃.sœl/, avec « ceul » comme « seul ». « Miroirs » se dit /mi.ʁwaʁ/, et le « s » final reste muet.</div><div class="sh es">🇪🇸 La « z » de « Deslizo » se dice /θ/ en español de España (lengua entre los dientes), /s/ en América. La « j » de « mensaje » y « reflejo » es una /x/ fuerte, como una «h» aspirada. La « rr » de « irreal » es una vibrante múltiple. La « h » de « hace » es muda.</div><div class="sh en">🇬🇧 « Through » se dit /θruː/, avec le « th » sourd, langue entre les dents, et le « gh » muet. « Swipe » est /swaɪp/. « Hours » est /ˈaʊəz/ (une seule syllabe, presque). « Technology » est /tɛkˈnɒl.ə.dʒi/, avec l'accent sur « nol ». « Chilled » est /tʃɪld/.</div></div>
+<h3 class="sec-title">Titre : trois langues en une phrase</h3>
+<div class="foreign-block"><div class="fb fr"><b>Écrans</b> — mot français, /e.kʁɑ̃/. Le titre mélange volontairement les trois langues : « Écrans » (FR), « of the Life » (EN), « de la Noche » (ES).</div><div class="fb es"><b>de la Noche</b> — palabra española, /de la ˈno.tʃe/ : la « ch » suena /tʃ/, como en « chocolate ». « Noche » significa « nuit ».</div><div class="fb en"><b>of the Life</b> — mots anglais, /ɒv ðə laɪf/ : « of » se dit /ɒv/, avec un « v », et « the » se dit /ðə/, langue entre les dents.</div></div>
+
+  <footer>www.trefleminotaure.com · © 2026 Trèfle &amp; Minotaure</footer>
+</div>
+
+<script>
+const LANG_MAP = { fr:"fr-FR", es:"es-ES", en:"en-GB" };
+let curSpeed = 0.9;
+function setLang(btn, l){
+  document.body.classList.remove("show-fr","show-es","show-en");
+  document.querySelectorAll(".langbtn").forEach(b=>b.classList.remove("active"));
+  btn.classList.add("active");
+  if (l!=="all") document.body.classList.add("show-"+l);
+}
+function setSpeed(btn, v){
+  curSpeed = v;
+  document.querySelectorAll(".speedbtn").forEach(b=>b.classList.remove("active"));
+  btn.classList.add("active");
+}
+function speakLine(btn, text, lang){
+  if (!("speechSynthesis" in window)) return;
+  window.speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = LANG_MAP[lang];
+  u.rate = curSpeed;
+  window.speechSynthesis.speak(u);
+}
+</script>
+</body>
+</html>
