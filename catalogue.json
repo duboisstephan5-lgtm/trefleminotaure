@@ -25,11 +25,19 @@
       "album": "Single",
       "config": "duo",
       "themes": [
+        "attentats",
+        "idées suicidaires",
+        "syndrome du survivant",
         "11 septembre",
         "SSPT",
         "culpabilité du survivant"
       ],
-      "sensible": true
+      "sensible": true,
+      "avertissement": {
+        "fr": "Évoque les attentats, le syndrome du survivant et les idées suicidaires.",
+        "en": "Deals with terrorist attacks, survivor's syndrome and suicidal thoughts.",
+        "es": "Evoca los atentados, el síndrome del superviviente y las ideas suicidas."
+      }
     },
     {
       "id": "001",
@@ -49,8 +57,18 @@
       "duree": "A COMPLETER",
       "album": "A COMPLETER",
       "config": "A COMPLETER",
-      "themes": [],
-      "sensible": false
+      "themes": [
+        "précarité",
+        "sans-abrisme",
+        "jeunes en difficulté",
+        "prédateur sexuel"
+      ],
+      "sensible": true,
+      "avertissement": {
+        "fr": "Évoque la précarité, la vie à la rue, les jeunes en difficulté et la menace des prédateurs sexuels.",
+        "en": "Deals with poverty, homelessness, young people in difficulty and the threat of sexual predators.",
+        "es": "Evoca la precariedad, la vida en la calle, los jóvenes en dificultad y la amenaza de los depredadores sexuales."
+      }
     },
     {
       "id": "002",
@@ -70,8 +88,17 @@
       "duree": "A COMPLETER",
       "album": "A COMPLETER",
       "config": "A COMPLETER",
-      "themes": [],
-      "sensible": true
+      "themes": [
+        "LGBTQ+",
+        "amour interdit",
+        "répression"
+      ],
+      "sensible": true,
+      "avertissement": {
+        "fr": "Aborde l'amour entre personnes LGBTQ+ et la répression qu'il subit.",
+        "en": "Deals with LGBTQ+ love and the repression it faces.",
+        "es": "Aborda el amor entre personas LGBTQ+ y la represión que sufre."
+      }
     },
     {
       "id": "003",
@@ -96,7 +123,12 @@
         "violence conjugale",
         "idées suicidaires"
       ],
-      "sensible": true
+      "sensible": true,
+      "avertissement": {
+        "fr": "Aborde l'inceste, la violence conjugale et les idées suicidaires.",
+        "en": "Deals with incest, domestic violence and suicidal thoughts.",
+        "es": "Aborda el incesto, la violencia conyugal y las ideas suicidas."
+      }
     },
     {
       "id": "004",
@@ -117,9 +149,15 @@
       "album": "A COMPLETER",
       "config": "A COMPLETER",
       "themes": [
+        "amour dévastateur",
         "addiction"
       ],
-      "sensible": true
+      "sensible": true,
+      "avertissement": {
+        "fr": "Aborde l'addiction et un amour dévastateur.",
+        "en": "Deals with addiction and a devastating love.",
+        "es": "Aborda la adicción y un amor devastador."
+      }
     },
     {
       "id": "005",
@@ -141,9 +179,15 @@
       "config": "A COMPLETER",
       "themes": [
         "guerre",
+        "appât du gain",
         "paix"
       ],
-      "sensible": true
+      "sensible": true,
+      "avertissement": {
+        "fr": "Évoque la guerre et l'appât du gain au détriment de la vie humaine.",
+        "en": "Deals with war and greed at the expense of human life.",
+        "es": "Evoca la guerra y la codicia en detrimento de la vida humana."
+      }
     },
     {
       "id": "006",
@@ -164,12 +208,17 @@
       "album": "Album 05 — Démons",
       "config": "minotaure_solo",
       "themes": [
+        "euthanasie",
         "abandon animal",
         "fidélité",
-        "fin de vie",
-        "euthanasie"
+        "fin de vie"
       ],
-      "sensible": true
+      "sensible": true,
+      "avertissement": {
+        "fr": "Évoque l'abandon d'un animal et l'euthanasie.",
+        "en": "Deals with animal abandonment and euthanasia.",
+        "es": "Evoca el abandono de un animal y la eutanasia."
+      }
     },
     {
       "id": "007",
@@ -216,9 +265,15 @@
       "album": "A COMPLETER",
       "config": "A COMPLETER",
       "themes": [
+        "harcèlement",
         "violence scolaire"
       ],
-      "sensible": true
+      "sensible": true,
+      "avertissement": {
+        "fr": "Aborde le harcèlement et la violence scolaire.",
+        "en": "Deals with bullying and school violence.",
+        "es": "Aborda el acoso y la violencia escolar."
+      }
     },
     {
       "id": "009",
@@ -327,8 +382,15 @@
       "duree": "A COMPLETER",
       "album": "A COMPLETER",
       "config": "A COMPLETER",
-      "themes": [],
-      "sensible": false
+      "themes": [
+        "feux de forêt"
+      ],
+      "sensible": true,
+      "avertissement": {
+        "fr": "Évoque les feux de forêt et leurs conséquences dévastatrices.",
+        "en": "Deals with forest fires and their devastating consequences.",
+        "es": "Evoca los incendios forestales y sus consecuencias devastadoras."
+      }
     },
     {
       "id": "014",
@@ -349,9 +411,15 @@
       "album": "A COMPLETER",
       "config": "A COMPLETER",
       "themes": [
+        "conflit entre générations",
         "choc des générations"
       ],
-      "sensible": true
+      "sensible": true,
+      "avertissement": {
+        "fr": "Aborde les conflits entre générations.",
+        "en": "Deals with conflict between generations.",
+        "es": "Aborda los conflictos entre generaciones."
+      }
     },
     {
       "id": "015",
@@ -371,8 +439,16 @@
       "duree": "A COMPLETER",
       "album": "A COMPLETER",
       "config": "A COMPLETER",
-      "themes": [],
-      "sensible": false
+      "themes": [
+        "guerre",
+        "Ukraine"
+      ],
+      "sensible": true,
+      "avertissement": {
+        "fr": "Évoque la guerre en Ukraine.",
+        "en": "Deals with the war in Ukraine.",
+        "es": "Evoca la guerra en Ucrania."
+      }
     },
     {
       "id": "016",
@@ -393,11 +469,19 @@
       "album": "A COMPLETER",
       "config": "A COMPLETER",
       "themes": [
+        "exclusion",
+        "sans-abrisme",
+        "erreur judiciaire",
         "solitude",
         "précarité",
         "injustice sociale"
       ],
-      "sensible": false
+      "sensible": true,
+      "avertissement": {
+        "fr": "Évoque l'exclusion, la vie à la rue, la précarité et l'erreur judiciaire.",
+        "en": "Deals with exclusion, homelessness, poverty and miscarriage of justice.",
+        "es": "Evoca la exclusión, la vida en la calle, la precariedad y el error judicial."
+      }
     },
     {
       "id": "017",
@@ -418,11 +502,19 @@
       "album": "A COMPLETER",
       "config": "A COMPLETER",
       "themes": [
+        "Daech",
+        "droits des femmes",
+        "scolarité des filles",
         "Afghanistan",
         "éducation",
         "liberté"
       ],
-      "sensible": true
+      "sensible": true,
+      "avertissement": {
+        "fr": "Évoque Daech, la condition des femmes afghanes et la privation de leur droit à l'école.",
+        "en": "Deals with ISIS, the plight of Afghan women and the denial of their right to education.",
+        "es": "Evoca el Estado Islámico, la situación de las mujeres afganas y la privación de su derecho a la escuela."
+      }
     },
     {
       "id": "018",
@@ -487,11 +579,19 @@
         "es": ""
       },
       "themes": [
+        "exclusion",
+        "harcèlement",
+        "violences policières",
         "amour fou",
         "dérive sociale"
       ],
       "sensible": true,
-      "dossier": "020 bonnie and Clyde - Les enfants du systéme (version blues-rock)"
+      "dossier": "020 bonnie and Clyde - Les enfants du systéme (version blues-rock)",
+      "avertissement": {
+        "fr": "Aborde l'exclusion, le harcèlement et les violences policières.",
+        "en": "Deals with exclusion, harassment and police violence.",
+        "es": "Aborda la exclusión, el acoso y la violencia policial."
+      }
     },
     {
       "id": "020bis",
@@ -512,10 +612,18 @@
       "album": "A COMPLETER",
       "config": "A COMPLETER",
       "themes": [
+        "exclusion",
+        "harcèlement",
+        "violences policières",
         "amour fou",
         "dérive sociale"
       ],
-      "sensible": true
+      "sensible": true,
+      "avertissement": {
+        "fr": "Aborde l'exclusion, le harcèlement et les violences policières.",
+        "en": "Deals with exclusion, harassment and police violence.",
+        "es": "Aborda la exclusión, el acoso y la violencia policial."
+      }
     },
     {
       "id": "021",
@@ -537,12 +645,19 @@
       "album": "A COMPLETER",
       "config": "A COMPLETER",
       "themes": [
+        "syndrome du survivant",
+        "cicatrices de la vie",
         "attentat de Madrid",
         "terrorisme",
         "deuil collectif",
         "traumatisme du survivant"
       ],
-      "sensible": true
+      "sensible": true,
+      "avertissement": {
+        "fr": "Évoque les attentats, le syndrome du survivant et les cicatrices qu'ils laissent pour la vie.",
+        "en": "Deals with terrorist attacks, survivor's syndrome and the lifelong scars they leave.",
+        "es": "Evoca los atentados, el síndrome del superviviente y las cicatrices que dejan para toda la vida."
+      }
     },
     {
       "id": "022",
@@ -563,13 +678,19 @@
       "album": "A COMPLETER",
       "config": "A COMPLETER",
       "themes": [
+        "précarité",
         "sans-abrisme",
         "administration",
         "exclusion sociale",
         "humour noir"
       ],
-      "sensible": false,
-      "humour_noir": true
+      "sensible": true,
+      "humour_noir": true,
+      "avertissement": {
+        "fr": "Évoque la précarité et la vie à la rue, sur le ton de l'humour noir.",
+        "en": "Deals with poverty and homelessness, with dark humour.",
+        "es": "Evoca la precariedad y la vida en la calle, con humor negro."
+      }
     },
     {
       "id": "023",
@@ -590,12 +711,19 @@
       "album": "A COMPLETER",
       "config": "A COMPLETER",
       "themes": [
+        "drogue",
+        "cartels",
         "violence des gangs",
         "Jamaïque",
         "résistance",
         "deuil"
       ],
-      "sensible": true
+      "sensible": true,
+      "avertissement": {
+        "fr": "Aborde la drogue, les cartels et la violence des gangs.",
+        "en": "Deals with drugs, cartels and gang violence.",
+        "es": "Aborda la droga, los cárteles y la violencia de las pandillas."
+      }
     },
     {
       "id": "024",
@@ -616,12 +744,19 @@
       "album": "A COMPLETER",
       "config": "A COMPLETER",
       "themes": [
+        "attentats",
+        "syndrome du survivant",
+        "oubli des victimes",
         "violence de masse",
         "traumatisme",
-        "oubli des victimes",
         "survie"
       ],
-      "sensible": true
+      "sensible": true,
+      "avertissement": {
+        "fr": "Évoque les attentats, le syndrome du survivant et l'oubli des victimes.",
+        "en": "Deals with terrorist attacks, survivor's syndrome and the forgotten victims.",
+        "es": "Evoca los atentados, el síndrome del superviviente y el olvido de las víctimas."
+      }
     },
     {
       "id": "025",
@@ -784,7 +919,9 @@
       ],
       "sensible": true,
       "avertissement": {
-        "fr": "Évoque la précarité, l'exclusion sociale, les inégalités, la guerre, la détresse humaine et les difficultés d'accès aux soins."
+        "fr": "Évoque la précarité, l'exclusion sociale, les inégalités, la guerre, la détresse humaine et les difficultés d'accès aux soins.",
+        "en": "Deals with poverty, social exclusion, inequality, war, human distress and difficult access to healthcare.",
+        "es": "Evoca la precariedad, la exclusión social, las desigualdades, la guerra, la angustia humana y las dificultades de acceso a la atención médica."
       }
     },
     {
@@ -815,7 +952,9 @@
       ],
       "sensible": true,
       "avertissement": {
-        "fr": "Aborde les addictions, la consommation de drogues et d'alcool, la souffrance personnelle, les comportements autodestructeurs et la mort prématurée."
+        "fr": "Aborde les addictions, la consommation de drogues et d'alcool, la souffrance personnelle, les comportements autodestructeurs et la mort prématurée.",
+        "en": "Deals with addiction, drug and alcohol use, personal suffering, self-destructive behaviour and premature death.",
+        "es": "Aborda las adicciones, el consumo de drogas y alcohol, el sufrimiento personal, las conductas autodestructivas y la muerte prematura."
       }
     },
     {
@@ -846,7 +985,9 @@
       ],
       "sensible": true,
       "avertissement": {
-        "fr": "Aborde la guerre, les bombardements, les violences urbaines, la mort de civils, la souffrance des enfants et les inégalités sociales."
+        "fr": "Aborde la guerre, les bombardements, les violences urbaines, la mort de civils, la souffrance des enfants et les inégalités sociales.",
+        "en": "Deals with war, bombings, urban violence, civilian deaths, children's suffering and social inequality.",
+        "es": "Aborda la guerra, los bombardeos, la violencia urbana, la muerte de civiles, el sufrimiento de los niños y las desigualdades sociales."
       }
     },
     {
@@ -877,7 +1018,9 @@
       ],
       "sensible": true,
       "avertissement": {
-        "fr": "Évoque le vol par effraction, la faim, la pauvreté, la précarité et l'exclusion sociale, sous l'angle de la détresse humaine."
+        "fr": "Évoque le vol par effraction, la faim, la pauvreté, la précarité et l'exclusion sociale, sous l'angle de la détresse humaine.",
+        "en": "Deals with burglary, hunger, poverty, precariousness and social exclusion, through the lens of human distress.",
+        "es": "Evoca el robo con allanamiento, el hambre, la pobreza, la precariedad y la exclusión social, desde la perspectiva de la angustia humana."
       }
     }
   ]
