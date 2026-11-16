@@ -1,0 +1,25 @@
+{
+  "id": "A COMPLETER",
+  "dossier": "La_fan_d_Amy_Winehouse",
+  "titre": {
+    "fr": "La fan d'Amy Winehouse",
+    "es": "La fan de Amy Winehouse",
+    "en": "The Amy Winehouse Fan"
+  },
+  "soustitre": {
+    "es": "La fan de Amy Winehouse",
+    "en": "The Amy Winehouse Fan"
+  },
+  "style": "Rock alternatif · Blues harmonica · Punk-rap",
+  "bpm": 129,
+  "duree": "4:35",
+  "config": "duo",
+  "album": "A COMPLETER",
+  "sensible": true,
+  "themes": [
+    "addiction",
+    "abandon",
+    "célébrité",
+    "résilience"
+  ]
+}

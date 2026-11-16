@@ -1,0 +1,13 @@
+{
+  "id": "A COMPLETER",
+  "dossier": "Le_Pere_Noel_est_anonyme",
+  "titre": { "fr": "Le Père Noël est anonyme", "es": "Papá Noel no tiene nombre", "en": "Santa Claus Is Anonymous" },
+  "soustitre": { "es": "Papá Noel no tiene nombre", "en": "Santa Claus Is Anonymous" },
+  "style": "Alternative Rock · Ragga · Electro Reggae",
+  "bpm": 129,
+  "duree": "4:37",
+  "config": "duo",
+  "album": "A COMPLETER",
+  "sensible": false,
+  "themes": ["Noël", "précarité", "exclusion", "société de consommation"]
+}

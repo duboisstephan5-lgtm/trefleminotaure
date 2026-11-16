@@ -1,0 +1,25 @@
+{
+  "id": "A COMPLETER",
+  "dossier": "Maison_Blanche",
+  "titre": {
+    "fr": "Maison Blanche",
+    "es": "Casa Blanca",
+    "en": "White House"
+  },
+  "soustitre": {
+    "es": "Casa Blanca",
+    "en": "White House"
+  },
+  "style": "Rock alternatif 90s · Noise rock · Harmonica blues",
+  "bpm": 129,
+  "duree": "3:58",
+  "config": "duo",
+  "album": "A COMPLETER",
+  "sensible": false,
+  "themes": [
+    "inégalités",
+    "guerre",
+    "colère sociale",
+    "santé"
+  ]
+}

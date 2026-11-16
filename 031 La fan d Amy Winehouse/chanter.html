@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>La fan d'Amy Winehouse — Paroles</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Cinzel:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:#10121c; background-image: radial-gradient(circle at 50% 0%, #1c2038, #08090f 80%); font-family:'Cormorant Garamond', serif; }
+  .page { max-width:960px; margin:30px auto; background:#f5ecd7; border:3px solid #4a5a8f; border-radius:10px; padding:30px clamp(14px,4vw,44px) 50px; }
+  header { text-align:center; margin-bottom:20px; }
+  header h1 { font-family:'Cinzel', serif; color:#1c2038; font-size:1.6rem; margin-bottom:4px; }
+  .meta { color:#4a5a8f; font-size:.95rem; }
+  .controls { display:flex; justify-content:center; gap:24px; flex-wrap:wrap; margin:18px 0 26px; }
+  .ctrl-group { display:flex; gap:6px; align-items:center; }
+  .ctrl-group label { font-size:.85rem; color:#3d4a70; margin-right:4px; }
+  button.langbtn, button.speedbtn { font-family:'Cinzel', serif; font-size:.8rem; padding:6px 14px; border-radius:6px; border:1px solid #8a9ac9; background:#fff; cursor:pointer; }
+  button.langbtn.active, button.speedbtn.active { background:#2e3f7a; color:#fff; }
+  .sec { margin-bottom:26px; border-top:1px solid #c3cbe0; padding-top:14px; }
+  .sec-head { display:flex; align-items:center; gap:10px; margin-bottom:10px; flex-wrap:wrap; }
+  .section-label { font-family:'Cinzel', serif; font-weight:600; color:#1c2038; font-size:1rem; }
+  .voice-badge { font-size:.72rem; color:#fff; background:#b8962e; border-radius:10px; padding:2px 10px; }
+  .playbtn { margin-left:auto; border:none; background:#2e3f7a; color:#fff; border-radius:50%; width:30px; height:30px; cursor:pointer; font-size:.85rem; }
+  .tagrow { font-size:.78rem; font-style:italic; color:#b8962e; opacity:.85; margin:4px 0; }
+  .lyric-row { display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; margin-bottom:6px; font-size:1.15rem; font-style:italic; }
+  .lyric-row.ghost { opacity:.75; }
+  .col { padding:4px 8px; border-radius:4px; }
+  .col.fr { background:#e8f0fc; }
+  .col.es { background:#f5ead5; }
+  .col.en { background:#fce8ec; }
+  body.show-fr .col.es, body.show-fr .col.en { display:none; }
+  body.show-fr .lyric-row { grid-template-columns:1fr; }
+  body.show-es .col.fr, body.show-es .col.en { display:none; }
+  body.show-es .lyric-row { grid-template-columns:1fr; }
+  body.show-en .col.fr, body.show-en .col.es { display:none; }
+  body.show-en .lyric-row { grid-template-columns:1fr; }
+  footer { text-align:center; margin-top:34px; color:#3d4a70; font-size:.85rem; border-top:1px solid #c3cbe0; padding-top:14px; }
+  .sec.instr { opacity:.5; font-style:italic; }
+  .instr-note { font-size:1rem; font-style:italic; color:#3d4a70; }
+</style>
+</head>
+<body class="show-fr">
+<div class="page">
+  <header>
+    <h1>La fan d'Amy Winehouse <span style="opacity:.5;">/ La fan de Amy Winehouse / The Amy Winehouse Fan</span></h1>
+    <div class="meta">Rock alternatif · Blues harmonica · Punk-rap · Trèfle &amp; Minotaure</div>
+    <div class="meta">🇫🇷 129 BPM · La mineur · 4:35 &nbsp;|&nbsp; 🇪🇸 86 BPM · Si mineur · 4:50 &nbsp;|&nbsp; 🇬🇧 123 BPM · Fa mineur · 4:41</div>
+  </header>
+
+  <div class="controls">
+    <div class="ctrl-group">
+      <label>Langue :</label>
+      <button class="langbtn" onclick="setLang('all')">Trilingue</button>
+      <button class="langbtn active" onclick="setLang('fr')">🇫🇷 Français</button>
+      <button class="langbtn" onclick="setLang('es')">🇪🇸 Español</button>
+      <button class="langbtn" onclick="setLang('en')">🇬🇧 English</button>
+    </div>
+    <div class="ctrl-group">
+      <label>Vitesse :</label>
+      <button class="speedbtn" onclick="setSpeed(0.7)">× 0.7</button>
+      <button class="speedbtn active" onclick="setSpeed(0.9)">× 0.9</button>
+      <button class="speedbtn" onclick="setSpeed(1.0)">× 1.0</button>
+    </div>
+  </div>
+
+  <section class="sec" id="sec-intro">
+    <div class="sec-head">
+      <span class="section-label">Intro / Intro / Intro</span>
+      <span class="voice-badge">Trèfle — parlé</span>
+      <button class="playbtn" onclick="playSec('intro')">▶</button>
+    </div>
+<div class="tagrow">[TRÈFLE — PARLÉ, voix basse et chuchotée]</div>
+<div class="lyric-row ">
+      <div class="col fr">Une chaise vide... à table...</div>
+      <div class="col es">Una silla vacía... en la mesa...</div>
+      <div class="col en">An empty chair... at the table...</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Une place pour personne...</div>
+      <div class="col es">Un lugar para nadie...</div>
+      <div class="col en">A place set for no one...</div>
+    </div>
+  </section>
+<section class="sec" id="sec-verse1">
+    <div class="sec-head">
+      <span class="section-label">Couplet 1 / Estrofa 1 / Verse 1</span>
+      <span class="voice-badge">Trèfle + Minotaure</span>
+      <button class="playbtn" onclick="playSec('verse1')">▶</button>
+    </div>
+<div class="tagrow">[MI-PARLÉ, FRAGILE, TENDU]</div>
+<div class="lyric-row ">
+      <div class="col fr">Elle avait neuf ans, des chansons plein la gorge</div>
+      <div class="col es">Tenía nueve años y canciones en la garganta</div>
+      <div class="col en">She was nine years old with songs stuck in her throat</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Elle chantait pour la porte qui restait fermée</div>
+      <div class="col es">Cantaba para la puerta que nunca se abría</div>
+      <div class="col en">She sang for the door that never opened again</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Papa dans une valise, papa sur une photo</div>
+      <div class="col es">Papá en una maleta, papá en una foto</div>
+      <div class="col en">Daddy in a suitcase, daddy in a photo</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Papa c&#x27;est un fantôme qu&#x27;on n&#x27;ose plus nommer</div>
+      <div class="col es">Papá es un fantasma que nadie se atreve a nombrar</div>
+      <div class="col en">Daddy is a ghost no one dares to name</div>
+    </div>
+  </section>
+<section class="sec" id="sec-pre">
+    <div class="sec-head">
+      <span class="section-label">Pré-refrain / Pre-estribillo / Pre-chorus</span>
+      <span class="voice-badge">Trèfle + Minotaure</span>
+      <button class="playbtn" onclick="playSec('pre')">▶</button>
+    </div>
+<div class="tagrow">[LA TENSION MONTE]</div>
+<div class="lyric-row ">
+      <div class="col fr">Et elle chante, elle chante, elle chante</div>
+      <div class="col es">Y ella canta, canta, canta</div>
+      <div class="col en">And she sings, she sings, she sings</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Pour couvrir le silence</div>
+      <div class="col es">Para tapar el silencio</div>
+      <div class="col en">To cover up the silence</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Et elle chante, elle chante, elle chante</div>
+      <div class="col es">Y ella canta, canta, canta</div>
+      <div class="col en">And she sings, she sings, she sings</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Pour qu&#x27;enfin on l&#x27;entende</div>
+      <div class="col es">Para que la escuchen, al menos</div>
+      <div class="col en">Till somebody listens</div>
+    </div>
+  </section>
+<section class="sec" id="sec-chorus">
+    <div class="sec-head">
+      <span class="section-label">Refrain 1 / Estribillo 1 / Chorus 1</span>
+      <span class="voice-badge">Trèfle</span>
+      <button class="playbtn" onclick="playSec('chorus')">▶</button>
+    </div>
+<div class="tagrow">[TRÈFLE — EXPLOSIF, CRIÉ, BRUT]</div>
+<div class="lyric-row ">
+      <div class="col fr">C&#x27;est la rage d&#x27;une enfant</div>
+      <div class="col es">Es la rabia de una niña</div>
+      <div class="col en">It&#x27;s the rage of a child</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Qui hurle dans le micro</div>
+      <div class="col es">Que grita en el micro</div>
+      <div class="col en">Screaming into the mic</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Elle a la voix d&#x27;une reine</div>
+      <div class="col es">Tiene la voz de una reina</div>
+      <div class="col en">She&#x27;s got the voice of a queen</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Et le cœur en lambeaux</div>
+      <div class="col es">Y el corazón hecho trizas</div>
+      <div class="col en">And a heart torn by a knife</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">C&#x27;est la rage d&#x27;une enfant</div>
+      <div class="col es">Es la rabia de una niña</div>
+      <div class="col en">It&#x27;s the rage of a child</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Que personne n&#x27;a tenue</div>
+      <div class="col es">Que nadie abrazó</div>
+      <div class="col en">That nobody held</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Vous applaudissez la chute</div>
+      <div class="col es">Ustedes aplauden su caída</div>
+      <div class="col en">You cheer as she falls</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Vous ne l&#x27;avez pas vue</div>
+      <div class="col es">Y nadie la miró</div>
+      <div class="col en">You never saw her pain</div>
+    </div>
+  </section>
+<section class="sec instr" id="sec-break">
+    <div class="sec-head">
+      <span class="section-label">Break instrumental / Interludio instrumental / Instrumental break</span>
+    </div>
+<div class="instr-note">Instrumental — riff de guitare, bends d'harmonica</div>
+  </section>
+<section class="sec" id="sec-verse2">
+    <div class="sec-head">
+      <span class="section-label">Couplet 2 / Estrofa 2 / Verse 2</span>
+      <span class="voice-badge">Trèfle + Minotaure</span>
+      <button class="playbtn" onclick="playSec('verse2')">▶</button>
+    </div>
+<div class="tagrow">[SOMBRE, MI-PARLÉ]</div>
+<div class="lyric-row ">
+      <div class="col fr">Et puis les projecteurs, les foules et les contrats</div>
+      <div class="col es">Y luego los focos, el público, los contratos</div>
+      <div class="col en">Then came the spotlights, the crowds and the fame</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Les flashs dans la nuit, les verres qu&#x27;on lui tend</div>
+      <div class="col es">Los flashes en la noche, las copas en la mano</div>
+      <div class="col en">The flashes in the night, the drinks they pour and pour</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Ceux qui n&#x27;étaient pas là sont revenus pour l&#x27;argent</div>
+      <div class="col es">Los que nunca estuvieron volvieron por la plata</div>
+      <div class="col en">The ones who were never there came back to stake their claim</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">On compte les billets, mais elle, on ne la compte pas</div>
+      <div class="col es">Contaban las entradas, pero a ella no la contaban</div>
+      <div class="col en">They counted all the tickets, but she didn&#x27;t count anymore</div>
+    </div>
+  </section>
+<section class="sec" id="sec-verse2b">
+    <div class="sec-head">
+      <span class="section-label">Couplet 2b / Estrofa 2b / Verse 2b</span>
+      <span class="voice-badge">Trèfle + Minotaure</span>
+      <button class="playbtn" onclick="playSec('verse2b')">▶</button>
+    </div>
+<div class="tagrow">[PLUS RAPIDE, PUNK-RAP]</div>
+<div class="lyric-row ">
+      <div class="col fr">Elle descend l&#x27;escalier, marche après marche</div>
+      <div class="col es">Baja la escalera, peldaño a peldaño</div>
+      <div class="col en">She walks down the staircase, one step at a time</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Les fantômes du bar lui gardent une place</div>
+      <div class="col es">Los fantasmas del bar le guardan un lugar</div>
+      <div class="col en">The ghosts at the bar keep a seat for her there</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Elle prend la bouteille pour un bras qui la serre</div>
+      <div class="col es">Toma la botella por un brazo que la abraza</div>
+      <div class="col en">She takes the bottle for an arm that holds her tight</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Et la nuit pour une mère, et le vide pour une prière</div>
+      <div class="col es">Y la noche por una madre, y el vacío por una plegaria</div>
+      <div class="col en">And the night for a mother, and the void for a prayer</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Les journaux font leur une avec ses yeux cernés</div>
+      <div class="col es">Los diarios abren portada con sus ojeras</div>
+      <div class="col en">The headlines feed on her tired, shadowed eyes</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Ils vendent sa chute au prix de ses années</div>
+      <div class="col es">Venden su caída al precio de sus años</div>
+      <div class="col en">They sell her downfall for the price of her life</div>
+    </div>
+  </section>
+<section class="sec" id="sec-chorus2">
+    <div class="sec-head">
+      <span class="section-label">Refrain 2 / Estribillo 2 / Chorus 2</span>
+      <span class="voice-badge">Trèfle</span>
+      <button class="playbtn" onclick="playSec('chorus2')">▶</button>
+    </div>
+<div class="tagrow">[TRÈFLE — EXPLOSIF, CRIÉ, BRUT]</div>
+<div class="lyric-row ">
+      <div class="col fr">C&#x27;est la rage d&#x27;une enfant</div>
+      <div class="col es">Es la rabia de una niña</div>
+      <div class="col en">It&#x27;s the rage of a child</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Qui hurle dans le micro</div>
+      <div class="col es">Que grita en el micro</div>
+      <div class="col en">Screaming into the mic</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Elle a la voix d&#x27;une reine</div>
+      <div class="col es">Tiene la voz de una reina</div>
+      <div class="col en">She&#x27;s got the voice of a queen</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Et le cœur en lambeaux</div>
+      <div class="col es">Y el corazón hecho trizas</div>
+      <div class="col en">And a heart torn by a knife</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">C&#x27;est la rage d&#x27;une enfant</div>
+      <div class="col es">Es la rabia de una niña</div>
+      <div class="col en">It&#x27;s the rage of a child</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Que personne n&#x27;a tenue</div>
+      <div class="col es">Que nadie abrazó</div>
+      <div class="col en">That nobody held</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Vous applaudissez la chute</div>
+      <div class="col es">Ustedes aplauden su caída</div>
+      <div class="col en">You cheer as she falls</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Vous ne l&#x27;avez pas vue</div>
+      <div class="col es">Y nadie la miró</div>
+      <div class="col en">You never saw her pain</div>
+    </div>
+  </section>
+<section class="sec" id="sec-breakdown">
+    <div class="sec-head">
+      <span class="section-label">Breakdown / Pasaje íntimo / Breakdown</span>
+      <span class="voice-badge">Trèfle + Minotaure</span>
+      <button class="playbtn" onclick="playSec('breakdown')">▶</button>
+    </div>
+<div class="tagrow">[VOIX FRAGILE — sans batterie, guitare claire]</div>
+<div class="lyric-row ">
+      <div class="col fr">Une petite fille dans une robe trop grande</div>
+      <div class="col es">Una niña pequeña en un vestido demasiado grande</div>
+      <div class="col en">A little girl lost in a dress too wide</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Qui chante dans sa chambre en attendant</div>
+      <div class="col es">Que canta en su cuarto mientras espera</div>
+      <div class="col en">Singing in her bedroom, waiting deep inside</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Un pas dans l&#x27;escalier, une clé dans la porte</div>
+      <div class="col es">Un paso en la escalera, una llave en la puerta</div>
+      <div class="col en">For a step on the stairs, for a key in the door</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">À vingt-sept ans, elle attendait encore derrière cette porte</div>
+      <div class="col es">A los veintisiete, aún esperaba tras aquella puerta</div>
+      <div class="col en">At twenty-seven, she was still waiting by that door</div>
+    </div>
+  </section>
+<section class="sec" id="sec-bridge">
+    <div class="sec-head">
+      <span class="section-label">Pont / Puente / Bridge</span>
+      <span class="voice-badge">Trèfle</span>
+      <button class="playbtn" onclick="playSec('bridge')">▶</button>
+    </div>
+<div class="tagrow">[TRÈFLE — CRIÉ, toms lourds]</div>
+<div class="lyric-row ">
+      <div class="col fr">Où étais-tu</div>
+      <div class="col es">¿Dónde estabas?</div>
+      <div class="col en">Where were you</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Où étais-tu</div>
+      <div class="col es">¿Dónde estabas?</div>
+      <div class="col en">Where were you</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Quand elle avait peur</div>
+      <div class="col es">Cuando tenía miedo</div>
+      <div class="col en">When she was scared</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Quand elle avait froid</div>
+      <div class="col es">Cuando tenía frío</div>
+      <div class="col en">When she was cold</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Où étais-tu</div>
+      <div class="col es">¿Dónde estabas?</div>
+      <div class="col en">Where were you</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Où étais-tu</div>
+      <div class="col es">¿Dónde estabas?</div>
+      <div class="col en">Where were you</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Tu reviens pour les fleurs</div>
+      <div class="col es">Vuelves por las flores</div>
+      <div class="col en">Now you bring the flowers</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Tu reviens pour la croix</div>
+      <div class="col es">Vuelves por la cruz</div>
+      <div class="col en">Now you carve the stone</div>
+    </div>
+  </section>
+<section class="sec" id="sec-stop">
+    <div class="sec-head">
+      <span class="section-label">Arrêt du groupe / Parada de la banda / Band stops</span>
+      <span class="voice-badge">Minotaure — parlé</span>
+      <button class="playbtn" onclick="playSec('stop')">▶</button>
+    </div>
+<div class="tagrow">[MINOTAURE — PARLÉ, voix grave, ironique et provocante]</div>
+<div class="lyric-row ">
+      <div class="col fr">Sex, drugs and rock and roll</div>
+      <div class="col es">Sex, drugs and rock and roll</div>
+      <div class="col en">Sex, drugs and rock and roll</div>
+    </div>
+  </section>
+<section class="sec" id="sec-verse3">
+    <div class="sec-head">
+      <span class="section-label">Couplet 3 / Estrofa 3 / Verse 3</span>
+      <span class="voice-badge">Trèfle</span>
+      <button class="playbtn" onclick="playSec('verse3')">▶</button>
+    </div>
+<div class="tagrow">[TRÈFLE — directement à l'auditeur, défiante]</div>
+<div class="lyric-row ">
+      <div class="col fr">Alors toi qui m&#x27;écoutes, quelle que soit la raison</div>
+      <div class="col es">Así que tú que me escuchas, sea cual sea la razón</div>
+      <div class="col en">So you who are listening, whatever the reason</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">N&#x27;éteins jamais tes rêves, garde-les comme un feu</div>
+      <div class="col es">Nunca apagues tus sueños, guárdalos como un fuego</div>
+      <div class="col en">Never let your dreams go out, keep them burning bright</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Si quelqu&#x27;un les écrase, relève-toi, bats-toi pour eux</div>
+      <div class="col es">Si alguien los aplasta, levántate y pelea por ellos</div>
+      <div class="col en">If someone tries to crush them, stand up and fight</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">La drogue et l&#x27;alcool, ce n&#x27;est pas du rock and roll</div>
+      <div class="col es">La droga y el alcohol no son rock and roll</div>
+      <div class="col en">Drugs and alcohol are not rock and roll</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Ce sont des faux dieux qui te volent ta voix</div>
+      <div class="col es">Son falsos dioses que te roban la voz</div>
+      <div class="col en">They&#x27;re false gods that steal your voice away</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Y a rien de rock and roll à mourir comme ça</div>
+      <div class="col es">No hay nada de rock and roll en morir así</div>
+      <div class="col en">There&#x27;s nothing rock and roll about dying that way</div>
+    </div>
+  </section>
+<section class="sec" id="sec-final">
+    <div class="sec-head">
+      <span class="section-label">Refrain final / Estribillo final / Final chorus</span>
+      <span class="voice-badge">Trèfle</span>
+      <button class="playbtn" onclick="playSec('final')">▶</button>
+    </div>
+<div class="tagrow">[TRÈFLE — INTENSITÉ MAXIMALE]</div>
+<div class="lyric-row ">
+      <div class="col fr">C&#x27;est la rage d&#x27;une enfant</div>
+      <div class="col es">Es la rabia de una niña</div>
+      <div class="col en">It&#x27;s the rage of a child</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Qui hurle dans le micro</div>
+      <div class="col es">Que grita en el micro</div>
+      <div class="col en">Screaming into the mic</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Elle a la voix d&#x27;une reine</div>
+      <div class="col es">Tiene la voz de una reina</div>
+      <div class="col en">She&#x27;s got the voice of a queen</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Et le cœur en lambeaux</div>
+      <div class="col es">Y el corazón hecho trizas</div>
+      <div class="col en">And a heart torn by a knife</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">C&#x27;est la rage d&#x27;une enfant</div>
+      <div class="col es">Es la rabia de una niña</div>
+      <div class="col en">It&#x27;s the rage of a child</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Que personne n&#x27;a tenue</div>
+      <div class="col es">Que nadie abrazó</div>
+      <div class="col en">That nobody held</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Vous applaudissez la chute</div>
+      <div class="col es">Ustedes aplauden su caída</div>
+      <div class="col en">You cheer as she falls</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Vous ne l&#x27;avez pas vue</div>
+      <div class="col es">Y nadie la miró</div>
+      <div class="col en">You never saw her pain</div>
+    </div>
+  </section>
+<section class="sec" id="sec-outro">
+    <div class="sec-head">
+      <span class="section-label">Outro / Outro / Outro</span>
+      <span class="voice-badge">Trèfle — parlé</span>
+      <button class="playbtn" onclick="playSec('outro')">▶</button>
+    </div>
+<div class="tagrow">[PARLÉ — arrêt net, harmonica seul]</div>
+<div class="lyric-row ">
+      <div class="col fr">Une chaise vide... à table...</div>
+      <div class="col es">Una silla vacía... en la mesa...</div>
+      <div class="col en">An empty chair... at the table...</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Elle chante encore... pour personne...</div>
+      <div class="col es">Ella aún canta... para nadie...</div>
+      <div class="col en">She&#x27;s still singing... for no one...</div>
+    </div>
+  </section>
+
+  <footer>www.trefleminotaure.com · © 2026 Trèfle &amp; Minotaure</footer>
+</div>
+
+<script>
+const SECS = {
+  "intro": {
+    "fr": "Une chaise vide... à table... Une place pour personne...",
+    "es": "Una silla vacía... en la mesa... Un lugar para nadie...",
+    "en": "An empty chair... at the table... A place set for no one..."
+  },
+  "verse1": {
+    "fr": "Elle avait neuf ans, des chansons plein la gorge Elle chantait pour la porte qui restait fermée Papa dans une valise, papa sur une photo Papa c'est un fantôme qu'on n'ose plus nommer",
+    "es": "Tenía nueve años y canciones en la garganta Cantaba para la puerta que nunca se abría Papá en una maleta, papá en una foto Papá es un fantasma que nadie se atreve a nombrar",
+    "en": "She was nine years old with songs stuck in her throat She sang for the door that never opened again Daddy in a suitcase, daddy in a photo Daddy is a ghost no one dares to name"
+  },
+  "pre": {
+    "fr": "Et elle chante, elle chante, elle chante Pour couvrir le silence Et elle chante, elle chante, elle chante Pour qu'enfin on l'entende",
+    "es": "Y ella canta, canta, canta Para tapar el silencio Y ella canta, canta, canta Para que la escuchen, al menos",
+    "en": "And she sings, she sings, she sings To cover up the silence And she sings, she sings, she sings Till somebody listens"
+  },
+  "chorus": {
+    "fr": "C'est la rage d'une enfant Qui hurle dans le micro Elle a la voix d'une reine Et le cœur en lambeaux C'est la rage d'une enfant Que personne n'a tenue Vous applaudissez la chute Vous ne l'avez pas vue",
+    "es": "Es la rabia de una niña Que grita en el micro Tiene la voz de una reina Y el corazón hecho trizas Es la rabia de una niña Que nadie abrazó Ustedes aplauden su caída Y nadie la miró",
+    "en": "It's the rage of a child Screaming into the mic She's got the voice of a queen And a heart torn by a knife It's the rage of a child That nobody held You cheer as she falls You never saw her pain"
+  },
+  "verse2": {
+    "fr": "Et puis les projecteurs, les foules et les contrats Les flashs dans la nuit, les verres qu'on lui tend Ceux qui n'étaient pas là sont revenus pour l'argent On compte les billets, mais elle, on ne la compte pas",
+    "es": "Y luego los focos, el público, los contratos Los flashes en la noche, las copas en la mano Los que nunca estuvieron volvieron por la plata Contaban las entradas, pero a ella no la contaban",
+    "en": "Then came the spotlights, the crowds and the fame The flashes in the night, the drinks they pour and pour The ones who were never there came back to stake their claim They counted all the tickets, but she didn't count anymore"
+  },
+  "verse2b": {
+    "fr": "Elle descend l'escalier, marche après marche Les fantômes du bar lui gardent une place Elle prend la bouteille pour un bras qui la serre Et la nuit pour une mère, et le vide pour une prière Les journaux font leur une avec ses yeux cernés Ils vendent sa chute au prix de ses années",
+    "es": "Baja la escalera, peldaño a peldaño Los fantasmas del bar le guardan un lugar Toma la botella por un brazo que la abraza Y la noche por una madre, y el vacío por una plegaria Los diarios abren portada con sus ojeras Venden su caída al precio de sus años",
+    "en": "She walks down the staircase, one step at a time The ghosts at the bar keep a seat for her there She takes the bottle for an arm that holds her tight And the night for a mother, and the void for a prayer The headlines feed on her tired, shadowed eyes They sell her downfall for the price of her life"
+  },
+  "chorus2": {
+    "fr": "C'est la rage d'une enfant Qui hurle dans le micro Elle a la voix d'une reine Et le cœur en lambeaux C'est la rage d'une enfant Que personne n'a tenue Vous applaudissez la chute Vous ne l'avez pas vue",
+    "es": "Es la rabia de una niña Que grita en el micro Tiene la voz de una reina Y el corazón hecho trizas Es la rabia de una niña Que nadie abrazó Ustedes aplauden su caída Y nadie la miró",
+    "en": "It's the rage of a child Screaming into the mic She's got the voice of a queen And a heart torn by a knife It's the rage of a child That nobody held You cheer as she falls You never saw her pain"
+  },
+  "breakdown": {
+    "fr": "Une petite fille dans une robe trop grande Qui chante dans sa chambre en attendant Un pas dans l'escalier, une clé dans la porte À vingt-sept ans, elle attendait encore derrière cette porte",
+    "es": "Una niña pequeña en un vestido demasiado grande Que canta en su cuarto mientras espera Un paso en la escalera, una llave en la puerta A los veintisiete, aún esperaba tras aquella puerta",
+    "en": "A little girl lost in a dress too wide Singing in her bedroom, waiting deep inside For a step on the stairs, for a key in the door At twenty-seven, she was still waiting by that door"
+  },
+  "bridge": {
+    "fr": "Où étais-tu Où étais-tu Quand elle avait peur Quand elle avait froid Où étais-tu Où étais-tu Tu reviens pour les fleurs Tu reviens pour la croix",
+    "es": "¿Dónde estabas? ¿Dónde estabas? Cuando tenía miedo Cuando tenía frío ¿Dónde estabas? ¿Dónde estabas? Vuelves por las flores Vuelves por la cruz",
+    "en": "Where were you Where were you When she was scared When she was cold Where were you Where were you Now you bring the flowers Now you carve the stone"
+  },
+  "stop": {
+    "fr": "Sex, drugs and rock and roll",
+    "es": "Sex, drugs and rock and roll",
+    "en": "Sex, drugs and rock and roll"
+  },
+  "verse3": {
+    "fr": "Alors toi qui m'écoutes, quelle que soit la raison N'éteins jamais tes rêves, garde-les comme un feu Si quelqu'un les écrase, relève-toi, bats-toi pour eux La drogue et l'alcool, ce n'est pas du rock and roll Ce sont des faux dieux qui te volent ta voix Y a rien de rock and roll à mourir comme ça",
+    "es": "Así que tú que me escuchas, sea cual sea la razón Nunca apagues tus sueños, guárdalos como un fuego Si alguien los aplasta, levántate y pelea por ellos La droga y el alcohol no son rock and roll Son falsos dioses que te roban la voz No hay nada de rock and roll en morir así",
+    "en": "So you who are listening, whatever the reason Never let your dreams go out, keep them burning bright If someone tries to crush them, stand up and fight Drugs and alcohol are not rock and roll They're false gods that steal your voice away There's nothing rock and roll about dying that way"
+  },
+  "final": {
+    "fr": "C'est la rage d'une enfant Qui hurle dans le micro Elle a la voix d'une reine Et le cœur en lambeaux C'est la rage d'une enfant Que personne n'a tenue Vous applaudissez la chute Vous ne l'avez pas vue",
+    "es": "Es la rabia de una niña Que grita en el micro Tiene la voz de una reina Y el corazón hecho trizas Es la rabia de una niña Que nadie abrazó Ustedes aplauden su caída Y nadie la miró",
+    "en": "It's the rage of a child Screaming into the mic She's got the voice of a queen And a heart torn by a knife It's the rage of a child That nobody held You cheer as she falls You never saw her pain"
+  },
+  "outro": {
+    "fr": "Une chaise vide... à table... Elle chante encore... pour personne...",
+    "es": "Una silla vacía... en la mesa... Ella aún canta... para nadie...",
+    "en": "An empty chair... at the table... She's still singing... for no one..."
+  }
+}
+;
+const LANG_MAP = { fr:"fr-FR", es:"es-ES", en:"en-GB" };
+let curLang = "fr";
+let curSpeed = 0.9;
+function setLang(l){
+  document.body.classList.remove("show-fr","show-es","show-en");
+  document.querySelectorAll(".langbtn").forEach(b=>b.classList.remove("active"));
+  event.target.classList.add("active");
+  if (l==="all") { curLang="fr"; } else { document.body.classList.add("show-"+l); curLang=l; }
+}
+function setSpeed(v){
+  curSpeed = v;
+  document.querySelectorAll(".speedbtn").forEach(b=>b.classList.remove("active"));
+  event.target.classList.add("active");
+}
+function playSec(id){
+  const txt = SECS[id][curLang];
+  if (!txt || !("speechSynthesis" in window)) return;
+  window.speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(txt);
+  u.lang = LANG_MAP[curLang];
+  u.rate = curSpeed;
+  window.speechSynthesis.speak(u);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Le Père Noël est anonyme — Paroles</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Cinzel:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:#10121c; background-image: radial-gradient(circle at 50% 0%, #1c2038, #08090f 80%); font-family:'Cormorant Garamond', serif; }
+  .page { max-width:960px; margin:30px auto; background:#f5ecd7; border:3px solid #4a5a8f; border-radius:10px; padding:30px clamp(14px,4vw,44px) 50px; }
+  header { text-align:center; margin-bottom:20px; }
+  header h1 { font-family:'Cinzel', serif; color:#1c2038; font-size:1.6rem; margin-bottom:4px; }
+  .meta { color:#4a5a8f; font-size:.95rem; }
+  .controls { display:flex; justify-content:center; gap:24px; flex-wrap:wrap; margin:18px 0 26px; }
+  .ctrl-group { display:flex; gap:6px; align-items:center; }
+  .ctrl-group label { font-size:.85rem; color:#3d4a70; margin-right:4px; }
+  button.langbtn, button.speedbtn { font-family:'Cinzel', serif; font-size:.8rem; padding:6px 14px; border-radius:6px; border:1px solid #8a9ac9; background:#fff; cursor:pointer; }
+  button.langbtn.active, button.speedbtn.active { background:#2e3f7a; color:#fff; }
+  .sec { margin-bottom:26px; border-top:1px solid #c3cbe0; padding-top:14px; }
+  .sec-head { display:flex; align-items:center; gap:10px; margin-bottom:10px; flex-wrap:wrap; }
+  .section-label { font-family:'Cinzel', serif; font-weight:600; color:#1c2038; font-size:1rem; }
+  .voice-badge { font-size:.72rem; color:#fff; background:#b8962e; border-radius:10px; padding:2px 10px; }
+  .playbtn { margin-left:auto; border:none; background:#2e3f7a; color:#fff; border-radius:50%; width:30px; height:30px; cursor:pointer; font-size:.85rem; }
+  .tagrow { font-size:.78rem; font-style:italic; color:#b8962e; opacity:.85; margin:4px 0; }
+  .lyric-row { display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; margin-bottom:6px; font-size:1.15rem; font-style:italic; }
+  .lyric-row.ghost { opacity:.75; }
+  .col { padding:4px 8px; border-radius:4px; }
+  .col.fr { background:#e8f0fc; }
+  .col.es { background:#f5ead5; }
+  .col.en { background:#fce8ec; }
+  body.show-fr .col.es, body.show-fr .col.en { display:none; }
+  body.show-fr .lyric-row { grid-template-columns:1fr; }
+  body.show-es .col.fr, body.show-es .col.en { display:none; }
+  body.show-es .lyric-row { grid-template-columns:1fr; }
+  body.show-en .col.fr, body.show-en .col.es { display:none; }
+  body.show-en .lyric-row { grid-template-columns:1fr; }
+  footer { text-align:center; margin-top:34px; color:#3d4a70; font-size:.85rem; border-top:1px solid #c3cbe0; padding-top:14px; }
+  .sec.instr { opacity:.5; font-style:italic; }
+  .instr-note { font-size:1rem; font-style:italic; color:#3d4a70; }
+</style>
+</head>
+<body class="show-fr">
+<div class="page">
+  <header>
+    <h1>Le Père Noël est anonyme <span style="opacity:.5;">/ Papá Noel no tiene nombre / Santa Claus Is Anonymous</span></h1>
+    <div class="meta">Alternative Rock · Ragga · Dancehall · Electro Reggae · Minotaure &amp; Trèfle</div>
+    <div class="meta">🇫🇷 129 BPM · Sol mineur · 4:37 &nbsp;|&nbsp; 🇪🇸 96 BPM · Sol majeur · 5:20 &nbsp;|&nbsp; 🇬🇧 129 BPM · Mib majeur · 5:19</div>
+  </header>
+
+  <div class="controls">
+    <div class="ctrl-group">
+      <label>Langue :</label>
+      <button class="langbtn" onclick="setLang('all')">Trilingue</button>
+      <button class="langbtn active" onclick="setLang('fr')">🇫🇷 Français</button>
+      <button class="langbtn" onclick="setLang('es')">🇪🇸 Español</button>
+      <button class="langbtn" onclick="setLang('en')">🇬🇧 English</button>
+    </div>
+    <div class="ctrl-group">
+      <label>Vitesse :</label>
+      <button class="speedbtn" onclick="setSpeed(0.7)">× 0.7</button>
+      <button class="speedbtn active" onclick="setSpeed(0.9)">× 0.9</button>
+      <button class="speedbtn" onclick="setSpeed(1.0)">× 1.0</button>
+    </div>
+  </div>
+
+  <section class="sec" id="sec-intro">
+    <div class="sec-head">
+      <span class="section-label">Intro / Intro / Intro</span>
+      <span class="voice-badge">Trèfle + Minotaure — duo</span>
+      <button class="playbtn" onclick="playSec('intro')">▶</button>
+    </div>
+<div class="tagrow">[TRÈFLE + MINOTAURE — DUET]</div>
+<div class="lyric-row ">
+      <div class="col fr">Oh ! Oh ! Oh !</div>
+      <div class="col es">¡Oh! ¡Oh! ¡Oh!</div>
+      <div class="col en">Oh! Oh! Oh!</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">C&#x27;est Noël, c&#x27;est Noël !</div>
+      <div class="col es">¡Es Navidad, es Navidad!</div>
+      <div class="col en">It&#x27;s Christmas time, it&#x27;s Christmas time!</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Mais tout le monde n&#x27;a pas droit au ciel !</div>
+      <div class="col es">¡Pero el cielo no es para todos, en realidad!</div>
+      <div class="col en">But heaven&#x27;s not for everyone this time!</div>
+    </div>
+  </section>
+<section class="sec" id="sec-verse1">
+    <div class="sec-head">
+      <span class="section-label">Couplet 1 / Estrofa 1 / Verse 1</span>
+      <span class="voice-badge">Trèfle + Minotaure — duo</span>
+      <button class="playbtn" onclick="playSec('verse1')">▶</button>
+    </div>
+<div class="tagrow">[TRÈFLE + MINOTAURE — DUET]</div>
+<div class="lyric-row ">
+      <div class="col fr">C&#x27;était un soir de décembre, un soir de grand froid,</div>
+      <div class="col es">Era una noche de diciembre, una noche de gran frío,</div>
+      <div class="col en">It was a night in December, a freezing cold night,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">La télé vendait du rêve, du bonheur à crédit, tu vois.</div>
+      <div class="col es">La tele vendía sueños, felicidad a crédito, amigo.</div>
+      <div class="col en">The TV sold us dreams, joy on credit, shiny and bright.</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Les écrans scintillaient, les cadeaux défilaient,</div>
+      <div class="col es">Las pantallas brillaban, los regalos desfilaban,</div>
+      <div class="col en">The screens were all sparkling, the presents paraded,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Pendant que dehors, les fins de mois dérapaient.</div>
+      <div class="col es">Mientras afuera los finales de mes se derrumbaban.</div>
+      <div class="col en">While outside, the bills piled up and hope faded.</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">J&#x27;avais mis les petits plats dans les grands écrans,</div>
+      <div class="col es">Había puesto la mesa frente a la gran pantalla,</div>
+      <div class="col en">I&#x27;d laid out the feast in front of the big screen,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Pour oublier un peu qu&#x27;on court après le temps.</div>
+      <div class="col es">Para olvidar un poco que el tiempo nos arrastra.</div>
+      <div class="col en">To forget for a while the rat race routine.</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Quand un bruit dans le salon a coupé l&#x27;ambiance,</div>
+      <div class="col es">Cuando un ruido en el salón cortó el ambiente,</div>
+      <div class="col en">When a noise in the living room killed the vibe,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Un courant d&#x27;air glacial, une drôle de présence.</div>
+      <div class="col es">Una corriente helada, una presencia diferente.</div>
+      <div class="col en">An icy draft, a presence I can&#x27;t describe.</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Pas de barbe blanche, pas de ventre rebondi,</div>
+      <div class="col es">Sin barba blanca, sin la panza redondita,</div>
+      <div class="col en">No snowy beard, no belly full of cheer,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Le Père Noël avait changé de métier cette nuit !</div>
+      <div class="col es">¡Papá Noel cambió de oficio esta nochecita!</div>
+      <div class="col en">Santa changed his job tonight, oh dear!</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Une capuche sur la tête, un grand sac à la main,</div>
+      <div class="col es">Una capucha en la cabeza, un gran saco en la mano,</div>
+      <div class="col en">A hood on his head, a big bag in his hand,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Il faisait sa tournée… mais pas dans le bon chemin !</div>
+      <div class="col es">Hacía su recorrido… ¡pero por el camino equivocado!</div>
+      <div class="col en">He was making his rounds… but not quite as planned!</div>
+    </div>
+  </section>
+<section class="sec" id="sec-pre">
+    <div class="sec-head">
+      <span class="section-label">Pré-refrain 1 / Pre-estribillo 1 / Pre-chorus 1</span>
+      <span class="voice-badge">Trèfle + Minotaure — duo</span>
+      <button class="playbtn" onclick="playSec('pre')">▶</button>
+    </div>
+<div class="tagrow">[TRÈFLE + MINOTAURE — DUET]</div>
+<div class="lyric-row ">
+      <div class="col fr">Pas de traîneau, pas de rennes,</div>
+      <div class="col es">Sin trineo, sin renos,</div>
+      <div class="col en">No sleigh, no reindeer,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Pas de liste, pas de cadeaux,</div>
+      <div class="col es">Sin lista, sin regalos,</div>
+      <div class="col en">No list, no gifts to bring,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Il avait trouvé ma cheminée…</div>
+      <div class="col es">Había encontrado mi chimenea…</div>
+      <div class="col en">He&#x27;d found my chimney…</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Mais par la fenêtre, le bougre est passé !</div>
+      <div class="col es">¡Pero el pillo por la ventana se ha colado!</div>
+      <div class="col en">But through the window came the cheeky thing!</div>
+    </div>
+  </section>
+<section class="sec" id="sec-chorus">
+    <div class="sec-head">
+      <span class="section-label">Refrain 1 / Estribillo 1 / Chorus 1</span>
+      <span class="voice-badge">Trèfle + Minotaure — duo</span>
+      <button class="playbtn" onclick="playSec('chorus')">▶</button>
+    </div>
+<div class="tagrow">[TRÈFLE + MINOTAURE — DUET]</div>
+<div class="lyric-row ">
+      <div class="col fr">Oh ! Oh ! Oh ! Le Père Noël est anonyme !</div>
+      <div class="col es">¡Oh! ¡Oh! ¡Oh! ¡Papá Noel no tiene nombre!</div>
+      <div class="col en">Oh! Oh! Oh! Santa Claus is anonymous!</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Il ne descend plus du ciel, il traverse nos ruines.</div>
+      <div class="col es">Ya no baja del cielo, cruza las ruinas del hombre.</div>
+      <div class="col en">He no longer comes from heaven, he walks through our ruins.</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Pas besoin de lui coller une couleur, un pays,</div>
+      <div class="col es">No hace falta ponerle un color ni un país,</div>
+      <div class="col en">No need to paint him with a color or a nation,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">C&#x27;est la misère du monde qui s&#x27;invite dans la nuit.</div>
+      <div class="col es">Es la miseria del mundo que se cuela en la noche.</div>
+      <div class="col en">It&#x27;s the world&#x27;s misery showing up on Christmas night.</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Oh ! Oh ! Oh ! Quelle drôle d&#x27;affaire !</div>
+      <div class="col es">¡Oh! ¡Oh! ¡Oh! ¡Qué asunto tan raro!</div>
+      <div class="col en">Oh! Oh! Oh! What a strange affair!</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Ça pourrait être toi, ton voisin, ton frère.</div>
+      <div class="col es">Podrías ser tú, tu vecino, tu hermano.</div>
+      <div class="col en">It could be you, your neighbor, your brother.</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Quand la faim vous serre et que la vie devient amère,</div>
+      <div class="col es">Cuando el hambre aprieta y todo sabe amargo,</div>
+      <div class="col en">When hunger squeezes tight and life is hard to bear,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Qui peut encore croire aux miracles de Noël sur Terre ?</div>
+      <div class="col es">¿Quién cree aún en los milagros de Navidad?</div>
+      <div class="col en">Who can still believe in Christmas miracles anywhere?</div>
+    </div>
+  </section>
+<section class="sec instr" id="sec-break">
+    <div class="sec-head">
+      <span class="section-label">Break instrumental / Interludio instrumental / Instrumental break</span>
+    </div>
+<div class="instr-note">Instrumental — scratchs DJ, grelots, tambourin, basse synthé, riff de guitare pentatonique</div>
+  </section>
+<section class="sec" id="sec-verse2">
+    <div class="sec-head">
+      <span class="section-label">Couplet 2 / Estrofa 2 / Verse 2</span>
+      <span class="voice-badge">Trèfle + Minotaure — duo</span>
+      <button class="playbtn" onclick="playSec('verse2')">▶</button>
+    </div>
+<div class="tagrow">[TRÈFLE + MINOTAURE — DUET]</div>
+<div class="lyric-row ">
+      <div class="col fr">Je l&#x27;ai regardé faire, j&#x27;ai pas crié « Au voleur ! »</div>
+      <div class="col es">Lo miré hacerlo, no grité «¡Al ladrón!»</div>
+      <div class="col en">I watched him work, I didn&#x27;t scream “Stop, thief!”</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">À quoi bon faire du bruit quand tout le monde a peur ?</div>
+      <div class="col es">¿Para qué hacer ruido si todos tienen temor?</div>
+      <div class="col en">Why make a noise when everyone&#x27;s afraid?</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">J&#x27;ai pas vu sa couleur, j&#x27;ai regardé ses mains,</div>
+      <div class="col es">No vi su color, le miré las manos,</div>
+      <div class="col en">I didn&#x27;t see his color, I looked at his hands,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Des mains qui tremblaient, des mains d&#x27;être humain.</div>
+      <div class="col es">Manos que temblaban, manos de ser humano.</div>
+      <div class="col en">Hands that were trembling, the hands of a man.</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Des mains d&#x27;un homme aux abois, qui ne sait plus où aller,</div>
+      <div class="col es">Las manos de un hombre acorralado, que no sabe adónde ir,</div>
+      <div class="col en">The hands of a desperate man, with nowhere left to go,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Dans un monde où même survivre finit par coûter.</div>
+      <div class="col es">En un mundo donde hasta sobrevivir se paga al fin.</div>
+      <div class="col en">In a world where even surviving costs more than you know.</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Il s&#x27;est retourné vers moi, deux secondes de silence,</div>
+      <div class="col es">Se volvió hacia mí, dos segundos de silencio,</div>
+      <div class="col en">He turned around to face me, two seconds of silence,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Deux naufragés perdus dans la même indifférence.</div>
+      <div class="col es">Dos náufragos perdidos en la misma indiferencia.</div>
+      <div class="col en">Two castaways lost in the same indifference.</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Pas d&#x27;arme, pas de menace, juste la faim dans le ventre,</div>
+      <div class="col es">Sin arma, sin amenaza, solo el hambre en la barriga,</div>
+      <div class="col en">No gun, no threat, just hunger in his gut,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Dans ce grand supermarché où chacun veut être au centre.</div>
+      <div class="col es">En el gran supermercado donde todos quieren ser la estrella del día.</div>
+      <div class="col en">In this giant supermarket where everyone takes center stage.</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Un téléphone dernier cri, des fringues à la mode,</div>
+      <div class="col es">Un móvil de última generación, ropa de moda,</div>
+      <div class="col en">The latest smartphone, trendy clothes on display,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Et ceux qui n&#x27;ont plus rien disparaissent dans le décor.</div>
+      <div class="col es">Y quien ya no tiene nada desaparece en la sombra.</div>
+      <div class="col en">And those with nothing left just fade away.</div>
+    </div>
+  </section>
+<section class="sec" id="sec-pre2">
+    <div class="sec-head">
+      <span class="section-label">Pré-refrain 2 / Pre-estribillo 2 / Pre-chorus 2</span>
+      <span class="voice-badge">Trèfle + Minotaure — duo</span>
+      <button class="playbtn" onclick="playSec('pre2')">▶</button>
+    </div>
+<div class="tagrow">[TRÈFLE + MINOTAURE — DUET]</div>
+<div class="lyric-row ">
+      <div class="col fr">Pas de traîneau, pas de rennes,</div>
+      <div class="col es">Sin trineo, sin renos,</div>
+      <div class="col en">No sleigh, no reindeer,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Pas de liste, pas de cadeaux,</div>
+      <div class="col es">Sin lista, sin regalos,</div>
+      <div class="col en">No list, no gifts to bring,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Il avait trouvé ma cheminée…</div>
+      <div class="col es">Había encontrado mi chimenea…</div>
+      <div class="col en">He&#x27;d found my chimney…</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Mais par la fenêtre, le bougre est passé !</div>
+      <div class="col es">¡Pero el pillo por la ventana se ha colado!</div>
+      <div class="col en">But through the window came the cheeky thing!</div>
+    </div>
+  </section>
+<section class="sec" id="sec-chorus2">
+    <div class="sec-head">
+      <span class="section-label">Refrain 2 / Estribillo 2 / Chorus 2</span>
+      <span class="voice-badge">Trèfle + Minotaure — duo</span>
+      <button class="playbtn" onclick="playSec('chorus2')">▶</button>
+    </div>
+<div class="tagrow">[TRÈFLE + MINOTAURE — DUET]</div>
+<div class="lyric-row ">
+      <div class="col fr">Oh ! Oh ! Oh ! Le Père Noël est anonyme !</div>
+      <div class="col es">¡Oh! ¡Oh! ¡Oh! ¡Papá Noel no tiene nombre!</div>
+      <div class="col en">Oh! Oh! Oh! Santa Claus is anonymous!</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Il ne descend plus du ciel, il traverse nos ruines.</div>
+      <div class="col es">Ya no baja del cielo, cruza las ruinas del hombre.</div>
+      <div class="col en">He no longer comes from heaven, he walks through our ruins.</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Pas besoin de lui coller une couleur, un pays,</div>
+      <div class="col es">No hace falta ponerle un color ni un país,</div>
+      <div class="col en">No need to paint him with a color or a nation,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">C&#x27;est la misère du monde qui s&#x27;invite dans la nuit.</div>
+      <div class="col es">Es la miseria del mundo que se cuela en la noche.</div>
+      <div class="col en">It&#x27;s the world&#x27;s misery showing up on Christmas night.</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Oh ! Oh ! Oh ! Quelle drôle d&#x27;affaire !</div>
+      <div class="col es">¡Oh! ¡Oh! ¡Oh! ¡Qué asunto tan raro!</div>
+      <div class="col en">Oh! Oh! Oh! What a strange affair!</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Ça pourrait être toi, ton voisin, ton frère.</div>
+      <div class="col es">Podrías ser tú, tu vecino, tu hermano.</div>
+      <div class="col en">It could be you, your neighbor, your brother.</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Quand la faim vous serre et que la vie devient amère,</div>
+      <div class="col es">Cuando el hambre aprieta y todo sabe amargo,</div>
+      <div class="col en">When hunger squeezes tight and life is hard to bear,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Qui peut encore croire aux miracles de Noël sur Terre ?</div>
+      <div class="col es">¿Quién cree aún en los milagros de Navidad?</div>
+      <div class="col en">Who can still believe in Christmas miracles anywhere?</div>
+    </div>
+  </section>
+<section class="sec" id="sec-bridge">
+    <div class="sec-head">
+      <span class="section-label">Pont / Puente / Bridge</span>
+      <span class="voice-badge">Trèfle + Minotaure — duo</span>
+      <button class="playbtn" onclick="playSec('bridge')">▶</button>
+    </div>
+<div class="tagrow">[TRÈFLE + MINOTAURE — DUET]</div>
+<div class="lyric-row ">
+      <div class="col fr">Il est reparti par la fenêtre cassée,</div>
+      <div class="col es">Se fue por la ventana rota,</div>
+      <div class="col en">He slipped out through the broken window frame,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Laissant mon salon vide et mes rêves fracassés.</div>
+      <div class="col es">Dejando el salón vacío y mis sueños en bancarrota.</div>
+      <div class="col en">Leaving my room empty and my dreams in flames.</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Les flics m&#x27;ont demandé : « Il avait quelle allure ? »</div>
+      <div class="col es">La poli me preguntó: «¿Qué aspecto tenía?»</div>
+      <div class="col en">The cops asked me: “What did he look like?”</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">J&#x27;ai répondu : « Il n&#x27;avait pas les yeux bleu azur,</div>
+      <div class="col es">Respondí: «No tenía los ojos azul cielo,</div>
+      <div class="col en">I answered: “He didn&#x27;t have sky-blue eyes,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Mais peut-être une âme pure,</div>
+      <div class="col es">Pero quizás un alma pura,</div>
+      <div class="col en">But maybe a pure soul,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Pour quelqu&#x27;un qui n&#x27;a jamais eu</div>
+      <div class="col es">Para alguien que nunca tuvo</div>
+      <div class="col en">For someone who never had</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Le bonheur d&#x27;une belle masure. »</div>
+      <div class="col es">La dicha de una choza segura.»</div>
+      <div class="col en">The joy of a little shack to call home.”</div>
+    </div>
+  </section>
+<section class="sec" id="sec-bridge2">
+    <div class="sec-head">
+      <span class="section-label">Pont (suite) / Puente (continuación) / Bridge (continued)</span>
+      <span class="voice-badge">Trèfle + Minotaure — duo</span>
+      <button class="playbtn" onclick="playSec('bridge2')">▶</button>
+    </div>
+<div class="tagrow">[TRÈFLE + MINOTAURE — DUET]</div>
+<div class="lyric-row ">
+      <div class="col fr">C&#x27;était le Père Noël des fins de mois difficiles,</div>
+      <div class="col es">Era el Papá Noel de los finales de mes,</div>
+      <div class="col en">He was the Santa Claus of hard times at month&#x27;s end,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Le cadeau surprise d&#x27;une société fragile.</div>
+      <div class="col es">El regalo sorpresa de una sociedad al revés.</div>
+      <div class="col en">The surprise gift of a society that frays.</div>
+    </div>
+  </section>
+<section class="sec" id="sec-verse3">
+    <div class="sec-head">
+      <span class="section-label">Couplet 3 / Estrofa 3 / Verse 3</span>
+      <span class="voice-badge">Trèfle + Minotaure — duo</span>
+      <button class="playbtn" onclick="playSec('verse3')">▶</button>
+    </div>
+<div class="tagrow">[TRÈFLE + MINOTAURE — DUET]</div>
+<div class="lyric-row ">
+      <div class="col fr">Ne cherchez pas sa couleur, ne cherchez pas son pays,</div>
+      <div class="col es">No busquen su color, no busquen su país,</div>
+      <div class="col en">Don&#x27;t look for his color, don&#x27;t look for his land,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Le drame est bien plus grand que ce qu&#x27;on voit dans la nuit.</div>
+      <div class="col es">El drama es mucho más grande de lo que vemos aquí.</div>
+      <div class="col en">The drama&#x27;s way bigger than the night lets you understand.</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Le coupable est plus haut, il gère les ministères,</div>
+      <div class="col es">Los culpables están más arriba, manejan los ministerios,</div>
+      <div class="col en">The guilty ones are higher, running the ministries,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Dans les vitrines qui brillent et les promesses en l&#x27;air.</div>
+      <div class="col es">En los escaparates que brillan y las promesas al viento.</div>
+      <div class="col en">In the shining shop windows and the empty promises.</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Elles font rêver les gosses, elles mettent les parents à genoux,</div>
+      <div class="col es">Hacen soñar a los niños, ponen a los padres de rodillas,</div>
+      <div class="col en">They make the kids dream, they bring the parents to their knees,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Pendant que certains comptent les pièces pour tenir jusqu&#x27;au bout.</div>
+      <div class="col es">Mientras otros cuentan monedas para llegar al final del día.</div>
+      <div class="col en">While others count their pennies just to make it through the week.</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Mon voleur de Noël, c&#x27;est le miroir d&#x27;en face,</div>
+      <div class="col es">Mi ladrón de Navidad es el espejo de enfrente,</div>
+      <div class="col en">My Christmas thief is the mirror across the way,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Le symptôme d&#x27;un système qui nous broie et nous efface.</div>
+      <div class="col es">El síntoma de un sistema que nos tritura y nos borra lentamente.</div>
+      <div class="col en">The symptom of a system that grinds us and wipes us away.</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Dès le début de nos vies, dans les petites classes,</div>
+      <div class="col es">Desde el comienzo, en la escuela, en los pupitres,</div>
+      <div class="col en">From the very start of our lives, in the early classes,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Où l&#x27;on apprend trop tôt à rentrer dans les cases.</div>
+      <div class="col es">Donde aprendemos muy pronto a encajar en casillas.</div>
+      <div class="col en">Where we learn too soon to fit into the boxes.</div>
+    </div>
+  </section>
+<section class="sec" id="sec-final">
+    <div class="sec-head">
+      <span class="section-label">Refrain final / Estribillo final / Final chorus</span>
+      <span class="voice-badge">Trèfle + Minotaure — duo</span>
+      <button class="playbtn" onclick="playSec('final')">▶</button>
+    </div>
+<div class="tagrow">[TRÈFLE + MINOTAURE — DUET]</div>
+<div class="lyric-row ">
+      <div class="col fr">Oh ! Oh ! Oh ! Le Père Noël est anonyme !</div>
+      <div class="col es">¡Oh! ¡Oh! ¡Oh! ¡Papá Noel no tiene nombre!</div>
+      <div class="col en">Oh! Oh! Oh! Santa Claus is anonymous!</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Il ne descend plus du ciel, il traverse nos ruines.</div>
+      <div class="col es">Ya no baja del cielo, cruza las ruinas del hombre.</div>
+      <div class="col en">He no longer comes from heaven, he walks through our ruins.</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Pas besoin de lui coller une couleur, un pays,</div>
+      <div class="col es">No hace falta ponerle un color ni un país,</div>
+      <div class="col en">No need to paint him with a color or a nation,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">C&#x27;est la misère du monde qui s&#x27;invite dans la nuit.</div>
+      <div class="col es">Es la miseria del mundo que se cuela en la noche.</div>
+      <div class="col en">It&#x27;s the world&#x27;s misery showing up on Christmas night.</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Oh ! Oh ! Oh ! Quelle drôle d&#x27;affaire !</div>
+      <div class="col es">¡Oh! ¡Oh! ¡Oh! ¡Qué asunto tan raro!</div>
+      <div class="col en">Oh! Oh! Oh! What a strange affair!</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Ça pourrait être toi, ton voisin, ton frère.</div>
+      <div class="col es">Podrías ser tú, tu vecino, tu hermano.</div>
+      <div class="col en">It could be you, your neighbor, your brother.</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Quand la faim vous serre et que la vie devient amère,</div>
+      <div class="col es">Cuando el hambre aprieta y todo sabe amargo,</div>
+      <div class="col en">When hunger squeezes tight and life is hard to bear,</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Qui peut encore croire aux miracles de Noël sur Terre ?</div>
+      <div class="col es">¿Quién cree aún en los milagros de Navidad?</div>
+      <div class="col en">Who can still believe in Christmas miracles anywhere?</div>
+    </div>
+  </section>
+<section class="sec" id="sec-outro">
+    <div class="sec-head">
+      <span class="section-label">Outro / Outro / Outro</span>
+      <span class="voice-badge">Trèfle + Minotaure — duo</span>
+      <button class="playbtn" onclick="playSec('outro')">▶</button>
+    </div>
+<div class="tagrow">[TRÈFLE + MINOTAURE — DUET]</div>
+<div class="lyric-row ">
+      <div class="col fr">Oh ! Oh ! Oh !</div>
+      <div class="col es">¡Oh! ¡Oh! ¡Oh!</div>
+      <div class="col en">Oh! Oh! Oh!</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Joyeux Noël !</div>
+      <div class="col es">¡Feliz Navidad!</div>
+      <div class="col en">Merry Christmas!</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Et n&#x27;oubliez pas de fermer la fenêtre !</div>
+      <div class="col es">¡Y no olviden cerrar la ventana!</div>
+      <div class="col en">And don&#x27;t forget to close the window!</div>
+    </div>
+  </section>
+
+  <footer>www.trefleminotaure.com · © 2026 Trèfle &amp; Minotaure</footer>
+</div>
+
+<script>
+const SECS = {
+  "intro": {
+    "fr": "Oh ! Oh ! Oh ! C'est Noël, c'est Noël ! Mais tout le monde n'a pas droit au ciel !",
+    "es": "¡Oh! ¡Oh! ¡Oh! ¡Es Navidad, es Navidad! ¡Pero el cielo no es para todos, en realidad!",
+    "en": "Oh! Oh! Oh! It's Christmas time, it's Christmas time! But heaven's not for everyone this time!"
+  },
+  "verse1": {
+    "fr": "C'était un soir de décembre, un soir de grand froid, La télé vendait du rêve, du bonheur à crédit, tu vois. Les écrans scintillaient, les cadeaux défilaient, Pendant que dehors, les fins de mois dérapaient. J'avais mis les petits plats dans les grands écrans, Pour oublier un peu qu'on court après le temps. Quand un bruit dans le salon a coupé l'ambiance, Un courant d'air glacial, une drôle de présence. Pas de barbe blanche, pas de ventre rebondi, Le Père Noël avait changé de métier cette nuit ! Une capuche sur la tête, un grand sac à la main, Il faisait sa tournée… mais pas dans le bon chemin !",
+    "es": "Era una noche de diciembre, una noche de gran frío, La tele vendía sueños, felicidad a crédito, amigo. Las pantallas brillaban, los regalos desfilaban, Mientras afuera los finales de mes se derrumbaban. Había puesto la mesa frente a la gran pantalla, Para olvidar un poco que el tiempo nos arrastra. Cuando un ruido en el salón cortó el ambiente, Una corriente helada, una presencia diferente. Sin barba blanca, sin la panza redondita, ¡Papá Noel cambió de oficio esta nochecita! Una capucha en la cabeza, un gran saco en la mano, Hacía su recorrido… ¡pero por el camino equivocado!",
+    "en": "It was a night in December, a freezing cold night, The TV sold us dreams, joy on credit, shiny and bright. The screens were all sparkling, the presents paraded, While outside, the bills piled up and hope faded. I'd laid out the feast in front of the big screen, To forget for a while the rat race routine. When a noise in the living room killed the vibe, An icy draft, a presence I can't describe. No snowy beard, no belly full of cheer, Santa changed his job tonight, oh dear! A hood on his head, a big bag in his hand, He was making his rounds… but not quite as planned!"
+  },
+  "pre": {
+    "fr": "Pas de traîneau, pas de rennes, Pas de liste, pas de cadeaux, Il avait trouvé ma cheminée… Mais par la fenêtre, le bougre est passé !",
+    "es": "Sin trineo, sin renos, Sin lista, sin regalos, Había encontrado mi chimenea… ¡Pero el pillo por la ventana se ha colado!",
+    "en": "No sleigh, no reindeer, No list, no gifts to bring, He'd found my chimney… But through the window came the cheeky thing!"
+  },
+  "chorus": {
+    "fr": "Oh ! Oh ! Oh ! Le Père Noël est anonyme ! Il ne descend plus du ciel, il traverse nos ruines. Pas besoin de lui coller une couleur, un pays, C'est la misère du monde qui s'invite dans la nuit. Oh ! Oh ! Oh ! Quelle drôle d'affaire ! Ça pourrait être toi, ton voisin, ton frère. Quand la faim vous serre et que la vie devient amère, Qui peut encore croire aux miracles de Noël sur Terre ?",
+    "es": "¡Oh! ¡Oh! ¡Oh! ¡Papá Noel no tiene nombre! Ya no baja del cielo, cruza las ruinas del hombre. No hace falta ponerle un color ni un país, Es la miseria del mundo que se cuela en la noche. ¡Oh! ¡Oh! ¡Oh! ¡Qué asunto tan raro! Podrías ser tú, tu vecino, tu hermano. Cuando el hambre aprieta y todo sabe amargo, ¿Quién cree aún en los milagros de Navidad?",
+    "en": "Oh! Oh! Oh! Santa Claus is anonymous! He no longer comes from heaven, he walks through our ruins. No need to paint him with a color or a nation, It's the world's misery showing up on Christmas night. Oh! Oh! Oh! What a strange affair! It could be you, your neighbor, your brother. When hunger squeezes tight and life is hard to bear, Who can still believe in Christmas miracles anywhere?"
+  },
+  "verse2": {
+    "fr": "Je l'ai regardé faire, j'ai pas crié « Au voleur ! » À quoi bon faire du bruit quand tout le monde a peur ? J'ai pas vu sa couleur, j'ai regardé ses mains, Des mains qui tremblaient, des mains d'être humain. Des mains d'un homme aux abois, qui ne sait plus où aller, Dans un monde où même survivre finit par coûter. Il s'est retourné vers moi, deux secondes de silence, Deux naufragés perdus dans la même indifférence. Pas d'arme, pas de menace, juste la faim dans le ventre, Dans ce grand supermarché où chacun veut être au centre. Un téléphone dernier cri, des fringues à la mode, Et ceux qui n'ont plus rien disparaissent dans le décor.",
+    "es": "Lo miré hacerlo, no grité «¡Al ladrón!» ¿Para qué hacer ruido si todos tienen temor? No vi su color, le miré las manos, Manos que temblaban, manos de ser humano. Las manos de un hombre acorralado, que no sabe adónde ir, En un mundo donde hasta sobrevivir se paga al fin. Se volvió hacia mí, dos segundos de silencio, Dos náufragos perdidos en la misma indiferencia. Sin arma, sin amenaza, solo el hambre en la barriga, En el gran supermercado donde todos quieren ser la estrella del día. Un móvil de última generación, ropa de moda, Y quien ya no tiene nada desaparece en la sombra.",
+    "en": "I watched him work, I didn't scream “Stop, thief!” Why make a noise when everyone's afraid? I didn't see his color, I looked at his hands, Hands that were trembling, the hands of a man. The hands of a desperate man, with nowhere left to go, In a world where even surviving costs more than you know. He turned around to face me, two seconds of silence, Two castaways lost in the same indifference. No gun, no threat, just hunger in his gut, In this giant supermarket where everyone takes center stage. The latest smartphone, trendy clothes on display, And those with nothing left just fade away."
+  },
+  "pre2": {
+    "fr": "Pas de traîneau, pas de rennes, Pas de liste, pas de cadeaux, Il avait trouvé ma cheminée… Mais par la fenêtre, le bougre est passé !",
+    "es": "Sin trineo, sin renos, Sin lista, sin regalos, Había encontrado mi chimenea… ¡Pero el pillo por la ventana se ha colado!",
+    "en": "No sleigh, no reindeer, No list, no gifts to bring, He'd found my chimney… But through the window came the cheeky thing!"
+  },
+  "chorus2": {
+    "fr": "Oh ! Oh ! Oh ! Le Père Noël est anonyme ! Il ne descend plus du ciel, il traverse nos ruines. Pas besoin de lui coller une couleur, un pays, C'est la misère du monde qui s'invite dans la nuit. Oh ! Oh ! Oh ! Quelle drôle d'affaire ! Ça pourrait être toi, ton voisin, ton frère. Quand la faim vous serre et que la vie devient amère, Qui peut encore croire aux miracles de Noël sur Terre ?",
+    "es": "¡Oh! ¡Oh! ¡Oh! ¡Papá Noel no tiene nombre! Ya no baja del cielo, cruza las ruinas del hombre. No hace falta ponerle un color ni un país, Es la miseria del mundo que se cuela en la noche. ¡Oh! ¡Oh! ¡Oh! ¡Qué asunto tan raro! Podrías ser tú, tu vecino, tu hermano. Cuando el hambre aprieta y todo sabe amargo, ¿Quién cree aún en los milagros de Navidad?",
+    "en": "Oh! Oh! Oh! Santa Claus is anonymous! He no longer comes from heaven, he walks through our ruins. No need to paint him with a color or a nation, It's the world's misery showing up on Christmas night. Oh! Oh! Oh! What a strange affair! It could be you, your neighbor, your brother. When hunger squeezes tight and life is hard to bear, Who can still believe in Christmas miracles anywhere?"
+  },
+  "bridge": {
+    "fr": "Il est reparti par la fenêtre cassée, Laissant mon salon vide et mes rêves fracassés. Les flics m'ont demandé : « Il avait quelle allure ? » J'ai répondu : « Il n'avait pas les yeux bleu azur, Mais peut-être une âme pure, Pour quelqu'un qui n'a jamais eu Le bonheur d'une belle masure. »",
+    "es": "Se fue por la ventana rota, Dejando el salón vacío y mis sueños en bancarrota. La poli me preguntó: «¿Qué aspecto tenía?» Respondí: «No tenía los ojos azul cielo, Pero quizás un alma pura, Para alguien que nunca tuvo La dicha de una choza segura.»",
+    "en": "He slipped out through the broken window frame, Leaving my room empty and my dreams in flames. The cops asked me: “What did he look like?” I answered: “He didn't have sky-blue eyes, But maybe a pure soul, For someone who never had The joy of a little shack to call home.”"
+  },
+  "bridge2": {
+    "fr": "C'était le Père Noël des fins de mois difficiles, Le cadeau surprise d'une société fragile.",
+    "es": "Era el Papá Noel de los finales de mes, El regalo sorpresa de una sociedad al revés.",
+    "en": "He was the Santa Claus of hard times at month's end, The surprise gift of a society that frays."
+  },
+  "verse3": {
+    "fr": "Ne cherchez pas sa couleur, ne cherchez pas son pays, Le drame est bien plus grand que ce qu'on voit dans la nuit. Le coupable est plus haut, il gère les ministères, Dans les vitrines qui brillent et les promesses en l'air. Elles font rêver les gosses, elles mettent les parents à genoux, Pendant que certains comptent les pièces pour tenir jusqu'au bout. Mon voleur de Noël, c'est le miroir d'en face, Le symptôme d'un système qui nous broie et nous efface. Dès le début de nos vies, dans les petites classes, Où l'on apprend trop tôt à rentrer dans les cases.",
+    "es": "No busquen su color, no busquen su país, El drama es mucho más grande de lo que vemos aquí. Los culpables están más arriba, manejan los ministerios, En los escaparates que brillan y las promesas al viento. Hacen soñar a los niños, ponen a los padres de rodillas, Mientras otros cuentan monedas para llegar al final del día. Mi ladrón de Navidad es el espejo de enfrente, El síntoma de un sistema que nos tritura y nos borra lentamente. Desde el comienzo, en la escuela, en los pupitres, Donde aprendemos muy pronto a encajar en casillas.",
+    "en": "Don't look for his color, don't look for his land, The drama's way bigger than the night lets you understand. The guilty ones are higher, running the ministries, In the shining shop windows and the empty promises. They make the kids dream, they bring the parents to their knees, While others count their pennies just to make it through the week. My Christmas thief is the mirror across the way, The symptom of a system that grinds us and wipes us away. From the very start of our lives, in the early classes, Where we learn too soon to fit into the boxes."
+  },
+  "final": {
+    "fr": "Oh ! Oh ! Oh ! Le Père Noël est anonyme ! Il ne descend plus du ciel, il traverse nos ruines. Pas besoin de lui coller une couleur, un pays, C'est la misère du monde qui s'invite dans la nuit. Oh ! Oh ! Oh ! Quelle drôle d'affaire ! Ça pourrait être toi, ton voisin, ton frère. Quand la faim vous serre et que la vie devient amère, Qui peut encore croire aux miracles de Noël sur Terre ?",
+    "es": "¡Oh! ¡Oh! ¡Oh! ¡Papá Noel no tiene nombre! Ya no baja del cielo, cruza las ruinas del hombre. No hace falta ponerle un color ni un país, Es la miseria del mundo que se cuela en la noche. ¡Oh! ¡Oh! ¡Oh! ¡Qué asunto tan raro! Podrías ser tú, tu vecino, tu hermano. Cuando el hambre aprieta y todo sabe amargo, ¿Quién cree aún en los milagros de Navidad?",
+    "en": "Oh! Oh! Oh! Santa Claus is anonymous! He no longer comes from heaven, he walks through our ruins. No need to paint him with a color or a nation, It's the world's misery showing up on Christmas night. Oh! Oh! Oh! What a strange affair! It could be you, your neighbor, your brother. When hunger squeezes tight and life is hard to bear, Who can still believe in Christmas miracles anywhere?"
+  },
+  "outro": {
+    "fr": "Oh ! Oh ! Oh ! Joyeux Noël ! Et n'oubliez pas de fermer la fenêtre !",
+    "es": "¡Oh! ¡Oh! ¡Oh! ¡Feliz Navidad! ¡Y no olviden cerrar la ventana!",
+    "en": "Oh! Oh! Oh! Merry Christmas! And don't forget to close the window!"
+  }
+}
+;
+const LANG_MAP = { fr:"fr-FR", es:"es-ES", en:"en-GB" };
+let curLang = "fr";
+let curSpeed = 0.9;
+function setLang(l){
+  document.body.classList.remove("show-fr","show-es","show-en");
+  document.querySelectorAll(".langbtn").forEach(b=>b.classList.remove("active"));
+  event.target.classList.add("active");
+  if (l==="all") { curLang="fr"; } else { document.body.classList.add("show-"+l); curLang=l; }
+}
+function setSpeed(v){
+  curSpeed = v;
+  document.querySelectorAll(".speedbtn").forEach(b=>b.classList.remove("active"));
+  event.target.classList.add("active");
+}
+function playSec(id){
+  const txt = SECS[id][curLang];
+  if (!txt || !("speechSynthesis" in window)) return;
+  window.speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(txt);
+  u.lang = LANG_MAP[curLang];
+  u.rate = curSpeed;
+  window.speechSynthesis.speak(u);
+}
+</script>
+</body>
+</html>

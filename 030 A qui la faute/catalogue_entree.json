@@ -1,0 +1,25 @@
+{
+  "id": "A COMPLETER",
+  "dossier": "A_qui_la_faute",
+  "titre": {
+    "fr": "À qui la faute ?",
+    "es": "¿De quién es la culpa?",
+    "en": "Whose Fault Is It?"
+  },
+  "soustitre": {
+    "es": "¿De quién es la culpa?",
+    "en": "Whose Fault Is It?"
+  },
+  "style": "Rock alternatif · Violon électrique",
+  "bpm": 129,
+  "duree": "4:20",
+  "config": "duo",
+  "album": "A COMPLETER",
+  "sensible": false,
+  "themes": [
+    "précarité",
+    "vie chère",
+    "politique",
+    "consommation"
+  ]
+}

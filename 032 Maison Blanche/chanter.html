@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Maison Blanche — Paroles</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Cinzel:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:#10121c; background-image: radial-gradient(circle at 50% 0%, #1c2038, #08090f 80%); font-family:'Cormorant Garamond', serif; }
+  .page { max-width:960px; margin:30px auto; background:#f5ecd7; border:3px solid #4a5a8f; border-radius:10px; padding:30px clamp(14px,4vw,44px) 50px; }
+  header { text-align:center; margin-bottom:20px; }
+  header h1 { font-family:'Cinzel', serif; color:#1c2038; font-size:1.6rem; margin-bottom:4px; }
+  .meta { color:#4a5a8f; font-size:.95rem; }
+  .controls { display:flex; justify-content:center; gap:24px; flex-wrap:wrap; margin:18px 0 26px; }
+  .ctrl-group { display:flex; gap:6px; align-items:center; }
+  .ctrl-group label { font-size:.85rem; color:#3d4a70; margin-right:4px; }
+  button.langbtn, button.speedbtn { font-family:'Cinzel', serif; font-size:.8rem; padding:6px 14px; border-radius:6px; border:1px solid #8a9ac9; background:#fff; cursor:pointer; }
+  button.langbtn.active, button.speedbtn.active { background:#2e3f7a; color:#fff; }
+  .sec { margin-bottom:26px; border-top:1px solid #c3cbe0; padding-top:14px; }
+  .sec-head { display:flex; align-items:center; gap:10px; margin-bottom:10px; flex-wrap:wrap; }
+  .section-label { font-family:'Cinzel', serif; font-weight:600; color:#1c2038; font-size:1rem; }
+  .voice-badge { font-size:.72rem; color:#fff; background:#b8962e; border-radius:10px; padding:2px 10px; }
+  .playbtn { margin-left:auto; border:none; background:#2e3f7a; color:#fff; border-radius:50%; width:30px; height:30px; cursor:pointer; font-size:.85rem; }
+  .tagrow { font-size:.78rem; font-style:italic; color:#b8962e; opacity:.85; margin:4px 0; }
+  .lyric-row { display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; margin-bottom:6px; font-size:1.15rem; font-style:italic; }
+  .lyric-row.ghost { opacity:.75; }
+  .col { padding:4px 8px; border-radius:4px; }
+  .col.fr { background:#e8f0fc; }
+  .col.es { background:#f5ead5; }
+  .col.en { background:#fce8ec; }
+  body.show-fr .col.es, body.show-fr .col.en { display:none; }
+  body.show-fr .lyric-row { grid-template-columns:1fr; }
+  body.show-es .col.fr, body.show-es .col.en { display:none; }
+  body.show-es .lyric-row { grid-template-columns:1fr; }
+  body.show-en .col.fr, body.show-en .col.es { display:none; }
+  body.show-en .lyric-row { grid-template-columns:1fr; }
+  footer { text-align:center; margin-top:34px; color:#3d4a70; font-size:.85rem; border-top:1px solid #c3cbe0; padding-top:14px; }
+  .sec.instr { opacity:.5; font-style:italic; }
+  .instr-note { font-size:1rem; font-style:italic; color:#3d4a70; }
+</style>
+</head>
+<body class="show-fr">
+<div class="page">
+  <header>
+    <h1>Maison Blanche <span style="opacity:.5;">/ Casa Blanca / White House</span></h1>
+    <div class="meta">Rock alternatif années 90 · Noise rock · Blues harmonica · Minotaure &amp; Trèfle</div>
+    <div class="meta">🇫🇷 129 BPM · Si mineur · 3:58 &nbsp;|&nbsp; 🇪🇸 129 BPM · Sol mineur · 5:44 &nbsp;|&nbsp; 🇬🇧 129 BPM · Do mineur · 4:34</div>
+  </header>
+
+  <div class="controls">
+    <div class="ctrl-group">
+      <label>Langue :</label>
+      <button class="langbtn" onclick="setLang('all')">Trilingue</button>
+      <button class="langbtn active" onclick="setLang('fr')">🇫🇷 Français</button>
+      <button class="langbtn" onclick="setLang('es')">🇪🇸 Español</button>
+      <button class="langbtn" onclick="setLang('en')">🇬🇧 English</button>
+    </div>
+    <div class="ctrl-group">
+      <label>Vitesse :</label>
+      <button class="speedbtn" onclick="setSpeed(0.7)">× 0.7</button>
+      <button class="speedbtn active" onclick="setSpeed(0.9)">× 0.9</button>
+      <button class="speedbtn" onclick="setSpeed(1.0)">× 1.0</button>
+    </div>
+  </div>
+
+  <section class="sec" id="sec-intro">
+    <div class="sec-head">
+      <span class="section-label">Intro / Intro / Intro</span>
+      <span class="voice-badge">Trèfle + Minotaure — duo</span>
+      <button class="playbtn" onclick="playSec('intro')">▶</button>
+    </div>
+<div class="tagrow">[PARLÉ — voix basse, tout près, presque chuchotée]</div>
+<div class="lyric-row ">
+      <div class="col fr">Maison Blanche... blanche...</div>
+      <div class="col es">Casa Blanca... blanca...</div>
+      <div class="col en">White House... so white...</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Plus blanche que l&#x27;oubli...</div>
+      <div class="col es">Más blanca que el olvido...</div>
+      <div class="col en">Whiter than oblivion...</div>
+    </div>
+  </section>
+<section class="sec" id="sec-verse1">
+    <div class="sec-head">
+      <span class="section-label">Couplet 1 / Estrofa 1 / Verse 1</span>
+      <span class="voice-badge">Trèfle + Minotaure — duo</span>
+      <button class="playbtn" onclick="playSec('verse1')">▶</button>
+    </div>
+<div class="tagrow">[MI-PARLÉ, FLOW RAP — tension contenue]</div>
+<div class="lyric-row ">
+      <div class="col fr">Les riches comptent l&#x27;or, les pauvres comptent les nuits</div>
+      <div class="col es">Los ricos cuentan oro, los pobres cuentan las noches</div>
+      <div class="col en">The rich count their gold, the poor count their nights</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Chaque année un peu plus, chaque année un peu moins</div>
+      <div class="col es">Cada año un poco más, cada año un poco menos</div>
+      <div class="col en">Every year they take more, every year we get less</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Ils ont les coffres pleins, les tours et les paradis</div>
+      <div class="col es">Ellos tienen las arcas llenas, sus torres y sus derroches</div>
+      <div class="col en">They&#x27;ve got their vaults full, their towers and their paradise</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Et nous on n&#x27;a plus rien, on n&#x27;a plus que nos mains</div>
+      <div class="col es">Y a nosotros no nos queda nada, solo nuestras manos</div>
+      <div class="col en">And we&#x27;ve got nothing left but our hands and our breath</div>
+    </div>
+  </section>
+<section class="sec" id="sec-pre">
+    <div class="sec-head">
+      <span class="section-label">Pré-refrain / Pre-estribillo / Pre-chorus</span>
+      <span class="voice-badge">Trèfle + Minotaure — duo</span>
+      <button class="playbtn" onclick="playSec('pre')">▶</button>
+    </div>
+<div class="tagrow">[LE RYTHME ACCÉLÈRE — tension qui monte]</div>
+<div class="lyric-row ">
+      <div class="col fr">Et ça monte, ça monte, ça monte</div>
+      <div class="col es">Y sube, y sube, y sube</div>
+      <div class="col en">And it&#x27;s rising, it&#x27;s rising, it&#x27;s rising</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Du fond des rues, du fond des ventres</div>
+      <div class="col es">Del fondo de las calles, del fondo de los vientres</div>
+      <div class="col en">From the depth of the streets, from the pit of our guts</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Et ça monte, ça monte, ça monte</div>
+      <div class="col es">Y sube, y sube, y sube</div>
+      <div class="col en">And it&#x27;s rising, it&#x27;s rising, it&#x27;s rising</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Ça cogne aux portes, ça veut entrer</div>
+      <div class="col es">Golpea las puertas, quiere entrar</div>
+      <div class="col en">It&#x27;s pounding on the doors, it wants in</div>
+    </div>
+  </section>
+<section class="sec" id="sec-chorus">
+    <div class="sec-head">
+      <span class="section-label">Refrain 1 / Estribillo 1 / Chorus 1</span>
+      <span class="voice-badge">Trèfle + Minotaure — duo</span>
+      <button class="playbtn" onclick="playSec('chorus')">▶</button>
+    </div>
+<div class="tagrow">[CRIÉ ET MÉLODIQUE — voix d'homme et de femme en alternance ou ensemble]</div>
+<div class="lyric-row ">
+      <div class="col fr">C&#x27;est la rage du monde</div>
+      <div class="col es">Es la rabia del mundo</div>
+      <div class="col en">It&#x27;s the rage of the world</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Qui frappe à vos fenêtres</div>
+      <div class="col es">Que golpea sus ventanas</div>
+      <div class="col en">Breaking on your windows</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">De Bruxelles à La Havane</div>
+      <div class="col es">De Bruselas a La Habana</div>
+      <div class="col en">From Brussels to Havana</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Elle a cent mille têtes</div>
+      <div class="col es">Tiene cien mil cabezas</div>
+      <div class="col en">A hundred thousand shadows</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">C&#x27;est la rage du monde</div>
+      <div class="col es">Es la rabia del mundo</div>
+      <div class="col en">It&#x27;s the rage of the world</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Pendant que vous trinquez</div>
+      <div class="col es">Mientras ustedes brindan</div>
+      <div class="col en">While you clink your glasses</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Sur nos frères, sur nos tombes</div>
+      <div class="col es">Sobre nuestros hermanos, sobre nuestras tumbas</div>
+      <div class="col en">Over our brothers, over our graves</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Dans vos salons dorés</div>
+      <div class="col es">En sus salones dorados</div>
+      <div class="col en">In your golden palaces</div>
+    </div>
+  </section>
+<section class="sec instr" id="sec-break">
+    <div class="sec-head">
+      <span class="section-label">Break instrumental / Interludio instrumental / Instrumental break</span>
+    </div>
+<div class="instr-note">Instrumental — riff de guitare abrasif, l'harmonica répond par de courts bends blues</div>
+  </section>
+<section class="sec" id="sec-verse2">
+    <div class="sec-head">
+      <span class="section-label">Couplet 2 / Estrofa 2 / Verse 2</span>
+      <span class="voice-badge">Trèfle + Minotaure — duo</span>
+      <button class="playbtn" onclick="playSec('verse2')">▶</button>
+    </div>
+<div class="tagrow">[MI-PARLÉ SOMBRE — phrasé syncopé]</div>
+<div class="lyric-row ">
+      <div class="col fr">Nos frères, nos pères, sous les obus, sous les drones</div>
+      <div class="col es">Nuestros hermanos, nuestros padres, bajo obuses, bajo drones</div>
+      <div class="col en">Our brothers, our fathers, under shells, under drones</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Et eux devant leurs verres se tapent sur l&#x27;épaule</div>
+      <div class="col es">Y ellos, copa en mano, palmadas y ovaciones</div>
+      <div class="col en">While they raise their glasses, slapping backs on their thrones</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Faux frères en costume, accolades et sourires</div>
+      <div class="col es">Falsos hermanos de traje, abrazos y sonrisas</div>
+      <div class="col en">Fake brothers in suits, all embraces and smiles</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">À Paris, à Madrid, on trinque sur nos martyrs</div>
+      <div class="col es">En París, en Madrid, brindan sobre nuestras cenizas</div>
+      <div class="col en">In Paris, in Madrid, they toast as our martyrs die</div>
+    </div>
+  </section>
+<section class="sec" id="sec-verse2b">
+    <div class="sec-head">
+      <span class="section-label">Couplet 2b / Estrofa 2b / Verse 2b</span>
+      <span class="voice-badge">Trèfle + Minotaure — duo</span>
+      <button class="playbtn" onclick="playSec('verse2b')">▶</button>
+    </div>
+<div class="tagrow">[FLOW PUNK-RAP RAPIDE — articulation urgente]</div>
+<div class="lyric-row ">
+      <div class="col fr">Les vitrines en éclats, les magasins saccagés</div>
+      <div class="col es">Escaparates rotos, las tiendas saqueadas</div>
+      <div class="col en">Shop windows shattered, the stores all torn apart</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Par de faux manifestants aux visages masqués</div>
+      <div class="col es">Por falsos manifestantes con las caras tapadas</div>
+      <div class="col en">By fake protesters in masks, playing their part</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Ils volent notre colère pour en faire un butin</div>
+      <div class="col es">Nos roban la rabia para hacer su botín</div>
+      <div class="col en">They steal our anger and turn it into loot</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Et leur sale vérité fait la une le lendemain</div>
+      <div class="col es">Y su sucia verdad sale en portada al fin</div>
+      <div class="col en">And their dirty truth is tomorrow&#x27;s front-page news</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">On filme le verre brisé, jamais nos frigos vides</div>
+      <div class="col es">Filman el cristal roto, nunca nuestras neveras vacías</div>
+      <div class="col en">They film the broken glass, never the empty shelves</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Et notre juste colère s&#x27;écrase dans le vide</div>
+      <div class="col es">Y nuestra justa rabia se estrella en el vacío</div>
+      <div class="col en">And our righteous anger gets turned against itself</div>
+    </div>
+  </section>
+<section class="sec" id="sec-chorus2">
+    <div class="sec-head">
+      <span class="section-label">Refrain 2 / Estribillo 2 / Chorus 2</span>
+      <span class="voice-badge">Trèfle + Minotaure — duo</span>
+      <button class="playbtn" onclick="playSec('chorus2')">▶</button>
+    </div>
+<div class="tagrow">[CRIÉ ET MÉLODIQUE — voix d'homme et de femme en alternance ou ensemble]</div>
+<div class="lyric-row ">
+      <div class="col fr">C&#x27;est la rage du monde</div>
+      <div class="col es">Es la rabia del mundo</div>
+      <div class="col en">It&#x27;s the rage of the world</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Qui frappe à vos fenêtres</div>
+      <div class="col es">Que golpea sus ventanas</div>
+      <div class="col en">Breaking on your windows</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">De Bruxelles à La Havane</div>
+      <div class="col es">De Bruselas a La Habana</div>
+      <div class="col en">From Brussels to Havana</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Elle a cent mille têtes</div>
+      <div class="col es">Tiene cien mil cabezas</div>
+      <div class="col en">A hundred thousand shadows</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">C&#x27;est la rage du monde</div>
+      <div class="col es">Es la rabia del mundo</div>
+      <div class="col en">It&#x27;s the rage of the world</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Pendant que vous trinquez</div>
+      <div class="col es">Mientras ustedes brindan</div>
+      <div class="col en">While you clink your glasses</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Sur nos frères, sur nos tombes</div>
+      <div class="col es">Sobre nuestros hermanos, sobre nuestras tumbas</div>
+      <div class="col en">Over our brothers, over our graves</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Dans vos salons dorés</div>
+      <div class="col es">En sus salones dorados</div>
+      <div class="col en">In your golden palaces</div>
+    </div>
+  </section>
+<section class="sec" id="sec-verse3">
+    <div class="sec-head">
+      <span class="section-label">Couplet 3 / Estrofa 3 / Verse 3</span>
+      <span class="voice-badge">Trèfle + Minotaure — duo</span>
+      <button class="playbtn" onclick="playSec('verse3')">▶</button>
+    </div>
+<div class="tagrow">[MI-PARLÉ AMER]</div>
+<div class="lyric-row ">
+      <div class="col fr">Le médecin derrière son guichet de verre</div>
+      <div class="col es">El médico detrás de su ventanilla de cristal</div>
+      <div class="col en">The doctor sits behind his wall of glass and steel</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Te tend un contrat, un stylo, un sourire</div>
+      <div class="col es">Te tiende un contrato, una pluma, un porvenir</div>
+      <div class="col en">Hands you a contract, a pen and a smile</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Pour un lit d&#x27;hôpital faut signer chez Lucifer</div>
+      <div class="col es">Por una cama de hospital, firmas con Satanás</div>
+      <div class="col en">For a hospital bed you sign Lucifer&#x27;s deal</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Vendre son âme au diable pour ne pas mourir</div>
+      <div class="col es">Venderle el alma al diablo para no morir</div>
+      <div class="col en">Sell your soul to the devil to stay alive a while</div>
+    </div>
+  </section>
+<section class="sec" id="sec-breakdown">
+    <div class="sec-head">
+      <span class="section-label">Breakdown / Pasaje íntimo / Breakdown</span>
+      <span class="voice-badge">Trèfle + Minotaure — duo</span>
+      <button class="playbtn" onclick="playSec('breakdown')">▶</button>
+    </div>
+<div class="tagrow">[VOIX FRAGILE ET EXPOSÉE — diction très claire]</div>
+<div class="lyric-row ">
+      <div class="col fr">L&#x27;enfant part à l&#x27;école, le cartable trop lourd</div>
+      <div class="col es">El niño va a la escuela, la mochila pesada</div>
+      <div class="col en">The child walks to school, his backpack weighing him down</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Sa mère à la fenêtre attend son retour</div>
+      <div class="col es">Su madre en la ventana espera su llegada</div>
+      <div class="col en">His mother at the window, watching the empty town</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">On ne sait jamais, le soir, s&#x27;il reviendra à pied</div>
+      <div class="col es">Nunca se sabe, de noche, si volverá a pie</div>
+      <div class="col en">And no one ever knows if tonight he&#x27;ll walk back home</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Ou dans un corbillard, et des fleurs à ses pieds</div>
+      <div class="col es">O en un coche fúnebre, con flores a sus pies</div>
+      <div class="col en">Or come back in a hearse, with flowers and a stone</div>
+    </div>
+  </section>
+<section class="sec" id="sec-bridge">
+    <div class="sec-head">
+      <span class="section-label">Pont / Puente / Bridge</span>
+      <span class="voice-badge">Trèfle + Minotaure — duo</span>
+      <button class="playbtn" onclick="playSec('bridge')">▶</button>
+    </div>
+<div class="tagrow">[NOMS DE VILLES SCANDÉS COMME DES COUPS]</div>
+<div class="lyric-row ">
+      <div class="col fr">Washington</div>
+      <div class="col es">Washington</div>
+      <div class="col en">Washington</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Bruxelles</div>
+      <div class="col es">Bruselas</div>
+      <div class="col en">Brussels</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Paris</div>
+      <div class="col es">París</div>
+      <div class="col en">Paris</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Madrid</div>
+      <div class="col es">Madrid</div>
+      <div class="col en">Madrid</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">La Havane</div>
+      <div class="col es">La Habana</div>
+      <div class="col en">Havana</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Moscou</div>
+      <div class="col es">Moscú</div>
+      <div class="col en">Moscow</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Pékin</div>
+      <div class="col es">Pekín</div>
+      <div class="col en">Beijing</div>
+    </div>
+  </section>
+<section class="sec" id="sec-buildup">
+    <div class="sec-head">
+      <span class="section-label">Montée / Subida / Build-up</span>
+      <span class="voice-badge">Trèfle + Minotaure — duo</span>
+      <button class="playbtn" onclick="playSec('buildup')">▶</button>
+    </div>
+<div class="tagrow">[HOMME ET FEMME À L'UNISSON — de plus en plus fort]</div>
+<div class="lyric-row ">
+      <div class="col fr">Ouvrez les portes</div>
+      <div class="col es">Abran las puertas</div>
+      <div class="col en">Open the doors</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Ouvrez les portes</div>
+      <div class="col es">Abran las puertas</div>
+      <div class="col en">Open the doors</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">On n&#x27;est pas des chiffres</div>
+      <div class="col es">No somos cifras</div>
+      <div class="col en">We are not numbers</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">On n&#x27;est pas à vendre</div>
+      <div class="col es">No estamos en venta</div>
+      <div class="col en">We are not for sale</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Ouvrez les portes</div>
+      <div class="col es">Abran las puertas</div>
+      <div class="col en">Open the doors</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Ouvrez les portes</div>
+      <div class="col es">Abran las puertas</div>
+      <div class="col en">Open the doors</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">On est la terre</div>
+      <div class="col es">Somos la tierra</div>
+      <div class="col en">We are the earth</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Et la terre a faim</div>
+      <div class="col es">Y la tierra tiene hambre</div>
+      <div class="col en">And the earth is hungry</div>
+    </div>
+  </section>
+<section class="sec" id="sec-final">
+    <div class="sec-head">
+      <span class="section-label">Refrain final / Estribillo final / Final chorus</span>
+      <span class="voice-badge">Trèfle + Minotaure — duo</span>
+      <button class="playbtn" onclick="playSec('final')">▶</button>
+    </div>
+<div class="tagrow">[INTENSITÉ MAXIMALE — homme et femme ensemble]</div>
+<div class="lyric-row ">
+      <div class="col fr">C&#x27;est la rage du monde</div>
+      <div class="col es">Es la rabia del mundo</div>
+      <div class="col en">It&#x27;s the rage of the world</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Qui frappe à vos fenêtres</div>
+      <div class="col es">Que golpea sus ventanas</div>
+      <div class="col en">Breaking on your windows</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">De Bruxelles à La Havane</div>
+      <div class="col es">De Bruselas a La Habana</div>
+      <div class="col en">From Brussels to Havana</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Elle a cent mille têtes</div>
+      <div class="col es">Tiene cien mil cabezas</div>
+      <div class="col en">A hundred thousand shadows</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">C&#x27;est la rage du monde</div>
+      <div class="col es">Es la rabia del mundo</div>
+      <div class="col en">It&#x27;s the rage of the world</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Pendant que vous trinquez</div>
+      <div class="col es">Mientras ustedes brindan</div>
+      <div class="col en">While you clink your glasses</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Sur nos frères, sur nos tombes</div>
+      <div class="col es">Sobre nuestros hermanos, sobre nuestras tumbas</div>
+      <div class="col en">Over our brothers, over our graves</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Dans vos salons dorés</div>
+      <div class="col es">En sus salones dorados</div>
+      <div class="col en">In your golden palaces</div>
+    </div>
+  </section>
+<section class="sec" id="sec-outro">
+    <div class="sec-head">
+      <span class="section-label">Outro / Outro / Outro</span>
+      <span class="voice-badge">Trèfle + Minotaure — duo</span>
+      <button class="playbtn" onclick="playSec('outro')">▶</button>
+    </div>
+<div class="tagrow">[PARLÉ — voix basse, tout près]</div>
+<div class="lyric-row ">
+      <div class="col fr">Maison Blanche... blanche...</div>
+      <div class="col es">Casa Blanca... blanca...</div>
+      <div class="col en">White House... so white...</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Rendez-nous nos enfants</div>
+      <div class="col es">Devuélvannos a nuestros hijos</div>
+      <div class="col en">Give us back our children</div>
+    </div>
+  </section>
+
+  <footer>www.trefleminotaure.com · © 2026 Trèfle &amp; Minotaure</footer>
+</div>
+
+<script>
+const SECS = {
+  "intro": {
+    "fr": "Maison Blanche... blanche... Plus blanche que l'oubli...",
+    "es": "Casa Blanca... blanca... Más blanca que el olvido...",
+    "en": "White House... so white... Whiter than oblivion..."
+  },
+  "verse1": {
+    "fr": "Les riches comptent l'or, les pauvres comptent les nuits Chaque année un peu plus, chaque année un peu moins Ils ont les coffres pleins, les tours et les paradis Et nous on n'a plus rien, on n'a plus que nos mains",
+    "es": "Los ricos cuentan oro, los pobres cuentan las noches Cada año un poco más, cada año un poco menos Ellos tienen las arcas llenas, sus torres y sus derroches Y a nosotros no nos queda nada, solo nuestras manos",
+    "en": "The rich count their gold, the poor count their nights Every year they take more, every year we get less They've got their vaults full, their towers and their paradise And we've got nothing left but our hands and our breath"
+  },
+  "pre": {
+    "fr": "Et ça monte, ça monte, ça monte Du fond des rues, du fond des ventres Et ça monte, ça monte, ça monte Ça cogne aux portes, ça veut entrer",
+    "es": "Y sube, y sube, y sube Del fondo de las calles, del fondo de los vientres Y sube, y sube, y sube Golpea las puertas, quiere entrar",
+    "en": "And it's rising, it's rising, it's rising From the depth of the streets, from the pit of our guts And it's rising, it's rising, it's rising It's pounding on the doors, it wants in"
+  },
+  "chorus": {
+    "fr": "C'est la rage du monde Qui frappe à vos fenêtres De Bruxelles à La Havane Elle a cent mille têtes C'est la rage du monde Pendant que vous trinquez Sur nos frères, sur nos tombes Dans vos salons dorés",
+    "es": "Es la rabia del mundo Que golpea sus ventanas De Bruselas a La Habana Tiene cien mil cabezas Es la rabia del mundo Mientras ustedes brindan Sobre nuestros hermanos, sobre nuestras tumbas En sus salones dorados",
+    "en": "It's the rage of the world Breaking on your windows From Brussels to Havana A hundred thousand shadows It's the rage of the world While you clink your glasses Over our brothers, over our graves In your golden palaces"
+  },
+  "verse2": {
+    "fr": "Nos frères, nos pères, sous les obus, sous les drones Et eux devant leurs verres se tapent sur l'épaule Faux frères en costume, accolades et sourires À Paris, à Madrid, on trinque sur nos martyrs",
+    "es": "Nuestros hermanos, nuestros padres, bajo obuses, bajo drones Y ellos, copa en mano, palmadas y ovaciones Falsos hermanos de traje, abrazos y sonrisas En París, en Madrid, brindan sobre nuestras cenizas",
+    "en": "Our brothers, our fathers, under shells, under drones While they raise their glasses, slapping backs on their thrones Fake brothers in suits, all embraces and smiles In Paris, in Madrid, they toast as our martyrs die"
+  },
+  "verse2b": {
+    "fr": "Les vitrines en éclats, les magasins saccagés Par de faux manifestants aux visages masqués Ils volent notre colère pour en faire un butin Et leur sale vérité fait la une le lendemain On filme le verre brisé, jamais nos frigos vides Et notre juste colère s'écrase dans le vide",
+    "es": "Escaparates rotos, las tiendas saqueadas Por falsos manifestantes con las caras tapadas Nos roban la rabia para hacer su botín Y su sucia verdad sale en portada al fin Filman el cristal roto, nunca nuestras neveras vacías Y nuestra justa rabia se estrella en el vacío",
+    "en": "Shop windows shattered, the stores all torn apart By fake protesters in masks, playing their part They steal our anger and turn it into loot And their dirty truth is tomorrow's front-page news They film the broken glass, never the empty shelves And our righteous anger gets turned against itself"
+  },
+  "chorus2": {
+    "fr": "C'est la rage du monde Qui frappe à vos fenêtres De Bruxelles à La Havane Elle a cent mille têtes C'est la rage du monde Pendant que vous trinquez Sur nos frères, sur nos tombes Dans vos salons dorés",
+    "es": "Es la rabia del mundo Que golpea sus ventanas De Bruselas a La Habana Tiene cien mil cabezas Es la rabia del mundo Mientras ustedes brindan Sobre nuestros hermanos, sobre nuestras tumbas En sus salones dorados",
+    "en": "It's the rage of the world Breaking on your windows From Brussels to Havana A hundred thousand shadows It's the rage of the world While you clink your glasses Over our brothers, over our graves In your golden palaces"
+  },
+  "verse3": {
+    "fr": "Le médecin derrière son guichet de verre Te tend un contrat, un stylo, un sourire Pour un lit d'hôpital faut signer chez Lucifer Vendre son âme au diable pour ne pas mourir",
+    "es": "El médico detrás de su ventanilla de cristal Te tiende un contrato, una pluma, un porvenir Por una cama de hospital, firmas con Satanás Venderle el alma al diablo para no morir",
+    "en": "The doctor sits behind his wall of glass and steel Hands you a contract, a pen and a smile For a hospital bed you sign Lucifer's deal Sell your soul to the devil to stay alive a while"
+  },
+  "breakdown": {
+    "fr": "L'enfant part à l'école, le cartable trop lourd Sa mère à la fenêtre attend son retour On ne sait jamais, le soir, s'il reviendra à pied Ou dans un corbillard, et des fleurs à ses pieds",
+    "es": "El niño va a la escuela, la mochila pesada Su madre en la ventana espera su llegada Nunca se sabe, de noche, si volverá a pie O en un coche fúnebre, con flores a sus pies",
+    "en": "The child walks to school, his backpack weighing him down His mother at the window, watching the empty town And no one ever knows if tonight he'll walk back home Or come back in a hearse, with flowers and a stone"
+  },
+  "bridge": {
+    "fr": "Washington Bruxelles Paris Madrid La Havane Moscou Pékin",
+    "es": "Washington Bruselas París Madrid La Habana Moscú Pekín",
+    "en": "Washington Brussels Paris Madrid Havana Moscow Beijing"
+  },
+  "buildup": {
+    "fr": "Ouvrez les portes Ouvrez les portes On n'est pas des chiffres On n'est pas à vendre Ouvrez les portes Ouvrez les portes On est la terre Et la terre a faim",
+    "es": "Abran las puertas Abran las puertas No somos cifras No estamos en venta Abran las puertas Abran las puertas Somos la tierra Y la tierra tiene hambre",
+    "en": "Open the doors Open the doors We are not numbers We are not for sale Open the doors Open the doors We are the earth And the earth is hungry"
+  },
+  "final": {
+    "fr": "C'est la rage du monde Qui frappe à vos fenêtres De Bruxelles à La Havane Elle a cent mille têtes C'est la rage du monde Pendant que vous trinquez Sur nos frères, sur nos tombes Dans vos salons dorés",
+    "es": "Es la rabia del mundo Que golpea sus ventanas De Bruselas a La Habana Tiene cien mil cabezas Es la rabia del mundo Mientras ustedes brindan Sobre nuestros hermanos, sobre nuestras tumbas En sus salones dorados",
+    "en": "It's the rage of the world Breaking on your windows From Brussels to Havana A hundred thousand shadows It's the rage of the world While you clink your glasses Over our brothers, over our graves In your golden palaces"
+  },
+  "outro": {
+    "fr": "Maison Blanche... blanche... Rendez-nous nos enfants",
+    "es": "Casa Blanca... blanca... Devuélvannos a nuestros hijos",
+    "en": "White House... so white... Give us back our children"
+  }
+}
+;
+const LANG_MAP = { fr:"fr-FR", es:"es-ES", en:"en-GB" };
+let curLang = "fr";
+let curSpeed = 0.9;
+function setLang(l){
+  document.body.classList.remove("show-fr","show-es","show-en");
+  document.querySelectorAll(".langbtn").forEach(b=>b.classList.remove("active"));
+  event.target.classList.add("active");
+  if (l==="all") { curLang="fr"; } else { document.body.classList.add("show-"+l); curLang=l; }
+}
+function setSpeed(v){
+  curSpeed = v;
+  document.querySelectorAll(".speedbtn").forEach(b=>b.classList.remove("active"));
+  event.target.classList.add("active");
+}
+function playSec(id){
+  const txt = SECS[id][curLang];
+  if (!txt || !("speechSynthesis" in window)) return;
+  window.speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(txt);
+  u.lang = LANG_MAP[curLang];
+  u.rate = curSpeed;
+  window.speechSynthesis.speak(u);
+}
+</script>
+</body>
+</html>

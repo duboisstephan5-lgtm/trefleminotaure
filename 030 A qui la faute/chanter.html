@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>À qui la faute ? — Paroles</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Cinzel:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:#10121c; background-image: radial-gradient(circle at 50% 0%, #1c2038, #08090f 80%); font-family:'Cormorant Garamond', serif; }
+  .page { max-width:960px; margin:30px auto; background:#f5ecd7; border:3px solid #4a5a8f; border-radius:10px; padding:30px clamp(14px,4vw,44px) 50px; }
+  header { text-align:center; margin-bottom:20px; }
+  header h1 { font-family:'Cinzel', serif; color:#1c2038; font-size:1.6rem; margin-bottom:4px; }
+  .meta { color:#4a5a8f; font-size:.95rem; }
+  .controls { display:flex; justify-content:center; gap:24px; flex-wrap:wrap; margin:18px 0 26px; }
+  .ctrl-group { display:flex; gap:6px; align-items:center; }
+  .ctrl-group label { font-size:.85rem; color:#3d4a70; margin-right:4px; }
+  button.langbtn, button.speedbtn { font-family:'Cinzel', serif; font-size:.8rem; padding:6px 14px; border-radius:6px; border:1px solid #8a9ac9; background:#fff; cursor:pointer; }
+  button.langbtn.active, button.speedbtn.active { background:#2e3f7a; color:#fff; }
+  .sec { margin-bottom:26px; border-top:1px solid #c3cbe0; padding-top:14px; }
+  .sec-head { display:flex; align-items:center; gap:10px; margin-bottom:10px; flex-wrap:wrap; }
+  .section-label { font-family:'Cinzel', serif; font-weight:600; color:#1c2038; font-size:1rem; }
+  .voice-badge { font-size:.72rem; color:#fff; background:#b8962e; border-radius:10px; padding:2px 10px; }
+  .playbtn { margin-left:auto; border:none; background:#2e3f7a; color:#fff; border-radius:50%; width:30px; height:30px; cursor:pointer; font-size:.85rem; }
+  .tagrow { font-size:.78rem; font-style:italic; color:#b8962e; opacity:.85; margin:4px 0; }
+  .lyric-row { display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; margin-bottom:6px; font-size:1.15rem; font-style:italic; }
+  .lyric-row.ghost { opacity:.75; }
+  .col { padding:4px 8px; border-radius:4px; }
+  .col.fr { background:#e8f0fc; }
+  .col.es { background:#f5ead5; }
+  .col.en { background:#fce8ec; }
+  body.show-fr .col.es, body.show-fr .col.en { display:none; }
+  body.show-fr .lyric-row { grid-template-columns:1fr; }
+  body.show-es .col.fr, body.show-es .col.en { display:none; }
+  body.show-es .lyric-row { grid-template-columns:1fr; }
+  body.show-en .col.fr, body.show-en .col.es { display:none; }
+  body.show-en .lyric-row { grid-template-columns:1fr; }
+  footer { text-align:center; margin-top:34px; color:#3d4a70; font-size:.85rem; border-top:1px solid #c3cbe0; padding-top:14px; }
+  .sec.instr { opacity:.5; font-style:italic; }
+  .instr-note { font-size:1rem; font-style:italic; color:#3d4a70; }
+</style>
+</head>
+<body class="show-fr">
+<div class="page">
+  <header>
+    <h1>À qui la faute ? <span style="opacity:.5;">/ ¿De quién es la culpa? / Whose Fault Is It?</span></h1>
+    <div class="meta">Rock alternatif · Violon électrique · Trèfle &amp; Minotaure</div>
+    <div class="meta">🇫🇷 129 BPM · Do# mineur · 4:20 &nbsp;|&nbsp; 🇪🇸 136 BPM · Sol mineur · 4:31 &nbsp;|&nbsp; 🇬🇧 152 BPM · Sol mineur · 4:43</div>
+  </header>
+
+  <div class="controls">
+    <div class="ctrl-group">
+      <label>Langue :</label>
+      <button class="langbtn" onclick="setLang('all')">Trilingue</button>
+      <button class="langbtn active" onclick="setLang('fr')">🇫🇷 Français</button>
+      <button class="langbtn" onclick="setLang('es')">🇪🇸 Español</button>
+      <button class="langbtn" onclick="setLang('en')">🇬🇧 English</button>
+    </div>
+    <div class="ctrl-group">
+      <label>Vitesse :</label>
+      <button class="speedbtn" onclick="setSpeed(0.7)">× 0.7</button>
+      <button class="speedbtn active" onclick="setSpeed(0.9)">× 0.9</button>
+      <button class="speedbtn" onclick="setSpeed(1.0)">× 1.0</button>
+    </div>
+  </div>
+
+  <section class="sec instr" id="sec-intro">
+    <div class="sec-head">
+      <span class="section-label">Intro / Intro / Intro</span>
+    </div>
+<div class="instr-note">Instrumental — violon électrique en staccato, basse hypnotique, power chords</div>
+  </section>
+<section class="sec" id="sec-verse1">
+    <div class="sec-head">
+      <span class="section-label">Couplet 1 / Estrofa 1 / Verse 1</span>
+      <span class="voice-badge">Trèfle + Minotaure</span>
+      <button class="playbtn" onclick="playSec('verse1')">▶</button>
+    </div>
+<div class="tagrow">[BASSE HYPNOTIQUE, VIOLON EN STACCATO ENTRE LES PHRASES]</div>
+<div class="lyric-row ">
+      <div class="col fr">Faut du gasoil à prix d&#x27;or</div>
+      <div class="col es">Hace falta gasoil a precio de oro</div>
+      <div class="col en">Gotta pay gold for gasoline</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Et des obus sur le décor</div>
+      <div class="col es">Y obuses cayendo sobre el decorado</div>
+      <div class="col en">And shells falling on the scene</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Faut de la vitrine fracassée</div>
+      <div class="col es">Hace falta un escaparate roto</div>
+      <div class="col en">Gotta have a shop window shattered</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Pour que le peuple soit écouté</div>
+      <div class="col es">Para que el pueblo sea escuchado</div>
+      <div class="col en">Before the people&#x27;s voice has mattered</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Des S.D.F. à chaque coin de rue</div>
+      <div class="col es">Sin techo en cada esquina</div>
+      <div class="col en">Homeless souls on every street</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Et des loyers pour les élus</div>
+      <div class="col es">Y alquileres para los elegidos</div>
+      <div class="col en">Rent paid for the ones we elect</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Faut du pognon pour la lumière</div>
+      <div class="col es">Hace falta dinero para la luz</div>
+      <div class="col en">Gotta have cash to keep the light</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Et du chauffage en plein hiver</div>
+      <div class="col es">Y calefacción en pleno invierno</div>
+      <div class="col en">And heating in the dead of winter night</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Faut la réforme pour les chômeurs</div>
+      <div class="col es">Hace falta la reforma para los parados</div>
+      <div class="col en">Gotta have reform for the unemployed</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Pour bien exclure les profiteurs</div>
+      <div class="col es">Para excluir bien a los aprovechados</div>
+      <div class="col en">To shut out the so-called freeloaders for good</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">On n&#x27;a plus rien dans le panier</div>
+      <div class="col es">Ya no queda nada en la cesta</div>
+      <div class="col en">Nothing left in the shopping basket</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Mais l&#x27;État dit d&#x27;acheter local</div>
+      <div class="col es">Pero el Estado dice: compra local</div>
+      <div class="col en">Yet the State says buy local</div>
+    </div>
+  </section>
+<section class="sec" id="sec-chorus">
+    <div class="sec-head">
+      <span class="section-label">Refrain 1 / Estribillo 1 / Chorus 1</span>
+      <span class="voice-badge">Trèfle + Minotaure — chœur</span>
+      <button class="playbtn" onclick="playSec('chorus')">▶</button>
+    </div>
+<div class="tagrow">[CHŒUR COLLECTIF, PUISSANT]</div>
+<div class="lyric-row ">
+      <div class="col fr">À qui la faute ?</div>
+      <div class="col es">¿De quién es la culpa?</div>
+      <div class="col en">Whose fault is it?</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">À vos sourires sur nos silences</div>
+      <div class="col es">A vuestras sonrisas sobre nuestros silencios</div>
+      <div class="col en">Your smiles upon our silence</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">À qui la faute ?</div>
+      <div class="col es">¿De quién es la culpa?</div>
+      <div class="col en">Whose fault is it?</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">À ceux qui jouent de la décence</div>
+      <div class="col es">A los que juegan a la decencia</div>
+      <div class="col en">Those who play at decency</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">À qui la faute ?</div>
+      <div class="col es">¿De quién es la culpa?</div>
+      <div class="col en">Whose fault is it?</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">À vos dirigeants d&#x27;apparence !</div>
+      <div class="col es">¡A vuestros dirigentes de apariencia!</div>
+      <div class="col en">Your leaders in name only!</div>
+    </div>
+  </section>
+<section class="sec instr" id="sec-turn">
+    <div class="sec-head">
+      <span class="section-label">Transition instrumentale / Transición instrumental / Instrumental turnaround</span>
+    </div>
+<div class="instr-note">Instrumental — violon électrique en staccato, basse hypnotique, power chords</div>
+  </section>
+<section class="sec" id="sec-verse2">
+    <div class="sec-head">
+      <span class="section-label">Couplet 2 / Estrofa 2 / Verse 2</span>
+      <span class="voice-badge">Trèfle + Minotaure</span>
+      <button class="playbtn" onclick="playSec('verse2')">▶</button>
+    </div>
+<div class="tagrow">[PULSATION TENDUE, ATTAQUES COURTES DU VIOLON]</div>
+<div class="lyric-row ">
+      <div class="col fr">Faut du cancer qu&#x27;on soigne plus</div>
+      <div class="col es">Hace falta un cáncer que ya nadie cura</div>
+      <div class="col en">Gotta have cancer no one treats</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Parce que la carte bleue est foutue</div>
+      <div class="col es">Porque la tarjeta está muerta</div>
+      <div class="col en">Because the bank card&#x27;s dead</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Faut du vêtement sur Temu</div>
+      <div class="col es">Hace falta ropa de Temu</div>
+      <div class="col en">Gotta buy your clothes on Temu</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Puisqu&#x27;au grand magasin t&#x27;es nu</div>
+      <div class="col es">Porque en el gran almacén vas desnudo</div>
+      <div class="col en">&#x27;Cause the department store leaves you nude</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Taxer la dèche des petites gens</div>
+      <div class="col es">Cargar de impuestos la miseria del pueblo</div>
+      <div class="col en">Taxing the broke, the working poor</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Pour engraisser les présidents</div>
+      <div class="col es">Para engordar a los presidentes</div>
+      <div class="col en">To fatten presidents some more</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Pendant que ferment les artisans</div>
+      <div class="col es">Mientras cierran los artesanos</div>
+      <div class="col en">While the craftsmen close their doors</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Ceux qui bossaient depuis quarante ans</div>
+      <div class="col es">Los que trabajaron cuarenta años</div>
+      <div class="col en">Who worked for forty years or more</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Les supermarchés font la loi</div>
+      <div class="col es">Los supermercados hacen la ley</div>
+      <div class="col en">Supermarkets lay down the law</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Et se bouffent entre eux les doigts</div>
+      <div class="col es">Y se devoran los dedos entre ellos</div>
+      <div class="col en">Eating each other&#x27;s fingers raw</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">On marche au pas des algorithmes</div>
+      <div class="col es">Marchamos al paso de los algoritmos</div>
+      <div class="col en">We march in step with algorithms</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">En oubliant d&#x27;avoir un rythme</div>
+      <div class="col es">Olvidando tener un ritmo</div>
+      <div class="col en">Forgetting we once had a rhythm</div>
+    </div>
+  </section>
+<section class="sec" id="sec-chorus2">
+    <div class="sec-head">
+      <span class="section-label">Refrain 2 / Estribillo 2 / Chorus 2</span>
+      <span class="voice-badge">Trèfle + Minotaure — chœur</span>
+      <button class="playbtn" onclick="playSec('chorus2')">▶</button>
+    </div>
+<div class="tagrow">[CHŒUR COLLECTIF, PUISSANT]</div>
+<div class="lyric-row ">
+      <div class="col fr">À qui la faute ?</div>
+      <div class="col es">¿De quién es la culpa?</div>
+      <div class="col en">Whose fault is it?</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">À vos sourires sur nos silences</div>
+      <div class="col es">A vuestras sonrisas sobre nuestros silencios</div>
+      <div class="col en">Your smiles upon our silence</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">À qui la faute ?</div>
+      <div class="col es">¿De quién es la culpa?</div>
+      <div class="col en">Whose fault is it?</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">À ceux qui jouent de la décence</div>
+      <div class="col es">A los que juegan a la decencia</div>
+      <div class="col en">Those who play at decency</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">À qui la faute ?</div>
+      <div class="col es">¿De quién es la culpa?</div>
+      <div class="col en">Whose fault is it?</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">À vos dirigeants d&#x27;apparence !</div>
+      <div class="col es">¡A vuestros dirigentes de apariencia!</div>
+      <div class="col en">Your leaders in name only!</div>
+    </div>
+  </section>
+<section class="sec instr" id="sec-break">
+    <div class="sec-head">
+      <span class="section-label">Break instrumental / Interludio instrumental / Instrumental break</span>
+    </div>
+<div class="instr-note">Instrumental — violon électrique en staccato, basse hypnotique, power chords</div>
+  </section>
+<section class="sec" id="sec-verse3">
+    <div class="sec-head">
+      <span class="section-label">Couplet 3 / Estrofa 3 / Verse 3</span>
+      <span class="voice-badge">Trèfle + Minotaure</span>
+      <button class="playbtn" onclick="playSec('verse3')">▶</button>
+    </div>
+<div class="tagrow">[TENSION CONTENUE, PUIS MONTÉE PROGRESSIVE]</div>
+<div class="lyric-row ">
+      <div class="col fr">On fait la queue au tribunal</div>
+      <div class="col es">Hacemos cola en el tribunal</div>
+      <div class="col en">We stand in line at the tribunal</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">De la misère occidentale</div>
+      <div class="col es">De la miseria occidental</div>
+      <div class="col en">Of the misery of the West</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">On n&#x27;a plus rien mais faut voter</div>
+      <div class="col es">Ya no hay nada, pero hay que votar</div>
+      <div class="col en">We&#x27;ve got nothing left, but we must vote</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Pour ceux qui vont nous achever</div>
+      <div class="col es">A los que nos van a rematar</div>
+      <div class="col en">For the ones who&#x27;ll finish us off</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Regarde-les les rois du vent</div>
+      <div class="col es">Míralos, los reyes del viento</div>
+      <div class="col en">Look at them, the kings of wind</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Vendre la guerre au plus offrant</div>
+      <div class="col es">Vendiendo la guerra al mejor postor</div>
+      <div class="col en">Selling war to the highest bidder</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">C&#x27;est la foire aux illusions</div>
+      <div class="col es">Es la feria de las ilusiones</div>
+      <div class="col en">It&#x27;s the fair of illusions</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Sous le déluge des nations</div>
+      <div class="col es">Bajo el diluvio de las naciones</div>
+      <div class="col en">Under the deluge of nations</div>
+    </div>
+  </section>
+<section class="sec" id="sec-final">
+    <div class="sec-head">
+      <span class="section-label">Refrain final / Estribillo final / Final chorus</span>
+      <span class="voice-badge">Trèfle + Minotaure — chœur</span>
+      <button class="playbtn" onclick="playSec('final')">▶</button>
+    </div>
+<div class="tagrow">[CHŒUR COLLECTIF, BRUT ET PUISSANT]</div>
+<div class="lyric-row ">
+      <div class="col fr">À qui la faute ?</div>
+      <div class="col es">¿De quién es la culpa?</div>
+      <div class="col en">Whose fault is it?</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">À vos sourires sur nos silences</div>
+      <div class="col es">A vuestras sonrisas sobre nuestros silencios</div>
+      <div class="col en">Your smiles upon our silence</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">À qui la faute ?</div>
+      <div class="col es">¿De quién es la culpa?</div>
+      <div class="col en">Whose fault is it?</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">À ceux qui jouent de la décence</div>
+      <div class="col es">A los que juegan a la decencia</div>
+      <div class="col en">Those who play at decency</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">À qui la faute ?</div>
+      <div class="col es">¿De quién es la culpa?</div>
+      <div class="col en">Whose fault is it?</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">À vos dirigeants d&#x27;apparence !</div>
+      <div class="col es">¡A vuestros dirigentes de apariencia!</div>
+      <div class="col en">Your leaders in name only!</div>
+    </div>
+  </section>
+<section class="sec" id="sec-outro">
+    <div class="sec-head">
+      <span class="section-label">Outro / Outro / Outro</span>
+      <span class="voice-badge">Trèfle + Minotaure</span>
+      <button class="playbtn" onclick="playSec('outro')">▶</button>
+    </div>
+<div class="tagrow">[BASSE ET VIOLON SEULS, DE PLUS EN PLUS ÉPARS]</div>
+<div class="lyric-row ">
+      <div class="col fr">Faut du vêtement sur Temu</div>
+      <div class="col es">Hace falta ropa de Temu</div>
+      <div class="col en">Gotta buy your clothes on Temu</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Puisqu&#x27;au grand magasin t&#x27;es nu</div>
+      <div class="col es">Porque en el gran almacén vas desnudo</div>
+      <div class="col en">&#x27;Cause the department store leaves you nude</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Faut crever seul et en silence</div>
+      <div class="col es">Hay que morir solo y en silencio</div>
+      <div class="col en">Gotta die alone and in silence</div>
+    </div>
+<div class="lyric-row ">
+      <div class="col fr">Bienvenue dans le monde d&#x27;en bas.</div>
+      <div class="col es">Bienvenidos al mundo de abajo.</div>
+      <div class="col en">Welcome to the world below.</div>
+    </div>
+  </section>
+
+  <footer>www.trefleminotaure.com · © 2026 Trèfle &amp; Minotaure</footer>
+</div>
+
+<script>
+const SECS = {
+  "verse1": {
+    "fr": "Faut du gasoil à prix d'or Et des obus sur le décor Faut de la vitrine fracassée Pour que le peuple soit écouté Des S.D.F. à chaque coin de rue Et des loyers pour les élus Faut du pognon pour la lumière Et du chauffage en plein hiver Faut la réforme pour les chômeurs Pour bien exclure les profiteurs On n'a plus rien dans le panier Mais l'État dit d'acheter local",
+    "es": "Hace falta gasoil a precio de oro Y obuses cayendo sobre el decorado Hace falta un escaparate roto Para que el pueblo sea escuchado Sin techo en cada esquina Y alquileres para los elegidos Hace falta dinero para la luz Y calefacción en pleno invierno Hace falta la reforma para los parados Para excluir bien a los aprovechados Ya no queda nada en la cesta Pero el Estado dice: compra local",
+    "en": "Gotta pay gold for gasoline And shells falling on the scene Gotta have a shop window shattered Before the people's voice has mattered Homeless souls on every street Rent paid for the ones we elect Gotta have cash to keep the light And heating in the dead of winter night Gotta have reform for the unemployed To shut out the so-called freeloaders for good Nothing left in the shopping basket Yet the State says buy local"
+  },
+  "chorus": {
+    "fr": "À qui la faute ? À vos sourires sur nos silences À qui la faute ? À ceux qui jouent de la décence À qui la faute ? À vos dirigeants d'apparence !",
+    "es": "¿De quién es la culpa? A vuestras sonrisas sobre nuestros silencios ¿De quién es la culpa? A los que juegan a la decencia ¿De quién es la culpa? ¡A vuestros dirigentes de apariencia!",
+    "en": "Whose fault is it? Your smiles upon our silence Whose fault is it? Those who play at decency Whose fault is it? Your leaders in name only!"
+  },
+  "verse2": {
+    "fr": "Faut du cancer qu'on soigne plus Parce que la carte bleue est foutue Faut du vêtement sur Temu Puisqu'au grand magasin t'es nu Taxer la dèche des petites gens Pour engraisser les présidents Pendant que ferment les artisans Ceux qui bossaient depuis quarante ans Les supermarchés font la loi Et se bouffent entre eux les doigts On marche au pas des algorithmes En oubliant d'avoir un rythme",
+    "es": "Hace falta un cáncer que ya nadie cura Porque la tarjeta está muerta Hace falta ropa de Temu Porque en el gran almacén vas desnudo Cargar de impuestos la miseria del pueblo Para engordar a los presidentes Mientras cierran los artesanos Los que trabajaron cuarenta años Los supermercados hacen la ley Y se devoran los dedos entre ellos Marchamos al paso de los algoritmos Olvidando tener un ritmo",
+    "en": "Gotta have cancer no one treats Because the bank card's dead Gotta buy your clothes on Temu 'Cause the department store leaves you nude Taxing the broke, the working poor To fatten presidents some more While the craftsmen close their doors Who worked for forty years or more Supermarkets lay down the law Eating each other's fingers raw We march in step with algorithms Forgetting we once had a rhythm"
+  },
+  "chorus2": {
+    "fr": "À qui la faute ? À vos sourires sur nos silences À qui la faute ? À ceux qui jouent de la décence À qui la faute ? À vos dirigeants d'apparence !",
+    "es": "¿De quién es la culpa? A vuestras sonrisas sobre nuestros silencios ¿De quién es la culpa? A los que juegan a la decencia ¿De quién es la culpa? ¡A vuestros dirigentes de apariencia!",
+    "en": "Whose fault is it? Your smiles upon our silence Whose fault is it? Those who play at decency Whose fault is it? Your leaders in name only!"
+  },
+  "verse3": {
+    "fr": "On fait la queue au tribunal De la misère occidentale On n'a plus rien mais faut voter Pour ceux qui vont nous achever Regarde-les les rois du vent Vendre la guerre au plus offrant C'est la foire aux illusions Sous le déluge des nations",
+    "es": "Hacemos cola en el tribunal De la miseria occidental Ya no hay nada, pero hay que votar A los que nos van a rematar Míralos, los reyes del viento Vendiendo la guerra al mejor postor Es la feria de las ilusiones Bajo el diluvio de las naciones",
+    "en": "We stand in line at the tribunal Of the misery of the West We've got nothing left, but we must vote For the ones who'll finish us off Look at them, the kings of wind Selling war to the highest bidder It's the fair of illusions Under the deluge of nations"
+  },
+  "final": {
+    "fr": "À qui la faute ? À vos sourires sur nos silences À qui la faute ? À ceux qui jouent de la décence À qui la faute ? À vos dirigeants d'apparence !",
+    "es": "¿De quién es la culpa? A vuestras sonrisas sobre nuestros silencios ¿De quién es la culpa? A los que juegan a la decencia ¿De quién es la culpa? ¡A vuestros dirigentes de apariencia!",
+    "en": "Whose fault is it? Your smiles upon our silence Whose fault is it? Those who play at decency Whose fault is it? Your leaders in name only!"
+  },
+  "outro": {
+    "fr": "Faut du vêtement sur Temu Puisqu'au grand magasin t'es nu Faut crever seul et en silence Bienvenue dans le monde d'en bas.",
+    "es": "Hace falta ropa de Temu Porque en el gran almacén vas desnudo Hay que morir solo y en silencio Bienvenidos al mundo de abajo.",
+    "en": "Gotta buy your clothes on Temu 'Cause the department store leaves you nude Gotta die alone and in silence Welcome to the world below."
+  }
+}
+;
+const LANG_MAP = { fr:"fr-FR", es:"es-ES", en:"en-GB" };
+let curLang = "fr";
+let curSpeed = 0.9;
+function setLang(l){
+  document.body.classList.remove("show-fr","show-es","show-en");
+  document.querySelectorAll(".langbtn").forEach(b=>b.classList.remove("active"));
+  event.target.classList.add("active");
+  if (l==="all") { curLang="fr"; } else { document.body.classList.add("show-"+l); curLang=l; }
+}
+function setSpeed(v){
+  curSpeed = v;
+  document.querySelectorAll(".speedbtn").forEach(b=>b.classList.remove("active"));
+  event.target.classList.add("active");
+}
+function playSec(id){
+  const txt = SECS[id][curLang];
+  if (!txt || !("speechSynthesis" in window)) return;
+  window.speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(txt);
+  u.lang = LANG_MAP[curLang];
+  u.rate = curSpeed;
+  window.speechSynthesis.speak(u);
+}
+</script>
+</body>
+</html>
