@@ -755,6 +755,90 @@
         "public"
       ],
       "sensible": false
+    },
+    {
+      "id": "030",
+      "titre": {
+        "fr": "À qui la faute ?",
+        "en": "Whose Fault Is It?",
+        "es": "¿De quién es la culpa?"
+      },
+      "soustitre": {
+        "fr": "",
+        "en": "",
+        "es": ""
+      },
+      "dossier": "030 A qui la faute",
+      "style": "A COMPLETER",
+      "bpm": null,
+      "duree": "A COMPLETER",
+      "album": "A COMPLETER",
+      "config": "A COMPLETER",
+      "themes": [],
+      "sensible": false
+    },
+    {
+      "id": "031",
+      "titre": {
+        "fr": "La fan d'Amy Winehouse",
+        "en": "Amy Winehouse's Fan",
+        "es": "La fan de Amy Winehouse"
+      },
+      "soustitre": {
+        "fr": "",
+        "en": "",
+        "es": ""
+      },
+      "dossier": "031 La fan d Amy Winehouse",
+      "style": "A COMPLETER",
+      "bpm": null,
+      "duree": "A COMPLETER",
+      "album": "A COMPLETER",
+      "config": "A COMPLETER",
+      "themes": [],
+      "sensible": false
+    },
+    {
+      "id": "032",
+      "titre": {
+        "fr": "Maison Blanche",
+        "en": "White House",
+        "es": "Casa Blanca"
+      },
+      "soustitre": {
+        "fr": "",
+        "en": "",
+        "es": ""
+      },
+      "dossier": "032 Maison Blanche",
+      "style": "A COMPLETER",
+      "bpm": null,
+      "duree": "A COMPLETER",
+      "album": "A COMPLETER",
+      "config": "A COMPLETER",
+      "themes": [],
+      "sensible": false
+    },
+    {
+      "id": "033",
+      "titre": {
+        "fr": "Le Père Noël est anonyme",
+        "en": "Santa Claus Is Anonymous",
+        "es": "Papá Noel es anónimo"
+      },
+      "soustitre": {
+        "fr": "",
+        "en": "",
+        "es": ""
+      },
+      "dossier": "033 Le Pere Noel est anonyme",
+      "style": "A COMPLETER",
+      "bpm": null,
+      "duree": "A COMPLETER",
+      "album": "A COMPLETER",
+      "config": "A COMPLETER",
+      "themes": [],
+      "sensible": false
     }
   ]
 }
