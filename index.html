@@ -165,6 +165,8 @@
   .pill-config { background: #2a1a2a; color: #cc88cc; border-color: #4a2a4a; }
   .pill-album { background: #2a1a0a; color: var(--gold-light); border-color: #4a2a10; }
   .pill-warn { background: #2a0808; color: #f0a0a0; border-color: #4a1010; }
+  .card-warn { font-style: italic; font-size: 0.88rem; color: #e0a8a8; line-height: 1.4; margin: -2px 0 10px; padding-left: 8px; border-left: 2px solid #6a1a1a; }
+  .card-warn-tr { display: block; font-size: 0.78rem; color: #a07878; margin-top: 2px; }
   .card-links { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; }
   .tab-line {
     display: flex;
@@ -284,6 +286,10 @@ function buildTitreTrilingue(titre) {
   return unique.join(' <span style="opacity:.5">/</span> ');
 }
 
+function esc(t) {
+  return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
 function buildCard(s) {
   const d = encodeURI(s.dossier) + '/';
 
@@ -291,6 +297,12 @@ function buildCard(s) {
   const linkPed = `<a class="lbtn lbtn-ped" href="${d}pedagogique.html">🎓 Pédagogique <span style="opacity:.6">/ Educational / Pedagógico</span></a>`;
 
   const warnPill = s.sensible ? `<span class="pill pill-warn">⚠️ Thème sensible</span>` : '';
+
+  const av = s.avertissement || {};
+  const avTr = [av.en, av.es].filter(Boolean).map(esc).join(' · ');
+  const warnText = av.fr
+    ? `<div class="card-warn">⚠️ ${esc(av.fr)}${avTr ? `<span class="card-warn-tr">${avTr}</span>` : ''}</div>`
+    : '';
 
   const sousTitres = [(s.soustitre||{}).en, (s.soustitre||{}).es]
     .filter(t => t && t !== s.titre.fr && t !== s.titre.en)
@@ -308,6 +320,7 @@ function buildCard(s) {
           <div class="card-meta">
             ${warnPill}
           </div>
+          ${warnText}
           <div class="card-links" onclick="event.stopPropagation()">
             ${linkChanter}
             ${linkPed}
