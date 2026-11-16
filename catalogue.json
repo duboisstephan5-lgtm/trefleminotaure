@@ -774,8 +774,18 @@
       "duree": "A COMPLETER",
       "album": "A COMPLETER",
       "config": "A COMPLETER",
-      "themes": [],
-      "sensible": false
+      "themes": [
+        "précarité",
+        "exclusion sociale",
+        "inégalités",
+        "guerre",
+        "détresse humaine",
+        "accès aux soins"
+      ],
+      "sensible": true,
+      "avertissement": {
+        "fr": "Évoque la précarité, l'exclusion sociale, les inégalités, la guerre, la détresse humaine et les difficultés d'accès aux soins."
+      }
     },
     {
       "id": "031",
@@ -795,8 +805,18 @@
       "duree": "A COMPLETER",
       "album": "A COMPLETER",
       "config": "A COMPLETER",
-      "themes": [],
-      "sensible": false
+      "themes": [
+        "addictions",
+        "drogues",
+        "alcool",
+        "souffrance personnelle",
+        "autodestruction",
+        "mort prématurée"
+      ],
+      "sensible": true,
+      "avertissement": {
+        "fr": "Aborde les addictions, la consommation de drogues et d'alcool, la souffrance personnelle, les comportements autodestructeurs et la mort prématurée."
+      }
     },
     {
       "id": "032",
@@ -816,8 +836,18 @@
       "duree": "A COMPLETER",
       "album": "A COMPLETER",
       "config": "A COMPLETER",
-      "themes": [],
-      "sensible": false
+      "themes": [
+        "guerre",
+        "bombardements",
+        "violences urbaines",
+        "victimes civiles",
+        "souffrance des enfants",
+        "inégalités sociales"
+      ],
+      "sensible": true,
+      "avertissement": {
+        "fr": "Aborde la guerre, les bombardements, les violences urbaines, la mort de civils, la souffrance des enfants et les inégalités sociales."
+      }
     },
     {
       "id": "033",
@@ -837,8 +867,18 @@
       "duree": "A COMPLETER",
       "album": "A COMPLETER",
       "config": "A COMPLETER",
-      "themes": [],
-      "sensible": false
+      "themes": [
+        "vol par effraction",
+        "faim",
+        "pauvreté",
+        "précarité",
+        "exclusion sociale",
+        "détresse humaine"
+      ],
+      "sensible": true,
+      "avertissement": {
+        "fr": "Évoque le vol par effraction, la faim, la pauvreté, la précarité et l'exclusion sociale, sous l'angle de la détresse humaine."
+      }
     }
   ]
 }
